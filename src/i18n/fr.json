@@ -58,7 +58,10 @@
     "bothFailed": "Personne n'a trouvé !",
     "pause": "Pause",
     "quit": "Quitter",
-    "hint": "Indice"
+    "hint": "Indice",
+    "quitConfirmMessage": "Une partie est en cours. Voulez-vous l'annuler ?",
+    "yes": "Oui",
+    "no": "Non"
   },
   "result": {
     "title": "Fin du match !",

@@ -58,7 +58,10 @@
     "bothFailed": "Nobody got it!",
     "pause": "Pause",
     "quit": "Quit",
-    "hint": "Hint"
+    "hint": "Hint",
+    "quitConfirmMessage": "A game is in progress. Do you want to cancel it?",
+    "yes": "Yes",
+    "no": "No"
   },
   "result": {
     "title": "Game Over!",

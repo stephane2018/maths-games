@@ -10,9 +10,9 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   disabled = false,
   showHintButton = true,
 }, ref) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const numpadRef = useRef(null);
-  const [questionText, setQuestionText] = useState('...');
+  const [currentQuestion, setCurrentQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [streakText, setStreakText] = useState('');
   const [streakVisible, setStreakVisible] = useState(false);
@@ -33,7 +33,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     currentQuestionRef.current = question;
     questionStartRef.current = Date.now();
     numpadRef.current?.clear();
-    setQuestionText(text);
+    setCurrentQuestion(question);
     setHintText('');
     setHintUsed(false);
     // Trigger animation
@@ -70,7 +70,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
   const clear = useCallback(() => {
     numpadRef.current?.clear();
-    setQuestionText('...');
+    setCurrentQuestion(null);
     currentQuestionRef.current = null;
     setHintText('');
     setHintUsed(false);
@@ -92,6 +92,29 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     clear,
     handleKeyboard,
   }));
+
+  // Get question text in current language
+  const getQuestionText = useCallback((question) => {
+    if (!question) return '...';
+    if (typeof question.text === 'string') return question.text;
+    return question.text[lang] || question.text.fr || '...';
+  }, [lang]);
+
+  // Get hint text in current language
+  const getHintTextInLang = useCallback((question) => {
+    if (!question?.hint) return '';
+    if (typeof question.hint === 'string') return question.hint;
+    return question.hint[lang] || question.hint.fr || '';
+  }, [lang]);
+
+  // Update hint text when language changes
+  useEffect(() => {
+    if (hintUsed && currentQuestion) {
+      setHintText(getHintTextInLang(currentQuestion));
+    }
+  }, [lang, hintUsed, currentQuestion, getHintTextInLang]);
+
+  const questionText = getQuestionText(currentQuestion);
 
   const feedbackStyle = {};
   if (questionFeedback === 'correct') {
@@ -129,7 +152,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         <div className="hint-display">{hintText}</div>
       )}
 
-      {showHintButton && !hintUsed && currentQuestionRef.current?.hint && !disabled && (
+      {showHintButton && !hintUsed && currentQuestion?.hint && !disabled && (
         <button
           className="hint-btn"
           onClick={() => onHintRequest?.(team)}

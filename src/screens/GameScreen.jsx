@@ -9,9 +9,10 @@ import { CONFIG, getRoundTime } from '../engine/GameConfig.js';
 import { STATES } from '../engine/MatchState.js';
 import QuestionPanel from '../components/QuestionPanel.jsx';
 import RopeScene from '../components/RopeScene.jsx';
+import ConfirmDialog from '../components/ConfirmDialog.jsx';
 
 export default function GameScreen() {
-  const { t } = useI18n();
+  const { t, lang, setLang } = useI18n();
   const sound = useSound();
   const { push, goHome, sharedState } = useNavigation();
 
@@ -56,6 +57,7 @@ export default function GameScreen() {
   const [blueScoreDisplay, setBlueScoreDisplay] = useState(0);
   const [redScoreDisplay, setRedScoreDisplay] = useState(0);
   const [roundText, setRoundText] = useState('');
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
 
   // Hint handling
   const handleHintRequest = useCallback((team) => {
@@ -83,7 +85,11 @@ export default function GameScreen() {
 
   useEffect(() => { applyZoom(zoomIndex); }, [zoomIndex, applyZoom]);
 
-  const lang = useI18n().lang;
+  // Handle language change
+  const handleLangChange = useCallback((e) => {
+    setLang(e.target.value);
+    sound.buttonClick();
+  }, [setLang, sound]);
 
   // Give a new question to a team
   const giveNewQuestion = useCallback((team) => {
@@ -342,10 +348,7 @@ export default function GameScreen() {
             className="home-btn"
             onClick={() => {
               sound.buttonClick();
-              sound.stopBgMusic();
-              match.destroy();
-              if (aiRef.current) aiRef.current.destroy();
-              goHome();
+              setShowQuitConfirm(true);
             }}
             dangerouslySetInnerHTML={{ __html: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> HOME' }}
           />
@@ -354,10 +357,11 @@ export default function GameScreen() {
           <h1 className="game-title">{t('game.title')}</h1>
         </div>
         <div className="top-bar-right">
-          <div className="lang-selector">
-            <span className="lang-flag">{lang === 'fr' ? '\uD83C\uDDEB\uD83C\uDDF7' : lang === 'nl' ? '\uD83C\uDDF3\uD83C\uDDF1' : '\uD83C\uDDEC\uD83C\uDDE7'}</span>
-            <span className="lang-code">{lang.toUpperCase()}</span>
-          </div>
+          <select className="lang-selector" value={lang} onChange={handleLangChange}>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="nl">🇳🇱 NL</option>
+          </select>
         </div>
       </div>
 
@@ -424,6 +428,20 @@ export default function GameScreen() {
         </div>
         <div className="bottom-bar-right" />
       </div>
+
+      <ConfirmDialog
+        open={showQuitConfirm}
+        message={t('game.quitConfirmMessage')}
+        confirmText={t('game.yes')}
+        cancelText={t('game.no')}
+        onConfirm={() => {
+          sound.stopBgMusic();
+          match.destroy();
+          if (aiRef.current) aiRef.current.destroy();
+          goHome();
+        }}
+        onCancel={() => setShowQuitConfirm(false)}
+      />
     </div>
   );
 }

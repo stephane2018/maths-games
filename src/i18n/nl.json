@@ -58,7 +58,10 @@
     "bothFailed": "Niemand heeft het!",
     "pause": "Pauze",
     "quit": "Stoppen",
-    "hint": "Tip"
+    "hint": "Tip",
+    "quitConfirmMessage": "Er is een spel bezig. Wil je het annuleren?",
+    "yes": "Ja",
+    "no": "Nee"
   },
   "result": {
     "title": "Einde wedstrijd!",
