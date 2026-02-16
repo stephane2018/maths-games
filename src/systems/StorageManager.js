@@ -3,6 +3,7 @@
  */
 
 const STORAGE_KEY = 'math-tow-data';
+const LEADERBOARD_KEY = 'math-tow-leaderboard';
 
 class StorageManager {
   constructor() {
@@ -76,6 +77,7 @@ class StorageManager {
       bestStreak: 0,
       achievements: [],
       categoryStats: {},
+      dailyChallenge: { lastCompleted: null, streak: 0 },
       createdAt: Date.now(),
     };
   }
@@ -84,6 +86,33 @@ class StorageManager {
     const profile = this.defaultProfile();
     this.save(profile);
     return profile;
+  }
+
+  // Leaderboard methods
+  getLeaderboard() {
+    if (this.schoolMode) return [];
+    try {
+      const raw = localStorage.getItem(LEADERBOARD_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  addMatchRecord(record) {
+    if (this.schoolMode) return;
+    try {
+      const board = this.getLeaderboard();
+      board.push(record);
+      if (board.length > 100) board.splice(0, board.length - 100);
+      localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(board));
+    } catch (e) {
+      console.warn('Leaderboard save failed:', e);
+    }
+  }
+
+  resetLeaderboard() {
+    localStorage.removeItem(LEADERBOARD_KEY);
   }
 }
 

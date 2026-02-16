@@ -1,12 +1,16 @@
 import { useRef, useImperativeHandle, forwardRef, useState, useCallback, useEffect } from 'react';
+import { useI18n } from '../contexts/I18nContext.jsx';
 import Numpad from './Numpad.jsx';
 
 const QuestionPanel = forwardRef(function QuestionPanel({
   team = 'blue',
   teamName = '',
   onAnswer,
+  onHintRequest,
   disabled = false,
+  showHintButton = true,
 }, ref) {
+  const { t } = useI18n();
   const numpadRef = useRef(null);
   const [questionText, setQuestionText] = useState('...');
   const [score, setScore] = useState(0);
@@ -14,6 +18,8 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   const [streakVisible, setStreakVisible] = useState(false);
   const [questionAnim, setQuestionAnim] = useState(false);
   const [questionFeedback, setQuestionFeedback] = useState(null); // 'correct' | 'wrong' | null
+  const [hintText, setHintText] = useState('');
+  const [hintUsed, setHintUsed] = useState(false);
   const currentQuestionRef = useRef(null);
   const questionStartRef = useRef(0);
 
@@ -28,6 +34,8 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     questionStartRef.current = Date.now();
     numpadRef.current?.clear();
     setQuestionText(text);
+    setHintText('');
+    setHintUsed(false);
     // Trigger animation
     setQuestionAnim(false);
     requestAnimationFrame(() => setQuestionAnim(true));
@@ -55,10 +63,17 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     }
   }, []);
 
+  const showHint = useCallback((text) => {
+    setHintText(text);
+    setHintUsed(true);
+  }, []);
+
   const clear = useCallback(() => {
     numpadRef.current?.clear();
     setQuestionText('...');
     currentQuestionRef.current = null;
+    setHintText('');
+    setHintUsed(false);
   }, []);
 
   const handleKeyboard = useCallback((key) => {
@@ -71,6 +86,8 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     showWrongFeedback,
     updateScore,
     showStreak,
+    showHint,
+    getCurrentQuestion: () => currentQuestionRef.current,
     setDisabled: () => {}, // disabled is controlled by prop
     clear,
     handleKeyboard,
@@ -107,6 +124,20 @@ const QuestionPanel = forwardRef(function QuestionPanel({
       >
         {questionText}
       </div>
+
+      {hintText && (
+        <div className="hint-display">{hintText}</div>
+      )}
+
+      {showHintButton && !hintUsed && currentQuestionRef.current?.hint && !disabled && (
+        <button
+          className="hint-btn"
+          onClick={() => onHintRequest?.(team)}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+          {t('game.hint')}
+        </button>
+      )}
 
       <Numpad
         ref={numpadRef}

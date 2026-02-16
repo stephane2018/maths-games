@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { useMatchState } from '../hooks/useMatchState.js';
 import { QuestionEngine } from '../engine/QuestionEngine.js';
 import { AIPlayer } from '../engine/AIPlayer.js';
@@ -13,10 +13,9 @@ import RopeScene from '../components/RopeScene.jsx';
 export default function GameScreen() {
   const { t } = useI18n();
   const sound = useSound();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { push, goHome, sharedState } = useNavigation();
 
-  const params = location.state || {};
+  const params = sharedState || {};
   const mode = params.mode || 'solo';
   const categories = params.categories || ['N1', 'N2'];
   const difficulty = params.difficulty || localStorage.getItem('math-tow-difficulty') || 'medium';
@@ -57,6 +56,18 @@ export default function GameScreen() {
   const [blueScoreDisplay, setBlueScoreDisplay] = useState(0);
   const [redScoreDisplay, setRedScoreDisplay] = useState(0);
   const [roundText, setRoundText] = useState('');
+
+  // Hint handling
+  const handleHintRequest = useCallback((team) => {
+    const engine = team === 'blue' ? blueEngineRef.current : redEngineRef.current;
+    const panelRef = team === 'blue' ? bluePanelRef : redPanelRef;
+    const question = panelRef.current?.getCurrentQuestion?.();
+    if (!question) return;
+    const hint = engine.getHintText(question);
+    if (hint) {
+      panelRef.current?.showHint(hint);
+    }
+  }, []);
 
   // Zoom
   const ZOOM_STEPS = [0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2];
@@ -226,19 +237,19 @@ export default function GameScreen() {
           onPlayAgain: () => {
             const blueStats = blueEngineRef.current.getStats();
             const redStats = redEngineRef.current.getStats();
-            navigate('/result', {
-              state: {
-                winner: data.winner,
-                blueScore: data.blueScore,
-                redScore: data.redScore,
-                mode,
-                blueName,
-                redName,
-                blueStats: { ...blueStats, bestStreak: blueBestStreakRef.current },
-                redStats: { ...redStats, bestStreak: redBestStreakRef.current },
-                categories,
-              },
-            });
+            push('Result', {
+              winner: data.winner,
+              blueScore: data.blueScore,
+              redScore: data.redScore,
+              mode,
+              blueName,
+              redName,
+              blueStats: { ...blueStats, bestStreak: blueBestStreakRef.current },
+              redStats: { ...redStats, bestStreak: redBestStreakRef.current },
+              categories,
+              difficulty,
+              numRounds,
+            }, true);
           },
         });
         break;
@@ -334,7 +345,7 @@ export default function GameScreen() {
               sound.stopBgMusic();
               match.destroy();
               if (aiRef.current) aiRef.current.destroy();
-              navigate('/');
+              goHome();
             }}
             dangerouslySetInnerHTML={{ __html: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> HOME' }}
           />
@@ -357,6 +368,7 @@ export default function GameScreen() {
           team="blue"
           teamName={blueName}
           onAnswer={(val, q, time) => handleAnswer('blue', val, q, time)}
+          onHintRequest={handleHintRequest}
           disabled={blueDisabled}
         />
         <div className="rope-section">
@@ -377,6 +389,8 @@ export default function GameScreen() {
           team="red"
           teamName={redName}
           onAnswer={(val, q, time) => handleAnswer('red', val, q, time)}
+          onHintRequest={mode === 'versus' ? handleHintRequest : undefined}
+          showHintButton={mode === 'versus'}
           disabled={redDisabled}
         />
       </div>

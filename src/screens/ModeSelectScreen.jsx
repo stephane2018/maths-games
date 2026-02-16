@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
 
 function SoloIcon() {
   return (
@@ -31,7 +31,7 @@ function VersusIcon() {
 export default function ModeSelectScreen() {
   const { t } = useI18n();
   const sound = useSound();
-  const navigate = useNavigate();
+  const { push, pop } = useNavigation();
 
   return (
     <div className="screen">
@@ -39,7 +39,7 @@ export default function ModeSelectScreen() {
         <div className="top-bar-left">
           <button
             className="back-btn"
-            onClick={() => { sound.buttonClick(); navigate(-1); }}
+            onClick={() => { sound.buttonClick(); pop(); }}
             dangerouslySetInnerHTML={{ __html: '&#8592; ' + t('mode.back') }}
           />
         </div>
@@ -54,7 +54,7 @@ export default function ModeSelectScreen() {
             className="mode-card anim-slide-up"
             onClick={() => {
               sound.buttonClick();
-              navigate('/category', { state: { mode: 'solo' } });
+              push('Category', { mode: 'solo' }, true);
             }}
           >
             <SoloIcon />
@@ -67,7 +67,7 @@ export default function ModeSelectScreen() {
             style={{ animationDelay: '100ms' }}
             onClick={() => {
               sound.buttonClick();
-              navigate('/category', { state: { mode: 'versus' } });
+              push('Category', { mode: 'versus' }, true);
             }}
           >
             <VersusIcon />

@@ -1,21 +1,39 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useStorage } from '../contexts/StorageContext.jsx';
-import { getLevelInfo, getAchievementDefs, getAchievementIcons } from '../systems/XPSystem.js';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
+import { getLevelInfo, getAchievementDefs, getAchievementIcons, getAchievementProgress } from '../systems/XPSystem.js';
+import { CE1D_THEMES } from '../data/ce1dThemes.js';
 
 export default function ProfileScreen() {
   const { t } = useI18n();
   const sound = useSound();
   const storage = useStorage();
-  const navigate = useNavigate();
+  const { pop } = useNavigation();
   const [, forceUpdate] = useState(0);
 
   const profile = storage.getProfile();
   const levelInfo = getLevelInfo(profile.xp);
   const achievementDefs = getAchievementDefs();
   const icons = getAchievementIcons();
+  const progress = getAchievementProgress(profile);
+
+  const themeStats = CE1D_THEMES.map(theme => {
+    let correct = 0, total = 0;
+    for (const cat of theme.categories) {
+      const s = profile.categoryStats[cat];
+      if (s) { correct += s.correct; total += s.total; }
+    }
+    return {
+      id: theme.id,
+      color: theme.color,
+      icon: theme.icon,
+      correct,
+      total,
+      accuracy: total > 0 ? Math.round((correct / total) * 100) : null,
+    };
+  }).filter(s => s.total > 0);
 
   return (
     <div className="screen">
@@ -23,7 +41,7 @@ export default function ProfileScreen() {
         <div className="top-bar-left">
           <button
             className="back-btn"
-            onClick={() => { sound.buttonClick(); navigate(-1); }}
+            onClick={() => { sound.buttonClick(); pop(); }}
             dangerouslySetInnerHTML={{ __html: '&#8592; ' + t('mode.back') }}
           />
         </div>
@@ -50,14 +68,45 @@ export default function ProfileScreen() {
           </div>
         </div>
 
+        {themeStats.length > 0 && (
+          <>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginTop: '8px' }}>{t('profile.themeStats')}</h2>
+            <div className="theme-stats-container">
+              {themeStats.map(stat => (
+                <div key={stat.id} className="theme-stat-row">
+                  <div className="theme-stat-label">
+                    <span>{stat.icon}</span> {t(`themes.${stat.id}`)}
+                  </div>
+                  <div className="theme-stat-bar-bg">
+                    <div className="theme-stat-bar-fill" style={{ width: `${stat.accuracy}%`, background: stat.color }} />
+                  </div>
+                  <div className="theme-stat-pct">{`${stat.accuracy}%`}</div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginTop: '8px' }}>{t('profile.achievements')}</h2>
         <div className="achievements-grid">
           {achievementDefs.map(def => {
             const unlocked = profile.achievements.includes(def.id);
+            const prog = progress[def.id];
             return (
               <div key={def.id} className={`achievement ${unlocked ? 'unlocked' : ''}`}>
                 <div className="achievement-icon" style={{ opacity: unlocked ? '1' : '0.3' }}>{icons[def.id] || ''}</div>
                 <div className="achievement-name">{t(`achievements.${def.id}`)}</div>
+                {!unlocked && prog && !prog.isBinary && (
+                  <div className="achievement-progress">
+                    <div className="achievement-progress-bar">
+                      <div className="achievement-progress-fill" style={{ width: `${(prog.current / prog.target) * 100}%` }} />
+                    </div>
+                    <div className="achievement-progress-text">{`${prog.current}/${prog.target}`}</div>
+                  </div>
+                )}
+                {!unlocked && prog && prog.isBinary && (
+                  <div className="achievement-progress-text">{prog.label}</div>
+                )}
               </div>
             );
           })}

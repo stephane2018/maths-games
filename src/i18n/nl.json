@@ -9,7 +9,11 @@
   "home": {
     "play": "Spelen",
     "profile": "Mijn profiel",
-    "settings": "Instellingen"
+    "settings": "Instellingen",
+    "dailyChallenge": "Dagelijkse uitdaging",
+    "dailyDone": "Voltooid!",
+    "streakDays": "dagen op rij!",
+    "leaderboard": "Klassement"
   },
   "mode": {
     "title": "Kies je modus",
@@ -53,7 +57,8 @@
     "timeUp": "Tijd om!",
     "bothFailed": "Niemand heeft het!",
     "pause": "Pauze",
-    "quit": "Stoppen"
+    "quit": "Stoppen",
+    "hint": "Tip"
   },
   "result": {
     "title": "Einde wedstrijd!",
@@ -65,6 +70,7 @@
     "accuracy": "Nauwkeurigheid",
     "xpEarned": "XP verdiend",
     "playAgain": "Opnieuw spelen",
+    "quickReplay": "Snel opnieuw",
     "home": "Home",
     "bestStreak": "Beste reeks"
   },
@@ -74,6 +80,7 @@
     "totalXP": "Totaal XP",
     "gamesPlayed": "Gespeelde spellen",
     "achievements": "Trofeeën",
+    "themeStats": "Stats per thema",
     "reset": "Resetten",
     "resetConfirm": "Alle gegevens verwijderen?"
   },
@@ -108,11 +115,21 @@
     "medium": "Normaal",
     "hard": "Moeilijk"
   },
+  "themes": {
+    "numbers": "Getallen & Bewerkingen",
+    "proportions": "Evenredigheid",
+    "geometry": "Meetkunde",
+    "measures": "Grootheden",
+    "data": "Gegevens",
+    "problems": "Redeneren"
+  },
   "wizard": {
     "title": "BEREID JE TEAMS VOOR",
-    "step1": "Bewerkingen",
+    "step1": "Thema's",
     "step2": "Moeilijkheid",
     "step3": "Teams",
+    "themesTitle": "CE1D Thema's",
+    "themesDesc": "Selecteer een of meer thema's",
     "operationsTitle": "Bewerkingen",
     "operationsDesc": "Selecteer een of meer bewerkingen",
     "addition": "Optellen",
@@ -146,5 +163,18 @@
     "version": "Versie",
     "versionValue": "1.0",
     "description": "Een wiskundige remediëring tool voor het Belgische CE1D-examen."
+  },
+  "leaderboard": {
+    "title": "Klassement",
+    "team": "Team",
+    "points": "Punten",
+    "wins": "Overwinningen",
+    "accuracy": "Nauwkeurigheid",
+    "bestTheme": "Beste thema",
+    "noData": "Geen wedstrijden geregistreerd",
+    "recentMatches": "Recente wedstrijden",
+    "teamRankings": "Team klassement",
+    "date": "Datum",
+    "match": "Wedstrijd"
   }
 }

@@ -9,7 +9,11 @@
   "home": {
     "play": "Play",
     "profile": "My Profile",
-    "settings": "Settings"
+    "settings": "Settings",
+    "dailyChallenge": "Daily Challenge",
+    "dailyDone": "Completed!",
+    "streakDays": "day streak!",
+    "leaderboard": "Leaderboard"
   },
   "mode": {
     "title": "Choose your mode",
@@ -53,7 +57,8 @@
     "timeUp": "Time's up!",
     "bothFailed": "Nobody got it!",
     "pause": "Pause",
-    "quit": "Quit"
+    "quit": "Quit",
+    "hint": "Hint"
   },
   "result": {
     "title": "Game Over!",
@@ -65,6 +70,7 @@
     "accuracy": "Accuracy",
     "xpEarned": "XP earned",
     "playAgain": "Play again",
+    "quickReplay": "Quick Replay",
     "home": "Home",
     "bestStreak": "Best streak"
   },
@@ -74,6 +80,7 @@
     "totalXP": "Total XP",
     "gamesPlayed": "Games played",
     "achievements": "Trophies",
+    "themeStats": "Stats by theme",
     "reset": "Reset",
     "resetConfirm": "Delete all data?"
   },
@@ -108,11 +115,21 @@
     "medium": "Medium",
     "hard": "Hard"
   },
+  "themes": {
+    "numbers": "Numbers & Operations",
+    "proportions": "Proportionality",
+    "geometry": "Geometry",
+    "measures": "Measurements",
+    "data": "Data & Charts",
+    "problems": "Reasoning"
+  },
   "wizard": {
     "title": "PREPARE YOUR TEAMS",
-    "step1": "Operations",
+    "step1": "Themes",
     "step2": "Difficulty",
     "step3": "Teams",
+    "themesTitle": "CE1D Themes",
+    "themesDesc": "Select one or more themes",
     "operationsTitle": "Operations",
     "operationsDesc": "Select one or more operations",
     "addition": "Addition",
@@ -146,5 +163,18 @@
     "version": "Version",
     "versionValue": "1.0",
     "description": "A math remediation tool for the Belgian CE1D exam."
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "team": "Team",
+    "points": "Points",
+    "wins": "Wins",
+    "accuracy": "Accuracy",
+    "bestTheme": "Best theme",
+    "noData": "No matches recorded",
+    "recentMatches": "Recent matches",
+    "teamRankings": "Team rankings",
+    "date": "Date",
+    "match": "Match"
   }
 }

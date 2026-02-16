@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
 
 export default function AboutScreen() {
   const { t } = useI18n();
   const sound = useSound();
-  const navigate = useNavigate();
+  const { pop } = useNavigation();
 
   return (
     <div className="screen">
@@ -13,7 +13,7 @@ export default function AboutScreen() {
         <div className="top-bar-left">
           <button
             className="back-btn"
-            onClick={() => { sound.buttonClick(); navigate(-1); }}
+            onClick={() => { sound.buttonClick(); pop(); }}
           >
             {t('mode.back')}
           </button>

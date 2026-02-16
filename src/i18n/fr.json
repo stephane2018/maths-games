@@ -9,7 +9,11 @@
   "home": {
     "play": "Jouer",
     "profile": "Mon profil",
-    "settings": "Options"
+    "settings": "Options",
+    "dailyChallenge": "Défi du jour",
+    "dailyDone": "Complété !",
+    "streakDays": "jours d'affilée !",
+    "leaderboard": "Classement"
   },
   "mode": {
     "title": "Choisis ton mode",
@@ -53,7 +57,8 @@
     "timeUp": "Temps écoulé !",
     "bothFailed": "Personne n'a trouvé !",
     "pause": "Pause",
-    "quit": "Quitter"
+    "quit": "Quitter",
+    "hint": "Indice"
   },
   "result": {
     "title": "Fin du match !",
@@ -65,6 +70,7 @@
     "accuracy": "Précision",
     "xpEarned": "XP gagnés",
     "playAgain": "Rejouer",
+    "quickReplay": "Rejouer (mêmes réglages)",
     "home": "Accueil",
     "bestStreak": "Meilleure série"
   },
@@ -74,6 +80,7 @@
     "totalXP": "XP total",
     "gamesPlayed": "Parties jouées",
     "achievements": "Trophées",
+    "themeStats": "Stats par thème",
     "reset": "Réinitialiser",
     "resetConfirm": "Supprimer toutes les données ?"
   },
@@ -108,11 +115,21 @@
     "medium": "Normal",
     "hard": "Difficile"
   },
+  "themes": {
+    "numbers": "Nombres & Opérations",
+    "proportions": "Proportionnalité",
+    "geometry": "Géométrie",
+    "measures": "Grandeurs",
+    "data": "Données",
+    "problems": "Raisonnement"
+  },
   "wizard": {
     "title": "PRÉPAREZ VOS ÉQUIPES",
-    "step1": "Opérations",
+    "step1": "Thèmes",
     "step2": "Difficulté",
     "step3": "Équipes",
+    "themesTitle": "Thèmes CE1D",
+    "themesDesc": "Sélectionnez un ou plusieurs thèmes",
     "operationsTitle": "Opérations",
     "operationsDesc": "Sélectionnez une ou plusieurs opérations",
     "addition": "Addition",
@@ -146,5 +163,18 @@
     "version": "Version",
     "versionValue": "1.0",
     "description": "Outil de remédiation mathématique pour le CE1D belge."
+  },
+  "leaderboard": {
+    "title": "Classement",
+    "team": "Équipe",
+    "points": "Points",
+    "wins": "Victoires",
+    "accuracy": "Précision",
+    "bestTheme": "Meilleur thème",
+    "noData": "Aucune partie enregistrée",
+    "recentMatches": "Matchs récents",
+    "teamRankings": "Classement des équipes",
+    "date": "Date",
+    "match": "Match"
   }
 }

@@ -1,17 +1,9 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { I18nProvider, useI18n } from './contexts/I18nContext.jsx';
 import { SoundProvider, useSound } from './contexts/SoundContext.jsx';
 import { StorageProvider } from './contexts/StorageContext.jsx';
-
-import HomeScreen from './screens/HomeScreen.jsx';
-import ModeSelectScreen from './screens/ModeSelectScreen.jsx';
-import CategoryScreen from './screens/CategoryScreen.jsx';
-import GameScreen from './screens/GameScreen.jsx';
-import ResultScreen from './screens/ResultScreen.jsx';
-import ProfileScreen from './screens/ProfileScreen.jsx';
-import SettingsScreen from './screens/SettingsScreen.jsx';
-import AboutScreen from './screens/AboutScreen.jsx';
+import { NavigationProvider } from './contexts/NavigationContext.jsx';
+import ModalContainer from './components/ModalContainer.jsx';
 
 function AppContent() {
   const { t } = useI18n();
@@ -44,16 +36,7 @@ function AppContent() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/mode-select" element={<ModeSelectScreen />} />
-        <Route path="/category" element={<CategoryScreen />} />
-        <Route path="/game" element={<GameScreen />} />
-        <Route path="/result" element={<ResultScreen />} />
-        <Route path="/profile" element={<ProfileScreen />} />
-        <Route path="/settings" element={<SettingsScreen />} />
-        <Route path="/about" element={<AboutScreen />} />
-      </Routes>
+      <ModalContainer />
       <footer className="app-footer">&copy; 2026 Mathlaclasse by Léopold</footer>
     </>
   );
@@ -61,14 +44,14 @@ function AppContent() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <I18nProvider>
-        <StorageProvider>
-          <SoundProvider>
+    <I18nProvider>
+      <StorageProvider>
+        <SoundProvider>
+          <NavigationProvider>
             <AppContent />
-          </SoundProvider>
-        </StorageProvider>
-      </I18nProvider>
-    </BrowserRouter>
+          </NavigationProvider>
+        </SoundProvider>
+      </StorageProvider>
+    </I18nProvider>
   );
 }

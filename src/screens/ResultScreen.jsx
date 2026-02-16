@@ -1,21 +1,21 @@
 import { useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useStorage } from '../contexts/StorageContext.jsx';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { calculateMatchXP, addXP, getLevelInfo, checkAchievements, updateProfileAfterMatch, getAchievementIcons } from '../systems/XPSystem.js';
+import { updateStreak, getTodayStr } from '../systems/DailyChallengeSystem.js';
 import { createConfetti } from '../utils/confetti.js';
 
 export default function ResultScreen() {
   const { t } = useI18n();
   const sound = useSound();
   const storage = useStorage();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { push, goHome, sharedState } = useNavigation();
   const containerRef = useRef(null);
   const processedRef = useRef(false);
 
-  const { winner, blueScore, redScore, mode, blueName, redName, blueStats, redStats, categories } = location.state || {};
+  const { winner, blueScore, redScore, mode, blueName, redName, blueStats, redStats, categories, difficulty, numRounds } = sharedState || {};
 
   const isPlayerWin = winner === 'blue';
   const playerStats = blueStats || {};
@@ -30,7 +30,9 @@ export default function ResultScreen() {
     categoryBreakdown: playerStats.categoryBreakdown || {},
   };
 
-  const xpEarned = calculateMatchXP(matchStats);
+  const isDaily = sharedState?.isDaily || false;
+  const baseXP = calculateMatchXP(matchStats);
+  let dailyBonusXP = 0;
 
   // Process XP and achievements once
   let newAchievements = [];
@@ -40,10 +42,54 @@ export default function ResultScreen() {
     processedRef.current = true;
     if (!storage.isSchoolMode()) {
       updateProfileAfterMatch(matchStats);
-      levelInfo = addXP(xpEarned);
+
+      // Daily challenge bonus
+      if (isDaily) {
+        const profile = storage.getProfile();
+        const today = getTodayStr();
+        if (profile.dailyChallenge?.lastCompleted !== today) {
+          dailyBonusXP = 25;
+          const streakResult = updateStreak(profile);
+          profile.dailyChallenge = {
+            lastCompleted: streakResult.lastCompleted,
+            streak: streakResult.streak,
+          };
+          storage.saveProfile(profile);
+        }
+      }
+
+      levelInfo = addXP(baseXP + dailyBonusXP);
       newAchievements = checkAchievements(matchStats);
+
+      // Save match to leaderboard
+      storage.addMatchRecord({
+        id: Date.now(),
+        date: new Date().toISOString(),
+        mode,
+        blueName, redName,
+        winner,
+        blueScore, redScore,
+        blueStats: {
+          correct: blueStats?.totalCorrect || 0,
+          total: blueStats?.totalAnswered || 0,
+          accuracy: blueStats?.accuracy || 0,
+          bestStreak: blueStats?.bestStreak || 0,
+          categoryBreakdown: blueStats?.categoryBreakdown || {},
+        },
+        redStats: {
+          correct: redStats?.totalCorrect || 0,
+          total: redStats?.totalAnswered || 0,
+          accuracy: redStats?.accuracy || 0,
+          bestStreak: redStats?.bestStreak || 0,
+          categoryBreakdown: redStats?.categoryBreakdown || {},
+        },
+        difficulty: difficulty || 'medium',
+        categories: categories || [],
+      });
     }
   }
+
+  const xpEarned = baseXP + dailyBonusXP;
 
   // Sound + confetti
   useEffect(() => {
@@ -111,7 +157,7 @@ export default function ResultScreen() {
             </div>
             <div className="result-stat" style={{ background: '#F3E8FF' }}>
               <div className="result-stat-value" style={{ color: 'var(--purple)' }}>{`+${xpEarned}`}</div>
-              <div className="result-stat-label">{t('result.xpEarned')}</div>
+              <div className="result-stat-label">{t('result.xpEarned')}{dailyBonusXP > 0 ? ` (+${dailyBonusXP} bonus)` : ''}</div>
             </div>
           </div>
 
@@ -146,25 +192,37 @@ export default function ResultScreen() {
         </div>
 
         {/* Action buttons */}
-        <div style={{ display: 'flex', gap: '12px', width: '100%', maxWidth: '400px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%', maxWidth: '400px' }}>
           <button
-            className="btn btn-blue btn-lg"
-            style={{ flex: '1' }}
+            className="btn btn-green btn-lg"
+            style={{ width: '100%' }}
             onClick={() => {
               sound.buttonClick();
-              navigate('/category', { state: { mode } });
+              push('Game', { mode, categories, difficulty: difficulty || 'medium', numRounds: numRounds || 3, blueName, redName }, true);
             }}
           >
-            {t('result.playAgain')}
+            {t('result.quickReplay')}
           </button>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <button
+              className="btn btn-blue btn-lg"
+              style={{ flex: '1' }}
+              onClick={() => {
+                sound.buttonClick();
+                push('Category', { mode }, true);
+              }}
+            >
+              {t('result.playAgain')}
+            </button>
 
-          <button
-            className="btn btn-outline btn-lg"
-            style={{ flex: '1' }}
-            onClick={() => { sound.buttonClick(); navigate('/'); }}
-          >
-            {t('result.home')}
-          </button>
+            <button
+              className="btn btn-outline btn-lg"
+              style={{ flex: '1' }}
+              onClick={() => { sound.buttonClick(); goHome(); }}
+            >
+              {t('result.home')}
+            </button>
+          </div>
         </div>
       </div>
     </div>

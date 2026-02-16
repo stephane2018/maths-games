@@ -92,6 +92,24 @@ export function getAchievementIcons() {
   };
 }
 
+export function getAchievementProgress(profile) {
+  const level = getLevelInfo(profile.xp).level;
+  const catCount = Object.keys(profile.categoryStats || {}).length;
+
+  return {
+    firstWin:      { current: Math.min(profile.gamesWon, 1), target: 1 },
+    streak5:       { current: Math.min(profile.bestStreak, 5), target: 5 },
+    streak10:      { current: Math.min(profile.bestStreak, 10), target: 10 },
+    speedster:     { current: null, target: null, isBinary: true, label: '< 3s' },
+    allCategories: { current: Math.min(catCount, 10), target: 10 },
+    level10:       { current: Math.min(level, 10), target: 10 },
+    level25:       { current: Math.min(level, 25), target: 25 },
+    perfect:       { current: null, target: null, isBinary: true, label: '100%' },
+    games10:       { current: Math.min(profile.gamesPlayed, 10), target: 10 },
+    games50:       { current: Math.min(profile.gamesPlayed, 50), target: 50 },
+  };
+}
+
 export function checkAchievements(matchStats = null) {
   const profile = storage.getProfile();
   const newlyUnlocked = [];

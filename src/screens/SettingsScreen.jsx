@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useStorage } from '../contexts/StorageContext.jsx';
+import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { getRoundTime, setRoundTime, ROUND_TIME_OPTIONS } from '../engine/GameConfig.js';
 
 function Toggle({ label, description, isActive, onChange }) {
@@ -29,7 +29,7 @@ export default function SettingsScreen() {
   const { t, lang, setLang } = useI18n();
   const sound = useSound();
   const storage = useStorage();
-  const navigate = useNavigate();
+  const { pop } = useNavigation();
   const [currentRoundTime, setCurrentRoundTime] = useState(getRoundTime());
   const [currentDifficulty, setCurrentDifficulty] = useState(
     localStorage.getItem('math-tow-difficulty') || 'medium'
@@ -41,7 +41,7 @@ export default function SettingsScreen() {
         <div className="top-bar-left">
           <button
             className="back-btn"
-            onClick={() => { sound.buttonClick(); navigate(-1); }}
+            onClick={() => { sound.buttonClick(); pop(); }}
             dangerouslySetInnerHTML={{ __html: '&#8592; ' + t('mode.back') }}
           />
         </div>
