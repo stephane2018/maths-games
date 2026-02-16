@@ -160,6 +160,7 @@ export default function GameScreen() {
         if (mode !== 'solo') setRedDisabled(false);
         giveNewQuestion('blue');
         giveNewQuestion('red');
+        sound.startBgMusic();
         break;
       }
       case 'timerTick': {
@@ -185,6 +186,7 @@ export default function GameScreen() {
         setBlueDisabled(true);
         setRedDisabled(true);
         if (aiRef.current) aiRef.current.cancel();
+        sound.stopBgMusic();
 
         setBlueScoreDisplay(data.blueScore);
         setRedScoreDisplay(data.redScore);
@@ -207,7 +209,8 @@ export default function GameScreen() {
       }
       case 'matchEnd': {
         if (aiRef.current) aiRef.current.destroy();
-        sound.gameOver();
+        sound.stopBgMusic();
+        sound.victoryFanfare();
 
         const winnerName = data.winner === 'blue' ? blueName : data.winner === 'red' ? redName : null;
         const winnerCorrect = data.winner === 'blue' ? data.blueScore : data.redScore;
@@ -302,6 +305,7 @@ export default function GameScreen() {
   useEffect(() => {
     startMatch();
     return () => {
+      sound.stopBgMusic();
       match.destroy();
       if (aiRef.current) aiRef.current.destroy();
     };
@@ -327,6 +331,7 @@ export default function GameScreen() {
             className="home-btn"
             onClick={() => {
               sound.buttonClick();
+              sound.stopBgMusic();
               match.destroy();
               if (aiRef.current) aiRef.current.destroy();
               navigate('/');
