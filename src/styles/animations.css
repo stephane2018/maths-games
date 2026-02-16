@@ -1,0 +1,196 @@
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+/* Screen transitions */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* Button press feedback */
+@keyframes btnPress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+/* Correct answer */
+@keyframes correctPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { box-shadow: 0 0 0 20px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes correctBg {
+  0% { background-color: var(--green-light); }
+  100% { background-color: transparent; }
+}
+
+/* Wrong answer */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+@keyframes wrongFlash {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: var(--red-light); }
+}
+
+/* Rope pull */
+@keyframes ropePull {
+  0% { transform: translateX(var(--rope-from)); }
+  100% { transform: translateX(var(--rope-to)); }
+}
+
+/* Character pull animation */
+@keyframes pullEffort {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-3px) rotate(-2deg); }
+  75% { transform: translateX(3px) rotate(2deg); }
+}
+
+/* Timer urgency */
+@keyframes timerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes timerUrgent {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Score popup */
+@keyframes scorePopup {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  30% { opacity: 1; transform: translateY(-20px) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-50px) scale(1); }
+}
+
+/* XP bar fill */
+@keyframes xpFill {
+  from { width: var(--xp-from); }
+  to { width: var(--xp-to); }
+}
+
+/* Celebration confetti */
+@keyframes confettiFall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Floating animation (for idle characters) */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Character celebration bounce */
+@keyframes celebrateBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-10px) scale(1.05); }
+  60% { transform: translateY(-3px) scale(1); }
+}
+
+/* Sweat drop animation */
+@keyframes sweatDrop {
+  0% { opacity: 0; transform: translateY(0); }
+  30% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(8px); }
+}
+
+.sweat-drop {
+  animation: sweatDrop 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* Category card icon color inheritance */
+.category-card-icon svg {
+  transition: color 0.2s ease;
+}
+
+.category-card .category-card-icon {
+  color: var(--blue);
+}
+
+.category-card.selected .category-card-icon {
+  color: var(--blue-dark, #1D4ED8);
+}
+
+/* Star spin for achievements */
+@keyframes starSpin {
+  0% { transform: rotate(0deg) scale(0); opacity: 0; }
+  50% { transform: rotate(180deg) scale(1.3); opacity: 1; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+/* Countdown number */
+@keyframes countdownPop {
+  0% { transform: scale(2); opacity: 0; }
+  40% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+/* Stagger children animation utility */
+.stagger-children > * {
+  animation: slideUp 0.4s var(--ease) backwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 360ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 420ms; }
+
+/* Apply animations */
+.anim-fade-in { animation: fadeIn 0.3s var(--ease); }
+.anim-slide-up { animation: slideUp 0.4s var(--ease); }
+.anim-slide-down { animation: slideDown 0.4s var(--ease); }
+.anim-bounce-in { animation: bounceIn 0.5s var(--ease-bounce); }
+.anim-scale-in { animation: scaleIn 0.3s var(--ease-bounce); }
+.anim-shake { animation: shake 0.5s var(--ease); }
+.anim-correct { animation: correctPulse 0.6s var(--ease); }
+.anim-float { animation: float 3s ease-in-out infinite; }
+.anim-pull { animation: pullEffort 0.4s var(--ease) infinite; }

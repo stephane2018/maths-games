@@ -1,0 +1,27 @@
+{
+  "name": "maths-tug-of-war",
+  "version": "1.0.0",
+  "description": "Jeu éducatif Tir à la Corde Mathématique - CE1D",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "education",
+    "math",
+    "game",
+    "CE1D"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.0"
+  }
+}

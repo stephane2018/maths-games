@@ -1,0 +1,345 @@
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* ---- Phone portrait (< 480px) ---- */
+@media (max-width: 479px) {
+  :root {
+    --btn-min: 44px;
+  }
+
+  .title { font-size: 1.5rem; }
+  .subtitle { font-size: 0.95rem; }
+
+  .screen-content {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card { padding: 14px; }
+  .btn-lg { min-height: 52px; padding: 12px 28px; font-size: 1.1rem; }
+
+  /* Game layout: stack vertically on small phones */
+  .game-layout {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+    align-items: stretch;
+  }
+
+  .game-layout .rope-section {
+    order: -1;
+    flex: 0 0 auto;
+    min-height: 110px;
+    width: 100%;
+  }
+
+  .game-layout .rope-arena {
+    min-height: 110px;
+    max-height: 150px;
+  }
+
+  .game-layout .player-panel {
+    flex-direction: row;
+    max-width: none;
+    max-height: none;
+    gap: 6px;
+    flex: 0 0 auto;
+    padding: 8px;
+  }
+
+  .game-layout .player-panel .numpad-container {
+    flex: 1;
+  }
+
+  .game-layout .question-display {
+    font-size: 1rem;
+    padding: 8px;
+    min-height: 38px;
+  }
+
+  .game-layout .answer-display {
+    padding: 6px;
+    font-size: 1rem;
+    min-height: 34px;
+  }
+
+  .numpad-grid {
+    gap: 3px;
+  }
+
+  .numpad-btn {
+    min-height: 34px;
+    font-size: 1.1rem;
+  }
+
+  .game-layout .player-header {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .game-layout .player-score {
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+
+  /* Arena score bar compact */
+  .rope-score-bar-inner {
+    padding: 4px 10px;
+  }
+
+  .arena-score {
+    font-size: 1.2rem;
+  }
+
+  .arena-team-name {
+    font-size: 0.75rem;
+  }
+
+  /* Top/bottom bars compact */
+  .game-top-bar {
+    padding: 6px 10px;
+  }
+
+  .game-title {
+    font-size: 1rem;
+  }
+
+  .home-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .game-bottom-bar {
+    padding: 4px 8px;
+  }
+
+  .zoom-controls {
+    padding: 2px 4px;
+  }
+
+  .zoom-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .zoom-label {
+    font-size: 0.65rem;
+    min-width: 30px;
+  }
+}
+
+/* ---- Phone landscape / small tablet (480-767px) ---- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .game-layout {
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .game-layout .player-panel {
+    flex: 1;
+    max-width: 260px;
+  }
+
+  .game-layout .rope-section {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .numpad-btn {
+    min-height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .question-display {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .answer-display {
+    padding: 8px;
+    font-size: 1.05rem;
+  }
+
+  .game-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---- Tablet (768-1023px) ---- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title { font-size: 2.2rem; }
+
+  .screen-content {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .game-layout {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .game-layout .player-panel {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .game-layout .rope-section {
+    flex: 1.2;
+  }
+
+  .numpad-btn {
+    min-height: 46px;
+    font-size: 1.3rem;
+  }
+}
+
+/* ---- Desktop (>= 1024px) ---- */
+@media (min-width: 1024px) {
+  .title { font-size: 2.5rem; }
+
+  .screen-content {
+    padding: 32px;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .game-layout {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .game-layout .player-panel {
+    flex: 1;
+    max-width: 340px;
+  }
+
+  .game-layout .rope-section {
+    flex: 1.5;
+  }
+
+  .numpad-btn {
+    min-height: 52px;
+    font-size: 1.4rem;
+  }
+}
+
+/* ---- Large screens (>= 1400px) ---- */
+@media (min-width: 1400px) {
+  .title { font-size: 3rem; }
+
+  .numpad-btn {
+    min-height: 58px;
+    font-size: 1.5rem;
+  }
+
+  .game-layout .question-display {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---- Orientation-specific ---- */
+@media (orientation: portrait) and (max-width: 767px) {
+  .two-player-warning {
+    display: flex;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .screen-content { padding: 8px; gap: 8px; }
+  .title { font-size: 1.3rem; }
+
+  .game-layout {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .game-layout .rope-section {
+    flex: 0.8;
+  }
+
+  .game-layout .rope-arena {
+    min-height: 100px;
+    max-height: 160px;
+  }
+
+  .game-layout .player-panel {
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .numpad-btn {
+    min-height: 30px;
+    font-size: 1rem;
+  }
+
+  .numpad-grid {
+    gap: 2px;
+  }
+
+  .question-display {
+    padding: 6px;
+    font-size: 1rem;
+    min-height: 34px;
+  }
+
+  .answer-display {
+    padding: 4px;
+    font-size: 0.95rem;
+    min-height: 30px;
+  }
+
+  .player-header {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+
+  .game-top-bar {
+    padding: 4px 10px;
+  }
+
+  .game-bottom-bar {
+    padding: 4px 8px;
+  }
+}
+
+/* ---- Hover-capable devices ---- */
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-lg);
+  }
+
+  .numpad-btn:hover {
+    background: var(--blue-light);
+  }
+
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px var(--shadow-lg);
+  }
+}
+
+/* ---- Touch devices - larger targets ---- */
+@media (pointer: coarse) {
+  .btn { min-height: 48px; }
+  .numpad-btn { min-height: 44px; }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Dark mode (reserved) ---- */
+@media (prefers-color-scheme: dark) {
+  /* Reserved for future dark mode */
+}
