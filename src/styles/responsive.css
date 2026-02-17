@@ -338,14 +338,16 @@
   }
 
   .wizard-difficulty-grid {
-    flex-direction: column;
+    flex-direction: row;
     padding: 12px;
     gap: 8px;
+    flex-wrap: wrap;
   }
 
   .wizard-diff-card {
-    padding: 12px 20px;
-    width: 100%;
+    padding: 12px 16px;
+    flex: 1;
+    min-width: 90px;
   }
 
   .wizard-rounds-grid {

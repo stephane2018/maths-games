@@ -1444,6 +1444,7 @@
 /* Difficulty grid */
 .wizard-difficulty-grid {
   display: flex;
+  flex-direction: row;
   gap: 12px;
   justify-content: center;
   margin-top: 12px;
