@@ -167,7 +167,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         team={team}
         onSubmit={handleSubmit}
         disabled={disabled}
-        hasDecimal={false}
+        hasDecimal={true}
         hasNegative={false}
       />
     </div>

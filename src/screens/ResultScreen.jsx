@@ -129,15 +129,15 @@ export default function ResultScreen() {
 
         <div className="card result-card">
           {/* Score */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '12px' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--blue)' }}>{String(blueScore)}</div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{t('game.blue')}</div>
+              <div className="result-score-value" style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--blue)' }}>{String(blueScore)}</div>
+              <div className="result-score-label" style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{t('game.blue')}</div>
             </div>
-            <div style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--text-light)', alignSelf: 'center' }}>-</div>
+            <div className="result-score-separator" style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--text-light)', alignSelf: 'center' }}>-</div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--red)' }}>{String(redScore)}</div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{mode === 'solo' ? 'AI' : t('game.red')}</div>
+              <div className="result-score-value" style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--red)' }}>{String(redScore)}</div>
+              <div className="result-score-label" style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{mode === 'solo' ? 'AI' : t('game.red')}</div>
             </div>
           </div>
 
