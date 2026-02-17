@@ -40,6 +40,8 @@ const RopeScene = forwardRef(function RopeScene({
   const targetXRef = useRef(0);
   const currentXRef = useRef(0);
   const animatingRef = useRef(false);
+  const [visualPosition, setVisualPosition] = useState(0);
+  const [dominance, setDominance] = useState('neutral');
 
   // Dynamic flag / dominance tracking
   const flagRef = useRef(null);
@@ -124,6 +126,7 @@ const RopeScene = forwardRef(function RopeScene({
   const setPosition = useCallback((position) => {
     positionRef.current = Math.max(-5, Math.min(5, position));
     targetXRef.current = positionRef.current * 16;
+    setVisualPosition(positionRef.current);
 
     // Compute dominance
     const prevDom = dominanceRef.current;
@@ -131,6 +134,7 @@ const RopeScene = forwardRef(function RopeScene({
     if (position < 0) newDom = 'blue';
     else if (position > 0) newDom = 'red';
     dominanceRef.current = newDom;
+    setDominance(newDom);
 
     // Update flag color and glow
     updateFlagColor(newDom);
@@ -239,6 +243,20 @@ const RopeScene = forwardRef(function RopeScene({
 
   return (
     <div className="rope-arena" ref={containerRef}>
+      {/* Progress bar */}
+      <div className="rope-progress-bar">
+        <div className="progress-track">
+          <div 
+            className="progress-fill"
+            style={{
+              width: `${50 + (visualPosition / 5) * 50}%`,
+              background: visualPosition < 0 ? '#3B82F6' : visualPosition > 0 ? '#EF4444' : '#94A3B8',
+              transition: 'width 0.3s ease-in-out, background 0.3s ease'
+            }}
+          />
+          <div className="progress-center-marker" />
+        </div>
+      </div>
       {/* Score bar */}
       <div className="rope-score-bar-inner">
         <div className="arena-team-score">
@@ -274,6 +292,21 @@ const RopeScene = forwardRef(function RopeScene({
         </defs>
         {/* Background */}
         <rect width={VB_W} height={VB_H} fill="#F8FAFC" rx="0" />
+        {/* Ground color zone - changes based on dominance */}
+        <rect 
+          x={CENTER_X - 80} 
+          y={ROPE_Y + 20} 
+          width={160} 
+          height={VB_H - ROPE_Y - 30}
+          className="ground-zone"
+          style={{
+            fill: dominance === 'blue' ? '#3B82F6' : 
+                  dominance === 'red' ? '#EF4444' : '#E2E8F0',
+            opacity: dominance === 'neutral' ? 0.15 : 0.25,
+            transition: 'fill 0.4s ease, opacity 0.4s ease'
+          }}
+          rx="8"
+        />
         {/* Dashed center line */}
         <line x1={CENTER_X} y1={30} x2={CENTER_X} y2={VB_H - 10}
           stroke="#CBD5E1" strokeWidth="2" strokeDasharray="8 6" opacity="0.7" />
