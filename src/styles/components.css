@@ -285,6 +285,26 @@
   overflow: hidden;
 }
 
+/* Desktop: panels-row acts as transparent wrapper so panels sit on each side of rope */
+.panels-row {
+  display: contents;
+}
+
+/* Rope in center on desktop */
+.game-layout .rope-section {
+  order: 1;
+}
+
+/* First panel (blue) goes left */
+.game-layout .player-panel:first-child {
+  order: 0;
+}
+
+/* Second panel (red) goes right */
+.game-layout .player-panel:last-child {
+  order: 2;
+}
+
 .player-panel {
   display: flex;
   flex-direction: column;

@@ -3,6 +3,7 @@ import { useI18n } from '../contexts/I18nContext.jsx';
 import { useAnimationFrame } from '../hooks/useAnimationFrame.js';
 import { Team, SVGDefs } from './CharacterSVG.jsx';
 import Timer from './Timer.jsx';
+import { sound } from '../systems/SoundManager.js';
 
 const VB_W = 600;
 const VB_H = 280;
@@ -40,6 +41,12 @@ const RopeScene = forwardRef(function RopeScene({
   const currentXRef = useRef(0);
   const animatingRef = useRef(false);
 
+  // Dynamic flag / dominance tracking
+  const flagRef = useRef(null);
+  const glowRef = useRef(null);
+  const dominanceRef = useRef('neutral');
+  const prevDominanceRef = useRef('neutral');
+
   // Score popups
   const [popups, setPopups] = useState([]);
   const popupIdRef = useRef(0);
@@ -61,10 +68,80 @@ const RopeScene = forwardRef(function RopeScene({
     }
   });
 
+  const updateFlagColor = useCallback((dominance) => {
+    if (!flagRef.current) return;
+    const flag = flagRef.current;
+    if (dominance === 'blue') {
+      flag.style.fill = '#3B82F6';
+      flag.style.stroke = '#1D4ED8';
+      flag.classList.remove('flag-blink');
+    } else if (dominance === 'red') {
+      flag.style.fill = '#EF4444';
+      flag.style.stroke = '#B91C1C';
+      flag.classList.remove('flag-blink');
+    } else {
+      flag.style.fill = '#A8A29E';
+      flag.style.stroke = '#78716C';
+      flag.classList.add('flag-blink');
+    }
+  }, []);
+
+  const updateGlowZone = useCallback((dominance) => {
+    if (!glowRef.current) return;
+    const gradId = dominance === 'blue' ? 'glow-blue'
+                  : dominance === 'red' ? 'glow-red'
+                  : 'glow-neutral';
+    glowRef.current.setAttribute('fill', `url(#${gradId})`);
+    const absPos = Math.abs(positionRef.current);
+    const opacity = 0.3 + (absPos / 5) * 0.7;
+    glowRef.current.setAttribute('opacity', String(opacity));
+  }, []);
+
+  const triggerLeadChangeVibration = useCallback(() => {
+    if (!ropeGroupRef.current || animatingRef.current) return;
+    const baseX = currentXRef.current;
+    animatingRef.current = true;
+    sound.leadChange();
+
+    const offsets = [0, 2, -2, 1.5, -1, 0.5, 0];
+    const yOffsets = [0, 1, -1, 0.5, -0.5, 0, 0];
+    let step = 0;
+
+    const interval = setInterval(() => {
+      step++;
+      if (step >= offsets.length || !ropeGroupRef.current) {
+        clearInterval(interval);
+        if (ropeGroupRef.current) {
+          ropeGroupRef.current.setAttribute('transform', `translate(${baseX}, 0)`);
+        }
+        animatingRef.current = false;
+        return;
+      }
+      ropeGroupRef.current.setAttribute('transform', `translate(${baseX + offsets[step]}, ${yOffsets[step]})`);
+    }, 30);
+  }, []);
+
   const setPosition = useCallback((position) => {
     positionRef.current = Math.max(-5, Math.min(5, position));
     targetXRef.current = positionRef.current * 16;
-  }, []);
+
+    // Compute dominance
+    const prevDom = dominanceRef.current;
+    let newDom = 'neutral';
+    if (position < 0) newDom = 'blue';
+    else if (position > 0) newDom = 'red';
+    dominanceRef.current = newDom;
+
+    // Update flag color and glow
+    updateFlagColor(newDom);
+    updateGlowZone(newDom);
+
+    // Detect lead change (blue↔red, not from/to neutral)
+    if (prevDom !== 'neutral' && newDom !== 'neutral' && prevDom !== newDom) {
+      triggerLeadChangeVibration();
+    }
+    prevDominanceRef.current = newDom;
+  }, [updateFlagColor, updateGlowZone, triggerLeadChangeVibration]);
 
   const animatePull = useCallback((team) => {
     if (!ropeGroupRef.current) return;
@@ -181,6 +258,20 @@ const RopeScene = forwardRef(function RopeScene({
       {/* SVG Arena */}
       <svg ref={svgRef} viewBox={`0 0 ${VB_W} ${VB_H}`} className="rope-svg">
         <SVGDefs />
+        <defs>
+          <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="glow-red" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#EF4444" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#EF4444" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="glow-neutral" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#A8A29E" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#A8A29E" stopOpacity="0" />
+          </radialGradient>
+        </defs>
         {/* Background */}
         <rect width={VB_W} height={VB_H} fill="#F8FAFC" rx="0" />
         {/* Dashed center line */}
@@ -189,6 +280,9 @@ const RopeScene = forwardRef(function RopeScene({
         {/* Win zone indicators */}
         <rect x={0} y={30} width={60} height={VB_H - 40} fill="#3B82F6" opacity="0.04" rx="0" />
         <rect x={VB_W - 60} y={30} width={60} height={VB_H - 40} fill="#EF4444" opacity="0.04" rx="0" />
+        {/* Center glow zone (fixed, outside rope group) */}
+        <circle ref={glowRef} cx={CENTER_X} cy={ROPE_Y} r={50}
+          fill="url(#glow-neutral)" opacity="0.3" />
 
         {/* Rope group (moves) */}
         <g ref={ropeGroupRef} className="rope-group">
@@ -203,11 +297,19 @@ const RopeScene = forwardRef(function RopeScene({
             <line key={i} x1={x} y1={ROPE_Y - 1.5} x2={x + 7} y2={ROPE_Y + 1.5}
               stroke="#78716C" strokeWidth="1.5" opacity="0.4" />
           ))}
-          {/* Center marker */}
-          <polygon
-            points={`${CENTER_X},${ROPE_Y - 12} ${CENTER_X + 8},${ROPE_Y} ${CENTER_X},${ROPE_Y + 12} ${CENTER_X - 8},${ROPE_Y}`}
-            fill="#EF4444" stroke="#B91C1C" strokeWidth="1.5"
-          />
+          {/* Flag/Fanion marker */}
+          <g>
+            <line x1={CENTER_X} y1={ROPE_Y - 3} x2={CENTER_X} y2={ROPE_Y - 28}
+              stroke="#78716C" strokeWidth="2" strokeLinecap="round" />
+            <polygon
+              ref={flagRef}
+              points={`${CENTER_X},${ROPE_Y - 28} ${CENTER_X + 16},${ROPE_Y - 22} ${CENTER_X},${ROPE_Y - 16}`}
+              className="flag-pennant flag-blink"
+              style={{ fill: '#A8A29E', stroke: '#78716C' }}
+              strokeWidth="1.5"
+            />
+            <circle cx={CENTER_X} cy={ROPE_Y} r={3} fill="#A8A29E" stroke="#78716C" strokeWidth="1" />
+          </g>
           {/* Blue team */}
           <g transform={`translate(${CENTER_X - 150}, ${ROPE_Y - 2})`}>
             <Team team="blue" />

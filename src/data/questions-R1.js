@@ -1,7 +1,6 @@
 // =============================================================================
 // R1 - Word Problems & Reasoning
 // CE1D Belgian exam - Trilingual (FR / EN / NL)
-// All static questions
 // =============================================================================
 
 export const questions = [
@@ -280,4 +279,480 @@ export const questions = [
     },
     commonMistake: '146',
   },
+
+  // ── Level 2: CE1D-inspired ───────────────────────────────────────────────
+  {
+    id: 'R1_016',
+    category: 'R1',
+    level: 2,
+    text: {
+      fr: 'Un club de tennis propose : 50 € d\'abonnement + 6 €/h ou 10 €/h sans abonnement. À partir de combien d\'heures l\'abonnement est-il plus intéressant ?',
+      en: 'A tennis club offers: 50 € membership + 6 €/h or 10 €/h without membership. From how many hours is the membership cheaper?',
+      nl: 'Een tennisclub biedt: 50 € abonnement + 6 €/u of 10 €/u zonder abonnement. Vanaf hoeveel uur is het abonnement voordeliger?',
+    },
+    answer: 13,
+    tolerance: 0,
+    hint: {
+      fr: 'Avec abonnement : 50 + 6h. Sans : 10h. Résous 50 + 6h < 10h → h > 12,5 donc 13 heures.',
+      en: 'With membership: 50 + 6h. Without: 10h. Solve 50 + 6h < 10h → h > 12.5 so 13 hours.',
+      nl: 'Met abonnement: 50 + 6u. Zonder: 10u. Los 50 + 6u < 10u op → u > 12,5 dus 13 uur.',
+    },
+    commonMistake: '12',
+  },
+  {
+    id: 'R1_017',
+    category: 'R1',
+    level: 2,
+    text: {
+      fr: 'Un sport propose : tarif 1 = 35 € d\'abonnement + 7 €/cours ou tarif 2 = 15 €/cours. À partir de combien de cours le tarif 1 est-il meilleur ?',
+      en: 'A sport offers: rate 1 = 35 € subscription + 7 €/class or rate 2 = 15 €/class. From how many classes is rate 1 better?',
+      nl: 'Een sport biedt: tarief 1 = 35 € abonnement + 7 €/les of tarief 2 = 15 €/les. Vanaf hoeveel lessen is tarief 1 voordeliger?',
+    },
+    answer: 5,
+    tolerance: 0,
+    hint: {
+      fr: 'Tarif 1 : 35 + 7n. Tarif 2 : 15n. Résous 35 + 7n < 15n → n > 4,375 donc 5 cours.',
+      en: 'Rate 1: 35 + 7n. Rate 2: 15n. Solve 35 + 7n < 15n → n > 4.375 so 5 classes.',
+      nl: 'Tarief 1: 35 + 7n. Tarief 2: 15n. Los 35 + 7n < 15n op → n > 4,375 dus 5 lessen.',
+    },
+    commonMistake: '4',
+  },
+  {
+    id: 'R1_018',
+    category: 'R1',
+    level: 2,
+    text: {
+      fr: '25 % des 10 000 arbres d\'une forêt sont déracinés par une tempête. Combien d\'arbres sont déracinés ?',
+      en: '25% of the 10,000 trees in a forest are uprooted by a storm. How many trees are uprooted?',
+      nl: '25% van de 10.000 bomen in een bos worden ontworteld door een storm. Hoeveel bomen zijn ontworteld?',
+    },
+    answer: 2500,
+    tolerance: 0,
+    hint: {
+      fr: '25 % = un quart. 10 000 ÷ 4 = ?',
+      en: '25% = one quarter. 10,000 ÷ 4 = ?',
+      nl: '25% = een kwart. 10.000 ÷ 4 = ?',
+    },
+    commonMistake: '250',
+  },
+  {
+    id: 'R1_019',
+    category: 'R1',
+    level: 2,
+    text: {
+      fr: '2500 arbres sont déracinés. Les bûcherons en emportent 1/5. Combien d\'arbres restent sur place ?',
+      en: '2500 trees are uprooted. Lumberjacks remove 1/5 of them. How many trees remain?',
+      nl: '2500 bomen zijn ontworteld. Houthakkers verwijderen er 1/5. Hoeveel bomen blijven er liggen?',
+    },
+    answer: 2000,
+    tolerance: 0,
+    hint: {
+      fr: '1/5 de 2500 = 500 emportés. Reste : 2500 - 500 = ?',
+      en: '1/5 of 2500 = 500 removed. Remaining: 2500 - 500 = ?',
+      nl: '1/5 van 2500 = 500 verwijderd. Rest: 2500 - 500 = ?',
+    },
+    commonMistake: '500',
+  },
+
+  // ── Level 3: CE1D-inspired ───────────────────────────────────────────────
+  {
+    id: 'R1_020',
+    category: 'R1',
+    level: 3,
+    text: {
+      fr: 'Maxime a entre 150 et 200 châtaignes. Le nombre est divisible par 3, 4 et 5. Combien en a-t-il ?',
+      en: 'Maxime has between 150 and 200 chestnuts. The number is divisible by 3, 4 and 5. How many does he have?',
+      nl: 'Maxime heeft tussen 150 en 200 kastanjes. Het aantal is deelbaar door 3, 4 en 5. Hoeveel heeft hij er?',
+    },
+    answer: 180,
+    tolerance: 0,
+    hint: {
+      fr: 'Le PPCM de 3, 4 et 5 est 60. Le multiple de 60 entre 150 et 200 est 180.',
+      en: 'The LCM of 3, 4 and 5 is 60. The multiple of 60 between 150 and 200 is 180.',
+      nl: 'Het KGV van 3, 4 en 5 is 60. Het veelvoud van 60 tussen 150 en 200 is 180.',
+    },
+    commonMistake: '160',
+  },
+  {
+    id: 'R1_021',
+    category: 'R1',
+    level: 3,
+    text: {
+      fr: '132 filles et 84 garçons doivent former des groupes mixtes de taille égale. Quel est le plus grand nombre de groupes possibles ?',
+      en: '132 girls and 84 boys must form equal mixed groups. What is the greatest number of groups possible?',
+      nl: '132 meisjes en 84 jongens moeten gelijke gemengde groepen vormen. Wat is het grootst mogelijke aantal groepen?',
+    },
+    answer: 12,
+    tolerance: 0,
+    hint: {
+      fr: 'Cherche le PGCD de 132 et 84. 132 = 12 × 11, 84 = 12 × 7. PGCD = 12.',
+      en: 'Find the GCD of 132 and 84. 132 = 12 × 11, 84 = 12 × 7. GCD = 12.',
+      nl: 'Zoek de GGD van 132 en 84. 132 = 12 × 11, 84 = 12 × 7. GGD = 12.',
+    },
+    commonMistake: '6',
+  },
+  {
+    id: 'R1_022',
+    category: 'R1',
+    level: 3,
+    text: {
+      fr: 'Dans une salle de 600 places en rangées de 24, quel est le numéro de la rangée de la place 75 ?',
+      en: 'In a hall with 600 seats in rows of 24, what is the row number for seat 75?',
+      nl: 'In een zaal met 600 plaatsen in rijen van 24, wat is het rijnummer van stoel 75?',
+    },
+    answer: 4,
+    tolerance: 0,
+    hint: {
+      fr: '75 ÷ 24 = 3 reste 3. La place 75 est dans la 4e rangée.',
+      en: '75 ÷ 24 = 3 remainder 3. Seat 75 is in the 4th row.',
+      nl: '75 ÷ 24 = 3 rest 3. Stoel 75 zit in de 4e rij.',
+    },
+    commonMistake: '3',
+  },
 ];
+
+/**
+ * Procedural generator for R1 questions (word problems & reasoning).
+ * Inspired by CE1D exam: real-world scenarios with multi-step reasoning.
+ * @param {1|2|3} level
+ * @returns {object} A single question object
+ */
+export function generate(level = 1) {
+  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  const pick = (arr) => arr[rand(0, arr.length - 1)];
+  const id = `R1_gen_${Date.now()}_${rand(100, 999)}`;
+
+  const names = ['Marie', 'Lucas', 'Léa', 'Tom', 'Sophie', 'Pierre', 'Emma', 'Hugo'];
+  const name1 = pick(names);
+
+  if (level === 1) {
+    const type = rand(0, 3);
+
+    if (type === 0) {
+      // Subtraction: has X, gives away Y
+      const a = rand(20, 99);
+      const b = rand(5, a - 5);
+      const answer = a - b;
+      const obj = pick([
+        { fr: 'billes', en: 'marbles', nl: 'knikkers' },
+        { fr: 'bonbons', en: 'sweets', nl: 'snoepjes' },
+        { fr: 'cartes', en: 'cards', nl: 'kaarten' },
+        { fr: 'autocollants', en: 'stickers', nl: 'stickers' },
+      ]);
+      return {
+        id, category: 'R1', level: 1,
+        text: {
+          fr: `${name1} a ${a} ${obj.fr}. Il en donne ${b} à un ami. Combien lui en reste-t-il ?`,
+          en: `${name1} has ${a} ${obj.en}. He gives ${b} to a friend. How many does he have left?`,
+          nl: `${name1} heeft ${a} ${obj.nl}. Hij geeft er ${b} aan een vriend. Hoeveel heeft hij er nog?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: { fr: `${a} - ${b} = ?`, en: `${a} - ${b} = ?`, nl: `${a} - ${b} = ?` },
+        commonMistake: String(a + b),
+      };
+    }
+
+    if (type === 1) {
+      // Addition: two groups
+      const a = rand(15, 60);
+      const b = rand(10, 50);
+      const answer = a + b;
+      const pair = pick([
+        { fr: ['poules', 'canards'], en: ['chickens', 'ducks'], nl: ['kippen', 'eenden'] },
+        { fr: ['garçons', 'filles'], en: ['boys', 'girls'], nl: ['jongens', 'meisjes'] },
+        { fr: ['roses', 'tulipes'], en: ['roses', 'tulips'], nl: ['rozen', 'tulpen'] },
+      ]);
+      return {
+        id, category: 'R1', level: 1,
+        text: {
+          fr: `Un fermier a ${a} ${pair.fr[0]} et ${b} ${pair.fr[1]}. Combien d'animaux a-t-il en tout ?`,
+          en: `A farmer has ${a} ${pair.en[0]} and ${b} ${pair.en[1]}. How many animals does he have in total?`,
+          nl: `Een boer heeft ${a} ${pair.nl[0]} en ${b} ${pair.nl[1]}. Hoeveel dieren heeft hij in totaal?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: { fr: `${a} + ${b} = ?`, en: `${a} + ${b} = ?`, nl: `${a} + ${b} = ?` },
+        commonMistake: String(Math.abs(a - b)),
+      };
+    }
+
+    if (type === 2) {
+      // Multiplication: N packs of M items
+      const packs = rand(3, 9);
+      const perPack = rand(4, 12);
+      const answer = packs * perPack;
+      const obj = pick([
+        { fr: 'biscuits', en: 'biscuits', nl: 'koekjes' },
+        { fr: 'crayons', en: 'pencils', nl: 'potloden' },
+        { fr: 'bonbons', en: 'sweets', nl: 'snoepjes' },
+      ]);
+      return {
+        id, category: 'R1', level: 1,
+        text: {
+          fr: `${name1} achète ${packs} paquets de ${perPack} ${obj.fr}. Combien en a-t-il ?`,
+          en: `${name1} buys ${packs} packs of ${perPack} ${obj.en}. How many does he have?`,
+          nl: `${name1} koopt ${packs} pakken van ${perPack} ${obj.nl}. Hoeveel heeft hij er?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: { fr: `${packs} × ${perPack} = ?`, en: `${packs} × ${perPack} = ?`, nl: `${packs} × ${perPack} = ?` },
+        commonMistake: String(packs + perPack),
+      };
+    }
+
+    // Division: share equally
+    const divisor = rand(3, 9);
+    const quotient = rand(3, 12);
+    const total = divisor * quotient;
+    return {
+      id, category: 'R1', level: 1,
+      text: {
+        fr: `On partage ${total} bonbons entre ${divisor} enfants. Combien chaque enfant reçoit-il ?`,
+        en: `${total} sweets are shared equally among ${divisor} children. How many does each child get?`,
+        nl: `${total} snoepjes worden gelijk verdeeld onder ${divisor} kinderen. Hoeveel krijgt elk kind?`,
+      },
+      answer: quotient,
+      tolerance: 0,
+      hint: { fr: `${total} ÷ ${divisor} = ?`, en: `${total} ÷ ${divisor} = ?`, nl: `${total} ÷ ${divisor} = ?` },
+      commonMistake: String(divisor),
+    };
+  }
+
+  if (level === 2) {
+    const type = rand(0, 3);
+
+    if (type === 0) {
+      // Buy items + change
+      const budget = rand(5, 20) * 10;
+      const priceA = rand(5, 20);
+      const priceB = rand(2, 12);
+      const answer = budget - priceA - priceB;
+      if (answer < 1) return generate(2);
+      const itemA = pick([
+        { fr: 'un livre', en: 'a book', nl: 'een boek' },
+        { fr: 'un jeu', en: 'a game', nl: 'een spel' },
+      ]);
+      const itemB = pick([
+        { fr: 'un stylo', en: 'a pen', nl: 'een pen' },
+        { fr: 'un cahier', en: 'a notebook', nl: 'een schrift' },
+      ]);
+      return {
+        id, category: 'R1', level: 2,
+        text: {
+          fr: `${name1} a ${budget} €. Il achète ${itemA.fr} à ${priceA} € et ${itemB.fr} à ${priceB} €. Combien lui reste-t-il ?`,
+          en: `${name1} has ${budget} €. He buys ${itemA.en} for ${priceA} € and ${itemB.en} for ${priceB} €. How much is left?`,
+          nl: `${name1} heeft ${budget} €. Hij koopt ${itemA.nl} van ${priceA} € en ${itemB.nl} van ${priceB} €. Hoeveel heeft hij nog?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: {
+          fr: `Total achats : ${priceA} + ${priceB} = ${priceA + priceB}. Reste : ${budget} - ${priceA + priceB}.`,
+          en: `Total: ${priceA} + ${priceB} = ${priceA + priceB}. Left: ${budget} - ${priceA + priceB}.`,
+          nl: `Totaal: ${priceA} + ${priceB} = ${priceA + priceB}. Over: ${budget} - ${priceA + priceB}.`,
+        },
+        commonMistake: String(budget - priceA),
+      };
+    }
+
+    if (type === 1) {
+      // X times more together
+      const multiplier = rand(2, 5);
+      const base = rand(5, 25);
+      const answer = base * multiplier + base;
+      const name2 = pick(names.filter((n) => n !== name1));
+      const obj = pick([
+        { fr: 'cartes', en: 'cards', nl: 'kaarten' },
+        { fr: 'billes', en: 'marbles', nl: 'knikkers' },
+      ]);
+      return {
+        id, category: 'R1', level: 2,
+        text: {
+          fr: `${name1} a ${multiplier} fois plus de ${obj.fr} que ${name2}. ${name2} a ${base} ${obj.fr}. Combien en ont-ils ensemble ?`,
+          en: `${name1} has ${multiplier} times as many ${obj.en} as ${name2}. ${name2} has ${base} ${obj.en}. How many together?`,
+          nl: `${name1} heeft ${multiplier} keer zoveel ${obj.nl} als ${name2}. ${name2} heeft ${base} ${obj.nl}. Hoeveel samen?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: {
+          fr: `${name1} : ${multiplier} × ${base} = ${multiplier * base}. Ensemble : ${multiplier * base} + ${base}.`,
+          en: `${name1}: ${multiplier} × ${base} = ${multiplier * base}. Together: ${multiplier * base} + ${base}.`,
+          nl: `${name1}: ${multiplier} × ${base} = ${multiplier * base}. Samen: ${multiplier * base} + ${base}.`,
+        },
+        commonMistake: String(multiplier * base),
+      };
+    }
+
+    if (type === 2) {
+      // Production - sold = remaining
+      const perDay = rand(8, 20);
+      const days = rand(3, 7);
+      const total = perDay * days;
+      const sold = rand(Math.floor(total * 0.5), total - perDay);
+      const answer = total - sold;
+      const obj = pick([
+        { fr: 'gâteaux', en: 'cakes', nl: 'taarten' },
+        { fr: 'pains', en: 'loaves', nl: 'broden' },
+      ]);
+      return {
+        id, category: 'R1', level: 2,
+        text: {
+          fr: `Un boulanger prépare ${perDay} ${obj.fr} par jour. Après ${days} jours, il en a vendu ${sold}. Combien lui en reste-t-il ?`,
+          en: `A baker makes ${perDay} ${obj.en} per day. After ${days} days, he sold ${sold}. How many left?`,
+          nl: `Een bakker maakt ${perDay} ${obj.nl} per dag. Na ${days} dagen verkocht hij ${sold}. Hoeveel heeft hij nog?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: {
+          fr: `Total : ${perDay} × ${days} = ${total}. Reste : ${total} - ${sold}.`,
+          en: `Total: ${perDay} × ${days} = ${total}. Left: ${total} - ${sold}.`,
+          nl: `Totaal: ${perDay} × ${days} = ${total}. Over: ${total} - ${sold}.`,
+        },
+        commonMistake: String(sold),
+      };
+    }
+
+    // Subscription breakeven (CE1D-inspired)
+    const subscription = rand(3, 8) * 10;
+    const rateWith = rand(4, 8);
+    const rateWithout = rateWith + rand(2, 6);
+    const diff = rateWithout - rateWith;
+    const answer = Math.ceil(subscription / diff);
+    return {
+      id, category: 'R1', level: 2,
+      text: {
+        fr: `Un club propose : ${subscription} € d'abonnement + ${rateWith} €/séance ou ${rateWithout} €/séance sans abonnement. À partir de combien de séances l'abonnement est-il plus intéressant ?`,
+        en: `A club offers: ${subscription} € membership + ${rateWith} €/session or ${rateWithout} €/session without. From how many sessions is membership cheaper?`,
+        nl: `Een club biedt: ${subscription} € abonnement + ${rateWith} €/sessie of ${rateWithout} €/sessie zonder. Vanaf hoeveel sessies is het abonnement voordeliger?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `Avec : ${subscription} + ${rateWith}n. Sans : ${rateWithout}n. ${subscription} ÷ ${diff} = ${(subscription / diff).toFixed(1)} → ${answer} séances.`,
+        en: `With: ${subscription} + ${rateWith}n. Without: ${rateWithout}n. ${subscription} ÷ ${diff} = ${(subscription / diff).toFixed(1)} → ${answer} sessions.`,
+        nl: `Met: ${subscription} + ${rateWith}n. Zonder: ${rateWithout}n. ${subscription} ÷ ${diff} = ${(subscription / diff).toFixed(1)} → ${answer} sessies.`,
+      },
+      commonMistake: String(answer - 1),
+    };
+  }
+
+  // Level 3
+  const type = rand(0, 3);
+
+  if (type === 0) {
+    // Shopping with discount
+    const priceA = rand(10, 25);
+    const qtyA = rand(2, 5);
+    const priceB = rand(20, 45);
+    const qtyB = rand(1, 3);
+    const discount = rand(1, 3) * 5;
+    const subtotal = priceA * qtyA + priceB * qtyB;
+    const answer = subtotal - discount;
+    const itemA = pick([
+      { fr: 'T-shirts', en: 'T-shirts', nl: 'T-shirts' },
+      { fr: 'livres', en: 'books', nl: 'boeken' },
+    ]);
+    const itemB = pick([
+      { fr: 'pantalons', en: 'trousers', nl: 'broeken' },
+      { fr: 'chaussures', en: 'shoes', nl: 'schoenen' },
+    ]);
+    return {
+      id, category: 'R1', level: 3,
+      text: {
+        fr: `Des ${itemA.fr} à ${priceA} € et des ${itemB.fr} à ${priceB} €. ${name1} achète ${qtyA} ${itemA.fr} et ${qtyB} ${itemB.fr} avec ${discount} € de réduction. Combien paie-t-il ?`,
+        en: `${itemA.en} at ${priceA} € and ${itemB.en} at ${priceB} €. ${name1} buys ${qtyA} ${itemA.en} and ${qtyB} ${itemB.en} with a ${discount} € discount. How much does he pay?`,
+        nl: `${itemA.nl} aan ${priceA} € en ${itemB.nl} aan ${priceB} €. ${name1} koopt ${qtyA} ${itemA.nl} en ${qtyB} ${itemB.nl} met ${discount} € korting. Hoeveel betaalt hij?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `${itemA.fr} : ${qtyA} × ${priceA} = ${qtyA * priceA}. ${itemB.fr} : ${qtyB} × ${priceB} = ${qtyB * priceB}. Total : ${subtotal} - ${discount}.`,
+        en: `${itemA.en}: ${qtyA} × ${priceA} = ${qtyA * priceA}. ${itemB.en}: ${qtyB} × ${priceB} = ${qtyB * priceB}. Total: ${subtotal} - ${discount}.`,
+        nl: `${itemA.nl}: ${qtyA} × ${priceA} = ${qtyA * priceA}. ${itemB.nl}: ${qtyB} × ${priceB} = ${qtyB * priceB}. Totaal: ${subtotal} - ${discount}.`,
+      },
+      commonMistake: String(subtotal),
+    };
+  }
+
+  if (type === 1) {
+    // Distance problem
+    const d1 = rand(10, 50);
+    const d2 = rand(50, 150);
+    const d3 = rand(3, 20);
+    const answer = d1 + d2 + d3;
+    const means = pick([
+      { fr: ['vélo', 'train', 'pied'], en: ['bike', 'train', 'foot'], nl: ['fiets', 'trein', 'voet'] },
+      { fr: ['bus', 'métro', 'pied'], en: ['bus', 'metro', 'foot'], nl: ['bus', 'metro', 'voet'] },
+    ]);
+    return {
+      id, category: 'R1', level: 3,
+      text: {
+        fr: `${name1} fait un trajet : ${d1} km en ${means.fr[0]}, ${d2} km en ${means.fr[1]} et ${d3} km à ${means.fr[2]}. Distance totale en km ?`,
+        en: `${name1} takes a trip: ${d1} km by ${means.en[0]}, ${d2} km by ${means.en[1]} and ${d3} km on ${means.en[2]}. Total distance in km?`,
+        nl: `${name1} maakt een reis: ${d1} km met de ${means.nl[0]}, ${d2} km met de ${means.nl[1]} en ${d3} km te ${means.nl[2]}. Totale afstand in km?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: { fr: `${d1} + ${d2} + ${d3} = ?`, en: `${d1} + ${d2} + ${d3} = ?`, nl: `${d1} + ${d2} + ${d3} = ?` },
+      commonMistake: String(d2),
+    };
+  }
+
+  if (type === 2) {
+    // Garden / flowers with storm
+    const rowsA = rand(4, 10);
+    const perRowA = rand(8, 15);
+    const rowsB = rand(3, 8);
+    const perRowB = rand(6, 12);
+    const destroyed = rand(5, 20);
+    const total = rowsA * perRowA + rowsB * perRowB;
+    const answer = total - destroyed;
+    const flA = pick([{ fr: 'tulipes', en: 'tulips', nl: 'tulpen' }, { fr: 'roses', en: 'roses', nl: 'rozen' }]);
+    const flB = pick([{ fr: 'marguerites', en: 'daisies', nl: 'madeliefjes' }, { fr: 'jonquilles', en: 'daffodils', nl: 'narcissen' }]);
+    return {
+      id, category: 'R1', level: 3,
+      text: {
+        fr: `Un jardinier plante ${rowsA} rangées de ${perRowA} ${flA.fr} et ${rowsB} rangées de ${perRowB} ${flB.fr}. Un orage détruit ${destroyed} fleurs. Combien en reste-t-il ?`,
+        en: `A gardener plants ${rowsA} rows of ${perRowA} ${flA.en} and ${rowsB} rows of ${perRowB} ${flB.en}. A storm destroys ${destroyed} flowers. How many are left?`,
+        nl: `Een tuinier plant ${rowsA} rijen van ${perRowA} ${flA.nl} en ${rowsB} rijen van ${perRowB} ${flB.nl}. Een storm vernielt ${destroyed} bloemen. Hoeveel zijn er nog?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `${flA.fr} : ${rowsA} × ${perRowA} = ${rowsA * perRowA}. ${flB.fr} : ${rowsB} × ${perRowB} = ${rowsB * perRowB}. Total : ${total}. Reste : ${total} - ${destroyed}.`,
+        en: `${flA.en}: ${rowsA} × ${perRowA} = ${rowsA * perRowA}. ${flB.en}: ${rowsB} × ${perRowB} = ${rowsB * perRowB}. Total: ${total}. Left: ${total} - ${destroyed}.`,
+        nl: `${flA.nl}: ${rowsA} × ${perRowA} = ${rowsA * perRowA}. ${flB.nl}: ${rowsB} × ${perRowB} = ${rowsB * perRowB}. Totaal: ${total}. Over: ${total} - ${destroyed}.`,
+      },
+      commonMistake: String(total),
+    };
+  }
+
+  // Cinema / event family problem
+  const adultPrice = rand(8, 14);
+  const childPrice = rand(4, 8);
+  const adults = rand(1, 3);
+  const children = rand(1, 4);
+  const extraPrice = rand(3, 7);
+  const extras = rand(1, 3);
+  const answer = adults * adultPrice + children * childPrice + extras * extraPrice;
+  const extraObj = pick([
+    { fr: 'popcorns', en: 'popcorns', nl: 'popcorns' },
+    { fr: 'boissons', en: 'drinks', nl: 'drankjes' },
+  ]);
+  return {
+    id, category: 'R1', level: 3,
+    text: {
+      fr: `Ciné : adulte ${adultPrice} €, enfant ${childPrice} €. Une famille (${adults} adulte${adults > 1 ? 's' : ''}, ${children} enfant${children > 1 ? 's' : ''}) y va et achète ${extras} ${extraObj.fr} à ${extraPrice} €. Combien dépensent-ils ?`,
+      en: `Cinema: adult ${adultPrice} €, child ${childPrice} €. A family (${adults} adult${adults > 1 ? 's' : ''}, ${children} child${children > 1 ? 'ren' : ''}) goes and buys ${extras} ${extraObj.en} at ${extraPrice} €. How much do they spend?`,
+      nl: `Bioscoop: volwassene ${adultPrice} €, kind ${childPrice} €. Een gezin (${adults} volwassene${adults > 1 ? 'n' : ''}, ${children} kind${children > 1 ? 'eren' : ''}) gaat en koopt ${extras} ${extraObj.nl} van ${extraPrice} €. Hoeveel geven ze uit?`,
+    },
+    answer,
+    tolerance: 0,
+    hint: {
+      fr: `Adultes : ${adults} × ${adultPrice} = ${adults * adultPrice}. Enfants : ${children} × ${childPrice} = ${children * childPrice}. ${extraObj.fr} : ${extras} × ${extraPrice} = ${extras * extraPrice}. Total = ?`,
+      en: `Adults: ${adults} × ${adultPrice} = ${adults * adultPrice}. Children: ${children} × ${childPrice} = ${children * childPrice}. ${extraObj.en}: ${extras} × ${extraPrice} = ${extras * extraPrice}. Total = ?`,
+      nl: `Volwassenen: ${adults} × ${adultPrice} = ${adults * adultPrice}. Kinderen: ${children} × ${childPrice} = ${children * childPrice}. ${extraObj.nl}: ${extras} × ${extraPrice} = ${extras * extraPrice}. Totaal = ?`,
+    },
+    commonMistake: String(adults * adultPrice + children * childPrice),
+  };
+}

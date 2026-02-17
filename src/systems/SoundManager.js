@@ -162,6 +162,13 @@ class SoundManager {
     this._playTone(200, 0.15, 'triangle', 0.3);
   }
 
+  leadChange() {
+    this._playNotes([
+      [440, 0.08, 'triangle', 0.4],
+      [330, 0.12, 'triangle', 0.3],
+    ]);
+  }
+
   welcome() {
     this._playNotes([
       [523, 0.12, 'sine', 0.5],   // C5

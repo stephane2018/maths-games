@@ -194,3 +194,17 @@
 .anim-correct { animation: correctPulse 0.6s var(--ease); }
 .anim-float { animation: float 3s ease-in-out infinite; }
 .anim-pull { animation: pullEffort 0.4s var(--ease) infinite; }
+
+/* Flag/fanion dynamic coloring */
+.flag-pennant {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+@keyframes flagBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.flag-blink {
+  animation: flagBlink 0.8s ease-in-out infinite;
+}

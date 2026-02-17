@@ -10,9 +10,9 @@ import { questions as questionsP1, generate as generateP1 } from './questions-P1
 import { questions as questionsG1, generate as generateG1 } from './questions-G1.js';
 import { questions as questionsG2, generate as generateG2 } from './questions-G2.js';
 import { questions as questionsM1, generate as generateM1 } from './questions-M1.js';
-import { questions as questionsD1 } from './questions-D1.js';
+import { questions as questionsD1, generate as generateD1 } from './questions-D1.js';
 import { questions as questionsD2, generate as generateD2 } from './questions-D2.js';
-import { questions as questionsR1 } from './questions-R1.js';
+import { questions as questionsR1, generate as generateR1 } from './questions-R1.js';
 
 // ─── Category registry ──────────────────────────────────────────────────────
 
@@ -71,7 +71,7 @@ export const allCategories = [
     icon: '📊',
     label: { fr: 'Lecture de tableaux', en: 'Reading tables', nl: 'Tabellen lezen' },
     questions: questionsD1,
-    generate: undefined,
+    generate: generateD1,
   },
   {
     code: 'D2',
@@ -85,7 +85,7 @@ export const allCategories = [
     icon: '🧩',
     label: { fr: 'Problèmes & raisonnement', en: 'Word problems & reasoning', nl: 'Redeneerproblemen' },
     questions: questionsR1,
-    generate: undefined,
+    generate: generateR1,
   },
 ];
 

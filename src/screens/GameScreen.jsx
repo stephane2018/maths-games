@@ -367,14 +367,6 @@ export default function GameScreen() {
 
       {/* Game layout */}
       <div className="game-layout" ref={gameLayoutRef}>
-        <QuestionPanel
-          ref={bluePanelRef}
-          team="blue"
-          teamName={blueName}
-          onAnswer={(val, q, time) => handleAnswer('blue', val, q, time)}
-          onHintRequest={handleHintRequest}
-          disabled={blueDisabled}
-        />
         <div className="rope-section">
           <RopeScene
             ref={ropeSceneRef}
@@ -388,15 +380,25 @@ export default function GameScreen() {
             roundText={roundText}
           />
         </div>
-        <QuestionPanel
-          ref={redPanelRef}
-          team="red"
-          teamName={redName}
-          onAnswer={(val, q, time) => handleAnswer('red', val, q, time)}
-          onHintRequest={mode === 'versus' ? handleHintRequest : undefined}
-          showHintButton={mode === 'versus'}
-          disabled={redDisabled}
-        />
+        <div className="panels-row">
+          <QuestionPanel
+            ref={bluePanelRef}
+            team="blue"
+            teamName={blueName}
+            onAnswer={(val, q, time) => handleAnswer('blue', val, q, time)}
+            onHintRequest={handleHintRequest}
+            disabled={blueDisabled}
+          />
+          <QuestionPanel
+            ref={redPanelRef}
+            team="red"
+            teamName={redName}
+            onAnswer={(val, q, time) => handleAnswer('red', val, q, time)}
+            onHintRequest={mode === 'versus' ? handleHintRequest : undefined}
+            showHintButton={mode === 'versus'}
+            disabled={redDisabled}
+          />
+        </div>
       </div>
 
       {/* Bottom bar */}

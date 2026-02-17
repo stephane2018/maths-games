@@ -297,6 +297,190 @@ export const questions = [
     },
     commonMistake: '40',
   },
+
+  // ── Level 2: CE1D-inspired ───────────────────────────────────────────────
+  {
+    id: 'N3_017',
+    category: 'N3',
+    level: 2,
+    text: {
+      fr: 'Combien font 40 − 5 × 4 ?',
+      en: 'What is 40 − 5 × 4?',
+      nl: 'Hoeveel is 40 − 5 × 4?',
+    },
+    answer: 20,
+    tolerance: 0,
+    hint: {
+      fr: 'D\'abord 5 × 4 = 20, puis 40 − 20.',
+      en: 'First 5 × 4 = 20, then 40 − 20.',
+      nl: 'Eerst 5 × 4 = 20, dan 40 − 20.',
+    },
+    commonMistake: '140',
+  },
+  {
+    id: 'N3_018',
+    category: 'N3',
+    level: 2,
+    text: {
+      fr: 'Combien font 56 − 5 × 8 ?',
+      en: 'What is 56 − 5 × 8?',
+      nl: 'Hoeveel is 56 − 5 × 8?',
+    },
+    answer: 16,
+    tolerance: 0,
+    hint: {
+      fr: 'D\'abord 5 × 8 = 40, puis 56 − 40.',
+      en: 'First 5 × 8 = 40, then 56 − 40.',
+      nl: 'Eerst 5 × 8 = 40, dan 56 − 40.',
+    },
+    commonMistake: '408',
+  },
+  {
+    id: 'N3_019',
+    category: 'N3',
+    level: 2,
+    text: {
+      fr: 'Combien font 24 ÷ 3 × 2 ?',
+      en: 'What is 24 ÷ 3 × 2?',
+      nl: 'Hoeveel is 24 ÷ 3 × 2?',
+    },
+    answer: 16,
+    tolerance: 0,
+    hint: {
+      fr: 'De gauche à droite : 24 ÷ 3 = 8, puis 8 × 2.',
+      en: 'Left to right: 24 ÷ 3 = 8, then 8 × 2.',
+      nl: 'Van links naar rechts: 24 ÷ 3 = 8, dan 8 × 2.',
+    },
+    commonMistake: '4',
+  },
+  {
+    id: 'N3_020',
+    category: 'N3',
+    level: 2,
+    text: {
+      fr: 'Combien font 7 × 9 + 5 ?',
+      en: 'What is 7 × 9 + 5?',
+      nl: 'Hoeveel is 7 × 9 + 5?',
+    },
+    answer: 68,
+    tolerance: 0,
+    hint: {
+      fr: 'D\'abord 7 × 9 = 63, puis 63 + 5.',
+      en: 'First 7 × 9 = 63, then 63 + 5.',
+      nl: 'Eerst 7 × 9 = 63, dan 63 + 5.',
+    },
+    commonMistake: '98',
+  },
+  {
+    id: 'N3_021',
+    category: 'N3',
+    level: 2,
+    text: {
+      fr: 'Combien font 4 × 3 + 5 ?',
+      en: 'What is 4 × 3 + 5?',
+      nl: 'Hoeveel is 4 × 3 + 5?',
+    },
+    answer: 17,
+    tolerance: 0,
+    hint: {
+      fr: 'D\'abord 4 × 3 = 12, puis 12 + 5.',
+      en: 'First 4 × 3 = 12, then 12 + 5.',
+      nl: 'Eerst 4 × 3 = 12, dan 12 + 5.',
+    },
+    commonMistake: '32',
+  },
+
+  // ── Level 3: CE1D-inspired with parentheses ──────────────────────────────
+  {
+    id: 'N3_022',
+    category: 'N3',
+    level: 3,
+    text: {
+      fr: 'Combien font (3 + 4) × (5 - 2) ?',
+      en: 'What is (3 + 4) × (5 - 2)?',
+      nl: 'Hoeveel is (3 + 4) × (5 - 2)?',
+    },
+    answer: 21,
+    tolerance: 0,
+    hint: {
+      fr: 'Parenthèses d\'abord : 3 + 4 = 7 et 5 - 2 = 3, puis 7 × 3.',
+      en: 'Parentheses first: 3 + 4 = 7 and 5 - 2 = 3, then 7 × 3.',
+      nl: 'Haakjes eerst: 3 + 4 = 7 en 5 - 2 = 3, dan 7 × 3.',
+    },
+    commonMistake: '17',
+  },
+  {
+    id: 'N3_023',
+    category: 'N3',
+    level: 3,
+    text: {
+      fr: 'Combien font (15 - 7) × (3 + 2) ?',
+      en: 'What is (15 - 7) × (3 + 2)?',
+      nl: 'Hoeveel is (15 - 7) × (3 + 2)?',
+    },
+    answer: 40,
+    tolerance: 0,
+    hint: {
+      fr: 'Parenthèses d\'abord : 15 - 7 = 8 et 3 + 2 = 5, puis 8 × 5.',
+      en: 'Parentheses first: 15 - 7 = 8 and 3 + 2 = 5, then 8 × 5.',
+      nl: 'Haakjes eerst: 15 - 7 = 8 en 3 + 2 = 5, dan 8 × 5.',
+    },
+    commonMistake: '16',
+  },
+  {
+    id: 'N3_024',
+    category: 'N3',
+    level: 3,
+    text: {
+      fr: 'Combien font 100 - (8 + 12) × 4 ?',
+      en: 'What is 100 - (8 + 12) × 4?',
+      nl: 'Hoeveel is 100 - (8 + 12) × 4?',
+    },
+    answer: 20,
+    tolerance: 0,
+    hint: {
+      fr: 'Parenthèses : 8 + 12 = 20. Puis 20 × 4 = 80. Enfin 100 - 80.',
+      en: 'Parentheses: 8 + 12 = 20. Then 20 × 4 = 80. Finally 100 - 80.',
+      nl: 'Haakjes: 8 + 12 = 20. Dan 20 × 4 = 80. Tenslotte 100 - 80.',
+    },
+    commonMistake: '368',
+  },
+  {
+    id: 'N3_025',
+    category: 'N3',
+    level: 3,
+    text: {
+      fr: 'Combien font (6 + 9) × 2 - 10 ?',
+      en: 'What is (6 + 9) × 2 - 10?',
+      nl: 'Hoeveel is (6 + 9) × 2 - 10?',
+    },
+    answer: 20,
+    tolerance: 0,
+    hint: {
+      fr: 'Parenthèses : 6 + 9 = 15. Puis 15 × 2 = 30. Enfin 30 - 10.',
+      en: 'Parentheses: 6 + 9 = 15. Then 15 × 2 = 30. Finally 30 - 10.',
+      nl: 'Haakjes: 6 + 9 = 15. Dan 15 × 2 = 30. Tenslotte 30 - 10.',
+    },
+    commonMistake: '14',
+  },
+  {
+    id: 'N3_026',
+    category: 'N3',
+    level: 3,
+    text: {
+      fr: 'Combien font 50 ÷ (2 + 3) + 15 ?',
+      en: 'What is 50 ÷ (2 + 3) + 15?',
+      nl: 'Hoeveel is 50 ÷ (2 + 3) + 15?',
+    },
+    answer: 25,
+    tolerance: 0,
+    hint: {
+      fr: 'Parenthèses : 2 + 3 = 5. Puis 50 ÷ 5 = 10. Enfin 10 + 15.',
+      en: 'Parentheses: 2 + 3 = 5. Then 50 ÷ 5 = 10. Finally 10 + 15.',
+      nl: 'Haakjes: 2 + 3 = 5. Dan 50 ÷ 5 = 10. Tenslotte 10 + 15.',
+    },
+    commonMistake: '40',
+  },
 ];
 
 /**

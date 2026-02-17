@@ -2,6 +2,136 @@
    RESPONSIVE BREAKPOINTS
    ======================================== */
 
+/* ---- Very small phones (< 375px) ---- */
+@media (max-width: 374px) {
+  .wizard-themes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wizard-theme-card {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .game-title {
+    font-size: 0.85rem;
+  }
+
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  .game-layout {
+    gap: 2px;
+    padding: 2px;
+  }
+
+  .game-layout .rope-section {
+    min-height: 70px;
+    max-height: 90px;
+  }
+
+  .game-layout .rope-arena {
+    min-height: 70px;
+    max-height: 90px;
+  }
+
+  .game-layout .panels-row {
+    gap: 2px;
+  }
+
+  .game-layout .player-panel {
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .game-layout .player-panel .player-header {
+    padding: 2px 6px;
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+
+  .game-layout .player-panel .player-score {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .game-layout .question-display {
+    font-size: 0.75rem;
+    padding: 3px;
+    min-height: 26px;
+  }
+
+  .game-layout .answer-display {
+    padding: 2px;
+    font-size: 0.75rem;
+    min-height: 22px;
+  }
+
+  .numpad-container {
+    flex: 1;
+    min-height: 0;
+    gap: 1px;
+    justify-content: flex-end;
+  }
+
+  .numpad-grid {
+    flex: 0 1 auto;
+    min-height: 0;
+    gap: 1px;
+    grid-template-rows: repeat(4, minmax(24px, 36px));
+  }
+
+  .numpad-btn {
+    min-height: 0;
+    font-size: 0.85rem;
+  }
+
+  .hint-btn {
+    font-size: 0.55rem;
+    padding: 2px 5px;
+  }
+
+  .hint-display {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+
+  .rope-score-bar-inner {
+    padding: 2px 5px;
+  }
+
+  .arena-score {
+    font-size: 0.9rem;
+  }
+
+  .arena-team-name {
+    font-size: 0.55rem;
+  }
+
+  .arena-round {
+    font-size: 0.5rem;
+  }
+
+  .game-top-bar {
+    padding: 2px 6px;
+  }
+
+  .home-btn {
+    padding: 2px 6px;
+    font-size: 0.65rem;
+  }
+
+  .game-bottom-bar {
+    padding: 1px 4px;
+  }
+
+  .zoom-controls {
+    transform: scale(0.75);
+  }
+}
+
 /* ---- Phone portrait (< 480px) ---- */
 @media (max-width: 479px) {
   :root {
@@ -19,137 +149,352 @@
   .card { padding: 14px; }
   .btn-lg { min-height: 52px; padding: 12px 28px; font-size: 1.1rem; }
 
-  /* Game layout: stack vertically on small phones */
+  /* Game layout: rope on top, panels STACKED VERTICALLY on small phones */
   .game-layout {
     flex-direction: column;
-    gap: 6px;
-    padding: 6px;
-    align-items: stretch;
+    gap: 3px;
+    padding: 3px;
+    max-height: none;
   }
 
   .game-layout .rope-section {
-    order: -1;
+    order: 0;
     flex: 0 0 auto;
-    min-height: 110px;
+    min-height: 80px;
+    max-height: 100px;
     width: 100%;
   }
 
   .game-layout .rope-arena {
-    min-height: 110px;
-    max-height: 150px;
+    min-height: 80px;
+    max-height: 100px;
+  }
+
+  /* Stack panels VERTICALLY on small phones */
+  .game-layout .panels-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-height: 0;
+    order: 1;
   }
 
   .game-layout .player-panel {
-    flex-direction: row;
+    flex-direction: column;
     max-width: none;
     max-height: none;
-    gap: 6px;
-    flex: 0 0 auto;
-    padding: 8px;
+    gap: 2px;
+    flex: 1 1 0;
+    padding: 4px;
+    min-height: 0;
+    min-width: 0;
+    justify-content: space-between;
+    width: 100%;
   }
 
-  .game-layout .player-panel .numpad-container {
-    flex: 1;
-  }
-
-  .game-layout .question-display {
-    font-size: 1rem;
-    padding: 8px;
-    min-height: 38px;
-  }
-
-  .game-layout .answer-display {
-    padding: 6px;
-    font-size: 1rem;
-    min-height: 34px;
-  }
-
-  .numpad-grid {
+  .game-layout .player-panel .player-header {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
     gap: 3px;
   }
 
+  .game-layout .player-panel .player-score {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .game-layout .question-display {
+    font-size: 0.8rem;
+    padding: 4px;
+    min-height: 28px;
+    flex-shrink: 0;
+  }
+
+  .game-layout .answer-display {
+    padding: 2px;
+    font-size: 0.8rem;
+    min-height: 20px;
+  }
+
+  .numpad-container {
+    flex: 1;
+    min-height: 0;
+    gap: 2px;
+    justify-content: flex-end;
+  }
+
+  .numpad-grid {
+    flex: 0 1 auto;
+    min-height: 0;
+    gap: 2px;
+    grid-template-rows: repeat(4, minmax(28px, 42px));
+  }
+
   .numpad-btn {
-    min-height: 34px;
-    font-size: 1.1rem;
-  }
-
-  .game-layout .player-header {
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-
-  .game-layout .player-score {
-    width: 26px;
-    height: 26px;
-    font-size: 0.9rem;
+    min-height: 0;
+    font-size: 0.95rem;
   }
 
   /* Arena score bar compact */
   .rope-score-bar-inner {
-    padding: 4px 10px;
+    padding: 2px 6px;
   }
 
   .arena-score {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .arena-team-name {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  .arena-round {
+    font-size: 0.6rem;
   }
 
   /* Top/bottom bars compact */
   .game-top-bar {
-    padding: 6px 10px;
+    padding: 3px 6px;
   }
 
   .game-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .home-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+    padding: 3px 6px;
+    font-size: 0.7rem;
   }
 
   .game-bottom-bar {
-    padding: 4px 8px;
+    padding: 2px 4px;
   }
 
   .zoom-controls {
     padding: 2px 4px;
+    transform: scale(0.8);
+    transform-origin: center;
   }
 
   .zoom-btn {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 
   .zoom-label {
-    font-size: 0.65rem;
-    min-width: 30px;
+    font-size: 0.55rem;
+    min-width: 24px;
   }
-}
 
-/* ---- Phone landscape / small tablet (480-767px) ---- */
-@media (min-width: 480px) and (max-width: 767px) {
-  .game-layout {
-    flex-direction: row;
+  /* Wizard mobile */
+  .wizard-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .category-content .wizard-body {
+    padding: 12px 10px;
+  }
+
+  .wizard-steps {
+    transform: scale(0.8);
+    margin-bottom: -4px;
+  }
+
+  .wizard-step-label {
+    font-size: 0.6rem;
+  }
+
+  .wizard-themes-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    padding: 8px;
+    padding: 12px;
   }
 
-  .game-layout .player-panel {
-    flex: 1;
+  .wizard-theme-card {
+    padding: 10px 6px;
+  }
+
+  .wizard-theme-icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .wizard-theme-icon-wrap svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .wizard-theme-label {
+    font-size: 0.7rem;
+  }
+
+  .wizard-section-title {
+    font-size: 0.9rem;
+  }
+
+  .wizard-section-desc {
+    font-size: 0.75rem;
+  }
+
+  .wizard-difficulty-grid {
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .wizard-diff-card {
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .wizard-rounds-grid {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .wizard-round-card {
+    max-width: 90px;
+    padding: 8px 10px;
+  }
+
+  .wizard-teams-row {
+    flex-direction: column;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .wizard-vs {
+    transform: rotate(90deg);
+    margin: -6px 0;
+  }
+
+  .wizard-team-card {
+    width: 100%;
     max-width: 260px;
   }
 
+  .wizard-buttons {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .wizard-btn-back,
+  .wizard-btn-next {
+    font-size: 0.82rem !important;
+    padding: 8px 14px !important;
+  }
+
+  /* Mode Select */
+  .mode-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  /* Home */
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-buttons {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Hint */
+  .hint-btn {
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    border-width: 1px;
+  }
+
+  .hint-display {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+
+  /* Result */
+  .result-winner {
+    font-size: 1.5rem;
+  }
+
+  .result-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Confirm dialog mobile */
+  .confirm-card {
+    padding: 20px 16px 16px;
+    max-width: 310px;
+    width: 92%;
+  }
+
+  .confirm-message {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .confirm-buttons {
+    flex-direction: column;
+  }
+
+  .confirm-buttons .btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    min-height: 44px;
+    max-width: 100%;
+  }
+
+  /* Lang */
+  .lang-selector {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+}
+
+/* ---- Small screens (480-639px) ---- */
+@media (min-width: 480px) and (max-width: 639px) {
+  .game-layout {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+    max-height: none;
+  }
+
   .game-layout .rope-section {
+    order: 0;
+    flex: 0 0 auto;
+    min-height: 120px;
+    max-height: 140px;
+    width: 100%;
+  }
+
+  .game-layout .panels-row {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
     flex: 1;
-    min-width: 150px;
+    min-height: 0;
+    order: 1;
+  }
+
+  .game-layout .player-panel {
+    max-width: none;
+    gap: 6px;
+    flex: 1 1 0;
+    padding: 8px;
+    min-width: 0;
   }
 
   .numpad-btn {
-    min-height: 38px;
+    min-height: 40px;
     font-size: 1.15rem;
   }
 
@@ -158,13 +503,55 @@
     padding: 10px;
   }
 
-  .answer-display {
+  .wizard-themes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---- Phone landscape / small tablet (640-767px) ---- */
+@media (min-width: 640px) and (max-width: 767px) {
+  .game-layout {
+    flex-direction: row;
+    gap: 8px;
     padding: 8px;
-    font-size: 1.05rem;
+  }
+
+  .game-layout .player-panel {
+    flex: 1;
+    max-width: 240px;
+  }
+
+  .game-layout .rope-section {
+    order: 1;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .numpad-btn {
+    min-height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .question-display {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .answer-display {
+    padding: 6px;
+    font-size: 1rem;
   }
 
   .game-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .wizard-themes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .confirm-card {
+    max-width: 340px;
   }
 }
 
@@ -188,12 +575,17 @@
   }
 
   .game-layout .rope-section {
+    order: 1;
     flex: 1.2;
   }
 
   .numpad-btn {
     min-height: 46px;
     font-size: 1.3rem;
+  }
+
+  .wizard-themes-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -219,6 +611,7 @@
   }
 
   .game-layout .rope-section {
+    order: 1;
     flex: 1.5;
   }
 
@@ -242,38 +635,115 @@
   }
 }
 
-/* ---- Orientation-specific ---- */
+/* ---- Orientation: Portrait on phones ---- */
 @media (orientation: portrait) and (max-width: 767px) {
   .two-player-warning {
     display: flex;
   }
-}
 
-@media (orientation: landscape) and (max-height: 500px) {
-  .screen-content { padding: 8px; gap: 8px; }
-  .title { font-size: 1.3rem; }
-
+  /* Use available height efficiently in portrait */
   .game-layout {
-    gap: 6px;
-    padding: 6px;
+    flex-direction: column;
+    height: calc(100dvh - 60px); /* top bar + bottom bar */
+    max-height: none;
   }
 
   .game-layout .rope-section {
-    flex: 0.8;
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  /* Panels STACKED VERTICALLY on very small screens (< 480px) */
+  .game-layout .panels-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    order: 1;
+  }
+
+  /* Each player panel takes equal space */
+  .game-layout .player-panel {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* ---- Portrait on larger phones/tablets (480-767px) - panels side by side ---- */
+@media (orientation: portrait) and (min-width: 480px) and (max-width: 767px) {
+  .game-layout .panels-row {
+    flex-direction: row;
+    gap: 6px;
+  }
+  
+  .game-layout .player-panel {
+    width: auto;
+  }
+}
+
+/* ---- Orientation: Landscape on phones (compact height) ---- */
+@media (orientation: landscape) and (max-height: 500px) {
+  .screen-content { padding: 4px; gap: 4px; }
+  .title { font-size: 1.2rem; }
+
+  /* Landscape compact: rope on top (smaller), panels side by side below */
+  .game-layout {
+    flex-direction: column;
+    gap: 3px;
+    padding: 3px;
+    height: calc(100dvh - 50px);
+    max-height: none;
+  }
+
+  .game-layout .rope-section {
+    order: 0;
+    flex: 0 0 auto;
+    min-height: 60px;
+    max-height: 70px;
+    width: 100%;
   }
 
   .game-layout .rope-arena {
-    min-height: 100px;
-    max-height: 160px;
+    min-height: 60px;
+    max-height: 70px;
+  }
+
+  .game-layout .panels-row {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    flex: 1;
+    min-height: 0;
+    order: 1;
   }
 
   .game-layout .player-panel {
-    gap: 4px;
-    padding: 6px;
+    flex: 1 1 0;
+    gap: 2px;
+    padding: 3px;
+    max-width: none;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .game-layout .player-panel .player-header {
+    writing-mode: horizontal-tb;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+  }
+
+  .game-layout .player-panel .player-score {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
   }
 
   .numpad-btn {
-    min-height: 30px;
+    min-height: 32px;
     font-size: 1rem;
   }
 
@@ -282,28 +752,226 @@
   }
 
   .question-display {
-    padding: 6px;
-    font-size: 1rem;
-    min-height: 34px;
+    padding: 4px 6px;
+    font-size: 0.9rem;
+    min-height: 32px;
   }
 
   .answer-display {
-    padding: 4px;
-    font-size: 0.95rem;
-    min-height: 30px;
+    padding: 2px 4px;
+    font-size: 0.85rem;
+    min-height: 22px;
   }
 
-  .player-header {
-    padding: 4px 10px;
+  .hint-btn {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+
+  .hint-display {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  /* Score bar ultra compact */
+  .rope-score-bar-inner {
+    padding: 2px 6px;
+  }
+
+  .arena-score {
+    font-size: 0.95rem;
+  }
+
+  .arena-team-name {
+    font-size: 0.6rem;
+  }
+
+  .arena-round {
+    font-size: 0.55rem;
+  }
+
+  /* Top/bottom bars minimal */
+  .game-top-bar {
+    padding: 2px 6px;
+    min-height: 24px;
+  }
+
+  .game-title {
     font-size: 0.85rem;
   }
 
-  .game-top-bar {
-    padding: 4px 10px;
+  .home-btn {
+    padding: 2px 6px;
+    font-size: 0.65rem;
+  }
+
+  .lang-selector {
+    font-size: 0.65rem;
+    padding: 2px 6px;
   }
 
   .game-bottom-bar {
-    padding: 4px 8px;
+    padding: 2px 4px;
+    min-height: 24px;
+  }
+
+  .zoom-controls {
+    transform: scale(0.7);
+    transform-origin: right center;
+  }
+
+  /* Confirm dialog compact in landscape */
+  .confirm-card {
+    padding: 16px 20px 14px;
+    max-width: 340px;
+  }
+
+  .confirm-message {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .confirm-buttons .btn {
+    padding: 6px 14px;
+    min-height: 36px;
+    font-size: 0.8rem;
+  }
+
+  /* Wizard in landscape - ultra compact */
+  .wizard-title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .category-content .wizard-body {
+    padding: 6px 10px;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+  }
+
+  .wizard-steps {
+    transform: scale(0.65);
+    margin-bottom: -10px;
+  }
+
+  .wizard-step-label {
+    font-size: 0.55rem;
+  }
+
+  .wizard-themes-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .wizard-theme-card {
+    padding: 6px 3px;
+  }
+
+  .wizard-theme-icon-wrap {
+    width: 32px;
+    height: 32px;
+  }
+
+  .wizard-theme-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .wizard-theme-label {
+    font-size: 0.6rem;
+  }
+
+  .wizard-difficulty-grid {
+    flex-direction: row;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .wizard-diff-card {
+    padding: 8px 14px;
+    min-width: 70px;
+  }
+
+  .wizard-diff-card svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .wizard-diff-label {
+    font-size: 0.8rem;
+  }
+
+  .wizard-rounds-grid {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .wizard-round-card {
+    padding: 8px 12px;
+  }
+
+  .wizard-teams-row {
+    flex-direction: row;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .wizard-team-card {
+    max-width: 200px;
+  }
+
+  .wizard-buttons {
+    margin-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .wizard-btn-back,
+  .wizard-btn-next {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .wizard-section-title {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+
+  .wizard-section-desc {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+}
+
+/* ---- Medium landscape (500-700px height) ---- */
+@media (orientation: landscape) and (min-height: 501px) and (max-height: 700px) {
+  .game-layout {
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+    height: calc(100dvh - 70px);
+    max-height: none;
+  }
+
+  .game-layout .rope-section {
+    order: 1;
+    flex: 0.8;
+  }
+
+  .game-layout .player-panel {
+    flex: 1;
+    max-width: 280px;
+  }
+
+  .numpad-btn {
+    min-height: 34px;
+    font-size: 1.05rem;
+  }
+
+  .question-display {
+    font-size: 1rem;
+    padding: 6px;
   }
 }
 
@@ -328,6 +996,27 @@
 @media (pointer: coarse) {
   .btn { min-height: 48px; }
   .numpad-btn { min-height: 44px; }
+  .confirm-buttons .btn { min-height: 48px; }
+}
+
+/* Override touch targets in compact landscape */
+@media (pointer: coarse) and (orientation: landscape) and (max-height: 500px) {
+  .btn { min-height: 36px; }
+  .numpad-btn { min-height: 26px; }
+  .confirm-buttons .btn { min-height: 36px; }
+}
+
+/* Override touch targets in portrait phones */
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 479px) {
+  .numpad-btn { min-height: 0; }
+  .btn { min-height: 40px; }
+}
+
+/* Override touch targets in very small portrait phones */
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 374px) {
+  .numpad-btn { min-height: 0; }
+  .btn { min-height: 36px; }
+  .confirm-buttons .btn { min-height: 38px; }
 }
 
 /* ---- Reduced motion ---- */

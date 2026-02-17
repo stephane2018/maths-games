@@ -1,7 +1,6 @@
 // =============================================================================
 // D1 - Reading Tables & Charts: interpret data presented as text tables
 // CE1D Belgian exam - Trilingual (FR / EN / NL)
-// Static questions only
 // =============================================================================
 
 export const questions = [
@@ -280,4 +279,319 @@ export const questions = [
     },
     commonMistake: '5',
   },
+
+  // ── Level 1: CE1D-inspired ───────────────────────────────────────────────
+  {
+    id: 'D1_016',
+    category: 'D1',
+    level: 1,
+    text: {
+      fr: 'Un boulanger vend en avril :\nPâtisseries: 12 550 € | Pains: 11 450 € | Baguettes: 4 940 € | Viennoiseries: 3 175 €\nQuel est le total des ventes en avril ?',
+      en: 'A baker sells in April:\nPastries: 12,550 € | Bread: 11,450 € | Baguettes: 4,940 € | Viennoiseries: 3,175 €\nWhat is the total sales in April?',
+      nl: 'Een bakker verkoopt in april:\nGebak: 12.550 € | Broden: 11.450 € | Stokbroden: 4.940 € | Koffiekoeken: 3.175 €\nWat is de totale verkoop in april?',
+    },
+    answer: 32115,
+    tolerance: 0,
+    hint: {
+      fr: '12 550 + 11 450 + 4 940 + 3 175 = ?',
+      en: '12,550 + 11,450 + 4,940 + 3,175 = ?',
+      nl: '12.550 + 11.450 + 4.940 + 3.175 = ?',
+    },
+    commonMistake: '31115',
+  },
+  {
+    id: 'D1_017',
+    category: 'D1',
+    level: 1,
+    text: {
+      fr: 'En hockey, les matchs joués par équipe :\nÉquipe A: 4 | Équipe B: 7 | Équipe C: 5 | Équipe D: 1 | Équipe E: 2 | Équipe F: 1\nCombien de matchs au total ?',
+      en: 'In hockey, games played by team:\nTeam A: 4 | Team B: 7 | Team C: 5 | Team D: 1 | Team E: 2 | Team F: 1\nHow many games in total?',
+      nl: 'In hockey, gespeelde wedstrijden per team:\nTeam A: 4 | Team B: 7 | Team C: 5 | Team D: 1 | Team E: 2 | Team F: 1\nHoeveel wedstrijden in totaal?',
+    },
+    answer: 20,
+    tolerance: 0,
+    hint: {
+      fr: '4 + 7 + 5 + 1 + 2 + 1 = ?',
+      en: '4 + 7 + 5 + 1 + 2 + 1 = ?',
+      nl: '4 + 7 + 5 + 1 + 2 + 1 = ?',
+    },
+    commonMistake: '18',
+  },
+
+  // ── Level 2: CE1D-inspired ───────────────────────────────────────────────
+  {
+    id: 'D1_018',
+    category: 'D1',
+    level: 2,
+    text: {
+      fr: 'Médailles par école :\nÉcole A: 42 | École B: 36 | École C: 28 | École D: 35 | École E: 36\nCombien de médailles les écoles B et D ont-elles ensemble ?',
+      en: 'Medals by school:\nSchool A: 42 | School B: 36 | School C: 28 | School D: 35 | School E: 36\nHow many medals do schools B and D have together?',
+      nl: 'Medailles per school:\nSchool A: 42 | School B: 36 | School C: 28 | School D: 35 | School E: 36\nHoeveel medailles hebben scholen B en D samen?',
+    },
+    answer: 71,
+    tolerance: 0,
+    hint: {
+      fr: 'École B : 36, École D : 35. Total : 36 + 35 = ?',
+      en: 'School B: 36, School D: 35. Total: 36 + 35 = ?',
+      nl: 'School B: 36, School D: 35. Totaal: 36 + 35 = ?',
+    },
+    commonMistake: '72',
+  },
+  {
+    id: 'D1_019',
+    category: 'D1',
+    level: 2,
+    text: {
+      fr: 'Dans un club sportif, 22 jeunes ont moins de 13 ans sur un total de 50 inscrits. Combien ont 13 ans ou plus ?',
+      en: 'In a sports club, 22 young people are under 13 out of a total of 50 members. How many are 13 or older?',
+      nl: 'In een sportclub zijn 22 jongeren jonger dan 13 van de 50 ingeschrevenen. Hoeveel zijn er 13 of ouder?',
+    },
+    answer: 28,
+    tolerance: 0,
+    hint: {
+      fr: '50 - 22 = ?',
+      en: '50 - 22 = ?',
+      nl: '50 - 22 = ?',
+    },
+    commonMistake: '22',
+  },
 ];
+
+/**
+ * Procedural generator for D1 questions (table reading).
+ * Inspired by CE1D exam: random tables with real-world contexts.
+ * @param {1|2|3} level
+ * @returns {object} A single question object
+ */
+export function generate(level = 1) {
+  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  const pick = (arr) => arr[rand(0, arr.length - 1)];
+  const id = `D1_gen_${Date.now()}_${rand(100, 999)}`;
+
+  const contexts = [
+    {
+      title: { fr: 'Températures de la semaine', en: 'Weekly temperatures', nl: 'Weektemperaturen' },
+      unit: '°C',
+      labels: {
+        fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'],
+        en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        nl: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag'],
+      },
+      range: [5, 28],
+    },
+    {
+      title: { fr: 'Élèves par classe', en: 'Students per class', nl: 'Leerlingen per klas' },
+      unit: '',
+      labels: {
+        fr: ['6A', '6B', '6C', '6D', '6E'],
+        en: ['6A', '6B', '6C', '6D', '6E'],
+        nl: ['6A', '6B', '6C', '6D', '6E'],
+      },
+      range: [18, 30],
+    },
+    {
+      title: { fr: 'Ventes par jour', en: 'Daily sales', nl: 'Dagelijkse verkoop' },
+      unit: '',
+      labels: {
+        fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'],
+        en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        nl: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag'],
+      },
+      range: [20, 80],
+    },
+    {
+      title: { fr: 'Points par équipe', en: 'Points per team', nl: 'Punten per team' },
+      unit: 'pts',
+      labels: {
+        fr: ['Équipe A', 'Équipe B', 'Équipe C', 'Équipe D', 'Équipe E'],
+        en: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        nl: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+      },
+      range: [10, 50],
+    },
+    {
+      title: { fr: 'Notes d\'un élève', en: 'Student grades', nl: 'Cijfers van een leerling' },
+      unit: '/20',
+      labels: {
+        fr: ['Maths', 'Français', 'Sciences', 'Histoire', 'Géo'],
+        en: ['Maths', 'French', 'Science', 'History', 'Geography'],
+        nl: ['Wiskunde', 'Frans', 'Wetenschappen', 'Geschiedenis', 'Aardrijkskunde'],
+      },
+      range: [6, 19],
+    },
+    {
+      title: { fr: 'Heures de sport par personne', en: 'Sport hours per person', nl: 'Sporturen per persoon' },
+      unit: 'h',
+      labels: {
+        fr: ['Pierre', 'Léa', 'Tom', 'Sara', 'Max'],
+        en: ['Pierre', 'Léa', 'Tom', 'Sara', 'Max'],
+        nl: ['Pierre', 'Léa', 'Tom', 'Sara', 'Max'],
+      },
+      range: [1, 10],
+    },
+    {
+      title: { fr: 'Médailles par école', en: 'Medals per school', nl: 'Medailles per school' },
+      unit: '',
+      labels: {
+        fr: ['École A', 'École B', 'École C', 'École D', 'École E'],
+        en: ['School A', 'School B', 'School C', 'School D', 'School E'],
+        nl: ['School A', 'School B', 'School C', 'School D', 'School E'],
+      },
+      range: [15, 50],
+    },
+    {
+      title: { fr: 'Distance parcourue (km)', en: 'Distance walked (km)', nl: 'Afgelegde afstand (km)' },
+      unit: 'km',
+      labels: {
+        fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'],
+        en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        nl: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag'],
+      },
+      range: [2, 15],
+    },
+  ];
+
+  const ctx = pick(contexts);
+  const n = ctx.labels.fr.length;
+  let values;
+
+  const makeTable = (lang) =>
+    values.map((v, i) => `${ctx.labels[lang][i]}: ${v}${ctx.unit ? ' ' + ctx.unit : ''}`).join(' | ');
+
+  if (level === 1) {
+    values = Array.from({ length: n }, () => rand(ctx.range[0], ctx.range[1]));
+    const targetIdx = rand(0, n - 1);
+    const answer = values[targetIdx];
+    return {
+      id, category: 'D1', level: 1,
+      text: {
+        fr: `${ctx.title.fr} :\n${makeTable('fr')}\nQuelle est la valeur pour ${ctx.labels.fr[targetIdx]} ?`,
+        en: `${ctx.title.en}:\n${makeTable('en')}\nWhat is the value for ${ctx.labels.en[targetIdx]}?`,
+        nl: `${ctx.title.nl}:\n${makeTable('nl')}\nWat is de waarde voor ${ctx.labels.nl[targetIdx]}?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `Lis la valeur à côté de « ${ctx.labels.fr[targetIdx]} ».`,
+        en: `Read the value next to "${ctx.labels.en[targetIdx]}".`,
+        nl: `Lees de waarde naast "${ctx.labels.nl[targetIdx]}".`,
+      },
+      commonMistake: String(values[(targetIdx + 1) % n]),
+    };
+  }
+
+  if (level === 2) {
+    values = Array.from({ length: n }, () => rand(ctx.range[0], ctx.range[1]));
+    const type = rand(0, 2);
+
+    if (type === 0) {
+      const maxVal = Math.max(...values);
+      const minVal = Math.min(...values);
+      const answer = maxVal - minVal;
+      return {
+        id, category: 'D1', level: 2,
+        text: {
+          fr: `${ctx.title.fr} :\n${makeTable('fr')}\nQuelle est la différence entre la plus grande et la plus petite valeur ?`,
+          en: `${ctx.title.en}:\n${makeTable('en')}\nWhat is the difference between the largest and smallest value?`,
+          nl: `${ctx.title.nl}:\n${makeTable('nl')}\nWat is het verschil tussen de grootste en de kleinste waarde?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: {
+          fr: `Max = ${maxVal}, Min = ${minVal}. Différence = ${maxVal} - ${minVal}.`,
+          en: `Max = ${maxVal}, Min = ${minVal}. Difference = ${maxVal} - ${minVal}.`,
+          nl: `Max = ${maxVal}, Min = ${minVal}. Verschil = ${maxVal} - ${minVal}.`,
+        },
+        commonMistake: String(maxVal),
+      };
+    }
+
+    if (type === 1) {
+      const mid = Math.floor((ctx.range[0] + ctx.range[1]) / 2);
+      const threshold = rand(mid - 2, mid + 2);
+      const answer = values.filter((v) => v > threshold).length;
+      return {
+        id, category: 'D1', level: 2,
+        text: {
+          fr: `${ctx.title.fr} :\n${makeTable('fr')}\nCombien de valeurs sont supérieures à ${threshold} ?`,
+          en: `${ctx.title.en}:\n${makeTable('en')}\nHow many values are greater than ${threshold}?`,
+          nl: `${ctx.title.nl}:\n${makeTable('nl')}\nHoeveel waarden zijn groter dan ${threshold}?`,
+        },
+        answer,
+        tolerance: 0,
+        hint: {
+          fr: `Compare chaque valeur à ${threshold}.`,
+          en: `Compare each value to ${threshold}.`,
+          nl: `Vergelijk elke waarde met ${threshold}.`,
+        },
+        commonMistake: String(Math.max(0, answer - 1)),
+      };
+    }
+
+    const i1 = rand(0, n - 2);
+    const i2 = rand(i1 + 1, n - 1);
+    const answer = values[i1] + values[i2];
+    return {
+      id, category: 'D1', level: 2,
+      text: {
+        fr: `${ctx.title.fr} :\n${makeTable('fr')}\nQuel est le total pour ${ctx.labels.fr[i1]} et ${ctx.labels.fr[i2]} ?`,
+        en: `${ctx.title.en}:\n${makeTable('en')}\nWhat is the total for ${ctx.labels.en[i1]} and ${ctx.labels.en[i2]}?`,
+        nl: `${ctx.title.nl}:\n${makeTable('nl')}\nWat is het totaal voor ${ctx.labels.nl[i1]} en ${ctx.labels.nl[i2]}?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `${values[i1]} + ${values[i2]} = ?`,
+        en: `${values[i1]} + ${values[i2]} = ?`,
+        nl: `${values[i1]} + ${values[i2]} = ?`,
+      },
+      commonMistake: String(answer + rand(1, 5)),
+    };
+  }
+
+  // Level 3: Calculate from table
+  const type = rand(0, 1);
+
+  if (type === 0) {
+    values = Array.from({ length: n }, () => rand(ctx.range[0], ctx.range[1]));
+    const answer = values.reduce((s, v) => s + v, 0);
+    return {
+      id, category: 'D1', level: 3,
+      text: {
+        fr: `${ctx.title.fr} :\n${makeTable('fr')}\nQuel est le total de toutes les valeurs ?`,
+        en: `${ctx.title.en}:\n${makeTable('en')}\nWhat is the total of all values?`,
+        nl: `${ctx.title.nl}:\n${makeTable('nl')}\nWat is het totaal van alle waarden?`,
+      },
+      answer,
+      tolerance: 0,
+      hint: {
+        fr: `${values.join(' + ')} = ?`,
+        en: `${values.join(' + ')} = ?`,
+        nl: `${values.join(' + ')} = ?`,
+      },
+      commonMistake: String(answer - values[0]),
+    };
+  }
+
+  // Average (ensure integer mean)
+  const targetMean = rand(ctx.range[0] + 2, ctx.range[1] - 2);
+  values = Array.from({ length: n - 1 }, () => targetMean + rand(-3, 3));
+  values.push(n * targetMean - values.reduce((s, v) => s + v, 0));
+
+  return {
+    id, category: 'D1', level: 3,
+    text: {
+      fr: `${ctx.title.fr} :\n${makeTable('fr')}\nQuelle est la moyenne de toutes les valeurs ?`,
+      en: `${ctx.title.en}:\n${makeTable('en')}\nWhat is the average of all values?`,
+      nl: `${ctx.title.nl}:\n${makeTable('nl')}\nWat is het gemiddelde van alle waarden?`,
+    },
+    answer: targetMean,
+    tolerance: 0,
+    hint: {
+      fr: `(${values.join(' + ')}) ÷ ${n} = ${n * targetMean} ÷ ${n}.`,
+      en: `(${values.join(' + ')}) ÷ ${n} = ${n * targetMean} ÷ ${n}.`,
+      nl: `(${values.join(' + ')}) ÷ ${n} = ${n * targetMean} ÷ ${n}.`,
+    },
+    commonMistake: String(Math.max(...values)),
+  };
+}
