@@ -170,10 +170,10 @@
     max-height: 100px;
   }
 
-  /* Stack panels VERTICALLY on small phones */
+  /* Panels in 2 columns grid on small phones */
   .game-layout .panels-row {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3px;
     flex: 1;
     min-height: 0;
@@ -181,15 +181,10 @@
   }
 
   .game-layout .player-panel {
-    flex-direction: column;
-    max-width: none;
-    max-height: none;
-    gap: 2px;
     flex: 1 1 0;
-    padding: 4px;
     min-height: 0;
-    min-width: 0;
-    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
   }
 
@@ -673,10 +668,11 @@
   }
 }
 
-/* ---- Portrait on larger phones/tablets (480-767px) - panels side by side ---- */
+/* ---- Portrait on larger phones/tablets (480-767px) - panels in grid ---- */
 @media (orientation: portrait) and (min-width: 480px) and (max-width: 767px) {
   .game-layout .panels-row {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 6px;
   }
   
