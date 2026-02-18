@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback, useEffect, useImperativeHandle, forwardRef } from 'react';
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useAnimationFrame } from '../hooks/useAnimationFrame.js';
-import { Team, SVGDefs } from './CharacterSVG.jsx';
+import gsap from 'gsap';
 import Timer from './Timer.jsx';
 import { sound } from '../systems/SoundManager.js';
 
@@ -49,6 +49,10 @@ const RopeScene = forwardRef(function RopeScene({
   const dominanceRef = useRef('neutral');
   const prevDominanceRef = useRef('neutral');
 
+  // Team animation refs (GSAP)
+  const blueTeamRef = useRef(null);
+  const redTeamRef = useRef(null);
+
   // Score popups
   const [popups, setPopups] = useState([]);
   const popupIdRef = useRef(0);
@@ -69,6 +73,53 @@ const RopeScene = forwardRef(function RopeScene({
       }
     }
   });
+
+  // GSAP pulling animation — heave-ho rhythm for each team
+  useEffect(() => {
+    if (!blueTeamRef.current || !redTeamRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Blue team: pulls to the left with a rhythmic heave
+      const blueTl = gsap.timeline({ repeat: -1 });
+      blueTl
+        .to(blueTeamRef.current, {
+          x: -6, y: -3,
+          duration: 0.5,
+          ease: 'power2.in',
+        })
+        .to(blueTeamRef.current, {
+          x: -1, y: 1,
+          duration: 0.35,
+          ease: 'power2.out',
+        })
+        .to(blueTeamRef.current, {
+          x: 0, y: 0,
+          duration: 0.15,
+          ease: 'power1.out',
+        });
+
+      // Red team: pulls to the right, offset by half a cycle
+      const redTl = gsap.timeline({ repeat: -1, delay: 0.5 });
+      redTl
+        .to(redTeamRef.current, {
+          x: 6, y: -3,
+          duration: 0.5,
+          ease: 'power2.in',
+        })
+        .to(redTeamRef.current, {
+          x: 1, y: 1,
+          duration: 0.35,
+          ease: 'power2.out',
+        })
+        .to(redTeamRef.current, {
+          x: 0, y: 0,
+          duration: 0.15,
+          ease: 'power1.out',
+        });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   const updateFlagColor = useCallback((dominance) => {
     if (!flagRef.current) return;
@@ -275,7 +326,6 @@ const RopeScene = forwardRef(function RopeScene({
 
       {/* SVG Arena */}
       <svg ref={svgRef} viewBox={`0 0 ${VB_W} ${VB_H}`} className="rope-svg">
-        <SVGDefs />
         <defs>
           <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.25" />
@@ -289,6 +339,22 @@ const RopeScene = forwardRef(function RopeScene({
             <stop offset="0%" stopColor="#A8A29E" stopOpacity="0.1" />
             <stop offset="100%" stopColor="#A8A29E" stopOpacity="0" />
           </radialGradient>
+          {/* Filtre pour supprimer le fond noir de l'image */}
+          <filter id="remove-black-bg" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
+            <feColorMatrix type="matrix" values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              5 5 5 0 -0.5
+            " />
+          </filter>
+          {/* ClipPaths pour découper l'image en deux équipes */}
+          <clipPath id="clip-blue-team">
+            <rect x={CENTER_X - 200} y={30} width="200" height="240" />
+          </clipPath>
+          <clipPath id="clip-red-team">
+            <rect x={CENTER_X} y={30} width="200" height="240" />
+          </clipPath>
         </defs>
         {/* Background */}
         <rect width={VB_W} height={VB_H} fill="#F8FAFC" rx="0" />
@@ -343,13 +409,35 @@ const RopeScene = forwardRef(function RopeScene({
             />
             <circle cx={CENTER_X} cy={ROPE_Y} r={3} fill="#A8A29E" stroke="#78716C" strokeWidth="1" />
           </g>
-          {/* Blue team */}
-          <g transform={`translate(${CENTER_X - 150}, ${ROPE_Y - 2})`}>
-            <Team team="blue" />
+          {/* Blue team - left side of image */}
+          <g clipPath="url(#clip-blue-team)">
+            <g ref={blueTeamRef}>
+              <image
+                href="/teams.jpeg"
+                x={CENTER_X - 200}
+                y={-140}
+                width="400"
+                height="600"
+                className="team-blue"
+                filter="url(#remove-black-bg)"
+                preserveAspectRatio="xMidYMid meet"
+              />
+            </g>
           </g>
-          {/* Red team */}
-          <g transform={`translate(${CENTER_X + 46}, ${ROPE_Y - 2})`}>
-            <Team team="red" />
+          {/* Red team - right side of image */}
+          <g clipPath="url(#clip-red-team)">
+            <g ref={redTeamRef}>
+              <image
+                href="/teams.jpeg"
+                x={CENTER_X - 200}
+                y={-140}
+                width="400"
+                height="600"
+                className="team-red"
+                filter="url(#remove-black-bg)"
+                preserveAspectRatio="xMidYMid meet"
+              />
+            </g>
           </g>
         </g>
       </svg>
