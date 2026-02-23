@@ -37,7 +37,7 @@ function AppContent() {
   return (
     <>
       <ModalContainer />
-      <footer className="app-footer">&copy; 2026 Mathlaclasse by Léopold</footer>
+      <footer className="app-footer">&copy; 2026 Mathlaclasse by Léopold Minko</footer>
     </>
   );
 }

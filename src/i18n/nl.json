@@ -2,9 +2,9 @@
   "app": {
     "title": "Touwtrekken",
     "subtitle": "Wiskunde CE1D",
-    "brand": "Mathlaclasse by Léopold",
+    "brand": "Mathlaclasse by Léopold Minko",
     "startupTitle": "CE1D — Touwtrekken",
-    "startupDesc": "Een remediëringstool gemaakt door Léopold Mathlaclasse"
+    "startupDesc": "Een remediëringstool gemaakt door Léopold Minko - Mathlaclasse"
   },
   "home": {
     "play": "Spelen",
@@ -158,7 +158,7 @@
   "about": {
     "title": "Over",
     "creator": "Maker",
-    "creatorName": "Léopold",
+    "creatorName": "Léopold Minko",
     "project": "Project",
     "projectName": "Mathlaclasse",
     "year": "Jaar",

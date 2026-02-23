@@ -7,6 +7,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   teamName = '',
   onAnswer,
   onHintRequest,
+  hintsRemaining = 0,
   disabled = false,
   showHintButton = true,
 }, ref) {
@@ -116,7 +117,18 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
   const questionText = getQuestionText(currentQuestion);
 
-  const feedbackStyle = {};
+  // Ajuster la taille de police selon la longueur du texte
+  const getQuestionFontSize = (text) => {
+    const length = text.length;
+    if (length > 100) return '0.85rem';
+    if (length > 70) return '1rem';
+    if (length > 50) return '1.15rem';
+    return '1.3rem';
+  };
+
+  const feedbackStyle = {
+    fontSize: getQuestionFontSize(questionText)
+  };
   if (questionFeedback === 'correct') {
     feedbackStyle.background = 'var(--green-light)';
     feedbackStyle.color = 'var(--green)';
@@ -127,6 +139,8 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
   return (
     <div className="player-panel">
+      
+
       <div className={`player-header ${team}`}>
         <span>{teamName}</span>
         <span style={{
@@ -152,13 +166,18 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         <div className="hint-display">{hintText}</div>
       )}
 
-      {showHintButton && !hintUsed && currentQuestion?.hint && !disabled && (
+      {showHintButton && onHintRequest && (
         <button
           className="hint-btn"
-          onClick={() => onHintRequest?.(team)}
+          onClick={() => onHintRequest(team)}
+          disabled={disabled || hintsRemaining <= 0}
+          style={{
+            opacity: hintsRemaining <= 0 ? 0.5 : 1,
+            cursor: hintsRemaining <= 0 ? 'not-allowed' : 'pointer',
+            marginTop: '8px',
+          }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
-          {t('game.hint')}
+          💡 Indice ({hintsRemaining})
         </button>
       )}
 

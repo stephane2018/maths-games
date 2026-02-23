@@ -4,6 +4,16 @@
 
 /* ---- Very small phones (< 375px) ---- */
 @media (max-width: 374px) {
+  /* Scroll horizontal pour éviter les débordements */
+  .screen-content,
+  .wizard-subcat-cards-grid,
+  .wizard-rounds-grid,
+  .wizard-difficulty-grid,
+  .mode-cards {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .wizard-themes-grid {
     grid-template-columns: 1fr;
   }
@@ -151,6 +161,18 @@
   .screen-content {
     padding: 10px;
     gap: 10px;
+    overflow-x: auto;
+  }
+
+  /* Scroll horizontal pour les grilles et conteneurs */
+  .wizard-subcat-cards-grid,
+  .wizard-rounds-grid,
+  .wizard-difficulty-grid,
+  .mode-cards,
+  .about-list,
+  .result-stats {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .card { padding: 14px; }

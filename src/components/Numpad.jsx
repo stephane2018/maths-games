@@ -92,7 +92,7 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
       style={{ opacity: disabled ? '0.5' : '1', pointerEvents: disabled ? 'none' : 'auto' }}
     >
       <div ref={displayRef} className={`answer-display ${feedbackClass}`}>
-        {value || '0'}
+        {value || '\u00A0'}
       </div>
 
       <div className="numpad-grid">
@@ -108,8 +108,10 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
               className={btnClass}
               data-key={key}
               onClick={(e) => { e.preventDefault(); handleKey(key); }}
-              onTouchStart={(e) => { e.target.style.transform = 'scale(0.93)'; }}
-              onTouchEnd={(e) => { e.target.style.transform = ''; }}
+              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
+              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              style={{ touchAction: 'manipulation' }}
             >
               {label}
             </button>
@@ -125,10 +127,28 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
           marginTop: '6px',
         }}>
           {hasNegative && (
-            <button className="numpad-btn" onClick={() => handleKey('negative')}>+/-</button>
+            <button 
+              className="numpad-btn" 
+              onClick={() => handleKey('negative')}
+              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
+              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              style={{ touchAction: 'manipulation' }}
+            >
+              +/-
+            </button>
           )}
           {hasDecimal && (
-            <button className="numpad-btn" onClick={() => handleKey('dot')}>,</button>
+            <button 
+              className="numpad-btn" 
+              onClick={() => handleKey('dot')}
+              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
+              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              style={{ touchAction: 'manipulation' }}
+            >
+              ,
+            </button>
           )}
         </div>
       )}

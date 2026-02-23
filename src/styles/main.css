@@ -47,6 +47,24 @@
   --speed-slow: 400ms;
 }
 
+/* Touch & Stylus Support for Tablets */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+a,
+.clickable,
+[role="button"],
+input[type="button"],
+input[type="submit"] {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
 /* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -124,6 +142,7 @@ body {
   padding: 16px;
   gap: 16px;
   overflow-y: auto;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   max-width: 1200px;
   width: 100%;
@@ -160,6 +179,9 @@ body {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .btn:active {

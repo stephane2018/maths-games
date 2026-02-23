@@ -3,137 +3,18 @@ import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { CE1D_THEMES, getCategoriesToLoad } from '../data/ce1dThemes.js';
-
-/* ---- SVG Icons for each theme ---- */
-function NumbersIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <rect x="4" y="8" width="16" height="32" rx="4" stroke={color} strokeWidth="3" />
-      <text x="12" y="30" textAnchor="middle" fill={color} fontSize="18" fontWeight="bold" fontFamily="system-ui">7</text>
-      <line x1="26" y1="24" x2="44" y2="24" stroke={color} strokeWidth="3" strokeLinecap="round" />
-      <line x1="35" y1="15" x2="35" y2="33" stroke={color} strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ProportionsIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <line x1="8" y1="40" x2="24" y2="8" stroke={color} strokeWidth="3" strokeLinecap="round" />
-      <line x1="24" y1="8" x2="40" y2="40" stroke={color} strokeWidth="3" strokeLinecap="round" />
-      <line x1="14" y1="28" x2="34" y2="28" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="14" cy="28" r="3" fill={color} />
-      <circle cx="34" cy="28" r="3" fill={color} />
-    </svg>
-  );
-}
-
-function GeometryIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <polygon points="24,6 42,42 6,42" stroke={color} strokeWidth="3" strokeLinejoin="round" fill="none" />
-      <circle cx="24" cy="30" r="10" stroke={color} strokeWidth="2" strokeDasharray="4 3" />
-    </svg>
-  );
-}
-
-function MeasuresIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <rect x="6" y="14" width="36" height="20" rx="3" stroke={color} strokeWidth="3" />
-      {[0, 1, 2, 3, 4, 5, 6].map(i => (
-        <line key={i} x1={10 + i * 5} y1="14" x2={10 + i * 5} y2={i % 2 === 0 ? 24 : 20} stroke={color} strokeWidth="2" strokeLinecap="round" />
-      ))}
-      <text x="24" y="31" textAnchor="middle" fill={color} fontSize="8" fontWeight="bold" fontFamily="system-ui">cm</text>
-    </svg>
-  );
-}
-
-function DataIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <rect x="8" y="28" width="8" height="14" rx="2" fill={color} opacity="0.4" />
-      <rect x="20" y="18" width="8" height="24" rx="2" fill={color} opacity="0.6" />
-      <rect x="32" y="8" width="8" height="34" rx="2" fill={color} opacity="0.9" />
-      <line x1="4" y1="42" x2="44" y2="42" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function ProblemsIcon({ color }) {
-  return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <circle cx="24" cy="20" r="14" stroke={color} strokeWidth="3" />
-      <text x="24" y="26" textAnchor="middle" fill={color} fontSize="18" fontWeight="bold" fontFamily="system-ui">?</text>
-      <path d="M18 36 L24 42 L30 36" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-const THEME_ICONS = {
-  numbers: NumbersIcon,
-  proportions: ProportionsIcon,
-  geometry: GeometryIcon,
-  measures: MeasuresIcon,
-  data: DataIcon,
-  problems: ProblemsIcon,
-};
-
-/* ---- Decorative math background SVG ---- */
-function MathBackground() {
-  return (
-    <svg className="category-bg-svg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#EEF2FF" />
-          <stop offset="100%" stopColor="#F0FDF4" />
-        </linearGradient>
-      </defs>
-      <rect width="600" height="800" fill="url(#bgGrad)" />
-      {/* Floating math symbols */}
-      <g opacity="0.08" fill="#3B82F6">
-        <text x="50" y="80" fontSize="60" fontWeight="bold" fontFamily="system-ui">+</text>
-        <text x="480" y="120" fontSize="50" fontWeight="bold" fontFamily="system-ui">{'\u00d7'}</text>
-        <text x="100" y="250" fontSize="70" fontWeight="bold" fontFamily="system-ui">{'\u00f7'}</text>
-        <text x="420" y="300" fontSize="55" fontWeight="bold" fontFamily="system-ui">=</text>
-        <text x="30" y="450" fontSize="45" fontWeight="bold" fontFamily="system-ui">%</text>
-        <text x="500" y="500" fontSize="65" fontWeight="bold" fontFamily="system-ui">{'\u03c0'}</text>
-        <text x="250" y="150" fontSize="40" fontWeight="bold" fontFamily="system-ui">{'\u221a'}</text>
-        <text x="350" y="680" fontSize="50" fontWeight="bold" fontFamily="system-ui">{'\u2211'}</text>
-        <text x="80" y="650" fontSize="55" fontWeight="bold" fontFamily="system-ui">{'\u0394'}</text>
-        <text x="500" y="750" fontSize="60" fontWeight="bold" fontFamily="system-ui">{'\u221e'}</text>
-      </g>
-      <g opacity="0.06" fill="#EF4444">
-        <text x="300" y="80" fontSize="50" fontWeight="bold" fontFamily="system-ui">{'\u2212'}</text>
-        <text x="150" y="400" fontSize="60" fontWeight="bold" fontFamily="system-ui">{'\u2248'}</text>
-        <text x="450" y="450" fontSize="45" fontWeight="bold" fontFamily="system-ui">{'\u2260'}</text>
-        <text x="200" y="600" fontSize="55" fontWeight="bold" fontFamily="system-ui">{'\u2264'}</text>
-        <text x="400" y="180" fontSize="50" fontWeight="bold" fontFamily="system-ui">{'\u00b2'}</text>
-      </g>
-      {/* Decorative shapes */}
-      <g opacity="0.05" stroke="#8B5CF6" strokeWidth="2" fill="none">
-        <polygon points="520,600 560,550 600,600" />
-        <circle cx="70" cy="350" r="35" />
-        <rect x="430" y="350" width="40" height="40" rx="6" />
-      </g>
-    </svg>
-  );
-}
-
-/* ---- Difficulty & Team icons ---- */
-const DIFF_ICONS = {
-  easy: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>',
-  medium: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>',
-  hard: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="14" width="4" height="6" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="16" y="4" width="4" height="16" rx="1"/></svg>',
-};
-
-const TEAM_ICONS = {
-  blue: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>',
-  red: '<svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>',
-};
-
-const DIFFICULTIES = ['easy', 'medium', 'hard'];
-const ROUND_OPTIONS = [1, 3, 5];
+import { MathBackground } from '../components/CategoryWizardIcons.jsx';
+import {
+  DIFF_ICONS,
+  TEAM_ICONS,
+  DIFFICULTIES,
+  ROUND_OPTIONS,
+  TIME_OPTIONS,
+  BLUE_SUBCATS,
+  RED_SUBCATS,
+  BLACK_SUBCATS,
+  ALL_PLAYABLE_CODES,
+} from '../constants/categoryWizardConstants.js';
 
 export default function CategoryScreen() {
   const { t } = useI18n();
@@ -143,8 +24,22 @@ export default function CategoryScreen() {
 
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedThemes, setSelectedThemes] = useState(new Set(['numbers']));
+  const [selectedSubcategories, setSelectedSubcategories] = useState(new Set(['N1'])); // Au moins une par défaut
+
+  function toggleSelectAll() {
+    sound.buttonClick();
+    const playableSelected = ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c));
+    if (playableSelected.length === ALL_PLAYABLE_CODES.length) {
+      // Tout est coché → ne garder que N1
+      setSelectedSubcategories(new Set(['N1']));
+    } else {
+      // Tout cocher
+      setSelectedSubcategories(new Set([...ALL_PLAYABLE_CODES, ...(selectedSubcategories.has('CORRIGES') ? ['CORRIGES'] : [])]));
+    }
+  }
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
   const [selectedRounds, setSelectedRounds] = useState(3);
+  const [selectedTimePerQuestion, setSelectedTimePerQuestion] = useState(30); // en secondes
   const [slideDirection, setSlideDirection] = useState('right');
 
   const blueNameRef = useRef(null);
@@ -163,7 +58,29 @@ export default function CategoryScreen() {
     });
   }
 
+  function toggleSubcategory(code) {
+    sound.buttonClick();
+    setSelectedSubcategories(prev => {
+      const next = new Set(prev);
+      if (next.has(code)) {
+        // Vérifier qu'il reste au moins 1 sous-catégorie jouable
+        const playableRemaining = [...next].filter(c => c !== code && c !== 'CORRIGES');
+        if (code === 'CORRIGES' || playableRemaining.length >= 1) {
+          next.delete(code);
+        }
+      } else {
+        next.add(code);
+      }
+      return next;
+    });
+  }
+
   function goNext() {
+    // Vérifier qu'au moins 1 catégorie jouable est sélectionnée au step 1
+    if (currentStep === 1) {
+      const playable = [...selectedSubcategories].filter(c => c !== 'CORRIGES');
+      if (playable.length === 0) return;
+    }
     sound.buttonClick();
     setSlideDirection('right');
     setCurrentStep(s => s + 1);
@@ -183,13 +100,21 @@ export default function CategoryScreen() {
     sound.buttonClick();
     const blueName = blueNameRef.current?.value.trim() || '';
     const redName = redNameRef.current?.value.trim() || '';
-    const categories = getCategoriesToLoad([...selectedThemes]);
+    // Utiliser directement les sous-catégories sélectionnées (N1, G1, etc.)
+    const categories = Array.from(selectedSubcategories).filter(code => code !== 'CORRIGES');
+
+    if (categories.length === 0) {
+      // Si seulement CORRIGES est sélectionné, ne pas démarrer
+      return;
+    }
+
     push('Game', {
       mode,
       categories,
       operations: [],
       difficulty: selectedDifficulty,
       numRounds: selectedRounds,
+      timePerQuestion: selectedTimePerQuestion,
       blueName: blueName || t('game.blue'),
       redName: mode === 'versus' ? (redName || t('game.red')) : 'AI',
     }, true);
@@ -222,43 +147,94 @@ export default function CategoryScreen() {
             ))}
           </div>
 
-          {/* Step 1: Theme selection with SVG icons */}
+          {/* Step 1: Subcategory selection - 2 columns blue/red + CORRIGES */}
           {currentStep === 1 && (
             <div className={`wizard-step-content ${animClass}`} key="step1">
               <h3 className="wizard-section-title">{t('wizard.themesTitle')}</h3>
-              <p className="wizard-section-desc">{t('wizard.themesDesc')}</p>
-              <div className="wizard-themes-grid">
-                {CE1D_THEMES.map(theme => {
-                  const IconComponent = THEME_ICONS[theme.id];
-                  const isSelected = selectedThemes.has(theme.id);
+
+              {/* Toggle all + counter */}
+              <div className="wizard-subcat-toolbar">
+                <button
+                  className="wizard-toggle-all-btn"
+                  onClick={toggleSelectAll}
+                >
+                  {ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length === ALL_PLAYABLE_CODES.length
+                    ? 'Tout désélectionner'
+                    : 'Tout sélectionner'}
+                </button>
+                <span className="wizard-subcat-counter">
+                  {ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length}/{ALL_PLAYABLE_CODES.length} sélectionné{ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length > 1 ? 's' : ''}
+                </span>
+              </div>
+
+              {/* Grid de cards avec icônes */}
+              <div className="wizard-subcat-cards-grid">
+                {[...BLUE_SUBCATS, ...RED_SUBCATS].map(subcat => {
+                  const isSelected = selectedSubcategories.has(subcat.code);
+                  const color = BLUE_SUBCATS.find(s => s.code === subcat.code) ? '#3B82F6' : '#EF4444';
                   return (
                     <div
-                      key={theme.id}
-                      className={`wizard-theme-card ${isSelected ? 'selected' : ''}`}
-                      onClick={() => toggleTheme(theme.id)}
+                      key={subcat.code}
+                      className={`wizard-subcat-card ${isSelected ? 'selected' : ''}`}
+                      onClick={() => toggleSubcategory(subcat.code)}
                       style={{
-                        '--theme-color': theme.color,
-                        borderColor: isSelected ? theme.color : undefined,
+                        '--card-color': color,
+                        borderColor: isSelected ? color : '#E2E8F0',
+                        backgroundColor: isSelected ? `${color}08` : 'white',
                       }}
                     >
-                      <div className="wizard-theme-icon-wrap">
-                        {IconComponent && <IconComponent color={isSelected ? theme.color : '#94A3B8'} />}
+                      <div className={`wizard-subcat-card-checkbox ${isSelected ? 'checked' : ''}`} style={{ '--cb-color': color }}>
+                        {isSelected && <span>✓</span>}
                       </div>
-                      <span className="wizard-theme-label" style={{
-                        color: isSelected ? theme.color : undefined,
-                      }}>
-                        {t(`themes.${theme.id}`)}
-                      </span>
+                      <div className="wizard-subcat-card-icon" style={{ color }}>
+                        {subcat.icon}
+                      </div>
+                      <div className="wizard-subcat-card-code" style={{ color }}>
+                        {subcat.code}
+                      </div>
+                      <div className="wizard-subcat-card-name" style={{ color: isSelected ? color : '#64748B' }}>
+                        {subcat.name}
+                      </div>
                     </div>
                   );
                 })}
               </div>
+
+              {/* CORRIGES - card spéciale */}
+              {(() => {
+                const isSelected = selectedSubcategories.has('CORRIGES');
+                return (
+                  <div
+                    className={`wizard-subcat-card wizard-subcat-corriges-card ${isSelected ? 'selected' : ''}`}
+                    onClick={() => toggleSubcategory('CORRIGES')}
+                    style={{
+                      '--card-color': '#000000',
+                      borderColor: isSelected ? '#000' : '#E2E8F0',
+                      backgroundColor: isSelected ? 'rgba(0,0,0,0.06)' : 'white',
+                      marginTop: '12px',
+                    }}
+                  >
+                    <div className={`wizard-subcat-card-checkbox ${isSelected ? 'checked' : ''}`} style={{ '--cb-color': '#000' }}>
+                      {isSelected && <span>✓</span>}
+                    </div>
+                    <div className="wizard-subcat-card-icon" style={{ color: '#000' }}>
+                      ✎
+                    </div>
+                    <div className="wizard-subcat-card-code" style={{ color: '#000' }}>
+                      CORR
+                    </div>
+                    <div className="wizard-subcat-card-name" style={{ color: isSelected ? '#000' : '#64748B' }}>
+                      CORRIGÉS
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
 
           {/* Step 2: Difficulty & Rounds */}
           {currentStep === 2 && (
-            <div className={`wizard-step-content ${animClass}`} key="step2">
+            <div className={`wizard-step-content ${animClass}`} key="step3">
               <h3 className="wizard-section-title">{t('wizard.difficultyTitle')}</h3>
               <div className="wizard-difficulty-grid">
                 {DIFFICULTIES.map(diff => (
@@ -283,6 +259,18 @@ export default function CategoryScreen() {
                     <div className="wizard-round-label">
                       {n === 1 ? t('wizard.roundLabel1') : t('wizard.roundLabel', { n })}
                     </div>
+                  </div>
+                ))}
+              </div>
+              <h3 className="wizard-section-title" style={{ marginTop: '20px' }}>⏱️ Temps par question</h3>
+              <div className="wizard-rounds-grid">
+                {TIME_OPTIONS.map(opt => (
+                  <div
+                    key={opt.value}
+                    className={`wizard-round-card ${selectedTimePerQuestion === opt.value ? 'selected' : ''}`}
+                    onClick={() => { sound.buttonClick(); setSelectedTimePerQuestion(opt.value); }}
+                  >
+                    <div className="wizard-round-label">{opt.label}</div>
                   </div>
                 ))}
               </div>

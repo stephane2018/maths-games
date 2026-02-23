@@ -24,8 +24,18 @@ export default function GameScreen() {
   const redName = params.redName || (mode === 'solo' ? 'AI' : t('game.red'));
   const operations = params.operations || [];
   const numRounds = params.numRounds || CONFIG.NUM_ROUNDS;
-  const roundTime = getRoundTime();
+  const roundTime = params.timePerQuestion !== undefined ? params.timePerQuestion : getRoundTime();
   const startLevel = difficulty === 'hard' ? 3 : difficulty === 'medium' ? 2 : 1;
+
+  // Calculer le nombre de hints disponibles selon le temps choisi
+  const getMaxHints = (time) => {
+    if (time === 15) return 2;
+    if (time === 30) return 3;
+    if (time === 60) return 4;
+    if (time === 120 || time === 0) return 5;
+    return 3; // Par défaut
+  };
+  const maxHints = getMaxHints(roundTime);
 
   // Engine instances (refs, not state)
   const blueEngineRef = useRef(null);
@@ -58,9 +68,19 @@ export default function GameScreen() {
   const [redScoreDisplay, setRedScoreDisplay] = useState(0);
   const [roundText, setRoundText] = useState('');
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
+  const [blueHintsRemaining, setBlueHintsRemaining] = useState(maxHints);
+  const [redHintsRemaining, setRedHintsRemaining] = useState(maxHints);
 
-  // Hint handling
+  // Hint handling avec limitation
   const handleHintRequest = useCallback((team) => {
+    const hintsRemaining = team === 'blue' ? blueHintsRemaining : redHintsRemaining;
+    
+    // Vérifier s'il reste des hints
+    if (hintsRemaining <= 0) {
+      sound.error();
+      return;
+    }
+
     const engine = team === 'blue' ? blueEngineRef.current : redEngineRef.current;
     const panelRef = team === 'blue' ? bluePanelRef : redPanelRef;
     const question = panelRef.current?.getCurrentQuestion?.();
@@ -68,8 +88,15 @@ export default function GameScreen() {
     const hint = engine.getHintText(question);
     if (hint) {
       panelRef.current?.showHint(hint);
+      // Décrémenter le nombre de hints restants
+      if (team === 'blue') {
+        setBlueHintsRemaining(prev => prev - 1);
+      } else {
+        setRedHintsRemaining(prev => prev - 1);
+      }
+      sound.buttonClick();
     }
-  }, []);
+  }, [blueHintsRemaining, redHintsRemaining, sound]);
 
   // Zoom
   const ZOOM_STEPS = [0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2];
@@ -387,6 +414,7 @@ export default function GameScreen() {
             teamName={blueName}
             onAnswer={(val, q, time) => handleAnswer('blue', val, q, time)}
             onHintRequest={handleHintRequest}
+            hintsRemaining={blueHintsRemaining}
             disabled={blueDisabled}
           />
           <QuestionPanel
@@ -395,6 +423,7 @@ export default function GameScreen() {
             teamName={redName}
             onAnswer={(val, q, time) => handleAnswer('red', val, q, time)}
             onHintRequest={mode === 'versus' ? handleHintRequest : undefined}
+            hintsRemaining={redHintsRemaining}
             showHintButton={mode === 'versus'}
             disabled={redDisabled}
           />

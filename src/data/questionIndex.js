@@ -6,147 +6,172 @@
 import { questions as questionsN1, generate as generateN1 } from './questions-N1.js';
 import { questions as questionsN2, generate as generateN2 } from './questions-N2.js';
 import { questions as questionsN3, generate as generateN3 } from './questions-N3.js';
-import { questions as questionsP1, generate as generateP1 } from './questions-P1.js';
+import { questions as questionsN4, generate as generateN4 } from './questions-N4.js';
+import { questions as questionsN5, generate as generateN5 } from './questions-N5.js';
+import { questions as questionsN6, generate as generateN6 } from './questions-N6.js';
 import { questions as questionsG1, generate as generateG1 } from './questions-G1.js';
 import { questions as questionsG2, generate as generateG2 } from './questions-G2.js';
-import { questions as questionsM1, generate as generateM1 } from './questions-M1.js';
+import { questions as questionsG3, generate as generateG3 } from './questions-G3.js';
+import { questions as questionsG4, generate as generateG4 } from './questions-G4.js';
+import { questions as questionsG5, generate as generateG5 } from './questions-G5.js';
+import { questions as questionsG6, generate as generateG6 } from './questions-G6.js';
+import { questions as questionsG7, generate as generateG7 } from './questions-G7.js';
+import { questions as questionsP1, generate as generateP1 } from './questions-P1.js';
 import { questions as questionsD1, generate as generateD1 } from './questions-D1.js';
 import { questions as questionsD2, generate as generateD2 } from './questions-D2.js';
+import { questions as questionsM1, generate as generateM1 } from './questions-M1.js';
 import { questions as questionsR1, generate as generateR1 } from './questions-R1.js';
-
-// ─── Category registry ──────────────────────────────────────────────────────
 
 export const allCategories = [
   {
     code: 'N1',
-    icon: '🔢',
-    label: { fr: 'Comparaison de nombres', en: 'Number comparison', nl: 'Getallen vergelijken' },
+    label: { fr: 'Calcul numérique', en: 'Calcul numérique', nl: 'Calcul numérique' },
     questions: questionsN1,
     generate: generateN1,
   },
   {
     code: 'N2',
-    icon: '➕',
-    label: { fr: 'Opérations simples', en: 'Simple operations', nl: 'Eenvoudige bewerkingen' },
+    label: { fr: 'Calcul littéral', en: 'Calcul littéral', nl: 'Calcul littéral' },
     questions: questionsN2,
     generate: generateN2,
   },
   {
     code: 'N3',
-    icon: '🧮',
-    label: { fr: 'Priorités des opérations', en: 'Order of operations', nl: 'Volgorde van bewerkingen' },
+    label: { fr: 'Puissances', en: 'Puissances', nl: 'Puissances' },
     questions: questionsN3,
     generate: generateN3,
   },
   {
-    code: 'P1',
-    icon: '⚖️',
-    label: { fr: 'Proportionnalité', en: 'Proportionality', nl: 'Evenredigheid' },
-    questions: questionsP1,
-    generate: generateP1,
+    code: 'N4',
+    label: { fr: 'Équations', en: 'Équations', nl: 'Équations' },
+    questions: questionsN4,
+    generate: generateN4,
+  },
+  {
+    code: 'N5',
+    label: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' },
+    questions: questionsN5,
+    generate: generateN5,
+  },
+  {
+    code: 'N6',
+    label: { fr: 'Dénombrer', en: 'Counting', nl: 'Tellen' },
+    questions: questionsN6,
+    generate: generateN6,
   },
   {
     code: 'G1',
-    icon: '📐',
-    label: { fr: 'Géométrie plane', en: 'Plane geometry', nl: 'Vlakke meetkunde' },
+    label: { fr: 'Distances', en: 'Distances', nl: 'Afstanden' },
     questions: questionsG1,
     generate: generateG1,
   },
   {
     code: 'G2',
-    icon: '📏',
-    label: { fr: 'Angles & transformations', en: 'Angles & transformations', nl: 'Hoeken & transformaties' },
+    label: { fr: 'Transformations du plan', en: 'Transformations du plan', nl: 'Transformations du plan' },
     questions: questionsG2,
     generate: generateG2,
   },
   {
-    code: 'M1',
-    icon: '📏',
-    label: { fr: 'Conversions d\'unités', en: 'Unit conversions', nl: 'Eenheden omrekenen' },
-    questions: questionsM1,
-    generate: generateM1,
+    code: 'G3',
+    label: { fr: 'Repérage', en: 'Repérage', nl: 'Repérage' },
+    questions: questionsG3,
+    generate: generateG3,
+  },
+  {
+    code: 'G4',
+    label: { fr: 'Angles', en: 'Angles', nl: 'Angles' },
+    questions: questionsG4,
+    generate: generateG4,
+  },
+  {
+    code: 'G5',
+    label: { fr: 'Figures planes', en: 'Figures planes', nl: 'Figures planes' },
+    questions: questionsG5,
+    generate: generateG5,
+  },
+  {
+    code: 'G6',
+    label: { fr: 'Solides', en: 'Solides', nl: 'Solides' },
+    questions: questionsG6,
+    generate: generateG6,
+  },
+  {
+    code: 'G7',
+    label: { fr: 'Programmes de construction', en: 'Programmes de construction', nl: 'Programmes de construction' },
+    questions: questionsG7,
+    generate: generateG7,
+  },
+  {
+    code: 'P1',
+    label: { fr: 'Grandeurs proportionnelles', en: 'Grandeurs proportionnelles', nl: 'Grandeurs proportionnelles' },
+    questions: questionsP1,
+    generate: generateP1,
   },
   {
     code: 'D1',
-    icon: '📊',
-    label: { fr: 'Lecture de tableaux', en: 'Reading tables', nl: 'Tabellen lezen' },
+    label: { fr: 'Traitement de données', en: 'Traitement de données', nl: 'Traitement de données' },
     questions: questionsD1,
     generate: generateD1,
   },
   {
     code: 'D2',
-    icon: '📈',
-    label: { fr: 'Statistiques & moyennes', en: 'Statistics & averages', nl: 'Statistiek & gemiddelden' },
+    label: { fr: 'Statistiques', en: 'Statistiques', nl: 'Statistiques' },
     questions: questionsD2,
     generate: generateD2,
   },
   {
+    code: 'M1',
+    label: { fr: 'Conversions et mesures', en: 'Conversions et mesures', nl: 'Conversions et mesures' },
+    questions: questionsM1,
+    generate: generateM1,
+  },
+  {
     code: 'R1',
-    icon: '🧩',
-    label: { fr: 'Problèmes & raisonnement', en: 'Word problems & reasoning', nl: 'Redeneerproblemen' },
+    label: { fr: 'Problèmes complexes', en: 'Problèmes complexes', nl: 'Problèmes complexes' },
     questions: questionsR1,
     generate: generateR1,
-  },
+  }
 ];
 
-// ─── Helper functions ────────────────────────────────────────────────────────
-
-/**
- * Get a category object by its code.
- * @param {string} code - Category code (e.g. 'N1', 'G2')
- * @returns {object|undefined} The category object or undefined
- */
 export function getCategoryByCode(code) {
   return allCategories.find((cat) => cat.code === code);
 }
 
-/**
- * Get all static questions for a given category code.
- * @param {string} code - Category code
- * @returns {Array} Array of question objects
- */
 export function getQuestionsByCategory(code) {
   const cat = getCategoryByCode(code);
   return cat ? cat.questions : [];
 }
 
-/**
- * Get a random question, optionally filtered by categories and/or level.
- * If the selected category has a generator, it may return a procedurally
- * generated question (50% chance when a generator is available).
- *
- * @param {string[]} [categories] - Array of category codes to pick from.
- *                                   If empty or undefined, all categories are used.
- * @param {1|2|3}    [level]      - If provided, only questions of this level.
- * @returns {object|null}          A question object, or null if none found.
- */
 export function getRandomQuestion(categories, level) {
-  // Resolve which categories to use
   let pool = allCategories;
   if (categories && categories.length > 0) {
     pool = allCategories.filter((cat) => categories.includes(cat.code));
   }
   if (pool.length === 0) return null;
 
-  // Pick a random category from the pool
   const cat = pool[Math.floor(Math.random() * pool.length)];
 
-  // 50 % chance to use the generator if one exists
-  if (cat.generate && Math.random() < 0.5) {
-    const lvl = level || (Math.floor(Math.random() * 3) + 1);
-    return cat.generate(lvl);
-  }
+  // DÉSACTIVÉ: Génération procédurale
+  // if (cat.generate && Math.random() < 0.5) {
+  //   const lvl = level || (Math.floor(Math.random() * 3) + 1);
+  //   return cat.generate(lvl);
+  // }
 
-  // Otherwise pick from static questions
   let available = cat.questions;
   if (level) {
     available = available.filter((q) => q.level === level);
   }
   if (available.length === 0) {
-    // Fallback: try the generator
-    if (cat.generate) {
-      const lvl = level || (Math.floor(Math.random() * 3) + 1);
-      return cat.generate(lvl);
+    // Fallback si aucune question statique n'est disponible
+    // Essayer les autres catégories
+    for (const otherCat of pool) {
+      if (otherCat.code === cat.code) continue;
+      const otherQuestions = level
+        ? otherCat.questions.filter((q) => q.level === level)
+        : otherCat.questions;
+      if (otherQuestions.length > 0) {
+        return otherQuestions[Math.floor(Math.random() * otherQuestions.length)];
+      }
     }
     return null;
   }
@@ -154,11 +179,6 @@ export function getRandomQuestion(categories, level) {
   return available[Math.floor(Math.random() * available.length)];
 }
 
-/**
- * Get all static questions across all categories, optionally filtered by level.
- * @param {1|2|3} [level] - If provided, only questions of this level.
- * @returns {Array} Array of question objects
- */
 export function getAllQuestions(level) {
   const all = allCategories.flatMap((cat) => cat.questions);
   if (level) {
@@ -167,10 +187,6 @@ export function getAllQuestions(level) {
   return all;
 }
 
-/**
- * Get the total count of static questions.
- * @returns {number}
- */
 export function getTotalQuestionCount() {
   return allCategories.reduce((sum, cat) => sum + cat.questions.length, 0);
 }

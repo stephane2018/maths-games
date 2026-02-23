@@ -2,9 +2,9 @@
   "app": {
     "title": "Tir à la Corde",
     "subtitle": "Mathématiques CE1D",
-    "brand": "Mathlaclasse by Léopold",
+    "brand": "Mathlaclasse by Léopold Minko",
     "startupTitle": "CE1D — Tir à la corde",
-    "startupDesc": "Un outil de remédiation créé par Léopold Mathlaclasse"
+    "startupDesc": "Un outil de remédiation créé par Léopold Minko - Mathlaclasse"
   },
   "home": {
     "play": "Jouer",
@@ -158,7 +158,10 @@
   "about": {
     "title": "À propos",
     "creator": "Créateur",
-    "creatorName": "Léopold",
+    "creatorName": "Léopold Minko",
+    "creatorTitle": "Professeur de Mathématiques & Créateur de Mathlaclasse",
+    "creatorBio": "Passionné par l'enseignement des mathématiques, j'ai créé cet outil de remédiation pour aider les élèves à se préparer au CE1D de manière ludique et interactive.",
+    "phone": "Téléphone",
     "project": "Projet",
     "projectName": "Mathlaclasse",
     "year": "Année",
