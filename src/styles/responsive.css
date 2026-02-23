@@ -4,14 +4,15 @@
 
 /* ---- Very small phones (< 375px) ---- */
 @media (max-width: 374px) {
-  /* Scroll horizontal pour éviter les débordements */
+  /* Empêcher les débordements horizontaux */
   .screen-content,
   .wizard-subcat-cards-grid,
   .wizard-rounds-grid,
   .wizard-difficulty-grid,
   .mode-cards {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .wizard-themes-grid {
@@ -161,13 +162,21 @@
   .screen-content {
     padding: 10px;
     gap: 10px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Scroll horizontal pour les grilles et conteneurs */
+  /* Empêcher le scroll horizontal pour les grilles wizard */
   .wizard-subcat-cards-grid,
   .wizard-rounds-grid,
-  .wizard-difficulty-grid,
+  .wizard-difficulty-grid {
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Scroll horizontal uniquement pour les listes et stats */
   .mode-cards,
   .about-list,
   .result-stats {
