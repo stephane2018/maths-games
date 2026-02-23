@@ -159,19 +159,21 @@
   .title { font-size: 1.5rem; }
   .subtitle { font-size: 0.95rem; }
 
-  /* Boutons wizard sticky en bas sur mobile */
-  .wizard-buttons {
-    position: sticky;
+  /* Boutons wizard fixed en bas sur mobile */
+  .category-content .wizard-buttons {
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(248, 250, 252, 1) 70%, rgba(248, 250, 252, 0.95) 85%, rgba(248, 250, 252, 0) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    width: 100%;
+    background: rgba(248, 250, 252, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 12px 16px 16px;
-    margin-top: 16px;
-    z-index: 100;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 0;
+    z-index: 1000;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
   }
 
   .screen-content {
