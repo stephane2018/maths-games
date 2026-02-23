@@ -2291,7 +2291,9 @@
   .wizard-subcat-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    max-height: 400px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .wizard-subcat-card {
@@ -2312,7 +2314,9 @@
 @media (max-width: 420px) {
   .wizard-subcat-cards-grid {
     grid-template-columns: 1fr;
-    max-height: 360px;
+    max-height: 45vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .wizard-subcat-card {
