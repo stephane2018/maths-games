@@ -13,11 +13,58 @@ const ROPE_Y = CENTER_Y - 2;
 const ROPE_LENGTH = 420;
 const ROPE_START_X = CENTER_X - ROPE_LENGTH / 2;
 const ROPE_END_X = CENTER_X + ROPE_LENGTH / 2;
+const GROUND_Y = ROPE_Y + 20;
 
-// Rope texture segments
-const ropeTextures = [];
-for (let x = ROPE_START_X + 10; x < ROPE_END_X - 10; x += 14) {
-  ropeTextures.push(x);
+// Build a sine-wave rope path using quadratic Bezier segments
+function buildRopePath(startX, endX, y, time, tension) {
+  const segments = 10;
+  const segWidth = (endX - startX) / segments;
+  const amplitude = 1.5 + tension * 2.5;
+  const speed = 3 + tension * 4;
+  let d = `M ${startX} ${y}`;
+  for (let i = 1; i <= segments; i++) {
+    const x = startX + i * segWidth;
+    const ctrlX = startX + (i - 0.5) * segWidth;
+    const wave = Math.sin(time * speed + i * 0.8) * amplitude;
+    d += ` Q ${ctrlX} ${y + wave} ${x} ${y}`;
+  }
+  return d;
+}
+
+// Build a waving flag path with 3 undulations, amplitude increasing toward tip
+function buildFlagPath(baseX, topY, time, lean) {
+  const W = 18, H = 14;
+  const n = 3;
+  const dx = W / n;
+  const waves = [];
+  for (let i = 0; i <= n; i++) {
+    const t = i / n;
+    const amp = t * 3.5;
+    waves.push(Math.sin(time * 5 + i * 1.5) * amp);
+  }
+  // Top edge (left to right)
+  let d = `M ${baseX} ${topY}`;
+  for (let i = 1; i <= n; i++) {
+    const x = baseX + i * dx + lean * (i / n);
+    const y = topY + waves[i];
+    const cpx = baseX + (i - 0.5) * dx + lean * ((i - 0.5) / n);
+    const cpy = topY + (waves[i - 1] + waves[i]) / 2;
+    d += ` Q ${cpx} ${cpy} ${x} ${y}`;
+  }
+  // Bottom edge (right to left)
+  for (let i = n; i >= 0; i--) {
+    const x = baseX + i * dx + lean * (i / n);
+    const y = topY + H + waves[i];
+    if (i === n) {
+      d += ` L ${x} ${y}`;
+    } else {
+      const cpx = baseX + (i + 0.5) * dx + lean * ((i + 0.5) / n);
+      const cpy = topY + H + (waves[i + 1] + waves[i]) / 2;
+      d += ` Q ${cpx} ${cpy} ${x} ${y}`;
+    }
+  }
+  d += ' Z';
+  return d;
 }
 
 const RopeScene = forwardRef(function RopeScene({
@@ -49,6 +96,12 @@ const RopeScene = forwardRef(function RopeScene({
   const dominanceRef = useRef('neutral');
   const prevDominanceRef = useRef('neutral');
 
+  // Animated rope refs
+  const ropePathRef = useRef(null);
+  const ropeShadowRef = useRef(null);
+  const ropeFiberRef = useRef(null);
+  const timeAccRef = useRef(0);
+
   // Team animation refs (GSAP)
   const blueTeamRef = useRef(null);
   const redTeamRef = useRef(null);
@@ -63,8 +116,32 @@ const RopeScene = forwardRef(function RopeScene({
   // Countdown overlay
   const [countdown, setCountdown] = useState(null);
 
-  // Smooth interpolation loop
+  // Animation loop: rope wave + flag wave + smooth interpolation
   useAnimationFrame((dt) => {
+    timeAccRef.current += dt;
+    const time = timeAccRef.current;
+    const tension = Math.abs(positionRef.current) / 5;
+
+    // Animate rope paths
+    if (ropePathRef.current) {
+      ropePathRef.current.setAttribute('d', buildRopePath(ROPE_START_X, ROPE_END_X, ROPE_Y, time, tension));
+    }
+    if (ropeShadowRef.current) {
+      ropeShadowRef.current.setAttribute('d', buildRopePath(ROPE_START_X, ROPE_END_X, ROPE_Y + 3, time, tension));
+    }
+    if (ropeFiberRef.current) {
+      ropeFiberRef.current.setAttribute('d', buildRopePath(ROPE_START_X, ROPE_END_X, ROPE_Y, time, tension));
+      const dashOffset = (time * (60 + tension * 80)) % 16;
+      ropeFiberRef.current.setAttribute('stroke-dashoffset', String(dashOffset));
+    }
+
+    // Animate flag
+    if (flagRef.current) {
+      const lean = positionRef.current > 0 ? 2 : positionRef.current < 0 ? -2 : 0;
+      flagRef.current.setAttribute('d', buildFlagPath(CENTER_X, ROPE_Y - 32, time, lean));
+    }
+
+    // Smooth rope group interpolation
     if (ropeGroupRef.current && !animatingRef.current) {
       const diff = targetXRef.current - currentXRef.current;
       if (Math.abs(diff) > 0.1) {
@@ -79,42 +156,48 @@ const RopeScene = forwardRef(function RopeScene({
     if (!blueTeamRef.current || !redTeamRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Blue team: pulls to the left with a rhythmic heave
+      // Blue team: pulls to the left (optimisé GPU)
       const blueTl = gsap.timeline({ repeat: -1 });
       blueTl
         .to(blueTeamRef.current, {
           x: -6, y: -3,
           duration: 0.5,
           ease: 'power2.in',
+          force3D: true,
         })
         .to(blueTeamRef.current, {
           x: -1, y: 1,
           duration: 0.35,
           ease: 'power2.out',
+          force3D: true,
         })
         .to(blueTeamRef.current, {
           x: 0, y: 0,
           duration: 0.15,
           ease: 'power1.out',
+          force3D: true,
         });
 
-      // Red team: pulls to the right, offset by half a cycle
+      // Red team: pulls to the right, offset by half a cycle (optimisé GPU)
       const redTl = gsap.timeline({ repeat: -1, delay: 0.5 });
       redTl
         .to(redTeamRef.current, {
           x: 6, y: -3,
           duration: 0.5,
           ease: 'power2.in',
+          force3D: true,
         })
         .to(redTeamRef.current, {
           x: 1, y: 1,
           duration: 0.35,
           ease: 'power2.out',
+          force3D: true,
         })
         .to(redTeamRef.current, {
           x: 0, y: 0,
           duration: 0.15,
           ease: 'power1.out',
+          force3D: true,
         });
     });
 
@@ -159,19 +242,29 @@ const RopeScene = forwardRef(function RopeScene({
     const offsets = [0, 2, -2, 1.5, -1, 0.5, 0];
     const yOffsets = [0, 1, -1, 0.5, -0.5, 0, 0];
     let step = 0;
+    let lastTime = performance.now();
 
-    const interval = setInterval(() => {
-      step++;
-      if (step >= offsets.length || !ropeGroupRef.current) {
-        clearInterval(interval);
-        if (ropeGroupRef.current) {
-          ropeGroupRef.current.setAttribute('transform', `translate(${baseX}, 0)`);
+    const animate = (currentTime) => {
+      const elapsed = currentTime - lastTime;
+      if (elapsed >= 30) {
+        step++;
+        lastTime = currentTime;
+
+        if (step >= offsets.length || !ropeGroupRef.current) {
+          if (ropeGroupRef.current) {
+            ropeGroupRef.current.setAttribute('transform', `translate(${baseX}, 0)`);
+          }
+          animatingRef.current = false;
+          return;
         }
-        animatingRef.current = false;
-        return;
+        ropeGroupRef.current.setAttribute('transform', `translate(${baseX + offsets[step]}, ${yOffsets[step]})`);
+        requestAnimationFrame(animate);
+      } else {
+        requestAnimationFrame(animate);
       }
-      ropeGroupRef.current.setAttribute('transform', `translate(${baseX + offsets[step]}, ${yOffsets[step]})`);
-    }, 30);
+    };
+
+    requestAnimationFrame(animate);
   }, []);
 
   const setPosition = useCallback((position) => {
@@ -297,7 +390,7 @@ const RopeScene = forwardRef(function RopeScene({
       {/* Progress bar */}
       <div className="rope-progress-bar">
         <div className="progress-track">
-          <div 
+          <div
             className="progress-fill"
             style={{
               width: `${50 + (visualPosition / 5) * 50}%`,
@@ -339,6 +432,23 @@ const RopeScene = forwardRef(function RopeScene({
             <stop offset="0%" stopColor="#A8A29E" stopOpacity="0.1" />
             <stop offset="100%" stopColor="#A8A29E" stopOpacity="0" />
           </radialGradient>
+          {/* Rope 3D cylindrical gradient */}
+          <linearGradient id="rope-gradient" x1="0" y1={ROPE_Y - 3} x2="0" y2={ROPE_Y + 3} gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#3C2415" />
+            <stop offset="50%" stopColor="#6B4C30" />
+            <stop offset="100%" stopColor="#3C2415" />
+          </linearGradient>
+          {/* Ground: grass to earth */}
+          <linearGradient id="ground-gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#5A8C3A" />
+            <stop offset="30%" stopColor="#4A7C30" />
+            <stop offset="100%" stopColor="#5D4E37" />
+          </linearGradient>
+          {/* Mud pit radial */}
+          <radialGradient id="mud-gradient" cx="50%" cy="40%" r="50%">
+            <stop offset="0%" stopColor="#6B5B45" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#5D4E37" stopOpacity="0.15" />
+          </radialGradient>
           {/* Filtre pour supprimer le fond noir de l'image */}
           <filter id="remove-black-bg" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
             <feColorMatrix type="matrix" values="
@@ -358,21 +468,37 @@ const RopeScene = forwardRef(function RopeScene({
         </defs>
         {/* Background */}
         <rect width={VB_W} height={VB_H} fill="#F8FAFC" rx="0" />
-        {/* Ground color zone - changes based on dominance */}
-        <rect 
-          x={CENTER_X - 80} 
-          y={ROPE_Y + 20} 
-          width={160} 
-          height={VB_H - ROPE_Y - 30}
-          className="ground-zone"
-          style={{
-            fill: dominance === 'blue' ? '#3B82F6' : 
-                  dominance === 'red' ? '#EF4444' : '#E2E8F0',
-            opacity: dominance === 'neutral' ? 0.15 : 0.25,
-            transition: 'fill 0.4s ease, opacity 0.4s ease'
-          }}
-          rx="8"
-        />
+
+        {/* Ground terrain */}
+        <g className="ground">
+          {/* Main ground with gradient */}
+          <rect x={0} y={GROUND_Y} width={VB_W} height={VB_H - GROUND_Y} fill="url(#ground-gradient)" />
+          {/* Grass texture lines */}
+          {[10, 25, 40, 55, 70].map((offset, i) => (
+            <line key={`grass-${i}`}
+              x1={0} y1={GROUND_Y + offset}
+              x2={VB_W} y2={GROUND_Y + offset}
+              stroke="#3D6B28" strokeWidth="0.5" opacity="0.15" />
+          ))}
+          {/* Central mud pit */}
+          <ellipse cx={CENTER_X} cy={GROUND_Y + 15} rx={70} ry={18} fill="url(#mud-gradient)" />
+          {/* Inner darker mud for depth */}
+          <ellipse cx={CENTER_X} cy={GROUND_Y + 17} rx={45} ry={11} fill="#5D4E37" opacity="0.4" />
+          {/* Field edge line */}
+          <line x1={0} y1={GROUND_Y} x2={VB_W} y2={GROUND_Y} stroke="#4A7C30" strokeWidth="2" opacity="0.5" />
+          {/* Dominance overlay on terrain */}
+          <rect
+            x={CENTER_X - 80} y={GROUND_Y}
+            width={160} height={VB_H - GROUND_Y}
+            style={{
+              fill: dominance === 'blue' ? '#3B82F6' :
+                    dominance === 'red' ? '#EF4444' : 'transparent',
+              opacity: dominance === 'neutral' ? 0 : 0.2,
+              transition: 'fill 0.4s ease, opacity 0.4s ease'
+            }}
+          />
+        </g>
+
         {/* Dashed center line */}
         <line x1={CENTER_X} y1={30} x2={CENTER_X} y2={VB_H - 10}
           stroke="#CBD5E1" strokeWidth="2" strokeDasharray="8 6" opacity="0.7" />
@@ -386,23 +512,27 @@ const RopeScene = forwardRef(function RopeScene({
         {/* Rope group (moves) */}
         <g ref={ropeGroupRef} className="rope-group">
           {/* Rope shadow */}
-          <line x1={ROPE_START_X} y1={ROPE_Y + 3} x2={ROPE_END_X} y2={ROPE_Y + 3}
-            stroke="#000" strokeWidth="6" strokeLinecap="round" opacity="0.08" />
-          {/* Main rope */}
-          <line x1={ROPE_START_X} y1={ROPE_Y} x2={ROPE_END_X} y2={ROPE_Y}
-            stroke="#292524" strokeWidth="6" strokeLinecap="round" />
-          {/* Rope texture */}
-          {ropeTextures.map((x, i) => (
-            <line key={i} x1={x} y1={ROPE_Y - 1.5} x2={x + 7} y2={ROPE_Y + 1.5}
-              stroke="#78716C" strokeWidth="1.5" opacity="0.4" />
-          ))}
+          <path ref={ropeShadowRef}
+            d={`M ${ROPE_START_X} ${ROPE_Y + 3} L ${ROPE_END_X} ${ROPE_Y + 3}`}
+            stroke="#000" strokeWidth="6" strokeLinecap="round" opacity="0.08" fill="none" />
+          {/* Main rope with 3D gradient */}
+          <path ref={ropePathRef}
+            d={`M ${ROPE_START_X} ${ROPE_Y} L ${ROPE_END_X} ${ROPE_Y}`}
+            stroke="url(#rope-gradient)" strokeWidth="6" strokeLinecap="round" fill="none" />
+          {/* Twisted fibers overlay */}
+          <path ref={ropeFiberRef}
+            d={`M ${ROPE_START_X} ${ROPE_Y} L ${ROPE_END_X} ${ROPE_Y}`}
+            stroke="#8B7355" strokeWidth="5" strokeLinecap="round" fill="none"
+            strokeDasharray="4 12" opacity="0.4" />
           {/* Flag/Fanion marker */}
           <g>
-            <line x1={CENTER_X} y1={ROPE_Y - 3} x2={CENTER_X} y2={ROPE_Y - 28}
+            {/* Mast (extended) */}
+            <line x1={CENTER_X} y1={ROPE_Y - 3} x2={CENTER_X} y2={ROPE_Y - 32}
               stroke="#78716C" strokeWidth="2" strokeLinecap="round" />
-            <polygon
+            {/* Animated waving flag */}
+            <path
               ref={flagRef}
-              points={`${CENTER_X},${ROPE_Y - 28} ${CENTER_X + 16},${ROPE_Y - 22} ${CENTER_X},${ROPE_Y - 16}`}
+              d={buildFlagPath(CENTER_X, ROPE_Y - 32, 0, 0)}
               className="flag-pennant flag-blink"
               style={{ fill: '#A8A29E', stroke: '#78716C' }}
               strokeWidth="1.5"

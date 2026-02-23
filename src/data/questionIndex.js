@@ -161,16 +161,34 @@ export function getRandomQuestion(categories, level) {
   if (level) {
     available = available.filter((q) => q.level === level);
   }
+  // Fallback 1: même catégorie sans filtre de level
+  if (available.length === 0 && level) {
+    available = cat.questions;
+  }
   if (available.length === 0) {
-    // Fallback si aucune question statique n'est disponible
-    // Essayer les autres catégories
+    // Fallback 2: essayer les autres catégories du pool
     for (const otherCat of pool) {
       if (otherCat.code === cat.code) continue;
-      const otherQuestions = level
+      let otherQuestions = level
         ? otherCat.questions.filter((q) => q.level === level)
         : otherCat.questions;
+      // Fallback 3: autre catégorie sans filtre de level
+      if (otherQuestions.length === 0 && level) {
+        otherQuestions = otherCat.questions;
+      }
       if (otherQuestions.length > 0) {
         return otherQuestions[Math.floor(Math.random() * otherQuestions.length)];
+      }
+    }
+    // Fallback 4: catégorie vide → utiliser le générateur procédural
+    if (cat.generate) {
+      const lvl = level || 1;
+      return cat.generate(lvl);
+    }
+    // Fallback 5: générateur d'une autre catégorie du pool
+    for (const otherCat of pool) {
+      if (otherCat.generate) {
+        return otherCat.generate(level || 1);
       }
     }
     return null;

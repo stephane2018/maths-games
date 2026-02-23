@@ -1,0 +1,40 @@
+/* ========================================
+   ROPE SCENE OPTIMIZATIONS (Mobile)
+   ======================================== */
+
+/* Accélération GPU pour les animations */
+.rope-group {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.team-blue,
+.team-red {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimisation du flag */
+.flag-pennant {
+  will-change: fill, opacity;
+  transform: translateZ(0);
+}
+
+/* Animation de clignotement optimisée */
+@keyframes flag-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.flag-blink {
+  animation: flag-blink 1s ease-in-out infinite;
+}
+
+/* Optimisation SVG pour mobile */
+@media (max-width: 640px) {
+  .rope-scene-svg {
+    shape-rendering: optimizeSpeed;
+  }
+}
