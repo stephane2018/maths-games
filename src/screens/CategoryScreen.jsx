@@ -12,7 +12,6 @@ import {
   TIME_OPTIONS,
   BLUE_SUBCATS,
   RED_SUBCATS,
-  BLACK_SUBCATS,
   ALL_PLAYABLE_CODES,
 } from '../constants/categoryWizardConstants.js';
 
@@ -34,7 +33,7 @@ export default function CategoryScreen() {
       setSelectedSubcategories(new Set(['N1']));
     } else {
       // Tout cocher
-      setSelectedSubcategories(new Set([...ALL_PLAYABLE_CODES, ...(selectedSubcategories.has('CORRIGES') ? ['CORRIGES'] : [])]));
+      setSelectedSubcategories(new Set(ALL_PLAYABLE_CODES));
     }
   }
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
@@ -64,8 +63,8 @@ export default function CategoryScreen() {
       const next = new Set(prev);
       if (next.has(code)) {
         // Vérifier qu'il reste au moins 1 sous-catégorie jouable
-        const playableRemaining = [...next].filter(c => c !== code && c !== 'CORRIGES');
-        if (code === 'CORRIGES' || playableRemaining.length >= 1) {
+        const playableRemaining = [...next].filter(c => c !== code);
+        if (playableRemaining.length >= 1) {
           next.delete(code);
         }
       } else {
@@ -78,8 +77,7 @@ export default function CategoryScreen() {
   function goNext() {
     // Vérifier qu'au moins 1 catégorie jouable est sélectionnée au step 1
     if (currentStep === 1) {
-      const playable = [...selectedSubcategories].filter(c => c !== 'CORRIGES');
-      if (playable.length === 0) return;
+      if (selectedSubcategories.size === 0) return;
     }
     sound.buttonClick();
     setSlideDirection('right');
@@ -101,10 +99,9 @@ export default function CategoryScreen() {
     const blueName = blueNameRef.current?.value.trim() || '';
     const redName = redNameRef.current?.value.trim() || '';
     // Utiliser directement les sous-catégories sélectionnées (N1, G1, etc.)
-    const categories = Array.from(selectedSubcategories).filter(code => code !== 'CORRIGES');
+    const categories = Array.from(selectedSubcategories);
 
     if (categories.length === 0) {
-      // Si seulement CORRIGES est sélectionné, ne pas démarrer
       return;
     }
 
@@ -199,36 +196,6 @@ export default function CategoryScreen() {
                   );
                 })}
               </div>
-
-              {/* CORRIGES - card spéciale */}
-              {(() => {
-                const isSelected = selectedSubcategories.has('CORRIGES');
-                return (
-                  <div
-                    className={`wizard-subcat-card wizard-subcat-corriges-card ${isSelected ? 'selected' : ''}`}
-                    onClick={() => toggleSubcategory('CORRIGES')}
-                    style={{
-                      '--card-color': '#000000',
-                      borderColor: isSelected ? '#000' : '#E2E8F0',
-                      backgroundColor: isSelected ? 'rgba(0,0,0,0.06)' : 'white',
-                      marginTop: '12px',
-                    }}
-                  >
-                    <div className={`wizard-subcat-card-checkbox ${isSelected ? 'checked' : ''}`} style={{ '--cb-color': '#000' }}>
-                      {isSelected && <span>✓</span>}
-                    </div>
-                    <div className="wizard-subcat-card-icon" style={{ color: '#000' }}>
-                      ✎
-                    </div>
-                    <div className="wizard-subcat-card-code" style={{ color: '#000' }}>
-                      CORR
-                    </div>
-                    <div className="wizard-subcat-card-name" style={{ color: isSelected ? '#000' : '#64748B' }}>
-                      CORRIGÉS
-                    </div>
-                  </div>
-                );
-              })()}
             </div>
           )}
 

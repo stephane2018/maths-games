@@ -48,11 +48,7 @@ export const RED_SUBCATS = [
   { code: 'D1', name: 'Tableaux', icon: '📊', color: '#EF4444' },
 ];
 
-export const BLACK_SUBCATS = [
-  { code: 'CORRIGES', name: 'Corrigés détaillés', icon: '✅', color: '#1F2937' },
-];
-
-// Toutes les sous-catégories jouables (sans CORRIGES)
+// Toutes les sous-catégories jouables
 export const ALL_PLAYABLE_CODES = [
   ...BLUE_SUBCATS.map(s => s.code),
   ...RED_SUBCATS.map(s => s.code),
