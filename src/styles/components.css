@@ -1356,7 +1356,7 @@
   padding: 28px 32px 24px;
   max-width: 100%;
   width: 100%;
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1501,7 +1501,7 @@
 /* Step content area */
 .wizard-step-content {
   text-align: center;
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
