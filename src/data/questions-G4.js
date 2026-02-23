@@ -312,6 +312,380 @@ export const questions = [
     answer: 90, tolerance: 0, unit: "°",
     hint: { fr: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4.", en: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4.", nl: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4." }
   },
+
+  // ===== NEW QUESTIONS G4_s_51 – G4_s_111 =====
+
+  // --- Level 1 — Complementary angles (sum = 90°) — G4_s_51 – G4_s_70 ---
+  {
+    id: "G4_s_51", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 33° ?", en: "What is the complement of a 33° angle?", nl: "Wat is het complement van een hoek van 33°?" },
+    answer: 57, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 33° = ?", en: "90° - 33° = ?", nl: "90° - 33° = ?" }
+  },
+  {
+    id: "G4_s_52", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 71°. Combien mesure l'autre ?", en: "Two complementary angles: one is 71°. What is the other?", nl: "Twee complementaire hoeken: de ene is 71°. Hoeveel is de andere?" },
+    answer: 19, tolerance: 0, unit: "°",
+    hint: { fr: "Complémentaires = leur somme fait 90°.", en: "Complementary = they add up to 90°.", nl: "Complementair = samen 90°." }
+  },
+  {
+    id: "G4_s_53", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 17° ?", en: "What is the complement of a 17° angle?", nl: "Wat is het complement van een hoek van 17°?" },
+    answer: 73, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 17° = ?", en: "90° - 17° = ?", nl: "90° - 17° = ?" }
+  },
+  {
+    id: "G4_s_54", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 44°. Combien mesure l'autre ?", en: "Two complementary angles: one is 44°. What is the other?", nl: "Twee complementaire hoeken: de ene is 44°. Hoeveel is de andere?" },
+    answer: 46, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 44° = ?", en: "90° - 44° = ?", nl: "90° - 44° = ?" }
+  },
+  {
+    id: "G4_s_55", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 62° ?", en: "What is the complement of a 62° angle?", nl: "Wat is het complement van een hoek van 62°?" },
+    answer: 28, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 62° = ?", en: "90° - 62° = ?", nl: "90° - 62° = ?" }
+  },
+  {
+    id: "G4_s_56", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 8°. Combien mesure l'autre ?", en: "Two complementary angles: one is 8°. What is the other?", nl: "Twee complementaire hoeken: de ene is 8°. Hoeveel is de andere?" },
+    answer: 82, tolerance: 0, unit: "°",
+    hint: { fr: "Complémentaires = leur somme fait 90°.", en: "Complementary = they add up to 90°.", nl: "Complementair = samen 90°." }
+  },
+  {
+    id: "G4_s_57", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 53° ?", en: "What is the complement of a 53° angle?", nl: "Wat is het complement van een hoek van 53°?" },
+    answer: 37, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 53° = ?", en: "90° - 53° = ?", nl: "90° - 53° = ?" }
+  },
+  {
+    id: "G4_s_58", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 29°. Combien mesure l'autre ?", en: "Two complementary angles: one is 29°. What is the other?", nl: "Twee complementaire hoeken: de ene is 29°. Hoeveel is de andere?" },
+    answer: 61, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 29° = ?", en: "90° - 29° = ?", nl: "90° - 29° = ?" }
+  },
+  {
+    id: "G4_s_59", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 85° ?", en: "What is the complement of an 85° angle?", nl: "Wat is het complement van een hoek van 85°?" },
+    answer: 5, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 85° = ?", en: "90° - 85° = ?", nl: "90° - 85° = ?" }
+  },
+  {
+    id: "G4_s_60", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 16°. Combien mesure l'autre ?", en: "Two complementary angles: one is 16°. What is the other?", nl: "Twee complementaire hoeken: de ene is 16°. Hoeveel is de andere?" },
+    answer: 74, tolerance: 0, unit: "°",
+    hint: { fr: "Complémentaires = leur somme fait 90°.", en: "Complementary = they add up to 90°.", nl: "Complementair = samen 90°." }
+  },
+  {
+    id: "G4_s_61", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 39° ?", en: "What is the complement of a 39° angle?", nl: "Wat is het complement van een hoek van 39°?" },
+    answer: 51, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 39° = ?", en: "90° - 39° = ?", nl: "90° - 39° = ?" }
+  },
+  {
+    id: "G4_s_62", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 57°. Combien mesure l'autre ?", en: "Two complementary angles: one is 57°. What is the other?", nl: "Twee complementaire hoeken: de ene is 57°. Hoeveel is de andere?" },
+    answer: 33, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 57° = ?", en: "90° - 57° = ?", nl: "90° - 57° = ?" }
+  },
+  {
+    id: "G4_s_63", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 70° ?", en: "What is the complement of a 70° angle?", nl: "Wat is het complement van een hoek van 70°?" },
+    answer: 20, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 70° = ?", en: "90° - 70° = ?", nl: "90° - 70° = ?" }
+  },
+  {
+    id: "G4_s_64", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 3°. Combien mesure l'autre ?", en: "Two complementary angles: one is 3°. What is the other?", nl: "Twee complementaire hoeken: de ene is 3°. Hoeveel is de andere?" },
+    answer: 87, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 3° = ?", en: "90° - 3° = ?", nl: "90° - 3° = ?" }
+  },
+  {
+    id: "G4_s_65", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 48° ?", en: "What is the complement of a 48° angle?", nl: "Wat is het complement van een hoek van 48°?" },
+    answer: 42, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 48° = ?", en: "90° - 48° = ?", nl: "90° - 48° = ?" }
+  },
+  {
+    id: "G4_s_66", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 64°. Combien mesure l'autre ?", en: "Two complementary angles: one is 64°. What is the other?", nl: "Twee complementaire hoeken: de ene is 64°. Hoeveel is de andere?" },
+    answer: 26, tolerance: 0, unit: "°",
+    hint: { fr: "Complémentaires = leur somme fait 90°.", en: "Complementary = they add up to 90°.", nl: "Complementair = samen 90°." }
+  },
+  {
+    id: "G4_s_67", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 11° ?", en: "What is the complement of an 11° angle?", nl: "Wat is het complement van een hoek van 11°?" },
+    answer: 79, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 11° = ?", en: "90° - 11° = ?", nl: "90° - 11° = ?" }
+  },
+  {
+    id: "G4_s_68", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 36°. Combien mesure l'autre ?", en: "Two complementary angles: one is 36°. What is the other?", nl: "Twee complementaire hoeken: de ene is 36°. Hoeveel is de andere?" },
+    answer: 54, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 36° = ?", en: "90° - 36° = ?", nl: "90° - 36° = ?" }
+  },
+  {
+    id: "G4_s_69", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 74° ?", en: "What is the complement of a 74° angle?", nl: "Wat is het complement van een hoek van 74°?" },
+    answer: 16, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 74° = ?", en: "90° - 74° = ?", nl: "90° - 74° = ?" }
+  },
+  {
+    id: "G4_s_70", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 83°. Combien mesure l'autre ?", en: "Two complementary angles: one is 83°. What is the other?", nl: "Twee complementaire hoeken: de ene is 83°. Hoeveel is de andere?" },
+    answer: 7, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 83° = ?", en: "90° - 83° = ?", nl: "90° - 83° = ?" }
+  },
+
+  // --- Level 2 — Supplementary angles (180°), triangle angles (180°) — G4_s_71 – G4_s_91 ---
+  {
+    id: "G4_s_71", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 73° ?", en: "What is the supplement of a 73° angle?", nl: "Wat is het supplement van een hoek van 73°?" },
+    answer: 107, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 73° = ?", en: "180° - 73° = ?", nl: "180° - 73° = ?" }
+  },
+  {
+    id: "G4_s_72", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 50° et 85°. Combien mesure le troisième ?", en: "In a triangle, two angles are 50° and 85°. What is the third?", nl: "In een driehoek zijn twee hoeken 50° en 85°. Hoeveel is de derde?" },
+    answer: 45, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 50° - 85° = ?", en: "180° - 50° - 85° = ?", nl: "180° - 50° - 85° = ?" }
+  },
+  {
+    id: "G4_s_73", category: "G4", level: 2,
+    text: { fr: "Deux angles supplémentaires : l'un mesure 36°. Combien mesure l'autre ?", en: "Two supplementary angles: one is 36°. What is the other?", nl: "Twee supplementaire hoeken: de ene is 36°. Hoeveel is de andere?" },
+    answer: 144, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 36° = ?", en: "180° - 36° = ?", nl: "180° - 36° = ?" }
+  },
+  {
+    id: "G4_s_74", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 33° et 94°. Combien mesure le troisième ?", en: "In a triangle, two angles are 33° and 94°. What is the third?", nl: "In een driehoek zijn twee hoeken 33° en 94°. Hoeveel is de derde?" },
+    answer: 53, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 33° - 94° = ?", en: "180° - 33° - 94° = ?", nl: "180° - 33° - 94° = ?" }
+  },
+  {
+    id: "G4_s_75", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 152° ?", en: "What is the supplement of a 152° angle?", nl: "Wat is het supplement van een hoek van 152°?" },
+    answer: 28, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 152° = ?", en: "180° - 152° = ?", nl: "180° - 152° = ?" }
+  },
+  {
+    id: "G4_s_76", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 25° et 68°. Combien mesure le troisième ?", en: "In a triangle, two angles are 25° and 68°. What is the third?", nl: "In een driehoek zijn twee hoeken 25° en 68°. Hoeveel is de derde?" },
+    answer: 87, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 25° - 68° = ?", en: "180° - 25° - 68° = ?", nl: "180° - 25° - 68° = ?" }
+  },
+  {
+    id: "G4_s_77", category: "G4", level: 2,
+    text: { fr: "Deux angles supplémentaires : l'un mesure 119°. Combien mesure l'autre ?", en: "Two supplementary angles: one is 119°. What is the other?", nl: "Twee supplementaire hoeken: de ene is 119°. Hoeveel is de andere?" },
+    answer: 61, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 119° = ?", en: "180° - 119° = ?", nl: "180° - 119° = ?" }
+  },
+  {
+    id: "G4_s_78", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 47° et 88°. Combien mesure le troisième ?", en: "In a triangle, two angles are 47° and 88°. What is the third?", nl: "In een driehoek zijn twee hoeken 47° en 88°. Hoeveel is de derde?" },
+    answer: 45, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 47° - 88° = ?", en: "180° - 47° - 88° = ?", nl: "180° - 47° - 88° = ?" }
+  },
+  {
+    id: "G4_s_79", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 14° ?", en: "What is the supplement of a 14° angle?", nl: "Wat is het supplement van een hoek van 14°?" },
+    answer: 166, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 14° = ?", en: "180° - 14° = ?", nl: "180° - 14° = ?" }
+  },
+  {
+    id: "G4_s_80", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 62° et 73°. Combien mesure le troisième ?", en: "In a triangle, two angles are 62° and 73°. What is the third?", nl: "In een driehoek zijn twee hoeken 62° en 73°. Hoeveel is de derde?" },
+    answer: 45, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 62° - 73° = ?", en: "180° - 62° - 73° = ?", nl: "180° - 62° - 73° = ?" }
+  },
+  {
+    id: "G4_s_81", category: "G4", level: 2,
+    text: { fr: "Deux angles supplémentaires : l'un mesure 57°. Combien mesure l'autre ?", en: "Two supplementary angles: one is 57°. What is the other?", nl: "Twee supplementaire hoeken: de ene is 57°. Hoeveel is de andere?" },
+    answer: 123, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 57° = ?", en: "180° - 57° = ?", nl: "180° - 57° = ?" }
+  },
+  {
+    id: "G4_s_82", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 19° et 46°. Combien mesure le troisième ?", en: "In a triangle, two angles are 19° and 46°. What is the third?", nl: "In een driehoek zijn twee hoeken 19° en 46°. Hoeveel is de derde?" },
+    answer: 115, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 19° - 46° = ?", en: "180° - 19° - 46° = ?", nl: "180° - 19° - 46° = ?" }
+  },
+  {
+    id: "G4_s_83", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 101° ?", en: "What is the supplement of a 101° angle?", nl: "Wat is het supplement van een hoek van 101°?" },
+    answer: 79, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 101° = ?", en: "180° - 101° = ?", nl: "180° - 101° = ?" }
+  },
+  {
+    id: "G4_s_84", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 58° et 74°. Combien mesure le troisième ?", en: "In a triangle, two angles are 58° and 74°. What is the third?", nl: "In een driehoek zijn twee hoeken 58° en 74°. Hoeveel is de derde?" },
+    answer: 48, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 58° - 74° = ?", en: "180° - 58° - 74° = ?", nl: "180° - 58° - 74° = ?" }
+  },
+  {
+    id: "G4_s_85", category: "G4", level: 2,
+    text: { fr: "Deux angles supplémentaires : l'un mesure 145°. Combien mesure l'autre ?", en: "Two supplementary angles: one is 145°. What is the other?", nl: "Twee supplementaire hoeken: de ene is 145°. Hoeveel is de andere?" },
+    answer: 35, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 145° = ?", en: "180° - 145° = ?", nl: "180° - 145° = ?" }
+  },
+  {
+    id: "G4_s_86", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 40° et 100°. Combien mesure le troisième ?", en: "In a triangle, two angles are 40° and 100°. What is the third?", nl: "In een driehoek zijn twee hoeken 40° en 100°. Hoeveel is de derde?" },
+    answer: 40, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 40° - 100° = ?", en: "180° - 40° - 100° = ?", nl: "180° - 40° - 100° = ?" }
+  },
+  {
+    id: "G4_s_87", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 44° ?", en: "What is the supplement of a 44° angle?", nl: "Wat is het supplement van een hoek van 44°?" },
+    answer: 136, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 44° = ?", en: "180° - 44° = ?", nl: "180° - 44° = ?" }
+  },
+  {
+    id: "G4_s_88", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 35° et 110°. Combien mesure le troisième ?", en: "In a triangle, two angles are 35° and 110°. What is the third?", nl: "In een driehoek zijn twee hoeken 35° en 110°. Hoeveel is de derde?" },
+    answer: 35, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 35° - 110° = ?", en: "180° - 35° - 110° = ?", nl: "180° - 35° - 110° = ?" }
+  },
+  {
+    id: "G4_s_89", category: "G4", level: 2,
+    text: { fr: "Deux angles supplémentaires : l'un mesure 78°. Combien mesure l'autre ?", en: "Two supplementary angles: one is 78°. What is the other?", nl: "Twee supplementaire hoeken: de ene is 78°. Hoeveel is de andere?" },
+    answer: 102, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 78° = ?", en: "180° - 78° = ?", nl: "180° - 78° = ?" }
+  },
+  {
+    id: "G4_s_90", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 66° et 52°. Combien mesure le troisième ?", en: "In a triangle, two angles are 66° and 52°. What is the third?", nl: "In een driehoek zijn twee hoeken 66° en 52°. Hoeveel is de derde?" },
+    answer: 62, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 66° - 52° = ?", en: "180° - 66° - 52° = ?", nl: "180° - 66° - 52° = ?" }
+  },
+  {
+    id: "G4_s_91", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 168° ?", en: "What is the supplement of a 168° angle?", nl: "Wat is het supplement van een hoek van 168°?" },
+    answer: 12, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 168° = ?", en: "180° - 168° = ?", nl: "180° - 168° = ?" }
+  },
+
+  // --- Level 3 — Isosceles, regular polygons, exterior angles, parallelograms — G4_s_92 – G4_s_111 ---
+  {
+    id: "G4_s_92", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 50°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 50°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 50°. Hoeveel is elke basishoek?" },
+    answer: 65, tolerance: 0, unit: "°",
+    hint: { fr: "(180° - 50°) ÷ 2 = ?", en: "(180° - 50°) ÷ 2 = ?", nl: "(180° - 50°) ÷ 2 = ?" }
+  },
+  {
+    id: "G4_s_93", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle intérieur d'un décagone régulier (10 côtés) ?", en: "What is each interior angle of a regular decagon (10 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige tienhoek (10 zijden)?" },
+    answer: 144, tolerance: 0, unit: "°",
+    hint: { fr: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10.", en: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10.", nl: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10." }
+  },
+  {
+    id: "G4_s_94", category: "G4", level: 3,
+    text: { fr: "Un angle extérieur d'un triangle mesure 115°. Combien mesure l'angle intérieur adjacent ?", en: "An exterior angle of a triangle is 115°. What is the adjacent interior angle?", nl: "Een buitenhoek van een driehoek is 115°. Hoeveel is de aangrenzende binnenhoek?" },
+    answer: 65, tolerance: 0, unit: "°",
+    hint: { fr: "Angle intérieur + extérieur = 180°.", en: "Interior + exterior = 180°.", nl: "Binnenhoek + buitenhoek = 180°." }
+  },
+  {
+    id: "G4_s_95", category: "G4", level: 3,
+    text: { fr: "Dans un parallélogramme, un angle mesure 64°. Combien mesure l'angle consécutif ?", en: "In a parallelogram, one angle is 64°. What is the consecutive angle?", nl: "In een parallellogram is een hoek 64°. Hoeveel is de opeenvolgende hoek?" },
+    answer: 116, tolerance: 0, unit: "°",
+    hint: { fr: "Angles consécutifs d'un parallélogramme = 180°.", en: "Consecutive angles of a parallelogram = 180°.", nl: "Opeenvolgende hoeken van een parallellogram = 180°." }
+  },
+  {
+    id: "G4_s_96", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 72°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 72°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 72°. Hoeveel is de tophoek?" },
+    answer: 36, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 2 × 72° = ?", en: "180° - 2 × 72° = ?", nl: "180° - 2 × 72° = ?" }
+  },
+  {
+    id: "G4_s_97", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle extérieur d'un hexagone régulier ?", en: "What is each exterior angle of a regular hexagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige zeshoek?" },
+    answer: 60, tolerance: 0, unit: "°",
+    hint: { fr: "360° ÷ 6 = ?", en: "360° ÷ 6 = ?", nl: "360° ÷ 6 = ?" }
+  },
+  {
+    id: "G4_s_98", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 36°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 36°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 36°. Hoeveel is elke basishoek?" },
+    answer: 72, tolerance: 0, unit: "°",
+    hint: { fr: "(180° - 36°) ÷ 2 = ?", en: "(180° - 36°) ÷ 2 = ?", nl: "(180° - 36°) ÷ 2 = ?" }
+  },
+  {
+    id: "G4_s_99", category: "G4", level: 3,
+    text: { fr: "Dans un parallélogramme, un angle mesure 135°. Combien mesure l'angle consécutif ?", en: "In a parallelogram, one angle is 135°. What is the consecutive angle?", nl: "In een parallellogram is een hoek 135°. Hoeveel is de opeenvolgende hoek?" },
+    answer: 45, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 135° = ?", en: "180° - 135° = ?", nl: "180° - 135° = ?" }
+  },
+  {
+    id: "G4_s_100", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle extérieur d'un pentagone régulier ?", en: "What is each exterior angle of a regular pentagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige vijfhoek?" },
+    answer: 72, tolerance: 0, unit: "°",
+    hint: { fr: "360° ÷ 5 = ?", en: "360° ÷ 5 = ?", nl: "360° ÷ 5 = ?" }
+  },
+  {
+    id: "G4_s_101", category: "G4", level: 3,
+    text: { fr: "Un angle extérieur d'un triangle mesure 140°. Combien mesure l'angle intérieur adjacent ?", en: "An exterior angle of a triangle is 140°. What is the adjacent interior angle?", nl: "Een buitenhoek van een driehoek is 140°. Hoeveel is de aangrenzende binnenhoek?" },
+    answer: 40, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 140° = ?", en: "180° - 140° = ?", nl: "180° - 140° = ?" }
+  },
+  {
+    id: "G4_s_102", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 55°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 55°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 55°. Hoeveel is de tophoek?" },
+    answer: 70, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 2 × 55° = ?", en: "180° - 2 × 55° = ?", nl: "180° - 2 × 55° = ?" }
+  },
+  {
+    id: "G4_s_103", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle intérieur d'un ennéagone régulier (9 côtés) ?", en: "What is each interior angle of a regular nonagon (9 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige negenhoek (9 zijden)?" },
+    answer: 140, tolerance: 0, unit: "°",
+    hint: { fr: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9.", en: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9.", nl: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9." }
+  },
+  {
+    id: "G4_s_104", category: "G4", level: 3,
+    text: { fr: "Dans un parallélogramme, un angle mesure 97°. Combien mesure l'angle consécutif ?", en: "In a parallelogram, one angle is 97°. What is the consecutive angle?", nl: "In een parallellogram is een hoek 97°. Hoeveel is de opeenvolgende hoek?" },
+    answer: 83, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 97° = ?", en: "180° - 97° = ?", nl: "180° - 97° = ?" }
+  },
+  {
+    id: "G4_s_105", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 120°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 120°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 120°. Hoeveel is elke basishoek?" },
+    answer: 30, tolerance: 0, unit: "°",
+    hint: { fr: "(180° - 120°) ÷ 2 = ?", en: "(180° - 120°) ÷ 2 = ?", nl: "(180° - 120°) ÷ 2 = ?" }
+  },
+  {
+    id: "G4_s_106", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle extérieur d'un octogone régulier ?", en: "What is each exterior angle of a regular octagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige achthoek?" },
+    answer: 45, tolerance: 0, unit: "°",
+    hint: { fr: "360° ÷ 8 = ?", en: "360° ÷ 8 = ?", nl: "360° ÷ 8 = ?" }
+  },
+  {
+    id: "G4_s_107", category: "G4", level: 3,
+    text: { fr: "Un angle extérieur d'un triangle mesure 162°. Combien mesure l'angle intérieur adjacent ?", en: "An exterior angle of a triangle is 162°. What is the adjacent interior angle?", nl: "Een buitenhoek van een driehoek is 162°. Hoeveel is de aangrenzende binnenhoek?" },
+    answer: 18, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 162° = ?", en: "180° - 162° = ?", nl: "180° - 162° = ?" }
+  },
+  {
+    id: "G4_s_108", category: "G4", level: 3,
+    text: { fr: "Dans un parallélogramme, un angle mesure 46°. Combien mesure l'angle consécutif ?", en: "In a parallelogram, one angle is 46°. What is the consecutive angle?", nl: "In een parallellogram is een hoek 46°. Hoeveel is de opeenvolgende hoek?" },
+    answer: 134, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 46° = ?", en: "180° - 46° = ?", nl: "180° - 46° = ?" }
+  },
+  {
+    id: "G4_s_109", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle extérieur d'un décagone régulier (10 côtés) ?", en: "What is each exterior angle of a regular decagon (10 sides)?", nl: "Hoeveel is elke buitenhoek van een regelmatige tienhoek (10 zijden)?" },
+    answer: 36, tolerance: 0, unit: "°",
+    hint: { fr: "360° ÷ 10 = ?", en: "360° ÷ 10 = ?", nl: "360° ÷ 10 = ?" }
+  },
+  {
+    id: "G4_s_110", category: "G4", level: 3,
+    text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 40°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 40°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 40°. Hoeveel is de tophoek?" },
+    answer: 100, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 2 × 40° = ?", en: "180° - 2 × 40° = ?", nl: "180° - 2 × 40° = ?" }
+  },
+  {
+    id: "G4_s_111", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle intérieur d'un heptagone régulier (7 côtés) ?", en: "What is each interior angle of a regular heptagon (7 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige zevenhoek (7 zijden)?" },
+    answer: 128.57, tolerance: 0.01, unit: "°",
+    hint: { fr: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°.", en: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128.57°.", nl: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°." }
+  },
 ];
 
 export function generate(level = 1) {

@@ -1,7 +1,7 @@
 // =============================================================================
 // P1 - Grandeurs proportionnelles (Proportional quantities)
 // CE1D Belgian exam - Trilingual (FR / EN / NL)
-// 50 hand-crafted questions across 3 levels
+// 111 hand-crafted questions across 3 levels
 // =============================================================================
 
 export const questions = [
@@ -864,6 +864,1055 @@ export const questions = [
       fr: "1 cuisinier prépare 90 ÷ 5 = 18 repas en 2h, soit 9/h. 8 cuisiniers × 3h × 9 = 216.",
       en: "1 cook prepares 90 ÷ 5 = 18 meals in 2h, so 9/h. 8 cooks × 3h × 9 = 216.",
       nl: "1 kok bereidt 90 ÷ 5 = 18 maaltijden in 2u, dus 9/u. 8 koks × 3u × 9 = 216."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 1 — Additional simple proportionality, clean integer answers (P1_s_51–P1_s_70)
+  // ===========================================================================
+  {
+    id: "P1_s_51",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 6 bananes coûtent 3 €, combien coûtent 10 bananes ?",
+      en: "If 6 bananas cost €3, how much do 10 bananas cost?",
+      nl: "Als 6 bananen €3 kosten, hoeveel kosten 10 bananen?"
+    },
+    answer: 5,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'une banane = 3 ÷ 6 = 0,50 €. Multiplie par 10.",
+      en: "Price of one banana = 3 ÷ 6 = €0.50. Multiply by 10.",
+      nl: "Prijs van één banaan = 3 ÷ 6 = €0,50. Vermenigvuldig met 10."
+    }
+  },
+  {
+    id: "P1_s_52",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 5 crayons coûtent 10 €, combien coûtent 12 crayons ?",
+      en: "If 5 pencils cost €10, how much do 12 pencils cost?",
+      nl: "Als 5 potloden €10 kosten, hoeveel kosten 12 potloden?"
+    },
+    answer: 24,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un crayon = 10 ÷ 5 = 2 €. Multiplie par 12.",
+      en: "Price of one pencil = 10 ÷ 5 = €2. Multiply by 12.",
+      nl: "Prijs van één potlood = 10 ÷ 5 = €2. Vermenigvuldig met 12."
+    }
+  },
+  {
+    id: "P1_s_53",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Une recette utilise 3 œufs pour 6 crêpes. Combien d'œufs faut-il pour 18 crêpes ?",
+      en: "A recipe uses 3 eggs for 6 crepes. How many eggs are needed for 18 crepes?",
+      nl: "Een recept gebruikt 3 eieren voor 6 pannenkoeken. Hoeveel eieren zijn er nodig voor 18 pannenkoeken?"
+    },
+    answer: 9,
+    tolerance: 0.01,
+    hint: {
+      fr: "Œufs par crêpe = 3 ÷ 6 = 0,5. Pour 18 crêpes : 0,5 × 18 = 9.",
+      en: "Eggs per crepe = 3 ÷ 6 = 0.5. For 18 crepes: 0.5 × 18 = 9.",
+      nl: "Eieren per pannenkoek = 3 ÷ 6 = 0,5. Voor 18 pannenkoeken: 0,5 × 18 = 9."
+    }
+  },
+  {
+    id: "P1_s_54",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Un bus parcourt 80 km en 2 heures. Combien de km parcourt-il en 5 heures ?",
+      en: "A bus travels 80 km in 2 hours. How many km does it travel in 5 hours?",
+      nl: "Een bus rijdt 80 km in 2 uur. Hoeveel km rijdt hij in 5 uur?"
+    },
+    answer: 200,
+    tolerance: 0.01,
+    hint: {
+      fr: "Vitesse = 80 ÷ 2 = 40 km/h. Distance = 40 × 5.",
+      en: "Speed = 80 ÷ 2 = 40 km/h. Distance = 40 × 5.",
+      nl: "Snelheid = 80 ÷ 2 = 40 km/u. Afstand = 40 × 5."
+    }
+  },
+  {
+    id: "P1_s_55",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 3 litres de peinture couvrent 12 m², combien de m² couvrent 7 litres ?",
+      en: "If 3 litres of paint cover 12 m², how many m² do 7 litres cover?",
+      nl: "Als 3 liter verf 12 m² bedekt, hoeveel m² bedekt 7 liter?"
+    },
+    answer: 28,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 litre couvre 12 ÷ 3 = 4 m². Multiplie par 7.",
+      en: "1 litre covers 12 ÷ 3 = 4 m². Multiply by 7.",
+      nl: "1 liter bedekt 12 ÷ 3 = 4 m². Vermenigvuldig met 7."
+    }
+  },
+  {
+    id: "P1_s_56",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 4 mètres de ruban coûtent 8 €, combien coûtent 15 mètres ?",
+      en: "If 4 metres of ribbon cost €8, how much do 15 metres cost?",
+      nl: "Als 4 meter lint €8 kost, hoeveel kost 15 meter?"
+    },
+    answer: 30,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un mètre = 8 ÷ 4 = 2 €. Multiplie par 15.",
+      en: "Price of one metre = 8 ÷ 4 = €2. Multiply by 15.",
+      nl: "Prijs van één meter = 8 ÷ 4 = €2. Vermenigvuldig met 15."
+    }
+  },
+  {
+    id: "P1_s_57",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 10 biscuits coûtent 5 €, combien coûtent 16 biscuits ?",
+      en: "If 10 biscuits cost €5, how much do 16 biscuits cost?",
+      nl: "Als 10 koekjes €5 kosten, hoeveel kosten 16 koekjes?"
+    },
+    answer: 8,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un biscuit = 5 ÷ 10 = 0,50 €. Multiplie par 16.",
+      en: "Price of one biscuit = 5 ÷ 10 = €0.50. Multiply by 16.",
+      nl: "Prijs van één koekje = 5 ÷ 10 = €0,50. Vermenigvuldig met 16."
+    }
+  },
+  {
+    id: "P1_s_58",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Un fermier récolte 24 kg de fraises en 4 heures. Combien de kg en 6 heures ?",
+      en: "A farmer picks 24 kg of strawberries in 4 hours. How many kg in 6 hours?",
+      nl: "Een boer plukt 24 kg aardbeien in 4 uur. Hoeveel kg in 6 uur?"
+    },
+    answer: 36,
+    tolerance: 0.01,
+    hint: {
+      fr: "Rendement = 24 ÷ 4 = 6 kg/h. Multiplie par 6.",
+      en: "Yield = 24 ÷ 4 = 6 kg/h. Multiply by 6.",
+      nl: "Opbrengst = 24 ÷ 4 = 6 kg/u. Vermenigvuldig met 6."
+    }
+  },
+  {
+    id: "P1_s_59",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 7 kg de riz coûtent 14 €, combien coûtent 11 kg ?",
+      en: "If 7 kg of rice cost €14, how much do 11 kg cost?",
+      nl: "Als 7 kg rijst €14 kosten, hoeveel kosten 11 kg?"
+    },
+    answer: 22,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'1 kg = 14 ÷ 7 = 2 €. Multiplie par 11.",
+      en: "Price of 1 kg = 14 ÷ 7 = €2. Multiply by 11.",
+      nl: "Prijs van 1 kg = 14 ÷ 7 = €2. Vermenigvuldig met 11."
+    }
+  },
+  {
+    id: "P1_s_60",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Pour 2 personnes, il faut 400 g de pâtes. Combien de grammes pour 5 personnes ?",
+      en: "For 2 people, you need 400 g of pasta. How many grams for 5 people?",
+      nl: "Voor 2 personen heb je 400 g pasta nodig. Hoeveel gram voor 5 personen?"
+    },
+    answer: 1000,
+    tolerance: 0.01,
+    hint: {
+      fr: "Pâtes par personne = 400 ÷ 2 = 200 g. Multiplie par 5.",
+      en: "Pasta per person = 400 ÷ 2 = 200 g. Multiply by 5.",
+      nl: "Pasta per persoon = 400 ÷ 2 = 200 g. Vermenigvuldig met 5."
+    }
+  },
+  {
+    id: "P1_s_61",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 3 pots de peinture couvrent 9 murs, combien de murs couvrent 8 pots ?",
+      en: "If 3 cans of paint cover 9 walls, how many walls do 8 cans cover?",
+      nl: "Als 3 blikken verf 9 muren bedekken, hoeveel muren bedekken 8 blikken?"
+    },
+    answer: 24,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 pot couvre 9 ÷ 3 = 3 murs. Multiplie par 8.",
+      en: "1 can covers 9 ÷ 3 = 3 walls. Multiply by 8.",
+      nl: "1 blik bedekt 9 ÷ 3 = 3 muren. Vermenigvuldig met 8."
+    }
+  },
+  {
+    id: "P1_s_62",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 6 mètres de tissu coûtent 18 €, combien coûtent 11 mètres ?",
+      en: "If 6 metres of fabric cost €18, how much do 11 metres cost?",
+      nl: "Als 6 meter stof €18 kost, hoeveel kost 11 meter?"
+    },
+    answer: 33,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un mètre = 18 ÷ 6 = 3 €. Multiplie par 11.",
+      en: "Price of one metre = 18 ÷ 6 = €3. Multiply by 11.",
+      nl: "Prijs van één meter = 18 ÷ 6 = €3. Vermenigvuldig met 11."
+    }
+  },
+  {
+    id: "P1_s_63",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Un jardinier plante 15 arbres en 3 jours. Combien d'arbres en 7 jours ?",
+      en: "A gardener plants 15 trees in 3 days. How many trees in 7 days?",
+      nl: "Een tuinier plant 15 bomen in 3 dagen. Hoeveel bomen in 7 dagen?"
+    },
+    answer: 35,
+    tolerance: 0.01,
+    hint: {
+      fr: "Arbres par jour = 15 ÷ 3 = 5. Multiplie par 7.",
+      en: "Trees per day = 15 ÷ 3 = 5. Multiply by 7.",
+      nl: "Bomen per dag = 15 ÷ 3 = 5. Vermenigvuldig met 7."
+    }
+  },
+  {
+    id: "P1_s_64",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 5 pizzas coûtent 40 €, combien coûtent 3 pizzas ?",
+      en: "If 5 pizzas cost €40, how much do 3 pizzas cost?",
+      nl: "Als 5 pizza's €40 kosten, hoeveel kosten 3 pizza's?"
+    },
+    answer: 24,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'une pizza = 40 ÷ 5 = 8 €. Multiplie par 3.",
+      en: "Price of one pizza = 40 ÷ 5 = €8. Multiply by 3.",
+      nl: "Prijs van één pizza = 40 ÷ 5 = €8. Vermenigvuldig met 3."
+    }
+  },
+  {
+    id: "P1_s_65",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Un scooter parcourt 45 km avec 3 litres d'essence. Combien de km avec 7 litres ?",
+      en: "A scooter travels 45 km on 3 litres of fuel. How many km on 7 litres?",
+      nl: "Een scooter rijdt 45 km op 3 liter brandstof. Hoeveel km op 7 liter?"
+    },
+    answer: 105,
+    tolerance: 0.01,
+    hint: {
+      fr: "Km par litre = 45 ÷ 3 = 15. Multiplie par 7.",
+      en: "Km per litre = 45 ÷ 3 = 15. Multiply by 7.",
+      nl: "Km per liter = 45 ÷ 3 = 15. Vermenigvuldig met 7."
+    }
+  },
+  {
+    id: "P1_s_66",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 8 tickets de cinéma coûtent 48 €, combien coûtent 5 tickets ?",
+      en: "If 8 cinema tickets cost €48, how much do 5 tickets cost?",
+      nl: "Als 8 bioscoopkaartjes €48 kosten, hoeveel kosten 5 kaartjes?"
+    },
+    answer: 30,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un ticket = 48 ÷ 8 = 6 €. Multiplie par 5.",
+      en: "Price of one ticket = 48 ÷ 8 = €6. Multiply by 5.",
+      nl: "Prijs van één kaartje = 48 ÷ 8 = €6. Vermenigvuldig met 5."
+    }
+  },
+  {
+    id: "P1_s_67",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 4 sacs de ciment pèsent 100 kg, combien pèsent 9 sacs ?",
+      en: "If 4 bags of cement weigh 100 kg, how much do 9 bags weigh?",
+      nl: "Als 4 zakken cement 100 kg wegen, hoeveel wegen 9 zakken?"
+    },
+    answer: 225,
+    tolerance: 0.01,
+    hint: {
+      fr: "Poids d'un sac = 100 ÷ 4 = 25 kg. Multiplie par 9.",
+      en: "Weight of one bag = 100 ÷ 4 = 25 kg. Multiply by 9.",
+      nl: "Gewicht van één zak = 100 ÷ 4 = 25 kg. Vermenigvuldig met 9."
+    }
+  },
+  {
+    id: "P1_s_68",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Une poule pond 6 œufs en 2 jours. Combien d'œufs en 10 jours ?",
+      en: "A hen lays 6 eggs in 2 days. How many eggs in 10 days?",
+      nl: "Een kip legt 6 eieren in 2 dagen. Hoeveel eieren in 10 dagen?"
+    },
+    answer: 30,
+    tolerance: 0.01,
+    hint: {
+      fr: "Œufs par jour = 6 ÷ 2 = 3. Multiplie par 10.",
+      en: "Eggs per day = 6 ÷ 2 = 3. Multiply by 10.",
+      nl: "Eieren per dag = 6 ÷ 2 = 3. Vermenigvuldig met 10."
+    }
+  },
+  {
+    id: "P1_s_69",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 9 briques pèsent 27 kg, combien pèsent 4 briques ?",
+      en: "If 9 bricks weigh 27 kg, how much do 4 bricks weigh?",
+      nl: "Als 9 bakstenen 27 kg wegen, hoeveel wegen 4 bakstenen?"
+    },
+    answer: 12,
+    tolerance: 0.01,
+    hint: {
+      fr: "Poids d'une brique = 27 ÷ 9 = 3 kg. Multiplie par 4.",
+      en: "Weight of one brick = 27 ÷ 9 = 3 kg. Multiply by 4.",
+      nl: "Gewicht van één baksteen = 27 ÷ 9 = 3 kg. Vermenigvuldig met 4."
+    }
+  },
+  {
+    id: "P1_s_70",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 2 kg de tomates coûtent 4 €, combien coûtent 9 kg ?",
+      en: "If 2 kg of tomatoes cost €4, how much do 9 kg cost?",
+      nl: "Als 2 kg tomaten €4 kosten, hoeveel kosten 9 kg?"
+    },
+    answer: 18,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'1 kg = 4 ÷ 2 = 2 €. Multiplie par 9.",
+      en: "Price of 1 kg = 4 ÷ 2 = €2. Multiply by 9.",
+      nl: "Prijs van 1 kg = 4 ÷ 2 = €2. Vermenigvuldig met 9."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 2 — Additional proportionality with decimal results (P1_s_71–P1_s_90)
+  // ===========================================================================
+  {
+    id: "P1_s_71",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 3 kg de cerises coûtent 7 €, combien coûtent 5 kg ?",
+      en: "If 3 kg of cherries cost €7, how much do 5 kg cost?",
+      nl: "Als 3 kg kersen €7 kosten, hoeveel kosten 5 kg?"
+    },
+    answer: 11.67,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'1 kg = 7 ÷ 3 ≈ 2,333 €. Multiplie par 5.",
+      en: "Price of 1 kg = 7 ÷ 3 ≈ €2.333. Multiply by 5.",
+      nl: "Prijs van 1 kg = 7 ÷ 3 ≈ €2,333. Vermenigvuldig met 5."
+    }
+  },
+  {
+    id: "P1_s_72",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Sur une carte à l'échelle 1:40 000, une distance mesure 7 cm. Quelle est la distance réelle en km ?",
+      en: "On a map at scale 1:40,000, a distance measures 7 cm. What is the real distance in km?",
+      nl: "Op een kaart met schaal 1:40.000 meet een afstand 7 cm. Wat is de werkelijke afstand in km?"
+    },
+    answer: 2.8,
+    tolerance: 0.01,
+    hint: {
+      fr: "7 cm × 40 000 = 280 000 cm = 2 800 m = 2,8 km.",
+      en: "7 cm × 40,000 = 280,000 cm = 2,800 m = 2.8 km.",
+      nl: "7 cm × 40.000 = 280.000 cm = 2.800 m = 2,8 km."
+    }
+  },
+  {
+    id: "P1_s_73",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 7 mètres de corde coûtent 4 €, combien coûtent 12 mètres ?",
+      en: "If 7 metres of rope cost €4, how much do 12 metres cost?",
+      nl: "Als 7 meter touw €4 kost, hoeveel kost 12 meter?"
+    },
+    answer: 6.86,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un mètre = 4 ÷ 7 ≈ 0,571 €. Multiplie par 12.",
+      en: "Price of one metre = 4 ÷ 7 ≈ €0.571. Multiply by 12.",
+      nl: "Prijs van één meter = 4 ÷ 7 ≈ €0,571. Vermenigvuldig met 12."
+    }
+  },
+  {
+    id: "P1_s_74",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 300 g de beurre coûtent 2,70 €, combien coûtent 500 g ?",
+      en: "If 300 g of butter cost €2.70, how much do 500 g cost?",
+      nl: "Als 300 g boter €2,70 kost, hoeveel kost 500 g?"
+    },
+    answer: 4.5,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix pour 1 g = 2,70 ÷ 300 = 0,009 €. Multiplie par 500.",
+      en: "Price per 1 g = 2.70 ÷ 300 = €0.009. Multiply by 500.",
+      nl: "Prijs per 1 g = 2,70 ÷ 300 = €0,009. Vermenigvuldig met 500."
+    }
+  },
+  {
+    id: "P1_s_75",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Un coureur parcourt 8 km en 35 minutes. Combien de km parcourt-il en 60 minutes ?",
+      en: "A runner covers 8 km in 35 minutes. How many km does he cover in 60 minutes?",
+      nl: "Een loper legt 8 km af in 35 minuten. Hoeveel km legt hij af in 60 minuten?"
+    },
+    answer: 13.71,
+    tolerance: 0.01,
+    hint: {
+      fr: "Km par minute = 8 ÷ 35. Pour 60 min : (8 ÷ 35) × 60 ≈ 13,71.",
+      en: "Km per minute = 8 ÷ 35. For 60 min: (8 ÷ 35) × 60 ≈ 13.71.",
+      nl: "Km per minuut = 8 ÷ 35. Voor 60 min: (8 ÷ 35) × 60 ≈ 13,71."
+    }
+  },
+  {
+    id: "P1_s_76",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 6 savons coûtent 11 €, combien coûtent 10 savons ?",
+      en: "If 6 bars of soap cost €11, how much do 10 bars cost?",
+      nl: "Als 6 stukken zeep €11 kosten, hoeveel kosten 10 stukken?"
+    },
+    answer: 18.33,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un savon = 11 ÷ 6 ≈ 1,833 €. Multiplie par 10.",
+      en: "Price of one bar = 11 ÷ 6 ≈ €1.833. Multiply by 10.",
+      nl: "Prijs van één stuk = 11 ÷ 6 ≈ €1,833. Vermenigvuldig met 10."
+    }
+  },
+  {
+    id: "P1_s_77",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 400 g de jambon coûtent 5,80 €, combien coûtent 650 g ?",
+      en: "If 400 g of ham cost €5.80, how much do 650 g cost?",
+      nl: "Als 400 g ham €5,80 kost, hoeveel kost 650 g?"
+    },
+    answer: 9.43,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix pour 1 g = 5,80 ÷ 400 = 0,0145 €. Multiplie par 650.",
+      en: "Price per 1 g = 5.80 ÷ 400 = €0.0145. Multiply by 650.",
+      nl: "Prijs per 1 g = 5,80 ÷ 400 = €0,0145. Vermenigvuldig met 650."
+    }
+  },
+  {
+    id: "P1_s_78",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 5 personnes boivent 8 litres de limonade, combien de litres pour 12 personnes ?",
+      en: "If 5 people drink 8 litres of lemonade, how many litres for 12 people?",
+      nl: "Als 5 personen 8 liter limonade drinken, hoeveel liter voor 12 personen?"
+    },
+    answer: 19.2,
+    tolerance: 0.01,
+    hint: {
+      fr: "Litres par personne = 8 ÷ 5 = 1,6. Multiplie par 12.",
+      en: "Litres per person = 8 ÷ 5 = 1.6. Multiply by 12.",
+      nl: "Liter per persoon = 8 ÷ 5 = 1,6. Vermenigvuldig met 12."
+    }
+  },
+  {
+    id: "P1_s_79",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 9 stylos coûtent 5 €, combien coûtent 20 stylos ?",
+      en: "If 9 pens cost €5, how much do 20 pens cost?",
+      nl: "Als 9 pennen €5 kosten, hoeveel kosten 20 pennen?"
+    },
+    answer: 11.11,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un stylo = 5 ÷ 9 ≈ 0,556 €. Multiplie par 20.",
+      en: "Price of one pen = 5 ÷ 9 ≈ €0.556. Multiply by 20.",
+      nl: "Prijs van één pen = 5 ÷ 9 ≈ €0,556. Vermenigvuldig met 20."
+    }
+  },
+  {
+    id: "P1_s_80",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Un vélo parcourt 13 km en 40 minutes. Combien de km parcourt-il en 1 heure ?",
+      en: "A bicycle covers 13 km in 40 minutes. How many km does it cover in 1 hour?",
+      nl: "Een fiets legt 13 km af in 40 minuten. Hoeveel km legt hij af in 1 uur?"
+    },
+    answer: 19.5,
+    tolerance: 0.01,
+    hint: {
+      fr: "Km par minute = 13 ÷ 40 = 0,325. Pour 60 min : 0,325 × 60 = 19,5.",
+      en: "Km per minute = 13 ÷ 40 = 0.325. For 60 min: 0.325 × 60 = 19.5.",
+      nl: "Km per minuut = 13 ÷ 40 = 0,325. Voor 60 min: 0,325 × 60 = 19,5."
+    }
+  },
+  {
+    id: "P1_s_81",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 6 croissants coûtent 7,50 €, combien coûtent 11 croissants ?",
+      en: "If 6 croissants cost €7.50, how much do 11 croissants cost?",
+      nl: "Als 6 croissants €7,50 kosten, hoeveel kosten 11 croissants?"
+    },
+    answer: 13.75,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un croissant = 7,50 ÷ 6 = 1,25 €. Multiplie par 11.",
+      en: "Price of one croissant = 7.50 ÷ 6 = €1.25. Multiply by 11.",
+      nl: "Prijs van één croissant = 7,50 ÷ 6 = €1,25. Vermenigvuldig met 11."
+    }
+  },
+  {
+    id: "P1_s_82",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Pour peindre 20 m² de clôture, il faut 3,5 litres de peinture. Combien de litres pour 32 m² ?",
+      en: "To paint 20 m² of fence, you need 3.5 litres of paint. How many litres for 32 m²?",
+      nl: "Om 20 m² omheining te schilderen heb je 3,5 liter verf nodig. Hoeveel liter voor 32 m²?"
+    },
+    answer: 5.6,
+    tolerance: 0.01,
+    hint: {
+      fr: "Litres par m² = 3,5 ÷ 20 = 0,175. Multiplie par 32.",
+      en: "Litres per m² = 3.5 ÷ 20 = 0.175. Multiply by 32.",
+      nl: "Liter per m² = 3,5 ÷ 20 = 0,175. Vermenigvuldig met 32."
+    }
+  },
+  {
+    id: "P1_s_83",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Sur une carte à l'échelle 1:75 000, une distance mesure 4,2 cm. Quelle est la distance réelle en km ?",
+      en: "On a map at scale 1:75,000, a distance measures 4.2 cm. What is the real distance in km?",
+      nl: "Op een kaart met schaal 1:75.000 meet een afstand 4,2 cm. Wat is de werkelijke afstand in km?"
+    },
+    answer: 3.15,
+    tolerance: 0.01,
+    hint: {
+      fr: "4,2 cm × 75 000 = 315 000 cm = 3 150 m = 3,15 km.",
+      en: "4.2 cm × 75,000 = 315,000 cm = 3,150 m = 3.15 km.",
+      nl: "4,2 cm × 75.000 = 315.000 cm = 3.150 m = 3,15 km."
+    }
+  },
+  {
+    id: "P1_s_84",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 8 mètres de fil coûtent 3 €, combien coûtent 14 mètres ?",
+      en: "If 8 metres of wire cost €3, how much do 14 metres cost?",
+      nl: "Als 8 meter draad €3 kost, hoeveel kost 14 meter?"
+    },
+    answer: 5.25,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'un mètre = 3 ÷ 8 = 0,375 €. Multiplie par 14.",
+      en: "Price of one metre = 3 ÷ 8 = €0.375. Multiply by 14.",
+      nl: "Prijs van één meter = 3 ÷ 8 = €0,375. Vermenigvuldig met 14."
+    }
+  },
+  {
+    id: "P1_s_85",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si une recette pour 8 personnes utilise 350 g de chocolat, combien de grammes pour 5 personnes ?",
+      en: "If a recipe for 8 people uses 350 g of chocolate, how many grams for 5 people?",
+      nl: "Als een recept voor 8 personen 350 g chocolade gebruikt, hoeveel gram voor 5 personen?"
+    },
+    answer: 218.75,
+    tolerance: 0.01,
+    hint: {
+      fr: "Chocolat par personne = 350 ÷ 8 = 43,75 g. Multiplie par 5.",
+      en: "Chocolate per person = 350 ÷ 8 = 43.75 g. Multiply by 5.",
+      nl: "Chocolade per persoon = 350 ÷ 8 = 43,75 g. Vermenigvuldig met 5."
+    }
+  },
+  {
+    id: "P1_s_86",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Un camion transporte 750 kg en 3 voyages. Combien de kg en 7 voyages ?",
+      en: "A truck carries 750 kg in 3 trips. How many kg in 7 trips?",
+      nl: "Een vrachtwagen vervoert 750 kg in 3 ritten. Hoeveel kg in 7 ritten?"
+    },
+    answer: 1750,
+    tolerance: 0.01,
+    hint: {
+      fr: "Kg par voyage = 750 ÷ 3 = 250. Multiplie par 7.",
+      en: "Kg per trip = 750 ÷ 3 = 250. Multiply by 7.",
+      nl: "Kg per rit = 750 ÷ 3 = 250. Vermenigvuldig met 7."
+    }
+  },
+  {
+    id: "P1_s_87",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 11 roses coûtent 16 €, combien coûtent 4 roses ?",
+      en: "If 11 roses cost €16, how much do 4 roses cost?",
+      nl: "Als 11 rozen €16 kosten, hoeveel kosten 4 rozen?"
+    },
+    answer: 5.82,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix d'une rose = 16 ÷ 11 ≈ 1,455 €. Multiplie par 4.",
+      en: "Price of one rose = 16 ÷ 11 ≈ €1.455. Multiply by 4.",
+      nl: "Prijs van één roos = 16 ÷ 11 ≈ €1,455. Vermenigvuldig met 4."
+    }
+  },
+  {
+    id: "P1_s_88",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 150 g de thé coûtent 3,60 €, combien coûtent 250 g ?",
+      en: "If 150 g of tea cost €3.60, how much do 250 g cost?",
+      nl: "Als 150 g thee €3,60 kost, hoeveel kost 250 g?"
+    },
+    answer: 6,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix pour 1 g = 3,60 ÷ 150 = 0,024 €. Multiplie par 250.",
+      en: "Price per 1 g = 3.60 ÷ 150 = €0.024. Multiply by 250.",
+      nl: "Prijs per 1 g = 3,60 ÷ 150 = €0,024. Vermenigvuldig met 250."
+    }
+  },
+  {
+    id: "P1_s_89",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Si 4 boîtes de conserve pèsent 1,8 kg, combien pèsent 9 boîtes ?",
+      en: "If 4 tins weigh 1.8 kg, how much do 9 tins weigh?",
+      nl: "Als 4 blikken 1,8 kg wegen, hoeveel wegen 9 blikken?"
+    },
+    answer: 4.05,
+    tolerance: 0.01,
+    hint: {
+      fr: "Poids d'une boîte = 1,8 ÷ 4 = 0,45 kg. Multiplie par 9.",
+      en: "Weight of one tin = 1.8 ÷ 4 = 0.45 kg. Multiply by 9.",
+      nl: "Gewicht van één blik = 1,8 ÷ 4 = 0,45 kg. Vermenigvuldig met 9."
+    }
+  },
+  {
+    id: "P1_s_90",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Un robinet remplit 7 litres en 3 minutes. Combien de litres en 8 minutes ?",
+      en: "A tap fills 7 litres in 3 minutes. How many litres in 8 minutes?",
+      nl: "Een kraan vult 7 liter in 3 minuten. Hoeveel liter in 8 minuten?"
+    },
+    answer: 18.67,
+    tolerance: 0.01,
+    hint: {
+      fr: "Débit = 7 ÷ 3 ≈ 2,333 l/min. Multiplie par 8.",
+      en: "Flow = 7 ÷ 3 ≈ 2.333 l/min. Multiply by 8.",
+      nl: "Debiet = 7 ÷ 3 ≈ 2,333 l/min. Vermenigvuldig met 8."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 3 — Additional complex: percentages, inverse proportionality, multi-step (P1_s_91–P1_s_111)
+  // ===========================================================================
+  {
+    id: "P1_s_91",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un manteau coûte 120 €. Son prix augmente de 15 %. Quel est le nouveau prix ?",
+      en: "A coat costs €120. Its price increases by 15%. What is the new price?",
+      nl: "Een jas kost €120. De prijs stijgt met 15%. Wat is de nieuwe prijs?"
+    },
+    answer: 138,
+    tolerance: 0.01,
+    hint: {
+      fr: "Nouveau prix = 120 × 1,15.",
+      en: "New price = 120 × 1.15.",
+      nl: "Nieuwe prijs = 120 × 1,15."
+    }
+  },
+  {
+    id: "P1_s_92",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "4 ouvriers peignent une maison en 15 jours. Combien de jours faut-il à 6 ouvriers ?",
+      en: "4 workers paint a house in 15 days. How many days do 6 workers need?",
+      nl: "4 arbeiders verven een huis in 15 dagen. Hoeveel dagen hebben 6 arbeiders nodig?"
+    },
+    answer: 10,
+    tolerance: 0.01,
+    hint: {
+      fr: "Proportionnalité inverse : 4 × 15 = 6 × x, donc x = 60 ÷ 6.",
+      en: "Inverse proportionality: 4 × 15 = 6 × x, so x = 60 ÷ 6.",
+      nl: "Omgekeerde evenredigheid: 4 × 15 = 6 × x, dus x = 60 ÷ 6."
+    }
+  },
+  {
+    id: "P1_s_93",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "2 machines remplissent 80 bouteilles en 5 heures. Combien de bouteilles remplissent 3 machines en 4 heures ?",
+      en: "2 machines fill 80 bottles in 5 hours. How many bottles do 3 machines fill in 4 hours?",
+      nl: "2 machines vullen 80 flessen in 5 uur. Hoeveel flessen vullen 3 machines in 4 uur?"
+    },
+    answer: 96,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 machine remplit 80 ÷ 2 = 40 en 5h, soit 8/h. 3 machines × 4h × 8 = 96.",
+      en: "1 machine fills 80 ÷ 2 = 40 in 5h, so 8/h. 3 machines × 4h × 8 = 96.",
+      nl: "1 machine vult 80 ÷ 2 = 40 in 5u, dus 8/u. 3 machines × 4u × 8 = 96."
+    }
+  },
+  {
+    id: "P1_s_94",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un ordinateur coûte 800 €. Il bénéficie d'une réduction de 12,5 %. Quel est le prix réduit ?",
+      en: "A computer costs €800. It has a 12.5% discount. What is the reduced price?",
+      nl: "Een computer kost €800. Er is 12,5% korting. Wat is de verlaagde prijs?"
+    },
+    answer: 700,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix réduit = 800 × (1 - 0,125) = 800 × 0,875.",
+      en: "Reduced price = 800 × (1 - 0.125) = 800 × 0.875.",
+      nl: "Verlaagde prijs = 800 × (1 - 0,125) = 800 × 0,875."
+    }
+  },
+  {
+    id: "P1_s_95",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Sur une carte à l'échelle 1:20 000, deux villages sont séparés par 6,5 cm. Quelle est la distance réelle en km ?",
+      en: "On a map at scale 1:20,000, two villages are 6.5 cm apart. What is the real distance in km?",
+      nl: "Op een kaart met schaal 1:20.000 liggen twee dorpen 6,5 cm uit elkaar. Wat is de werkelijke afstand in km?"
+    },
+    answer: 1.3,
+    tolerance: 0.01,
+    hint: {
+      fr: "6,5 cm × 20 000 = 130 000 cm = 1 300 m = 1,3 km.",
+      en: "6.5 cm × 20,000 = 130,000 cm = 1,300 m = 1.3 km.",
+      nl: "6,5 cm × 20.000 = 130.000 cm = 1.300 m = 1,3 km."
+    }
+  },
+  {
+    id: "P1_s_96",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un article coûte 60 €. Il subit d'abord une hausse de 20 %, puis une baisse de 25 %. Quel est le prix final ?",
+      en: "An item costs €60. It first increases by 20%, then decreases by 25%. What is the final price?",
+      nl: "Een artikel kost €60. Het stijgt eerst met 20%, dan daalt het met 25%. Wat is de uiteindelijke prijs?"
+    },
+    answer: 54,
+    tolerance: 0.01,
+    hint: {
+      fr: "Après hausse : 60 × 1,20 = 72. Après baisse : 72 × 0,75 = 54.",
+      en: "After increase: 60 × 1.20 = 72. After decrease: 72 × 0.75 = 54.",
+      nl: "Na stijging: 60 × 1,20 = 72. Na daling: 72 × 0,75 = 54."
+    }
+  },
+  {
+    id: "P1_s_97",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "9 pompes vident un bassin en 4 heures. Combien d'heures faut-il avec 6 pompes ?",
+      en: "9 pumps empty a pool in 4 hours. How many hours with 6 pumps?",
+      nl: "9 pompen legen een bassin in 4 uur. Hoeveel uur met 6 pompen?"
+    },
+    answer: 6,
+    tolerance: 0.01,
+    hint: {
+      fr: "Proportionnalité inverse : 9 × 4 = 6 × x, donc x = 36 ÷ 6.",
+      en: "Inverse proportionality: 9 × 4 = 6 × x, so x = 36 ÷ 6.",
+      nl: "Omgekeerde evenredigheid: 9 × 4 = 6 × x, dus x = 36 ÷ 6."
+    }
+  },
+  {
+    id: "P1_s_98",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un smartphone coûte 350 €. Son prix augmente de 8 %. Quel est le nouveau prix ?",
+      en: "A smartphone costs €350. Its price increases by 8%. What is the new price?",
+      nl: "Een smartphone kost €350. De prijs stijgt met 8%. Wat is de nieuwe prijs?"
+    },
+    answer: 378,
+    tolerance: 0.01,
+    hint: {
+      fr: "Nouveau prix = 350 × 1,08.",
+      en: "New price = 350 × 1.08.",
+      nl: "Nieuwe prijs = 350 × 1,08."
+    }
+  },
+  {
+    id: "P1_s_99",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "3 boulangers préparent 150 pains en 2 heures. Combien de pains préparent 5 boulangers en 3 heures ?",
+      en: "3 bakers prepare 150 loaves in 2 hours. How many loaves do 5 bakers prepare in 3 hours?",
+      nl: "3 bakkers bereiden 150 broden in 2 uur. Hoeveel broden bereiden 5 bakkers in 3 uur?"
+    },
+    answer: 375,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 boulanger prépare 150 ÷ 3 = 50 pains en 2h, soit 25/h. 5 boulangers × 3h × 25 = 375.",
+      en: "1 baker prepares 150 ÷ 3 = 50 loaves in 2h, so 25/h. 5 bakers × 3h × 25 = 375.",
+      nl: "1 bakker bereidt 150 ÷ 3 = 50 broden in 2u, dus 25/u. 5 bakkers × 3u × 25 = 375."
+    }
+  },
+  {
+    id: "P1_s_100",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un canapé coûte 450 €. Pendant les soldes, il bénéficie d'une réduction de 30 %. Quel est le prix soldé ?",
+      en: "A sofa costs €450. During a sale, it gets a 30% discount. What is the sale price?",
+      nl: "Een bank kost €450. Tijdens de uitverkoop krijgt hij 30% korting. Wat is de uitverkoopprijs?"
+    },
+    answer: 315,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix soldé = 450 × (1 - 0,30) = 450 × 0,70.",
+      en: "Sale price = 450 × (1 - 0.30) = 450 × 0.70.",
+      nl: "Uitverkoopprijs = 450 × (1 - 0,30) = 450 × 0,70."
+    }
+  },
+  {
+    id: "P1_s_101",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "7 maçons construisent un mur en 6 jours. Combien de jours faut-il à 3 maçons ?",
+      en: "7 bricklayers build a wall in 6 days. How many days do 3 bricklayers need?",
+      nl: "7 metselaars bouwen een muur in 6 dagen. Hoeveel dagen hebben 3 metselaars nodig?"
+    },
+    answer: 14,
+    tolerance: 0.01,
+    hint: {
+      fr: "Proportionnalité inverse : 7 × 6 = 3 × x, donc x = 42 ÷ 3.",
+      en: "Inverse proportionality: 7 × 6 = 3 × x, so x = 42 ÷ 3.",
+      nl: "Omgekeerde evenredigheid: 7 × 6 = 3 × x, dus x = 42 ÷ 3."
+    }
+  },
+  {
+    id: "P1_s_102",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un article coûte 200 €. Il subit d'abord une baisse de 15 %, puis une hausse de 10 %. Quel est le prix final ?",
+      en: "An item costs €200. It first decreases by 15%, then increases by 10%. What is the final price?",
+      nl: "Een artikel kost €200. Het daalt eerst met 15%, dan stijgt het met 10%. Wat is de uiteindelijke prijs?"
+    },
+    answer: 187,
+    tolerance: 0.01,
+    hint: {
+      fr: "Après baisse : 200 × 0,85 = 170. Après hausse : 170 × 1,10 = 187.",
+      en: "After decrease: 200 × 0.85 = 170. After increase: 170 × 1.10 = 187.",
+      nl: "Na daling: 200 × 0,85 = 170. Na stijging: 170 × 1,10 = 187."
+    }
+  },
+  {
+    id: "P1_s_103",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "5 imprimantes impriment 400 pages en 2 heures. Combien de pages impriment 8 imprimantes en 3 heures ?",
+      en: "5 printers print 400 pages in 2 hours. How many pages do 8 printers print in 3 hours?",
+      nl: "5 printers drukken 400 pagina's in 2 uur. Hoeveel pagina's drukken 8 printers in 3 uur?"
+    },
+    answer: 960,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 imprimante imprime 400 ÷ 5 = 80 pages en 2h, soit 40/h. 8 × 3 × 40 = 960.",
+      en: "1 printer prints 400 ÷ 5 = 80 pages in 2h, so 40/h. 8 × 3 × 40 = 960.",
+      nl: "1 printer drukt 400 ÷ 5 = 80 pagina's in 2u, dus 40/u. 8 × 3 × 40 = 960."
+    }
+  },
+  {
+    id: "P1_s_104",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un loyer de 650 € augmente de 4 %. Quel est le nouveau loyer ?",
+      en: "A rent of €650 increases by 4%. What is the new rent?",
+      nl: "Een huur van €650 stijgt met 4%. Wat is de nieuwe huur?"
+    },
+    answer: 676,
+    tolerance: 0.01,
+    hint: {
+      fr: "Nouveau loyer = 650 × 1,04.",
+      en: "New rent = 650 × 1.04.",
+      nl: "Nieuwe huur = 650 × 1,04."
+    }
+  },
+  {
+    id: "P1_s_105",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "12 jardiniers tondent un parc en 3 heures. Combien d'heures faut-il à 9 jardiniers ?",
+      en: "12 gardeners mow a park in 3 hours. How many hours do 9 gardeners need?",
+      nl: "12 tuiniers maaien een park in 3 uur. Hoeveel uur hebben 9 tuiniers nodig?"
+    },
+    answer: 4,
+    tolerance: 0.01,
+    hint: {
+      fr: "Proportionnalité inverse : 12 × 3 = 9 × x, donc x = 36 ÷ 9.",
+      en: "Inverse proportionality: 12 × 3 = 9 × x, so x = 36 ÷ 9.",
+      nl: "Omgekeerde evenredigheid: 12 × 3 = 9 × x, dus x = 36 ÷ 9."
+    }
+  },
+  {
+    id: "P1_s_106",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Une tablette coûte 180 €. Elle bénéficie d'une réduction de 35 %. Quel est le prix réduit ?",
+      en: "A tablet costs €180. It has a 35% discount. What is the reduced price?",
+      nl: "Een tablet kost €180. Er is 35% korting. Wat is de verlaagde prijs?"
+    },
+    answer: 117,
+    tolerance: 0.01,
+    hint: {
+      fr: "Prix réduit = 180 × (1 - 0,35) = 180 × 0,65.",
+      en: "Reduced price = 180 × (1 - 0.35) = 180 × 0.65.",
+      nl: "Verlaagde prijs = 180 × (1 - 0,35) = 180 × 0,65."
+    }
+  },
+  {
+    id: "P1_s_107",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Sur une carte à l'échelle 1:80 000, deux villes sont séparées par 5,5 cm. Quelle est la distance réelle en km ?",
+      en: "On a map at scale 1:80,000, two cities are 5.5 cm apart. What is the real distance in km?",
+      nl: "Op een kaart met schaal 1:80.000 liggen twee steden 5,5 cm uit elkaar. Wat is de werkelijke afstand in km?"
+    },
+    answer: 4.4,
+    tolerance: 0.01,
+    hint: {
+      fr: "5,5 cm × 80 000 = 440 000 cm = 4 400 m = 4,4 km.",
+      en: "5.5 cm × 80,000 = 440,000 cm = 4,400 m = 4.4 km.",
+      nl: "5,5 cm × 80.000 = 440.000 cm = 4.400 m = 4,4 km."
+    }
+  },
+  {
+    id: "P1_s_108",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un article coûte 90 €. Il subit d'abord une hausse de 10 %, puis une autre hausse de 10 %. Quel est le prix final ?",
+      en: "An item costs €90. It first increases by 10%, then increases again by 10%. What is the final price?",
+      nl: "Een artikel kost €90. Het stijgt eerst met 10%, dan nogmaals met 10%. Wat is de uiteindelijke prijs?"
+    },
+    answer: 108.9,
+    tolerance: 0.01,
+    hint: {
+      fr: "Après 1re hausse : 90 × 1,10 = 99. Après 2e hausse : 99 × 1,10 = 108,90.",
+      en: "After 1st increase: 90 × 1.10 = 99. After 2nd increase: 99 × 1.10 = 108.90.",
+      nl: "Na 1e stijging: 90 × 1,10 = 99. Na 2e stijging: 99 × 1,10 = 108,90."
+    }
+  },
+  {
+    id: "P1_s_109",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "6 camions transportent une cargaison en 8 voyages. Combien de voyages faut-il à 4 camions ?",
+      en: "6 trucks transport a cargo in 8 trips. How many trips do 4 trucks need?",
+      nl: "6 vrachtwagens vervoeren een lading in 8 ritten. Hoeveel ritten hebben 4 vrachtwagens nodig?"
+    },
+    answer: 12,
+    tolerance: 0.01,
+    hint: {
+      fr: "Proportionnalité inverse : 6 × 8 = 4 × x, donc x = 48 ÷ 4.",
+      en: "Inverse proportionality: 6 × 8 = 4 × x, so x = 48 ÷ 4.",
+      nl: "Omgekeerde evenredigheid: 6 × 8 = 4 × x, dus x = 48 ÷ 4."
+    }
+  },
+  {
+    id: "P1_s_110",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "4 cuisiniers préparent 60 desserts en 3 heures. Combien de desserts préparent 7 cuisiniers en 2 heures ?",
+      en: "4 cooks prepare 60 desserts in 3 hours. How many desserts do 7 cooks prepare in 2 hours?",
+      nl: "4 koks bereiden 60 desserts in 3 uur. Hoeveel desserts bereiden 7 koks in 2 uur?"
+    },
+    answer: 70,
+    tolerance: 0.01,
+    hint: {
+      fr: "1 cuisinier prépare 60 ÷ 4 = 15 desserts en 3h, soit 5/h. 7 cuisiniers × 2h × 5 = 70.",
+      en: "1 cook prepares 60 ÷ 4 = 15 desserts in 3h, so 5/h. 7 cooks × 2h × 5 = 70.",
+      nl: "1 kok bereidt 60 ÷ 4 = 15 desserts in 3u, dus 5/u. 7 koks × 2u × 5 = 70."
+    }
+  },
+  {
+    id: "P1_s_111",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un article coûte 500 €. Il subit d'abord une baisse de 20 %, puis une hausse de 5 %. Quel est le prix final ?",
+      en: "An item costs €500. It first decreases by 20%, then increases by 5%. What is the final price?",
+      nl: "Een artikel kost €500. Het daalt eerst met 20%, dan stijgt het met 5%. Wat is de uiteindelijke prijs?"
+    },
+    answer: 420,
+    tolerance: 0.01,
+    hint: {
+      fr: "Après baisse : 500 × 0,80 = 400. Après hausse : 400 × 1,05 = 420.",
+      en: "After decrease: 500 × 0.80 = 400. After increase: 400 × 1.05 = 420.",
+      nl: "Na daling: 500 × 0,80 = 400. Na stijging: 400 × 1,05 = 420."
     }
   }
 ];

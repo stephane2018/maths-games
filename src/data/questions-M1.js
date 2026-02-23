@@ -315,6 +315,384 @@ export const questions = [
     answer: 15, tolerance: 0.01,
     hint: { fr: "54 ÷ 3,6 = 15.", en: "54 ÷ 3.6 = 15.", nl: "54 ÷ 3,6 = 15." }
   },
+
+  // =========================================================================
+  // Level 1 — More basic metric conversions (51–70)
+  // =========================================================================
+  {
+    id: "M1_s_51", category: "M1", level: 1,
+    text: { fr: "Combien de mètres dans 6,2 km ?", en: "How many meters in 6.2 km?", nl: "Hoeveel meter in 6,2 km?" },
+    answer: 6200, tolerance: 0,
+    hint: { fr: "1 km = 1000 m. 6,2 × 1000 = 6200.", en: "1 km = 1000 m. 6.2 × 1000 = 6200.", nl: "1 km = 1000 m. 6,2 × 1000 = 6200." }
+  },
+  {
+    id: "M1_s_52", category: "M1", level: 1,
+    text: { fr: "Combien de mètres dans 0,8 km ?", en: "How many meters in 0.8 km?", nl: "Hoeveel meter in 0,8 km?" },
+    answer: 800, tolerance: 0,
+    hint: { fr: "1 km = 1000 m. 0,8 × 1000 = 800.", en: "1 km = 1000 m. 0.8 × 1000 = 800.", nl: "1 km = 1000 m. 0,8 × 1000 = 800." }
+  },
+  {
+    id: "M1_s_53", category: "M1", level: 1,
+    text: { fr: "Combien de mètres dans 4,75 km ?", en: "How many meters in 4.75 km?", nl: "Hoeveel meter in 4,75 km?" },
+    answer: 4750, tolerance: 0,
+    hint: { fr: "1 km = 1000 m. 4,75 × 1000 = 4750.", en: "1 km = 1000 m. 4.75 × 1000 = 4750.", nl: "1 km = 1000 m. 4,75 × 1000 = 4750." }
+  },
+  {
+    id: "M1_s_54", category: "M1", level: 1,
+    text: { fr: "Combien de mètres dans 10,5 km ?", en: "How many meters in 10.5 km?", nl: "Hoeveel meter in 10,5 km?" },
+    answer: 10500, tolerance: 0,
+    hint: { fr: "1 km = 1000 m. 10,5 × 1000 = 10 500.", en: "1 km = 1000 m. 10.5 × 1000 = 10,500.", nl: "1 km = 1000 m. 10,5 × 1000 = 10 500." }
+  },
+  {
+    id: "M1_s_55", category: "M1", level: 1,
+    text: { fr: "Combien de centimètres dans 3,6 m ?", en: "How many centimeters in 3.6 m?", nl: "Hoeveel centimeter in 3,6 m?" },
+    answer: 360, tolerance: 0,
+    hint: { fr: "1 m = 100 cm. 3,6 × 100 = 360.", en: "1 m = 100 cm. 3.6 × 100 = 360.", nl: "1 m = 100 cm. 3,6 × 100 = 360." }
+  },
+  {
+    id: "M1_s_56", category: "M1", level: 1,
+    text: { fr: "Combien de centimètres dans 7,25 m ?", en: "How many centimeters in 7.25 m?", nl: "Hoeveel centimeter in 7,25 m?" },
+    answer: 725, tolerance: 0,
+    hint: { fr: "1 m = 100 cm. 7,25 × 100 = 725.", en: "1 m = 100 cm. 7.25 × 100 = 725.", nl: "1 m = 100 cm. 7,25 × 100 = 725." }
+  },
+  {
+    id: "M1_s_57", category: "M1", level: 1,
+    text: { fr: "Combien de centimètres dans 0,9 m ?", en: "How many centimeters in 0.9 m?", nl: "Hoeveel centimeter in 0,9 m?" },
+    answer: 90, tolerance: 0,
+    hint: { fr: "1 m = 100 cm. 0,9 × 100 = 90.", en: "1 m = 100 cm. 0.9 × 100 = 90.", nl: "1 m = 100 cm. 0,9 × 100 = 90." }
+  },
+  {
+    id: "M1_s_58", category: "M1", level: 1,
+    text: { fr: "Combien de grammes dans 2,8 kg ?", en: "How many grams in 2.8 kg?", nl: "Hoeveel gram in 2,8 kg?" },
+    answer: 2800, tolerance: 0,
+    hint: { fr: "1 kg = 1000 g. 2,8 × 1000 = 2800.", en: "1 kg = 1000 g. 2.8 × 1000 = 2800.", nl: "1 kg = 1000 g. 2,8 × 1000 = 2800." }
+  },
+  {
+    id: "M1_s_59", category: "M1", level: 1,
+    text: { fr: "Combien de grammes dans 0,35 kg ?", en: "How many grams in 0.35 kg?", nl: "Hoeveel gram in 0,35 kg?" },
+    answer: 350, tolerance: 0,
+    hint: { fr: "1 kg = 1000 g. 0,35 × 1000 = 350.", en: "1 kg = 1000 g. 0.35 × 1000 = 350.", nl: "1 kg = 1000 g. 0,35 × 1000 = 350." }
+  },
+  {
+    id: "M1_s_60", category: "M1", level: 1,
+    text: { fr: "Combien de grammes dans 5,6 kg ?", en: "How many grams in 5.6 kg?", nl: "Hoeveel gram in 5,6 kg?" },
+    answer: 5600, tolerance: 0,
+    hint: { fr: "1 kg = 1000 g. 5,6 × 1000 = 5600.", en: "1 kg = 1000 g. 5.6 × 1000 = 5600.", nl: "1 kg = 1000 g. 5,6 × 1000 = 5600." }
+  },
+  {
+    id: "M1_s_61", category: "M1", level: 1,
+    text: { fr: "Combien de grammes dans 3,25 kg ?", en: "How many grams in 3.25 kg?", nl: "Hoeveel gram in 3,25 kg?" },
+    answer: 3250, tolerance: 0,
+    hint: { fr: "1 kg = 1000 g. 3,25 × 1000 = 3250.", en: "1 kg = 1000 g. 3.25 × 1000 = 3250.", nl: "1 kg = 1000 g. 3,25 × 1000 = 3250." }
+  },
+  {
+    id: "M1_s_62", category: "M1", level: 1,
+    text: { fr: "Combien de millilitres dans 1,75 litre ?", en: "How many milliliters in 1.75 liters?", nl: "Hoeveel milliliter in 1,75 liter?" },
+    answer: 1750, tolerance: 0,
+    hint: { fr: "1 L = 1000 mL. 1,75 × 1000 = 1750.", en: "1 L = 1000 mL. 1.75 × 1000 = 1750.", nl: "1 L = 1000 mL. 1,75 × 1000 = 1750." }
+  },
+  {
+    id: "M1_s_63", category: "M1", level: 1,
+    text: { fr: "Combien de millilitres dans 4,25 litres ?", en: "How many milliliters in 4.25 liters?", nl: "Hoeveel milliliter in 4,25 liter?" },
+    answer: 4250, tolerance: 0,
+    hint: { fr: "1 L = 1000 mL. 4,25 × 1000 = 4250.", en: "1 L = 1000 mL. 4.25 × 1000 = 4250.", nl: "1 L = 1000 mL. 4,25 × 1000 = 4250." }
+  },
+  {
+    id: "M1_s_64", category: "M1", level: 1,
+    text: { fr: "Combien de millilitres dans 0,25 litre ?", en: "How many milliliters in 0.25 liters?", nl: "Hoeveel milliliter in 0,25 liter?" },
+    answer: 250, tolerance: 0,
+    hint: { fr: "1 L = 1000 mL. 0,25 × 1000 = 250.", en: "1 L = 1000 mL. 0.25 × 1000 = 250.", nl: "1 L = 1000 mL. 0,25 × 1000 = 250." }
+  },
+  {
+    id: "M1_s_65", category: "M1", level: 1,
+    text: { fr: "Combien de millilitres dans 6 litres ?", en: "How many milliliters in 6 liters?", nl: "Hoeveel milliliter in 6 liter?" },
+    answer: 6000, tolerance: 0,
+    hint: { fr: "1 L = 1000 mL. 6 × 1000 = 6000.", en: "1 L = 1000 mL. 6 × 1000 = 6000.", nl: "1 L = 1000 mL. 6 × 1000 = 6000." }
+  },
+  {
+    id: "M1_s_66", category: "M1", level: 1,
+    text: { fr: "Combien de minutes dans 4 heures ?", en: "How many minutes in 4 hours?", nl: "Hoeveel minuten in 4 uur?" },
+    answer: 240, tolerance: 0,
+    hint: { fr: "1 h = 60 min. 4 × 60 = 240.", en: "1 h = 60 min. 4 × 60 = 240.", nl: "1 u = 60 min. 4 × 60 = 240." }
+  },
+  {
+    id: "M1_s_67", category: "M1", level: 1,
+    text: { fr: "Combien de minutes dans 2,5 heures ?", en: "How many minutes in 2.5 hours?", nl: "Hoeveel minuten in 2,5 uur?" },
+    answer: 150, tolerance: 0,
+    hint: { fr: "2,5 × 60 = 150.", en: "2.5 × 60 = 150.", nl: "2,5 × 60 = 150." }
+  },
+  {
+    id: "M1_s_68", category: "M1", level: 1,
+    text: { fr: "Combien de secondes dans 5 minutes ?", en: "How many seconds in 5 minutes?", nl: "Hoeveel seconden in 5 minuten?" },
+    answer: 300, tolerance: 0,
+    hint: { fr: "1 min = 60 s. 5 × 60 = 300.", en: "1 min = 60 s. 5 × 60 = 300.", nl: "1 min = 60 s. 5 × 60 = 300." }
+  },
+  {
+    id: "M1_s_69", category: "M1", level: 1,
+    text: { fr: "Combien de secondes dans 4,5 minutes ?", en: "How many seconds in 4.5 minutes?", nl: "Hoeveel seconden in 4,5 minuten?" },
+    answer: 270, tolerance: 0,
+    hint: { fr: "4,5 × 60 = 270.", en: "4.5 × 60 = 270.", nl: "4,5 × 60 = 270." }
+  },
+  {
+    id: "M1_s_70", category: "M1", level: 1,
+    text: { fr: "Combien de mètres dans 1,25 km ?", en: "How many meters in 1.25 km?", nl: "Hoeveel meter in 1,25 km?" },
+    answer: 1250, tolerance: 0,
+    hint: { fr: "1 km = 1000 m. 1,25 × 1000 = 1250.", en: "1 km = 1000 m. 1.25 × 1000 = 1250.", nl: "1 km = 1000 m. 1,25 × 1000 = 1250." }
+  },
+
+  // =========================================================================
+  // Level 2 — More intermediate conversions (71–91)
+  // =========================================================================
+  {
+    id: "M1_s_71", category: "M1", level: 2,
+    text: { fr: "Combien de cm² dans 7,5 dm² ?", en: "How many cm² in 7.5 dm²?", nl: "Hoeveel cm² in 7,5 dm²?" },
+    answer: 750, tolerance: 0,
+    hint: { fr: "1 dm² = 100 cm². 7,5 × 100 = 750.", en: "1 dm² = 100 cm². 7.5 × 100 = 750.", nl: "1 dm² = 100 cm². 7,5 × 100 = 750." }
+  },
+  {
+    id: "M1_s_72", category: "M1", level: 2,
+    text: { fr: "Combien de cm² dans 0,45 dm² ?", en: "How many cm² in 0.45 dm²?", nl: "Hoeveel cm² in 0,45 dm²?" },
+    answer: 45, tolerance: 0,
+    hint: { fr: "1 dm² = 100 cm². 0,45 × 100 = 45.", en: "1 dm² = 100 cm². 0.45 × 100 = 45.", nl: "1 dm² = 100 cm². 0,45 × 100 = 45." }
+  },
+  {
+    id: "M1_s_73", category: "M1", level: 2,
+    text: { fr: "Combien de cm² dans 12 dm² ?", en: "How many cm² in 12 dm²?", nl: "Hoeveel cm² in 12 dm²?" },
+    answer: 1200, tolerance: 0,
+    hint: { fr: "1 dm² = 100 cm². 12 × 100 = 1200.", en: "1 dm² = 100 cm². 12 × 100 = 1200.", nl: "1 dm² = 100 cm². 12 × 100 = 1200." }
+  },
+  {
+    id: "M1_s_74", category: "M1", level: 2,
+    text: { fr: "Combien de cm² dans 2,8 dm² ?", en: "How many cm² in 2.8 dm²?", nl: "Hoeveel cm² in 2,8 dm²?" },
+    answer: 280, tolerance: 0,
+    hint: { fr: "1 dm² = 100 cm². 2,8 × 100 = 280.", en: "1 dm² = 100 cm². 2.8 × 100 = 280.", nl: "1 dm² = 100 cm². 2,8 × 100 = 280." }
+  },
+  {
+    id: "M1_s_75", category: "M1", level: 2,
+    text: { fr: "Combien de mm dans 0,62 m ?", en: "How many mm in 0.62 m?", nl: "Hoeveel mm in 0,62 m?" },
+    answer: 620, tolerance: 0,
+    hint: { fr: "1 m = 1000 mm. 0,62 × 1000 = 620.", en: "1 m = 1000 mm. 0.62 × 1000 = 620.", nl: "1 m = 1000 mm. 0,62 × 1000 = 620." }
+  },
+  {
+    id: "M1_s_76", category: "M1", level: 2,
+    text: { fr: "Combien de mm dans 2,05 m ?", en: "How many mm in 2.05 m?", nl: "Hoeveel mm in 2,05 m?" },
+    answer: 2050, tolerance: 0,
+    hint: { fr: "1 m = 1000 mm. 2,05 × 1000 = 2050.", en: "1 m = 1000 mm. 2.05 × 1000 = 2050.", nl: "1 m = 1000 mm. 2,05 × 1000 = 2050." }
+  },
+  {
+    id: "M1_s_77", category: "M1", level: 2,
+    text: { fr: "Combien de mètres dans 3400 mm ?", en: "How many meters in 3400 mm?", nl: "Hoeveel meter in 3400 mm?" },
+    answer: 3.4, tolerance: 0.01,
+    hint: { fr: "1 m = 1000 mm. 3400 ÷ 1000 = 3,4.", en: "1 m = 1000 mm. 3400 ÷ 1000 = 3.4.", nl: "1 m = 1000 mm. 3400 ÷ 1000 = 3,4." }
+  },
+  {
+    id: "M1_s_78", category: "M1", level: 2,
+    text: { fr: "Combien de mètres dans 750 mm ?", en: "How many meters in 750 mm?", nl: "Hoeveel meter in 750 mm?" },
+    answer: 0.75, tolerance: 0.01,
+    hint: { fr: "1 m = 1000 mm. 750 ÷ 1000 = 0,75.", en: "1 m = 1000 mm. 750 ÷ 1000 = 0.75.", nl: "1 m = 1000 mm. 750 ÷ 1000 = 0,75." }
+  },
+  {
+    id: "M1_s_79", category: "M1", level: 2,
+    text: { fr: "Convertis 4h20min en minutes.", en: "Convert 4h20min to minutes.", nl: "Reken 4u20min om naar minuten." },
+    answer: 260, tolerance: 0,
+    hint: { fr: "4 × 60 + 20 = 260.", en: "4 × 60 + 20 = 260.", nl: "4 × 60 + 20 = 260." }
+  },
+  {
+    id: "M1_s_80", category: "M1", level: 2,
+    text: { fr: "Convertis 5h10min en minutes.", en: "Convert 5h10min to minutes.", nl: "Reken 5u10min om naar minuten." },
+    answer: 310, tolerance: 0,
+    hint: { fr: "5 × 60 + 10 = 310.", en: "5 × 60 + 10 = 310.", nl: "5 × 60 + 10 = 310." }
+  },
+  {
+    id: "M1_s_81", category: "M1", level: 2,
+    text: { fr: "Convertis 2h50min en minutes.", en: "Convert 2h50min to minutes.", nl: "Reken 2u50min om naar minuten." },
+    answer: 170, tolerance: 0,
+    hint: { fr: "2 × 60 + 50 = 170.", en: "2 × 60 + 50 = 170.", nl: "2 × 60 + 50 = 170." }
+  },
+  {
+    id: "M1_s_82", category: "M1", level: 2,
+    text: { fr: "Convertis 6h40min en minutes.", en: "Convert 6h40min to minutes.", nl: "Reken 6u40min om naar minuten." },
+    answer: 400, tolerance: 0,
+    hint: { fr: "6 × 60 + 40 = 400.", en: "6 × 60 + 40 = 400.", nl: "6 × 60 + 40 = 400." }
+  },
+  {
+    id: "M1_s_83", category: "M1", level: 2,
+    text: { fr: "Combien de litres dans 3200 mL ?", en: "How many liters in 3200 mL?", nl: "Hoeveel liter in 3200 mL?" },
+    answer: 3.2, tolerance: 0.01,
+    hint: { fr: "3200 ÷ 1000 = 3,2.", en: "3200 ÷ 1000 = 3.2.", nl: "3200 ÷ 1000 = 3,2." }
+  },
+  {
+    id: "M1_s_84", category: "M1", level: 2,
+    text: { fr: "Combien de litres dans 500 mL ?", en: "How many liters in 500 mL?", nl: "Hoeveel liter in 500 mL?" },
+    answer: 0.5, tolerance: 0.01,
+    hint: { fr: "500 ÷ 1000 = 0,5.", en: "500 ÷ 1000 = 0.5.", nl: "500 ÷ 1000 = 0,5." }
+  },
+  {
+    id: "M1_s_85", category: "M1", level: 2,
+    text: { fr: "Combien de litres dans 6750 mL ?", en: "How many liters in 6750 mL?", nl: "Hoeveel liter in 6750 mL?" },
+    answer: 6.75, tolerance: 0.01,
+    hint: { fr: "6750 ÷ 1000 = 6,75.", en: "6750 ÷ 1000 = 6.75.", nl: "6750 ÷ 1000 = 6,75." }
+  },
+  {
+    id: "M1_s_86", category: "M1", level: 2,
+    text: { fr: "Combien de litres dans 250 mL ?", en: "How many liters in 250 mL?", nl: "Hoeveel liter in 250 mL?" },
+    answer: 0.25, tolerance: 0.01,
+    hint: { fr: "250 ÷ 1000 = 0,25.", en: "250 ÷ 1000 = 0.25.", nl: "250 ÷ 1000 = 0,25." }
+  },
+  {
+    id: "M1_s_87", category: "M1", level: 2,
+    text: { fr: "Combien de kg dans 4500 g ?", en: "How many kg in 4500 g?", nl: "Hoeveel kg in 4500 g?" },
+    answer: 4.5, tolerance: 0.01,
+    hint: { fr: "4500 ÷ 1000 = 4,5.", en: "4500 ÷ 1000 = 4.5.", nl: "4500 ÷ 1000 = 4,5." }
+  },
+  {
+    id: "M1_s_88", category: "M1", level: 2,
+    text: { fr: "Combien de kg dans 375 g ?", en: "How many kg in 375 g?", nl: "Hoeveel kg in 375 g?" },
+    answer: 0.375, tolerance: 0.01,
+    hint: { fr: "375 ÷ 1000 = 0,375.", en: "375 ÷ 1000 = 0.375.", nl: "375 ÷ 1000 = 0,375." }
+  },
+  {
+    id: "M1_s_89", category: "M1", level: 2,
+    text: { fr: "Combien de kg dans 8250 g ?", en: "How many kg in 8250 g?", nl: "Hoeveel kg in 8250 g?" },
+    answer: 8.25, tolerance: 0.01,
+    hint: { fr: "8250 ÷ 1000 = 8,25.", en: "8250 ÷ 1000 = 8.25.", nl: "8250 ÷ 1000 = 8,25." }
+  },
+  {
+    id: "M1_s_90", category: "M1", level: 2,
+    text: { fr: "Combien de km dans 7200 m ?", en: "How many km in 7200 m?", nl: "Hoeveel km in 7200 m?" },
+    answer: 7.2, tolerance: 0.01,
+    hint: { fr: "7200 ÷ 1000 = 7,2.", en: "7200 ÷ 1000 = 7.2.", nl: "7200 ÷ 1000 = 7,2." }
+  },
+  {
+    id: "M1_s_91", category: "M1", level: 2,
+    text: { fr: "Combien de mètres dans 1450 cm ?", en: "How many meters in 1450 cm?", nl: "Hoeveel meter in 1450 cm?" },
+    answer: 14.5, tolerance: 0.01,
+    hint: { fr: "1450 ÷ 100 = 14,5.", en: "1450 ÷ 100 = 14.5.", nl: "1450 ÷ 100 = 14,5." }
+  },
+
+  // =========================================================================
+  // Level 3 — More area/volume conversions, speed (92–111)
+  // =========================================================================
+  {
+    id: "M1_s_92", category: "M1", level: 3,
+    text: { fr: "Convertis 60 000 cm² en m².", en: "Convert 60,000 cm² to m².", nl: "Reken 60.000 cm² om naar m²." },
+    answer: 6, tolerance: 0.01,
+    hint: { fr: "1 m² = 10 000 cm². 60 000 ÷ 10 000 = 6.", en: "1 m² = 10,000 cm². 60,000 ÷ 10,000 = 6.", nl: "1 m² = 10.000 cm². 60.000 ÷ 10.000 = 6." }
+  },
+  {
+    id: "M1_s_93", category: "M1", level: 3,
+    text: { fr: "Convertis 15 000 cm² en m².", en: "Convert 15,000 cm² to m².", nl: "Reken 15.000 cm² om naar m²." },
+    answer: 1.5, tolerance: 0.01,
+    hint: { fr: "1 m² = 10 000 cm². 15 000 ÷ 10 000 = 1,5.", en: "1 m² = 10,000 cm². 15,000 ÷ 10,000 = 1.5.", nl: "1 m² = 10.000 cm². 15.000 ÷ 10.000 = 1,5." }
+  },
+  {
+    id: "M1_s_94", category: "M1", level: 3,
+    text: { fr: "Convertis 2500 cm² en m².", en: "Convert 2,500 cm² to m².", nl: "Reken 2500 cm² om naar m²." },
+    answer: 0.25, tolerance: 0.01,
+    hint: { fr: "1 m² = 10 000 cm². 2500 ÷ 10 000 = 0,25.", en: "1 m² = 10,000 cm². 2,500 ÷ 10,000 = 0.25.", nl: "1 m² = 10.000 cm². 2500 ÷ 10.000 = 0,25." }
+  },
+  {
+    id: "M1_s_95", category: "M1", level: 3,
+    text: { fr: "Convertis 85 000 cm² en m².", en: "Convert 85,000 cm² to m².", nl: "Reken 85.000 cm² om naar m²." },
+    answer: 8.5, tolerance: 0.01,
+    hint: { fr: "1 m² = 10 000 cm². 85 000 ÷ 10 000 = 8,5.", en: "1 m² = 10,000 cm². 85,000 ÷ 10,000 = 8.5.", nl: "1 m² = 10.000 cm². 85.000 ÷ 10.000 = 8,5." }
+  },
+  {
+    id: "M1_s_96", category: "M1", level: 3,
+    text: { fr: "Combien de litres dans 4,5 dm³ ?", en: "How many liters in 4.5 dm³?", nl: "Hoeveel liter in 4,5 dm³?" },
+    answer: 4.5, tolerance: 0.01,
+    hint: { fr: "1 dm³ = 1 litre. 4,5 dm³ = 4,5 L.", en: "1 dm³ = 1 liter. 4.5 dm³ = 4.5 L.", nl: "1 dm³ = 1 liter. 4,5 dm³ = 4,5 L." }
+  },
+  {
+    id: "M1_s_97", category: "M1", level: 3,
+    text: { fr: "Combien de dm³ dans 12,5 litres ?", en: "How many dm³ in 12.5 liters?", nl: "Hoeveel dm³ in 12,5 liter?" },
+    answer: 12.5, tolerance: 0.01,
+    hint: { fr: "1 litre = 1 dm³. 12,5 L = 12,5 dm³.", en: "1 liter = 1 dm³. 12.5 L = 12.5 dm³.", nl: "1 liter = 1 dm³. 12,5 L = 12,5 dm³." }
+  },
+  {
+    id: "M1_s_98", category: "M1", level: 3,
+    text: { fr: "Combien de litres dans 0,75 dm³ ?", en: "How many liters in 0.75 dm³?", nl: "Hoeveel liter in 0,75 dm³?" },
+    answer: 0.75, tolerance: 0.01,
+    hint: { fr: "1 dm³ = 1 litre. 0,75 dm³ = 0,75 L.", en: "1 dm³ = 1 liter. 0.75 dm³ = 0.75 L.", nl: "1 dm³ = 1 liter. 0,75 dm³ = 0,75 L." }
+  },
+  {
+    id: "M1_s_99", category: "M1", level: 3,
+    text: { fr: "Combien de dm³ dans 6 litres ?", en: "How many dm³ in 6 liters?", nl: "Hoeveel dm³ in 6 liter?" },
+    answer: 6, tolerance: 0.01,
+    hint: { fr: "1 litre = 1 dm³. 6 L = 6 dm³.", en: "1 liter = 1 dm³. 6 L = 6 dm³.", nl: "1 liter = 1 dm³. 6 L = 6 dm³." }
+  },
+  {
+    id: "M1_s_100", category: "M1", level: 3,
+    text: { fr: "Combien de m² dans 2,5 hectares ?", en: "How many m² in 2.5 hectares?", nl: "Hoeveel m² in 2,5 hectare?" },
+    answer: 25000, tolerance: 0,
+    hint: { fr: "1 ha = 10 000 m². 2,5 × 10 000 = 25 000.", en: "1 ha = 10,000 m². 2.5 × 10,000 = 25,000.", nl: "1 ha = 10.000 m². 2,5 × 10.000 = 25.000." }
+  },
+  {
+    id: "M1_s_101", category: "M1", level: 3,
+    text: { fr: "Combien de m² dans 0,15 hectare ?", en: "How many m² in 0.15 hectares?", nl: "Hoeveel m² in 0,15 hectare?" },
+    answer: 1500, tolerance: 0,
+    hint: { fr: "1 ha = 10 000 m². 0,15 × 10 000 = 1500.", en: "1 ha = 10,000 m². 0.15 × 10,000 = 1,500.", nl: "1 ha = 10.000 m². 0,15 × 10.000 = 1500." }
+  },
+  {
+    id: "M1_s_102", category: "M1", level: 3,
+    text: { fr: "Combien de m² dans 3 hectares ?", en: "How many m² in 3 hectares?", nl: "Hoeveel m² in 3 hectare?" },
+    answer: 30000, tolerance: 0,
+    hint: { fr: "1 ha = 10 000 m². 3 × 10 000 = 30 000.", en: "1 ha = 10,000 m². 3 × 10,000 = 30,000.", nl: "1 ha = 10.000 m². 3 × 10.000 = 30.000." }
+  },
+  {
+    id: "M1_s_103", category: "M1", level: 3,
+    text: { fr: "Combien de m² dans 0,6 hectare ?", en: "How many m² in 0.6 hectares?", nl: "Hoeveel m² in 0,6 hectare?" },
+    answer: 6000, tolerance: 0,
+    hint: { fr: "1 ha = 10 000 m². 0,6 × 10 000 = 6000.", en: "1 ha = 10,000 m². 0.6 × 10,000 = 6,000.", nl: "1 ha = 10.000 m². 0,6 × 10.000 = 6000." }
+  },
+  {
+    id: "M1_s_104", category: "M1", level: 3,
+    text: { fr: "Convertis 36 km/h en m/s.", en: "Convert 36 km/h to m/s.", nl: "Reken 36 km/u om naar m/s." },
+    answer: 10, tolerance: 0.01,
+    hint: { fr: "36 ÷ 3,6 = 10.", en: "36 ÷ 3.6 = 10.", nl: "36 ÷ 3,6 = 10." }
+  },
+  {
+    id: "M1_s_105", category: "M1", level: 3,
+    text: { fr: "Convertis 144 km/h en m/s.", en: "Convert 144 km/h to m/s.", nl: "Reken 144 km/u om naar m/s." },
+    answer: 40, tolerance: 0.01,
+    hint: { fr: "144 ÷ 3,6 = 40.", en: "144 ÷ 3.6 = 40.", nl: "144 ÷ 3,6 = 40." }
+  },
+  {
+    id: "M1_s_106", category: "M1", level: 3,
+    text: { fr: "Convertis 18 km/h en m/s.", en: "Convert 18 km/h to m/s.", nl: "Reken 18 km/u om naar m/s." },
+    answer: 5, tolerance: 0.01,
+    hint: { fr: "18 ÷ 3,6 = 5.", en: "18 ÷ 3.6 = 5.", nl: "18 ÷ 3,6 = 5." }
+  },
+  {
+    id: "M1_s_107", category: "M1", level: 3,
+    text: { fr: "Convertis 126 km/h en m/s.", en: "Convert 126 km/h to m/s.", nl: "Reken 126 km/u om naar m/s." },
+    answer: 35, tolerance: 0.01,
+    hint: { fr: "126 ÷ 3,6 = 35.", en: "126 ÷ 3.6 = 35.", nl: "126 ÷ 3,6 = 35." }
+  },
+  {
+    id: "M1_s_108", category: "M1", level: 3,
+    text: { fr: "Convertis 5 400 cm² en m².", en: "Convert 5,400 cm² to m².", nl: "Reken 5400 cm² om naar m²." },
+    answer: 0.54, tolerance: 0.01,
+    hint: { fr: "1 m² = 10 000 cm². 5400 ÷ 10 000 = 0,54.", en: "1 m² = 10,000 cm². 5,400 ÷ 10,000 = 0.54.", nl: "1 m² = 10.000 cm². 5400 ÷ 10.000 = 0,54." }
+  },
+  {
+    id: "M1_s_109", category: "M1", level: 3,
+    text: { fr: "Combien de m² dans 4,2 hectares ?", en: "How many m² in 4.2 hectares?", nl: "Hoeveel m² in 4,2 hectare?" },
+    answer: 42000, tolerance: 0,
+    hint: { fr: "1 ha = 10 000 m². 4,2 × 10 000 = 42 000.", en: "1 ha = 10,000 m². 4.2 × 10,000 = 42,000.", nl: "1 ha = 10.000 m². 4,2 × 10.000 = 42.000." }
+  },
+  {
+    id: "M1_s_110", category: "M1", level: 3,
+    text: { fr: "Combien de dm³ dans 2,25 litres ?", en: "How many dm³ in 2.25 liters?", nl: "Hoeveel dm³ in 2,25 liter?" },
+    answer: 2.25, tolerance: 0.01,
+    hint: { fr: "1 litre = 1 dm³. 2,25 L = 2,25 dm³.", en: "1 liter = 1 dm³. 2.25 L = 2.25 dm³.", nl: "1 liter = 1 dm³. 2,25 L = 2,25 dm³." }
+  },
+  {
+    id: "M1_s_111", category: "M1", level: 3,
+    text: { fr: "Convertis 63 km/h en m/s.", en: "Convert 63 km/h to m/s.", nl: "Reken 63 km/u om naar m/s." },
+    answer: 17.5, tolerance: 0.01,
+    hint: { fr: "63 ÷ 3,6 = 17,5.", en: "63 ÷ 3.6 = 17.5.", nl: "63 ÷ 3,6 = 17,5." }
+  },
 ];
 
 export function generate(level = 1) {

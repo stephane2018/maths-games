@@ -1,7 +1,7 @@
 // =============================================================================
 // D1 - Traitement de donnees / Data handling / Gegevensverwerking
 // CE1D Belgian exam - Trilingual (FR / EN / NL)
-// 50 questions: ~17 per level, varied data handling problems
+// 111 questions: ~37 per level, varied data handling problems
 // =============================================================================
 
 export const questions = [
@@ -766,6 +766,936 @@ export const questions = [
       fr: "Quand on ajoute un nombre a chaque valeur, la moyenne augmente de ce meme nombre.",
       en: "When you add a number to each value, the mean increases by that same number.",
       nl: "Als je een getal bij elke waarde optelt, stijgt het gemiddelde met datzelfde getal."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 1 - Additional questions (D1_s_51 to D1_s_70) - 20 questions
+  // ===========================================================================
+  {
+    id: "D1_s_51", category: "D1", level: 1,
+    // 15+25+20+30+10 = 100, 100/5 = 20
+    text: {
+      fr: "Nombre de paniers marques en 5 matchs de basket : 15, 25, 20, 30, 10. Quelle est la moyenne de paniers par match ?",
+      en: "Number of baskets scored in 5 basketball games: 15, 25, 20, 30, 10. What is the average baskets per game?",
+      nl: "Aantal gescoorde korven in 5 basketbalwedstrijden: 15, 25, 20, 30, 10. Wat is het gemiddeld aantal korven per wedstrijd?"
+    },
+    answer: 20, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 nombres puis divise par 5.",
+      en: "Add the 5 numbers then divide by 5.",
+      nl: "Tel de 5 getallen op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_52", category: "D1", level: 1,
+    // 8+12+6+14+10 = 50
+    text: {
+      fr: "Un graphique montre les kilometres parcourus chaque jour : lundi 8, mardi 12, mercredi 6, jeudi 14, vendredi 10. Quel est le total de kilometres ?",
+      en: "A graph shows kilometres walked each day: Monday 8, Tuesday 12, Wednesday 6, Thursday 14, Friday 10. What is the total kilometres?",
+      nl: "Een grafiek toont het aantal gelopen kilometers per dag: maandag 8, dinsdag 12, woensdag 6, donderdag 14, vrijdag 10. Wat is het totaal aantal kilometers?"
+    },
+    answer: 50, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les kilometres de chaque jour.",
+      en: "Add the kilometres from each day.",
+      nl: "Tel de kilometers van elke dag op."
+    }
+  },
+  {
+    id: "D1_s_53", category: "D1", level: 1,
+    // 18+22+16+24+20 = 100, 100/5 = 20
+    text: {
+      fr: "Temperatures maximales de la semaine en degres : 18, 22, 16, 24, 20. Quelle est la temperature moyenne ?",
+      en: "Maximum temperatures of the week in degrees: 18, 22, 16, 24, 20. What is the average temperature?",
+      nl: "Maximumtemperaturen van de week in graden: 18, 22, 16, 24, 20. Wat is de gemiddelde temperatuur?"
+    },
+    answer: 20, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 temperatures puis divise par 5.",
+      en: "Add the 5 temperatures then divide by 5.",
+      nl: "Tel de 5 temperaturen op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_54", category: "D1", level: 1,
+    // 35+42+28+55 = 160
+    text: {
+      fr: "Un diagramme en batons montre les ventes de 4 magasins : A = 35, B = 42, C = 28, D = 55. Quel est le total des ventes ?",
+      en: "A bar chart shows sales from 4 shops: A = 35, B = 42, C = 28, D = 55. What is the total sales?",
+      nl: "Een staafdiagram toont de verkoop van 4 winkels: A = 35, B = 42, C = 28, D = 55. Wat is de totale verkoop?"
+    },
+    answer: 160, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les ventes de chaque magasin.",
+      en: "Add the sales from each shop.",
+      nl: "Tel de verkoop van elke winkel op."
+    }
+  },
+  {
+    id: "D1_s_55", category: "D1", level: 1,
+    // 11+9+13+7+10 = 50, 50/5 = 10
+    text: {
+      fr: "Nombre de buts marques par saison sur 5 saisons : 11, 9, 13, 7, 10. Quelle est la moyenne de buts par saison ?",
+      en: "Goals scored per season over 5 seasons: 11, 9, 13, 7, 10. What is the average goals per season?",
+      nl: "Doelpunten per seizoen over 5 seizoenen: 11, 9, 13, 7, 10. Wat is het gemiddeld aantal doelpunten per seizoen?"
+    },
+    answer: 10, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 valeurs puis divise par 5.",
+      en: "Add the 5 values then divide by 5.",
+      nl: "Tel de 5 waarden op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_56", category: "D1", level: 1,
+    // 60+45+75+50+70 = 300
+    text: {
+      fr: "Nombre de pages lues par semaine : semaine 1 = 60, semaine 2 = 45, semaine 3 = 75, semaine 4 = 50, semaine 5 = 70. Combien de pages en tout ?",
+      en: "Pages read per week: week 1 = 60, week 2 = 45, week 3 = 75, week 4 = 50, week 5 = 70. How many pages in total?",
+      nl: "Gelezen pagina's per week: week 1 = 60, week 2 = 45, week 3 = 75, week 4 = 50, week 5 = 70. Hoeveel pagina's in totaal?"
+    },
+    answer: 300, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les pages de chaque semaine.",
+      en: "Add the pages from each week.",
+      nl: "Tel de pagina's van elke week op."
+    }
+  },
+  {
+    id: "D1_s_57", category: "D1", level: 1,
+    // 4+6+8+2+5 = 25, 25/5 = 5
+    text: {
+      fr: "Nombre de fautes par dictee : 4, 6, 8, 2, 5. Quel est le nombre moyen de fautes ?",
+      en: "Mistakes per dictation: 4, 6, 8, 2, 5. What is the average number of mistakes?",
+      nl: "Fouten per dictee: 4, 6, 8, 2, 5. Wat is het gemiddeld aantal fouten?"
+    },
+    answer: 5, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 valeurs puis divise par 5.",
+      en: "Add the 5 values then divide by 5.",
+      nl: "Tel de 5 waarden op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_58", category: "D1", level: 1,
+    // 32+28+36+24 = 120, 120/4 = 30
+    text: {
+      fr: "Duree en minutes des 4 trajets en bus : 32, 28, 36, 24. Quelle est la duree moyenne ?",
+      en: "Duration in minutes of 4 bus trips: 32, 28, 36, 24. What is the average duration?",
+      nl: "Duur in minuten van 4 busritten: 32, 28, 36, 24. Wat is de gemiddelde duur?"
+    },
+    answer: 30, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 4 durees puis divise par 4.",
+      en: "Add the 4 durations then divide by 4.",
+      nl: "Tel de 4 tijden op en deel door 4."
+    }
+  },
+  {
+    id: "D1_s_59", category: "D1", level: 1,
+    // 25+30+15+20+35+25 = 150
+    text: {
+      fr: "Un tableau montre les points marques lors de 6 matchs de rugby : 25, 30, 15, 20, 35, 25. Quel est le total de points ?",
+      en: "A table shows points scored in 6 rugby matches: 25, 30, 15, 20, 35, 25. What is the total points?",
+      nl: "Een tabel toont de punten gescoord in 6 rugbywedstrijden: 25, 30, 15, 20, 35, 25. Wat is het totaal aantal punten?"
+    },
+    answer: 150, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les points de chaque match.",
+      en: "Add the points from each match.",
+      nl: "Tel de punten van elke wedstrijd op."
+    }
+  },
+  {
+    id: "D1_s_60", category: "D1", level: 1,
+    // 14+16+10+18+12 = 70, 70/5 = 14
+    text: {
+      fr: "Notes d'un eleve en geographie sur 5 controles : 14, 16, 10, 18, 12. Quelle est la moyenne ?",
+      en: "A student's geography marks over 5 tests: 14, 16, 10, 18, 12. What is the mean?",
+      nl: "Punten van een leerling voor aardrijkskunde over 5 toetsen: 14, 16, 10, 18, 12. Wat is het gemiddelde?"
+    },
+    answer: 14, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 notes puis divise par 5.",
+      en: "Add the 5 marks then divide by 5.",
+      nl: "Tel de 5 punten op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_61", category: "D1", level: 1,
+    // 90+110+80+120 = 400, 400/4 = 100
+    text: {
+      fr: "Nombre de spectateurs lors de 4 representations : 90, 110, 80, 120. Quelle est la moyenne de spectateurs ?",
+      en: "Number of spectators at 4 shows: 90, 110, 80, 120. What is the average number of spectators?",
+      nl: "Aantal toeschouwers bij 4 voorstellingen: 90, 110, 80, 120. Wat is het gemiddeld aantal toeschouwers?"
+    },
+    answer: 100, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 4 nombres puis divise par 4.",
+      en: "Add the 4 numbers then divide by 4.",
+      nl: "Tel de 4 getallen op en deel door 4."
+    }
+  },
+  {
+    id: "D1_s_62", category: "D1", level: 1,
+    // 5+3+7+6+4 = 25
+    text: {
+      fr: "Un diagramme montre les retards par jour de la semaine : lundi 5, mardi 3, mercredi 7, jeudi 6, vendredi 4. Combien de retards en tout ?",
+      en: "A chart shows late arrivals per day: Monday 5, Tuesday 3, Wednesday 7, Thursday 6, Friday 4. How many late arrivals in total?",
+      nl: "Een diagram toont het aantal laatkomers per dag: maandag 5, dinsdag 3, woensdag 7, donderdag 6, vrijdag 4. Hoeveel laatkomers in totaal?"
+    },
+    answer: 25, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les retards de chaque jour.",
+      en: "Add the late arrivals from each day.",
+      nl: "Tel de laatkomers van elke dag op."
+    }
+  },
+  {
+    id: "D1_s_63", category: "D1", level: 1,
+    // 16+20+24+12+8 = 80, 80/5 = 16
+    text: {
+      fr: "Quantites de pluie en mm sur 5 mois : 16, 20, 24, 12, 8. Quelle est la quantite moyenne de pluie par mois ?",
+      en: "Rainfall in mm over 5 months: 16, 20, 24, 12, 8. What is the average rainfall per month?",
+      nl: "Regenval in mm over 5 maanden: 16, 20, 24, 12, 8. Wat is de gemiddelde regenval per maand?"
+    },
+    answer: 16, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 valeurs puis divise par 5.",
+      en: "Add the 5 values then divide by 5.",
+      nl: "Tel de 5 waarden op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_64", category: "D1", level: 1,
+    // 200+150+250+100+300 = 1000
+    text: {
+      fr: "Recettes d'une boulangerie par jour : lundi 200 euros, mardi 150, mercredi 250, jeudi 100, vendredi 300. Quelle est la recette totale ?",
+      en: "Bakery revenue per day: Monday 200 euros, Tuesday 150, Wednesday 250, Thursday 100, Friday 300. What is the total revenue?",
+      nl: "Omzet van een bakkerij per dag: maandag 200 euro, dinsdag 150, woensdag 250, donderdag 100, vrijdag 300. Wat is de totale omzet?"
+    },
+    answer: 1000, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les recettes de chaque jour.",
+      en: "Add the revenue from each day.",
+      nl: "Tel de omzet van elke dag op."
+    }
+  },
+  {
+    id: "D1_s_65", category: "D1", level: 1,
+    // 9+11+7+13+10 = 50, 50/5 = 10
+    text: {
+      fr: "Un nageur s'entraine 5 jours. Longueurs nagees : 9, 11, 7, 13, 10. Quelle est la moyenne de longueurs par jour ?",
+      en: "A swimmer trains for 5 days. Lengths swum: 9, 11, 7, 13, 10. What is the average lengths per day?",
+      nl: "Een zwemmer traint 5 dagen. Gezwommen lengtes: 9, 11, 7, 13, 10. Wat is het gemiddeld aantal lengtes per dag?"
+    },
+    answer: 10, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 nombres puis divise par 5.",
+      en: "Add the 5 numbers then divide by 5.",
+      nl: "Tel de 5 getallen op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_66", category: "D1", level: 1,
+    // 42+38+50+30 = 160, 160/4 = 40
+    text: {
+      fr: "Nombre de SMS envoyes sur 4 jours : 42, 38, 50, 30. Quelle est la moyenne de SMS par jour ?",
+      en: "Number of text messages sent over 4 days: 42, 38, 50, 30. What is the average messages per day?",
+      nl: "Aantal verzonden sms'en over 4 dagen: 42, 38, 50, 30. Wat is het gemiddeld aantal sms'en per dag?"
+    },
+    answer: 40, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 4 valeurs puis divise par 4.",
+      en: "Add the 4 values then divide by 4.",
+      nl: "Tel de 4 waarden op en deel door 4."
+    }
+  },
+  {
+    id: "D1_s_67", category: "D1", level: 1,
+    // 12+8+15+10+5 = 50
+    text: {
+      fr: "Un graphique montre les colis livres chaque jour : lundi 12, mardi 8, mercredi 15, jeudi 10, vendredi 5. Combien de colis livres en tout ?",
+      en: "A graph shows parcels delivered each day: Monday 12, Tuesday 8, Wednesday 15, Thursday 10, Friday 5. How many parcels delivered in total?",
+      nl: "Een grafiek toont de bezorgde pakketten per dag: maandag 12, dinsdag 8, woensdag 15, donderdag 10, vrijdag 5. Hoeveel pakketten in totaal bezorgd?"
+    },
+    answer: 50, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les colis de chaque jour.",
+      en: "Add the parcels from each day.",
+      nl: "Tel de pakketten van elke dag op."
+    }
+  },
+  {
+    id: "D1_s_68", category: "D1", level: 1,
+    // 75+85+65+95+80 = 400, 400/5 = 80
+    text: {
+      fr: "Resultats de 5 examens en pourcentage : 75, 85, 65, 95, 80. Quel est le pourcentage moyen ?",
+      en: "Results of 5 exams as percentages: 75, 85, 65, 95, 80. What is the average percentage?",
+      nl: "Resultaten van 5 examens in procenten: 75, 85, 65, 95, 80. Wat is het gemiddelde percentage?"
+    },
+    answer: 80, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 pourcentages puis divise par 5.",
+      en: "Add the 5 percentages then divide by 5.",
+      nl: "Tel de 5 percentages op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_69", category: "D1", level: 1,
+    // 3+5+2+4+6 = 20, 20/5 = 4
+    text: {
+      fr: "Nombre de verres d'eau bus par jour sur 5 jours : 3, 5, 2, 4, 6. Combien de verres en moyenne par jour ?",
+      en: "Glasses of water drunk per day over 5 days: 3, 5, 2, 4, 6. How many glasses on average per day?",
+      nl: "Glazen water gedronken per dag over 5 dagen: 3, 5, 2, 4, 6. Hoeveel glazen gemiddeld per dag?"
+    },
+    answer: 4, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 valeurs puis divise par 5.",
+      en: "Add the 5 values then divide by 5.",
+      nl: "Tel de 5 waarden op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_70", category: "D1", level: 1,
+    // 18+22+14+26+20 = 100, 100/5 = 20
+    text: {
+      fr: "Nombre de cremes glacees vendues par jour : 18, 22, 14, 26, 20. Quelle est la moyenne de ventes par jour ?",
+      en: "Number of ice creams sold per day: 18, 22, 14, 26, 20. What is the average sales per day?",
+      nl: "Aantal verkochte ijsjes per dag: 18, 22, 14, 26, 20. Wat is de gemiddelde verkoop per dag?"
+    },
+    answer: 20, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les 5 nombres puis divise par 5.",
+      en: "Add the 5 numbers then divide by 5.",
+      nl: "Tel de 5 getallen op en deel door 5."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 2 - Additional questions (D1_s_71 to D1_s_91) - 21 questions
+  // ===========================================================================
+  {
+    id: "D1_s_71", category: "D1", level: 2,
+    // 34 - 12 = 22
+    text: {
+      fr: "Dans un tableau, la temperature la plus haute est 34 degres et la plus basse est 12 degres. Quelle est l'etendue ?",
+      en: "In a table, the highest temperature is 34 degrees and the lowest is 12 degrees. What is the range?",
+      nl: "In een tabel is de hoogste temperatuur 34 graden en de laagste 12 graden. Wat is het bereik?"
+    },
+    answer: 22, tolerance: 0.01,
+    hint: {
+      fr: "Etendue = valeur maximale - valeur minimale.",
+      en: "Range = maximum value - minimum value.",
+      nl: "Bereik = maximale waarde - minimale waarde."
+    }
+  },
+  {
+    id: "D1_s_72", category: "D1", level: 2,
+    // 250 - 180 = 70
+    text: {
+      fr: "Ventes mensuelles : le meilleur mois a eu 250 ventes, le pire 180. Quelle est la difference ?",
+      en: "Monthly sales: the best month had 250 sales, the worst 180. What is the difference?",
+      nl: "Maandelijkse verkoop: de beste maand had 250 verkopen, de slechtste 180. Wat is het verschil?"
+    },
+    answer: 70, tolerance: 0.01,
+    hint: {
+      fr: "Soustrais la plus petite valeur de la plus grande.",
+      en: "Subtract the smallest value from the largest.",
+      nl: "Trek de kleinste waarde af van de grootste."
+    }
+  },
+  {
+    id: "D1_s_73", category: "D1", level: 2,
+    // 8 * 15 = 120
+    text: {
+      fr: "La moyenne de 8 mesures de distance est 15 km. Quel est le total des distances parcourues ?",
+      en: "The mean of 8 distance measurements is 15 km. What is the total distance covered?",
+      nl: "Het gemiddelde van 8 afstandsmetingen is 15 km. Wat is de totale afgelegde afstand?"
+    },
+    answer: 120, tolerance: 0.01,
+    hint: {
+      fr: "Total = moyenne x nombre de mesures.",
+      en: "Total = mean x number of measurements.",
+      nl: "Totaal = gemiddelde x aantal metingen."
+    }
+  },
+  {
+    id: "D1_s_74", category: "D1", level: 2,
+    // 5+(-3)+8+(-1)+6 = 15, 15/5 = 3
+    text: {
+      fr: "Gains et pertes en euros sur 5 jours : +5, -3, +8, -1, +6. Quel est le gain moyen par jour ?",
+      en: "Gains and losses in euros over 5 days: +5, -3, +8, -1, +6. What is the average gain per day?",
+      nl: "Winsten en verliezen in euro over 5 dagen: +5, -3, +8, -1, +6. Wat is de gemiddelde winst per dag?"
+    },
+    answer: 3, tolerance: 0.01,
+    hint: {
+      fr: "Additionne tous les gains et pertes puis divise par 5.",
+      en: "Add all gains and losses then divide by 5.",
+      nl: "Tel alle winsten en verliezen op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_75", category: "D1", level: 2,
+    // 24+32+18+26+30 = 130, 130/5 = 26, max=32, 32-26 = 6
+    text: {
+      fr: "Points marques : 24, 32, 18, 26, 30. De combien le meilleur score depasse-t-il la moyenne ?",
+      en: "Points scored: 24, 32, 18, 26, 30. By how much does the best score exceed the mean?",
+      nl: "Gescoorde punten: 24, 32, 18, 26, 30. Hoeveel meer is de beste score dan het gemiddelde?"
+    },
+    answer: 6, tolerance: 0.01,
+    hint: {
+      fr: "Calcule d'abord la moyenne (130/5 = 26), puis soustrais-la du meilleur score.",
+      en: "First calculate the mean (130/5 = 26), then subtract it from the best score.",
+      nl: "Bereken eerst het gemiddelde (130/5 = 26) en trek het af van de beste score."
+    }
+  },
+  {
+    id: "D1_s_76", category: "D1", level: 2,
+    // total = 5*18 = 90, four known: 20+16+22+14 = 72, missing = 90-72 = 18
+    text: {
+      fr: "La moyenne de 5 temperatures est 18 degres. Quatre mesures sont : 20, 16, 22, 14. Quelle est la 5e temperature ?",
+      en: "The mean of 5 temperatures is 18 degrees. Four readings are: 20, 16, 22, 14. What is the 5th temperature?",
+      nl: "Het gemiddelde van 5 temperaturen is 18 graden. Vier metingen zijn: 20, 16, 22, 14. Wat is de 5e temperatuur?"
+    },
+    answer: 18, tolerance: 0.01,
+    hint: {
+      fr: "Total = 5 x 18 = 90. Soustrais la somme des 4 valeurs connues.",
+      en: "Total = 5 x 18 = 90. Subtract the sum of the 4 known values.",
+      nl: "Totaal = 5 x 18 = 90. Trek de som van de 4 bekende waarden af."
+    }
+  },
+  {
+    id: "D1_s_77", category: "D1", level: 2,
+    // Team A: 45+52+38 = 135, Team B: 40+48+50 = 138, diff = 138-135 = 3
+    text: {
+      fr: "Equipe A a marque 45, 52, 38 en 3 matchs. Equipe B a marque 40, 48, 50. Combien de points de plus l'equipe B a-t-elle en tout ?",
+      en: "Team A scored 45, 52, 38 in 3 games. Team B scored 40, 48, 50. How many more points does team B have in total?",
+      nl: "Team A scoorde 45, 52, 38 in 3 wedstrijden. Team B scoorde 40, 48, 50. Hoeveel meer punten heeft team B in totaal?"
+    },
+    answer: 3, tolerance: 0.01,
+    hint: {
+      fr: "Calcule le total de chaque equipe puis fais la difference.",
+      en: "Calculate each team's total then find the difference.",
+      nl: "Bereken het totaal van elk team en vind het verschil."
+    }
+  },
+  {
+    id: "D1_s_78", category: "D1", level: 2,
+    // 72+88+64+96+80 = 400, max=96, min=64, range = 96-64 = 32
+    text: {
+      fr: "Resultats d'un examen : 72, 88, 64, 96, 80. Quelle est l'etendue des resultats ?",
+      en: "Exam results: 72, 88, 64, 96, 80. What is the range of the results?",
+      nl: "Examenresultaten: 72, 88, 64, 96, 80. Wat is het bereik van de resultaten?"
+    },
+    answer: 32, tolerance: 0.01,
+    hint: {
+      fr: "Etendue = valeur maximale - valeur minimale = 96 - 64.",
+      en: "Range = maximum - minimum = 96 - 64.",
+      nl: "Bereik = maximum - minimum = 96 - 64."
+    }
+  },
+  {
+    id: "D1_s_79", category: "D1", level: 2,
+    // 6 * 25 = 150
+    text: {
+      fr: "La moyenne de 6 lancers au javelot est 25 metres. Quel est le total des distances des 6 lancers ?",
+      en: "The mean of 6 javelin throws is 25 metres. What is the total distance of the 6 throws?",
+      nl: "Het gemiddelde van 6 speerworpen is 25 meter. Wat is de totale afstand van de 6 worpen?"
+    },
+    answer: 150, tolerance: 0.01,
+    hint: {
+      fr: "Total = moyenne x nombre de lancers.",
+      en: "Total = mean x number of throws.",
+      nl: "Totaal = gemiddelde x aantal worpen."
+    }
+  },
+  {
+    id: "D1_s_80", category: "D1", level: 2,
+    // Jan=120, Feb=95, Mar=110, Apr=130, May=105, Jun=140, Jul=80, Aug=100
+    // Max month = Jun (140), Min month = Jul (80), diff = 60
+    text: {
+      fr: "Ventes mensuelles : jan=120, fev=95, mar=110, avr=130, mai=105, jun=140, jul=80, aou=100. Quelle est l'etendue des ventes ?",
+      en: "Monthly sales: Jan=120, Feb=95, Mar=110, Apr=130, May=105, Jun=140, Jul=80, Aug=100. What is the range of sales?",
+      nl: "Maandelijkse verkoop: jan=120, feb=95, mrt=110, apr=130, mei=105, jun=140, jul=80, aug=100. Wat is het bereik van de verkoop?"
+    },
+    answer: 60, tolerance: 0.01,
+    hint: {
+      fr: "Etendue = valeur maximale (140) - valeur minimale (80).",
+      en: "Range = maximum (140) - minimum (80).",
+      nl: "Bereik = maximum (140) - minimum (80)."
+    }
+  },
+  {
+    id: "D1_s_81", category: "D1", level: 2,
+    // 10+(-5)+7+(-2)+15 = 25, 25/5 = 5
+    text: {
+      fr: "Temperatures sur 5 jours d'hiver : 10, -5, 7, -2, 15. Quelle est la temperature moyenne ?",
+      en: "Temperatures over 5 winter days: 10, -5, 7, -2, 15. What is the average temperature?",
+      nl: "Temperaturen over 5 winterdagen: 10, -5, 7, -2, 15. Wat is de gemiddelde temperatuur?"
+    },
+    answer: 5, tolerance: 0.01,
+    hint: {
+      fr: "Additionne les temperatures (attention aux negatifs) puis divise par 5.",
+      en: "Add the temperatures (watch the negatives) then divide by 5.",
+      nl: "Tel de temperaturen op (let op de negatieve getallen) en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_82", category: "D1", level: 2,
+    // Filles: 14+16+12 = 42, Garcons: 10+18+11 = 39, Filles > Garcons by 42-39 = 3
+    text: {
+      fr: "Notes des filles : 14, 16, 12. Notes des garcons : 10, 18, 11. De combien le total des filles depasse-t-il celui des garcons ?",
+      en: "Girls' marks: 14, 16, 12. Boys' marks: 10, 18, 11. By how much does the girls' total exceed the boys'?",
+      nl: "Punten meisjes: 14, 16, 12. Punten jongens: 10, 18, 11. Hoeveel meer is het totaal van de meisjes dan dat van de jongens?"
+    },
+    answer: 3, tolerance: 0.01,
+    hint: {
+      fr: "Calcule le total des filles et celui des garcons, puis fais la difference.",
+      en: "Calculate the girls' total and the boys' total, then find the difference.",
+      nl: "Bereken het totaal van de meisjes en van de jongens en vind het verschil."
+    }
+  },
+  {
+    id: "D1_s_83", category: "D1", level: 2,
+    // 15+20+25+30+10 = 100, 100/5 = 20, min=10, 20-10 = 10
+    text: {
+      fr: "Ventes quotidiennes : 15, 20, 25, 30, 10. De combien la moyenne depasse-t-elle la valeur la plus basse ?",
+      en: "Daily sales: 15, 20, 25, 30, 10. By how much does the mean exceed the lowest value?",
+      nl: "Dagelijkse verkoop: 15, 20, 25, 30, 10. Hoeveel meer is het gemiddelde dan de laagste waarde?"
+    },
+    answer: 10, tolerance: 0.01,
+    hint: {
+      fr: "Calcule la moyenne (100/5 = 20), puis soustrais la valeur la plus basse (10).",
+      en: "Calculate the mean (100/5 = 20), then subtract the lowest value (10).",
+      nl: "Bereken het gemiddelde (100/5 = 20) en trek de laagste waarde (10) af."
+    }
+  },
+  {
+    id: "D1_s_84", category: "D1", level: 2,
+    // 7 * 12 = 84
+    text: {
+      fr: "La temperature moyenne sur 7 jours est 12 degres. Quel est le total des temperatures enregistrees ?",
+      en: "The average temperature over 7 days is 12 degrees. What is the total of the recorded temperatures?",
+      nl: "De gemiddelde temperatuur over 7 dagen is 12 graden. Wat is het totaal van de geregistreerde temperaturen?"
+    },
+    answer: 84, tolerance: 0.01,
+    hint: {
+      fr: "Total = moyenne x nombre de jours = 12 x 7.",
+      en: "Total = mean x number of days = 12 x 7.",
+      nl: "Totaal = gemiddelde x aantal dagen = 12 x 7."
+    }
+  },
+  {
+    id: "D1_s_85", category: "D1", level: 2,
+    // 16+22+18+24+20 = 100, 100/5 = 20, Thu(24) - Mon(16) = 8
+    text: {
+      fr: "Nombre de clients par jour : lundi 16, mardi 22, mercredi 18, jeudi 24, vendredi 20. Combien de clients de plus le jeudi que le lundi ?",
+      en: "Customers per day: Monday 16, Tuesday 22, Wednesday 18, Thursday 24, Friday 20. How many more customers on Thursday than Monday?",
+      nl: "Klanten per dag: maandag 16, dinsdag 22, woensdag 18, donderdag 24, vrijdag 20. Hoeveel meer klanten op donderdag dan op maandag?"
+    },
+    answer: 8, tolerance: 0.01,
+    hint: {
+      fr: "Soustrais le nombre de lundi de celui de jeudi : 24 - 16.",
+      en: "Subtract Monday's number from Thursday's: 24 - 16.",
+      nl: "Trek het aantal van maandag af van dat van donderdag: 24 - 16."
+    }
+  },
+  {
+    id: "D1_s_86", category: "D1", level: 2,
+    // 4+(-6)+3+(-1)+5 = 5, 5/5 = 1
+    text: {
+      fr: "Variations de stock sur 5 jours : +4, -6, +3, -1, +5. Quelle est la variation moyenne par jour ?",
+      en: "Stock changes over 5 days: +4, -6, +3, -1, +5. What is the average change per day?",
+      nl: "Voorraadwijzigingen over 5 dagen: +4, -6, +3, -1, +5. Wat is de gemiddelde wijziging per dag?"
+    },
+    answer: 1, tolerance: 0.01,
+    hint: {
+      fr: "Additionne toutes les variations puis divise par 5.",
+      en: "Add all the changes then divide by 5.",
+      nl: "Tel alle wijzigingen op en deel door 5."
+    }
+  },
+  {
+    id: "D1_s_87", category: "D1", level: 2,
+    // total = 4*20 = 80, three known: 22+18+16 = 56, missing = 80-56 = 24
+    text: {
+      fr: "La moyenne de 4 temps de course est 20 secondes. Trois temps sont : 22, 18, 16. Quel est le 4e temps ?",
+      en: "The mean of 4 race times is 20 seconds. Three times are: 22, 18, 16. What is the 4th time?",
+      nl: "Het gemiddelde van 4 looptijden is 20 seconden. Drie tijden zijn: 22, 18, 16. Wat is de 4e tijd?"
+    },
+    answer: 24, tolerance: 0.01,
+    hint: {
+      fr: "Total = 4 x 20 = 80. Soustrais la somme des 3 temps connus.",
+      en: "Total = 4 x 20 = 80. Subtract the sum of the 3 known times.",
+      nl: "Totaal = 4 x 20 = 80. Trek de som van de 3 bekende tijden af."
+    }
+  },
+  {
+    id: "D1_s_88", category: "D1", level: 2,
+    // 35+45+25+55+40 = 200, 200/5 = 40, max(55)-mean(40) = 15
+    text: {
+      fr: "Production quotidienne d'une usine : 35, 45, 25, 55, 40. De combien le jour le plus productif depasse-t-il la moyenne ?",
+      en: "Daily factory production: 35, 45, 25, 55, 40. By how much does the most productive day exceed the mean?",
+      nl: "Dagelijkse fabrieksproductie: 35, 45, 25, 55, 40. Hoeveel meer is de meest productieve dag dan het gemiddelde?"
+    },
+    answer: 15, tolerance: 0.01,
+    hint: {
+      fr: "Moyenne = 200/5 = 40. Difference = 55 - 40.",
+      en: "Mean = 200/5 = 40. Difference = 55 - 40.",
+      nl: "Gemiddelde = 200/5 = 40. Verschil = 55 - 40."
+    }
+  },
+  {
+    id: "D1_s_89", category: "D1", level: 2,
+    // Classe A: 12+14+16 = 42, Classe B: 15+13+11 = 39
+    // Mean A = 42/3 = 14, Mean B = 39/3 = 13, diff = 14-13 = 1
+    text: {
+      fr: "Notes classe A : 12, 14, 16. Notes classe B : 15, 13, 11. De combien la moyenne de A depasse-t-elle celle de B ?",
+      en: "Class A marks: 12, 14, 16. Class B marks: 15, 13, 11. By how much does A's mean exceed B's mean?",
+      nl: "Punten klas A: 12, 14, 16. Punten klas B: 15, 13, 11. Hoeveel meer is het gemiddelde van A dan dat van B?"
+    },
+    answer: 1, tolerance: 0.01,
+    hint: {
+      fr: "Moyenne A = 42/3 = 14. Moyenne B = 39/3 = 13. Difference = 14 - 13.",
+      en: "Mean A = 42/3 = 14. Mean B = 39/3 = 13. Difference = 14 - 13.",
+      nl: "Gemiddelde A = 42/3 = 14. Gemiddelde B = 39/3 = 13. Verschil = 14 - 13."
+    }
+  },
+  {
+    id: "D1_s_90", category: "D1", level: 2,
+    // 150+200+175+125+100+250 = 1000, max=250, min=100, range = 250-100 = 150
+    text: {
+      fr: "Depenses mensuelles en euros : 150, 200, 175, 125, 100, 250. Quelle est l'etendue des depenses ?",
+      en: "Monthly expenses in euros: 150, 200, 175, 125, 100, 250. What is the range of expenses?",
+      nl: "Maandelijkse uitgaven in euro: 150, 200, 175, 125, 100, 250. Wat is het bereik van de uitgaven?"
+    },
+    answer: 150, tolerance: 0.01,
+    hint: {
+      fr: "Etendue = valeur maximale (250) - valeur minimale (100).",
+      en: "Range = maximum (250) - minimum (100).",
+      nl: "Bereik = maximum (250) - minimum (100)."
+    }
+  },
+  {
+    id: "D1_s_91", category: "D1", level: 2,
+    // 9 * 11 = 99
+    text: {
+      fr: "La moyenne de buts par match sur 9 matchs est 11. Combien de buts au total ?",
+      en: "The average goals per game over 9 games is 11. How many goals in total?",
+      nl: "Het gemiddeld aantal doelpunten per wedstrijd over 9 wedstrijden is 11. Hoeveel doelpunten in totaal?"
+    },
+    answer: 99, tolerance: 0.01,
+    hint: {
+      fr: "Total = moyenne x nombre de matchs = 11 x 9.",
+      en: "Total = mean x number of games = 11 x 9.",
+      nl: "Totaal = gemiddelde x aantal wedstrijden = 11 x 9."
+    }
+  },
+
+  // ===========================================================================
+  // LEVEL 3 - Additional questions (D1_s_92 to D1_s_111) - 20 questions
+  // ===========================================================================
+  {
+    id: "D1_s_92", category: "D1", level: 3,
+    // (3*12 + 2*18 + 1*6) / (3+2+1) = (36+36+6)/6 = 78/6 = 13
+    text: {
+      fr: "Notes et coefficients : 12 (coeff 3), 18 (coeff 2), 6 (coeff 1). Quelle est la moyenne ponderee ?",
+      en: "Marks and coefficients: 12 (coeff 3), 18 (coeff 2), 6 (coeff 1). What is the weighted mean?",
+      nl: "Punten en coefficienten: 12 (coeff 3), 18 (coeff 2), 6 (coeff 1). Wat is het gewogen gemiddelde?"
+    },
+    answer: 13, tolerance: 0.01,
+    hint: {
+      fr: "Calcule (3x12 + 2x18 + 1x6) / (3+2+1) = 78/6.",
+      en: "Calculate (3x12 + 2x18 + 1x6) / (3+2+1) = 78/6.",
+      nl: "Bereken (3x12 + 2x18 + 1x6) / (3+2+1) = 78/6."
+    }
+  },
+  {
+    id: "D1_s_93", category: "D1", level: 3,
+    // Mean of 6 = 10, total = 60. Remove 18 -> new total = 42, new mean = 42/5 = 8.4
+    text: {
+      fr: "La moyenne de 6 scores est 10. On retire le score 18. Quelle est la nouvelle moyenne des 5 scores restants ?",
+      en: "The mean of 6 scores is 10. The score 18 is removed. What is the new mean of the 5 remaining scores?",
+      nl: "Het gemiddelde van 6 scores is 10. De score 18 wordt verwijderd. Wat is het nieuwe gemiddelde van de 5 resterende scores?"
+    },
+    answer: 8.4, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 6 x 10 = 60. Retire 18. Divise 42 par 5.",
+      en: "Initial total = 6 x 10 = 60. Remove 18. Divide 42 by 5.",
+      nl: "Oorspronkelijk totaal = 6 x 10 = 60. Trek 18 af. Deel 42 door 5."
+    }
+  },
+  {
+    id: "D1_s_94", category: "D1", level: 3,
+    // (15*20 + 10*16) / (15+10) = (300+160)/25 = 460/25 = 18.4
+    text: {
+      fr: "Groupe A : 15 eleves, moyenne 20. Groupe B : 10 eleves, moyenne 16. Quelle est la moyenne de l'ensemble ?",
+      en: "Group A: 15 students, mean 20. Group B: 10 students, mean 16. What is the overall mean?",
+      nl: "Groep A: 15 leerlingen, gemiddelde 20. Groep B: 10 leerlingen, gemiddelde 16. Wat is het totale gemiddelde?"
+    },
+    answer: 18.4, tolerance: 0.01,
+    hint: {
+      fr: "Total A = 15 x 20 = 300. Total B = 10 x 16 = 160. Moyenne = 460/25.",
+      en: "Total A = 15 x 20 = 300. Total B = 10 x 16 = 160. Mean = 460/25.",
+      nl: "Totaal A = 15 x 20 = 300. Totaal B = 10 x 16 = 160. Gemiddelde = 460/25."
+    }
+  },
+  {
+    id: "D1_s_95", category: "D1", level: 3,
+    // Total needed = 15 * 6 = 90. Sum of 5 = 12+18+14+16+10 = 70. Missing = 90-70 = 20
+    text: {
+      fr: "Cinq notes sont : 12, 18, 14, 16, 10. Quelle 6e note faut-il pour obtenir une moyenne de 15 ?",
+      en: "Five marks are: 12, 18, 14, 16, 10. What 6th mark is needed for a mean of 15?",
+      nl: "Vijf punten zijn: 12, 18, 14, 16, 10. Welk 6e punt is nodig voor een gemiddelde van 15?"
+    },
+    answer: 20, tolerance: 0.01,
+    hint: {
+      fr: "Total necessaire = 15 x 6 = 90. Somme des 5 notes = 70. Manquant = 90 - 70.",
+      en: "Needed total = 15 x 6 = 90. Sum of 5 marks = 70. Missing = 90 - 70.",
+      nl: "Benodigd totaal = 15 x 6 = 90. Som van 5 punten = 70. Ontbrekend = 90 - 70."
+    }
+  },
+  {
+    id: "D1_s_96", category: "D1", level: 3,
+    // Mean of 9 = 20, total = 180. Add value 30: new total = 210, new mean = 210/10 = 21
+    text: {
+      fr: "La moyenne de 9 mesures de vitesse est 20 km/h. On ajoute une mesure de 30 km/h. Quelle est la nouvelle moyenne des 10 mesures ?",
+      en: "The mean of 9 speed measurements is 20 km/h. A measurement of 30 km/h is added. What is the new mean of the 10 measurements?",
+      nl: "Het gemiddelde van 9 snelheidsmetingen is 20 km/u. Een meting van 30 km/u wordt toegevoegd. Wat is het nieuwe gemiddelde van de 10 metingen?"
+    },
+    answer: 21, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 9 x 20 = 180. Ajoute 30. Divise 210 par 10.",
+      en: "Initial total = 9 x 20 = 180. Add 30. Divide 210 by 10.",
+      nl: "Oorspronkelijk totaal = 9 x 20 = 180. Tel 30 erbij. Deel 210 door 10."
+    }
+  },
+  {
+    id: "D1_s_97", category: "D1", level: 3,
+    // (4*15 + 3*10 + 2*20 + 1*8) / (4+3+2+1) = (60+30+40+8)/10 = 138/10 = 13.8
+    text: {
+      fr: "Matieres : maths (15, coeff 4), francais (10, coeff 3), sport (20, coeff 2), musique (8, coeff 1). Moyenne ponderee ?",
+      en: "Subjects: maths (15, coeff 4), French (10, coeff 3), sport (20, coeff 2), music (8, coeff 1). Weighted mean?",
+      nl: "Vakken: wiskunde (15, coeff 4), Frans (10, coeff 3), sport (20, coeff 2), muziek (8, coeff 1). Gewogen gemiddelde?"
+    },
+    answer: 13.8, tolerance: 0.01,
+    hint: {
+      fr: "Calcule (4x15 + 3x10 + 2x20 + 1x8) / (4+3+2+1) = 138/10.",
+      en: "Calculate (4x15 + 3x10 + 2x20 + 1x8) / (4+3+2+1) = 138/10.",
+      nl: "Bereken (4x15 + 3x10 + 2x20 + 1x8) / (4+3+2+1) = 138/10."
+    }
+  },
+  {
+    id: "D1_s_98", category: "D1", level: 3,
+    // Mean of 8 = 25, total = 200. Remove highest (40) and lowest (10): new total = 200-40-10 = 150, new mean = 150/6 = 25
+    text: {
+      fr: "La moyenne de 8 notes est 25. On retire la plus haute (40) et la plus basse (10). Quelle est la moyenne des 6 notes restantes ?",
+      en: "The mean of 8 marks is 25. The highest (40) and lowest (10) are removed. What is the mean of the 6 remaining marks?",
+      nl: "Het gemiddelde van 8 punten is 25. Het hoogste (40) en het laagste (10) worden verwijderd. Wat is het gemiddelde van de 6 resterende punten?"
+    },
+    answer: 25, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 8 x 25 = 200. Retire 40 et 10 : 150. Divise par 6.",
+      en: "Initial total = 8 x 25 = 200. Remove 40 and 10: 150. Divide by 6.",
+      nl: "Oorspronkelijk totaal = 8 x 25 = 200. Trek 40 en 10 af: 150. Deel door 6."
+    }
+  },
+  {
+    id: "D1_s_99", category: "D1", level: 3,
+    // Mean of 5 = 12, total = 60. Each value doubled: new total = 120, new mean = 120/5 = 24
+    text: {
+      fr: "La moyenne de 5 donnees est 12. On multiplie chaque donnee par 2. Quelle est la nouvelle moyenne ?",
+      en: "The mean of 5 data values is 12. Each value is multiplied by 2. What is the new mean?",
+      nl: "Het gemiddelde van 5 gegevens is 12. Elke waarde wordt vermenigvuldigd met 2. Wat is het nieuwe gemiddelde?"
+    },
+    answer: 24, tolerance: 0.01,
+    hint: {
+      fr: "Quand on multiplie chaque valeur par un nombre, la moyenne est aussi multipliee par ce nombre.",
+      en: "When each value is multiplied by a number, the mean is also multiplied by that number.",
+      nl: "Als elke waarde met een getal wordt vermenigvuldigd, wordt het gemiddelde ook met dat getal vermenigvuldigd."
+    }
+  },
+  {
+    id: "D1_s_100", category: "D1", level: 3,
+    // (12*30 + 8*20) / (12+8) = (360+160)/20 = 520/20 = 26
+    text: {
+      fr: "12 garcons ont une moyenne de 30 points. 8 filles ont une moyenne de 20 points. Quelle est la moyenne de tous les eleves ?",
+      en: "12 boys have a mean of 30 points. 8 girls have a mean of 20 points. What is the mean of all the students?",
+      nl: "12 jongens hebben een gemiddelde van 30 punten. 8 meisjes hebben een gemiddelde van 20 punten. Wat is het gemiddelde van alle leerlingen?"
+    },
+    answer: 26, tolerance: 0.01,
+    hint: {
+      fr: "Total garcons = 12 x 30 = 360. Total filles = 8 x 20 = 160. Moyenne = 520/20.",
+      en: "Boys' total = 12 x 30 = 360. Girls' total = 8 x 20 = 160. Mean = 520/20.",
+      nl: "Totaal jongens = 12 x 30 = 360. Totaal meisjes = 8 x 20 = 160. Gemiddelde = 520/20."
+    }
+  },
+  {
+    id: "D1_s_101", category: "D1", level: 3,
+    // Mean of 12 = 15, total = 180. Replace 24 by 12: new total = 180-24+12 = 168, new mean = 168/12 = 14
+    text: {
+      fr: "La moyenne de 12 valeurs est 15. On remplace une valeur (24) par 12. Quelle est la nouvelle moyenne ?",
+      en: "The mean of 12 values is 15. One value (24) is replaced by 12. What is the new mean?",
+      nl: "Het gemiddelde van 12 waarden is 15. Een waarde (24) wordt vervangen door 12. Wat is het nieuwe gemiddelde?"
+    },
+    answer: 14, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 12 x 15 = 180. Retire 24, ajoute 12 : 168. Divise par 12.",
+      en: "Initial total = 12 x 15 = 180. Remove 24, add 12: 168. Divide by 12.",
+      nl: "Oorspronkelijk totaal = 12 x 15 = 180. Trek 24 af, tel 12 erbij: 168. Deel door 12."
+    }
+  },
+  {
+    id: "D1_s_102", category: "D1", level: 3,
+    // Total needed = 14 * 7 = 98. Sum of 6 = 10+16+12+18+8+20 = 84. Missing = 98-84 = 14
+    text: {
+      fr: "Six resultats sont : 10, 16, 12, 18, 8, 20. Quel 7e resultat faut-il pour obtenir une moyenne de 14 ?",
+      en: "Six results are: 10, 16, 12, 18, 8, 20. What 7th result is needed for a mean of 14?",
+      nl: "Zes resultaten zijn: 10, 16, 12, 18, 8, 20. Welk 7e resultaat is nodig voor een gemiddelde van 14?"
+    },
+    answer: 14, tolerance: 0.01,
+    hint: {
+      fr: "Total necessaire = 14 x 7 = 98. Somme des 6 resultats = 84. Manquant = 98 - 84.",
+      en: "Needed total = 14 x 7 = 98. Sum of 6 results = 84. Missing = 98 - 84.",
+      nl: "Benodigd totaal = 14 x 7 = 98. Som van 6 resultaten = 84. Ontbrekend = 98 - 84."
+    }
+  },
+  {
+    id: "D1_s_103", category: "D1", level: 3,
+    // Mean of 4 = 18, total = 72. Add two values (10 and 14): new total = 72+10+14 = 96, new mean = 96/6 = 16
+    text: {
+      fr: "La moyenne de 4 scores est 18. On ajoute deux scores de 10 et 14. Quelle est la nouvelle moyenne des 6 scores ?",
+      en: "The mean of 4 scores is 18. Two scores of 10 and 14 are added. What is the new mean of the 6 scores?",
+      nl: "Het gemiddelde van 4 scores is 18. Twee scores van 10 en 14 worden toegevoegd. Wat is het nieuwe gemiddelde van de 6 scores?"
+    },
+    answer: 16, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 4 x 18 = 72. Ajoute 10 et 14 : 96. Divise par 6.",
+      en: "Initial total = 4 x 18 = 72. Add 10 and 14: 96. Divide by 6.",
+      nl: "Oorspronkelijk totaal = 4 x 18 = 72. Tel 10 en 14 erbij: 96. Deel door 6."
+    }
+  },
+  {
+    id: "D1_s_104", category: "D1", level: 3,
+    // (5*14 + 3*18 + 2*10) / (5+3+2) = (70+54+20)/10 = 144/10 = 14.4
+    text: {
+      fr: "Resultats d'athletisme : sprint (14 s, coeff 5), saut (18 pts, coeff 3), lancer (10 m, coeff 2). Moyenne ponderee ?",
+      en: "Athletics results: sprint (14 s, coeff 5), jump (18 pts, coeff 3), throw (10 m, coeff 2). Weighted mean?",
+      nl: "Atletiekresultaten: sprint (14 s, coeff 5), sprong (18 ptn, coeff 3), worp (10 m, coeff 2). Gewogen gemiddelde?"
+    },
+    answer: 14.4, tolerance: 0.01,
+    hint: {
+      fr: "Calcule (5x14 + 3x18 + 2x10) / (5+3+2) = 144/10.",
+      en: "Calculate (5x14 + 3x18 + 2x10) / (5+3+2) = 144/10.",
+      nl: "Bereken (5x14 + 3x18 + 2x10) / (5+3+2) = 144/10."
+    }
+  },
+  {
+    id: "D1_s_105", category: "D1", level: 3,
+    // Mean of 10 = 8, total = 80. Remove 3 values (5, 10, 15 -> sum=30): new total = 80-30 = 50, new mean = 50/7 = 7.14 (rounded to 2 dp)
+    text: {
+      fr: "La moyenne de 10 valeurs est 8. On retire les valeurs 5, 10 et 15. Quelle est la moyenne des 7 valeurs restantes ?",
+      en: "The mean of 10 values is 8. The values 5, 10 and 15 are removed. What is the mean of the 7 remaining values?",
+      nl: "Het gemiddelde van 10 waarden is 8. De waarden 5, 10 en 15 worden verwijderd. Wat is het gemiddelde van de 7 resterende waarden?"
+    },
+    answer: 7.14, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 80. Retire 5+10+15 = 30. Nouveau total = 50. Divise par 7.",
+      en: "Initial total = 80. Remove 5+10+15 = 30. New total = 50. Divide by 7.",
+      nl: "Oorspronkelijk totaal = 80. Trek 5+10+15 = 30 af. Nieuw totaal = 50. Deel door 7."
+    }
+  },
+  {
+    id: "D1_s_106", category: "D1", level: 3,
+    // (20*15 + 30*25) / (20+30) = (300+750)/50 = 1050/50 = 21
+    text: {
+      fr: "Section A : 20 employes, salaire moyen 15 euros/h. Section B : 30 employes, salaire moyen 25 euros/h. Quel est le salaire moyen global ?",
+      en: "Section A: 20 employees, average salary 15 euros/h. Section B: 30 employees, average salary 25 euros/h. What is the overall average salary?",
+      nl: "Afdeling A: 20 werknemers, gemiddeld loon 15 euro/u. Afdeling B: 30 werknemers, gemiddeld loon 25 euro/u. Wat is het globale gemiddelde loon?"
+    },
+    answer: 21, tolerance: 0.01,
+    hint: {
+      fr: "Total A = 20 x 15 = 300. Total B = 30 x 25 = 750. Moyenne = 1050/50.",
+      en: "Total A = 20 x 15 = 300. Total B = 30 x 25 = 750. Mean = 1050/50.",
+      nl: "Totaal A = 20 x 15 = 300. Totaal B = 30 x 25 = 750. Gemiddelde = 1050/50."
+    }
+  },
+  {
+    id: "D1_s_107", category: "D1", level: 3,
+    // Mean of 6 = 14, total = 84. Each value reduced by 2: new total = 84 - 6*2 = 72, new mean = 72/6 = 12
+    text: {
+      fr: "La moyenne de 6 temperatures est 14 degres. On soustrait 2 degres a chaque mesure. Quelle est la nouvelle moyenne ?",
+      en: "The mean of 6 temperatures is 14 degrees. 2 degrees are subtracted from each reading. What is the new mean?",
+      nl: "Het gemiddelde van 6 temperaturen is 14 graden. Er worden 2 graden afgetrokken van elke meting. Wat is het nieuwe gemiddelde?"
+    },
+    answer: 12, tolerance: 0.01,
+    hint: {
+      fr: "Quand on soustrait un nombre a chaque valeur, la moyenne diminue de ce meme nombre : 14 - 2 = 12.",
+      en: "When you subtract a number from each value, the mean decreases by that number: 14 - 2 = 12.",
+      nl: "Als je een getal van elke waarde aftrekt, daalt het gemiddelde met datzelfde getal: 14 - 2 = 12."
+    }
+  },
+  {
+    id: "D1_s_108", category: "D1", level: 3,
+    // Mean of 5 first = 16, total = 80. Mean of 3 next = 10, total = 30. Overall = (80+30)/8 = 110/8 = 13.75
+    text: {
+      fr: "Les 5 premiers coureurs ont un temps moyen de 16 minutes. Les 3 suivants ont un temps moyen de 10 minutes. Quel est le temps moyen des 8 coureurs ?",
+      en: "The first 5 runners have a mean time of 16 minutes. The next 3 have a mean time of 10 minutes. What is the mean time of all 8 runners?",
+      nl: "De eerste 5 lopers hebben een gemiddelde tijd van 16 minuten. De volgende 3 hebben een gemiddelde tijd van 10 minuten. Wat is de gemiddelde tijd van alle 8 lopers?"
+    },
+    answer: 13.75, tolerance: 0.01,
+    hint: {
+      fr: "Total 1er groupe = 5 x 16 = 80. Total 2e groupe = 3 x 10 = 30. Moyenne = 110/8.",
+      en: "Total 1st group = 5 x 16 = 80. Total 2nd group = 3 x 10 = 30. Mean = 110/8.",
+      nl: "Totaal 1e groep = 5 x 16 = 80. Totaal 2e groep = 3 x 10 = 30. Gemiddelde = 110/8."
+    }
+  },
+  {
+    id: "D1_s_109", category: "D1", level: 3,
+    // Mean of 8 = 22, total = 176. Replace value 30 by unknown x so new mean = 20: 8*20 = 160, so new total = 160.
+    // 176 - 30 + x = 160, x = 160 - 146 = 14
+    text: {
+      fr: "La moyenne de 8 valeurs est 22. On remplace une valeur (30) par une autre pour obtenir une moyenne de 20. Quelle est la nouvelle valeur ?",
+      en: "The mean of 8 values is 22. One value (30) is replaced to get a mean of 20. What is the new value?",
+      nl: "Het gemiddelde van 8 waarden is 22. Een waarde (30) wordt vervangen om een gemiddelde van 20 te krijgen. Wat is de nieuwe waarde?"
+    },
+    answer: 14, tolerance: 0.01,
+    hint: {
+      fr: "Ancien total = 176. Nouveau total voulu = 160. Nouvelle valeur = 30 - (176 - 160) = 14.",
+      en: "Old total = 176. New target total = 160. New value = 30 - (176 - 160) = 14.",
+      nl: "Oud totaal = 176. Nieuw gewenst totaal = 160. Nieuwe waarde = 30 - (176 - 160) = 14."
+    }
+  },
+  {
+    id: "D1_s_110", category: "D1", level: 3,
+    // (2*20 + 5*12 + 3*16) / (2+5+3) = (40+60+48)/10 = 148/10 = 14.8
+    text: {
+      fr: "3 epreuves : epreuve A (20 points, coeff 2), epreuve B (12 points, coeff 5), epreuve C (16 points, coeff 3). Moyenne ponderee ?",
+      en: "3 tests: test A (20 points, coeff 2), test B (12 points, coeff 5), test C (16 points, coeff 3). Weighted mean?",
+      nl: "3 proeven: proef A (20 punten, coeff 2), proef B (12 punten, coeff 5), proef C (16 punten, coeff 3). Gewogen gemiddelde?"
+    },
+    answer: 14.8, tolerance: 0.01,
+    hint: {
+      fr: "Calcule (2x20 + 5x12 + 3x16) / (2+5+3) = 148/10.",
+      en: "Calculate (2x20 + 5x12 + 3x16) / (2+5+3) = 148/10.",
+      nl: "Bereken (2x20 + 5x12 + 3x16) / (2+5+3) = 148/10."
+    }
+  },
+  {
+    id: "D1_s_111", category: "D1", level: 3,
+    // Mean of 6 = 15, total = 90. Add 3 values each equal to 21: new total = 90 + 3*21 = 90+63 = 153, new mean = 153/9 = 17
+    text: {
+      fr: "La moyenne de 6 notes est 15. On ajoute 3 notes de 21 chacune. Quelle est la nouvelle moyenne des 9 notes ?",
+      en: "The mean of 6 marks is 15. Three marks of 21 each are added. What is the new mean of the 9 marks?",
+      nl: "Het gemiddelde van 6 punten is 15. Er worden 3 punten van elk 21 toegevoegd. Wat is het nieuwe gemiddelde van de 9 punten?"
+    },
+    answer: 17, tolerance: 0.01,
+    hint: {
+      fr: "Total initial = 6 x 15 = 90. Ajoute 3 x 21 = 63. Nouveau total = 153. Divise par 9.",
+      en: "Initial total = 6 x 15 = 90. Add 3 x 21 = 63. New total = 153. Divide by 9.",
+      nl: "Oorspronkelijk totaal = 6 x 15 = 90. Tel 3 x 21 = 63 erbij. Nieuw totaal = 153. Deel door 9."
     }
   }
 ];

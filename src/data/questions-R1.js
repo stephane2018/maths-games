@@ -309,6 +309,378 @@ export const questions = [
     answer: 10, tolerance: 0,
     hint: { fr: "Fille = x, Père = 4x. Dans 10 ans : 4x + 10 = 2,5(x + 10). 4x + 10 = 2,5x + 25. 1,5x = 15, x = 10.", en: "Daughter = x, Father = 4x. In 10 years: 4x + 10 = 2.5(x + 10). 1.5x = 15, x = 10.", nl: "Dochter = x, Vader = 4x. Over 10 jaar: 4x + 10 = 2,5(x + 10). 1,5x = 15, x = 10." }
   },
+
+  // ===================== Level 1 — Simple word problems (51–70) =====================
+  {
+    id: "R1_s_51", category: "R1", level: 1,
+    text: { fr: "Un fleuriste a 56 roses. Il fait des bouquets de 8 roses. Combien de bouquets peut-il faire ?", en: "A florist has 56 roses. He makes bouquets of 8 roses. How many bouquets can he make?", nl: "Een bloemist heeft 56 rozen. Hij maakt boeketten van 8 rozen. Hoeveel boeketten kan hij maken?" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "56 ÷ 8 = 7.", en: "56 ÷ 8 = 7.", nl: "56 ÷ 8 = 7." }
+  },
+  {
+    id: "R1_s_52", category: "R1", level: 1,
+    text: { fr: "Léo mesure 132 cm. Sa sœur mesure 19 cm de moins. Combien mesure sa sœur ?", en: "Léo is 132 cm tall. His sister is 19 cm shorter. How tall is his sister?", nl: "Léo is 132 cm groot. Zijn zus is 19 cm kleiner. Hoe groot is zijn zus?" },
+    answer: 113, tolerance: 0, unit: "cm",
+    hint: { fr: "132 - 19 = 113.", en: "132 - 19 = 113.", nl: "132 - 19 = 113." }
+  },
+  {
+    id: "R1_s_53", category: "R1", level: 1,
+    text: { fr: "Maman achète 3 kg de bananes à 2 € le kilo. Combien paie-t-elle ?", en: "Mum buys 3 kg of bananas at €2 per kilo. How much does she pay?", nl: "Mama koopt 3 kg bananen aan €2 per kilo. Hoeveel betaalt ze?" },
+    answer: 6, tolerance: 0, unit: "€",
+    hint: { fr: "3 × 2 = 6.", en: "3 × 2 = 6.", nl: "3 × 2 = 6." }
+  },
+  {
+    id: "R1_s_54", category: "R1", level: 1,
+    text: { fr: "Un parking a 5 rangées de 12 places. Combien de voitures peut-il contenir ?", en: "A car park has 5 rows of 12 spaces. How many cars can it hold?", nl: "Een parkeerplaats heeft 5 rijen van 12 plaatsen. Hoeveel auto's passen erin?" },
+    answer: 60, tolerance: 0,
+    hint: { fr: "5 × 12 = 60.", en: "5 × 12 = 60.", nl: "5 × 12 = 60." }
+  },
+  {
+    id: "R1_s_55", category: "R1", level: 1,
+    text: { fr: "Grand-père a 72 ans. Petit-fils a 63 ans de moins. Quel âge a le petit-fils ?", en: "Grandfather is 72. His grandson is 63 years younger. How old is the grandson?", nl: "Opa is 72 jaar. Zijn kleinzoon is 63 jaar jonger. Hoe oud is de kleinzoon?" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "72 - 63 = 9.", en: "72 - 63 = 9.", nl: "72 - 63 = 9." }
+  },
+  {
+    id: "R1_s_56", category: "R1", level: 1,
+    text: { fr: "Un triangle équilatéral a un côté de 11 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 11 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 11 cm. Wat is de omtrek?" },
+    answer: 33, tolerance: 0, unit: "cm",
+    hint: { fr: "3 × 11 = 33.", en: "3 × 11 = 33.", nl: "3 × 11 = 33." }
+  },
+  {
+    id: "R1_s_57", category: "R1", level: 1,
+    text: { fr: "Un boulanger prépare 84 croissants. Il en vend 59 le matin. Combien lui en reste-t-il ?", en: "A baker prepares 84 croissants. He sells 59 in the morning. How many are left?", nl: "Een bakker bereidt 84 croissants. Hij verkoopt er 59 's ochtends. Hoeveel blijven er over?" },
+    answer: 25, tolerance: 0,
+    hint: { fr: "84 - 59 = 25.", en: "84 - 59 = 25.", nl: "84 - 59 = 25." }
+  },
+  {
+    id: "R1_s_58", category: "R1", level: 1,
+    text: { fr: "Alice lit 14 pages par jour. Combien de pages lit-elle en une semaine ?", en: "Alice reads 14 pages per day. How many pages does she read in one week?", nl: "Alice leest 14 pagina's per dag. Hoeveel pagina's leest ze in een week?" },
+    answer: 98, tolerance: 0,
+    hint: { fr: "14 × 7 = 98.", en: "14 × 7 = 98.", nl: "14 × 7 = 98." }
+  },
+  {
+    id: "R1_s_59", category: "R1", level: 1,
+    text: { fr: "Un aquarium contient 35 poissons rouges et 17 poissons bleus. Combien de poissons en tout ?", en: "An aquarium has 35 red fish and 17 blue fish. How many fish in total?", nl: "Een aquarium bevat 35 rode vissen en 17 blauwe vissen. Hoeveel vissen in totaal?" },
+    answer: 52, tolerance: 0,
+    hint: { fr: "35 + 17 = 52.", en: "35 + 17 = 52.", nl: "35 + 17 = 52." }
+  },
+  {
+    id: "R1_s_60", category: "R1", level: 1,
+    text: { fr: "Un cinéma a 150 places. 97 sont occupées. Combien de places sont libres ?", en: "A cinema has 150 seats. 97 are taken. How many seats are free?", nl: "Een bioscoop heeft 150 plaatsen. 97 zijn bezet. Hoeveel plaatsen zijn vrij?" },
+    answer: 53, tolerance: 0,
+    hint: { fr: "150 - 97 = 53.", en: "150 - 97 = 53.", nl: "150 - 97 = 53." }
+  },
+  {
+    id: "R1_s_61", category: "R1", level: 1,
+    text: { fr: "Un campeur a une corde de 20 mètres. Il en coupe 4 morceaux de 3 mètres. Quelle longueur de corde lui reste-t-il ?", en: "A camper has a 20-meter rope. He cuts 4 pieces of 3 meters. How much rope is left?", nl: "Een kampeerder heeft een touw van 20 meter. Hij knipt er 4 stukken van 3 meter af. Hoeveel touw blijft er over?" },
+    answer: 8, tolerance: 0, unit: "m",
+    hint: { fr: "4 × 3 = 12. 20 - 12 = 8.", en: "4 × 3 = 12. 20 - 12 = 8.", nl: "4 × 3 = 12. 20 - 12 = 8." }
+  },
+  {
+    id: "R1_s_62", category: "R1", level: 1,
+    text: { fr: "Une piste de course mesure 200 m. Hugo fait 4 tours. Combien de mètres a-t-il parcourus ?", en: "A running track is 200 m. Hugo runs 4 laps. How many meters has he run?", nl: "Een renbaan is 200 m lang. Hugo loopt 4 rondjes. Hoeveel meter heeft hij gelopen?" },
+    answer: 800, tolerance: 0, unit: "m",
+    hint: { fr: "4 × 200 = 800.", en: "4 × 200 = 800.", nl: "4 × 200 = 800." }
+  },
+  {
+    id: "R1_s_63", category: "R1", level: 1,
+    text: { fr: "Un photographe a pris 48 photos lundi et 35 photos mardi. Combien de photos a-t-il prises en tout ?", en: "A photographer took 48 photos on Monday and 35 on Tuesday. How many photos in total?", nl: "Een fotograaf nam 48 foto's op maandag en 35 op dinsdag. Hoeveel foto's in totaal?" },
+    answer: 83, tolerance: 0,
+    hint: { fr: "48 + 35 = 83.", en: "48 + 35 = 83.", nl: "48 + 35 = 83." }
+  },
+  {
+    id: "R1_s_64", category: "R1", level: 1,
+    text: { fr: "Un vétérinaire soigne 9 chiens par jour. Combien en soigne-t-il en 6 jours ?", en: "A vet treats 9 dogs per day. How many does he treat in 6 days?", nl: "Een dierenarts behandelt 9 honden per dag. Hoeveel behandelt hij er in 6 dagen?" },
+    answer: 54, tolerance: 0,
+    hint: { fr: "9 × 6 = 54.", en: "9 × 6 = 54.", nl: "9 × 6 = 54." }
+  },
+  {
+    id: "R1_s_65", category: "R1", level: 1,
+    text: { fr: "Un sac contient 72 billes. On les partage entre 9 enfants. Combien chacun reçoit-il ?", en: "A bag holds 72 marbles. They are shared among 9 children. How many does each get?", nl: "Een zak bevat 72 knikkers. Ze worden verdeeld onder 9 kinderen. Hoeveel krijgt elk kind?" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "72 ÷ 9 = 8.", en: "72 ÷ 9 = 8.", nl: "72 ÷ 9 = 8." }
+  },
+  {
+    id: "R1_s_66", category: "R1", level: 1,
+    text: { fr: "Un pot de peinture couvre 15 m². Combien de pots faut-il pour peindre un mur de 45 m² ?", en: "A pot of paint covers 15 m². How many pots are needed to paint a 45 m² wall?", nl: "Een pot verf bedekt 15 m². Hoeveel potten zijn nodig om een muur van 45 m² te schilderen?" },
+    answer: 3, tolerance: 0,
+    hint: { fr: "45 ÷ 15 = 3.", en: "45 ÷ 15 = 3.", nl: "45 ÷ 15 = 3." }
+  },
+  {
+    id: "R1_s_67", category: "R1", level: 1,
+    text: { fr: "Un musicien répète 45 minutes par jour. Combien de minutes répète-t-il en 5 jours ?", en: "A musician practises 45 minutes per day. How many minutes does he practise in 5 days?", nl: "Een muzikant oefent 45 minuten per dag. Hoeveel minuten oefent hij in 5 dagen?" },
+    answer: 225, tolerance: 0,
+    hint: { fr: "45 × 5 = 225.", en: "45 × 5 = 225.", nl: "45 × 5 = 225." }
+  },
+  {
+    id: "R1_s_68", category: "R1", level: 1,
+    text: { fr: "Une tortue pèse 4 kg. Un lapin pèse 3 fois plus. Combien pèse le lapin ?", en: "A tortoise weighs 4 kg. A rabbit weighs 3 times as much. How much does the rabbit weigh?", nl: "Een schildpad weegt 4 kg. Een konijn weegt 3 keer zoveel. Hoeveel weegt het konijn?" },
+    answer: 12, tolerance: 0, unit: "kg",
+    hint: { fr: "4 × 3 = 12.", en: "4 × 3 = 12.", nl: "4 × 3 = 12." }
+  },
+  {
+    id: "R1_s_69", category: "R1", level: 1,
+    text: { fr: "Un élève a 16 crayons de couleur. Il en perd 5 et en rachète 8. Combien en a-t-il ?", en: "A pupil has 16 coloured pencils. He loses 5 and buys 8 more. How many does he have?", nl: "Een leerling heeft 16 kleurpotloden. Hij verliest er 5 en koopt er 8 bij. Hoeveel heeft hij er?" },
+    answer: 19, tolerance: 0,
+    hint: { fr: "16 - 5 + 8 = 19.", en: "16 - 5 + 8 = 19.", nl: "16 - 5 + 8 = 19." }
+  },
+  {
+    id: "R1_s_70", category: "R1", level: 1,
+    text: { fr: "Une étagère porte 7 livres de 3 cm d'épaisseur chacun. Quelle épaisseur totale occupent-ils ?", en: "A shelf holds 7 books, each 3 cm thick. What total thickness do they occupy?", nl: "Een plank draagt 7 boeken van elk 3 cm dik. Welke totale dikte nemen ze in?" },
+    answer: 21, tolerance: 0, unit: "cm",
+    hint: { fr: "7 × 3 = 21.", en: "7 × 3 = 21.", nl: "7 × 3 = 21." }
+  },
+
+  // ===================== Level 2 — Multi-step word problems (71–90) =====================
+  {
+    id: "R1_s_71", category: "R1", level: 2,
+    text: { fr: "Un plombier facture 40 € le déplacement et 25 € par heure de travail. Il travaille 3 heures. Combien facture-t-il ?", en: "A plumber charges €40 for the call-out and €25 per hour of work. He works 3 hours. How much does he charge?", nl: "Een loodgieter rekent €40 voorrijkosten en €25 per uur werk. Hij werkt 3 uur. Hoeveel rekent hij aan?" },
+    answer: 115, tolerance: 0, unit: "€",
+    hint: { fr: "40 + 3 × 25 = 40 + 75 = 115.", en: "40 + 3 × 25 = 40 + 75 = 115.", nl: "40 + 3 × 25 = 40 + 75 = 115." }
+  },
+  {
+    id: "R1_s_72", category: "R1", level: 2,
+    text: { fr: "Un randonneur marche 4 km/h pendant 2 heures le matin, puis 3 km/h pendant 3 heures l'après-midi. Quelle distance totale ?", en: "A hiker walks at 4 km/h for 2 hours in the morning, then 3 km/h for 3 hours in the afternoon. What total distance?", nl: "Een wandelaar loopt 4 km/u gedurende 2 uur 's ochtends, dan 3 km/u gedurende 3 uur 's middags. Welke totale afstand?" },
+    answer: 17, tolerance: 0, unit: "km",
+    hint: { fr: "4 × 2 + 3 × 3 = 8 + 9 = 17.", en: "4 × 2 + 3 × 3 = 8 + 9 = 17.", nl: "4 × 2 + 3 × 3 = 8 + 9 = 17." }
+  },
+  {
+    id: "R1_s_73", category: "R1", level: 2,
+    text: { fr: "Un maçon pose 45 briques par heure. Combien de briques pose-t-il en une journée de 8 heures s'il prend 1 heure de pause ?", en: "A bricklayer lays 45 bricks per hour. How many bricks in an 8-hour day with a 1-hour break?", nl: "Een metselaar legt 45 stenen per uur. Hoeveel stenen legt hij op een werkdag van 8 uur met 1 uur pauze?" },
+    answer: 315, tolerance: 0,
+    hint: { fr: "8 - 1 = 7 heures effectives. 7 × 45 = 315.", en: "8 - 1 = 7 effective hours. 7 × 45 = 315.", nl: "8 - 1 = 7 effectieve uren. 7 × 45 = 315." }
+  },
+  {
+    id: "R1_s_74", category: "R1", level: 2,
+    text: { fr: "Un footballeur marque 3 buts au premier mi-temps et le double au second. Combien de buts a-t-il marqués en tout ?", en: "A footballer scores 3 goals in the first half and double in the second. How many goals in total?", nl: "Een voetballer scoort 3 doelpunten in de eerste helft en het dubbele in de tweede. Hoeveel doelpunten in totaal?" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "3 + 2 × 3 = 3 + 6 = 9.", en: "3 + 2 × 3 = 3 + 6 = 9.", nl: "3 + 2 × 3 = 3 + 6 = 9." }
+  },
+  {
+    id: "R1_s_75", category: "R1", level: 2,
+    text: { fr: "Une citerne de 500 litres est remplie aux 2/5. On ajoute encore 50 litres. Combien de litres contient-elle maintenant ?", en: "A 500-liter tank is 2/5 full. 50 more liters are added. How many liters does it contain now?", nl: "Een tank van 500 liter is 2/5 vol. Er wordt nog 50 liter toegevoegd. Hoeveel liter bevat hij nu?" },
+    answer: 250, tolerance: 0, unit: "L",
+    hint: { fr: "2/5 de 500 = 200. 200 + 50 = 250.", en: "2/5 of 500 = 200. 200 + 50 = 250.", nl: "2/5 van 500 = 200. 200 + 50 = 250." }
+  },
+  {
+    id: "R1_s_76", category: "R1", level: 2,
+    text: { fr: "Un cuisinier a 2,5 kg de pommes de terre. Il en utilise 800 g pour une soupe et 600 g pour une purée. Combien de grammes lui reste-t-il ?", en: "A cook has 2.5 kg of potatoes. He uses 800 g for soup and 600 g for mash. How many grams are left?", nl: "Een kok heeft 2,5 kg aardappelen. Hij gebruikt 800 g voor soep en 600 g voor puree. Hoeveel gram blijft er over?" },
+    answer: 1100, tolerance: 0, unit: "g",
+    hint: { fr: "2,5 kg = 2500 g. 2500 - 800 - 600 = 1100.", en: "2.5 kg = 2500 g. 2500 - 800 - 600 = 1100.", nl: "2,5 kg = 2500 g. 2500 - 800 - 600 = 1100." }
+  },
+  {
+    id: "R1_s_77", category: "R1", level: 2,
+    text: { fr: "5 bouteilles d'eau coûtent 4 €. Combien coûtent 20 bouteilles ?", en: "5 bottles of water cost €4. How much do 20 bottles cost?", nl: "5 flessen water kosten €4. Hoeveel kosten 20 flessen?" },
+    answer: 16, tolerance: 0, unit: "€",
+    hint: { fr: "20 ÷ 5 = 4 lots. 4 × 4 = 16.", en: "20 ÷ 5 = 4 lots. 4 × 4 = 16.", nl: "20 ÷ 5 = 4 sets. 4 × 4 = 16." }
+  },
+  {
+    id: "R1_s_78", category: "R1", level: 2,
+    text: { fr: "Une piscine rectangulaire mesure 25 m de long et 10 m de large. Quelle est son aire ?", en: "A rectangular pool is 25 m long and 10 m wide. What is its area?", nl: "Een rechthoekig zwembad is 25 m lang en 10 m breed. Wat is de oppervlakte?" },
+    answer: 250, tolerance: 0, unit: "m²",
+    hint: { fr: "25 × 10 = 250.", en: "25 × 10 = 250.", nl: "25 × 10 = 250." }
+  },
+  {
+    id: "R1_s_79", category: "R1", level: 2,
+    text: { fr: "Un magasin vend 6 croissants pour 5,40 €. Quel est le prix d'un croissant ?", en: "A shop sells 6 croissants for €5.40. What is the price of one croissant?", nl: "Een winkel verkoopt 6 croissants voor €5,40. Wat is de prijs van één croissant?" },
+    answer: 0.9, tolerance: 0.01, unit: "€",
+    hint: { fr: "5,40 ÷ 6 = 0,90.", en: "5.40 ÷ 6 = 0.90.", nl: "5,40 ÷ 6 = 0,90." }
+  },
+  {
+    id: "R1_s_80", category: "R1", level: 2,
+    text: { fr: "Un jardinier plante 8 rangées de 15 tulipes. Il arrache ensuite 24 tulipes fanées. Combien en reste-t-il ?", en: "A gardener plants 8 rows of 15 tulips. He then removes 24 wilted ones. How many remain?", nl: "Een tuinier plant 8 rijen van 15 tulpen. Hij trekt daarna 24 verwelkte tulpen uit. Hoeveel blijven er over?" },
+    answer: 96, tolerance: 0,
+    hint: { fr: "8 × 15 = 120. 120 - 24 = 96.", en: "8 × 15 = 120. 120 - 24 = 96.", nl: "8 × 15 = 120. 120 - 24 = 96." }
+  },
+  {
+    id: "R1_s_81", category: "R1", level: 2,
+    text: { fr: "Un automobiliste parcourt 180 km en 2 heures. Il lui reste 90 km. Combien de temps au total pour le trajet complet à la même vitesse ?", en: "A driver covers 180 km in 2 hours. He has 90 km left. How long is the total trip at the same speed?", nl: "Een automobilist legt 180 km af in 2 uur. Hij heeft nog 90 km te gaan. Hoe lang duurt de totale rit aan dezelfde snelheid?" },
+    answer: 3, tolerance: 0, unit: "h",
+    hint: { fr: "Vitesse = 180 ÷ 2 = 90 km/h. Temps restant = 90 ÷ 90 = 1 h. Total = 2 + 1 = 3 h.", en: "Speed = 180 ÷ 2 = 90 km/h. Remaining time = 90 ÷ 90 = 1 h. Total = 2 + 1 = 3 h.", nl: "Snelheid = 180 ÷ 2 = 90 km/u. Resterende tijd = 90 ÷ 90 = 1 u. Totaal = 2 + 1 = 3 u." }
+  },
+  {
+    id: "R1_s_82", category: "R1", level: 2,
+    text: { fr: "Une école commande 12 cartons de 24 cahiers. Chaque cahier coûte 2 €. Quel est le coût total ?", en: "A school orders 12 boxes of 24 notebooks. Each notebook costs €2. What is the total cost?", nl: "Een school bestelt 12 dozen van 24 schriften. Elk schrift kost €2. Wat is de totale kostprijs?" },
+    answer: 576, tolerance: 0, unit: "€",
+    hint: { fr: "12 × 24 = 288 cahiers. 288 × 2 = 576.", en: "12 × 24 = 288 notebooks. 288 × 2 = 576.", nl: "12 × 24 = 288 schriften. 288 × 2 = 576." }
+  },
+  {
+    id: "R1_s_83", category: "R1", level: 2,
+    text: { fr: "Un fermier récolte 360 œufs. Il les range dans des boîtes de 6. Il vend chaque boîte 3 €. Combien gagne-t-il ?", en: "A farmer collects 360 eggs. He packs them in boxes of 6. Each box sells for €3. How much does he earn?", nl: "Een boer raapt 360 eieren. Hij verpakt ze in dozen van 6. Elke doos verkoopt hij voor €3. Hoeveel verdient hij?" },
+    answer: 180, tolerance: 0, unit: "€",
+    hint: { fr: "360 ÷ 6 = 60 boîtes. 60 × 3 = 180.", en: "360 ÷ 6 = 60 boxes. 60 × 3 = 180.", nl: "360 ÷ 6 = 60 dozen. 60 × 3 = 180." }
+  },
+  {
+    id: "R1_s_84", category: "R1", level: 2,
+    text: { fr: "Un voyage en car coûte 8 € par adulte et 5 € par enfant. Combien coûte le voyage pour 3 adultes et 4 enfants ?", en: "A coach trip costs €8 per adult and €5 per child. How much for 3 adults and 4 children?", nl: "Een busreis kost €8 per volwassene en €5 per kind. Hoeveel kost de reis voor 3 volwassenen en 4 kinderen?" },
+    answer: 44, tolerance: 0, unit: "€",
+    hint: { fr: "3 × 8 + 4 × 5 = 24 + 20 = 44.", en: "3 × 8 + 4 × 5 = 24 + 20 = 44.", nl: "3 × 8 + 4 × 5 = 24 + 20 = 44." }
+  },
+  {
+    id: "R1_s_85", category: "R1", level: 2,
+    text: { fr: "Un menuisier a une planche de 240 cm. Il coupe 5 morceaux de 35 cm. Quelle longueur de planche reste-t-il ?", en: "A carpenter has a 240 cm board. He cuts 5 pieces of 35 cm. How much board is left?", nl: "Een timmerman heeft een plank van 240 cm. Hij zaagt er 5 stukken van 35 cm af. Hoeveel plank blijft er over?" },
+    answer: 65, tolerance: 0, unit: "cm",
+    hint: { fr: "5 × 35 = 175. 240 - 175 = 65.", en: "5 × 35 = 175. 240 - 175 = 65.", nl: "5 × 35 = 175. 240 - 175 = 65." }
+  },
+  {
+    id: "R1_s_86", category: "R1", level: 2,
+    text: { fr: "Une classe de 30 élèves a collecté 450 € pour un voyage. Ils ont besoin de 600 €. Combien chaque élève doit-il encore donner ?", en: "A class of 30 pupils has collected €450 for a trip. They need €600. How much more must each pupil give?", nl: "Een klas van 30 leerlingen heeft €450 ingezameld voor een reis. Ze hebben €600 nodig. Hoeveel moet elke leerling nog geven?" },
+    answer: 5, tolerance: 0, unit: "€",
+    hint: { fr: "600 - 450 = 150 manquants. 150 ÷ 30 = 5.", en: "600 - 450 = 150 short. 150 ÷ 30 = 5.", nl: "600 - 450 = 150 tekort. 150 ÷ 30 = 5." }
+  },
+  {
+    id: "R1_s_87", category: "R1", level: 2,
+    text: { fr: "Un coureur fait 3 tours de piste de 400 m. Son temps total est de 6 minutes. Quelle est sa vitesse en mètres par minute ?", en: "A runner does 3 laps of a 400 m track. His total time is 6 minutes. What is his speed in meters per minute?", nl: "Een loper loopt 3 rondjes op een baan van 400 m. Zijn totale tijd is 6 minuten. Wat is zijn snelheid in meter per minuut?" },
+    answer: 200, tolerance: 0, unit: "m/min",
+    hint: { fr: "3 × 400 = 1200 m. 1200 ÷ 6 = 200.", en: "3 × 400 = 1200 m. 1200 ÷ 6 = 200.", nl: "3 × 400 = 1200 m. 1200 ÷ 6 = 200." }
+  },
+  {
+    id: "R1_s_88", category: "R1", level: 2,
+    text: { fr: "Un chocolatier fait 4 tablettes avec 200 g de chocolat. Combien de grammes faut-il pour 10 tablettes ?", en: "A chocolatier makes 4 bars with 200 g of chocolate. How many grams are needed for 10 bars?", nl: "Een chocolatier maakt 4 repen met 200 g chocolade. Hoeveel gram is nodig voor 10 repen?" },
+    answer: 500, tolerance: 0, unit: "g",
+    hint: { fr: "1 tablette = 200 ÷ 4 = 50 g. 10 × 50 = 500.", en: "1 bar = 200 ÷ 4 = 50 g. 10 × 50 = 500.", nl: "1 reep = 200 ÷ 4 = 50 g. 10 × 50 = 500." }
+  },
+  {
+    id: "R1_s_89", category: "R1", level: 2,
+    text: { fr: "Pour une fête d'anniversaire, on achète 3 gâteaux à 12 € et 5 bouteilles de jus à 2 €. On paie avec un billet de 50 €. Combien rend-on ?", en: "For a birthday party, 3 cakes at €12 and 5 juice bottles at €2 are bought. Paid with a €50 note. How much change?", nl: "Voor een verjaardagsfeest koopt men 3 taarten van €12 en 5 flessen sap van €2. Men betaalt met een briefje van €50. Hoeveel wisselgeld?" },
+    answer: 4, tolerance: 0, unit: "€",
+    hint: { fr: "3 × 12 + 5 × 2 = 36 + 10 = 46. 50 - 46 = 4.", en: "3 × 12 + 5 × 2 = 36 + 10 = 46. 50 - 46 = 4.", nl: "3 × 12 + 5 × 2 = 36 + 10 = 46. 50 - 46 = 4." }
+  },
+  {
+    id: "R1_s_90", category: "R1", level: 2,
+    text: { fr: "Un terrain carré a une aire de 196 m². Quelle est la longueur de son côté ?", en: "A square field has an area of 196 m². What is the length of its side?", nl: "Een vierkant terrein heeft een oppervlakte van 196 m². Wat is de lengte van de zijde?" },
+    answer: 14, tolerance: 0, unit: "m",
+    hint: { fr: "√196 = 14.", en: "√196 = 14.", nl: "√196 = 14." }
+  },
+
+  // ===================== Level 3 — Complex reasoning, percentages (91–111) =====================
+  {
+    id: "R1_s_91", category: "R1", level: 3,
+    text: { fr: "Un pull coûte 45 € après une réduction de 10 %. Quel était le prix initial ?", en: "A sweater costs €45 after a 10% discount. What was the original price?", nl: "Een trui kost €45 na een korting van 10%. Wat was de oorspronkelijke prijs?" },
+    answer: 50, tolerance: 0, unit: "€",
+    hint: { fr: "x × 0,90 = 45. x = 45 ÷ 0,90 = 50.", en: "x × 0.90 = 45. x = 45 ÷ 0.90 = 50.", nl: "x × 0,90 = 45. x = 45 ÷ 0,90 = 50." }
+  },
+  {
+    id: "R1_s_92", category: "R1", level: 3,
+    text: { fr: "Un frère et une sœur ont ensemble 50 €. Le frère a 14 € de plus que la sœur. Combien a le frère ?", en: "A brother and sister have €50 together. The brother has €14 more than the sister. How much does the brother have?", nl: "Een broer en zus hebben samen €50. De broer heeft €14 meer dan de zus. Hoeveel heeft de broer?" },
+    answer: 32, tolerance: 0, unit: "€",
+    hint: { fr: "Sœur = x, Frère = x + 14. 2x + 14 = 50. x = 18. Frère = 32.", en: "Sister = x, Brother = x + 14. 2x + 14 = 50. x = 18. Brother = 32.", nl: "Zus = x, Broer = x + 14. 2x + 14 = 50. x = 18. Broer = 32." }
+  },
+  {
+    id: "R1_s_93", category: "R1", level: 3,
+    text: { fr: "40 % des 350 spectateurs d'un concert sont des enfants. Combien d'adultes y a-t-il ?", en: "40% of the 350 spectators at a concert are children. How many adults are there?", nl: "40% van de 350 toeschouwers bij een concert zijn kinderen. Hoeveel volwassenen zijn er?" },
+    answer: 210, tolerance: 0,
+    hint: { fr: "40 % de 350 = 140 enfants. 350 - 140 = 210 adultes.", en: "40% of 350 = 140 children. 350 - 140 = 210 adults.", nl: "40% van 350 = 140 kinderen. 350 - 140 = 210 volwassenen." }
+  },
+  {
+    id: "R1_s_94", category: "R1", level: 3,
+    text: { fr: "Deux robinets remplissent une cuve. Le premier débite 15 L/min et le second 10 L/min. Combien de minutes pour remplir 500 litres ?", en: "Two taps fill a tank. The first flows at 15 L/min, the second at 10 L/min. How many minutes to fill 500 liters?", nl: "Twee kranen vullen een vat. De eerste levert 15 L/min en de tweede 10 L/min. Hoeveel minuten om 500 liter te vullen?" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "Débit total = 15 + 10 = 25 L/min. 500 ÷ 25 = 20.", en: "Total flow = 15 + 10 = 25 L/min. 500 ÷ 25 = 20.", nl: "Totaal debiet = 15 + 10 = 25 L/min. 500 ÷ 25 = 20." }
+  },
+  {
+    id: "R1_s_95", category: "R1", level: 3,
+    text: { fr: "Un commerçant achète 80 kg de fruits à 2 € le kg. Il en perd 5 kg (abîmés) et revend le reste à 3 € le kg. Quel est son bénéfice ?", en: "A merchant buys 80 kg of fruit at €2/kg. He loses 5 kg (spoiled) and sells the rest at €3/kg. What is his profit?", nl: "Een handelaar koopt 80 kg fruit aan €2/kg. Hij verliest 5 kg (bedorven) en verkoopt de rest aan €3/kg. Wat is zijn winst?" },
+    answer: 65, tolerance: 0, unit: "€",
+    hint: { fr: "Coût = 80 × 2 = 160. Vente = 75 × 3 = 225. Bénéfice = 225 - 160 = 65.", en: "Cost = 80 × 2 = 160. Sale = 75 × 3 = 225. Profit = 225 - 160 = 65.", nl: "Kost = 80 × 2 = 160. Verkoop = 75 × 3 = 225. Winst = 225 - 160 = 65." }
+  },
+  {
+    id: "R1_s_96", category: "R1", level: 3,
+    text: { fr: "La somme de deux nombres est 100. Le plus grand est 4 fois le plus petit. Quel est le plus grand nombre ?", en: "The sum of two numbers is 100. The larger is 4 times the smaller. What is the larger number?", nl: "De som van twee getallen is 100. Het grootste is 4 keer het kleinste. Wat is het grootste getal?" },
+    answer: 80, tolerance: 0,
+    hint: { fr: "x + 4x = 100. 5x = 100, x = 20. Le plus grand = 80.", en: "x + 4x = 100. 5x = 100, x = 20. Larger = 80.", nl: "x + 4x = 100. 5x = 100, x = 20. Grootste = 80." }
+  },
+  {
+    id: "R1_s_97", category: "R1", level: 3,
+    text: { fr: "Un train parcourt 240 km en 3 heures. Un second train parcourt la même distance en 4 heures. Quelle est la différence de vitesse entre les deux trains ?", en: "A train covers 240 km in 3 hours. A second train covers the same distance in 4 hours. What is the speed difference?", nl: "Een trein legt 240 km af in 3 uur. Een tweede trein legt dezelfde afstand af in 4 uur. Wat is het snelheidsverschil?" },
+    answer: 20, tolerance: 0, unit: "km/h",
+    hint: { fr: "V1 = 240 ÷ 3 = 80. V2 = 240 ÷ 4 = 60. Différence = 20.", en: "V1 = 240 ÷ 3 = 80. V2 = 240 ÷ 4 = 60. Difference = 20.", nl: "V1 = 240 ÷ 3 = 80. V2 = 240 ÷ 4 = 60. Verschil = 20." }
+  },
+  {
+    id: "R1_s_98", category: "R1", level: 3,
+    text: { fr: "Mère et fille ont ensemble 56 ans. La mère a 4 fois l'âge de la fille. Quel âge a la mère ?", en: "Mother and daughter are 56 years old together. The mother is 4 times the daughter's age. How old is the mother?", nl: "Moeder en dochter zijn samen 56 jaar. De moeder is 4 keer zo oud als de dochter. Hoe oud is de moeder?" },
+    answer: 44.8, tolerance: 0.01,
+    hint: { fr: "Fille = x, Mère = 4x. 5x = 56, x = 11,2. Mère = 44,8.", en: "Daughter = x, Mother = 4x. 5x = 56, x = 11.2. Mother = 44.8.", nl: "Dochter = x, Moeder = 4x. 5x = 56, x = 11,2. Moeder = 44,8." }
+  },
+  {
+    id: "R1_s_99", category: "R1", level: 3,
+    text: { fr: "Un électricien facture 50 € de déplacement et 35 € de l'heure. Sa facture est de 190 €. Combien d'heures a-t-il travaillé ?", en: "An electrician charges €50 for travel and €35 per hour. His bill is €190. How many hours did he work?", nl: "Een elektricien rekent €50 voorrijkosten en €35 per uur. Zijn factuur bedraagt €190. Hoeveel uur heeft hij gewerkt?" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "190 - 50 = 140. 140 ÷ 35 = 4.", en: "190 - 50 = 140. 140 ÷ 35 = 4.", nl: "190 - 50 = 140. 140 ÷ 35 = 4." }
+  },
+  {
+    id: "R1_s_100", category: "R1", level: 3,
+    text: { fr: "Un article augmente de 20 %, puis le nouveau prix diminue de 20 %. Si le prix final est 192 €, quel était le prix de départ ?", en: "An item increases by 20%, then the new price decreases by 20%. If the final price is €192, what was the starting price?", nl: "Een artikel stijgt met 20%, dan daalt de nieuwe prijs met 20%. Als de eindprijs €192 is, wat was de beginprijs?" },
+    answer: 200, tolerance: 0, unit: "€",
+    hint: { fr: "x × 1,20 × 0,80 = 192. x × 0,96 = 192. x = 200.", en: "x × 1.20 × 0.80 = 192. x × 0.96 = 192. x = 200.", nl: "x × 1,20 × 0,80 = 192. x × 0,96 = 192. x = 200." }
+  },
+  {
+    id: "R1_s_101", category: "R1", level: 3,
+    text: { fr: "Dans une ferme, il y a des poules et des lapins. On compte 20 têtes et 56 pattes. Combien y a-t-il de lapins ?", en: "On a farm there are chickens and rabbits. There are 20 heads and 56 legs. How many rabbits are there?", nl: "Op een boerderij zijn er kippen en konijnen. Men telt 20 koppen en 56 poten. Hoeveel konijnen zijn er?" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Poules = p, Lapins = l. p + l = 20 et 2p + 4l = 56. Donc 2(20 - l) + 4l = 56. 40 + 2l = 56, l = 8.", en: "Chickens = c, Rabbits = r. c + r = 20, 2c + 4r = 56. 2(20-r) + 4r = 56. 40 + 2r = 56, r = 8.", nl: "Kippen = k, Konijnen = r. k + r = 20, 2k + 4r = 56. 2(20-r) + 4r = 56. 40 + 2r = 56, r = 8." }
+  },
+  {
+    id: "R1_s_102", category: "R1", level: 3,
+    text: { fr: "Un nageur parcourt 50 m en 40 secondes. Combien de temps (en secondes) lui faut-il pour nager 200 m à la même vitesse ?", en: "A swimmer covers 50 m in 40 seconds. How many seconds to swim 200 m at the same speed?", nl: "Een zwemmer legt 50 m af in 40 seconden. Hoeveel seconden heeft hij nodig om 200 m te zwemmen aan dezelfde snelheid?" },
+    answer: 160, tolerance: 0,
+    hint: { fr: "200 ÷ 50 = 4 fois la distance. 4 × 40 = 160 s.", en: "200 ÷ 50 = 4 times the distance. 4 × 40 = 160 s.", nl: "200 ÷ 50 = 4 keer de afstand. 4 × 40 = 160 s." }
+  },
+  {
+    id: "R1_s_103", category: "R1", level: 3,
+    text: { fr: "Une classe de 25 élèves passe un test. 60 % réussissent. Parmi ceux qui échouent, la moitié repasse et réussit. Combien ont finalement réussi ?", en: "A class of 25 takes a test. 60% pass. Of those who fail, half retake and pass. How many passed in total?", nl: "Een klas van 25 leerlingen legt een test af. 60% slaagt. Van degenen die zakken, doet de helft het opnieuw en slaagt. Hoeveel zijn er uiteindelijk geslaagd?" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "60 % de 25 = 15 réussissent. 10 échouent. 10 ÷ 2 = 5 réussissent ensuite. Total = 15 + 5 = 20.", en: "60% of 25 = 15 pass. 10 fail. 10 ÷ 2 = 5 pass later. Total = 15 + 5 = 20.", nl: "60% van 25 = 15 slagen. 10 zakken. 10 ÷ 2 = 5 slagen daarna. Totaal = 15 + 5 = 20." }
+  },
+  {
+    id: "R1_s_104", category: "R1", level: 3,
+    text: { fr: "Un terrain rectangulaire a un périmètre de 100 m. La longueur est le triple de la largeur. Quelle est l'aire du terrain ?", en: "A rectangular field has a perimeter of 100 m. The length is triple the width. What is the area?", nl: "Een rechthoekig terrein heeft een omtrek van 100 m. De lengte is het drievoud van de breedte. Wat is de oppervlakte?" },
+    answer: 468.75, tolerance: 0.01, unit: "m²",
+    hint: { fr: "l + 3l = 50. 4l = 50, l = 12,5. L = 37,5. Aire = 12,5 × 37,5 = 468,75.", en: "w + 3w = 50. 4w = 50, w = 12.5. L = 37.5. Area = 12.5 × 37.5 = 468.75.", nl: "b + 3b = 50. 4b = 50, b = 12,5. L = 37,5. Opp. = 12,5 × 37,5 = 468,75." }
+  },
+  {
+    id: "R1_s_105", category: "R1", level: 3,
+    text: { fr: "Un avion vole à 600 km/h. Combien de minutes met-il pour parcourir 250 km ?", en: "A plane flies at 600 km/h. How many minutes does it take to cover 250 km?", nl: "Een vliegtuig vliegt aan 600 km/u. Hoeveel minuten heeft het nodig om 250 km af te leggen?" },
+    answer: 25, tolerance: 0,
+    hint: { fr: "Temps = 250 ÷ 600 = 5/12 h = 25 min.", en: "Time = 250 ÷ 600 = 5/12 h = 25 min.", nl: "Tijd = 250 ÷ 600 = 5/12 u = 25 min." }
+  },
+  {
+    id: "R1_s_106", category: "R1", level: 3,
+    text: { fr: "Un nombre diminué de 30 % donne 49. Quel est ce nombre ?", en: "A number decreased by 30% gives 49. What is the number?", nl: "Een getal verminderd met 30% geeft 49. Wat is dat getal?" },
+    answer: 70, tolerance: 0,
+    hint: { fr: "x × 0,70 = 49. x = 49 ÷ 0,70 = 70.", en: "x × 0.70 = 49. x = 49 ÷ 0.70 = 70.", nl: "x × 0,70 = 49. x = 49 ÷ 0,70 = 70." }
+  },
+  {
+    id: "R1_s_107", category: "R1", level: 3,
+    text: { fr: "Un boulanger utilise 2/5 de sa farine le matin et 1/3 du reste l'après-midi. S'il lui reste 8 kg, combien avait-il au départ ?", en: "A baker uses 2/5 of his flour in the morning and 1/3 of the rest in the afternoon. If 8 kg remain, how much did he start with?", nl: "Een bakker gebruikt 's ochtends 2/5 van zijn bloem en 's middags 1/3 van de rest. Als er 8 kg overblijft, hoeveel had hij in het begin?" },
+    answer: 20, tolerance: 0, unit: "kg",
+    hint: { fr: "Après le matin : 3/5 reste. Après l'après-midi : 2/3 de 3/5 = 2/5 reste. 2/5 × x = 8. x = 20.", en: "After morning: 3/5 left. After afternoon: 2/3 of 3/5 = 2/5 left. 2/5 × x = 8. x = 20.", nl: "Na ochtend: 3/5 over. Na middag: 2/3 van 3/5 = 2/5 over. 2/5 × x = 8. x = 20." }
+  },
+  {
+    id: "R1_s_108", category: "R1", level: 3,
+    text: { fr: "Un stade a 12 000 places. Lors d'un match, 75 % des places sont occupées. 1/3 des spectateurs sont des enfants. Combien d'adultes y a-t-il ?", en: "A stadium has 12,000 seats. At a match, 75% are filled. 1/3 of spectators are children. How many adults are there?", nl: "Een stadion heeft 12.000 plaatsen. Tijdens een wedstrijd is 75% bezet. 1/3 van de toeschouwers zijn kinderen. Hoeveel volwassenen zijn er?" },
+    answer: 6000, tolerance: 0,
+    hint: { fr: "75 % de 12000 = 9000 spectateurs. 1/3 enfants = 3000. Adultes = 9000 - 3000 = 6000.", en: "75% of 12000 = 9000 spectators. 1/3 children = 3000. Adults = 9000 - 3000 = 6000.", nl: "75% van 12000 = 9000 toeschouwers. 1/3 kinderen = 3000. Volwassenen = 9000 - 3000 = 6000." }
+  },
+  {
+    id: "R1_s_109", category: "R1", level: 3,
+    text: { fr: "Un cycliste parcourt un trajet aller à 24 km/h et le retour à 16 km/h. La distance aller est de 48 km. Quel est son temps total en heures ?", en: "A cyclist rides out at 24 km/h and returns at 16 km/h. The one-way distance is 48 km. What is the total time in hours?", nl: "Een fietser rijdt heen aan 24 km/u en terug aan 16 km/u. De enkele afstand is 48 km. Wat is de totale tijd in uren?" },
+    answer: 5, tolerance: 0, unit: "h",
+    hint: { fr: "Aller : 48 ÷ 24 = 2 h. Retour : 48 ÷ 16 = 3 h. Total = 5 h.", en: "Out: 48 ÷ 24 = 2 h. Return: 48 ÷ 16 = 3 h. Total = 5 h.", nl: "Heen: 48 ÷ 24 = 2 u. Terug: 48 ÷ 16 = 3 u. Totaal = 5 u." }
+  },
+  {
+    id: "R1_s_110", category: "R1", level: 3,
+    text: { fr: "Un pâtissier a 150 macarons. Il en vend 40 % le matin. L'après-midi, il en vend 1/3 de ce qui reste. Combien en a-t-il en fin de journée ?", en: "A pastry chef has 150 macarons. He sells 40% in the morning. In the afternoon, he sells 1/3 of what is left. How many remain at the end of the day?", nl: "Een banketbakker heeft 150 macarons. Hij verkoopt 40% 's ochtends. 's Middags verkoopt hij 1/3 van wat overblijft. Hoeveel houdt hij over aan het eind van de dag?" },
+    answer: 60, tolerance: 0,
+    hint: { fr: "40 % de 150 = 60 vendus. Reste = 90. 1/3 de 90 = 30 vendus. Reste = 90 - 30 = 60.", en: "40% of 150 = 60 sold. Left = 90. 1/3 of 90 = 30 sold. Left = 90 - 30 = 60.", nl: "40% van 150 = 60 verkocht. Over = 90. 1/3 van 90 = 30 verkocht. Over = 90 - 30 = 60." }
+  },
+  {
+    id: "R1_s_111", category: "R1", level: 3,
+    text: { fr: "La somme de quatre nombres consécutifs pairs est 108. Quel est le plus grand ?", en: "The sum of four consecutive even numbers is 108. What is the largest?", nl: "De som van vier opeenvolgende even getallen is 108. Wat is het grootste?" },
+    answer: 30, tolerance: 0,
+    hint: { fr: "n + (n+2) + (n+4) + (n+6) = 108. 4n + 12 = 108. n = 24. Le plus grand = 30.", en: "n + (n+2) + (n+4) + (n+6) = 108. 4n + 12 = 108. n = 24. Largest = 30.", nl: "n + (n+2) + (n+4) + (n+6) = 108. 4n + 12 = 108. n = 24. Grootste = 30." }
+  },
 ];
 
 export function generate(level = 1) {
