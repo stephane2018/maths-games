@@ -2292,14 +2292,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     max-height: 50vh !important;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    touch-action: pan-y;
+    overscroll-behavior-y: contain;
+    overscroll-behavior-x: none;
+    touch-action: pan-y pinch-zoom;
     margin-left: 8px;
     margin-right: 8px;
     cursor: grab;
+    position: relative;
+    isolation: isolate;
   }
   
   .wizard-subcat-cards-grid:active {
@@ -2326,14 +2329,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     max-height: 45vh !important;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    touch-action: pan-y;
+    overscroll-behavior-y: contain;
+    overscroll-behavior-x: none;
+    touch-action: pan-y pinch-zoom;
     margin-left: 8px;
     margin-right: 8px;
     cursor: grab;
+    position: relative;
+    isolation: isolate;
   }
   
   .wizard-subcat-cards-grid:active {
