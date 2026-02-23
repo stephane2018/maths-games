@@ -152,6 +152,20 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         }}>
           {streakText}
         </span>
+        
+        {showHintButton && onHintRequest && (
+          <button
+            className="hint-btn"
+            onClick={() => onHintRequest(team)}
+            disabled={disabled || hintsRemaining <= 0}
+            style={{
+              opacity: hintsRemaining <= 0 ? 0.5 : 1,
+              cursor: hintsRemaining <= 0 ? 'not-allowed' : 'pointer',
+            }}
+          >
+            💡 {hintsRemaining}
+          </button>
+        )}
         <span className="player-score">{score}</span>
       </div>
 
@@ -164,21 +178,6 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
       {hintText && (
         <div className="hint-display">{hintText}</div>
-      )}
-
-      {showHintButton && onHintRequest && (
-        <button
-          className="hint-btn"
-          onClick={() => onHintRequest(team)}
-          disabled={disabled || hintsRemaining <= 0}
-          style={{
-            opacity: hintsRemaining <= 0 ? 0.5 : 1,
-            cursor: hintsRemaining <= 0 ? 'not-allowed' : 'pointer',
-            marginTop: '8px',
-          }}
-        >
-          💡 Indice ({hintsRemaining})
-        </button>
       )}
 
       <Numpad

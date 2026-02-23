@@ -342,6 +342,8 @@
 
   .category-content .wizard-body {
     padding: 12px 10px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
   }
 
   .wizard-steps {
