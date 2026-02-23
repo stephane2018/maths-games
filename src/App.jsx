@@ -22,7 +22,7 @@ function AppContent() {
 
     // Prevent pull-to-refresh on mobile
     const preventPull = (e) => {
-      if (e.target.closest('.screen-content')) return;
+      if (e.target.closest('.screen-content') || e.target.closest('.category-content')) return;
       e.preventDefault();
     };
     document.body.addEventListener('touchmove', preventPull, { passive: false });
