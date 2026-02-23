@@ -6,7 +6,6 @@
 @media (max-width: 374px) {
   /* Empêcher les débordements horizontaux */
   .screen-content,
-  .wizard-subcat-cards-grid,
   .wizard-rounds-grid,
   .wizard-difficulty-grid,
   .mode-cards {
@@ -185,7 +184,6 @@
   }
 
   /* Empêcher le scroll horizontal pour les grilles wizard */
-  .wizard-subcat-cards-grid,
   .wizard-rounds-grid,
   .wizard-difficulty-grid {
     overflow-x: hidden;

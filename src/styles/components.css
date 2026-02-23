@@ -1503,7 +1503,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 50px;
   align-items: center;
   width: 100%;
   max-width: 540px;
