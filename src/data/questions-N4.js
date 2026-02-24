@@ -1,751 +1,1030 @@
 // =============================================================================
-// N4 - Fractions
+// N4 - Équations (Equations)
 // CE1D Belgian exam - Trilingual (FR / EN / NL)
+// Inspiré des examens CE1D 2010-2022
 // =============================================================================
 
 export const questions = [
   // ───────────────────────────────────────────────────────────────────────────
-  // Level 1 — Simple fraction of a number  (17 questions: 1–5, 16–27)  [+21 → 51–71]
+  // Level 1 — Simple one/two-step equations (40 questions)
   // ───────────────────────────────────────────────────────────────────────────
   {
     id: "N4_s_1", category: "N4", level: 1,
-    text: { fr: "Combien font 1/4 de 20 ?", en: "What is 1/4 of 20?", nl: "Hoeveel is 1/4 van 20?" },
-    answer: 5, tolerance: 0,
-    hint: { fr: "Divise 20 par 4.", en: "Divide 20 by 4.", nl: "Deel 20 door 4." }
+    text: { fr: "Résous : x + 7 = 15", en: "Solve: x + 7 = 15", nl: "Los op: x + 7 = 15" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Isole x : x = 15 - 7.", en: "Isolate x: x = 15 - 7.", nl: "Isoleer x: x = 15 - 7." }
   },
   {
     id: "N4_s_2", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 100 ?", en: "What is 3/4 of 100?", nl: "Hoeveel is 3/4 van 100?" },
-    answer: 75, tolerance: 0,
-    hint: { fr: "Calcule d'abord 1/4 de 100, puis multiplie par 3.", en: "Find 1/4 of 100 first, then multiply by 3.", nl: "Bereken eerst 1/4 van 100, vermenigvuldig dan met 3." }
+    text: { fr: "Résous : x - 9 = 14", en: "Solve: x - 9 = 14", nl: "Los op: x - 9 = 14" },
+    answer: 23, tolerance: 0,
+    hint: { fr: "Ajoute 9 des deux côtés.", en: "Add 9 to both sides.", nl: "Tel 9 op aan beide kanten." }
   },
   {
     id: "N4_s_3", category: "N4", level: 1,
-    text: { fr: "Combien font 1/2 de 36 ?", en: "What is 1/2 of 36?", nl: "Hoeveel is 1/2 van 36?" },
-    answer: 18, tolerance: 0,
-    hint: { fr: "Divise 36 par 2.", en: "Divide 36 by 2.", nl: "Deel 36 door 2." }
+    text: { fr: "Résous : 3x = 21", en: "Solve: 3x = 21", nl: "Los op: 3x = 21" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "Divise les deux côtés par 3.", en: "Divide both sides by 3.", nl: "Deel beide kanten door 3." }
   },
   {
     id: "N4_s_4", category: "N4", level: 1,
-    text: { fr: "Combien font 2/3 de 15 ?", en: "What is 2/3 of 15?", nl: "Hoeveel is 2/3 van 15?" },
-    answer: 10, tolerance: 0,
-    hint: { fr: "Calcule 15 ÷ 3 puis multiplie par 2.", en: "Calculate 15 ÷ 3 then multiply by 2.", nl: "Bereken 15 ÷ 3, vermenigvuldig dan met 2." }
+    text: { fr: "Résous : 5x = 45", en: "Solve: 5x = 45", nl: "Los op: 5x = 45" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "Divise les deux côtés par 5.", en: "Divide both sides by 5.", nl: "Deel beide kanten door 5." }
   },
   {
     id: "N4_s_5", category: "N4", level: 1,
-    text: { fr: "Combien font 1/5 de 45 ?", en: "What is 1/5 of 45?", nl: "Hoeveel is 1/5 van 45?" },
-    answer: 9, tolerance: 0,
-    hint: { fr: "Divise 45 par 5.", en: "Divide 45 by 5.", nl: "Deel 45 door 5." }
-  },
-  {
-    id: "N4_s_16", category: "N4", level: 1,
-    text: { fr: "Combien font 1/3 de 27 ?", en: "What is 1/3 of 27?", nl: "Hoeveel is 1/3 van 27?" },
-    answer: 9, tolerance: 0,
-    hint: { fr: "Divise 27 par 3.", en: "Divide 27 by 3.", nl: "Deel 27 door 3." }
-  },
-  {
-    id: "N4_s_17", category: "N4", level: 1,
-    text: { fr: "Combien font 3/5 de 40 ?", en: "What is 3/5 of 40?", nl: "Hoeveel is 3/5 van 40?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule 40 ÷ 5 = 8, puis 8 × 3.", en: "Calculate 40 ÷ 5 = 8, then 8 × 3.", nl: "Bereken 40 ÷ 5 = 8, dan 8 × 3." }
-  },
-  {
-    id: "N4_s_18", category: "N4", level: 1,
-    text: { fr: "Combien font 1/4 de 48 ?", en: "What is 1/4 of 48?", nl: "Hoeveel is 1/4 van 48?" },
-    answer: 12, tolerance: 0,
-    hint: { fr: "Divise 48 par 4.", en: "Divide 48 by 4.", nl: "Deel 48 door 4." }
-  },
-  {
-    id: "N4_s_19", category: "N4", level: 1,
-    text: { fr: "Combien font 2/5 de 35 ?", en: "What is 2/5 of 35?", nl: "Hoeveel is 2/5 van 35?" },
-    answer: 14, tolerance: 0,
-    hint: { fr: "Calcule 35 ÷ 5 = 7, puis 7 × 2.", en: "Calculate 35 ÷ 5 = 7, then 7 × 2.", nl: "Bereken 35 ÷ 5 = 7, dan 7 × 2." }
-  },
-  {
-    id: "N4_s_20", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 60 ?", en: "What is 3/4 of 60?", nl: "Hoeveel is 3/4 van 60?" },
-    answer: 45, tolerance: 0,
-    hint: { fr: "Calcule 60 ÷ 4 = 15, puis 15 × 3.", en: "Calculate 60 ÷ 4 = 15, then 15 × 3.", nl: "Bereken 60 ÷ 4 = 15, dan 15 × 3." }
-  },
-  {
-    id: "N4_s_21", category: "N4", level: 1,
-    text: { fr: "Combien font 1/6 de 54 ?", en: "What is 1/6 of 54?", nl: "Hoeveel is 1/6 van 54?" },
-    answer: 9, tolerance: 0,
-    hint: { fr: "Divise 54 par 6.", en: "Divide 54 by 6.", nl: "Deel 54 door 6." }
-  },
-  {
-    id: "N4_s_22", category: "N4", level: 1,
-    text: { fr: "Combien font 2/3 de 24 ?", en: "What is 2/3 of 24?", nl: "Hoeveel is 2/3 van 24?" },
-    answer: 16, tolerance: 0,
-    hint: { fr: "Calcule 24 ÷ 3 = 8, puis 8 × 2.", en: "Calculate 24 ÷ 3 = 8, then 8 × 2.", nl: "Bereken 24 ÷ 3 = 8, dan 8 × 2." }
-  },
-  {
-    id: "N4_s_23", category: "N4", level: 1,
-    text: { fr: "Combien font 1/2 de 78 ?", en: "What is 1/2 of 78?", nl: "Hoeveel is 1/2 van 78?" },
-    answer: 39, tolerance: 0,
-    hint: { fr: "Divise 78 par 2.", en: "Divide 78 by 2.", nl: "Deel 78 door 2." }
-  },
-  {
-    id: "N4_s_24", category: "N4", level: 1,
-    text: { fr: "Combien font 3/5 de 25 ?", en: "What is 3/5 of 25?", nl: "Hoeveel is 3/5 van 25?" },
-    answer: 15, tolerance: 0,
-    hint: { fr: "Calcule 25 ÷ 5 = 5, puis 5 × 3.", en: "Calculate 25 ÷ 5 = 5, then 5 × 3.", nl: "Bereken 25 ÷ 5 = 5, dan 5 × 3." }
-  },
-  {
-    id: "N4_s_25", category: "N4", level: 1,
-    text: { fr: "Combien font 1/4 de 84 ?", en: "What is 1/4 of 84?", nl: "Hoeveel is 1/4 van 84?" },
-    answer: 21, tolerance: 0,
-    hint: { fr: "Divise 84 par 4.", en: "Divide 84 by 4.", nl: "Deel 84 door 4." }
-  },
-  {
-    id: "N4_s_26", category: "N4", level: 1,
-    text: { fr: "Combien font 2/5 de 50 ?", en: "What is 2/5 of 50?", nl: "Hoeveel is 2/5 van 50?" },
-    answer: 20, tolerance: 0,
-    hint: { fr: "Calcule 50 ÷ 5 = 10, puis 10 × 2.", en: "Calculate 50 ÷ 5 = 10, then 10 × 2.", nl: "Bereken 50 ÷ 5 = 10, dan 10 × 2." }
-  },
-  {
-    id: "N4_s_27", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 32 ?", en: "What is 3/4 of 32?", nl: "Hoeveel is 3/4 van 32?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule 32 ÷ 4 = 8, puis 8 × 3.", en: "Calculate 32 ÷ 4 = 8, then 8 × 3.", nl: "Bereken 32 ÷ 4 = 8, dan 8 × 3." }
-  },
-
-  // ───────────────────────────────────────────────────────────────────────────
-  // Level 2 — Larger fractions of a number  (17 questions: 6–10, 28–39)  [+20 → 72–91]
-  // ───────────────────────────────────────────────────────────────────────────
-  {
-    id: "N4_s_6", category: "N4", level: 2,
-    text: { fr: "Combien font 5/6 de 42 ?", en: "What is 5/6 of 42?", nl: "Hoeveel is 5/6 van 42?" },
-    answer: 35, tolerance: 0,
-    hint: { fr: "Calcule 42 ÷ 6 = 7, puis 7 × 5.", en: "Calculate 42 ÷ 6 = 7, then 7 × 5.", nl: "Bereken 42 ÷ 6 = 7, dan 7 × 5." }
-  },
-  {
-    id: "N4_s_7", category: "N4", level: 2,
-    text: { fr: "Combien font 7/8 de 56 ?", en: "What is 7/8 of 56?", nl: "Hoeveel is 7/8 van 56?" },
-    answer: 49, tolerance: 0,
-    hint: { fr: "Calcule 56 ÷ 8, puis multiplie par 7.", en: "Calculate 56 ÷ 8, then multiply by 7.", nl: "Bereken 56 ÷ 8, vermenigvuldig dan met 7." }
-  },
-  {
-    id: "N4_s_8", category: "N4", level: 2,
-    text: { fr: "Combien font 3/7 de 49 ?", en: "What is 3/7 of 49?", nl: "Hoeveel is 3/7 van 49?" },
-    answer: 21, tolerance: 0,
-    hint: { fr: "49 ÷ 7 = 7, puis 7 × 3.", en: "49 ÷ 7 = 7, then 7 × 3.", nl: "49 ÷ 7 = 7, dan 7 × 3." }
-  },
-  {
-    id: "N4_s_9", category: "N4", level: 2,
-    text: { fr: "Combien font 4/9 de 81 ?", en: "What is 4/9 of 81?", nl: "Hoeveel is 4/9 van 81?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "81 ÷ 9 = 9, puis 9 × 4.", en: "81 ÷ 9 = 9, then 9 × 4.", nl: "81 ÷ 9 = 9, dan 9 × 4." }
-  },
-  {
-    id: "N4_s_10", category: "N4", level: 2,
-    text: { fr: "Combien font 2/11 de 55 ?", en: "What is 2/11 of 55?", nl: "Hoeveel is 2/11 van 55?" },
-    answer: 10, tolerance: 0,
-    hint: { fr: "55 ÷ 11 = 5, puis 5 × 2.", en: "55 ÷ 11 = 5, then 5 × 2.", nl: "55 ÷ 11 = 5, dan 5 × 2." }
-  },
-  {
-    id: "N4_s_28", category: "N4", level: 2,
-    text: { fr: "Combien font 5/8 de 72 ?", en: "What is 5/8 of 72?", nl: "Hoeveel is 5/8 van 72?" },
-    answer: 45, tolerance: 0,
-    hint: { fr: "Calcule 72 ÷ 8 = 9, puis 9 × 5.", en: "Calculate 72 ÷ 8 = 9, then 9 × 5.", nl: "Bereken 72 ÷ 8 = 9, dan 9 × 5." }
-  },
-  {
-    id: "N4_s_29", category: "N4", level: 2,
-    text: { fr: "Combien font 3/8 de 96 ?", en: "What is 3/8 of 96?", nl: "Hoeveel is 3/8 van 96?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 96 ÷ 8 = 12, puis 12 × 3.", en: "Calculate 96 ÷ 8 = 12, then 12 × 3.", nl: "Bereken 96 ÷ 8 = 12, dan 12 × 3." }
-  },
-  {
-    id: "N4_s_30", category: "N4", level: 2,
-    text: { fr: "Combien font 7/9 de 63 ?", en: "What is 7/9 of 63?", nl: "Hoeveel is 7/9 van 63?" },
-    answer: 49, tolerance: 0,
-    hint: { fr: "Calcule 63 ÷ 9 = 7, puis 7 × 7.", en: "Calculate 63 ÷ 9 = 7, then 7 × 7.", nl: "Bereken 63 ÷ 9 = 7, dan 7 × 7." }
-  },
-  {
-    id: "N4_s_31", category: "N4", level: 2,
-    text: { fr: "Combien font 5/7 de 63 ?", en: "What is 5/7 of 63?", nl: "Hoeveel is 5/7 van 63?" },
-    answer: 45, tolerance: 0,
-    hint: { fr: "Calcule 63 ÷ 7 = 9, puis 9 × 5.", en: "Calculate 63 ÷ 7 = 9, then 9 × 5.", nl: "Bereken 63 ÷ 7 = 9, dan 9 × 5." }
-  },
-  {
-    id: "N4_s_32", category: "N4", level: 2,
-    text: { fr: "Combien font 4/5 de 85 ?", en: "What is 4/5 of 85?", nl: "Hoeveel is 4/5 van 85?" },
-    answer: 68, tolerance: 0,
-    hint: { fr: "Calcule 85 ÷ 5 = 17, puis 17 × 4.", en: "Calculate 85 ÷ 5 = 17, then 17 × 4.", nl: "Bereken 85 ÷ 5 = 17, dan 17 × 4." }
-  },
-  {
-    id: "N4_s_33", category: "N4", level: 2,
-    text: { fr: "Combien font 6/7 de 42 ?", en: "What is 6/7 of 42?", nl: "Hoeveel is 6/7 van 42?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 42 ÷ 7 = 6, puis 6 × 6.", en: "Calculate 42 ÷ 7 = 6, then 6 × 6.", nl: "Bereken 42 ÷ 7 = 6, dan 6 × 6." }
-  },
-  {
-    id: "N4_s_34", category: "N4", level: 2,
-    text: { fr: "Combien font 3/11 de 77 ?", en: "What is 3/11 of 77?", nl: "Hoeveel is 3/11 van 77?" },
-    answer: 21, tolerance: 0,
-    hint: { fr: "Calcule 77 ÷ 11 = 7, puis 7 × 3.", en: "Calculate 77 ÷ 11 = 7, then 7 × 3.", nl: "Bereken 77 ÷ 11 = 7, dan 7 × 3." }
-  },
-  {
-    id: "N4_s_35", category: "N4", level: 2,
-    text: { fr: "Combien font 5/9 de 108 ?", en: "What is 5/9 of 108?", nl: "Hoeveel is 5/9 van 108?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "Calcule 108 ÷ 9 = 12, puis 12 × 5.", en: "Calculate 108 ÷ 9 = 12, then 12 × 5.", nl: "Bereken 108 ÷ 9 = 12, dan 12 × 5." }
-  },
-  {
-    id: "N4_s_36", category: "N4", level: 2,
-    text: { fr: "Combien font 7/10 de 90 ?", en: "What is 7/10 of 90?", nl: "Hoeveel is 7/10 van 90?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Calcule 90 ÷ 10 = 9, puis 9 × 7.", en: "Calculate 90 ÷ 10 = 9, then 9 × 7.", nl: "Bereken 90 ÷ 10 = 9, dan 9 × 7." }
-  },
-  {
-    id: "N4_s_37", category: "N4", level: 2,
-    text: { fr: "Combien font 8/9 de 54 ?", en: "What is 8/9 of 54?", nl: "Hoeveel is 8/9 van 54?" },
-    answer: 48, tolerance: 0,
-    hint: { fr: "Calcule 54 ÷ 9 = 6, puis 6 × 8.", en: "Calculate 54 ÷ 9 = 6, then 6 × 8.", nl: "Bereken 54 ÷ 9 = 6, dan 6 × 8." }
-  },
-  {
-    id: "N4_s_38", category: "N4", level: 2,
-    text: { fr: "Combien font 5/12 de 84 ?", en: "What is 5/12 of 84?", nl: "Hoeveel is 5/12 van 84?" },
-    answer: 35, tolerance: 0,
-    hint: { fr: "Calcule 84 ÷ 12 = 7, puis 7 × 5.", en: "Calculate 84 ÷ 12 = 7, then 7 × 5.", nl: "Bereken 84 ÷ 12 = 7, dan 7 × 5." }
-  },
-  {
-    id: "N4_s_39", category: "N4", level: 2,
-    text: { fr: "Combien font 4/7 de 91 ?", en: "What is 4/7 of 91?", nl: "Hoeveel is 4/7 van 91?" },
-    answer: 52, tolerance: 0,
-    hint: { fr: "Calcule 91 ÷ 7 = 13, puis 13 × 4.", en: "Calculate 91 ÷ 7 = 13, then 13 × 4.", nl: "Bereken 91 ÷ 7 = 13, dan 13 × 4." }
-  },
-
-  // ───────────────────────────────────────────────────────────────────────────
-  // Level 3 — Chained fractions, addition/subtraction, inverse problems
-  //           (16 questions: 11–15, 40–50)  [+20 → 92–111]
-  // ───────────────────────────────────────────────────────────────────────────
-  {
-    id: "N4_s_11", category: "N4", level: 3,
-    text: { fr: "Combien font 2/3 de 3/4 de 60 ?", en: "What is 2/3 of 3/4 of 60?", nl: "Hoeveel is 2/3 van 3/4 van 60?" },
-    answer: 30, tolerance: 0,
-    hint: { fr: "Calcule d'abord 3/4 de 60 = 45, puis 2/3 de 45.", en: "First find 3/4 of 60 = 45, then 2/3 of 45.", nl: "Bereken eerst 3/4 van 60 = 45, dan 2/3 van 45." }
-  },
-  {
-    id: "N4_s_12", category: "N4", level: 3,
-    text: { fr: "Combien font 3/4 de 80 plus 2/5 de 50 ?", en: "What is 3/4 of 80 plus 2/5 of 50?", nl: "Hoeveel is 3/4 van 80 plus 2/5 van 50?" },
-    answer: 80, tolerance: 0,
-    hint: { fr: "Calcule chaque fraction séparément, puis additionne.", en: "Calculate each fraction separately, then add.", nl: "Bereken elke breuk apart, tel dan op." }
-  },
-  {
-    id: "N4_s_13", category: "N4", level: 3,
-    text: { fr: "3/5 de 2/3 de 100 = ?", en: "3/5 of 2/3 of 100 = ?", nl: "3/5 van 2/3 van 100 = ?" },
-    answer: 40, tolerance: 0,
-    hint: { fr: "Multiplie les fractions : 3/5 × 2/3 = 6/15 = 2/5. Puis 2/5 de 100.", en: "Multiply fractions: 3/5 × 2/3 = 2/5. Then 2/5 of 100.", nl: "Vermenigvuldig breuken: 3/5 × 2/3 = 2/5. Dan 2/5 van 100." }
-  },
-  {
-    id: "N4_s_14", category: "N4", level: 3,
-    text: { fr: "Si 3/8 d'un nombre est 24, quel est ce nombre ?", en: "If 3/8 of a number is 24, what is the number?", nl: "Als 3/8 van een getal 24 is, wat is dat getal?" },
-    answer: 64, tolerance: 0,
-    hint: { fr: "Si 3/8 = 24, alors 1/8 = 8, donc le nombre = 64.", en: "If 3/8 = 24, then 1/8 = 8, so the number = 64.", nl: "Als 3/8 = 24, dan 1/8 = 8, dus het getal = 64." }
-  },
-  {
-    id: "N4_s_15", category: "N4", level: 3,
-    text: { fr: "Si 2/7 d'un nombre est 14, quel est ce nombre ?", en: "If 2/7 of a number is 14, what is the number?", nl: "Als 2/7 van een getal 14 is, wat is dat getal?" },
-    answer: 49, tolerance: 0,
-    hint: { fr: "Si 2/7 = 14, alors 1/7 = 7, donc le nombre = 49.", en: "If 2/7 = 14, then 1/7 = 7, so the number = 49.", nl: "Als 2/7 = 14, dan 1/7 = 7, dus het getal = 49." }
-  },
-  {
-    id: "N4_s_40", category: "N4", level: 3,
-    text: { fr: "Combien font 1/2 de 2/3 de 90 ?", en: "What is 1/2 of 2/3 of 90?", nl: "Hoeveel is 1/2 van 2/3 van 90?" },
-    answer: 30, tolerance: 0,
-    hint: { fr: "Calcule d'abord 2/3 de 90 = 60, puis 1/2 de 60.", en: "First find 2/3 of 90 = 60, then 1/2 of 60.", nl: "Bereken eerst 2/3 van 90 = 60, dan 1/2 van 60." }
-  },
-  {
-    id: "N4_s_41", category: "N4", level: 3,
-    text: { fr: "Combien font 3/4 de 2/5 de 100 ?", en: "What is 3/4 of 2/5 of 100?", nl: "Hoeveel is 3/4 van 2/5 van 100?" },
-    answer: 30, tolerance: 0,
-    hint: { fr: "Calcule d'abord 2/5 de 100 = 40, puis 3/4 de 40.", en: "First find 2/5 of 100 = 40, then 3/4 of 40.", nl: "Bereken eerst 2/5 van 100 = 40, dan 3/4 van 40." }
-  },
-  {
-    id: "N4_s_42", category: "N4", level: 3,
-    text: { fr: "Si 5/6 d'un nombre est 45, quel est ce nombre ?", en: "If 5/6 of a number is 45, what is the number?", nl: "Als 5/6 van een getal 45 is, wat is dat getal?" },
-    answer: 54, tolerance: 0,
-    hint: { fr: "Si 5/6 = 45, alors 1/6 = 9, donc le nombre = 54.", en: "If 5/6 = 45, then 1/6 = 9, so the number = 54.", nl: "Als 5/6 = 45, dan 1/6 = 9, dus het getal = 54." }
-  },
-  {
-    id: "N4_s_43", category: "N4", level: 3,
-    text: { fr: "Si 4/9 d'un nombre est 36, quel est ce nombre ?", en: "If 4/9 of a number is 36, what is the number?", nl: "Als 4/9 van een getal 36 is, wat is dat getal?" },
-    answer: 81, tolerance: 0,
-    hint: { fr: "Si 4/9 = 36, alors 1/9 = 9, donc le nombre = 81.", en: "If 4/9 = 36, then 1/9 = 9, so the number = 81.", nl: "Als 4/9 = 36, dan 1/9 = 9, dus het getal = 81." }
-  },
-  {
-    id: "N4_s_44", category: "N4", level: 3,
-    text: { fr: "Combien font 1/2 de 84 plus 1/3 de 27 ?", en: "What is 1/2 of 84 plus 1/3 of 27?", nl: "Hoeveel is 1/2 van 84 plus 1/3 van 27?" },
-    answer: 51, tolerance: 0,
-    hint: { fr: "Calcule 84 ÷ 2 = 42 et 27 ÷ 3 = 9, puis 42 + 9.", en: "Calculate 84 ÷ 2 = 42 and 27 ÷ 3 = 9, then 42 + 9.", nl: "Bereken 84 ÷ 2 = 42 en 27 ÷ 3 = 9, dan 42 + 9." }
-  },
-  {
-    id: "N4_s_45", category: "N4", level: 3,
-    text: { fr: "Combien font 3/5 de 60 moins 1/4 de 40 ?", en: "What is 3/5 of 60 minus 1/4 of 40?", nl: "Hoeveel is 3/5 van 60 min 1/4 van 40?" },
-    answer: 26, tolerance: 0,
-    hint: { fr: "Calcule 3/5 de 60 = 36 et 1/4 de 40 = 10, puis 36 − 10.", en: "Calculate 3/5 of 60 = 36 and 1/4 of 40 = 10, then 36 − 10.", nl: "Bereken 3/5 van 60 = 36 en 1/4 van 40 = 10, dan 36 − 10." }
-  },
-  {
-    id: "N4_s_46", category: "N4", level: 3,
-    text: { fr: "Combien font 2/3 de 1/4 de 120 ?", en: "What is 2/3 of 1/4 of 120?", nl: "Hoeveel is 2/3 van 1/4 van 120?" },
-    answer: 20, tolerance: 0,
-    hint: { fr: "Calcule d'abord 1/4 de 120 = 30, puis 2/3 de 30.", en: "First find 1/4 of 120 = 30, then 2/3 of 30.", nl: "Bereken eerst 1/4 van 120 = 30, dan 2/3 van 30." }
-  },
-  {
-    id: "N4_s_47", category: "N4", level: 3,
-    text: { fr: "Si 5/8 d'un nombre est 35, quel est ce nombre ?", en: "If 5/8 of a number is 35, what is the number?", nl: "Als 5/8 van een getal 35 is, wat is dat getal?" },
-    answer: 56, tolerance: 0,
-    hint: { fr: "Si 5/8 = 35, alors 1/8 = 7, donc le nombre = 56.", en: "If 5/8 = 35, then 1/8 = 7, so the number = 56.", nl: "Als 5/8 = 35, dan 1/8 = 7, dus het getal = 56." }
-  },
-  {
-    id: "N4_s_48", category: "N4", level: 3,
-    text: { fr: "Combien font 4/5 de 3/4 de 100 ?", en: "What is 4/5 of 3/4 of 100?", nl: "Hoeveel is 4/5 van 3/4 van 100?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "Calcule d'abord 3/4 de 100 = 75, puis 4/5 de 75.", en: "First find 3/4 of 100 = 75, then 4/5 of 75.", nl: "Bereken eerst 3/4 van 100 = 75, dan 4/5 van 75." }
-  },
-  {
-    id: "N4_s_49", category: "N4", level: 3,
-    text: { fr: "Combien font 5/6 de 48 moins 2/3 de 24 ?", en: "What is 5/6 of 48 minus 2/3 of 24?", nl: "Hoeveel is 5/6 van 48 min 2/3 van 24?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule 5/6 de 48 = 40 et 2/3 de 24 = 16, puis 40 − 16.", en: "Calculate 5/6 of 48 = 40 and 2/3 of 24 = 16, then 40 − 16.", nl: "Bereken 5/6 van 48 = 40 en 2/3 van 24 = 16, dan 40 − 16." }
-  },
-  {
-    id: "N4_s_50", category: "N4", level: 3,
-    text: { fr: "Si 3/5 d'un nombre est 42, quel est ce nombre ?", en: "If 3/5 of a number is 42, what is the number?", nl: "Als 3/5 van een getal 42 is, wat is dat getal?" },
-    answer: 70, tolerance: 0,
-    hint: { fr: "Si 3/5 = 42, alors 1/5 = 14, donc le nombre = 70.", en: "If 3/5 = 42, then 1/5 = 14, so the number = 70.", nl: "Als 3/5 = 42, dan 1/5 = 14, dus het getal = 70." }
-  },
-
-  // ───────────────────────────────────────────────────────────────────────────
-  // Level 1 — Simple fraction of a number  (21 questions: 51–71)
-  // ───────────────────────────────────────────────────────────────────────────
-  {
-    id: "N4_s_51", category: "N4", level: 1,
-    text: { fr: "Combien font 1/3 de 36 ?", en: "What is 1/3 of 36?", nl: "Hoeveel is 1/3 van 36?" },
-    answer: 12, tolerance: 0,
-    hint: { fr: "Divise 36 par 3.", en: "Divide 36 by 3.", nl: "Deel 36 door 3." }
-  },
-  {
-    id: "N4_s_52", category: "N4", level: 1,
-    text: { fr: "Combien font 2/5 de 30 ?", en: "What is 2/5 of 30?", nl: "Hoeveel is 2/5 van 30?" },
-    answer: 12, tolerance: 0,
-    hint: { fr: "Calcule 30 ÷ 5 = 6, puis 6 × 2.", en: "Calculate 30 ÷ 5 = 6, then 6 × 2.", nl: "Bereken 30 ÷ 5 = 6, dan 6 × 2." }
-  },
-  {
-    id: "N4_s_53", category: "N4", level: 1,
-    text: { fr: "Combien font 1/2 de 54 ?", en: "What is 1/2 of 54?", nl: "Hoeveel is 1/2 van 54?" },
-    answer: 27, tolerance: 0,
-    hint: { fr: "Divise 54 par 2.", en: "Divide 54 by 2.", nl: "Deel 54 door 2." }
-  },
-  {
-    id: "N4_s_54", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 44 ?", en: "What is 3/4 of 44?", nl: "Hoeveel is 3/4 van 44?" },
-    answer: 33, tolerance: 0,
-    hint: { fr: "Calcule 44 ÷ 4 = 11, puis 11 × 3.", en: "Calculate 44 ÷ 4 = 11, then 11 × 3.", nl: "Bereken 44 ÷ 4 = 11, dan 11 × 3." }
-  },
-  {
-    id: "N4_s_55", category: "N4", level: 1,
-    text: { fr: "Combien font 1/5 de 60 ?", en: "What is 1/5 of 60?", nl: "Hoeveel is 1/5 van 60?" },
-    answer: 12, tolerance: 0,
-    hint: { fr: "Divise 60 par 5.", en: "Divide 60 by 5.", nl: "Deel 60 door 5." }
-  },
-  {
-    id: "N4_s_56", category: "N4", level: 1,
-    text: { fr: "Combien font 2/3 de 33 ?", en: "What is 2/3 of 33?", nl: "Hoeveel is 2/3 van 33?" },
-    answer: 22, tolerance: 0,
-    hint: { fr: "Calcule 33 ÷ 3 = 11, puis 11 × 2.", en: "Calculate 33 ÷ 3 = 11, then 11 × 2.", nl: "Bereken 33 ÷ 3 = 11, dan 11 × 2." }
-  },
-  {
-    id: "N4_s_57", category: "N4", level: 1,
-    text: { fr: "Combien font 1/4 de 64 ?", en: "What is 1/4 of 64?", nl: "Hoeveel is 1/4 van 64?" },
-    answer: 16, tolerance: 0,
-    hint: { fr: "Divise 64 par 4.", en: "Divide 64 by 4.", nl: "Deel 64 door 4." }
-  },
-  {
-    id: "N4_s_58", category: "N4", level: 1,
-    text: { fr: "Combien font 3/5 de 55 ?", en: "What is 3/5 of 55?", nl: "Hoeveel is 3/5 van 55?" },
-    answer: 33, tolerance: 0,
-    hint: { fr: "Calcule 55 ÷ 5 = 11, puis 11 × 3.", en: "Calculate 55 ÷ 5 = 11, then 11 × 3.", nl: "Bereken 55 ÷ 5 = 11, dan 11 × 3." }
-  },
-  {
-    id: "N4_s_59", category: "N4", level: 1,
-    text: { fr: "Combien font 1/6 de 72 ?", en: "What is 1/6 of 72?", nl: "Hoeveel is 1/6 van 72?" },
-    answer: 12, tolerance: 0,
-    hint: { fr: "Divise 72 par 6.", en: "Divide 72 by 6.", nl: "Deel 72 door 6." }
-  },
-  {
-    id: "N4_s_60", category: "N4", level: 1,
-    text: { fr: "Combien font 1/2 de 96 ?", en: "What is 1/2 of 96?", nl: "Hoeveel is 1/2 van 96?" },
-    answer: 48, tolerance: 0,
-    hint: { fr: "Divise 96 par 2.", en: "Divide 96 by 2.", nl: "Deel 96 door 2." }
-  },
-  {
-    id: "N4_s_61", category: "N4", level: 1,
-    text: { fr: "Combien font 2/3 de 42 ?", en: "What is 2/3 of 42?", nl: "Hoeveel is 2/3 van 42?" },
-    answer: 28, tolerance: 0,
-    hint: { fr: "Calcule 42 ÷ 3 = 14, puis 14 × 2.", en: "Calculate 42 ÷ 3 = 14, then 14 × 2.", nl: "Bereken 42 ÷ 3 = 14, dan 14 × 2." }
-  },
-  {
-    id: "N4_s_62", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 72 ?", en: "What is 3/4 of 72?", nl: "Hoeveel is 3/4 van 72?" },
-    answer: 54, tolerance: 0,
-    hint: { fr: "Calcule 72 ÷ 4 = 18, puis 18 × 3.", en: "Calculate 72 ÷ 4 = 18, then 18 × 3.", nl: "Bereken 72 ÷ 4 = 18, dan 18 × 3." }
-  },
-  {
-    id: "N4_s_63", category: "N4", level: 1,
-    text: { fr: "Combien font 1/3 de 66 ?", en: "What is 1/3 of 66?", nl: "Hoeveel is 1/3 van 66?" },
-    answer: 22, tolerance: 0,
-    hint: { fr: "Divise 66 par 3.", en: "Divide 66 by 3.", nl: "Deel 66 door 3." }
-  },
-  {
-    id: "N4_s_64", category: "N4", level: 1,
-    text: { fr: "Combien font 4/5 de 25 ?", en: "What is 4/5 of 25?", nl: "Hoeveel is 4/5 van 25?" },
-    answer: 20, tolerance: 0,
-    hint: { fr: "Calcule 25 ÷ 5 = 5, puis 5 × 4.", en: "Calculate 25 ÷ 5 = 5, then 5 × 4.", nl: "Bereken 25 ÷ 5 = 5, dan 5 × 4." }
-  },
-  {
-    id: "N4_s_65", category: "N4", level: 1,
-    text: { fr: "Combien font 1/4 de 100 ?", en: "What is 1/4 of 100?", nl: "Hoeveel is 1/4 van 100?" },
-    answer: 25, tolerance: 0,
-    hint: { fr: "Divise 100 par 4.", en: "Divide 100 by 4.", nl: "Deel 100 door 4." }
-  },
-  {
-    id: "N4_s_66", category: "N4", level: 1,
-    text: { fr: "Combien font 2/5 de 45 ?", en: "What is 2/5 of 45?", nl: "Hoeveel is 2/5 van 45?" },
+    text: { fr: "Résous : x + 12 = 30", en: "Solve: x + 12 = 30", nl: "Los op: x + 12 = 30" },
     answer: 18, tolerance: 0,
-    hint: { fr: "Calcule 45 ÷ 5 = 9, puis 9 × 2.", en: "Calculate 45 ÷ 5 = 9, then 9 × 2.", nl: "Bereken 45 ÷ 5 = 9, dan 9 × 2." }
+    hint: { fr: "x = 30 - 12.", en: "x = 30 - 12.", nl: "x = 30 - 12." }
   },
   {
-    id: "N4_s_67", category: "N4", level: 1,
-    text: { fr: "Combien font 1/2 de 68 ?", en: "What is 1/2 of 68?", nl: "Hoeveel is 1/2 van 68?" },
-    answer: 34, tolerance: 0,
-    hint: { fr: "Divise 68 par 2.", en: "Divide 68 by 2.", nl: "Deel 68 door 2." }
+    id: "N4_s_6", category: "N4", level: 1,
+    text: { fr: "Résous : 2x + 3 = 11", en: "Solve: 2x + 3 = 11", nl: "Los op: 2x + 3 = 11" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "2x = 11 - 3 = 8, donc x = 4.", en: "2x = 11 - 3 = 8, so x = 4.", nl: "2x = 11 - 3 = 8, dus x = 4." }
   },
   {
-    id: "N4_s_68", category: "N4", level: 1,
-    text: { fr: "Combien font 1/6 de 42 ?", en: "What is 1/6 of 42?", nl: "Hoeveel is 1/6 van 42?" },
+    id: "N4_s_7", category: "N4", level: 1,
+    text: { fr: "Résous : 4x - 5 = 15", en: "Solve: 4x - 5 = 15", nl: "Los op: 4x - 5 = 15" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "4x = 15 + 5 = 20, donc x = 5.", en: "4x = 15 + 5 = 20, so x = 5.", nl: "4x = 15 + 5 = 20, dus x = 5." }
+  },
+  {
+    id: "N4_s_8", category: "N4", level: 1,
+    text: { fr: "Résous : x - 15 = 0", en: "Solve: x - 15 = 0", nl: "Los op: x - 15 = 0" },
+    answer: 15, tolerance: 0,
+    hint: { fr: "x = 0 + 15.", en: "x = 0 + 15.", nl: "x = 0 + 15." }
+  },
+  {
+    id: "N4_s_9", category: "N4", level: 1,
+    text: { fr: "Résous : 7x = 56", en: "Solve: 7x = 56", nl: "Los op: 7x = 56" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Divise 56 par 7.", en: "Divide 56 by 7.", nl: "Deel 56 door 7." }
+  },
+  {
+    id: "N4_s_10", category: "N4", level: 1,
+    text: { fr: "Résous : 3x + 2 = 23", en: "Solve: 3x + 2 = 23", nl: "Los op: 3x + 2 = 23" },
+    // CE1D 2019
+    answer: 7, tolerance: 0,
+    hint: { fr: "3x = 23 - 2 = 21, donc x = 7.", en: "3x = 23 - 2 = 21, so x = 7.", nl: "3x = 23 - 2 = 21, dus x = 7." }
+  },
+  {
+    id: "N4_s_11", category: "N4", level: 1,
+    text: { fr: "Résous : x + 25 = 40", en: "Solve: x + 25 = 40", nl: "Los op: x + 25 = 40" },
+    answer: 15, tolerance: 0,
+    hint: { fr: "x = 40 - 25.", en: "x = 40 - 25.", nl: "x = 40 - 25." }
+  },
+  {
+    id: "N4_s_12", category: "N4", level: 1,
+    text: { fr: "Résous : 6x = 42", en: "Solve: 6x = 42", nl: "Los op: 6x = 42" },
     answer: 7, tolerance: 0,
     hint: { fr: "Divise 42 par 6.", en: "Divide 42 by 6.", nl: "Deel 42 door 6." }
   },
   {
-    id: "N4_s_69", category: "N4", level: 1,
-    text: { fr: "Combien font 3/5 de 70 ?", en: "What is 3/5 of 70?", nl: "Hoeveel is 3/5 van 70?" },
-    answer: 42, tolerance: 0,
-    hint: { fr: "Calcule 70 ÷ 5 = 14, puis 14 × 3.", en: "Calculate 70 ÷ 5 = 14, then 14 × 3.", nl: "Bereken 70 ÷ 5 = 14, dan 14 × 3." }
+    id: "N4_s_13", category: "N4", level: 1,
+    text: { fr: "Résous : 2x - 1 = 9", en: "Solve: 2x - 1 = 9", nl: "Los op: 2x - 1 = 9" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "2x = 9 + 1 = 10, donc x = 5.", en: "2x = 9 + 1 = 10, so x = 5.", nl: "2x = 9 + 1 = 10, dus x = 5." }
   },
   {
-    id: "N4_s_70", category: "N4", level: 1,
-    text: { fr: "Combien font 2/3 de 48 ?", en: "What is 2/3 of 48?", nl: "Hoeveel is 2/3 van 48?" },
+    id: "N4_s_14", category: "N4", level: 1,
+    text: { fr: "Résous : x + 8 = 22", en: "Solve: x + 8 = 22", nl: "Los op: x + 8 = 22" },
+    answer: 14, tolerance: 0,
+    hint: { fr: "x = 22 - 8.", en: "x = 22 - 8.", nl: "x = 22 - 8." }
+  },
+  {
+    id: "N4_s_15", category: "N4", level: 1,
+    text: { fr: "Résous : 9x = 72", en: "Solve: 9x = 72", nl: "Los op: 9x = 72" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Divise 72 par 9.", en: "Divide 72 by 9.", nl: "Deel 72 door 9." }
+  },
+  {
+    id: "N4_s_16", category: "N4", level: 1,
+    text: { fr: "Résous : 5x + 10 = 35", en: "Solve: 5x + 10 = 35", nl: "Los op: 5x + 10 = 35" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "5x = 35 - 10 = 25, donc x = 5.", en: "5x = 35 - 10 = 25, so x = 5.", nl: "5x = 35 - 10 = 25, dus x = 5." }
+  },
+  {
+    id: "N4_s_17", category: "N4", level: 1,
+    text: { fr: "Résous : x - 4 = 16", en: "Solve: x - 4 = 16", nl: "Los op: x - 4 = 16" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "x = 16 + 4.", en: "x = 16 + 4.", nl: "x = 16 + 4." }
+  },
+  {
+    id: "N4_s_18", category: "N4", level: 1,
+    text: { fr: "Résous : 8x = 64", en: "Solve: 8x = 64", nl: "Los op: 8x = 64" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Divise 64 par 8.", en: "Divide 64 by 8.", nl: "Deel 64 door 8." }
+  },
+  {
+    id: "N4_s_19", category: "N4", level: 1,
+    text: { fr: "Résous : 3x - 6 = 12", en: "Solve: 3x - 6 = 12", nl: "Los op: 3x - 6 = 12" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "3x = 12 + 6 = 18, donc x = 6.", en: "3x = 12 + 6 = 18, so x = 6.", nl: "3x = 12 + 6 = 18, dus x = 6." }
+  },
+  {
+    id: "N4_s_20", category: "N4", level: 1,
+    text: { fr: "Résous : x + 3 = 10", en: "Solve: x + 3 = 10", nl: "Los op: x + 3 = 10" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "x = 10 - 3.", en: "x = 10 - 3.", nl: "x = 10 - 3." }
+  },
+  {
+    id: "N4_s_21", category: "N4", level: 1,
+    text: { fr: "Résous : 4x + 8 = 28", en: "Solve: 4x + 8 = 28", nl: "Los op: 4x + 8 = 28" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "4x = 28 - 8 = 20, donc x = 5.", en: "4x = 28 - 8 = 20, so x = 5.", nl: "4x = 28 - 8 = 20, dus x = 5." }
+  },
+  {
+    id: "N4_s_22", category: "N4", level: 1,
+    text: { fr: "Résous : x/2 = 9", en: "Solve: x/2 = 9", nl: "Los op: x/2 = 9" },
+    answer: 18, tolerance: 0,
+    hint: { fr: "Multiplie les deux côtés par 2.", en: "Multiply both sides by 2.", nl: "Vermenigvuldig beide kanten met 2." }
+  },
+  {
+    id: "N4_s_23", category: "N4", level: 1,
+    text: { fr: "Résous : x/3 = 7", en: "Solve: x/3 = 7", nl: "Los op: x/3 = 7" },
+    answer: 21, tolerance: 0,
+    hint: { fr: "Multiplie les deux côtés par 3.", en: "Multiply both sides by 3.", nl: "Vermenigvuldig beide kanten met 3." }
+  },
+  {
+    id: "N4_s_24", category: "N4", level: 1,
+    text: { fr: "Résous : 2x = 30", en: "Solve: 2x = 30", nl: "Los op: 2x = 30" },
+    answer: 15, tolerance: 0,
+    hint: { fr: "Divise 30 par 2.", en: "Divide 30 by 2.", nl: "Deel 30 door 2." }
+  },
+  {
+    id: "N4_s_25", category: "N4", level: 1,
+    text: { fr: "Résous : x - 11 = 19", en: "Solve: x - 11 = 19", nl: "Los op: x - 11 = 19" },
+    answer: 30, tolerance: 0,
+    hint: { fr: "x = 19 + 11.", en: "x = 19 + 11.", nl: "x = 19 + 11." }
+  },
+  {
+    id: "N4_s_26", category: "N4", level: 1,
+    text: { fr: "Résous : 6x - 3 = 33", en: "Solve: 6x - 3 = 33", nl: "Los op: 6x - 3 = 33" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "6x = 33 + 3 = 36, donc x = 6.", en: "6x = 33 + 3 = 36, so x = 6.", nl: "6x = 33 + 3 = 36, dus x = 6." }
+  },
+  {
+    id: "N4_s_27", category: "N4", level: 1,
+    text: { fr: "Résous : x/5 = 4", en: "Solve: x/5 = 4", nl: "Los op: x/5 = 4" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "Multiplie les deux côtés par 5.", en: "Multiply both sides by 5.", nl: "Vermenigvuldig beide kanten met 5." }
+  },
+  {
+    id: "N4_s_28", category: "N4", level: 1,
+    text: { fr: "Résous : 10x = 80", en: "Solve: 10x = 80", nl: "Los op: 10x = 80" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Divise 80 par 10.", en: "Divide 80 by 10.", nl: "Deel 80 door 10." }
+  },
+  {
+    id: "N4_s_29", category: "N4", level: 1,
+    text: { fr: "Résous : 7x + 1 = 50", en: "Solve: 7x + 1 = 50", nl: "Los op: 7x + 1 = 50" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "7x = 50 - 1 = 49, donc x = 7.", en: "7x = 50 - 1 = 49, so x = 7.", nl: "7x = 50 - 1 = 49, dus x = 7." }
+  },
+  {
+    id: "N4_s_30", category: "N4", level: 1,
+    text: { fr: "Résous : x + 17 = 32", en: "Solve: x + 17 = 32", nl: "Los op: x + 17 = 32" },
+    answer: 15, tolerance: 0,
+    hint: { fr: "x = 32 - 17.", en: "x = 32 - 17.", nl: "x = 32 - 17." }
+  },
+  {
+    id: "N4_s_31", category: "N4", level: 1,
+    text: { fr: "Résous : 4x = 36", en: "Solve: 4x = 36", nl: "Los op: 4x = 36" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "Divise 36 par 4.", en: "Divide 36 by 4.", nl: "Deel 36 door 4." }
+  },
+  {
+    id: "N4_s_32", category: "N4", level: 1,
+    text: { fr: "Résous : 2x + 7 = 19", en: "Solve: 2x + 7 = 19", nl: "Los op: 2x + 7 = 19" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "2x = 19 - 7 = 12, donc x = 6.", en: "2x = 19 - 7 = 12, so x = 6.", nl: "2x = 19 - 7 = 12, dus x = 6." }
+  },
+  {
+    id: "N4_s_33", category: "N4", level: 1,
+    text: { fr: "Résous : x/4 = 8", en: "Solve: x/4 = 8", nl: "Los op: x/4 = 8" },
     answer: 32, tolerance: 0,
-    hint: { fr: "Calcule 48 ÷ 3 = 16, puis 16 × 2.", en: "Calculate 48 ÷ 3 = 16, then 16 × 2.", nl: "Bereken 48 ÷ 3 = 16, dan 16 × 2." }
+    hint: { fr: "Multiplie les deux côtés par 4.", en: "Multiply both sides by 4.", nl: "Vermenigvuldig beide kanten met 4." }
   },
   {
-    id: "N4_s_71", category: "N4", level: 1,
-    text: { fr: "Combien font 3/4 de 52 ?", en: "What is 3/4 of 52?", nl: "Hoeveel is 3/4 van 52?" },
-    answer: 39, tolerance: 0,
-    hint: { fr: "Calcule 52 ÷ 4 = 13, puis 13 × 3.", en: "Calculate 52 ÷ 4 = 13, then 13 × 3.", nl: "Bereken 52 ÷ 4 = 13, dan 13 × 3." }
+    id: "N4_s_34", category: "N4", level: 1,
+    text: { fr: "Résous : 5x - 10 = 25", en: "Solve: 5x - 10 = 25", nl: "Los op: 5x - 10 = 25" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "5x = 25 + 10 = 35, donc x = 7.", en: "5x = 25 + 10 = 35, so x = 7.", nl: "5x = 25 + 10 = 35, dus x = 7." }
+  },
+  {
+    id: "N4_s_35", category: "N4", level: 1,
+    text: { fr: "Résous : x + 6 = 18", en: "Solve: x + 6 = 18", nl: "Los op: x + 6 = 18" },
+    answer: 12, tolerance: 0,
+    hint: { fr: "x = 18 - 6.", en: "x = 18 - 6.", nl: "x = 18 - 6." }
+  },
+  {
+    id: "N4_s_36", category: "N4", level: 1,
+    text: { fr: "Résous : 3x = 27", en: "Solve: 3x = 27", nl: "Los op: 3x = 27" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "Divise 27 par 3.", en: "Divide 27 by 3.", nl: "Deel 27 door 3." }
+  },
+  {
+    id: "N4_s_37", category: "N4", level: 1,
+    text: { fr: "Résous : x - 20 = 5", en: "Solve: x - 20 = 5", nl: "Los op: x - 20 = 5" },
+    answer: 25, tolerance: 0,
+    hint: { fr: "x = 5 + 20.", en: "x = 5 + 20.", nl: "x = 5 + 20." }
+  },
+  {
+    id: "N4_s_38", category: "N4", level: 1,
+    text: { fr: "Résous : 8x + 4 = 44", en: "Solve: 8x + 4 = 44", nl: "Los op: 8x + 4 = 44" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "8x = 44 - 4 = 40, donc x = 5.", en: "8x = 44 - 4 = 40, so x = 5.", nl: "8x = 44 - 4 = 40, dus x = 5." }
+  },
+  {
+    id: "N4_s_39", category: "N4", level: 1,
+    text: { fr: "Résous : x/6 = 5", en: "Solve: x/6 = 5", nl: "Los op: x/6 = 5" },
+    answer: 30, tolerance: 0,
+    hint: { fr: "Multiplie les deux côtés par 6.", en: "Multiply both sides by 6.", nl: "Vermenigvuldig beide kanten met 6." }
+  },
+  {
+    id: "N4_s_40", category: "N4", level: 1,
+    text: { fr: "Résous : 9x - 9 = 63", en: "Solve: 9x - 9 = 63", nl: "Los op: 9x - 9 = 63" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "9x = 63 + 9 = 72, donc x = 8.", en: "9x = 63 + 9 = 72, so x = 8.", nl: "9x = 63 + 9 = 72, dus x = 8." }
   },
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Level 2 — Larger fractions of a number  (20 questions: 72–91)
+  // Level 2 — Equations with parentheses, variables on both sides, word problems (40 questions)
   // ───────────────────────────────────────────────────────────────────────────
   {
+    id: "N4_s_41", category: "N4", level: 2,
+    text: { fr: "Résous : 2(x + 3) = 16", en: "Solve: 2(x + 3) = 16", nl: "Los op: 2(x + 3) = 16" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "2x + 6 = 16, donc 2x = 10, x = 5.", en: "2x + 6 = 16, so 2x = 10, x = 5.", nl: "2x + 6 = 16, dus 2x = 10, x = 5." }
+  },
+  {
+    id: "N4_s_42", category: "N4", level: 2,
+    text: { fr: "Résous : 3(x - 4) = 15", en: "Solve: 3(x - 4) = 15", nl: "Los op: 3(x - 4) = 15" },
+    answer: 9, tolerance: 0,
+    hint: { fr: "3x - 12 = 15, donc 3x = 27, x = 9.", en: "3x - 12 = 15, so 3x = 27, x = 9.", nl: "3x - 12 = 15, dus 3x = 27, x = 9." }
+  },
+  {
+    id: "N4_s_43", category: "N4", level: 2,
+    text: { fr: "Résous : 5x + 3 = 2x + 18", en: "Solve: 5x + 3 = 2x + 18", nl: "Los op: 5x + 3 = 2x + 18" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "5x - 2x = 18 - 3, donc 3x = 15, x = 5.", en: "5x - 2x = 18 - 3, so 3x = 15, x = 5.", nl: "5x - 2x = 18 - 3, dus 3x = 15, x = 5." }
+  },
+  {
+    id: "N4_s_44", category: "N4", level: 2,
+    text: { fr: "Résous : 4(x + 2) = 3x + 14", en: "Solve: 4(x + 2) = 3x + 14", nl: "Los op: 4(x + 2) = 3x + 14" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "4x + 8 = 3x + 14, donc x = 6.", en: "4x + 8 = 3x + 14, so x = 6.", nl: "4x + 8 = 3x + 14, dus x = 6." }
+  },
+  {
+    id: "N4_s_45", category: "N4", level: 2,
+    text: { fr: "Résous : 2(x + 3) = -8", en: "Solve: 2(x + 3) = -8", nl: "Los op: 2(x + 3) = -8" },
+    // CE1D 2022
+    answer: -7, tolerance: 0,
+    hint: { fr: "2x + 6 = -8, donc 2x = -14, x = -7.", en: "2x + 6 = -8, so 2x = -14, x = -7.", nl: "2x + 6 = -8, dus 2x = -14, x = -7." }
+  },
+  {
+    id: "N4_s_46", category: "N4", level: 2,
+    text: { fr: "Résous : 7x - 3 = 4x + 12", en: "Solve: 7x - 3 = 4x + 12", nl: "Los op: 7x - 3 = 4x + 12" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "7x - 4x = 12 + 3, donc 3x = 15, x = 5.", en: "7x - 4x = 12 + 3, so 3x = 15, x = 5.", nl: "7x - 4x = 12 + 3, dus 3x = 15, x = 5." }
+  },
+  {
+    id: "N4_s_47", category: "N4", level: 2,
+    text: { fr: "Résous : 3(x - 2) + 5 = 20", en: "Solve: 3(x - 2) + 5 = 20", nl: "Los op: 3(x - 2) + 5 = 20" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "3x - 6 + 5 = 20, donc 3x - 1 = 20, 3x = 21, x = 7.", en: "3x - 6 + 5 = 20, so 3x - 1 = 20, 3x = 21, x = 7.", nl: "3x - 6 + 5 = 20, dus 3x - 1 = 20, 3x = 21, x = 7." }
+  },
+  {
+    id: "N4_s_48", category: "N4", level: 2,
+    text: { fr: "Résous : 6x - 10 = 2x + 14", en: "Solve: 6x - 10 = 2x + 14", nl: "Los op: 6x - 10 = 2x + 14" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "6x - 2x = 14 + 10, donc 4x = 24, x = 6.", en: "6x - 2x = 14 + 10, so 4x = 24, x = 6.", nl: "6x - 2x = 14 + 10, dus 4x = 24, x = 6." }
+  },
+  {
+    id: "N4_s_49", category: "N4", level: 2,
+    text: { fr: "Résous : 5(x - 1) = 2(x + 5)", en: "Solve: 5(x - 1) = 2(x + 5)", nl: "Los op: 5(x - 1) = 2(x + 5)" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "5x - 5 = 2x + 10, donc 3x = 15, x = 5.", en: "5x - 5 = 2x + 10, so 3x = 15, x = 5.", nl: "5x - 5 = 2x + 10, dus 3x = 15, x = 5." }
+  },
+  {
+    id: "N4_s_50", category: "N4", level: 2,
+    text: { fr: "Résous : x/2 + 3 = 10", en: "Solve: x/2 + 3 = 10", nl: "Los op: x/2 + 3 = 10" },
+    answer: 14, tolerance: 0,
+    hint: { fr: "x/2 = 7, donc x = 14.", en: "x/2 = 7, so x = 14.", nl: "x/2 = 7, dus x = 14." }
+  },
+  {
+    id: "N4_s_51", category: "N4", level: 2,
+    text: { fr: "Résous : x/3 - 4 = 2", en: "Solve: x/3 - 4 = 2", nl: "Los op: x/3 - 4 = 2" },
+    answer: 18, tolerance: 0,
+    hint: { fr: "x/3 = 6, donc x = 18.", en: "x/3 = 6, so x = 18.", nl: "x/3 = 6, dus x = 18." }
+  },
+  {
+    id: "N4_s_52", category: "N4", level: 2,
+    text: { fr: "Résous : 4(x + 1) - 2 = 18", en: "Solve: 4(x + 1) - 2 = 18", nl: "Los op: 4(x + 1) - 2 = 18" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "4x + 4 - 2 = 18, donc 4x + 2 = 18, 4x = 16, x = 4.", en: "4x + 4 - 2 = 18, so 4x + 2 = 18, 4x = 16, x = 4.", nl: "4x + 4 - 2 = 18, dus 4x + 2 = 18, 4x = 16, x = 4." }
+  },
+  {
+    id: "N4_s_53", category: "N4", level: 2,
+    text: { fr: "Résous : 8x + 5 = 5x + 26", en: "Solve: 8x + 5 = 5x + 26", nl: "Los op: 8x + 5 = 5x + 26" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "3x = 21, donc x = 7.", en: "3x = 21, so x = 7.", nl: "3x = 21, dus x = 7." }
+  },
+  {
+    id: "N4_s_54", category: "N4", level: 2,
+    text: { fr: "Résous : 2(3x - 1) = 22", en: "Solve: 2(3x - 1) = 22", nl: "Los op: 2(3x - 1) = 22" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "6x - 2 = 22, donc 6x = 24, x = 4.", en: "6x - 2 = 22, so 6x = 24, x = 4.", nl: "6x - 2 = 22, dus 6x = 24, x = 4." }
+  },
+  {
+    id: "N4_s_55", category: "N4", level: 2,
+    text: {
+      fr: "Le périmètre d'un rectangle est 58 cm. La longueur vaut le triple de la largeur plus 3 cm. Quelle est la largeur (en cm) ?",
+      en: "A rectangle has perimeter 58 cm. The length is triple the width plus 3 cm. What is the width (in cm)?",
+      nl: "De omtrek van een rechthoek is 58 cm. De lengte is drie keer de breedte plus 3 cm. Wat is de breedte (in cm)?"
+    },
+    // CE1D 2017: 2(x + 3x + 3) = 58 → 8x + 6 = 58 → 8x = 52 → x = 6.5
+    answer: 6.5, tolerance: 0,
+    hint: {
+      fr: "Pose x = largeur. Longueur = 3x + 3. Périmètre = 2(x + 3x + 3) = 58.",
+      en: "Let x = width. Length = 3x + 3. Perimeter = 2(x + 3x + 3) = 58.",
+      nl: "Stel x = breedte. Lengte = 3x + 3. Omtrek = 2(x + 3x + 3) = 58."
+    }
+  },
+  {
+    id: "N4_s_56", category: "N4", level: 2,
+    text: { fr: "Résous : 3x + 4 = x + 16", en: "Solve: 3x + 4 = x + 16", nl: "Los op: 3x + 4 = x + 16" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "2x = 12, donc x = 6.", en: "2x = 12, so x = 6.", nl: "2x = 12, dus x = 6." }
+  },
+  {
+    id: "N4_s_57", category: "N4", level: 2,
+    text: { fr: "Résous : 2x/5 = 8", en: "Solve: 2x/5 = 8", nl: "Los op: 2x/5 = 8" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "2x = 40, donc x = 20.", en: "2x = 40, so x = 20.", nl: "2x = 40, dus x = 20." }
+  },
+  {
+    id: "N4_s_58", category: "N4", level: 2,
+    text: { fr: "Résous : 5(x + 2) - 3x = 18", en: "Solve: 5(x + 2) - 3x = 18", nl: "Los op: 5(x + 2) - 3x = 18" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "5x + 10 - 3x = 18, donc 2x = 8, x = 4.", en: "5x + 10 - 3x = 18, so 2x = 8, x = 4.", nl: "5x + 10 - 3x = 18, dus 2x = 8, x = 4." }
+  },
+  {
+    id: "N4_s_59", category: "N4", level: 2,
+    text: { fr: "Résous : 9x - 7 = 6x + 8", en: "Solve: 9x - 7 = 6x + 8", nl: "Los op: 9x - 7 = 6x + 8" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "3x = 15, donc x = 5.", en: "3x = 15, so x = 5.", nl: "3x = 15, dus x = 5." }
+  },
+  {
+    id: "N4_s_60", category: "N4", level: 2,
+    text: { fr: "Résous : 4(2x - 3) = 20", en: "Solve: 4(2x - 3) = 20", nl: "Los op: 4(2x - 3) = 20" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "8x - 12 = 20, donc 8x = 32, x = 4.", en: "8x - 12 = 20, so 8x = 32, x = 4.", nl: "8x - 12 = 20, dus 8x = 32, x = 4." }
+  },
+  {
+    id: "N4_s_61", category: "N4", level: 2,
+    text: {
+      fr: "Julie a 5 ans de plus que Tom. Ensemble, ils ont 31 ans. Quel âge a Tom ?",
+      en: "Julie is 5 years older than Tom. Together they are 31. How old is Tom?",
+      nl: "Julie is 5 jaar ouder dan Tom. Samen zijn ze 31 jaar. Hoe oud is Tom?"
+    },
+    answer: 13, tolerance: 0,
+    hint: {
+      fr: "x + (x + 5) = 31, donc 2x = 26, x = 13.",
+      en: "x + (x + 5) = 31, so 2x = 26, x = 13.",
+      nl: "x + (x + 5) = 31, dus 2x = 26, x = 13."
+    }
+  },
+  {
+    id: "N4_s_62", category: "N4", level: 2,
+    text: { fr: "Résous : 3(x + 5) = 2(x + 9)", en: "Solve: 3(x + 5) = 2(x + 9)", nl: "Los op: 3(x + 5) = 2(x + 9)" },
+    answer: 3, tolerance: 0,
+    hint: { fr: "3x + 15 = 2x + 18, donc x = 3.", en: "3x + 15 = 2x + 18, so x = 3.", nl: "3x + 15 = 2x + 18, dus x = 3." }
+  },
+  {
+    id: "N4_s_63", category: "N4", level: 2,
+    text: { fr: "Résous : 7x - (5 + 3x) = 11", en: "Solve: 7x - (5 + 3x) = 11", nl: "Los op: 7x - (5 + 3x) = 11" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "7x - 5 - 3x = 11, donc 4x = 16, x = 4.", en: "7x - 5 - 3x = 11, so 4x = 16, x = 4.", nl: "7x - 5 - 3x = 11, dus 4x = 16, x = 4." }
+  },
+  {
+    id: "N4_s_64", category: "N4", level: 2,
+    text: { fr: "Résous : 2x + 8 = 5x - 7", en: "Solve: 2x + 8 = 5x - 7", nl: "Los op: 2x + 8 = 5x - 7" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "8 + 7 = 5x - 2x, donc 15 = 3x, x = 5.", en: "8 + 7 = 5x - 2x, so 15 = 3x, x = 5.", nl: "8 + 7 = 5x - 2x, dus 15 = 3x, x = 5." }
+  },
+  {
+    id: "N4_s_65", category: "N4", level: 2,
+    text: { fr: "Résous : x/4 + x/4 = 10", en: "Solve: x/4 + x/4 = 10", nl: "Los op: x/4 + x/4 = 10" },
+    answer: 20, tolerance: 0,
+    hint: { fr: "2x/4 = x/2 = 10, donc x = 20.", en: "2x/4 = x/2 = 10, so x = 20.", nl: "2x/4 = x/2 = 10, dus x = 20." }
+  },
+  {
+    id: "N4_s_66", category: "N4", level: 2,
+    text: { fr: "Résous : 6(x - 2) = 3(x + 4)", en: "Solve: 6(x - 2) = 3(x + 4)", nl: "Los op: 6(x - 2) = 3(x + 4)" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "6x - 12 = 3x + 12, donc 3x = 24, x = 8.", en: "6x - 12 = 3x + 12, so 3x = 24, x = 8.", nl: "6x - 12 = 3x + 12, dus 3x = 24, x = 8." }
+  },
+  {
+    id: "N4_s_67", category: "N4", level: 2,
+    text: {
+      fr: "Un nombre augmenté de son double vaut 36. Quel est ce nombre ?",
+      en: "A number plus its double equals 36. What is the number?",
+      nl: "Een getal plus het dubbele ervan is 36. Wat is dat getal?"
+    },
+    answer: 12, tolerance: 0,
+    hint: {
+      fr: "x + 2x = 36, donc 3x = 36, x = 12.",
+      en: "x + 2x = 36, so 3x = 36, x = 12.",
+      nl: "x + 2x = 36, dus 3x = 36, x = 12."
+    }
+  },
+  {
+    id: "N4_s_68", category: "N4", level: 2,
+    text: { fr: "Résous : 10 - 2x = 4", en: "Solve: 10 - 2x = 4", nl: "Los op: 10 - 2x = 4" },
+    answer: 3, tolerance: 0,
+    hint: { fr: "-2x = 4 - 10 = -6, donc x = 3.", en: "-2x = 4 - 10 = -6, so x = 3.", nl: "-2x = 4 - 10 = -6, dus x = 3." }
+  },
+  {
+    id: "N4_s_69", category: "N4", level: 2,
+    text: { fr: "Résous : 3(2x + 1) = 4x + 11", en: "Solve: 3(2x + 1) = 4x + 11", nl: "Los op: 3(2x + 1) = 4x + 11" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "6x + 3 = 4x + 11, donc 2x = 8, x = 4.", en: "6x + 3 = 4x + 11, so 2x = 8, x = 4.", nl: "6x + 3 = 4x + 11, dus 2x = 8, x = 4." }
+  },
+  {
+    id: "N4_s_70", category: "N4", level: 2,
+    text: {
+      fr: "Le triple d'un nombre diminué de 7 vaut 20. Quel est ce nombre ?",
+      en: "Three times a number minus 7 equals 20. What is the number?",
+      nl: "Drie keer een getal min 7 is 20. Wat is dat getal?"
+    },
+    answer: 9, tolerance: 0,
+    hint: {
+      fr: "3x - 7 = 20, donc 3x = 27, x = 9.",
+      en: "3x - 7 = 20, so 3x = 27, x = 9.",
+      nl: "3x - 7 = 20, dus 3x = 27, x = 9."
+    }
+  },
+  {
+    id: "N4_s_71", category: "N4", level: 2,
+    text: { fr: "Résous : 4x - 3(x - 2) = 10", en: "Solve: 4x - 3(x - 2) = 10", nl: "Los op: 4x - 3(x - 2) = 10" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "4x - 3x + 6 = 10, donc x + 6 = 10, x = 4.", en: "4x - 3x + 6 = 10, so x + 6 = 10, x = 4.", nl: "4x - 3x + 6 = 10, dus x + 6 = 10, x = 4." }
+  },
+  {
     id: "N4_s_72", category: "N4", level: 2,
-    text: { fr: "Combien font 5/8 de 48 ?", en: "What is 5/8 of 48?", nl: "Hoeveel is 5/8 van 48?" },
-    answer: 30, tolerance: 0,
-    hint: { fr: "Calcule 48 ÷ 8 = 6, puis 6 × 5.", en: "Calculate 48 ÷ 8 = 6, then 6 × 5.", nl: "Bereken 48 ÷ 8 = 6, dan 6 × 5." }
+    text: { fr: "Résous : 2(x - 4) + 3(x + 1) = 25", en: "Solve: 2(x - 4) + 3(x + 1) = 25", nl: "Los op: 2(x - 4) + 3(x + 1) = 25" },
+    answer: 6, tolerance: 0,
+    hint: { fr: "2x - 8 + 3x + 3 = 25, donc 5x - 5 = 25, 5x = 30, x = 6.", en: "2x - 8 + 3x + 3 = 25, so 5x - 5 = 25, 5x = 30, x = 6.", nl: "2x - 8 + 3x + 3 = 25, dus 5x - 5 = 25, 5x = 30, x = 6." }
   },
   {
     id: "N4_s_73", category: "N4", level: 2,
-    text: { fr: "Combien font 7/9 de 81 ?", en: "What is 7/9 of 81?", nl: "Hoeveel is 7/9 van 81?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Calcule 81 ÷ 9 = 9, puis 9 × 7.", en: "Calculate 81 ÷ 9 = 9, then 9 × 7.", nl: "Bereken 81 ÷ 9 = 9, dan 9 × 7." }
+    text: {
+      fr: "Si on ajoute 8 au double d'un nombre, on obtient 34. Quel est ce nombre ?",
+      en: "Adding 8 to double a number gives 34. What is the number?",
+      nl: "Als je 8 optelt bij het dubbele van een getal, krijg je 34. Wat is dat getal?"
+    },
+    answer: 13, tolerance: 0,
+    hint: {
+      fr: "2x + 8 = 34, donc 2x = 26, x = 13.",
+      en: "2x + 8 = 34, so 2x = 26, x = 13.",
+      nl: "2x + 8 = 34, dus 2x = 26, x = 13."
+    }
   },
   {
     id: "N4_s_74", category: "N4", level: 2,
-    text: { fr: "Combien font 3/7 de 77 ?", en: "What is 3/7 of 77?", nl: "Hoeveel is 3/7 van 77?" },
-    answer: 33, tolerance: 0,
-    hint: { fr: "Calcule 77 ÷ 7 = 11, puis 11 × 3.", en: "Calculate 77 ÷ 7 = 11, then 11 × 3.", nl: "Bereken 77 ÷ 7 = 11, dan 11 × 3." }
+    text: { fr: "Résous : 5x - 2(x + 4) = 7", en: "Solve: 5x - 2(x + 4) = 7", nl: "Los op: 5x - 2(x + 4) = 7" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "5x - 2x - 8 = 7, donc 3x = 15, x = 5.", en: "5x - 2x - 8 = 7, so 3x = 15, x = 5.", nl: "5x - 2x - 8 = 7, dus 3x = 15, x = 5." }
   },
   {
     id: "N4_s_75", category: "N4", level: 2,
-    text: { fr: "Combien font 5/6 de 66 ?", en: "What is 5/6 of 66?", nl: "Hoeveel is 5/6 van 66?" },
-    answer: 55, tolerance: 0,
-    hint: { fr: "Calcule 66 ÷ 6 = 11, puis 11 × 5.", en: "Calculate 66 ÷ 6 = 11, then 11 × 5.", nl: "Bereken 66 ÷ 6 = 11, dan 11 × 5." }
+    text: {
+      fr: "Le périmètre d'un carré est 52 cm. Quel est le côté (en cm) ?",
+      en: "The perimeter of a square is 52 cm. What is the side length (in cm)?",
+      nl: "De omtrek van een vierkant is 52 cm. Wat is de zijde (in cm)?"
+    },
+    answer: 13, tolerance: 0,
+    hint: {
+      fr: "4x = 52, donc x = 13.",
+      en: "4x = 52, so x = 13.",
+      nl: "4x = 52, dus x = 13."
+    }
   },
   {
     id: "N4_s_76", category: "N4", level: 2,
-    text: { fr: "Combien font 7/8 de 72 ?", en: "What is 7/8 of 72?", nl: "Hoeveel is 7/8 van 72?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Calcule 72 ÷ 8 = 9, puis 9 × 7.", en: "Calculate 72 ÷ 8 = 9, then 9 × 7.", nl: "Bereken 72 ÷ 8 = 9, dan 9 × 7." }
+    text: { fr: "Résous : 3x/4 = 9", en: "Solve: 3x/4 = 9", nl: "Los op: 3x/4 = 9" },
+    answer: 12, tolerance: 0,
+    hint: { fr: "3x = 36, donc x = 12.", en: "3x = 36, so x = 12.", nl: "3x = 36, dus x = 12." }
   },
   {
     id: "N4_s_77", category: "N4", level: 2,
-    text: { fr: "Combien font 4/9 de 99 ?", en: "What is 4/9 of 99?", nl: "Hoeveel is 4/9 van 99?" },
-    answer: 44, tolerance: 0,
-    hint: { fr: "Calcule 99 ÷ 9 = 11, puis 11 × 4.", en: "Calculate 99 ÷ 9 = 11, then 11 × 4.", nl: "Bereken 99 ÷ 9 = 11, dan 11 × 4." }
+    text: { fr: "Résous : 15 - 3x = 0", en: "Solve: 15 - 3x = 0", nl: "Los op: 15 - 3x = 0" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "3x = 15, donc x = 5.", en: "3x = 15, so x = 5.", nl: "3x = 15, dus x = 5." }
   },
   {
     id: "N4_s_78", category: "N4", level: 2,
-    text: { fr: "Combien font 6/7 de 56 ?", en: "What is 6/7 of 56?", nl: "Hoeveel is 6/7 van 56?" },
-    answer: 48, tolerance: 0,
-    hint: { fr: "Calcule 56 ÷ 7 = 8, puis 8 × 6.", en: "Calculate 56 ÷ 7 = 8, then 8 × 6.", nl: "Bereken 56 ÷ 7 = 8, dan 8 × 6." }
+    text: { fr: "Résous : 2(x + 6) = x + 17", en: "Solve: 2(x + 6) = x + 17", nl: "Los op: 2(x + 6) = x + 17" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "2x + 12 = x + 17, donc x = 5.", en: "2x + 12 = x + 17, so x = 5.", nl: "2x + 12 = x + 17, dus x = 5." }
   },
   {
     id: "N4_s_79", category: "N4", level: 2,
-    text: { fr: "Combien font 7/10 de 80 ?", en: "What is 7/10 of 80?", nl: "Hoeveel is 7/10 van 80?" },
-    answer: 56, tolerance: 0,
-    hint: { fr: "Calcule 80 ÷ 10 = 8, puis 8 × 7.", en: "Calculate 80 ÷ 10 = 8, then 8 × 7.", nl: "Bereken 80 ÷ 10 = 8, dan 8 × 7." }
+    text: { fr: "Résous : x + 2x + 3x = 42", en: "Solve: x + 2x + 3x = 42", nl: "Los op: x + 2x + 3x = 42" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "6x = 42, donc x = 7.", en: "6x = 42, so x = 7.", nl: "6x = 42, dus x = 7." }
   },
   {
     id: "N4_s_80", category: "N4", level: 2,
-    text: { fr: "Combien font 5/7 de 84 ?", en: "What is 5/7 of 84?", nl: "Hoeveel is 5/7 van 84?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "Calcule 84 ÷ 7 = 12, puis 12 × 5.", en: "Calculate 84 ÷ 7 = 12, then 12 × 5.", nl: "Bereken 84 ÷ 7 = 12, dan 12 × 5." }
-  },
-  {
-    id: "N4_s_81", category: "N4", level: 2,
-    text: { fr: "Combien font 3/8 de 64 ?", en: "What is 3/8 of 64?", nl: "Hoeveel is 3/8 van 64?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule 64 ÷ 8 = 8, puis 8 × 3.", en: "Calculate 64 ÷ 8 = 8, then 8 × 3.", nl: "Bereken 64 ÷ 8 = 8, dan 8 × 3." }
-  },
-  {
-    id: "N4_s_82", category: "N4", level: 2,
-    text: { fr: "Combien font 8/9 de 72 ?", en: "What is 8/9 of 72?", nl: "Hoeveel is 8/9 van 72?" },
-    answer: 64, tolerance: 0,
-    hint: { fr: "Calcule 72 ÷ 9 = 8, puis 8 × 8.", en: "Calculate 72 ÷ 9 = 8, then 8 × 8.", nl: "Bereken 72 ÷ 9 = 8, dan 8 × 8." }
-  },
-  {
-    id: "N4_s_83", category: "N4", level: 2,
-    text: { fr: "Combien font 4/11 de 99 ?", en: "What is 4/11 of 99?", nl: "Hoeveel is 4/11 van 99?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 99 ÷ 11 = 9, puis 9 × 4.", en: "Calculate 99 ÷ 11 = 9, then 9 × 4.", nl: "Bereken 99 ÷ 11 = 9, dan 9 × 4." }
-  },
-  {
-    id: "N4_s_84", category: "N4", level: 2,
-    text: { fr: "Combien font 7/12 de 84 ?", en: "What is 7/12 of 84?", nl: "Hoeveel is 7/12 van 84?" },
-    answer: 49, tolerance: 0,
-    hint: { fr: "Calcule 84 ÷ 12 = 7, puis 7 × 7.", en: "Calculate 84 ÷ 12 = 7, then 7 × 7.", nl: "Bereken 84 ÷ 12 = 7, dan 7 × 7." }
-  },
-  {
-    id: "N4_s_85", category: "N4", level: 2,
-    text: { fr: "Combien font 9/10 de 70 ?", en: "What is 9/10 of 70?", nl: "Hoeveel is 9/10 van 70?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Calcule 70 ÷ 10 = 7, puis 7 × 9.", en: "Calculate 70 ÷ 10 = 7, then 7 × 9.", nl: "Bereken 70 ÷ 10 = 7, dan 7 × 9." }
-  },
-  {
-    id: "N4_s_86", category: "N4", level: 2,
-    text: { fr: "Combien font 5/9 de 63 ?", en: "What is 5/9 of 63?", nl: "Hoeveel is 5/9 van 63?" },
-    answer: 35, tolerance: 0,
-    hint: { fr: "Calcule 63 ÷ 9 = 7, puis 7 × 5.", en: "Calculate 63 ÷ 9 = 7, then 7 × 5.", nl: "Bereken 63 ÷ 9 = 7, dan 7 × 5." }
-  },
-  {
-    id: "N4_s_87", category: "N4", level: 2,
-    text: { fr: "Combien font 3/10 de 120 ?", en: "What is 3/10 of 120?", nl: "Hoeveel is 3/10 van 120?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 120 ÷ 10 = 12, puis 12 × 3.", en: "Calculate 120 ÷ 10 = 12, then 12 × 3.", nl: "Bereken 120 ÷ 10 = 12, dan 12 × 3." }
-  },
-  {
-    id: "N4_s_88", category: "N4", level: 2,
-    text: { fr: "Combien font 7/11 de 66 ?", en: "What is 7/11 of 66?", nl: "Hoeveel is 7/11 van 66?" },
-    answer: 42, tolerance: 0,
-    hint: { fr: "Calcule 66 ÷ 11 = 6, puis 6 × 7.", en: "Calculate 66 ÷ 11 = 6, then 6 × 7.", nl: "Bereken 66 ÷ 11 = 6, dan 6 × 7." }
-  },
-  {
-    id: "N4_s_89", category: "N4", level: 2,
-    text: { fr: "Combien font 5/6 de 78 ?", en: "What is 5/6 of 78?", nl: "Hoeveel is 5/6 van 78?" },
-    answer: 65, tolerance: 0,
-    hint: { fr: "Calcule 78 ÷ 6 = 13, puis 13 × 5.", en: "Calculate 78 ÷ 6 = 13, then 13 × 5.", nl: "Bereken 78 ÷ 6 = 13, dan 13 × 5." }
-  },
-  {
-    id: "N4_s_90", category: "N4", level: 2,
-    text: { fr: "Combien font 4/7 de 63 ?", en: "What is 4/7 of 63?", nl: "Hoeveel is 4/7 van 63?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 63 ÷ 7 = 9, puis 9 × 4.", en: "Calculate 63 ÷ 7 = 9, then 9 × 4.", nl: "Bereken 63 ÷ 7 = 9, dan 9 × 4." }
-  },
-  {
-    id: "N4_s_91", category: "N4", level: 2,
-    text: { fr: "Combien font 11/12 de 60 ?", en: "What is 11/12 of 60?", nl: "Hoeveel is 11/12 van 60?" },
-    answer: 55, tolerance: 0,
-    hint: { fr: "Calcule 60 ÷ 12 = 5, puis 5 × 11.", en: "Calculate 60 ÷ 12 = 5, then 5 × 11.", nl: "Bereken 60 ÷ 12 = 5, dan 5 × 11." }
+    text: { fr: "Résous : 20 - 4(x - 1) = 8", en: "Solve: 20 - 4(x - 1) = 8", nl: "Los op: 20 - 4(x - 1) = 8" },
+    answer: 4, tolerance: 0,
+    hint: { fr: "20 - 4x + 4 = 8, donc 24 - 4x = 8, 4x = 16, x = 4.", en: "20 - 4x + 4 = 8, so 24 - 4x = 8, 4x = 16, x = 4.", nl: "20 - 4x + 4 = 8, dus 24 - 4x = 8, 4x = 16, x = 4." }
   },
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Level 3 — Chained fractions, inverse problems  (20 questions: 92–111)
+  // Level 3 — Complex equations, fractional coefficients, word problems (40 questions)
   // ───────────────────────────────────────────────────────────────────────────
   {
+    id: "N4_s_81", category: "N4", level: 3,
+    text: { fr: "Résous : (2x + 1)/3 = 5", en: "Solve: (2x + 1)/3 = 5", nl: "Los op: (2x + 1)/3 = 5" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "2x + 1 = 15, donc 2x = 14, x = 7.", en: "2x + 1 = 15, so 2x = 14, x = 7.", nl: "2x + 1 = 15, dus 2x = 14, x = 7." }
+  },
+  {
+    id: "N4_s_82", category: "N4", level: 3,
+    text: { fr: "Résous : (3x - 5)/2 = 7", en: "Solve: (3x - 5)/2 = 7", nl: "Los op: (3x - 5)/2 = 7" },
+    answer: 19/3, tolerance: 0.01,
+    hint: { fr: "3x - 5 = 14, donc 3x = 19, x ≈ 6,33.", en: "3x - 5 = 14, so 3x = 19, x ≈ 6.33.", nl: "3x - 5 = 14, dus 3x = 19, x ≈ 6,33." }
+  },
+  {
+    id: "N4_s_83", category: "N4", level: 3,
+    text: { fr: "Résous : 2x/5 - 1 = 5", en: "Solve: 2x/5 - 1 = 5", nl: "Los op: 2x/5 - 1 = 5" },
+    // CE1D style: 2x/5 = 6, 2x = 30, x = 15
+    answer: 15, tolerance: 0,
+    hint: { fr: "2x/5 = 6, donc 2x = 30, x = 15.", en: "2x/5 = 6, so 2x = 30, x = 15.", nl: "2x/5 = 6, dus 2x = 30, x = 15." }
+  },
+  {
+    id: "N4_s_84", category: "N4", level: 3,
+    text: {
+      fr: "Résous : 7x - (5 + 3x) = 0",
+      en: "Solve: 7x - (5 + 3x) = 0",
+      nl: "Los op: 7x - (5 + 3x) = 0"
+    },
+    // CE1D 2018: 4x = 5, x = 1.25
+    answer: 1.25, tolerance: 0,
+    hint: { fr: "7x - 5 - 3x = 0, donc 4x = 5, x = 1,25.", en: "7x - 5 - 3x = 0, so 4x = 5, x = 1.25.", nl: "7x - 5 - 3x = 0, dus 4x = 5, x = 1,25." }
+  },
+  {
+    id: "N4_s_85", category: "N4", level: 3,
+    text: {
+      fr: "Résous : 3(x - 4) + 2 = 6",
+      en: "Solve: 3(x - 4) + 2 = 6",
+      nl: "Los op: 3(x - 4) + 2 = 6"
+    },
+    // CE1D style: 3x - 12 + 2 = 6, 3x = 16, x = 16/3
+    answer: 16/3, tolerance: 0.01,
+    hint: { fr: "3x - 10 = 6, donc 3x = 16, x = 16/3 ≈ 5,33.", en: "3x - 10 = 6, so 3x = 16, x = 16/3 ≈ 5.33.", nl: "3x - 10 = 6, dus 3x = 16, x = 16/3 ≈ 5,33." }
+  },
+  {
+    id: "N4_s_86", category: "N4", level: 3,
+    text: {
+      fr: "Martin économise pendant 3 mois. Le 2ᵉ mois, il économise 20 € de plus que le 1ᵉʳ. Le 3ᵉ mois, le double du 1ᵉʳ. Total : 170 €. Combien a-t-il économisé le 1ᵉʳ mois ?",
+      en: "Martin saves for 3 months. Month 2 he saves 20€ more than month 1. Month 3, double of month 1. Total: 170€. How much did he save in month 1?",
+      nl: "Martin spaart 3 maanden. Maand 2 spaart hij 20€ meer dan maand 1. Maand 3, het dubbele van maand 1. Totaal: 170€. Hoeveel spaarde hij maand 1?"
+    },
+    // CE1D 2015: x + (x+20) + 2x = 170 → 4x = 150 → x = 37.5
+    answer: 37.5, tolerance: 0,
+    hint: {
+      fr: "x + (x + 20) + 2x = 170, donc 4x + 20 = 170, 4x = 150, x = 37,50.",
+      en: "x + (x + 20) + 2x = 170, so 4x + 20 = 170, 4x = 150, x = 37.50.",
+      nl: "x + (x + 20) + 2x = 170, dus 4x + 20 = 170, 4x = 150, x = 37,50."
+    }
+  },
+  {
+    id: "N4_s_87", category: "N4", level: 3,
+    text: {
+      fr: "Résous : x/2 + x/3 = 10",
+      en: "Solve: x/2 + x/3 = 10",
+      nl: "Los op: x/2 + x/3 = 10"
+    },
+    // 3x/6 + 2x/6 = 10, 5x/6 = 10, x = 12
+    answer: 12, tolerance: 0,
+    hint: { fr: "5x/6 = 10, donc 5x = 60, x = 12.", en: "5x/6 = 10, so 5x = 60, x = 12.", nl: "5x/6 = 10, dus 5x = 60, x = 12." }
+  },
+  {
+    id: "N4_s_88", category: "N4", level: 3,
+    text: {
+      fr: "Résous : 4(x + 3) - 2(x - 1) = 22",
+      en: "Solve: 4(x + 3) - 2(x - 1) = 22",
+      nl: "Los op: 4(x + 3) - 2(x - 1) = 22"
+    },
+    // 4x + 12 - 2x + 2 = 22, 2x + 14 = 22, 2x = 8, x = 4
+    answer: 4, tolerance: 0,
+    hint: { fr: "2x + 14 = 22, donc 2x = 8, x = 4.", en: "2x + 14 = 22, so 2x = 8, x = 4.", nl: "2x + 14 = 22, dus 2x = 8, x = 4." }
+  },
+  {
+    id: "N4_s_89", category: "N4", level: 3,
+    text: {
+      fr: "Un randonnée de 54 km en 3 jours. Le 2ᵉ jour, 6 km de plus que le 1ᵉʳ. Le 3ᵉ jour, le double du 1ᵉʳ. Combien de km le 1ᵉʳ jour ?",
+      en: "A 54 km hike in 3 days. Day 2: 6 km more than day 1. Day 3: double of day 1. How many km on day 1?",
+      nl: "Een wandeling van 54 km in 3 dagen. Dag 2: 6 km meer dan dag 1. Dag 3: het dubbele van dag 1. Hoeveel km op dag 1?"
+    },
+    // CE1D 2014: x + (x+6) + 2x = 54 → 4x = 48 → x = 12
+    answer: 12, tolerance: 0,
+    hint: {
+      fr: "x + (x + 6) + 2x = 54, donc 4x + 6 = 54, 4x = 48, x = 12.",
+      en: "x + (x + 6) + 2x = 54, so 4x + 6 = 54, 4x = 48, x = 12.",
+      nl: "x + (x + 6) + 2x = 54, dus 4x + 6 = 54, 4x = 48, x = 12."
+    }
+  },
+  {
+    id: "N4_s_90", category: "N4", level: 3,
+    text: { fr: "Résous : 5(2x - 3) = 3(x + 4) + 1", en: "Solve: 5(2x - 3) = 3(x + 4) + 1", nl: "Los op: 5(2x - 3) = 3(x + 4) + 1" },
+    // 10x - 15 = 3x + 12 + 1 → 10x - 15 = 3x + 13 → 7x = 28 → x = 4
+    answer: 4, tolerance: 0,
+    hint: { fr: "10x - 15 = 3x + 13, donc 7x = 28, x = 4.", en: "10x - 15 = 3x + 13, so 7x = 28, x = 4.", nl: "10x - 15 = 3x + 13, dus 7x = 28, x = 4." }
+  },
+  {
+    id: "N4_s_91", category: "N4", level: 3,
+    text: {
+      fr: "Résous : x/3 + x/4 = 7",
+      en: "Solve: x/3 + x/4 = 7",
+      nl: "Los op: x/3 + x/4 = 7"
+    },
+    // 4x/12 + 3x/12 = 7, 7x/12 = 7, x = 12
+    answer: 12, tolerance: 0,
+    hint: { fr: "7x/12 = 7, donc x = 12.", en: "7x/12 = 7, so x = 12.", nl: "7x/12 = 7, dus x = 12." }
+  },
+  {
     id: "N4_s_92", category: "N4", level: 3,
-    text: { fr: "Combien font 3/4 de 2/3 de 48 ?", en: "What is 3/4 of 2/3 of 48?", nl: "Hoeveel is 3/4 van 2/3 van 48?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule d'abord 2/3 de 48 = 32, puis 3/4 de 32.", en: "First find 2/3 of 48 = 32, then 3/4 of 32.", nl: "Bereken eerst 2/3 van 48 = 32, dan 3/4 van 32." }
+    text: {
+      fr: "Club A : cotisation 20 € + 5 € par heure. Club B : 8 € par heure. À partir de combien d'heures le club A est-il moins cher ?",
+      en: "Club A: 20€ membership + 5€/hour. Club B: 8€/hour. After how many hours is Club A cheaper?",
+      nl: "Club A: 20€ lidgeld + 5€/uur. Club B: 8€/uur. Na hoeveel uur is club A goedkoper?"
+    },
+    // CE1D 2016 style: 20 + 5x < 8x → 20 < 3x → x > 6.67 → à partir de 7h
+    answer: 7, tolerance: 0,
+    hint: {
+      fr: "20 + 5x = 8x donne x = 20/3 ≈ 6,67. Il faut au moins 7 heures.",
+      en: "20 + 5x = 8x gives x = 20/3 ≈ 6.67. You need at least 7 hours.",
+      nl: "20 + 5x = 8x geeft x = 20/3 ≈ 6,67. Je hebt minstens 7 uur nodig."
+    }
   },
   {
     id: "N4_s_93", category: "N4", level: 3,
-    text: { fr: "Si 2/5 d'un nombre est 18, quel est ce nombre ?", en: "If 2/5 of a number is 18, what is the number?", nl: "Als 2/5 van een getal 18 is, wat is dat getal?" },
-    answer: 45, tolerance: 0,
-    hint: { fr: "Si 2/5 = 18, alors 1/5 = 9, donc le nombre = 45.", en: "If 2/5 = 18, then 1/5 = 9, so the number = 45.", nl: "Als 2/5 = 18, dan 1/5 = 9, dus het getal = 45." }
+    text: { fr: "Résous : 2(3x + 4) = 5(x + 2) + 1", en: "Solve: 2(3x + 4) = 5(x + 2) + 1", nl: "Los op: 2(3x + 4) = 5(x + 2) + 1" },
+    // 6x + 8 = 5x + 10 + 1 → x = 3
+    answer: 3, tolerance: 0,
+    hint: { fr: "6x + 8 = 5x + 11, donc x = 3.", en: "6x + 8 = 5x + 11, so x = 3.", nl: "6x + 8 = 5x + 11, dus x = 3." }
   },
   {
     id: "N4_s_94", category: "N4", level: 3,
-    text: { fr: "Combien font 2/3 de 3/5 de 75 ?", en: "What is 2/3 of 3/5 of 75?", nl: "Hoeveel is 2/3 van 3/5 van 75?" },
-    answer: 30, tolerance: 0,
-    hint: { fr: "Calcule d'abord 3/5 de 75 = 45, puis 2/3 de 45.", en: "First find 3/5 of 75 = 45, then 2/3 of 45.", nl: "Bereken eerst 3/5 van 75 = 45, dan 2/3 van 45." }
+    text: {
+      fr: "Résous : (x - 2)/4 + (x + 1)/3 = 3",
+      en: "Solve: (x - 2)/4 + (x + 1)/3 = 3",
+      nl: "Los op: (x - 2)/4 + (x + 1)/3 = 3"
+    },
+    // 3(x-2)/12 + 4(x+1)/12 = 3 → (3x - 6 + 4x + 4)/12 = 3 → 7x - 2 = 36 → 7x = 38 → x = 38/7
+    answer: 38/7, tolerance: 0.01,
+    hint: { fr: "7x - 2 = 36, donc 7x = 38, x = 38/7 ≈ 5,43.", en: "7x - 2 = 36, so 7x = 38, x = 38/7 ≈ 5.43.", nl: "7x - 2 = 36, dus 7x = 38, x = 38/7 ≈ 5,43." }
   },
   {
     id: "N4_s_95", category: "N4", level: 3,
-    text: { fr: "Si 7/8 d'un nombre est 56, quel est ce nombre ?", en: "If 7/8 of a number is 56, what is the number?", nl: "Als 7/8 van een getal 56 is, wat is dat getal?" },
-    answer: 64, tolerance: 0,
-    hint: { fr: "Si 7/8 = 56, alors 1/8 = 8, donc le nombre = 64.", en: "If 7/8 = 56, then 1/8 = 8, so the number = 64.", nl: "Als 7/8 = 56, dan 1/8 = 8, dus het getal = 64." }
+    text: {
+      fr: "Dans un triangle, le 2ᵉ angle est le double du 1ᵉʳ et le 3ᵉ angle vaut 30° de plus que le 1ᵉʳ. Quel est le 1ᵉʳ angle (en degrés) ?",
+      en: "In a triangle, the 2nd angle is double the 1st and the 3rd is 30° more than the 1st. What is the 1st angle (in degrees)?",
+      nl: "In een driehoek is de 2ᵉ hoek het dubbele van de 1ᵉ en de 3ᵉ hoek is 30° meer dan de 1ᵉ. Wat is de 1ᵉ hoek (in graden)?"
+    },
+    // CE1D 2013: x + 2x + (x+30) = 180 → 4x = 150 → x = 37.5
+    answer: 37.5, tolerance: 0,
+    hint: {
+      fr: "x + 2x + (x + 30) = 180, donc 4x = 150, x = 37,5°.",
+      en: "x + 2x + (x + 30) = 180, so 4x = 150, x = 37.5°.",
+      nl: "x + 2x + (x + 30) = 180, dus 4x = 150, x = 37,5°."
+    }
   },
   {
     id: "N4_s_96", category: "N4", level: 3,
-    text: { fr: "Combien font 1/3 de 3/4 de 84 ?", en: "What is 1/3 of 3/4 of 84?", nl: "Hoeveel is 1/3 van 3/4 van 84?" },
-    answer: 21, tolerance: 0,
-    hint: { fr: "Calcule d'abord 3/4 de 84 = 63, puis 1/3 de 63.", en: "First find 3/4 of 84 = 63, then 1/3 of 63.", nl: "Bereken eerst 3/4 van 84 = 63, dan 1/3 van 63." }
+    text: { fr: "Résous : -2(x + 5) + 3(2x - 1) = 7", en: "Solve: -2(x + 5) + 3(2x - 1) = 7", nl: "Los op: -2(x + 5) + 3(2x - 1) = 7" },
+    // -2x - 10 + 6x - 3 = 7 → 4x - 13 = 7 → 4x = 20 → x = 5
+    answer: 5, tolerance: 0,
+    hint: { fr: "4x - 13 = 7, donc 4x = 20, x = 5.", en: "4x - 13 = 7, so 4x = 20, x = 5.", nl: "4x - 13 = 7, dus 4x = 20, x = 5." }
   },
   {
     id: "N4_s_97", category: "N4", level: 3,
-    text: { fr: "Si 5/9 d'un nombre est 30, quel est ce nombre ?", en: "If 5/9 of a number is 30, what is the number?", nl: "Als 5/9 van een getal 30 is, wat is dat getal?" },
-    answer: 54, tolerance: 0,
-    hint: { fr: "Si 5/9 = 30, alors 1/9 = 6, donc le nombre = 54.", en: "If 5/9 = 30, then 1/9 = 6, so the number = 54.", nl: "Als 5/9 = 30, dan 1/9 = 6, dus het getal = 54." }
+    text: {
+      fr: "Résous : x/2 - x/5 = 6",
+      en: "Solve: x/2 - x/5 = 6",
+      nl: "Los op: x/2 - x/5 = 6"
+    },
+    // 5x/10 - 2x/10 = 6, 3x/10 = 6, 3x = 60, x = 20
+    answer: 20, tolerance: 0,
+    hint: { fr: "3x/10 = 6, donc 3x = 60, x = 20.", en: "3x/10 = 6, so 3x = 60, x = 20.", nl: "3x/10 = 6, dus 3x = 60, x = 20." }
   },
   {
     id: "N4_s_98", category: "N4", level: 3,
-    text: { fr: "Combien font 2/3 de 90 plus 3/4 de 28 ?", en: "What is 2/3 of 90 plus 3/4 of 28?", nl: "Hoeveel is 2/3 van 90 plus 3/4 van 28?" },
-    answer: 81, tolerance: 0,
-    hint: { fr: "Calcule 2/3 de 90 = 60 et 3/4 de 28 = 21, puis 60 + 21.", en: "Calculate 2/3 of 90 = 60 and 3/4 of 28 = 21, then 60 + 21.", nl: "Bereken 2/3 van 90 = 60 en 3/4 van 28 = 21, dan 60 + 21." }
+    text: {
+      fr: "Tarif A : 50 € + 2 €/km. Tarif B : 30 € + 4 €/km. Pour combien de km les tarifs sont-ils égaux ?",
+      en: "Tariff A: 50€ + 2€/km. Tariff B: 30€ + 4€/km. For how many km are the tariffs equal?",
+      nl: "Tarief A: 50€ + 2€/km. Tarief B: 30€ + 4€/km. Voor hoeveel km zijn de tarieven gelijk?"
+    },
+    // CE1D 2011 style: 50 + 2x = 30 + 4x → 20 = 2x → x = 10
+    answer: 10, tolerance: 0,
+    hint: {
+      fr: "50 + 2x = 30 + 4x, donc 20 = 2x, x = 10 km.",
+      en: "50 + 2x = 30 + 4x, so 20 = 2x, x = 10 km.",
+      nl: "50 + 2x = 30 + 4x, dus 20 = 2x, x = 10 km."
+    }
   },
   {
     id: "N4_s_99", category: "N4", level: 3,
-    text: { fr: "Combien font 5/6 de 2/5 de 60 ?", en: "What is 5/6 of 2/5 of 60?", nl: "Hoeveel is 5/6 van 2/5 van 60?" },
-    answer: 20, tolerance: 0,
-    hint: { fr: "Calcule d'abord 2/5 de 60 = 24, puis 5/6 de 24.", en: "First find 2/5 of 60 = 24, then 5/6 of 24.", nl: "Bereken eerst 2/5 van 60 = 24, dan 5/6 van 24." }
+    text: { fr: "Résous : 3(2x + 1) - 2(x - 3) = 25", en: "Solve: 3(2x + 1) - 2(x - 3) = 25", nl: "Los op: 3(2x + 1) - 2(x - 3) = 25" },
+    // 6x + 3 - 2x + 6 = 25 → 4x + 9 = 25 → 4x = 16 → x = 4
+    answer: 4, tolerance: 0,
+    hint: { fr: "4x + 9 = 25, donc 4x = 16, x = 4.", en: "4x + 9 = 25, so 4x = 16, x = 4.", nl: "4x + 9 = 25, dus 4x = 16, x = 4." }
   },
   {
     id: "N4_s_100", category: "N4", level: 3,
-    text: { fr: "Si 3/7 d'un nombre est 27, quel est ce nombre ?", en: "If 3/7 of a number is 27, what is the number?", nl: "Als 3/7 van een getal 27 is, wat is dat getal?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Si 3/7 = 27, alors 1/7 = 9, donc le nombre = 63.", en: "If 3/7 = 27, then 1/7 = 9, so the number = 63.", nl: "Als 3/7 = 27, dan 1/7 = 9, dus het getal = 63." }
+    text: {
+      fr: "Résous : (5x + 2)/3 = (3x + 8)/2",
+      en: "Solve: (5x + 2)/3 = (3x + 8)/2",
+      nl: "Los op: (5x + 2)/3 = (3x + 8)/2"
+    },
+    // 2(5x+2) = 3(3x+8) → 10x + 4 = 9x + 24 → x = 20
+    answer: 20, tolerance: 0,
+    hint: { fr: "Produit en croix : 10x + 4 = 9x + 24, donc x = 20.", en: "Cross multiply: 10x + 4 = 9x + 24, so x = 20.", nl: "Kruisvermenigvuldiging: 10x + 4 = 9x + 24, dus x = 20." }
   },
   {
     id: "N4_s_101", category: "N4", level: 3,
-    text: { fr: "Combien font 3/4 de 80 moins 2/3 de 36 ?", en: "What is 3/4 of 80 minus 2/3 of 36?", nl: "Hoeveel is 3/4 van 80 min 2/3 van 36?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule 3/4 de 80 = 60 et 2/3 de 36 = 24, puis 60 − 24.", en: "Calculate 3/4 of 80 = 60 and 2/3 of 36 = 24, then 60 − 24.", nl: "Bereken 3/4 van 80 = 60 en 2/3 van 36 = 24, dan 60 − 24." }
+    text: {
+      fr: "Une piscine se remplit par un robinet en 6 h et se vide par un autre en 10 h. Ouverts ensemble, en combien d'heures se remplit-elle ? (en heures)",
+      en: "A pool fills by one tap in 6h and drains by another in 10h. Both open, how many hours to fill? (in hours)",
+      nl: "Een zwembad vult zich via een kraan in 6u en leegt via een andere in 10u. Beide open, hoeveel uur om te vullen? (in uren)"
+    },
+    // 1/6 - 1/10 = (5-3)/30 = 2/30 = 1/15 → 15h
+    answer: 15, tolerance: 0,
+    hint: {
+      fr: "Débit net = 1/6 - 1/10 = 1/15 par heure, donc 15 heures.",
+      en: "Net rate = 1/6 - 1/10 = 1/15 per hour, so 15 hours.",
+      nl: "Nettodebiet = 1/6 - 1/10 = 1/15 per uur, dus 15 uur."
+    }
   },
   {
     id: "N4_s_102", category: "N4", level: 3,
-    text: { fr: "Combien font 3/5 de 1/2 de 80 ?", en: "What is 3/5 of 1/2 of 80?", nl: "Hoeveel is 3/5 van 1/2 van 80?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule d'abord 1/2 de 80 = 40, puis 3/5 de 40.", en: "First find 1/2 of 80 = 40, then 3/5 of 40.", nl: "Bereken eerst 1/2 van 80 = 40, dan 3/5 van 40." }
+    text: { fr: "Résous : 4x - 3(2x + 1) = -(x + 7)", en: "Solve: 4x - 3(2x + 1) = -(x + 7)", nl: "Los op: 4x - 3(2x + 1) = -(x + 7)" },
+    // 4x - 6x - 3 = -x - 7 → -2x - 3 = -x - 7 → -2x + x = -7 + 3 → -x = -4 → x = 4
+    answer: 4, tolerance: 0,
+    hint: { fr: "-2x - 3 = -x - 7, donc -x = -4, x = 4.", en: "-2x - 3 = -x - 7, so -x = -4, x = 4.", nl: "-2x - 3 = -x - 7, dus -x = -4, x = 4." }
   },
   {
     id: "N4_s_103", category: "N4", level: 3,
-    text: { fr: "Si 4/7 d'un nombre est 28, quel est ce nombre ?", en: "If 4/7 of a number is 28, what is the number?", nl: "Als 4/7 van een getal 28 is, wat is dat getal?" },
-    answer: 49, tolerance: 0,
-    hint: { fr: "Si 4/7 = 28, alors 1/7 = 7, donc le nombre = 49.", en: "If 4/7 = 28, then 1/7 = 7, so the number = 49.", nl: "Als 4/7 = 28, dan 1/7 = 7, dus het getal = 49." }
+    text: {
+      fr: "Trois nombres consécutifs ont une somme de 96. Quel est le plus petit ?",
+      en: "Three consecutive numbers sum to 96. What is the smallest?",
+      nl: "Drie opeenvolgende getallen hebben als som 96. Wat is het kleinste?"
+    },
+    // x + (x+1) + (x+2) = 96 → 3x + 3 = 96 → 3x = 93 → x = 31
+    answer: 31, tolerance: 0,
+    hint: {
+      fr: "x + (x+1) + (x+2) = 96, donc 3x + 3 = 96, x = 31.",
+      en: "x + (x+1) + (x+2) = 96, so 3x + 3 = 96, x = 31.",
+      nl: "x + (x+1) + (x+2) = 96, dus 3x + 3 = 96, x = 31."
+    }
   },
   {
     id: "N4_s_104", category: "N4", level: 3,
-    text: { fr: "Combien font 1/2 de 4/5 de 90 ?", en: "What is 1/2 of 4/5 of 90?", nl: "Hoeveel is 1/2 van 4/5 van 90?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "Calcule d'abord 4/5 de 90 = 72, puis 1/2 de 72.", en: "First find 4/5 of 90 = 72, then 1/2 of 72.", nl: "Bereken eerst 4/5 van 90 = 72, dan 1/2 van 72." }
+    text: { fr: "Résous : 2x/3 + x/6 = 5", en: "Solve: 2x/3 + x/6 = 5", nl: "Los op: 2x/3 + x/6 = 5" },
+    // 4x/6 + x/6 = 5 → 5x/6 = 5 → x = 6
+    answer: 6, tolerance: 0,
+    hint: { fr: "5x/6 = 5, donc x = 6.", en: "5x/6 = 5, so x = 6.", nl: "5x/6 = 5, dus x = 6." }
   },
   {
     id: "N4_s_105", category: "N4", level: 3,
-    text: { fr: "Si 5/6 d'un nombre est 60, quel est ce nombre ?", en: "If 5/6 of a number is 60, what is the number?", nl: "Als 5/6 van een getal 60 is, wat is dat getal?" },
-    answer: 72, tolerance: 0,
-    hint: { fr: "Si 5/6 = 60, alors 1/6 = 12, donc le nombre = 72.", en: "If 5/6 = 60, then 1/6 = 12, so the number = 72.", nl: "Als 5/6 = 60, dan 1/6 = 12, dus het getal = 72." }
+    text: {
+      fr: "Un père a 4 fois l'âge de son fils. Dans 16 ans, il aura le double. Quel est l'âge du fils aujourd'hui ?",
+      en: "A father is 4 times his son's age. In 16 years, he'll be double. How old is the son now?",
+      nl: "Een vader is 4 keer zo oud als zijn zoon. Over 16 jaar is hij het dubbele. Hoe oud is de zoon nu?"
+    },
+    // 4x + 16 = 2(x + 16) → 4x + 16 = 2x + 32 → 2x = 16 → x = 8
+    answer: 8, tolerance: 0,
+    hint: {
+      fr: "4x + 16 = 2(x + 16), donc 2x = 16, x = 8 ans.",
+      en: "4x + 16 = 2(x + 16), so 2x = 16, x = 8 years.",
+      nl: "4x + 16 = 2(x + 16), dus 2x = 16, x = 8 jaar."
+    }
   },
   {
     id: "N4_s_106", category: "N4", level: 3,
-    text: { fr: "Combien font 2/3 de 72 moins 3/4 de 44 ?", en: "What is 2/3 of 72 minus 3/4 of 44?", nl: "Hoeveel is 2/3 van 72 min 3/4 van 44?" },
-    answer: 15, tolerance: 0,
-    hint: { fr: "Calcule 2/3 de 72 = 48 et 3/4 de 44 = 33, puis 48 − 33.", en: "Calculate 2/3 of 72 = 48 and 3/4 of 44 = 33, then 48 − 33.", nl: "Bereken 2/3 van 72 = 48 en 3/4 van 44 = 33, dan 48 − 33." }
+    text: { fr: "Résous : (x + 3)/2 - (x - 1)/4 = 3", en: "Solve: (x + 3)/2 - (x - 1)/4 = 3", nl: "Los op: (x + 3)/2 - (x - 1)/4 = 3" },
+    // 2(x+3)/4 - (x-1)/4 = 3 → (2x + 6 - x + 1)/4 = 3 → x + 7 = 12 → x = 5
+    answer: 5, tolerance: 0,
+    hint: { fr: "(x + 7)/4 = 3, donc x + 7 = 12, x = 5.", en: "(x + 7)/4 = 3, so x + 7 = 12, x = 5.", nl: "(x + 7)/4 = 3, dus x + 7 = 12, x = 5." }
   },
   {
     id: "N4_s_107", category: "N4", level: 3,
-    text: { fr: "Combien font 2/5 de 3/4 de 80 ?", en: "What is 2/5 of 3/4 of 80?", nl: "Hoeveel is 2/5 van 3/4 van 80?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Calcule d'abord 3/4 de 80 = 60, puis 2/5 de 60.", en: "First find 3/4 of 80 = 60, then 2/5 of 60.", nl: "Bereken eerst 3/4 van 80 = 60, dan 2/5 van 60." }
+    text: { fr: "Résous : 5 - (3 - 2x) = 3x + 1", en: "Solve: 5 - (3 - 2x) = 3x + 1", nl: "Los op: 5 - (3 - 2x) = 3x + 1" },
+    // 5 - 3 + 2x = 3x + 1 → 2 + 2x = 3x + 1 → 1 = x
+    answer: 1, tolerance: 0,
+    hint: { fr: "2 + 2x = 3x + 1, donc x = 1.", en: "2 + 2x = 3x + 1, so x = 1.", nl: "2 + 2x = 3x + 1, dus x = 1." }
   },
   {
     id: "N4_s_108", category: "N4", level: 3,
-    text: { fr: "Si 2/9 d'un nombre est 16, quel est ce nombre ?", en: "If 2/9 of a number is 16, what is the number?", nl: "Als 2/9 van een getal 16 is, wat is dat getal?" },
-    answer: 72, tolerance: 0,
-    hint: { fr: "Si 2/9 = 16, alors 1/9 = 8, donc le nombre = 72.", en: "If 2/9 = 16, then 1/9 = 8, so the number = 72.", nl: "Als 2/9 = 16, dan 1/9 = 8, dus het getal = 72." }
+    text: {
+      fr: "Le double d'un nombre moins 5 est égal au tiers de ce même nombre plus 10. Quel est ce nombre ?",
+      en: "Double a number minus 5 equals a third of that number plus 10. What is the number?",
+      nl: "Het dubbele van een getal min 5 is gelijk aan een derde van dat getal plus 10. Wat is dat getal?"
+    },
+    // 2x - 5 = x/3 + 10 → 6x - 15 = x + 30 → 5x = 45 → x = 9
+    answer: 9, tolerance: 0,
+    hint: {
+      fr: "2x - 5 = x/3 + 10 → 6x - 15 = x + 30 → 5x = 45, x = 9.",
+      en: "2x - 5 = x/3 + 10 → 6x - 15 = x + 30 → 5x = 45, x = 9.",
+      nl: "2x - 5 = x/3 + 10 → 6x - 15 = x + 30 → 5x = 45, x = 9."
+    }
   },
   {
     id: "N4_s_109", category: "N4", level: 3,
-    text: { fr: "Combien font 1/3 de 90 plus 2/5 de 75 ?", en: "What is 1/3 of 90 plus 2/5 of 75?", nl: "Hoeveel is 1/3 van 90 plus 2/5 van 75?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "Calcule 1/3 de 90 = 30 et 2/5 de 75 = 30, puis 30 + 30.", en: "Calculate 1/3 of 90 = 30 and 2/5 of 75 = 30, then 30 + 30.", nl: "Bereken 1/3 van 90 = 30 en 2/5 van 75 = 30, dan 30 + 30." }
+    text: {
+      fr: "On partage 120 € entre 3 personnes. La 2ᵉ reçoit 10 € de plus que la 1ʳᵉ, et la 3ᵉ reçoit le double de la 1ʳᵉ. Combien reçoit la 1ʳᵉ ?",
+      en: "120€ is shared among 3 people. The 2nd gets 10€ more than the 1st, the 3rd gets double the 1st. How much does the 1st get?",
+      nl: "120€ wordt verdeeld over 3 personen. De 2ᵉ krijgt 10€ meer dan de 1ᵉ, de 3ᵉ krijgt het dubbele van de 1ᵉ. Hoeveel krijgt de 1ᵉ?"
+    },
+    // x + (x+10) + 2x = 120 → 4x + 10 = 120 → 4x = 110 → x = 27.5
+    answer: 27.5, tolerance: 0,
+    hint: {
+      fr: "x + (x+10) + 2x = 120, donc 4x = 110, x = 27,50 €.",
+      en: "x + (x+10) + 2x = 120, so 4x = 110, x = 27.50€.",
+      nl: "x + (x+10) + 2x = 120, dus 4x = 110, x = 27,50€."
+    }
   },
   {
     id: "N4_s_110", category: "N4", level: 3,
-    text: { fr: "Si 3/4 d'un nombre est 45, quel est ce nombre ?", en: "If 3/4 of a number is 45, what is the number?", nl: "Als 3/4 van een getal 45 is, wat is dat getal?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "Si 3/4 = 45, alors 1/4 = 15, donc le nombre = 60.", en: "If 3/4 = 45, then 1/4 = 15, so the number = 60.", nl: "Als 3/4 = 45, dan 1/4 = 15, dus het getal = 60." }
+    text: { fr: "Résous : 3x/5 - 2 = x/5 + 4", en: "Solve: 3x/5 - 2 = x/5 + 4", nl: "Los op: 3x/5 - 2 = x/5 + 4" },
+    // 3x/5 - x/5 = 6 → 2x/5 = 6 → 2x = 30 → x = 15
+    answer: 15, tolerance: 0,
+    hint: { fr: "2x/5 = 6, donc 2x = 30, x = 15.", en: "2x/5 = 6, so 2x = 30, x = 15.", nl: "2x/5 = 6, dus 2x = 30, x = 15." }
   },
   {
     id: "N4_s_111", category: "N4", level: 3,
-    text: { fr: "Combien font 3/4 de 2/3 de 2/5 de 100 ?", en: "What is 3/4 of 2/3 of 2/5 of 100?", nl: "Hoeveel is 3/4 van 2/3 van 2/5 van 100?" },
-    answer: 20, tolerance: 0,
-    hint: { fr: "Multiplie les fractions : 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Puis 1/5 de 100.", en: "Multiply: 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Then 1/5 of 100.", nl: "Vermenigvuldig: 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Dan 1/5 van 100." }
+    text: {
+      fr: "Résous : (4x - 1)/5 = (2x + 3)/3",
+      en: "Solve: (4x - 1)/5 = (2x + 3)/3",
+      nl: "Los op: (4x - 1)/5 = (2x + 3)/3"
+    },
+    // 3(4x-1) = 5(2x+3) → 12x - 3 = 10x + 15 → 2x = 18 → x = 9
+    answer: 9, tolerance: 0,
+    hint: { fr: "Produit en croix : 12x - 3 = 10x + 15, donc 2x = 18, x = 9.", en: "Cross multiply: 12x - 3 = 10x + 15, so 2x = 18, x = 9.", nl: "Kruisvermenigvuldiging: 12x - 3 = 10x + 15, dus 2x = 18, x = 9." }
   },
   {
-    id: "N4_s_112", category: "N4", level: 1,
-    text: { fr: "Combien font 2/5 de 45 ?", en: "What is 2/5 of 45?", nl: "Hoeveel is 2/5 van 45?" },
-    answer: 18, tolerance: 0,
-    hint: { fr: "Divise 45 par 5 = 9, puis multiplie par 2.", en: "Divide 45 by 5 = 9, then multiply by 2.", nl: "Deel 45 door 5 = 9, vermenigvuldig dan met 2." }
+    id: "N4_s_112", category: "N4", level: 3,
+    text: {
+      fr: "Dans un triangle, le 2ᵉ angle vaut 3 fois le 1ᵉʳ et le 3ᵉ angle vaut 2 fois le 1ᵉʳ. Quel est le 1ᵉʳ angle (en degrés) ?",
+      en: "In a triangle, the 2nd angle is 3 times the 1st and the 3rd is 2 times the 1st. What is the 1st angle (in degrees)?",
+      nl: "In een driehoek is de 2ᵉ hoek 3 keer de 1ᵉ en de 3ᵉ hoek is 2 keer de 1ᵉ. Wat is de 1ᵉ hoek (in graden)?"
+    },
+    // x + 3x + 2x = 180 → 6x = 180 → x = 30
+    answer: 30, tolerance: 0,
+    hint: {
+      fr: "x + 3x + 2x = 180, donc 6x = 180, x = 30°.",
+      en: "x + 3x + 2x = 180, so 6x = 180, x = 30°.",
+      nl: "x + 3x + 2x = 180, dus 6x = 180, x = 30°."
+    }
   },
   {
-    id: "N4_s_113", category: "N4", level: 1,
-    text: { fr: "Combien font 3/8 de 64 ?", en: "What is 3/8 of 64?", nl: "Hoeveel is 3/8 van 64?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "Divise 64 par 8 = 8, puis multiplie par 3.", en: "Divide 64 by 8 = 8, then multiply by 3.", nl: "Deel 64 door 8 = 8, vermenigvuldig dan met 3." }
+    id: "N4_s_113", category: "N4", level: 3,
+    text: { fr: "Résous : -3(x - 2) = 2(4 - x) + 1", en: "Solve: -3(x - 2) = 2(4 - x) + 1", nl: "Los op: -3(x - 2) = 2(4 - x) + 1" },
+    // -3x + 6 = 8 - 2x + 1 → -3x + 6 = 9 - 2x → -x = 3 → x = -3
+    answer: -3, tolerance: 0,
+    hint: { fr: "-3x + 6 = 9 - 2x, donc -x = 3, x = -3.", en: "-3x + 6 = 9 - 2x, so -x = 3, x = -3.", nl: "-3x + 6 = 9 - 2x, dus -x = 3, x = -3." }
   },
   {
-    id: "N4_s_114", category: "N4", level: 1,
-    text: { fr: "Combien font 5/6 de 42 ?", en: "What is 5/6 of 42?", nl: "Hoeveel is 5/6 van 42?" },
-    answer: 35, tolerance: 0,
-    hint: { fr: "Divise 42 par 6 = 7, puis multiplie par 5.", en: "Divide 42 by 6 = 7, then multiply by 5.", nl: "Deel 42 door 6 = 7, vermenigvuldig dan met 5." }
+    id: "N4_s_114", category: "N4", level: 3,
+    text: {
+      fr: "Un terrain rectangulaire a un périmètre de 96 m. Sa longueur vaut 3 fois sa largeur. Quelle est la largeur (en m) ?",
+      en: "A rectangular field has a perimeter of 96 m. Its length is 3 times its width. What is the width (in m)?",
+      nl: "Een rechthoekig terrein heeft een omtrek van 96 m. De lengte is 3 keer de breedte. Wat is de breedte (in m)?"
+    },
+    // 2(x + 3x) = 96 → 8x = 96 → x = 12
+    answer: 12, tolerance: 0,
+    hint: {
+      fr: "2(x + 3x) = 96, donc 8x = 96, x = 12 m.",
+      en: "2(x + 3x) = 96, so 8x = 96, x = 12 m.",
+      nl: "2(x + 3x) = 96, dus 8x = 96, x = 12 m."
+    }
   },
   {
-    id: "N4_s_115", category: "N4", level: 2,
-    text: { fr: "Si 3/7 d'un nombre est 27, quel est ce nombre ?", en: "If 3/7 of a number is 27, what is the number?", nl: "Als 3/7 van een getal 27 is, wat is dat getal?" },
-    answer: 63, tolerance: 0,
-    hint: { fr: "Si 3/7 = 27, alors 1/7 = 9, donc le nombre = 63.", en: "If 3/7 = 27, then 1/7 = 9, so the number = 63.", nl: "Als 3/7 = 27, dan 1/7 = 9, dus het getal = 63." }
+    id: "N4_s_115", category: "N4", level: 3,
+    text: { fr: "Résous : (x + 1)/2 + (2x - 1)/3 = 4", en: "Solve: (x + 1)/2 + (2x - 1)/3 = 4", nl: "Los op: (x + 1)/2 + (2x - 1)/3 = 4" },
+    // 3(x+1)/6 + 2(2x-1)/6 = 4 → (3x + 3 + 4x - 2)/6 = 4 → 7x + 1 = 24 → 7x = 23 → x = 23/7
+    answer: 23/7, tolerance: 0.01,
+    hint: { fr: "7x + 1 = 24, donc 7x = 23, x = 23/7 ≈ 3,29.", en: "7x + 1 = 24, so 7x = 23, x = 23/7 ≈ 3.29.", nl: "7x + 1 = 24, dus 7x = 23, x = 23/7 ≈ 3,29." }
   },
   {
-    id: "N4_s_116", category: "N4", level: 2,
-    text: { fr: "Combien font 2/3 de 54 plus 1/4 de 28 ?", en: "What is 2/3 of 54 plus 1/4 of 28?", nl: "Hoeveel is 2/3 van 54 plus 1/4 van 28?" },
-    answer: 43, tolerance: 0,
-    hint: { fr: "2/3 de 54 = 36 et 1/4 de 28 = 7. Donc 36 + 7 = 43.", en: "2/3 of 54 = 36 and 1/4 of 28 = 7. So 36 + 7 = 43.", nl: "2/3 van 54 = 36 en 1/4 van 28 = 7. Dus 36 + 7 = 43." }
+    id: "N4_s_116", category: "N4", level: 3,
+    text: {
+      fr: "Quatre nombres pairs consécutifs ont une somme de 52. Quel est le plus petit ?",
+      en: "Four consecutive even numbers sum to 52. What is the smallest?",
+      nl: "Vier opeenvolgende even getallen hebben als som 52. Wat is het kleinste?"
+    },
+    // x + (x+2) + (x+4) + (x+6) = 52 → 4x + 12 = 52 → 4x = 40 → x = 10
+    answer: 10, tolerance: 0,
+    hint: {
+      fr: "x + (x+2) + (x+4) + (x+6) = 52, donc 4x + 12 = 52, x = 10.",
+      en: "x + (x+2) + (x+4) + (x+6) = 52, so 4x + 12 = 52, x = 10.",
+      nl: "x + (x+2) + (x+4) + (x+6) = 52, dus 4x + 12 = 52, x = 10."
+    }
   },
   {
     id: "N4_s_117", category: "N4", level: 3,
-    text: { fr: "Si 5/8 d'un nombre est 40, quel est ce nombre ?", en: "If 5/8 of a number is 40, what is the number?", nl: "Als 5/8 van een getal 40 is, wat is dat getal?" },
-    answer: 64, tolerance: 0,
-    hint: { fr: "Si 5/8 = 40, alors 1/8 = 8, donc le nombre = 64.", en: "If 5/8 = 40, then 1/8 = 8, so the number = 64.", nl: "Als 5/8 = 40, dan 1/8 = 8, dus het getal = 64." }
+    text: { fr: "Résous : 0.5x + 1.5 = 3x - 8.5", en: "Solve: 0.5x + 1.5 = 3x - 8.5", nl: "Los op: 0,5x + 1,5 = 3x - 8,5" },
+    // 1.5 + 8.5 = 3x - 0.5x → 10 = 2.5x → x = 4
+    answer: 4, tolerance: 0,
+    hint: { fr: "10 = 2,5x, donc x = 4.", en: "10 = 2.5x, so x = 4.", nl: "10 = 2,5x, dus x = 4." }
   },
   {
     id: "N4_s_118", category: "N4", level: 3,
-    text: { fr: "Combien font 4/5 de 3/4 de 60 ?", en: "What is 4/5 of 3/4 of 60?", nl: "Hoeveel is 4/5 van 3/4 van 60?" },
-    answer: 36, tolerance: 0,
-    hint: { fr: "3/4 de 60 = 45, puis 4/5 de 45 = 36.", en: "3/4 of 60 = 45, then 4/5 of 45 = 36.", nl: "3/4 van 60 = 45, dan 4/5 van 45 = 36." }
+    text: {
+      fr: "Formule 1 : 15 € + 3 € par match. Formule 2 : 6 € par match. Pour combien de matchs les deux formules coûtent-elles le même prix ?",
+      en: "Plan 1: 15€ + 3€ per match. Plan 2: 6€ per match. For how many matches do both plans cost the same?",
+      nl: "Formule 1: 15€ + 3€ per wedstrijd. Formule 2: 6€ per wedstrijd. Voor hoeveel wedstrijden kosten beide formules hetzelfde?"
+    },
+    // CE1D 2020 style: 15 + 3x = 6x → 15 = 3x → x = 5
+    answer: 5, tolerance: 0,
+    hint: {
+      fr: "15 + 3x = 6x, donc 15 = 3x, x = 5 matchs.",
+      en: "15 + 3x = 6x, so 15 = 3x, x = 5 matches.",
+      nl: "15 + 3x = 6x, dus 15 = 3x, x = 5 wedstrijden."
+    }
+  },
+  {
+    id: "N4_s_119", category: "N4", level: 3,
+    text: { fr: "Résous : 2(x + 4) - 3(x - 1) = 0", en: "Solve: 2(x + 4) - 3(x - 1) = 0", nl: "Los op: 2(x + 4) - 3(x - 1) = 0" },
+    // 2x + 8 - 3x + 3 = 0 → -x + 11 = 0 → x = 11
+    answer: 11, tolerance: 0,
+    hint: { fr: "-x + 11 = 0, donc x = 11.", en: "-x + 11 = 0, so x = 11.", nl: "-x + 11 = 0, dus x = 11." }
+  },
+  {
+    id: "N4_s_120", category: "N4", level: 3,
+    text: {
+      fr: "Un magasin offre 20 % de réduction. Après réduction, un article coûte 56 €. Quel était le prix initial (en €) ?",
+      en: "A shop offers 20% off. After the discount, an item costs 56€. What was the original price (in €)?",
+      nl: "Een winkel geeft 20% korting. Na korting kost een artikel 56€. Wat was de oorspronkelijke prijs (in €)?"
+    },
+    // 0.8x = 56 → x = 70
+    answer: 70, tolerance: 0,
+    hint: {
+      fr: "0,8 . prix = 56, donc prix = 56 / 0,8 = 70 €.",
+      en: "0.8 . price = 56, so price = 56 / 0.8 = 70€.",
+      nl: "0,8 . prijs = 56, dus prijs = 56 / 0,8 = 70€."
+    }
   },
 ];
 
 export function generate(level = 1) {
   const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const id = `N4_gen_${Date.now()}_${rand(100, 999)}`;
-  const denoms = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const d = denoms[rand(0, level === 1 ? 3 : denoms.length - 1)];
-  const n = rand(1, d - 1);
-  const mult = rand(level === 1 ? 2 : 3, level === 1 ? 10 : 15);
-  const whole = d * mult;
-  const answer = n * mult;
-  return { id, category: 'N4', level, text: { fr: `Combien font ${n}/${d} de ${whole} ?`, en: `What is ${n}/${d} of ${whole}?`, nl: `Hoeveel is ${n}/${d} van ${whole}?` }, answer, tolerance: 0 };
+
+  if (level === 1) {
+    // Simple ax + b = c
+    const a = rand(2, 9);
+    const x = rand(1, 15);
+    const b = rand(1, 20);
+    const c = a * x + b;
+    return {
+      id, category: 'N4', level,
+      text: { fr: `Résous : ${a}x + ${b} = ${c}`, en: `Solve: ${a}x + ${b} = ${c}`, nl: `Los op: ${a}x + ${b} = ${c}` },
+      answer: x, tolerance: 0,
+      hint: { fr: `${a}x = ${c} - ${b} = ${c - b}, donc x = ${x}.`, en: `${a}x = ${c} - ${b} = ${c - b}, so x = ${x}.`, nl: `${a}x = ${c} - ${b} = ${c - b}, dus x = ${x}.` }
+    };
+  }
+
+  if (level === 2) {
+    // a(x + b) = c  →  x = c/a - b
+    const a = rand(2, 5);
+    const x = rand(1, 12);
+    const b = rand(1, 10);
+    const c = a * (x + b);
+    return {
+      id, category: 'N4', level,
+      text: { fr: `Résous : ${a}(x + ${b}) = ${c}`, en: `Solve: ${a}(x + ${b}) = ${c}`, nl: `Los op: ${a}(x + ${b}) = ${c}` },
+      answer: x, tolerance: 0,
+      hint: { fr: `x + ${b} = ${c / a}, donc x = ${x}.`, en: `x + ${b} = ${c / a}, so x = ${x}.`, nl: `x + ${b} = ${c / a}, dus x = ${x}.` }
+    };
+  }
+
+  // Level 3: ax + b = cx + d  →  x = (d - b) / (a - c)
+  const x = rand(-5, 15);
+  const a = rand(3, 8);
+  let c = rand(1, a - 1);
+  const b = rand(-10, 20);
+  const d = (a - c) * x + b;
+  return {
+    id, category: 'N4', level,
+    text: { fr: `Résous : ${a}x + ${b} = ${c}x + ${d}`, en: `Solve: ${a}x + ${b} = ${c}x + ${d}`, nl: `Los op: ${a}x + ${b} = ${c}x + ${d}` },
+    answer: x, tolerance: 0,
+    hint: { fr: `${a - c}x = ${d - b}, donc x = ${x}.`, en: `${a - c}x = ${d - b}, so x = ${x}.`, nl: `${a - c}x = ${d - b}, dus x = ${x}.` }
+  };
 }

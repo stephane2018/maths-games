@@ -15,97 +15,97 @@ export const questions = [
     id: "D2_s_2", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 12, 8, 15, 5 ?", en: "What is the mean of: 12, 8, 15, 5?", nl: "Wat is het gemiddelde van: 12, 8, 15, 5?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(12 + 8 + 15 + 5) ÷ 4.", en: "(12 + 8 + 15 + 5) ÷ 4.", nl: "(12 + 8 + 15 + 5) ÷ 4." }
+    hint: { fr: "(12 + 8 + 15 + 5) : 4.", en: "(12 + 8 + 15 + 5) : 4.", nl: "(12 + 8 + 15 + 5) : 4." }
   },
   {
     id: "D2_s_3", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 7, 3, 5, 9, 6 ?", en: "What is the mean of: 7, 3, 5, 9, 6?", nl: "Wat is het gemiddelde van: 7, 3, 5, 9, 6?" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Total = 30. Puis 30 ÷ 5.", en: "Total = 30. Then 30 ÷ 5.", nl: "Totaal = 30. Dan 30 ÷ 5." }
+    hint: { fr: "Total = 30. Puis 30 : 5.", en: "Total = 30. Then 30 : 5.", nl: "Totaal = 30. Dan 30 : 5." }
   },
   {
     id: "D2_s_4", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 20, 30, 40 ?", en: "What is the mean of: 20, 30, 40?", nl: "Wat is het gemiddelde van: 20, 30, 40?" },
     answer: 30, tolerance: 0.01,
-    hint: { fr: "(20 + 30 + 40) ÷ 3.", en: "(20 + 30 + 40) ÷ 3.", nl: "(20 + 30 + 40) ÷ 3." }
+    hint: { fr: "(20 + 30 + 40) : 3.", en: "(20 + 30 + 40) : 3.", nl: "(20 + 30 + 40) : 3." }
   },
   {
     id: "D2_s_5", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 15, 25, 10, 30 ?", en: "What is the mean of: 15, 25, 10, 30?", nl: "Wat is het gemiddelde van: 15, 25, 10, 30?" },
     answer: 20, tolerance: 0.01,
-    hint: { fr: "(15 + 25 + 10 + 30) ÷ 4.", en: "(15 + 25 + 10 + 30) ÷ 4.", nl: "(15 + 25 + 10 + 30) ÷ 4." }
+    hint: { fr: "(15 + 25 + 10 + 30) : 4.", en: "(15 + 25 + 10 + 30) : 4.", nl: "(15 + 25 + 10 + 30) : 4." }
   },
   {
     id: "D2_s_16", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 3, 9, 6 ?", en: "What is the mean of: 3, 9, 6?", nl: "Wat is het gemiddelde van: 3, 9, 6?" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "(3 + 9 + 6) ÷ 3 = 18 ÷ 3.", en: "(3 + 9 + 6) ÷ 3 = 18 ÷ 3.", nl: "(3 + 9 + 6) ÷ 3 = 18 ÷ 3." }
+    hint: { fr: "(3 + 9 + 6) : 3 = 18 : 3.", en: "(3 + 9 + 6) : 3 = 18 : 3.", nl: "(3 + 9 + 6) : 3 = 18 : 3." }
   },
   {
     id: "D2_s_17", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 10, 14, 8, 12 ?", en: "What is the mean of: 10, 14, 8, 12?", nl: "Wat is het gemiddelde van: 10, 14, 8, 12?" },
     answer: 11, tolerance: 0.01,
-    hint: { fr: "(10 + 14 + 8 + 12) ÷ 4 = 44 ÷ 4.", en: "(10 + 14 + 8 + 12) ÷ 4 = 44 ÷ 4.", nl: "(10 + 14 + 8 + 12) ÷ 4 = 44 ÷ 4." }
+    hint: { fr: "(10 + 14 + 8 + 12) : 4 = 44 : 4.", en: "(10 + 14 + 8 + 12) : 4 = 44 : 4.", nl: "(10 + 14 + 8 + 12) : 4 = 44 : 4." }
   },
   {
     id: "D2_s_18", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 5, 15, 10, 20, 25 ?", en: "What is the mean of: 5, 15, 10, 20, 25?", nl: "Wat is het gemiddelde van: 5, 15, 10, 20, 25?" },
     answer: 15, tolerance: 0.01,
-    hint: { fr: "Total = 75. Puis 75 ÷ 5.", en: "Total = 75. Then 75 ÷ 5.", nl: "Totaal = 75. Dan 75 ÷ 5." }
+    hint: { fr: "Total = 75. Puis 75 : 5.", en: "Total = 75. Then 75 : 5.", nl: "Totaal = 75. Dan 75 : 5." }
   },
   {
     id: "D2_s_19", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 2, 6, 4 ?", en: "What is the mean of: 2, 6, 4?", nl: "Wat is het gemiddelde van: 2, 6, 4?" },
     answer: 4, tolerance: 0.01,
-    hint: { fr: "(2 + 6 + 4) ÷ 3 = 12 ÷ 3.", en: "(2 + 6 + 4) ÷ 3 = 12 ÷ 3.", nl: "(2 + 6 + 4) ÷ 3 = 12 ÷ 3." }
+    hint: { fr: "(2 + 6 + 4) : 3 = 12 : 3.", en: "(2 + 6 + 4) : 3 = 12 : 3.", nl: "(2 + 6 + 4) : 3 = 12 : 3." }
   },
   {
     id: "D2_s_20", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 18, 12, 6, 24 ?", en: "What is the mean of: 18, 12, 6, 24?", nl: "Wat is het gemiddelde van: 18, 12, 6, 24?" },
     answer: 15, tolerance: 0.01,
-    hint: { fr: "(18 + 12 + 6 + 24) ÷ 4 = 60 ÷ 4.", en: "(18 + 12 + 6 + 24) ÷ 4 = 60 ÷ 4.", nl: "(18 + 12 + 6 + 24) ÷ 4 = 60 ÷ 4." }
+    hint: { fr: "(18 + 12 + 6 + 24) : 4 = 60 : 4.", en: "(18 + 12 + 6 + 24) : 4 = 60 : 4.", nl: "(18 + 12 + 6 + 24) : 4 = 60 : 4." }
   },
   {
     id: "D2_s_21", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 11, 7, 9, 5, 8 ?", en: "What is the mean of: 11, 7, 9, 5, 8?", nl: "Wat is het gemiddelde van: 11, 7, 9, 5, 8?" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "Total = 40. Puis 40 ÷ 5.", en: "Total = 40. Then 40 ÷ 5.", nl: "Totaal = 40. Dan 40 ÷ 5." }
+    hint: { fr: "Total = 40. Puis 40 : 5.", en: "Total = 40. Then 40 : 5.", nl: "Totaal = 40. Dan 40 : 5." }
   },
   {
     id: "D2_s_22", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 14, 22, 18 ?", en: "What is the mean of: 14, 22, 18?", nl: "Wat is het gemiddelde van: 14, 22, 18?" },
     answer: 18, tolerance: 0.01,
-    hint: { fr: "(14 + 22 + 18) ÷ 3 = 54 ÷ 3.", en: "(14 + 22 + 18) ÷ 3 = 54 ÷ 3.", nl: "(14 + 22 + 18) ÷ 3 = 54 ÷ 3." }
+    hint: { fr: "(14 + 22 + 18) : 3 = 54 : 3.", en: "(14 + 22 + 18) : 3 = 54 : 3.", nl: "(14 + 22 + 18) : 3 = 54 : 3." }
   },
   {
     id: "D2_s_23", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 3, 7, 5, 9, 1 ?", en: "What is the mean of: 3, 7, 5, 9, 1?", nl: "Wat is het gemiddelde van: 3, 7, 5, 9, 1?" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Total = 25. Puis 25 ÷ 5.", en: "Total = 25. Then 25 ÷ 5.", nl: "Totaal = 25. Dan 25 ÷ 5." }
+    hint: { fr: "Total = 25. Puis 25 : 5.", en: "Total = 25. Then 25 : 5.", nl: "Totaal = 25. Dan 25 : 5." }
   },
   {
     id: "D2_s_24", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 16, 20, 24 ?", en: "What is the mean of: 16, 20, 24?", nl: "Wat is het gemiddelde van: 16, 20, 24?" },
     answer: 20, tolerance: 0.01,
-    hint: { fr: "(16 + 20 + 24) ÷ 3 = 60 ÷ 3.", en: "(16 + 20 + 24) ÷ 3 = 60 ÷ 3.", nl: "(16 + 20 + 24) ÷ 3 = 60 ÷ 3." }
+    hint: { fr: "(16 + 20 + 24) : 3 = 60 : 3.", en: "(16 + 20 + 24) : 3 = 60 : 3.", nl: "(16 + 20 + 24) : 3 = 60 : 3." }
   },
   {
     id: "D2_s_25", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 6, 10, 8, 14, 12 ?", en: "What is the mean of: 6, 10, 8, 14, 12?", nl: "Wat is het gemiddelde van: 6, 10, 8, 14, 12?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "Total = 50. Puis 50 ÷ 5.", en: "Total = 50. Then 50 ÷ 5.", nl: "Totaal = 50. Dan 50 ÷ 5." }
+    hint: { fr: "Total = 50. Puis 50 : 5.", en: "Total = 50. Then 50 : 5.", nl: "Totaal = 50. Dan 50 : 5." }
   },
   {
     id: "D2_s_26", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 9, 3, 15, 21, 12 ?", en: "What is the mean of: 9, 3, 15, 21, 12?", nl: "Wat is het gemiddelde van: 9, 3, 15, 21, 12?" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "Total = 60. Puis 60 ÷ 5.", en: "Total = 60. Then 60 ÷ 5.", nl: "Totaal = 60. Dan 60 ÷ 5." }
+    hint: { fr: "Total = 60. Puis 60 : 5.", en: "Total = 60. Then 60 : 5.", nl: "Totaal = 60. Dan 60 : 5." }
   },
   {
     id: "D2_s_27", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 25, 35, 15, 45, 30 ?", en: "What is the mean of: 25, 35, 15, 45, 30?", nl: "Wat is het gemiddelde van: 25, 35, 15, 45, 30?" },
     answer: 30, tolerance: 0.01,
-    hint: { fr: "Total = 150. Puis 150 ÷ 5.", en: "Total = 150. Then 150 ÷ 5.", nl: "Totaal = 150. Dan 150 ÷ 5." }
+    hint: { fr: "Total = 150. Puis 150 : 5.", en: "Total = 150. Then 150 : 5.", nl: "Totaal = 150. Dan 150 : 5." }
   },
   // Level 2 — Range, median
   {
@@ -136,7 +136,7 @@ export const questions = [
     id: "D2_s_10", category: "D2", level: 2,
     text: { fr: "La moyenne de 5 nombres est 8. Quel est leur total ?", en: "The mean of 5 numbers is 8. What is their total?", nl: "Het gemiddelde van 5 getallen is 8. Wat is hun totaal?" },
     answer: 40, tolerance: 0,
-    hint: { fr: "Total = moyenne × nombre de valeurs = 8 × 5.", en: "Total = mean × count = 8 × 5.", nl: "Totaal = gemiddelde × aantal = 8 × 5." }
+    hint: { fr: "Total = moyenne . nombre de valeurs = 8 . 5.", en: "Total = mean . count = 8 . 5.", nl: "Totaal = gemiddelde . aantal = 8 . 5." }
   },
   {
     id: "D2_s_28", category: "D2", level: 2,
@@ -154,7 +154,7 @@ export const questions = [
     id: "D2_s_30", category: "D2", level: 2,
     text: { fr: "La moyenne de 8 nombres est 6. Quel est leur total ?", en: "The mean of 8 numbers is 6. What is their total?", nl: "Het gemiddelde van 8 getallen is 6. Wat is hun totaal?" },
     answer: 48, tolerance: 0,
-    hint: { fr: "Total = moyenne × nombre de valeurs = 6 × 8.", en: "Total = mean × count = 6 × 8.", nl: "Totaal = gemiddelde × aantal = 6 × 8." }
+    hint: { fr: "Total = moyenne . nombre de valeurs = 6 . 8.", en: "Total = mean . count = 6 . 8.", nl: "Totaal = gemiddelde . aantal = 6 . 8." }
   },
   {
     id: "D2_s_31", category: "D2", level: 2,
@@ -172,7 +172,7 @@ export const questions = [
     id: "D2_s_33", category: "D2", level: 2,
     text: { fr: "La moyenne de 3 nombres est 20. Quel est leur total ?", en: "The mean of 3 numbers is 20. What is their total?", nl: "Het gemiddelde van 3 getallen is 20. Wat is hun totaal?" },
     answer: 60, tolerance: 0,
-    hint: { fr: "Total = 20 × 3 = 60.", en: "Total = 20 × 3 = 60.", nl: "Totaal = 20 × 3 = 60." }
+    hint: { fr: "Total = 20 . 3 = 60.", en: "Total = 20 . 3 = 60.", nl: "Totaal = 20 . 3 = 60." }
   },
   {
     id: "D2_s_34", category: "D2", level: 2,
@@ -190,7 +190,7 @@ export const questions = [
     id: "D2_s_36", category: "D2", level: 2,
     text: { fr: "La moyenne de 10 nombres est 12. Quel est leur total ?", en: "The mean of 10 numbers is 12. What is their total?", nl: "Het gemiddelde van 10 getallen is 12. Wat is hun totaal?" },
     answer: 120, tolerance: 0,
-    hint: { fr: "Total = 12 × 10 = 120.", en: "Total = 12 × 10 = 120.", nl: "Totaal = 12 × 10 = 120." }
+    hint: { fr: "Total = 12 . 10 = 120.", en: "Total = 12 . 10 = 120.", nl: "Totaal = 12 . 10 = 120." }
   },
   {
     id: "D2_s_37", category: "D2", level: 2,
@@ -215,13 +215,13 @@ export const questions = [
     id: "D2_s_11", category: "D2", level: 3,
     text: { fr: "Notes : 12, 8, 15, 9, 6. Combien faut-il au 6e contrôle pour une moyenne de 10 ?", en: "Scores: 12, 8, 15, 9, 6. What score is needed on the 6th test for a mean of 10?", nl: "Punten: 12, 8, 15, 9, 6. Welk punt is nodig op de 6e toets voor een gemiddelde van 10?" },
     answer: 10, tolerance: 0,
-    hint: { fr: "10 × 6 = 60. Total actuel = 50. Il manque 10.", en: "10 × 6 = 60. Current total = 50. Need 10 more.", nl: "10 × 6 = 60. Huidig totaal = 50. Nog 10 nodig." }
+    hint: { fr: "10 . 6 = 60. Total actuel = 50. Il manque 10.", en: "10 . 6 = 60. Current total = 50. Need 10 more.", nl: "10 . 6 = 60. Huidig totaal = 50. Nog 10 nodig." }
   },
   {
     id: "D2_s_12", category: "D2", level: 3,
     text: { fr: "La moyenne de 4 nombres est 15. On ajoute 25. Quelle est la nouvelle moyenne ?", en: "The mean of 4 numbers is 15. Adding 25 gives what new mean?", nl: "Het gemiddelde van 4 getallen is 15. Na toevoeging van 25, wat is het nieuwe gemiddelde?" },
     answer: 17, tolerance: 0.01,
-    hint: { fr: "Total = 60 + 25 = 85. Nouvelle moyenne = 85 ÷ 5.", en: "Total = 60 + 25 = 85. New mean = 85 ÷ 5.", nl: "Totaal = 60 + 25 = 85. Nieuw gemiddelde = 85 ÷ 5." }
+    hint: { fr: "Total = 60 + 25 = 85. Nouvelle moyenne = 85 : 5.", en: "Total = 60 + 25 = 85. New mean = 85 : 5.", nl: "Totaal = 60 + 25 = 85. Nieuw gemiddelde = 85 : 5." }
   },
   {
     id: "D2_s_13", category: "D2", level: 3,
@@ -239,19 +239,19 @@ export const questions = [
     id: "D2_s_15", category: "D2", level: 3,
     text: { fr: "La moyenne de 6 nombres est 5. On retire le nombre 11. Quelle est la nouvelle moyenne ?", en: "The mean of 6 numbers is 5. Removing 11 gives what new mean?", nl: "Het gemiddelde van 6 getallen is 5. Na verwijdering van 11, wat is het nieuwe gemiddelde?" },
     answer: 3.8, tolerance: 0.01,
-    hint: { fr: "Total = 30. Nouveau total = 30 - 11 = 19. 19 ÷ 5 = 3,8.", en: "Total = 30. New total = 30 - 11 = 19. 19 ÷ 5 = 3.8.", nl: "Totaal = 30. Nieuw totaal = 30 - 11 = 19. 19 ÷ 5 = 3,8." }
+    hint: { fr: "Total = 30. Nouveau total = 30 - 11 = 19. 19 : 5 = 3,8.", en: "Total = 30. New total = 30 - 11 = 19. 19 : 5 = 3.8.", nl: "Totaal = 30. Nieuw totaal = 30 - 11 = 19. 19 : 5 = 3,8." }
   },
   {
     id: "D2_s_40", category: "D2", level: 3,
     text: { fr: "Notes : 14, 10, 8, 12, 16. Combien faut-il au 6e contrôle pour une moyenne de 12 ?", en: "Scores: 14, 10, 8, 12, 16. What score is needed on the 6th test for a mean of 12?", nl: "Punten: 14, 10, 8, 12, 16. Welk punt is nodig op de 6e toets voor een gemiddelde van 12?" },
     answer: 12, tolerance: 0,
-    hint: { fr: "12 × 6 = 72. Total actuel = 60. Il manque 12.", en: "12 × 6 = 72. Current total = 60. Need 12 more.", nl: "12 × 6 = 72. Huidig totaal = 60. Nog 12 nodig." }
+    hint: { fr: "12 . 6 = 72. Total actuel = 60. Il manque 12.", en: "12 . 6 = 72. Current total = 60. Need 12 more.", nl: "12 . 6 = 72. Huidig totaal = 60. Nog 12 nodig." }
   },
   {
     id: "D2_s_41", category: "D2", level: 3,
     text: { fr: "La moyenne de 5 nombres est 10. On ajoute 16. Quelle est la nouvelle moyenne ?", en: "The mean of 5 numbers is 10. Adding 16 gives what new mean?", nl: "Het gemiddelde van 5 getallen is 10. Na toevoeging van 16, wat is het nieuwe gemiddelde?" },
     answer: 11, tolerance: 0.01,
-    hint: { fr: "Total = 50 + 16 = 66. Nouvelle moyenne = 66 ÷ 6.", en: "Total = 50 + 16 = 66. New mean = 66 ÷ 6.", nl: "Totaal = 50 + 16 = 66. Nieuw gemiddelde = 66 ÷ 6." }
+    hint: { fr: "Total = 50 + 16 = 66. Nouvelle moyenne = 66 : 6.", en: "Total = 50 + 16 = 66. New mean = 66 : 6.", nl: "Totaal = 50 + 16 = 66. Nieuw gemiddelde = 66 : 6." }
   },
   {
     id: "D2_s_42", category: "D2", level: 3,
@@ -269,13 +269,13 @@ export const questions = [
     id: "D2_s_44", category: "D2", level: 3,
     text: { fr: "La moyenne de 5 nombres est 12. On retire le nombre 2. Quelle est la nouvelle moyenne ?", en: "The mean of 5 numbers is 12. Removing 2 gives what new mean?", nl: "Het gemiddelde van 5 getallen is 12. Na verwijdering van 2, wat is het nieuwe gemiddelde?" },
     answer: 14.5, tolerance: 0.01,
-    hint: { fr: "Total = 60. Nouveau total = 60 - 2 = 58. 58 ÷ 4 = 14,5.", en: "Total = 60. New total = 60 - 2 = 58. 58 ÷ 4 = 14.5.", nl: "Totaal = 60. Nieuw totaal = 60 - 2 = 58. 58 ÷ 4 = 14,5." }
+    hint: { fr: "Total = 60. Nouveau total = 60 - 2 = 58. 58 : 4 = 14,5.", en: "Total = 60. New total = 60 - 2 = 58. 58 : 4 = 14.5.", nl: "Totaal = 60. Nieuw totaal = 60 - 2 = 58. 58 : 4 = 14,5." }
   },
   {
     id: "D2_s_45", category: "D2", level: 3,
     text: { fr: "Notes : 7, 5, 9, 11. Combien faut-il au 5e contrôle pour une moyenne de 8 ?", en: "Scores: 7, 5, 9, 11. What score is needed on the 5th test for a mean of 8?", nl: "Punten: 7, 5, 9, 11. Welk punt is nodig op de 5e toets voor een gemiddelde van 8?" },
     answer: 8, tolerance: 0,
-    hint: { fr: "8 × 5 = 40. Total actuel = 32. Il manque 8.", en: "8 × 5 = 40. Current total = 32. Need 8 more.", nl: "8 × 5 = 40. Huidig totaal = 32. Nog 8 nodig." }
+    hint: { fr: "8 . 5 = 40. Total actuel = 32. Il manque 8.", en: "8 . 5 = 40. Current total = 32. Need 8 more.", nl: "8 . 5 = 40. Huidig totaal = 32. Nog 8 nodig." }
   },
   {
     id: "D2_s_46", category: "D2", level: 3,
@@ -293,7 +293,7 @@ export const questions = [
     id: "D2_s_48", category: "D2", level: 3,
     text: { fr: "La moyenne de 3 nombres est 25. On ajoute 13. Quelle est la nouvelle moyenne ?", en: "The mean of 3 numbers is 25. Adding 13 gives what new mean?", nl: "Het gemiddelde van 3 getallen is 25. Na toevoeging van 13, wat is het nieuwe gemiddelde?" },
     answer: 22, tolerance: 0.01,
-    hint: { fr: "Total = 75 + 13 = 88. Nouvelle moyenne = 88 ÷ 4.", en: "Total = 75 + 13 = 88. New mean = 88 ÷ 4.", nl: "Totaal = 75 + 13 = 88. Nieuw gemiddelde = 88 ÷ 4." }
+    hint: { fr: "Total = 75 + 13 = 88. Nouvelle moyenne = 88 : 4.", en: "Total = 75 + 13 = 88. New mean = 88 : 4.", nl: "Totaal = 75 + 13 = 88. Nieuw gemiddelde = 88 : 4." }
   },
   {
     id: "D2_s_49", category: "D2", level: 3,
@@ -305,7 +305,7 @@ export const questions = [
     id: "D2_s_50", category: "D2", level: 3,
     text: { fr: "Notes : 20, 15, 18, 22, 10. Combien faut-il au 6e contrôle pour une moyenne de 18 ?", en: "Scores: 20, 15, 18, 22, 10. What score is needed on the 6th test for a mean of 18?", nl: "Punten: 20, 15, 18, 22, 10. Welk punt is nodig op de 6e toets voor een gemiddelde van 18?" },
     answer: 23, tolerance: 0,
-    hint: { fr: "18 × 6 = 108. Total actuel = 85. Il manque 23.", en: "18 × 6 = 108. Current total = 85. Need 23 more.", nl: "18 × 6 = 108. Huidig totaal = 85. Nog 23 nodig." }
+    hint: { fr: "18 . 6 = 108. Total actuel = 85. Il manque 23.", en: "18 . 6 = 108. Current total = 85. Need 23 more.", nl: "18 . 6 = 108. Huidig totaal = 85. Nog 23 nodig." }
   },
 
   // =========================================================================
@@ -317,127 +317,127 @@ export const questions = [
     id: "D2_s_51", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 8, 12, 10 ?", en: "What is the mean of: 8, 12, 10?", nl: "Wat is het gemiddelde van: 8, 12, 10?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(8 + 12 + 10) ÷ 3 = 30 ÷ 3.", en: "(8 + 12 + 10) ÷ 3 = 30 ÷ 3.", nl: "(8 + 12 + 10) ÷ 3 = 30 ÷ 3." }
+    hint: { fr: "(8 + 12 + 10) : 3 = 30 : 3.", en: "(8 + 12 + 10) : 3 = 30 : 3.", nl: "(8 + 12 + 10) : 3 = 30 : 3." }
   },
   {
     id: "D2_s_52", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 5, 7, 11, 9 ?", en: "What is the mean of: 5, 7, 11, 9?", nl: "Wat is het gemiddelde van: 5, 7, 11, 9?" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "(5 + 7 + 11 + 9) ÷ 4 = 32 ÷ 4.", en: "(5 + 7 + 11 + 9) ÷ 4 = 32 ÷ 4.", nl: "(5 + 7 + 11 + 9) ÷ 4 = 32 ÷ 4." }
+    hint: { fr: "(5 + 7 + 11 + 9) : 4 = 32 : 4.", en: "(5 + 7 + 11 + 9) : 4 = 32 : 4.", nl: "(5 + 7 + 11 + 9) : 4 = 32 : 4." }
   },
   {
     id: "D2_s_53", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 6, 14, 10, 18, 2 ?", en: "What is the mean of: 6, 14, 10, 18, 2?", nl: "Wat is het gemiddelde van: 6, 14, 10, 18, 2?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "Total = 50. Puis 50 ÷ 5.", en: "Total = 50. Then 50 ÷ 5.", nl: "Totaal = 50. Dan 50 ÷ 5." }
+    hint: { fr: "Total = 50. Puis 50 : 5.", en: "Total = 50. Then 50 : 5.", nl: "Totaal = 50. Dan 50 : 5." }
   },
   {
     id: "D2_s_54", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 4, 8, 12 ?", en: "What is the mean of: 4, 8, 12?", nl: "Wat is het gemiddelde van: 4, 8, 12?" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "(4 + 8 + 12) ÷ 3 = 24 ÷ 3.", en: "(4 + 8 + 12) ÷ 3 = 24 ÷ 3.", nl: "(4 + 8 + 12) ÷ 3 = 24 ÷ 3." }
+    hint: { fr: "(4 + 8 + 12) : 3 = 24 : 3.", en: "(4 + 8 + 12) : 3 = 24 : 3.", nl: "(4 + 8 + 12) : 3 = 24 : 3." }
   },
   {
     id: "D2_s_55", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 13, 7, 11, 9 ?", en: "What is the mean of: 13, 7, 11, 9?", nl: "Wat is het gemiddelde van: 13, 7, 11, 9?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(13 + 7 + 11 + 9) ÷ 4 = 40 ÷ 4.", en: "(13 + 7 + 11 + 9) ÷ 4 = 40 ÷ 4.", nl: "(13 + 7 + 11 + 9) ÷ 4 = 40 ÷ 4." }
+    hint: { fr: "(13 + 7 + 11 + 9) : 4 = 40 : 4.", en: "(13 + 7 + 11 + 9) : 4 = 40 : 4.", nl: "(13 + 7 + 11 + 9) : 4 = 40 : 4." }
   },
   {
     id: "D2_s_56", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 2, 10, 6, 14, 8 ?", en: "What is the mean of: 2, 10, 6, 14, 8?", nl: "Wat is het gemiddelde van: 2, 10, 6, 14, 8?" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "Total = 40. Puis 40 ÷ 5.", en: "Total = 40. Then 40 ÷ 5.", nl: "Totaal = 40. Dan 40 ÷ 5." }
+    hint: { fr: "Total = 40. Puis 40 : 5.", en: "Total = 40. Then 40 : 5.", nl: "Totaal = 40. Dan 40 : 5." }
   },
   {
     id: "D2_s_57", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 30, 10, 20 ?", en: "What is the mean of: 30, 10, 20?", nl: "Wat is het gemiddelde van: 30, 10, 20?" },
     answer: 20, tolerance: 0.01,
-    hint: { fr: "(30 + 10 + 20) ÷ 3 = 60 ÷ 3.", en: "(30 + 10 + 20) ÷ 3 = 60 ÷ 3.", nl: "(30 + 10 + 20) ÷ 3 = 60 ÷ 3." }
+    hint: { fr: "(30 + 10 + 20) : 3 = 60 : 3.", en: "(30 + 10 + 20) : 3 = 60 : 3.", nl: "(30 + 10 + 20) : 3 = 60 : 3." }
   },
   {
     id: "D2_s_58", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 5, 11, 7, 13, 4 ?", en: "What is the mean of: 5, 11, 7, 13, 4?", nl: "Wat is het gemiddelde van: 5, 11, 7, 13, 4?" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "Total = 40. Puis 40 ÷ 5.", en: "Total = 40. Then 40 ÷ 5.", nl: "Totaal = 40. Dan 40 ÷ 5." }
+    hint: { fr: "Total = 40. Puis 40 : 5.", en: "Total = 40. Then 40 : 5.", nl: "Totaal = 40. Dan 40 : 5." }
   },
   {
     id: "D2_s_59", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 15, 25, 20, 40 ?", en: "What is the mean of: 15, 25, 20, 40?", nl: "Wat is het gemiddelde van: 15, 25, 20, 40?" },
     answer: 25, tolerance: 0.01,
-    hint: { fr: "(15 + 25 + 20 + 40) ÷ 4 = 100 ÷ 4.", en: "(15 + 25 + 20 + 40) ÷ 4 = 100 ÷ 4.", nl: "(15 + 25 + 20 + 40) ÷ 4 = 100 ÷ 4." }
+    hint: { fr: "(15 + 25 + 20 + 40) : 4 = 100 : 4.", en: "(15 + 25 + 20 + 40) : 4 = 100 : 4.", nl: "(15 + 25 + 20 + 40) : 4 = 100 : 4." }
   },
   {
     id: "D2_s_60", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 1, 5, 3, 7, 9 ?", en: "What is the mean of: 1, 5, 3, 7, 9?", nl: "Wat is het gemiddelde van: 1, 5, 3, 7, 9?" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Total = 25. Puis 25 ÷ 5.", en: "Total = 25. Then 25 ÷ 5.", nl: "Totaal = 25. Dan 25 ÷ 5." }
+    hint: { fr: "Total = 25. Puis 25 : 5.", en: "Total = 25. Then 25 : 5.", nl: "Totaal = 25. Dan 25 : 5." }
   },
   {
     id: "D2_s_61", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 6, 18, 12 ?", en: "What is the mean of: 6, 18, 12?", nl: "Wat is het gemiddelde van: 6, 18, 12?" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "(6 + 18 + 12) ÷ 3 = 36 ÷ 3.", en: "(6 + 18 + 12) ÷ 3 = 36 ÷ 3.", nl: "(6 + 18 + 12) ÷ 3 = 36 ÷ 3." }
+    hint: { fr: "(6 + 18 + 12) : 3 = 36 : 3.", en: "(6 + 18 + 12) : 3 = 36 : 3.", nl: "(6 + 18 + 12) : 3 = 36 : 3." }
   },
   {
     id: "D2_s_62", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 8, 4, 16, 12 ?", en: "What is the mean of: 8, 4, 16, 12?", nl: "Wat is het gemiddelde van: 8, 4, 16, 12?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(8 + 4 + 16 + 12) ÷ 4 = 40 ÷ 4.", en: "(8 + 4 + 16 + 12) ÷ 4 = 40 ÷ 4.", nl: "(8 + 4 + 16 + 12) ÷ 4 = 40 ÷ 4." }
+    hint: { fr: "(8 + 4 + 16 + 12) : 4 = 40 : 4.", en: "(8 + 4 + 16 + 12) : 4 = 40 : 4.", nl: "(8 + 4 + 16 + 12) : 4 = 40 : 4." }
   },
   {
     id: "D2_s_63", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 3, 11, 7, 15, 14 ?", en: "What is the mean of: 3, 11, 7, 15, 14?", nl: "Wat is het gemiddelde van: 3, 11, 7, 15, 14?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "Total = 50. Puis 50 ÷ 5.", en: "Total = 50. Then 50 ÷ 5.", nl: "Totaal = 50. Dan 50 ÷ 5." }
+    hint: { fr: "Total = 50. Puis 50 : 5.", en: "Total = 50. Then 50 : 5.", nl: "Totaal = 50. Dan 50 : 5." }
   },
   {
     id: "D2_s_64", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 22, 14, 18 ?", en: "What is the mean of: 22, 14, 18?", nl: "Wat is het gemiddelde van: 22, 14, 18?" },
     answer: 18, tolerance: 0.01,
-    hint: { fr: "(22 + 14 + 18) ÷ 3 = 54 ÷ 3.", en: "(22 + 14 + 18) ÷ 3 = 54 ÷ 3.", nl: "(22 + 14 + 18) ÷ 3 = 54 ÷ 3." }
+    hint: { fr: "(22 + 14 + 18) : 3 = 54 : 3.", en: "(22 + 14 + 18) : 3 = 54 : 3.", nl: "(22 + 14 + 18) : 3 = 54 : 3." }
   },
   {
     id: "D2_s_65", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 9, 3, 6, 12, 15 ?", en: "What is the mean of: 9, 3, 6, 12, 15?", nl: "Wat is het gemiddelde van: 9, 3, 6, 12, 15?" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "Total = 45. Puis 45 ÷ 5.", en: "Total = 45. Then 45 ÷ 5.", nl: "Totaal = 45. Dan 45 ÷ 5." }
+    hint: { fr: "Total = 45. Puis 45 : 5.", en: "Total = 45. Then 45 : 5.", nl: "Totaal = 45. Dan 45 : 5." }
   },
   {
     id: "D2_s_66", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 7, 13, 11, 9 ?", en: "What is the mean of: 7, 13, 11, 9?", nl: "Wat is het gemiddelde van: 7, 13, 11, 9?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(7 + 13 + 11 + 9) ÷ 4 = 40 ÷ 4.", en: "(7 + 13 + 11 + 9) ÷ 4 = 40 ÷ 4.", nl: "(7 + 13 + 11 + 9) ÷ 4 = 40 ÷ 4." }
+    hint: { fr: "(7 + 13 + 11 + 9) : 4 = 40 : 4.", en: "(7 + 13 + 11 + 9) : 4 = 40 : 4.", nl: "(7 + 13 + 11 + 9) : 4 = 40 : 4." }
   },
   {
     id: "D2_s_67", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 2, 8, 4, 10, 6 ?", en: "What is the mean of: 2, 8, 4, 10, 6?", nl: "Wat is het gemiddelde van: 2, 8, 4, 10, 6?" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Total = 30. Puis 30 ÷ 5.", en: "Total = 30. Then 30 ÷ 5.", nl: "Totaal = 30. Dan 30 ÷ 5." }
+    hint: { fr: "Total = 30. Puis 30 : 5.", en: "Total = 30. Then 30 : 5.", nl: "Totaal = 30. Dan 30 : 5." }
   },
   {
     id: "D2_s_68", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 50, 30, 40 ?", en: "What is the mean of: 50, 30, 40?", nl: "Wat is het gemiddelde van: 50, 30, 40?" },
     answer: 40, tolerance: 0.01,
-    hint: { fr: "(50 + 30 + 40) ÷ 3 = 120 ÷ 3.", en: "(50 + 30 + 40) ÷ 3 = 120 ÷ 3.", nl: "(50 + 30 + 40) ÷ 3 = 120 ÷ 3." }
+    hint: { fr: "(50 + 30 + 40) : 3 = 120 : 3.", en: "(50 + 30 + 40) : 3 = 120 : 3.", nl: "(50 + 30 + 40) : 3 = 120 : 3." }
   },
   {
     id: "D2_s_69", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 12, 6, 18, 8, 16 ?", en: "What is the mean of: 12, 6, 18, 8, 16?", nl: "Wat is het gemiddelde van: 12, 6, 18, 8, 16?" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "Total = 60. Puis 60 ÷ 5.", en: "Total = 60. Then 60 ÷ 5.", nl: "Totaal = 60. Dan 60 ÷ 5." }
+    hint: { fr: "Total = 60. Puis 60 : 5.", en: "Total = 60. Then 60 : 5.", nl: "Totaal = 60. Dan 60 : 5." }
   },
   {
     id: "D2_s_70", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 11, 5, 17, 7 ?", en: "What is the mean of: 11, 5, 17, 7?", nl: "Wat is het gemiddelde van: 11, 5, 17, 7?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "(11 + 5 + 17 + 7) ÷ 4 = 40 ÷ 4.", en: "(11 + 5 + 17 + 7) ÷ 4 = 40 ÷ 4.", nl: "(11 + 5 + 17 + 7) ÷ 4 = 40 ÷ 4." }
+    hint: { fr: "(11 + 5 + 17 + 7) : 4 = 40 : 4.", en: "(11 + 5 + 17 + 7) : 4 = 40 : 4.", nl: "(11 + 5 + 17 + 7) : 4 = 40 : 4." }
   },
   {
     id: "D2_s_71", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 4, 8, 6, 10, 12, 2 ?", en: "What is the mean of: 4, 8, 6, 10, 12, 2?", nl: "Wat is het gemiddelde van: 4, 8, 6, 10, 12, 2?" },
     answer: 7, tolerance: 0.01,
-    hint: { fr: "Total = 42. Puis 42 ÷ 6.", en: "Total = 42. Then 42 ÷ 6.", nl: "Totaal = 42. Dan 42 ÷ 6." }
+    hint: { fr: "Total = 42. Puis 42 : 6.", en: "Total = 42. Then 42 : 6.", nl: "Totaal = 42. Dan 42 : 6." }
   },
 
   // Level 2 — Range, median (questions 72–91, 20 questions)
@@ -469,7 +469,7 @@ export const questions = [
     id: "D2_s_76", category: "D2", level: 2,
     text: { fr: "La moyenne de 6 nombres est 9. Quel est leur total ?", en: "The mean of 6 numbers is 9. What is their total?", nl: "Het gemiddelde van 6 getallen is 9. Wat is hun totaal?" },
     answer: 54, tolerance: 0,
-    hint: { fr: "Total = 9 × 6 = 54.", en: "Total = 9 × 6 = 54.", nl: "Totaal = 9 × 6 = 54." }
+    hint: { fr: "Total = 9 . 6 = 54.", en: "Total = 9 . 6 = 54.", nl: "Totaal = 9 . 6 = 54." }
   },
   {
     id: "D2_s_77", category: "D2", level: 2,
@@ -499,7 +499,7 @@ export const questions = [
     id: "D2_s_81", category: "D2", level: 2,
     text: { fr: "La moyenne de 4 nombres est 25. Quel est leur total ?", en: "The mean of 4 numbers is 25. What is their total?", nl: "Het gemiddelde van 4 getallen is 25. Wat is hun totaal?" },
     answer: 100, tolerance: 0,
-    hint: { fr: "Total = 25 × 4 = 100.", en: "Total = 25 × 4 = 100.", nl: "Totaal = 25 × 4 = 100." }
+    hint: { fr: "Total = 25 . 4 = 100.", en: "Total = 25 . 4 = 100.", nl: "Totaal = 25 . 4 = 100." }
   },
   {
     id: "D2_s_82", category: "D2", level: 2,
@@ -529,7 +529,7 @@ export const questions = [
     id: "D2_s_86", category: "D2", level: 2,
     text: { fr: "La moyenne de 7 nombres est 11. Quel est leur total ?", en: "The mean of 7 numbers is 11. What is their total?", nl: "Het gemiddelde van 7 getallen is 11. Wat is hun totaal?" },
     answer: 77, tolerance: 0,
-    hint: { fr: "Total = 11 × 7 = 77.", en: "Total = 11 × 7 = 77.", nl: "Totaal = 11 × 7 = 77." }
+    hint: { fr: "Total = 11 . 7 = 77.", en: "Total = 11 . 7 = 77.", nl: "Totaal = 11 . 7 = 77." }
   },
   {
     id: "D2_s_87", category: "D2", level: 2,
@@ -567,13 +567,13 @@ export const questions = [
     id: "D2_s_92", category: "D2", level: 3,
     text: { fr: "Notes : 8, 14, 11, 7, 10. Combien faut-il au 6e contrôle pour une moyenne de 10 ?", en: "Scores: 8, 14, 11, 7, 10. What score is needed on the 6th test for a mean of 10?", nl: "Punten: 8, 14, 11, 7, 10. Welk punt is nodig op de 6e toets voor een gemiddelde van 10?" },
     answer: 10, tolerance: 0,
-    hint: { fr: "10 × 6 = 60. Total actuel = 50. Il manque 10.", en: "10 × 6 = 60. Current total = 50. Need 10 more.", nl: "10 × 6 = 60. Huidig totaal = 50. Nog 10 nodig." }
+    hint: { fr: "10 . 6 = 60. Total actuel = 50. Il manque 10.", en: "10 . 6 = 60. Current total = 50. Need 10 more.", nl: "10 . 6 = 60. Huidig totaal = 50. Nog 10 nodig." }
   },
   {
     id: "D2_s_93", category: "D2", level: 3,
     text: { fr: "La moyenne de 4 nombres est 9. On ajoute 14. Quelle est la nouvelle moyenne ?", en: "The mean of 4 numbers is 9. Adding 14 gives what new mean?", nl: "Het gemiddelde van 4 getallen is 9. Na toevoeging van 14, wat is het nieuwe gemiddelde?" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "Total = 36 + 14 = 50. Nouvelle moyenne = 50 ÷ 5.", en: "Total = 36 + 14 = 50. New mean = 50 ÷ 5.", nl: "Totaal = 36 + 14 = 50. Nieuw gemiddelde = 50 ÷ 5." }
+    hint: { fr: "Total = 36 + 14 = 50. Nouvelle moyenne = 50 : 5.", en: "Total = 36 + 14 = 50. New mean = 50 : 5.", nl: "Totaal = 36 + 14 = 50. Nieuw gemiddelde = 50 : 5." }
   },
   {
     id: "D2_s_94", category: "D2", level: 3,
@@ -591,19 +591,19 @@ export const questions = [
     id: "D2_s_96", category: "D2", level: 3,
     text: { fr: "La moyenne de 4 nombres est 20. On retire le nombre 8. Quelle est la nouvelle moyenne ?", en: "The mean of 4 numbers is 20. Removing 8 gives what new mean?", nl: "Het gemiddelde van 4 getallen is 20. Na verwijdering van 8, wat is het nieuwe gemiddelde?" },
     answer: 24, tolerance: 0.01,
-    hint: { fr: "Total = 80. Nouveau total = 80 - 8 = 72. 72 ÷ 3 = 24.", en: "Total = 80. New total = 80 - 8 = 72. 72 ÷ 3 = 24.", nl: "Totaal = 80. Nieuw totaal = 80 - 8 = 72. 72 ÷ 3 = 24." }
+    hint: { fr: "Total = 80. Nouveau total = 80 - 8 = 72. 72 : 3 = 24.", en: "Total = 80. New total = 80 - 8 = 72. 72 : 3 = 24.", nl: "Totaal = 80. Nieuw totaal = 80 - 8 = 72. 72 : 3 = 24." }
   },
   {
     id: "D2_s_97", category: "D2", level: 3,
     text: { fr: "Notes : 6, 9, 12, 8, 15. Combien faut-il au 6e contrôle pour une moyenne de 9 ?", en: "Scores: 6, 9, 12, 8, 15. What score is needed on the 6th test for a mean of 9?", nl: "Punten: 6, 9, 12, 8, 15. Welk punt is nodig op de 6e toets voor een gemiddelde van 9?" },
     answer: 4, tolerance: 0,
-    hint: { fr: "9 × 6 = 54. Total actuel = 50. Il manque 4.", en: "9 × 6 = 54. Current total = 50. Need 4 more.", nl: "9 × 6 = 54. Huidig totaal = 50. Nog 4 nodig." }
+    hint: { fr: "9 . 6 = 54. Total actuel = 50. Il manque 4.", en: "9 . 6 = 54. Current total = 50. Need 4 more.", nl: "9 . 6 = 54. Huidig totaal = 50. Nog 4 nodig." }
   },
   {
     id: "D2_s_98", category: "D2", level: 3,
     text: { fr: "La moyenne de 3 nombres est 18. On ajoute 6. Quelle est la nouvelle moyenne ?", en: "The mean of 3 numbers is 18. Adding 6 gives what new mean?", nl: "Het gemiddelde van 3 getallen is 18. Na toevoeging van 6, wat is het nieuwe gemiddelde?" },
     answer: 15, tolerance: 0.01,
-    hint: { fr: "Total = 54 + 6 = 60. Nouvelle moyenne = 60 ÷ 4.", en: "Total = 54 + 6 = 60. New mean = 60 ÷ 4.", nl: "Totaal = 54 + 6 = 60. Nieuw gemiddelde = 60 ÷ 4." }
+    hint: { fr: "Total = 54 + 6 = 60. Nouvelle moyenne = 60 : 4.", en: "Total = 54 + 6 = 60. New mean = 60 : 4.", nl: "Totaal = 54 + 6 = 60. Nieuw gemiddelde = 60 : 4." }
   },
   {
     id: "D2_s_99", category: "D2", level: 3,
@@ -621,19 +621,19 @@ export const questions = [
     id: "D2_s_101", category: "D2", level: 3,
     text: { fr: "La moyenne de 4 nombres est 18. On retire le nombre 12. Quelle est la nouvelle moyenne ?", en: "The mean of 4 numbers is 18. Removing 12 gives what new mean?", nl: "Het gemiddelde van 4 getallen is 18. Na verwijdering van 12, wat is het nieuwe gemiddelde?" },
     answer: 20, tolerance: 0.01,
-    hint: { fr: "Total = 72. Nouveau total = 72 - 12 = 60. 60 ÷ 3 = 20.", en: "Total = 72. New total = 72 - 12 = 60. 60 ÷ 3 = 20.", nl: "Totaal = 72. Nieuw totaal = 72 - 12 = 60. 60 ÷ 3 = 20." }
+    hint: { fr: "Total = 72. Nouveau total = 72 - 12 = 60. 60 : 3 = 20.", en: "Total = 72. New total = 72 - 12 = 60. 60 : 3 = 20.", nl: "Totaal = 72. Nieuw totaal = 72 - 12 = 60. 60 : 3 = 20." }
   },
   {
     id: "D2_s_102", category: "D2", level: 3,
     text: { fr: "Notes : 13, 17, 9, 11, 15. Combien faut-il au 6e contrôle pour une moyenne de 12 ?", en: "Scores: 13, 17, 9, 11, 15. What score is needed on the 6th test for a mean of 12?", nl: "Punten: 13, 17, 9, 11, 15. Welk punt is nodig op de 6e toets voor een gemiddelde van 12?" },
     answer: 7, tolerance: 0,
-    hint: { fr: "12 × 6 = 72. Total actuel = 65. Il manque 7.", en: "12 × 6 = 72. Current total = 65. Need 7 more.", nl: "12 × 6 = 72. Huidig totaal = 65. Nog 7 nodig." }
+    hint: { fr: "12 . 6 = 72. Total actuel = 65. Il manque 7.", en: "12 . 6 = 72. Current total = 65. Need 7 more.", nl: "12 . 6 = 72. Huidig totaal = 65. Nog 7 nodig." }
   },
   {
     id: "D2_s_103", category: "D2", level: 3,
     text: { fr: "La moyenne de 5 nombres est 20. On ajoute 8. Quelle est la nouvelle moyenne ?", en: "The mean of 5 numbers is 20. Adding 8 gives what new mean?", nl: "Het gemiddelde van 5 getallen is 20. Na toevoeging van 8, wat is het nieuwe gemiddelde?" },
     answer: 18, tolerance: 0.01,
-    hint: { fr: "Total = 100 + 8 = 108. Nouvelle moyenne = 108 ÷ 6.", en: "Total = 100 + 8 = 108. New mean = 108 ÷ 6.", nl: "Totaal = 100 + 8 = 108. Nieuw gemiddelde = 108 ÷ 6." }
+    hint: { fr: "Total = 100 + 8 = 108. Nouvelle moyenne = 108 : 6.", en: "Total = 100 + 8 = 108. New mean = 108 : 6.", nl: "Totaal = 100 + 8 = 108. Nieuw gemiddelde = 108 : 6." }
   },
   {
     id: "D2_s_104", category: "D2", level: 3,
@@ -651,19 +651,19 @@ export const questions = [
     id: "D2_s_106", category: "D2", level: 3,
     text: { fr: "La moyenne de 6 nombres est 15. On retire le nombre 6. Quelle est la nouvelle moyenne ?", en: "The mean of 6 numbers is 15. Removing 6 gives what new mean?", nl: "Het gemiddelde van 6 getallen is 15. Na verwijdering van 6, wat is het nieuwe gemiddelde?" },
     answer: 16.8, tolerance: 0.01,
-    hint: { fr: "Total = 90. Nouveau total = 90 - 6 = 84. 84 ÷ 5 = 16,8.", en: "Total = 90. New total = 90 - 6 = 84. 84 ÷ 5 = 16.8.", nl: "Totaal = 90. Nieuw totaal = 90 - 6 = 84. 84 ÷ 5 = 16,8." }
+    hint: { fr: "Total = 90. Nouveau total = 90 - 6 = 84. 84 : 5 = 16,8.", en: "Total = 90. New total = 90 - 6 = 84. 84 : 5 = 16.8.", nl: "Totaal = 90. Nieuw totaal = 90 - 6 = 84. 84 : 5 = 16,8." }
   },
   {
     id: "D2_s_107", category: "D2", level: 3,
     text: { fr: "Notes : 5, 12, 8, 10, 15. Combien faut-il au 6e contrôle pour une moyenne de 11 ?", en: "Scores: 5, 12, 8, 10, 15. What score is needed on the 6th test for a mean of 11?", nl: "Punten: 5, 12, 8, 10, 15. Welk punt is nodig op de 6e toets voor een gemiddelde van 11?" },
     answer: 16, tolerance: 0,
-    hint: { fr: "11 × 6 = 66. Total actuel = 50. Il manque 16.", en: "11 × 6 = 66. Current total = 50. Need 16 more.", nl: "11 × 6 = 66. Huidig totaal = 50. Nog 16 nodig." }
+    hint: { fr: "11 . 6 = 66. Total actuel = 50. Il manque 16.", en: "11 . 6 = 66. Current total = 50. Need 16 more.", nl: "11 . 6 = 66. Huidig totaal = 50. Nog 16 nodig." }
   },
   {
     id: "D2_s_108", category: "D2", level: 3,
     text: { fr: "La moyenne de 7 nombres est 9. On ajoute 5. Quelle est la nouvelle moyenne ?", en: "The mean of 7 numbers is 9. Adding 5 gives what new mean?", nl: "Het gemiddelde van 7 getallen is 9. Na toevoeging van 5, wat is het nieuwe gemiddelde?" },
     answer: 8.5, tolerance: 0.01,
-    hint: { fr: "Total = 63 + 5 = 68. Nouvelle moyenne = 68 ÷ 8.", en: "Total = 63 + 5 = 68. New mean = 68 ÷ 8.", nl: "Totaal = 63 + 5 = 68. Nieuw gemiddelde = 68 ÷ 8." }
+    hint: { fr: "Total = 63 + 5 = 68. Nouvelle moyenne = 68 : 8.", en: "Total = 63 + 5 = 68. New mean = 68 : 8.", nl: "Totaal = 63 + 5 = 68. Nieuw gemiddelde = 68 : 8." }
   },
   {
     id: "D2_s_109", category: "D2", level: 3,
@@ -681,25 +681,25 @@ export const questions = [
     id: "D2_s_111", category: "D2", level: 3,
     text: { fr: "La moyenne de 5 nombres est 16. On retire le nombre 5. Quelle est la nouvelle moyenne ?", en: "The mean of 5 numbers is 16. Removing 5 gives what new mean?", nl: "Het gemiddelde van 5 getallen is 16. Na verwijdering van 5, wat is het nieuwe gemiddelde?" },
     answer: 18.75, tolerance: 0.01,
-    hint: { fr: "Total = 80. Nouveau total = 80 - 5 = 75. 75 ÷ 4 = 18,75.", en: "Total = 80. New total = 80 - 5 = 75. 75 ÷ 4 = 18.75.", nl: "Totaal = 80. Nieuw totaal = 80 - 5 = 75. 75 ÷ 4 = 18,75." }
+    hint: { fr: "Total = 80. Nouveau total = 80 - 5 = 75. 75 : 4 = 18,75.", en: "Total = 80. New total = 80 - 5 = 75. 75 : 4 = 18.75.", nl: "Totaal = 80. Nieuw totaal = 80 - 5 = 75. 75 : 4 = 18,75." }
   },
   {
     id: "D2_s_112", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 14, 18, 10, 22 ?", en: "What is the mean of: 14, 18, 10, 22?", nl: "Wat is het gemiddelde van: 14, 18, 10, 22?" },
     answer: 16, tolerance: 0,
-    hint: { fr: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16.", en: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16.", nl: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16." }
+    hint: { fr: "(14 + 18 + 10 + 22) : 4 = 64 : 4 = 16.", en: "(14 + 18 + 10 + 22) : 4 = 64 : 4 = 16.", nl: "(14 + 18 + 10 + 22) : 4 = 64 : 4 = 16." }
   },
   {
     id: "D2_s_113", category: "D2", level: 1,
     text: { fr: "Quelle est la moyenne de : 5, 11, 8, 16 ?", en: "What is the mean of: 5, 11, 8, 16?", nl: "Wat is het gemiddelde van: 5, 11, 8, 16?" },
     answer: 10, tolerance: 0,
-    hint: { fr: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10.", en: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10.", nl: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10." }
+    hint: { fr: "(5 + 11 + 8 + 16) : 4 = 40 : 4 = 10.", en: "(5 + 11 + 8 + 16) : 4 = 40 : 4 = 10.", nl: "(5 + 11 + 8 + 16) : 4 = 40 : 4 = 10." }
   },
   {
     id: "D2_s_114", category: "D2", level: 2,
     text: { fr: "Données : 3, 7, 7, 9, 12, 15. Quelle est la médiane ?", en: "Data: 3, 7, 7, 9, 12, 15. What is the median?", nl: "Data: 3, 7, 7, 9, 12, 15. Wat is de mediaan?" },
     answer: 8, tolerance: 0,
-    hint: { fr: "6 valeurs triées. La médiane est la moyenne des 3e et 4e : (7 + 9) ÷ 2 = 8.", en: "6 sorted values. The median is the average of the 3rd and 4th: (7 + 9) ÷ 2 = 8.", nl: "6 gesorteerde waarden. De mediaan is het gemiddelde van de 3e en 4e: (7 + 9) ÷ 2 = 8." }
+    hint: { fr: "6 valeurs triées. La médiane est la moyenne des 3e et 4e : (7 + 9) : 2 = 8.", en: "6 sorted values. The median is the average of the 3rd and 4th: (7 + 9) : 2 = 8.", nl: "6 gesorteerde waarden. De mediaan is het gemiddelde van de 3e en 4e: (7 + 9) : 2 = 8." }
   },
   {
     id: "D2_s_115", category: "D2", level: 2,
@@ -711,7 +711,7 @@ export const questions = [
     id: "D2_s_116", category: "D2", level: 3,
     text: { fr: "La moyenne de 6 nombres est 14. On ajoute le nombre 28. Quelle est la nouvelle moyenne ?", en: "The mean of 6 numbers is 14. The number 28 is added. What is the new mean?", nl: "Het gemiddelde van 6 getallen is 14. Het getal 28 wordt toegevoegd. Wat is het nieuwe gemiddelde?" },
     answer: 16, tolerance: 0,
-    hint: { fr: "Total = 6 × 14 = 84. Nouveau total = 84 + 28 = 112. 112 ÷ 7 = 16.", en: "Total = 6 × 14 = 84. New total = 84 + 28 = 112. 112 ÷ 7 = 16.", nl: "Totaal = 6 × 14 = 84. Nieuw totaal = 84 + 28 = 112. 112 ÷ 7 = 16." }
+    hint: { fr: "Total = 6 . 14 = 84. Nouveau total = 84 + 28 = 112. 112 : 7 = 16.", en: "Total = 6 . 14 = 84. New total = 84 + 28 = 112. 112 : 7 = 16.", nl: "Totaal = 6 . 14 = 84. Nieuw totaal = 84 + 28 = 112. 112 : 7 = 16." }
   },
   {
     id: "D2_s_117", category: "D2", level: 3,

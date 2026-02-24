@@ -250,7 +250,7 @@ export function generateForOperation(operation, level = 1) {
     const answer = a * b;
     return {
       id, category: 'N2', level,
-      text: { fr: `Combien font ${a} × ${b} ?`, en: `What is ${a} × ${b}?`, nl: `Hoeveel is ${a} × ${b}?` },
+      text: { fr: `Combien font ${a} . ${b} ?`, en: `What is ${a} . ${b}?`, nl: `Hoeveel is ${a} . ${b}?` },
       answer, tolerance: 0,
       hint: { fr: `Pense à la table de ${a}.`, en: `Think of the ${a} times table.`, nl: `Denk aan de tafel van ${a}.` },
     };
@@ -264,9 +264,9 @@ export function generateForOperation(operation, level = 1) {
     const dividend = divisor * quotient;
     return {
       id, category: 'N2', level,
-      text: { fr: `Combien font ${dividend} ÷ ${divisor} ?`, en: `What is ${dividend} ÷ ${divisor}?`, nl: `Hoeveel is ${dividend} ÷ ${divisor}?` },
+      text: { fr: `Combien font ${dividend} : ${divisor} ?`, en: `What is ${dividend} : ${divisor}?`, nl: `Hoeveel is ${dividend} : ${divisor}?` },
       answer: quotient, tolerance: 0,
-      hint: { fr: `${divisor} × ? = ${dividend}`, en: `${divisor} × ? = ${dividend}`, nl: `${divisor} × ? = ${dividend}` },
+      hint: { fr: `${divisor} . ? = ${dividend}`, en: `${divisor} . ? = ${dividend}`, nl: `${divisor} . ? = ${dividend}` },
     };
   }
 

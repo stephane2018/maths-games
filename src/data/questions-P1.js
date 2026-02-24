@@ -122,9 +122,9 @@ export const questions = [
     answer: 10,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une orange = 3 ÷ 6. Multiplie par 20.",
-      en: "Price of one orange = 3 ÷ 6. Multiply by 20.",
-      nl: "Prijs van één sinaasappel = 3 ÷ 6. Vermenigvuldig met 20."
+      fr: "Prix d'une orange = 3 : 6. Multiplie par 20.",
+      en: "Price of one orange = 3 : 6. Multiply by 20.",
+      nl: "Prijs van één sinaasappel = 3 : 6. Vermenigvuldig met 20."
     }
   },
   {
@@ -139,9 +139,9 @@ export const questions = [
     answer: 30,
     tolerance: 0.01,
     hint: {
-      fr: "Calcule le débit par minute : 12 ÷ 4.",
-      en: "Calculate the flow per minute: 12 ÷ 4.",
-      nl: "Bereken het debiet per minuut: 12 ÷ 4."
+      fr: "Calcule le débit par minute : 12 : 4.",
+      en: "Calculate the flow per minute: 12 : 4.",
+      nl: "Bereken het debiet per minuut: 12 : 4."
     }
   },
   {
@@ -156,9 +156,9 @@ export const questions = [
     answer: 33,
     tolerance: 0.01,
     hint: {
-      fr: "Un cahier coûte 9 ÷ 3 = 3 €. Multiplie par 11.",
-      en: "One notebook costs 9 ÷ 3 = 3 €. Multiply by 11.",
-      nl: "Eén schrift kost 9 ÷ 3 = 3 €. Vermenigvuldig met 11."
+      fr: "Un cahier coûte 9 : 3 = 3 €. Multiplie par 11.",
+      en: "One notebook costs 9 : 3 = 3 €. Multiply by 11.",
+      nl: "Eén schrift kost 9 : 3 = 3 €. Vermenigvuldig met 11."
     }
   },
   {
@@ -173,9 +173,9 @@ export const questions = [
     answer: 60,
     tolerance: 0.01,
     hint: {
-      fr: "Distance = vitesse × temps.",
-      en: "Distance = speed × time.",
-      nl: "Afstand = snelheid × tijd."
+      fr: "Distance = vitesse . temps.",
+      en: "Distance = speed . time.",
+      nl: "Afstand = snelheid . tijd."
     }
   },
   {
@@ -190,9 +190,9 @@ export const questions = [
     answer: 18,
     tolerance: 0.01,
     hint: {
-      fr: "Un croissant coûte 8 ÷ 4 = 2 €.",
-      en: "One croissant costs 8 ÷ 4 = 2 €.",
-      nl: "Eén croissant kost 8 ÷ 4 = 2 €."
+      fr: "Un croissant coûte 8 : 4 = 2 €.",
+      en: "One croissant costs 8 : 4 = 2 €.",
+      nl: "Eén croissant kost 8 : 4 = 2 €."
     }
   },
   {
@@ -207,9 +207,9 @@ export const questions = [
     answer: 14,
     tolerance: 0.01,
     hint: {
-      fr: "Nombre d'œufs par personne = 6 ÷ 3 = 2.",
-      en: "Number of eggs per person = 6 ÷ 3 = 2.",
-      nl: "Aantal eieren per persoon = 6 ÷ 3 = 2."
+      fr: "Nombre d'œufs par personne = 6 : 3 = 2.",
+      en: "Number of eggs per person = 6 : 3 = 2.",
+      nl: "Aantal eieren per persoon = 6 : 3 = 2."
     }
   },
   {
@@ -224,9 +224,9 @@ export const questions = [
     answer: 8,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 kg = 5 ÷ 10 = 0,50 €. Multiplie par 16.",
-      en: "Price of 1 kg = 5 ÷ 10 = €0.50. Multiply by 16.",
-      nl: "Prijs van 1 kg = 5 ÷ 10 = €0,50. Vermenigvuldig met 16."
+      fr: "Prix d'1 kg = 5 : 10 = 0,50 €. Multiplie par 16.",
+      en: "Price of 1 kg = 5 : 10 = €0.50. Multiply by 16.",
+      nl: "Prijs van 1 kg = 5 : 10 = €0,50. Vermenigvuldig met 16."
     }
   },
   {
@@ -241,9 +241,9 @@ export const questions = [
     answer: 120,
     tolerance: 0.01,
     hint: {
-      fr: "Pages par minute = 50 ÷ 5 = 10.",
-      en: "Pages per minute = 50 ÷ 5 = 10.",
-      nl: "Pagina's per minuut = 50 ÷ 5 = 10."
+      fr: "Pages par minute = 50 : 5 = 10.",
+      en: "Pages per minute = 50 : 5 = 10.",
+      nl: "Pagina's per minuut = 50 : 5 = 10."
     }
   },
   {
@@ -258,9 +258,9 @@ export const questions = [
     answer: 10,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une bouteille = 4 ÷ 8 = 0,50 €.",
-      en: "Price of one bottle = 4 ÷ 8 = €0.50.",
-      nl: "Prijs van één fles = 4 ÷ 8 = €0,50."
+      fr: "Prix d'une bouteille = 4 : 8 = 0,50 €.",
+      en: "Price of one bottle = 4 : 8 = €0.50.",
+      nl: "Prijs van één fles = 4 : 8 = €0,50."
     }
   },
   {
@@ -275,9 +275,9 @@ export const questions = [
     answer: 15,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une tablette = 6 ÷ 2 = 3 €.",
-      en: "Price of one bar = 6 ÷ 2 = €3.",
-      nl: "Prijs van één reep = 6 ÷ 2 = €3."
+      fr: "Prix d'une tablette = 6 : 2 = 3 €.",
+      en: "Price of one bar = 6 : 2 = €3.",
+      nl: "Prijs van één reep = 6 : 2 = €3."
     }
   },
   {
@@ -292,9 +292,9 @@ export const questions = [
     answer: 40,
     tolerance: 0.01,
     hint: {
-      fr: "Pièces par heure = 24 ÷ 3 = 8.",
-      en: "Parts per hour = 24 ÷ 3 = 8.",
-      nl: "Onderdelen per uur = 24 ÷ 3 = 8."
+      fr: "Pièces par heure = 24 : 3 = 8.",
+      en: "Parts per hour = 24 : 3 = 8.",
+      nl: "Onderdelen per uur = 24 : 3 = 8."
     }
   },
 
@@ -313,9 +313,9 @@ export const questions = [
     answer: 19.2,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un cahier = 8 ÷ 5 = 1,60 €. Multiplie par 12.",
-      en: "Price of one notebook = 8 ÷ 5 = €1.60. Multiply by 12.",
-      nl: "Prijs van één schrift = 8 ÷ 5 = €1,60. Vermenigvuldig met 12."
+      fr: "Prix d'un cahier = 8 : 5 = 1,60 €. Multiplie par 12.",
+      en: "Price of one notebook = 8 : 5 = €1.60. Multiply by 12.",
+      nl: "Prijs van één schrift = 8 : 5 = €1,60. Vermenigvuldig met 12."
     }
   },
   {
@@ -330,9 +330,9 @@ export const questions = [
     answer: 5.6,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 3,50 ÷ 250. Multiplie par 400.",
-      en: "Price per 1 g = 3.50 ÷ 250. Multiply by 400.",
-      nl: "Prijs per 1 g = 3,50 ÷ 250. Vermenigvuldig met 400."
+      fr: "Prix pour 1 g = 3,50 : 250. Multiplie par 400.",
+      en: "Price per 1 g = 3.50 : 250. Multiply by 400.",
+      nl: "Prijs per 1 g = 3,50 : 250. Vermenigvuldig met 400."
     }
   },
   {
@@ -347,9 +347,9 @@ export const questions = [
     answer: 1.5,
     tolerance: 0.01,
     hint: {
-      fr: "3 cm × 50 000 = 150 000 cm = 1 500 m = 1,5 km.",
-      en: "3 cm × 50,000 = 150,000 cm = 1,500 m = 1.5 km.",
-      nl: "3 cm × 50.000 = 150.000 cm = 1.500 m = 1,5 km."
+      fr: "3 cm . 50 000 = 150 000 cm = 1 500 m = 1,5 km.",
+      en: "3 cm . 50,000 = 150,000 cm = 1,500 m = 1.5 km.",
+      nl: "3 cm . 50.000 = 150.000 cm = 1.500 m = 1,5 km."
     }
   },
   {
@@ -364,9 +364,9 @@ export const questions = [
     answer: 11.67,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 kg = 5 ÷ 3 ≈ 1,667 €. Multiplie par 7.",
-      en: "Price of 1 kg = 5 ÷ 3 ≈ €1.667. Multiply by 7.",
-      nl: "Prijs van 1 kg = 5 ÷ 3 ≈ €1,667. Vermenigvuldig met 7."
+      fr: "Prix d'1 kg = 5 : 3 ≈ 1,667 €. Multiplie par 7.",
+      en: "Price of 1 kg = 5 : 3 ≈ €1.667. Multiply by 7.",
+      nl: "Prijs van 1 kg = 5 : 3 ≈ €1,667. Vermenigvuldig met 7."
     }
   },
   {
@@ -381,9 +381,9 @@ export const questions = [
     answer: 350,
     tolerance: 0.01,
     hint: {
-      fr: "Vitesse = 210 ÷ 3 = 70 km/h. Distance = 70 × 5.",
-      en: "Speed = 210 ÷ 3 = 70 km/h. Distance = 70 × 5.",
-      nl: "Snelheid = 210 ÷ 3 = 70 km/u. Afstand = 70 × 5."
+      fr: "Vitesse = 210 : 3 = 70 km/h. Distance = 70 . 5.",
+      en: "Speed = 210 : 3 = 70 km/h. Distance = 70 . 5.",
+      nl: "Snelheid = 210 : 3 = 70 km/u. Afstand = 70 . 5."
     }
   },
   {
@@ -398,9 +398,9 @@ export const questions = [
     answer: 19.29,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un livre = 45 ÷ 7. Multiplie par 3.",
-      en: "Price of one book = 45 ÷ 7. Multiply by 3.",
-      nl: "Prijs van één boek = 45 ÷ 7. Vermenigvuldig met 3."
+      fr: "Prix d'un livre = 45 : 7. Multiplie par 3.",
+      en: "Price of one book = 45 : 7. Multiply by 3.",
+      nl: "Prijs van één boek = 45 : 7. Vermenigvuldig met 3."
     }
   },
   {
@@ -415,9 +415,9 @@ export const questions = [
     answer: 15.75,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 litre = 7 ÷ 4 = 1,75 €. Multiplie par 9.",
-      en: "Price of 1 litre = 7 ÷ 4 = €1.75. Multiply by 9.",
-      nl: "Prijs van 1 liter = 7 ÷ 4 = €1,75. Vermenigvuldig met 9."
+      fr: "Prix d'1 litre = 7 : 4 = 1,75 €. Multiplie par 9.",
+      en: "Price of 1 litre = 7 : 4 = €1.75. Multiply by 9.",
+      nl: "Prijs van 1 liter = 7 : 4 = €1,75. Vermenigvuldig met 9."
     }
   },
   {
@@ -432,9 +432,9 @@ export const questions = [
     answer: 4.4,
     tolerance: 0.01,
     hint: {
-      fr: "Litres par m² = 3 ÷ 15 = 0,2. Multiplie par 22.",
-      en: "Litres per m² = 3 ÷ 15 = 0.2. Multiply by 22.",
-      nl: "Liter per m² = 3 ÷ 15 = 0,2. Vermenigvuldig met 22."
+      fr: "Litres par m² = 3 : 15 = 0,2. Multiplie par 22.",
+      en: "Litres per m² = 3 : 15 = 0.2. Multiply by 22.",
+      nl: "Liter per m² = 3 : 15 = 0,2. Vermenigvuldig met 22."
     }
   },
   {
@@ -449,9 +449,9 @@ export const questions = [
     answer: 63,
     tolerance: 0.01,
     hint: {
-      fr: "Carreaux par heure = 18 ÷ 2 = 9. Multiplie par 7.",
-      en: "Tiles per hour = 18 ÷ 2 = 9. Multiply by 7.",
-      nl: "Tegels per uur = 18 ÷ 2 = 9. Vermenigvuldig met 7."
+      fr: "Carreaux par heure = 18 : 2 = 9. Multiplie par 7.",
+      en: "Tiles per hour = 18 : 2 = 9. Multiply by 7.",
+      nl: "Tegels per uur = 18 : 2 = 9. Vermenigvuldig met 7."
     }
   },
   {
@@ -466,9 +466,9 @@ export const questions = [
     answer: 2.5,
     tolerance: 0.01,
     hint: {
-      fr: "Poids par mètre = 1,5 ÷ 6 = 0,25 kg.",
-      en: "Weight per metre = 1.5 ÷ 6 = 0.25 kg.",
-      nl: "Gewicht per meter = 1,5 ÷ 6 = 0,25 kg."
+      fr: "Poids par mètre = 1,5 : 6 = 0,25 kg.",
+      en: "Weight per metre = 1.5 : 6 = 0.25 kg.",
+      nl: "Gewicht per meter = 1,5 : 6 = 0,25 kg."
     }
   },
   {
@@ -483,9 +483,9 @@ export const questions = [
     answer: 525,
     tolerance: 0.01,
     hint: {
-      fr: "Sucre par muffin = 300 ÷ 8 = 37,5 g. Multiplie par 14.",
-      en: "Sugar per muffin = 300 ÷ 8 = 37.5 g. Multiply by 14.",
-      nl: "Suiker per muffin = 300 ÷ 8 = 37,5 g. Vermenigvuldig met 14."
+      fr: "Sucre par muffin = 300 : 8 = 37,5 g. Multiplie par 14.",
+      en: "Sugar per muffin = 300 : 8 = 37.5 g. Multiply by 14.",
+      nl: "Suiker per muffin = 300 : 8 = 37,5 g. Vermenigvuldig met 14."
     }
   },
   {
@@ -500,9 +500,9 @@ export const questions = [
     answer: 9,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 6 ÷ 500 = 0,012 €. Multiplie par 750.",
-      en: "Price per 1 g = 6 ÷ 500 = €0.012. Multiply by 750.",
-      nl: "Prijs per 1 g = 6 ÷ 500 = €0,012. Vermenigvuldig met 750."
+      fr: "Prix pour 1 g = 6 : 500 = 0,012 €. Multiplie par 750.",
+      en: "Price per 1 g = 6 : 500 = €0.012. Multiply by 750.",
+      nl: "Prijs per 1 g = 6 : 500 = €0,012. Vermenigvuldig met 750."
     }
   },
   {
@@ -517,9 +517,9 @@ export const questions = [
     answer: 9,
     tolerance: 0.01,
     hint: {
-      fr: "Consommation par km = 12 ÷ 100 = 0,12. Multiplie par 75.",
-      en: "Consumption per km = 12 ÷ 100 = 0.12. Multiply by 75.",
-      nl: "Verbruik per km = 12 ÷ 100 = 0,12. Vermenigvuldig met 75."
+      fr: "Consommation par km = 12 : 100 = 0,12. Multiplie par 75.",
+      en: "Consumption per km = 12 : 100 = 0.12. Multiply by 75.",
+      nl: "Verbruik per km = 12 : 100 = 0,12. Vermenigvuldig met 75."
     }
   },
   {
@@ -534,9 +534,9 @@ export const questions = [
     answer: 6.67,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une gomme = 4 ÷ 9. Multiplie par 15.",
-      en: "Price of one eraser = 4 ÷ 9. Multiply by 15.",
-      nl: "Prijs van één gum = 4 ÷ 9. Vermenigvuldig met 15."
+      fr: "Prix d'une gomme = 4 : 9. Multiplie par 15.",
+      en: "Price of one eraser = 4 : 9. Multiply by 15.",
+      nl: "Prijs van één gum = 4 : 9. Vermenigvuldig met 15."
     }
   },
   {
@@ -551,9 +551,9 @@ export const questions = [
     answer: 120,
     tolerance: 0.01,
     hint: {
-      fr: "Fleurs par rangée = 45 ÷ 3 = 15. Multiplie par 8.",
-      en: "Flowers per row = 45 ÷ 3 = 15. Multiply by 8.",
-      nl: "Bloemen per rij = 45 ÷ 3 = 15. Vermenigvuldig met 8."
+      fr: "Fleurs par rangée = 45 : 3 = 15. Multiplie par 8.",
+      en: "Flowers per row = 45 : 3 = 15. Multiply by 8.",
+      nl: "Bloemen per rij = 45 : 3 = 15. Vermenigvuldig met 8."
     }
   },
   {
@@ -568,9 +568,9 @@ export const questions = [
     answer: 7.88,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 4,50 ÷ 200 = 0,0225 €. Multiplie par 350.",
-      en: "Price per 1 g = 4.50 ÷ 200 = €0.0225. Multiply by 350.",
-      nl: "Prijs per 1 g = 4,50 ÷ 200 = €0,0225. Vermenigvuldig met 350."
+      fr: "Prix pour 1 g = 4,50 : 200 = 0,0225 €. Multiplie par 350.",
+      en: "Price per 1 g = 4.50 : 200 = €0.0225. Multiply by 350.",
+      nl: "Prijs per 1 g = 4,50 : 200 = €0,0225. Vermenigvuldig met 350."
     }
   },
   {
@@ -585,9 +585,9 @@ export const questions = [
     answer: 25,
     tolerance: 0.01,
     hint: {
-      fr: "Pizzas par personne = 15 ÷ 6 = 2,5. Multiplie par 10.",
-      en: "Pizzas per person = 15 ÷ 6 = 2.5. Multiply by 10.",
-      nl: "Pizza's per persoon = 15 ÷ 6 = 2,5. Vermenigvuldig met 10."
+      fr: "Pizzas par personne = 15 : 6 = 2,5. Multiplie par 10.",
+      en: "Pizzas per person = 15 : 6 = 2.5. Multiply by 10.",
+      nl: "Pizza's per persoon = 15 : 6 = 2,5. Vermenigvuldig met 10."
     }
   },
 
@@ -606,9 +606,9 @@ export const questions = [
     answer: 24.5,
     tolerance: 0.01,
     hint: {
-      fr: "7 × (350 ÷ 100) = 7 × 3,5.",
-      en: "7 × (350 ÷ 100) = 7 × 3.5.",
-      nl: "7 × (350 ÷ 100) = 7 × 3,5."
+      fr: "7 . (350 : 100) = 7 . 3,5.",
+      en: "7 . (350 : 100) = 7 . 3.5.",
+      nl: "7 . (350 : 100) = 7 . 3,5."
     }
   },
   {
@@ -623,9 +623,9 @@ export const questions = [
     answer: 54,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau prix = 45 × 1,20.",
-      en: "New price = 45 × 1.20.",
-      nl: "Nieuwe prijs = 45 × 1,20."
+      fr: "Nouveau prix = 45 . 1,20.",
+      en: "New price = 45 . 1.20.",
+      nl: "Nieuwe prijs = 45 . 1,20."
     }
   },
   {
@@ -640,9 +640,9 @@ export const questions = [
     answer: 300,
     tolerance: 0.01,
     hint: {
-      fr: "1 machine produit 120 ÷ 3 = 40 pièces en 4h, soit 10/h. 5 machines × 6h × 10 = 300.",
-      en: "1 machine produces 120 ÷ 3 = 40 parts in 4h, so 10/h. 5 machines × 6h × 10 = 300.",
-      nl: "1 machine produceert 120 ÷ 3 = 40 onderdelen in 4u, dus 10/u. 5 machines × 6u × 10 = 300."
+      fr: "1 machine produit 120 : 3 = 40 pièces en 4h, soit 10/h. 5 machines . 6h . 10 = 300.",
+      en: "1 machine produces 120 : 3 = 40 parts in 4h, so 10/h. 5 machines . 6h . 10 = 300.",
+      nl: "1 machine produceert 120 : 3 = 40 onderdelen in 4u, dus 10/u. 5 machines . 6u . 10 = 300."
     }
   },
   {
@@ -657,9 +657,9 @@ export const questions = [
     answer: 750,
     tolerance: 0.01,
     hint: {
-      fr: "Farine par personne = 450 ÷ 6 = 75 g. Pour 10 : 75 × 10.",
-      en: "Flour per person = 450 ÷ 6 = 75 g. For 10: 75 × 10.",
-      nl: "Bloem per persoon = 450 ÷ 6 = 75 g. Voor 10: 75 × 10."
+      fr: "Farine par personne = 450 : 6 = 75 g. Pour 10 : 75 . 10.",
+      en: "Flour per person = 450 : 6 = 75 g. For 10: 75 . 10.",
+      nl: "Bloem per persoon = 450 : 6 = 75 g. Voor 10: 75 . 10."
     }
   },
   {
@@ -674,9 +674,9 @@ export const questions = [
     answer: 51,
     tolerance: 0.01,
     hint: {
-      fr: "Prix réduit = 60 × (1 - 0,15) = 60 × 0,85.",
-      en: "Reduced price = 60 × (1 - 0.15) = 60 × 0.85.",
-      nl: "Verlaagde prijs = 60 × (1 - 0,15) = 60 × 0,85."
+      fr: "Prix réduit = 60 . (1 - 0,15) = 60 . 0,85.",
+      en: "Reduced price = 60 . (1 - 0.15) = 60 . 0.85.",
+      nl: "Verlaagde prijs = 60 . (1 - 0,15) = 60 . 0,85."
     }
   },
   {
@@ -691,9 +691,9 @@ export const questions = [
     answer: 15,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 6 × 10 = 4 × x, donc x = 60 ÷ 4.",
-      en: "Inverse proportionality: 6 × 10 = 4 × x, so x = 60 ÷ 4.",
-      nl: "Omgekeerde evenredigheid: 6 × 10 = 4 × x, dus x = 60 ÷ 4."
+      fr: "Proportionnalité inverse : 6 . 10 = 4 . x, donc x = 60 : 4.",
+      en: "Inverse proportionality: 6 . 10 = 4 . x, so x = 60 : 4.",
+      nl: "Omgekeerde evenredigheid: 6 . 10 = 4 . x, dus x = 60 : 4."
     }
   },
   {
@@ -708,9 +708,9 @@ export const questions = [
     answer: 336,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau prix = 320 × 1,05.",
-      en: "New price = 320 × 1.05.",
-      nl: "Nieuwe prijs = 320 × 1,05."
+      fr: "Nouveau prix = 320 . 1,05.",
+      en: "New price = 320 . 1.05.",
+      nl: "Nieuwe prijs = 320 . 1,05."
     }
   },
   {
@@ -725,9 +725,9 @@ export const questions = [
     answer: 4,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 8 × 6 = 12 × x, donc x = 48 ÷ 12.",
-      en: "Inverse proportionality: 8 × 6 = 12 × x, so x = 48 ÷ 12.",
-      nl: "Omgekeerde evenredigheid: 8 × 6 = 12 × x, dus x = 48 ÷ 12."
+      fr: "Proportionnalité inverse : 8 . 6 = 12 . x, donc x = 48 : 12.",
+      en: "Inverse proportionality: 8 . 6 = 12 . x, so x = 48 : 12.",
+      nl: "Omgekeerde evenredigheid: 8 . 6 = 12 . x, dus x = 48 : 12."
     }
   },
   {
@@ -742,9 +742,9 @@ export const questions = [
     answer: 60,
     tolerance: 0.01,
     hint: {
-      fr: "Prix soldé = 80 × (1 - 0,25) = 80 × 0,75.",
-      en: "Sale price = 80 × (1 - 0.25) = 80 × 0.75.",
-      nl: "Uitverkoopprijs = 80 × (1 - 0,25) = 80 × 0,75."
+      fr: "Prix soldé = 80 . (1 - 0,25) = 80 . 0,75.",
+      en: "Sale price = 80 . (1 - 0.25) = 80 . 0.75.",
+      nl: "Uitverkoopprijs = 80 . (1 - 0,25) = 80 . 0,75."
     }
   },
   {
@@ -759,9 +759,9 @@ export const questions = [
     answer: 6,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 2 × 9 = 3 × x, donc x = 18 ÷ 3.",
-      en: "Inverse proportionality: 2 × 9 = 3 × x, so x = 18 ÷ 3.",
-      nl: "Omgekeerde evenredigheid: 2 × 9 = 3 × x, dus x = 18 ÷ 3."
+      fr: "Proportionnalité inverse : 2 . 9 = 3 . x, donc x = 18 : 3.",
+      en: "Inverse proportionality: 2 . 9 = 3 . x, so x = 18 : 3.",
+      nl: "Omgekeerde evenredigheid: 2 . 9 = 3 . x, dus x = 18 : 3."
     }
   },
   {
@@ -776,9 +776,9 @@ export const questions = [
     answer: 220,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau prix = 250 × (1 - 0,12) = 250 × 0,88.",
-      en: "New price = 250 × (1 - 0.12) = 250 × 0.88.",
-      nl: "Nieuwe prijs = 250 × (1 - 0,12) = 250 × 0,88."
+      fr: "Nouveau prix = 250 . (1 - 0,12) = 250 . 0,88.",
+      en: "New price = 250 . (1 - 0.12) = 250 . 0.88.",
+      nl: "Nieuwe prijs = 250 . (1 - 0,12) = 250 . 0,88."
     }
   },
   {
@@ -793,9 +793,9 @@ export const questions = [
     answer: 6,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 5 × 12 = 10 × x, donc x = 60 ÷ 10.",
-      en: "Inverse proportionality: 5 × 12 = 10 × x, so x = 60 ÷ 10.",
-      nl: "Omgekeerde evenredigheid: 5 × 12 = 10 × x, dus x = 60 ÷ 10."
+      fr: "Proportionnalité inverse : 5 . 12 = 10 . x, donc x = 60 : 10.",
+      en: "Inverse proportionality: 5 . 12 = 10 . x, so x = 60 : 10.",
+      nl: "Omgekeerde evenredigheid: 5 . 12 = 10 . x, dus x = 60 : 10."
     }
   },
   {
@@ -810,9 +810,9 @@ export const questions = [
     answer: 180,
     tolerance: 0.01,
     hint: {
-      fr: "1 machine produit 200 ÷ 4 = 50 en 5h, soit 10/h. 6 machines × 3h × 10 = 180.",
-      en: "1 machine produces 200 ÷ 4 = 50 in 5h, so 10/h. 6 machines × 3h × 10 = 180.",
-      nl: "1 machine produceert 200 ÷ 4 = 50 in 5u, dus 10/u. 6 machines × 3u × 10 = 180."
+      fr: "1 machine produit 200 : 4 = 50 en 5h, soit 10/h. 6 machines . 3h . 10 = 180.",
+      en: "1 machine produces 200 : 4 = 50 in 5h, so 10/h. 6 machines . 3h . 10 = 180.",
+      nl: "1 machine produceert 200 : 4 = 50 in 5u, dus 10/u. 6 machines . 3u . 10 = 180."
     }
   },
   {
@@ -827,9 +827,9 @@ export const questions = [
     answer: 118.8,
     tolerance: 0.01,
     hint: {
-      fr: "Après hausse : 120 × 1,10 = 132. Après baisse : 132 × 0,90 = 118,80.",
-      en: "After increase: 120 × 1.10 = 132. After decrease: 132 × 0.90 = 118.80.",
-      nl: "Na stijging: 120 × 1,10 = 132. Na daling: 132 × 0,90 = 118,80."
+      fr: "Après hausse : 120 . 1,10 = 132. Après baisse : 132 . 0,90 = 118,80.",
+      en: "After increase: 120 . 1.10 = 132. After decrease: 132 . 0.90 = 118.80.",
+      nl: "Na stijging: 120 . 1,10 = 132. Na daling: 132 . 0,90 = 118,80."
     }
   },
   {
@@ -844,9 +844,9 @@ export const questions = [
     answer: 2.1,
     tolerance: 0.01,
     hint: {
-      fr: "8,4 cm × 25 000 = 210 000 cm = 2 100 m = 2,1 km.",
-      en: "8.4 cm × 25,000 = 210,000 cm = 2,100 m = 2.1 km.",
-      nl: "8,4 cm × 25.000 = 210.000 cm = 2.100 m = 2,1 km."
+      fr: "8,4 cm . 25 000 = 210 000 cm = 2 100 m = 2,1 km.",
+      en: "8.4 cm . 25,000 = 210,000 cm = 2,100 m = 2.1 km.",
+      nl: "8,4 cm . 25.000 = 210.000 cm = 2.100 m = 2,1 km."
     }
   },
   {
@@ -861,9 +861,9 @@ export const questions = [
     answer: 216,
     tolerance: 0.01,
     hint: {
-      fr: "1 cuisinier prépare 90 ÷ 5 = 18 repas en 2h, soit 9/h. 8 cuisiniers × 3h × 9 = 216.",
-      en: "1 cook prepares 90 ÷ 5 = 18 meals in 2h, so 9/h. 8 cooks × 3h × 9 = 216.",
-      nl: "1 kok bereidt 90 ÷ 5 = 18 maaltijden in 2u, dus 9/u. 8 koks × 3u × 9 = 216."
+      fr: "1 cuisinier prépare 90 : 5 = 18 repas en 2h, soit 9/h. 8 cuisiniers . 3h . 9 = 216.",
+      en: "1 cook prepares 90 : 5 = 18 meals in 2h, so 9/h. 8 cooks . 3h . 9 = 216.",
+      nl: "1 kok bereidt 90 : 5 = 18 maaltijden in 2u, dus 9/u. 8 koks . 3u . 9 = 216."
     }
   },
 
@@ -882,9 +882,9 @@ export const questions = [
     answer: 5,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une banane = 3 ÷ 6 = 0,50 €. Multiplie par 10.",
-      en: "Price of one banana = 3 ÷ 6 = €0.50. Multiply by 10.",
-      nl: "Prijs van één banaan = 3 ÷ 6 = €0,50. Vermenigvuldig met 10."
+      fr: "Prix d'une banane = 3 : 6 = 0,50 €. Multiplie par 10.",
+      en: "Price of one banana = 3 : 6 = €0.50. Multiply by 10.",
+      nl: "Prijs van één banaan = 3 : 6 = €0,50. Vermenigvuldig met 10."
     }
   },
   {
@@ -899,9 +899,9 @@ export const questions = [
     answer: 24,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un crayon = 10 ÷ 5 = 2 €. Multiplie par 12.",
-      en: "Price of one pencil = 10 ÷ 5 = €2. Multiply by 12.",
-      nl: "Prijs van één potlood = 10 ÷ 5 = €2. Vermenigvuldig met 12."
+      fr: "Prix d'un crayon = 10 : 5 = 2 €. Multiplie par 12.",
+      en: "Price of one pencil = 10 : 5 = €2. Multiply by 12.",
+      nl: "Prijs van één potlood = 10 : 5 = €2. Vermenigvuldig met 12."
     }
   },
   {
@@ -916,9 +916,9 @@ export const questions = [
     answer: 9,
     tolerance: 0.01,
     hint: {
-      fr: "Œufs par crêpe = 3 ÷ 6 = 0,5. Pour 18 crêpes : 0,5 × 18 = 9.",
-      en: "Eggs per crepe = 3 ÷ 6 = 0.5. For 18 crepes: 0.5 × 18 = 9.",
-      nl: "Eieren per pannenkoek = 3 ÷ 6 = 0,5. Voor 18 pannenkoeken: 0,5 × 18 = 9."
+      fr: "Œufs par crêpe = 3 : 6 = 0,5. Pour 18 crêpes : 0,5 . 18 = 9.",
+      en: "Eggs per crepe = 3 : 6 = 0.5. For 18 crepes: 0.5 . 18 = 9.",
+      nl: "Eieren per pannenkoek = 3 : 6 = 0,5. Voor 18 pannenkoeken: 0,5 . 18 = 9."
     }
   },
   {
@@ -933,9 +933,9 @@ export const questions = [
     answer: 200,
     tolerance: 0.01,
     hint: {
-      fr: "Vitesse = 80 ÷ 2 = 40 km/h. Distance = 40 × 5.",
-      en: "Speed = 80 ÷ 2 = 40 km/h. Distance = 40 × 5.",
-      nl: "Snelheid = 80 ÷ 2 = 40 km/u. Afstand = 40 × 5."
+      fr: "Vitesse = 80 : 2 = 40 km/h. Distance = 40 . 5.",
+      en: "Speed = 80 : 2 = 40 km/h. Distance = 40 . 5.",
+      nl: "Snelheid = 80 : 2 = 40 km/u. Afstand = 40 . 5."
     }
   },
   {
@@ -950,9 +950,9 @@ export const questions = [
     answer: 28,
     tolerance: 0.01,
     hint: {
-      fr: "1 litre couvre 12 ÷ 3 = 4 m². Multiplie par 7.",
-      en: "1 litre covers 12 ÷ 3 = 4 m². Multiply by 7.",
-      nl: "1 liter bedekt 12 ÷ 3 = 4 m². Vermenigvuldig met 7."
+      fr: "1 litre couvre 12 : 3 = 4 m². Multiplie par 7.",
+      en: "1 litre covers 12 : 3 = 4 m². Multiply by 7.",
+      nl: "1 liter bedekt 12 : 3 = 4 m². Vermenigvuldig met 7."
     }
   },
   {
@@ -967,9 +967,9 @@ export const questions = [
     answer: 30,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un mètre = 8 ÷ 4 = 2 €. Multiplie par 15.",
-      en: "Price of one metre = 8 ÷ 4 = €2. Multiply by 15.",
-      nl: "Prijs van één meter = 8 ÷ 4 = €2. Vermenigvuldig met 15."
+      fr: "Prix d'un mètre = 8 : 4 = 2 €. Multiplie par 15.",
+      en: "Price of one metre = 8 : 4 = €2. Multiply by 15.",
+      nl: "Prijs van één meter = 8 : 4 = €2. Vermenigvuldig met 15."
     }
   },
   {
@@ -984,9 +984,9 @@ export const questions = [
     answer: 8,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un biscuit = 5 ÷ 10 = 0,50 €. Multiplie par 16.",
-      en: "Price of one biscuit = 5 ÷ 10 = €0.50. Multiply by 16.",
-      nl: "Prijs van één koekje = 5 ÷ 10 = €0,50. Vermenigvuldig met 16."
+      fr: "Prix d'un biscuit = 5 : 10 = 0,50 €. Multiplie par 16.",
+      en: "Price of one biscuit = 5 : 10 = €0.50. Multiply by 16.",
+      nl: "Prijs van één koekje = 5 : 10 = €0,50. Vermenigvuldig met 16."
     }
   },
   {
@@ -1001,9 +1001,9 @@ export const questions = [
     answer: 36,
     tolerance: 0.01,
     hint: {
-      fr: "Rendement = 24 ÷ 4 = 6 kg/h. Multiplie par 6.",
-      en: "Yield = 24 ÷ 4 = 6 kg/h. Multiply by 6.",
-      nl: "Opbrengst = 24 ÷ 4 = 6 kg/u. Vermenigvuldig met 6."
+      fr: "Rendement = 24 : 4 = 6 kg/h. Multiplie par 6.",
+      en: "Yield = 24 : 4 = 6 kg/h. Multiply by 6.",
+      nl: "Opbrengst = 24 : 4 = 6 kg/u. Vermenigvuldig met 6."
     }
   },
   {
@@ -1018,9 +1018,9 @@ export const questions = [
     answer: 22,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 kg = 14 ÷ 7 = 2 €. Multiplie par 11.",
-      en: "Price of 1 kg = 14 ÷ 7 = €2. Multiply by 11.",
-      nl: "Prijs van 1 kg = 14 ÷ 7 = €2. Vermenigvuldig met 11."
+      fr: "Prix d'1 kg = 14 : 7 = 2 €. Multiplie par 11.",
+      en: "Price of 1 kg = 14 : 7 = €2. Multiply by 11.",
+      nl: "Prijs van 1 kg = 14 : 7 = €2. Vermenigvuldig met 11."
     }
   },
   {
@@ -1035,9 +1035,9 @@ export const questions = [
     answer: 1000,
     tolerance: 0.01,
     hint: {
-      fr: "Pâtes par personne = 400 ÷ 2 = 200 g. Multiplie par 5.",
-      en: "Pasta per person = 400 ÷ 2 = 200 g. Multiply by 5.",
-      nl: "Pasta per persoon = 400 ÷ 2 = 200 g. Vermenigvuldig met 5."
+      fr: "Pâtes par personne = 400 : 2 = 200 g. Multiplie par 5.",
+      en: "Pasta per person = 400 : 2 = 200 g. Multiply by 5.",
+      nl: "Pasta per persoon = 400 : 2 = 200 g. Vermenigvuldig met 5."
     }
   },
   {
@@ -1052,9 +1052,9 @@ export const questions = [
     answer: 24,
     tolerance: 0.01,
     hint: {
-      fr: "1 pot couvre 9 ÷ 3 = 3 murs. Multiplie par 8.",
-      en: "1 can covers 9 ÷ 3 = 3 walls. Multiply by 8.",
-      nl: "1 blik bedekt 9 ÷ 3 = 3 muren. Vermenigvuldig met 8."
+      fr: "1 pot couvre 9 : 3 = 3 murs. Multiplie par 8.",
+      en: "1 can covers 9 : 3 = 3 walls. Multiply by 8.",
+      nl: "1 blik bedekt 9 : 3 = 3 muren. Vermenigvuldig met 8."
     }
   },
   {
@@ -1069,9 +1069,9 @@ export const questions = [
     answer: 33,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un mètre = 18 ÷ 6 = 3 €. Multiplie par 11.",
-      en: "Price of one metre = 18 ÷ 6 = €3. Multiply by 11.",
-      nl: "Prijs van één meter = 18 ÷ 6 = €3. Vermenigvuldig met 11."
+      fr: "Prix d'un mètre = 18 : 6 = 3 €. Multiplie par 11.",
+      en: "Price of one metre = 18 : 6 = €3. Multiply by 11.",
+      nl: "Prijs van één meter = 18 : 6 = €3. Vermenigvuldig met 11."
     }
   },
   {
@@ -1086,9 +1086,9 @@ export const questions = [
     answer: 35,
     tolerance: 0.01,
     hint: {
-      fr: "Arbres par jour = 15 ÷ 3 = 5. Multiplie par 7.",
-      en: "Trees per day = 15 ÷ 3 = 5. Multiply by 7.",
-      nl: "Bomen per dag = 15 ÷ 3 = 5. Vermenigvuldig met 7."
+      fr: "Arbres par jour = 15 : 3 = 5. Multiplie par 7.",
+      en: "Trees per day = 15 : 3 = 5. Multiply by 7.",
+      nl: "Bomen per dag = 15 : 3 = 5. Vermenigvuldig met 7."
     }
   },
   {
@@ -1103,9 +1103,9 @@ export const questions = [
     answer: 24,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une pizza = 40 ÷ 5 = 8 €. Multiplie par 3.",
-      en: "Price of one pizza = 40 ÷ 5 = €8. Multiply by 3.",
-      nl: "Prijs van één pizza = 40 ÷ 5 = €8. Vermenigvuldig met 3."
+      fr: "Prix d'une pizza = 40 : 5 = 8 €. Multiplie par 3.",
+      en: "Price of one pizza = 40 : 5 = €8. Multiply by 3.",
+      nl: "Prijs van één pizza = 40 : 5 = €8. Vermenigvuldig met 3."
     }
   },
   {
@@ -1120,9 +1120,9 @@ export const questions = [
     answer: 105,
     tolerance: 0.01,
     hint: {
-      fr: "Km par litre = 45 ÷ 3 = 15. Multiplie par 7.",
-      en: "Km per litre = 45 ÷ 3 = 15. Multiply by 7.",
-      nl: "Km per liter = 45 ÷ 3 = 15. Vermenigvuldig met 7."
+      fr: "Km par litre = 45 : 3 = 15. Multiplie par 7.",
+      en: "Km per litre = 45 : 3 = 15. Multiply by 7.",
+      nl: "Km per liter = 45 : 3 = 15. Vermenigvuldig met 7."
     }
   },
   {
@@ -1137,9 +1137,9 @@ export const questions = [
     answer: 30,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un ticket = 48 ÷ 8 = 6 €. Multiplie par 5.",
-      en: "Price of one ticket = 48 ÷ 8 = €6. Multiply by 5.",
-      nl: "Prijs van één kaartje = 48 ÷ 8 = €6. Vermenigvuldig met 5."
+      fr: "Prix d'un ticket = 48 : 8 = 6 €. Multiplie par 5.",
+      en: "Price of one ticket = 48 : 8 = €6. Multiply by 5.",
+      nl: "Prijs van één kaartje = 48 : 8 = €6. Vermenigvuldig met 5."
     }
   },
   {
@@ -1154,9 +1154,9 @@ export const questions = [
     answer: 225,
     tolerance: 0.01,
     hint: {
-      fr: "Poids d'un sac = 100 ÷ 4 = 25 kg. Multiplie par 9.",
-      en: "Weight of one bag = 100 ÷ 4 = 25 kg. Multiply by 9.",
-      nl: "Gewicht van één zak = 100 ÷ 4 = 25 kg. Vermenigvuldig met 9."
+      fr: "Poids d'un sac = 100 : 4 = 25 kg. Multiplie par 9.",
+      en: "Weight of one bag = 100 : 4 = 25 kg. Multiply by 9.",
+      nl: "Gewicht van één zak = 100 : 4 = 25 kg. Vermenigvuldig met 9."
     }
   },
   {
@@ -1171,9 +1171,9 @@ export const questions = [
     answer: 30,
     tolerance: 0.01,
     hint: {
-      fr: "Œufs par jour = 6 ÷ 2 = 3. Multiplie par 10.",
-      en: "Eggs per day = 6 ÷ 2 = 3. Multiply by 10.",
-      nl: "Eieren per dag = 6 ÷ 2 = 3. Vermenigvuldig met 10."
+      fr: "Œufs par jour = 6 : 2 = 3. Multiplie par 10.",
+      en: "Eggs per day = 6 : 2 = 3. Multiply by 10.",
+      nl: "Eieren per dag = 6 : 2 = 3. Vermenigvuldig met 10."
     }
   },
   {
@@ -1188,9 +1188,9 @@ export const questions = [
     answer: 12,
     tolerance: 0.01,
     hint: {
-      fr: "Poids d'une brique = 27 ÷ 9 = 3 kg. Multiplie par 4.",
-      en: "Weight of one brick = 27 ÷ 9 = 3 kg. Multiply by 4.",
-      nl: "Gewicht van één baksteen = 27 ÷ 9 = 3 kg. Vermenigvuldig met 4."
+      fr: "Poids d'une brique = 27 : 9 = 3 kg. Multiplie par 4.",
+      en: "Weight of one brick = 27 : 9 = 3 kg. Multiply by 4.",
+      nl: "Gewicht van één baksteen = 27 : 9 = 3 kg. Vermenigvuldig met 4."
     }
   },
   {
@@ -1205,9 +1205,9 @@ export const questions = [
     answer: 18,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 kg = 4 ÷ 2 = 2 €. Multiplie par 9.",
-      en: "Price of 1 kg = 4 ÷ 2 = €2. Multiply by 9.",
-      nl: "Prijs van 1 kg = 4 ÷ 2 = €2. Vermenigvuldig met 9."
+      fr: "Prix d'1 kg = 4 : 2 = 2 €. Multiplie par 9.",
+      en: "Price of 1 kg = 4 : 2 = €2. Multiply by 9.",
+      nl: "Prijs van 1 kg = 4 : 2 = €2. Vermenigvuldig met 9."
     }
   },
 
@@ -1226,9 +1226,9 @@ export const questions = [
     answer: 11.67,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'1 kg = 7 ÷ 3 ≈ 2,333 €. Multiplie par 5.",
-      en: "Price of 1 kg = 7 ÷ 3 ≈ €2.333. Multiply by 5.",
-      nl: "Prijs van 1 kg = 7 ÷ 3 ≈ €2,333. Vermenigvuldig met 5."
+      fr: "Prix d'1 kg = 7 : 3 ≈ 2,333 €. Multiplie par 5.",
+      en: "Price of 1 kg = 7 : 3 ≈ €2.333. Multiply by 5.",
+      nl: "Prijs van 1 kg = 7 : 3 ≈ €2,333. Vermenigvuldig met 5."
     }
   },
   {
@@ -1243,9 +1243,9 @@ export const questions = [
     answer: 2.8,
     tolerance: 0.01,
     hint: {
-      fr: "7 cm × 40 000 = 280 000 cm = 2 800 m = 2,8 km.",
-      en: "7 cm × 40,000 = 280,000 cm = 2,800 m = 2.8 km.",
-      nl: "7 cm × 40.000 = 280.000 cm = 2.800 m = 2,8 km."
+      fr: "7 cm . 40 000 = 280 000 cm = 2 800 m = 2,8 km.",
+      en: "7 cm . 40,000 = 280,000 cm = 2,800 m = 2.8 km.",
+      nl: "7 cm . 40.000 = 280.000 cm = 2.800 m = 2,8 km."
     }
   },
   {
@@ -1260,9 +1260,9 @@ export const questions = [
     answer: 6.86,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un mètre = 4 ÷ 7 ≈ 0,571 €. Multiplie par 12.",
-      en: "Price of one metre = 4 ÷ 7 ≈ €0.571. Multiply by 12.",
-      nl: "Prijs van één meter = 4 ÷ 7 ≈ €0,571. Vermenigvuldig met 12."
+      fr: "Prix d'un mètre = 4 : 7 ≈ 0,571 €. Multiplie par 12.",
+      en: "Price of one metre = 4 : 7 ≈ €0.571. Multiply by 12.",
+      nl: "Prijs van één meter = 4 : 7 ≈ €0,571. Vermenigvuldig met 12."
     }
   },
   {
@@ -1277,9 +1277,9 @@ export const questions = [
     answer: 4.5,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 2,70 ÷ 300 = 0,009 €. Multiplie par 500.",
-      en: "Price per 1 g = 2.70 ÷ 300 = €0.009. Multiply by 500.",
-      nl: "Prijs per 1 g = 2,70 ÷ 300 = €0,009. Vermenigvuldig met 500."
+      fr: "Prix pour 1 g = 2,70 : 300 = 0,009 €. Multiplie par 500.",
+      en: "Price per 1 g = 2.70 : 300 = €0.009. Multiply by 500.",
+      nl: "Prijs per 1 g = 2,70 : 300 = €0,009. Vermenigvuldig met 500."
     }
   },
   {
@@ -1294,9 +1294,9 @@ export const questions = [
     answer: 13.71,
     tolerance: 0.01,
     hint: {
-      fr: "Km par minute = 8 ÷ 35. Pour 60 min : (8 ÷ 35) × 60 ≈ 13,71.",
-      en: "Km per minute = 8 ÷ 35. For 60 min: (8 ÷ 35) × 60 ≈ 13.71.",
-      nl: "Km per minuut = 8 ÷ 35. Voor 60 min: (8 ÷ 35) × 60 ≈ 13,71."
+      fr: "Km par minute = 8 : 35. Pour 60 min : (8 : 35) . 60 ≈ 13,71.",
+      en: "Km per minute = 8 : 35. For 60 min: (8 : 35) . 60 ≈ 13.71.",
+      nl: "Km per minuut = 8 : 35. Voor 60 min: (8 : 35) . 60 ≈ 13,71."
     }
   },
   {
@@ -1311,9 +1311,9 @@ export const questions = [
     answer: 18.33,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un savon = 11 ÷ 6 ≈ 1,833 €. Multiplie par 10.",
-      en: "Price of one bar = 11 ÷ 6 ≈ €1.833. Multiply by 10.",
-      nl: "Prijs van één stuk = 11 ÷ 6 ≈ €1,833. Vermenigvuldig met 10."
+      fr: "Prix d'un savon = 11 : 6 ≈ 1,833 €. Multiplie par 10.",
+      en: "Price of one bar = 11 : 6 ≈ €1.833. Multiply by 10.",
+      nl: "Prijs van één stuk = 11 : 6 ≈ €1,833. Vermenigvuldig met 10."
     }
   },
   {
@@ -1328,9 +1328,9 @@ export const questions = [
     answer: 9.43,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 5,80 ÷ 400 = 0,0145 €. Multiplie par 650.",
-      en: "Price per 1 g = 5.80 ÷ 400 = €0.0145. Multiply by 650.",
-      nl: "Prijs per 1 g = 5,80 ÷ 400 = €0,0145. Vermenigvuldig met 650."
+      fr: "Prix pour 1 g = 5,80 : 400 = 0,0145 €. Multiplie par 650.",
+      en: "Price per 1 g = 5.80 : 400 = €0.0145. Multiply by 650.",
+      nl: "Prijs per 1 g = 5,80 : 400 = €0,0145. Vermenigvuldig met 650."
     }
   },
   {
@@ -1345,9 +1345,9 @@ export const questions = [
     answer: 19.2,
     tolerance: 0.01,
     hint: {
-      fr: "Litres par personne = 8 ÷ 5 = 1,6. Multiplie par 12.",
-      en: "Litres per person = 8 ÷ 5 = 1.6. Multiply by 12.",
-      nl: "Liter per persoon = 8 ÷ 5 = 1,6. Vermenigvuldig met 12."
+      fr: "Litres par personne = 8 : 5 = 1,6. Multiplie par 12.",
+      en: "Litres per person = 8 : 5 = 1.6. Multiply by 12.",
+      nl: "Liter per persoon = 8 : 5 = 1,6. Vermenigvuldig met 12."
     }
   },
   {
@@ -1362,9 +1362,9 @@ export const questions = [
     answer: 11.11,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un stylo = 5 ÷ 9 ≈ 0,556 €. Multiplie par 20.",
-      en: "Price of one pen = 5 ÷ 9 ≈ €0.556. Multiply by 20.",
-      nl: "Prijs van één pen = 5 ÷ 9 ≈ €0,556. Vermenigvuldig met 20."
+      fr: "Prix d'un stylo = 5 : 9 ≈ 0,556 €. Multiplie par 20.",
+      en: "Price of one pen = 5 : 9 ≈ €0.556. Multiply by 20.",
+      nl: "Prijs van één pen = 5 : 9 ≈ €0,556. Vermenigvuldig met 20."
     }
   },
   {
@@ -1379,9 +1379,9 @@ export const questions = [
     answer: 19.5,
     tolerance: 0.01,
     hint: {
-      fr: "Km par minute = 13 ÷ 40 = 0,325. Pour 60 min : 0,325 × 60 = 19,5.",
-      en: "Km per minute = 13 ÷ 40 = 0.325. For 60 min: 0.325 × 60 = 19.5.",
-      nl: "Km per minuut = 13 ÷ 40 = 0,325. Voor 60 min: 0,325 × 60 = 19,5."
+      fr: "Km par minute = 13 : 40 = 0,325. Pour 60 min : 0,325 . 60 = 19,5.",
+      en: "Km per minute = 13 : 40 = 0.325. For 60 min: 0.325 . 60 = 19.5.",
+      nl: "Km per minuut = 13 : 40 = 0,325. Voor 60 min: 0,325 . 60 = 19,5."
     }
   },
   {
@@ -1396,9 +1396,9 @@ export const questions = [
     answer: 13.75,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un croissant = 7,50 ÷ 6 = 1,25 €. Multiplie par 11.",
-      en: "Price of one croissant = 7.50 ÷ 6 = €1.25. Multiply by 11.",
-      nl: "Prijs van één croissant = 7,50 ÷ 6 = €1,25. Vermenigvuldig met 11."
+      fr: "Prix d'un croissant = 7,50 : 6 = 1,25 €. Multiplie par 11.",
+      en: "Price of one croissant = 7.50 : 6 = €1.25. Multiply by 11.",
+      nl: "Prijs van één croissant = 7,50 : 6 = €1,25. Vermenigvuldig met 11."
     }
   },
   {
@@ -1413,9 +1413,9 @@ export const questions = [
     answer: 5.6,
     tolerance: 0.01,
     hint: {
-      fr: "Litres par m² = 3,5 ÷ 20 = 0,175. Multiplie par 32.",
-      en: "Litres per m² = 3.5 ÷ 20 = 0.175. Multiply by 32.",
-      nl: "Liter per m² = 3,5 ÷ 20 = 0,175. Vermenigvuldig met 32."
+      fr: "Litres par m² = 3,5 : 20 = 0,175. Multiplie par 32.",
+      en: "Litres per m² = 3.5 : 20 = 0.175. Multiply by 32.",
+      nl: "Liter per m² = 3,5 : 20 = 0,175. Vermenigvuldig met 32."
     }
   },
   {
@@ -1430,9 +1430,9 @@ export const questions = [
     answer: 3.15,
     tolerance: 0.01,
     hint: {
-      fr: "4,2 cm × 75 000 = 315 000 cm = 3 150 m = 3,15 km.",
-      en: "4.2 cm × 75,000 = 315,000 cm = 3,150 m = 3.15 km.",
-      nl: "4,2 cm × 75.000 = 315.000 cm = 3.150 m = 3,15 km."
+      fr: "4,2 cm . 75 000 = 315 000 cm = 3 150 m = 3,15 km.",
+      en: "4.2 cm . 75,000 = 315,000 cm = 3,150 m = 3.15 km.",
+      nl: "4,2 cm . 75.000 = 315.000 cm = 3.150 m = 3,15 km."
     }
   },
   {
@@ -1447,9 +1447,9 @@ export const questions = [
     answer: 5.25,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'un mètre = 3 ÷ 8 = 0,375 €. Multiplie par 14.",
-      en: "Price of one metre = 3 ÷ 8 = €0.375. Multiply by 14.",
-      nl: "Prijs van één meter = 3 ÷ 8 = €0,375. Vermenigvuldig met 14."
+      fr: "Prix d'un mètre = 3 : 8 = 0,375 €. Multiplie par 14.",
+      en: "Price of one metre = 3 : 8 = €0.375. Multiply by 14.",
+      nl: "Prijs van één meter = 3 : 8 = €0,375. Vermenigvuldig met 14."
     }
   },
   {
@@ -1464,9 +1464,9 @@ export const questions = [
     answer: 218.75,
     tolerance: 0.01,
     hint: {
-      fr: "Chocolat par personne = 350 ÷ 8 = 43,75 g. Multiplie par 5.",
-      en: "Chocolate per person = 350 ÷ 8 = 43.75 g. Multiply by 5.",
-      nl: "Chocolade per persoon = 350 ÷ 8 = 43,75 g. Vermenigvuldig met 5."
+      fr: "Chocolat par personne = 350 : 8 = 43,75 g. Multiplie par 5.",
+      en: "Chocolate per person = 350 : 8 = 43.75 g. Multiply by 5.",
+      nl: "Chocolade per persoon = 350 : 8 = 43,75 g. Vermenigvuldig met 5."
     }
   },
   {
@@ -1481,9 +1481,9 @@ export const questions = [
     answer: 1750,
     tolerance: 0.01,
     hint: {
-      fr: "Kg par voyage = 750 ÷ 3 = 250. Multiplie par 7.",
-      en: "Kg per trip = 750 ÷ 3 = 250. Multiply by 7.",
-      nl: "Kg per rit = 750 ÷ 3 = 250. Vermenigvuldig met 7."
+      fr: "Kg par voyage = 750 : 3 = 250. Multiplie par 7.",
+      en: "Kg per trip = 750 : 3 = 250. Multiply by 7.",
+      nl: "Kg per rit = 750 : 3 = 250. Vermenigvuldig met 7."
     }
   },
   {
@@ -1498,9 +1498,9 @@ export const questions = [
     answer: 5.82,
     tolerance: 0.01,
     hint: {
-      fr: "Prix d'une rose = 16 ÷ 11 ≈ 1,455 €. Multiplie par 4.",
-      en: "Price of one rose = 16 ÷ 11 ≈ €1.455. Multiply by 4.",
-      nl: "Prijs van één roos = 16 ÷ 11 ≈ €1,455. Vermenigvuldig met 4."
+      fr: "Prix d'une rose = 16 : 11 ≈ 1,455 €. Multiplie par 4.",
+      en: "Price of one rose = 16 : 11 ≈ €1.455. Multiply by 4.",
+      nl: "Prijs van één roos = 16 : 11 ≈ €1,455. Vermenigvuldig met 4."
     }
   },
   {
@@ -1515,9 +1515,9 @@ export const questions = [
     answer: 6,
     tolerance: 0.01,
     hint: {
-      fr: "Prix pour 1 g = 3,60 ÷ 150 = 0,024 €. Multiplie par 250.",
-      en: "Price per 1 g = 3.60 ÷ 150 = €0.024. Multiply by 250.",
-      nl: "Prijs per 1 g = 3,60 ÷ 150 = €0,024. Vermenigvuldig met 250."
+      fr: "Prix pour 1 g = 3,60 : 150 = 0,024 €. Multiplie par 250.",
+      en: "Price per 1 g = 3.60 : 150 = €0.024. Multiply by 250.",
+      nl: "Prijs per 1 g = 3,60 : 150 = €0,024. Vermenigvuldig met 250."
     }
   },
   {
@@ -1532,9 +1532,9 @@ export const questions = [
     answer: 4.05,
     tolerance: 0.01,
     hint: {
-      fr: "Poids d'une boîte = 1,8 ÷ 4 = 0,45 kg. Multiplie par 9.",
-      en: "Weight of one tin = 1.8 ÷ 4 = 0.45 kg. Multiply by 9.",
-      nl: "Gewicht van één blik = 1,8 ÷ 4 = 0,45 kg. Vermenigvuldig met 9."
+      fr: "Poids d'une boîte = 1,8 : 4 = 0,45 kg. Multiplie par 9.",
+      en: "Weight of one tin = 1.8 : 4 = 0.45 kg. Multiply by 9.",
+      nl: "Gewicht van één blik = 1,8 : 4 = 0,45 kg. Vermenigvuldig met 9."
     }
   },
   {
@@ -1549,9 +1549,9 @@ export const questions = [
     answer: 18.67,
     tolerance: 0.01,
     hint: {
-      fr: "Débit = 7 ÷ 3 ≈ 2,333 l/min. Multiplie par 8.",
-      en: "Flow = 7 ÷ 3 ≈ 2.333 l/min. Multiply by 8.",
-      nl: "Debiet = 7 ÷ 3 ≈ 2,333 l/min. Vermenigvuldig met 8."
+      fr: "Débit = 7 : 3 ≈ 2,333 l/min. Multiplie par 8.",
+      en: "Flow = 7 : 3 ≈ 2.333 l/min. Multiply by 8.",
+      nl: "Debiet = 7 : 3 ≈ 2,333 l/min. Vermenigvuldig met 8."
     }
   },
 
@@ -1570,9 +1570,9 @@ export const questions = [
     answer: 138,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau prix = 120 × 1,15.",
-      en: "New price = 120 × 1.15.",
-      nl: "Nieuwe prijs = 120 × 1,15."
+      fr: "Nouveau prix = 120 . 1,15.",
+      en: "New price = 120 . 1.15.",
+      nl: "Nieuwe prijs = 120 . 1,15."
     }
   },
   {
@@ -1587,9 +1587,9 @@ export const questions = [
     answer: 10,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 4 × 15 = 6 × x, donc x = 60 ÷ 6.",
-      en: "Inverse proportionality: 4 × 15 = 6 × x, so x = 60 ÷ 6.",
-      nl: "Omgekeerde evenredigheid: 4 × 15 = 6 × x, dus x = 60 ÷ 6."
+      fr: "Proportionnalité inverse : 4 . 15 = 6 . x, donc x = 60 : 6.",
+      en: "Inverse proportionality: 4 . 15 = 6 . x, so x = 60 : 6.",
+      nl: "Omgekeerde evenredigheid: 4 . 15 = 6 . x, dus x = 60 : 6."
     }
   },
   {
@@ -1604,9 +1604,9 @@ export const questions = [
     answer: 96,
     tolerance: 0.01,
     hint: {
-      fr: "1 machine remplit 80 ÷ 2 = 40 en 5h, soit 8/h. 3 machines × 4h × 8 = 96.",
-      en: "1 machine fills 80 ÷ 2 = 40 in 5h, so 8/h. 3 machines × 4h × 8 = 96.",
-      nl: "1 machine vult 80 ÷ 2 = 40 in 5u, dus 8/u. 3 machines × 4u × 8 = 96."
+      fr: "1 machine remplit 80 : 2 = 40 en 5h, soit 8/h. 3 machines . 4h . 8 = 96.",
+      en: "1 machine fills 80 : 2 = 40 in 5h, so 8/h. 3 machines . 4h . 8 = 96.",
+      nl: "1 machine vult 80 : 2 = 40 in 5u, dus 8/u. 3 machines . 4u . 8 = 96."
     }
   },
   {
@@ -1621,9 +1621,9 @@ export const questions = [
     answer: 700,
     tolerance: 0.01,
     hint: {
-      fr: "Prix réduit = 800 × (1 - 0,125) = 800 × 0,875.",
-      en: "Reduced price = 800 × (1 - 0.125) = 800 × 0.875.",
-      nl: "Verlaagde prijs = 800 × (1 - 0,125) = 800 × 0,875."
+      fr: "Prix réduit = 800 . (1 - 0,125) = 800 . 0,875.",
+      en: "Reduced price = 800 . (1 - 0.125) = 800 . 0.875.",
+      nl: "Verlaagde prijs = 800 . (1 - 0,125) = 800 . 0,875."
     }
   },
   {
@@ -1638,9 +1638,9 @@ export const questions = [
     answer: 1.3,
     tolerance: 0.01,
     hint: {
-      fr: "6,5 cm × 20 000 = 130 000 cm = 1 300 m = 1,3 km.",
-      en: "6.5 cm × 20,000 = 130,000 cm = 1,300 m = 1.3 km.",
-      nl: "6,5 cm × 20.000 = 130.000 cm = 1.300 m = 1,3 km."
+      fr: "6,5 cm . 20 000 = 130 000 cm = 1 300 m = 1,3 km.",
+      en: "6.5 cm . 20,000 = 130,000 cm = 1,300 m = 1.3 km.",
+      nl: "6,5 cm . 20.000 = 130.000 cm = 1.300 m = 1,3 km."
     }
   },
   {
@@ -1655,9 +1655,9 @@ export const questions = [
     answer: 54,
     tolerance: 0.01,
     hint: {
-      fr: "Après hausse : 60 × 1,20 = 72. Après baisse : 72 × 0,75 = 54.",
-      en: "After increase: 60 × 1.20 = 72. After decrease: 72 × 0.75 = 54.",
-      nl: "Na stijging: 60 × 1,20 = 72. Na daling: 72 × 0,75 = 54."
+      fr: "Après hausse : 60 . 1,20 = 72. Après baisse : 72 . 0,75 = 54.",
+      en: "After increase: 60 . 1.20 = 72. After decrease: 72 . 0.75 = 54.",
+      nl: "Na stijging: 60 . 1,20 = 72. Na daling: 72 . 0,75 = 54."
     }
   },
   {
@@ -1672,9 +1672,9 @@ export const questions = [
     answer: 6,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 9 × 4 = 6 × x, donc x = 36 ÷ 6.",
-      en: "Inverse proportionality: 9 × 4 = 6 × x, so x = 36 ÷ 6.",
-      nl: "Omgekeerde evenredigheid: 9 × 4 = 6 × x, dus x = 36 ÷ 6."
+      fr: "Proportionnalité inverse : 9 . 4 = 6 . x, donc x = 36 : 6.",
+      en: "Inverse proportionality: 9 . 4 = 6 . x, so x = 36 : 6.",
+      nl: "Omgekeerde evenredigheid: 9 . 4 = 6 . x, dus x = 36 : 6."
     }
   },
   {
@@ -1689,9 +1689,9 @@ export const questions = [
     answer: 378,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau prix = 350 × 1,08.",
-      en: "New price = 350 × 1.08.",
-      nl: "Nieuwe prijs = 350 × 1,08."
+      fr: "Nouveau prix = 350 . 1,08.",
+      en: "New price = 350 . 1.08.",
+      nl: "Nieuwe prijs = 350 . 1,08."
     }
   },
   {
@@ -1706,9 +1706,9 @@ export const questions = [
     answer: 375,
     tolerance: 0.01,
     hint: {
-      fr: "1 boulanger prépare 150 ÷ 3 = 50 pains en 2h, soit 25/h. 5 boulangers × 3h × 25 = 375.",
-      en: "1 baker prepares 150 ÷ 3 = 50 loaves in 2h, so 25/h. 5 bakers × 3h × 25 = 375.",
-      nl: "1 bakker bereidt 150 ÷ 3 = 50 broden in 2u, dus 25/u. 5 bakkers × 3u × 25 = 375."
+      fr: "1 boulanger prépare 150 : 3 = 50 pains en 2h, soit 25/h. 5 boulangers . 3h . 25 = 375.",
+      en: "1 baker prepares 150 : 3 = 50 loaves in 2h, so 25/h. 5 bakers . 3h . 25 = 375.",
+      nl: "1 bakker bereidt 150 : 3 = 50 broden in 2u, dus 25/u. 5 bakkers . 3u . 25 = 375."
     }
   },
   {
@@ -1723,9 +1723,9 @@ export const questions = [
     answer: 315,
     tolerance: 0.01,
     hint: {
-      fr: "Prix soldé = 450 × (1 - 0,30) = 450 × 0,70.",
-      en: "Sale price = 450 × (1 - 0.30) = 450 × 0.70.",
-      nl: "Uitverkoopprijs = 450 × (1 - 0,30) = 450 × 0,70."
+      fr: "Prix soldé = 450 . (1 - 0,30) = 450 . 0,70.",
+      en: "Sale price = 450 . (1 - 0.30) = 450 . 0.70.",
+      nl: "Uitverkoopprijs = 450 . (1 - 0,30) = 450 . 0,70."
     }
   },
   {
@@ -1740,9 +1740,9 @@ export const questions = [
     answer: 14,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 7 × 6 = 3 × x, donc x = 42 ÷ 3.",
-      en: "Inverse proportionality: 7 × 6 = 3 × x, so x = 42 ÷ 3.",
-      nl: "Omgekeerde evenredigheid: 7 × 6 = 3 × x, dus x = 42 ÷ 3."
+      fr: "Proportionnalité inverse : 7 . 6 = 3 . x, donc x = 42 : 3.",
+      en: "Inverse proportionality: 7 . 6 = 3 . x, so x = 42 : 3.",
+      nl: "Omgekeerde evenredigheid: 7 . 6 = 3 . x, dus x = 42 : 3."
     }
   },
   {
@@ -1757,9 +1757,9 @@ export const questions = [
     answer: 187,
     tolerance: 0.01,
     hint: {
-      fr: "Après baisse : 200 × 0,85 = 170. Après hausse : 170 × 1,10 = 187.",
-      en: "After decrease: 200 × 0.85 = 170. After increase: 170 × 1.10 = 187.",
-      nl: "Na daling: 200 × 0,85 = 170. Na stijging: 170 × 1,10 = 187."
+      fr: "Après baisse : 200 . 0,85 = 170. Après hausse : 170 . 1,10 = 187.",
+      en: "After decrease: 200 . 0.85 = 170. After increase: 170 . 1.10 = 187.",
+      nl: "Na daling: 200 . 0,85 = 170. Na stijging: 170 . 1,10 = 187."
     }
   },
   {
@@ -1774,9 +1774,9 @@ export const questions = [
     answer: 960,
     tolerance: 0.01,
     hint: {
-      fr: "1 imprimante imprime 400 ÷ 5 = 80 pages en 2h, soit 40/h. 8 × 3 × 40 = 960.",
-      en: "1 printer prints 400 ÷ 5 = 80 pages in 2h, so 40/h. 8 × 3 × 40 = 960.",
-      nl: "1 printer drukt 400 ÷ 5 = 80 pagina's in 2u, dus 40/u. 8 × 3 × 40 = 960."
+      fr: "1 imprimante imprime 400 : 5 = 80 pages en 2h, soit 40/h. 8 . 3 . 40 = 960.",
+      en: "1 printer prints 400 : 5 = 80 pages in 2h, so 40/h. 8 . 3 . 40 = 960.",
+      nl: "1 printer drukt 400 : 5 = 80 pagina's in 2u, dus 40/u. 8 . 3 . 40 = 960."
     }
   },
   {
@@ -1791,9 +1791,9 @@ export const questions = [
     answer: 676,
     tolerance: 0.01,
     hint: {
-      fr: "Nouveau loyer = 650 × 1,04.",
-      en: "New rent = 650 × 1.04.",
-      nl: "Nieuwe huur = 650 × 1,04."
+      fr: "Nouveau loyer = 650 . 1,04.",
+      en: "New rent = 650 . 1.04.",
+      nl: "Nieuwe huur = 650 . 1,04."
     }
   },
   {
@@ -1808,9 +1808,9 @@ export const questions = [
     answer: 4,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 12 × 3 = 9 × x, donc x = 36 ÷ 9.",
-      en: "Inverse proportionality: 12 × 3 = 9 × x, so x = 36 ÷ 9.",
-      nl: "Omgekeerde evenredigheid: 12 × 3 = 9 × x, dus x = 36 ÷ 9."
+      fr: "Proportionnalité inverse : 12 . 3 = 9 . x, donc x = 36 : 9.",
+      en: "Inverse proportionality: 12 . 3 = 9 . x, so x = 36 : 9.",
+      nl: "Omgekeerde evenredigheid: 12 . 3 = 9 . x, dus x = 36 : 9."
     }
   },
   {
@@ -1825,9 +1825,9 @@ export const questions = [
     answer: 117,
     tolerance: 0.01,
     hint: {
-      fr: "Prix réduit = 180 × (1 - 0,35) = 180 × 0,65.",
-      en: "Reduced price = 180 × (1 - 0.35) = 180 × 0.65.",
-      nl: "Verlaagde prijs = 180 × (1 - 0,35) = 180 × 0,65."
+      fr: "Prix réduit = 180 . (1 - 0,35) = 180 . 0,65.",
+      en: "Reduced price = 180 . (1 - 0.35) = 180 . 0.65.",
+      nl: "Verlaagde prijs = 180 . (1 - 0,35) = 180 . 0,65."
     }
   },
   {
@@ -1842,9 +1842,9 @@ export const questions = [
     answer: 4.4,
     tolerance: 0.01,
     hint: {
-      fr: "5,5 cm × 80 000 = 440 000 cm = 4 400 m = 4,4 km.",
-      en: "5.5 cm × 80,000 = 440,000 cm = 4,400 m = 4.4 km.",
-      nl: "5,5 cm × 80.000 = 440.000 cm = 4.400 m = 4,4 km."
+      fr: "5,5 cm . 80 000 = 440 000 cm = 4 400 m = 4,4 km.",
+      en: "5.5 cm . 80,000 = 440,000 cm = 4,400 m = 4.4 km.",
+      nl: "5,5 cm . 80.000 = 440.000 cm = 4.400 m = 4,4 km."
     }
   },
   {
@@ -1859,9 +1859,9 @@ export const questions = [
     answer: 108.9,
     tolerance: 0.01,
     hint: {
-      fr: "Après 1re hausse : 90 × 1,10 = 99. Après 2e hausse : 99 × 1,10 = 108,90.",
-      en: "After 1st increase: 90 × 1.10 = 99. After 2nd increase: 99 × 1.10 = 108.90.",
-      nl: "Na 1e stijging: 90 × 1,10 = 99. Na 2e stijging: 99 × 1,10 = 108,90."
+      fr: "Après 1re hausse : 90 . 1,10 = 99. Après 2e hausse : 99 . 1,10 = 108,90.",
+      en: "After 1st increase: 90 . 1.10 = 99. After 2nd increase: 99 . 1.10 = 108.90.",
+      nl: "Na 1e stijging: 90 . 1,10 = 99. Na 2e stijging: 99 . 1,10 = 108,90."
     }
   },
   {
@@ -1876,9 +1876,9 @@ export const questions = [
     answer: 12,
     tolerance: 0.01,
     hint: {
-      fr: "Proportionnalité inverse : 6 × 8 = 4 × x, donc x = 48 ÷ 4.",
-      en: "Inverse proportionality: 6 × 8 = 4 × x, so x = 48 ÷ 4.",
-      nl: "Omgekeerde evenredigheid: 6 × 8 = 4 × x, dus x = 48 ÷ 4."
+      fr: "Proportionnalité inverse : 6 . 8 = 4 . x, donc x = 48 : 4.",
+      en: "Inverse proportionality: 6 . 8 = 4 . x, so x = 48 : 4.",
+      nl: "Omgekeerde evenredigheid: 6 . 8 = 4 . x, dus x = 48 : 4."
     }
   },
   {
@@ -1893,9 +1893,9 @@ export const questions = [
     answer: 70,
     tolerance: 0.01,
     hint: {
-      fr: "1 cuisinier prépare 60 ÷ 4 = 15 desserts en 3h, soit 5/h. 7 cuisiniers × 2h × 5 = 70.",
-      en: "1 cook prepares 60 ÷ 4 = 15 desserts in 3h, so 5/h. 7 cooks × 2h × 5 = 70.",
-      nl: "1 kok bereidt 60 ÷ 4 = 15 desserts in 3u, dus 5/u. 7 koks × 2u × 5 = 70."
+      fr: "1 cuisinier prépare 60 : 4 = 15 desserts en 3h, soit 5/h. 7 cuisiniers . 2h . 5 = 70.",
+      en: "1 cook prepares 60 : 4 = 15 desserts in 3h, so 5/h. 7 cooks . 2h . 5 = 70.",
+      nl: "1 kok bereidt 60 : 4 = 15 desserts in 3u, dus 5/u. 7 koks . 2u . 5 = 70."
     }
   },
   {
@@ -1910,9 +1910,9 @@ export const questions = [
     answer: 420,
     tolerance: 0.01,
     hint: {
-      fr: "Après baisse : 500 × 0,80 = 400. Après hausse : 400 × 1,05 = 420.",
-      en: "After decrease: 500 × 0.80 = 400. After increase: 400 × 1.05 = 420.",
-      nl: "Na daling: 500 × 0,80 = 400. Na stijging: 400 × 1,05 = 420."
+      fr: "Après baisse : 500 . 0,80 = 400. Après hausse : 400 . 1,05 = 420.",
+      en: "After decrease: 500 . 0.80 = 400. After increase: 400 . 1.05 = 420.",
+      nl: "Na daling: 500 . 0,80 = 400. Na stijging: 400 . 1,05 = 420."
     }
   },
   {
@@ -1927,9 +1927,9 @@ export const questions = [
     answer: 24,
     tolerance: 0,
     hint: {
-      fr: "Prix d'un cahier : 15 ÷ 5 = 3 €. Puis 3 × 8 = 24.",
-      en: "Price of one notebook: 15 ÷ 5 = 3. Then 3 × 8 = 24.",
-      nl: "Prijs van één schrift: 15 ÷ 5 = 3. Dan 3 × 8 = 24."
+      fr: "Prix d'un cahier : 15 : 5 = 3 €. Puis 3 . 8 = 24.",
+      en: "Price of one notebook: 15 : 5 = 3. Then 3 . 8 = 24.",
+      nl: "Prijs van één schrift: 15 : 5 = 3. Dan 3 . 8 = 24."
     }
   },
   {
@@ -1944,9 +1944,9 @@ export const questions = [
     answer: 15,
     tolerance: 0,
     hint: {
-      fr: "6 ÷ 100 = 0,06 L/km. 0,06 × 250 = 15.",
-      en: "6 ÷ 100 = 0.06 L/km. 0.06 × 250 = 15.",
-      nl: "6 ÷ 100 = 0,06 L/km. 0,06 × 250 = 15."
+      fr: "6 : 100 = 0,06 L/km. 0,06 . 250 = 15.",
+      en: "6 : 100 = 0.06 L/km. 0.06 . 250 = 15.",
+      nl: "6 : 100 = 0,06 L/km. 0,06 . 250 = 15."
     }
   },
   {
@@ -1961,9 +1961,9 @@ export const questions = [
     answer: 15,
     tolerance: 0,
     hint: {
-      fr: "Prix d'1 kg : 3 ÷ 2 = 1,5 €. Puis 1,5 × 10 = 15.",
-      en: "Price of 1 kg: 3 ÷ 2 = 1.5. Then 1.5 × 10 = 15.",
-      nl: "Prijs van 1 kg: 3 ÷ 2 = 1,5. Dan 1,5 × 10 = 15."
+      fr: "Prix d'1 kg : 3 : 2 = 1,5 €. Puis 1,5 . 10 = 15.",
+      en: "Price of 1 kg: 3 : 2 = 1.5. Then 1.5 . 10 = 15.",
+      nl: "Prijs van 1 kg: 3 : 2 = 1,5. Dan 1,5 . 10 = 15."
     }
   },
   {
@@ -1978,9 +1978,9 @@ export const questions = [
     answer: 60,
     tolerance: 0,
     hint: {
-      fr: "Réduction : 80 × 0,25 = 20. Prix soldé : 80 − 20 = 60.",
-      en: "Discount: 80 × 0.25 = 20. Sale price: 80 − 20 = 60.",
-      nl: "Korting: 80 × 0,25 = 20. Verkoopprijs: 80 − 20 = 60."
+      fr: "Réduction : 80 . 0,25 = 20. Prix soldé : 80 − 20 = 60.",
+      en: "Discount: 80 . 0.25 = 20. Sale price: 80 − 20 = 60.",
+      nl: "Korting: 80 . 0,25 = 20. Verkoopprijs: 80 − 20 = 60."
     }
   },
   {
@@ -1995,9 +1995,9 @@ export const questions = [
     answer: 28,
     tolerance: 0,
     hint: {
-      fr: "Filles : 40 × 0,30 = 12. Garçons : 40 − 12 = 28.",
-      en: "Girls: 40 × 0.30 = 12. Boys: 40 − 12 = 28.",
-      nl: "Meisjes: 40 × 0,30 = 12. Jongens: 40 − 12 = 28."
+      fr: "Filles : 40 . 0,30 = 12. Garçons : 40 − 12 = 28.",
+      en: "Girls: 40 . 0.30 = 12. Boys: 40 − 12 = 28.",
+      nl: "Meisjes: 40 . 0,30 = 12. Jongens: 40 − 12 = 28."
     }
   },
   {
@@ -2012,9 +2012,9 @@ export const questions = [
     answer: 20,
     tolerance: 0,
     hint: {
-      fr: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20.",
-      en: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20.",
-      nl: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20."
+      fr: "x = 4 . 35 : 7 = 140 : 7 = 20.",
+      en: "x = 4 . 35 : 7 = 140 : 7 = 20.",
+      nl: "x = 4 . 35 : 7 = 140 : 7 = 20."
     }
   },
   {
@@ -2029,9 +2029,9 @@ export const questions = [
     answer: 302.5,
     tolerance: 0.01,
     hint: {
-      fr: "TVA : 250 × 0,21 = 52,50. Prix TTC : 250 + 52,50 = 302,50.",
-      en: "VAT: 250 × 0.21 = 52.50. Price incl. tax: 250 + 52.50 = 302.50.",
-      nl: "Btw: 250 × 0,21 = 52,50. Prijs incl. btw: 250 + 52,50 = 302,50."
+      fr: "TVA : 250 . 0,21 = 52,50. Prix TTC : 250 + 52,50 = 302,50.",
+      en: "VAT: 250 . 0.21 = 52.50. Price incl. tax: 250 + 52.50 = 302.50.",
+      nl: "Btw: 250 . 0,21 = 52,50. Prijs incl. btw: 250 + 52,50 = 302,50."
     }
   },
 ];
@@ -2075,9 +2075,9 @@ export function generate(level = 1) {
       answer,
       tolerance: 0.01,
       hint: {
-        fr: `Prix unitaire = ${basePrice} ÷ ${baseQty} = ${unitPrice} €. Multiplie par ${targetQty}.`,
-        en: `Unit price = ${basePrice} ÷ ${baseQty} = €${unitPrice}. Multiply by ${targetQty}.`,
-        nl: `Eenheidsprijs = ${basePrice} ÷ ${baseQty} = €${unitPrice}. Vermenigvuldig met ${targetQty}.`
+        fr: `Prix unitaire = ${basePrice} : ${baseQty} = ${unitPrice} €. Multiplie par ${targetQty}.`,
+        en: `Unit price = ${basePrice} : ${baseQty} = €${unitPrice}. Multiply by ${targetQty}.`,
+        nl: `Eenheidsprijs = ${basePrice} : ${baseQty} = €${unitPrice}. Vermenigvuldig met ${targetQty}.`
       }
     };
   }
@@ -2100,9 +2100,9 @@ export function generate(level = 1) {
       answer,
       tolerance: 0.01,
       hint: {
-        fr: `Prix unitaire = ${basePrice} ÷ ${baseQty}. Multiplie par ${targetQty}.`,
-        en: `Unit price = ${basePrice} ÷ ${baseQty}. Multiply by ${targetQty}.`,
-        nl: `Eenheidsprijs = ${basePrice} ÷ ${baseQty}. Vermenigvuldig met ${targetQty}.`
+        fr: `Prix unitaire = ${basePrice} : ${baseQty}. Multiplie par ${targetQty}.`,
+        en: `Unit price = ${basePrice} : ${baseQty}. Multiply by ${targetQty}.`,
+        nl: `Eenheidsprijs = ${basePrice} : ${baseQty}. Vermenigvuldig met ${targetQty}.`
       }
     };
   }
@@ -2133,9 +2133,9 @@ export function generate(level = 1) {
       answer,
       tolerance: 0.01,
       hint: {
-        fr: `Nouveau prix = ${originalPrice} × ${factor}.`,
-        en: `New price = ${originalPrice} × ${factor}.`,
-        nl: `Nieuwe prijs = ${originalPrice} × ${factor}.`
+        fr: `Nouveau prix = ${originalPrice} . ${factor}.`,
+        en: `New price = ${originalPrice} . ${factor}.`,
+        nl: `Nieuwe prijs = ${originalPrice} . ${factor}.`
       }
     };
   }
@@ -2160,14 +2160,14 @@ export function generate(level = 1) {
       answer,
       tolerance: 0.01,
       hint: {
-        fr: `Proportionnalité inverse : ${workers1} × ${days1} = ${w2} × x, donc x = ${totalWork} ÷ ${w2}.`,
-        en: `Inverse proportionality: ${workers1} × ${days1} = ${w2} × x, so x = ${totalWork} ÷ ${w2}.`,
-        nl: `Omgekeerde evenredigheid: ${workers1} × ${days1} = ${w2} × x, dus x = ${totalWork} ÷ ${w2}.`
+        fr: `Proportionnalité inverse : ${workers1} . ${days1} = ${w2} . x, donc x = ${totalWork} : ${w2}.`,
+        en: `Inverse proportionality: ${workers1} . ${days1} = ${w2} . x, so x = ${totalWork} : ${w2}.`,
+        nl: `Omgekeerde evenredigheid: ${workers1} . ${days1} = ${w2} . x, dus x = ${totalWork} : ${w2}.`
       }
     };
   }
 
-  // type === 3: Multi-step (machines × hours)
+  // type === 3: Multi-step (machines . hours)
   const machines1 = rand(2, 6);
   const hours1 = rand(2, 6);
   const perMachinePerHour = rand(5, 15);
@@ -2186,9 +2186,9 @@ export function generate(level = 1) {
     answer,
     tolerance: 0.01,
     hint: {
-      fr: `1 machine produit ${totalParts} ÷ ${machines1} = ${totalParts / machines1} pièces en ${hours1}h, soit ${perMachinePerHour}/h. ${machines2} × ${hours2} × ${perMachinePerHour} = ${answer}.`,
-      en: `1 machine produces ${totalParts} ÷ ${machines1} = ${totalParts / machines1} parts in ${hours1}h, so ${perMachinePerHour}/h. ${machines2} × ${hours2} × ${perMachinePerHour} = ${answer}.`,
-      nl: `1 machine produceert ${totalParts} ÷ ${machines1} = ${totalParts / machines1} onderdelen in ${hours1}u, dus ${perMachinePerHour}/u. ${machines2} × ${hours2} × ${perMachinePerHour} = ${answer}.`
+      fr: `1 machine produit ${totalParts} : ${machines1} = ${totalParts / machines1} pièces en ${hours1}h, soit ${perMachinePerHour}/h. ${machines2} . ${hours2} . ${perMachinePerHour} = ${answer}.`,
+      en: `1 machine produces ${totalParts} : ${machines1} = ${totalParts / machines1} parts in ${hours1}h, so ${perMachinePerHour}/h. ${machines2} . ${hours2} . ${perMachinePerHour} = ${answer}.`,
+      nl: `1 machine produceert ${totalParts} : ${machines1} = ${totalParts / machines1} onderdelen in ${hours1}u, dus ${perMachinePerHour}/u. ${machines2} . ${hours2} . ${perMachinePerHour} = ${answer}.`
     }
   };
 }

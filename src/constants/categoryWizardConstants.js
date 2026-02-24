@@ -28,7 +28,7 @@ export const BLUE_SUBCATS = [
   { code: 'N1', name: 'Nombres', icon: '🔢', color: '#3B82F6' },
   { code: 'N2', name: 'Opérations', icon: '➕', color: '#3B82F6' },
   { code: 'N3', name: 'Priorités', icon: '🎯', color: '#3B82F6' },
-  { code: 'N4', name: 'Fractions', icon: '🍕', color: '#3B82F6' },
+  { code: 'N4', name: 'Équations', icon: '⚖️', color: '#3B82F6' },
   { code: 'N5', name: 'Décimaux', icon: '📊', color: '#3B82F6' },
   { code: 'N6', name: 'Puissances', icon: '⚡', color: '#3B82F6' },
   { code: 'D2', name: 'Statistiques', icon: '📈', color: '#3B82F6' },

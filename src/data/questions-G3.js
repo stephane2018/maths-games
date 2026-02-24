@@ -9,81 +9,81 @@ export const questions = [
     id: "G3_s_1", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 4 cm, 3 cm en 2 cm?" },
     answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = L × l × h.", en: "Volume = L × w × h.", nl: "Volume = L × b × h." }
+    hint: { fr: "Volume = L . l . h.", en: "Volume = L . w . h.", nl: "Volume = L . b . h." }
   },
   {
     id: "G3_s_2", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 5 cm ?", en: "What is the volume of a cube with side 5 cm?", nl: "Wat is het volume van een kubus met zijde 5 cm?" },
     answer: 125, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = côté³ = 5 × 5 × 5.", en: "Volume = side³ = 5 × 5 × 5.", nl: "Volume = zijde³ = 5 × 5 × 5." }
+    hint: { fr: "Volume = côté³ = 5 . 5 . 5.", en: "Volume = side³ = 5 . 5 . 5.", nl: "Volume = zijde³ = 5 . 5 . 5." }
   },
   {
     id: "G3_s_3", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 2 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 2 cm and 3 cm?", nl: "Wat is het volume van een balk van 10 cm, 2 cm en 3 cm?" },
     answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 2 × 3.", en: "Volume = 10 × 2 × 3.", nl: "Volume = 10 × 2 × 3." }
+    hint: { fr: "Volume = 10 . 2 . 3.", en: "Volume = 10 . 2 . 3.", nl: "Volume = 10 . 2 . 3." }
   },
   {
     id: "G3_s_4", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 3 cm ?", en: "What is the volume of a cube with side 3 cm?", nl: "Wat is het volume van een kubus met zijde 3 cm?" },
     answer: 27, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 × 3 × 3.", en: "Volume = 3 × 3 × 3.", nl: "Volume = 3 × 3 × 3." }
+    hint: { fr: "Volume = 3 . 3 . 3.", en: "Volume = 3 . 3 . 3.", nl: "Volume = 3 . 3 . 3." }
   },
   {
     id: "G3_s_5", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 5 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 5 cm and 4 cm?", nl: "Wat is het volume van een balk van 6 cm, 5 cm en 4 cm?" },
     answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 × 5 × 4.", en: "Volume = 6 × 5 × 4.", nl: "Volume = 6 × 5 × 4." }
+    hint: { fr: "Volume = 6 . 5 . 4.", en: "Volume = 6 . 5 . 4.", nl: "Volume = 6 . 5 . 4." }
   },
   // Level 2 — Larger prisms, inverse problems
   {
     id: "G3_s_6", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un cube de côté 8 cm ?", en: "What is the volume of a cube with side 8 cm?", nl: "Wat is het volume van een kubus met zijde 8 cm?" },
     answer: 512, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 8 × 8 = 512.", en: "Volume = 8 × 8 × 8 = 512.", nl: "Volume = 8 × 8 × 8 = 512." }
+    hint: { fr: "Volume = 8 . 8 . 8 = 512.", en: "Volume = 8 . 8 . 8 = 512.", nl: "Volume = 8 . 8 . 8 = 512." }
   },
   {
     id: "G3_s_7", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un pavé droit de 12 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 12 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 12 cm, 5 cm en 3 cm?" },
     answer: 180, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 12 × 5 × 3.", en: "Volume = 12 × 5 × 3.", nl: "Volume = 12 × 5 × 3." }
+    hint: { fr: "Volume = 12 . 5 . 3.", en: "Volume = 12 . 5 . 3.", nl: "Volume = 12 . 5 . 3." }
   },
   {
     id: "G3_s_8", category: "G3", level: 2,
-    text: { fr: "Un aquarium mesure 30 cm × 20 cm × 15 cm. Quel est son volume en cm³ ?", en: "An aquarium measures 30 cm × 20 cm × 15 cm. What is its volume in cm³?", nl: "Een aquarium meet 30 cm × 20 cm × 15 cm. Wat is het volume in cm³?" },
+    text: { fr: "Un aquarium mesure 30 cm . 20 cm . 15 cm. Quel est son volume en cm³ ?", en: "An aquarium measures 30 cm . 20 cm . 15 cm. What is its volume in cm³?", nl: "Een aquarium meet 30 cm . 20 cm . 15 cm. Wat is het volume in cm³?" },
     answer: 9000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 30 × 20 × 15.", en: "Volume = 30 × 20 × 15.", nl: "Volume = 30 × 20 × 15." }
+    hint: { fr: "Volume = 30 . 20 . 15.", en: "Volume = 30 . 20 . 15.", nl: "Volume = 30 . 20 . 15." }
   },
   {
     id: "G3_s_9", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 7 cm et 10 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 7 cm and 10 cm?", nl: "Wat is het volume van een balk van 7 cm, 7 cm en 10 cm?" },
     answer: 490, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 7 × 10.", en: "Volume = 7 × 7 × 10.", nl: "Volume = 7 × 7 × 10." }
+    hint: { fr: "Volume = 7 . 7 . 10.", en: "Volume = 7 . 7 . 10.", nl: "Volume = 7 . 7 . 10." }
   },
   {
     id: "G3_s_10", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 64 cm³. Quel est la longueur de son côté ?", en: "A cube has a volume of 64 cm³. What is its side length?", nl: "Een kubus heeft een volume van 64 cm³. Hoe lang is zijn zijde?" },
     answer: 4, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 64 ? 4 × 4 × 4 = 64.", en: "What number cubed gives 64? 4 × 4 × 4 = 64.", nl: "Welk getal tot de derde macht geeft 64? 4 × 4 × 4 = 64." }
+    hint: { fr: "Quel nombre au cube donne 64 ? 4 . 4 . 4 = 64.", en: "What number cubed gives 64? 4 . 4 . 4 = 64.", nl: "Welk getal tot de derde macht geeft 64? 4 . 4 . 4 = 64." }
   },
   // Level 3 — Composite volumes, counting cubes
   {
     id: "G3_s_11", category: "G3", level: 3,
-    text: { fr: "Un pavé de 8 × 6 × 5 cm a un cube de 2 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 8 × 6 × 5 cm has a 2 cm cube cut from a corner. What volume remains?", nl: "Een balk van 8 × 6 × 5 cm heeft een kubus van 2 cm uit een hoek gesneden. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 8 . 6 . 5 cm a un cube de 2 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 8 . 6 . 5 cm has a 2 cm cube cut from a corner. What volume remains?", nl: "Een balk van 8 . 6 . 5 cm heeft een kubus van 2 cm uit een hoek gesneden. Welk volume blijft over?" },
     answer: 232, tolerance: 0, unit: "cm³",
     hint: { fr: "240 - 8 = 232.", en: "240 - 8 = 232.", nl: "240 - 8 = 232." }
   },
   {
     id: "G3_s_12", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 10 × 8 × 6 cm ?", en: "How many 2 cm cubes fit in a 10 × 8 × 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 10 × 8 × 6 cm?" },
+    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 10 . 8 . 6 cm ?", en: "How many 2 cm cubes fit in a 10 . 8 . 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 10 . 8 . 6 cm?" },
     answer: 60, tolerance: 0,
-    hint: { fr: "10/2 × 8/2 × 6/2 = 5 × 4 × 3.", en: "10/2 × 8/2 × 6/2 = 5 × 4 × 3.", nl: "10/2 × 8/2 × 6/2 = 5 × 4 × 3." }
+    hint: { fr: "10/2 . 8/2 . 6/2 = 5 . 4 . 3.", en: "10/2 . 8/2 . 6/2 = 5 . 4 . 3.", nl: "10/2 . 8/2 . 6/2 = 5 . 4 . 3." }
   },
   {
     id: "G3_s_13", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 40 × 25 × 30 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A 40 × 25 × 30 cm aquarium is 3/4 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 40 × 25 × 30 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un aquarium de 40 . 25 . 30 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A 40 . 25 . 30 cm aquarium is 3/4 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 40 . 25 . 30 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 22500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis × 3/4.", en: "Total volume = 30,000. Then × 3/4.", nl: "Totaal volume = 30.000. Dan × 3/4." }
+    hint: { fr: "Volume total = 30 000. Puis . 3/4.", en: "Total volume = 30,000. Then . 3/4.", nl: "Totaal volume = 30.000. Dan . 3/4." }
   },
   {
     id: "G3_s_14", category: "G3", level: 3,
@@ -103,73 +103,73 @@ export const questions = [
     id: "G3_s_16", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 2 cm ?", en: "What is the volume of a cube with side 2 cm?", nl: "Wat is het volume van een kubus met zijde 2 cm?" },
     answer: 8, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 2 × 2 × 2.", en: "Volume = 2 × 2 × 2.", nl: "Volume = 2 × 2 × 2." }
+    hint: { fr: "Volume = 2 . 2 . 2.", en: "Volume = 2 . 2 . 2.", nl: "Volume = 2 . 2 . 2." }
   },
   {
     id: "G3_s_17", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 5 cm, 4 cm en 3 cm?" },
     answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 × 4 × 3.", en: "Volume = 5 × 4 × 3.", nl: "Volume = 5 × 4 × 3." }
+    hint: { fr: "Volume = 5 . 4 . 3.", en: "Volume = 5 . 4 . 3.", nl: "Volume = 5 . 4 . 3." }
   },
   {
     id: "G3_s_18", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 4 cm ?", en: "What is the volume of a cube with side 4 cm?", nl: "Wat is het volume van een kubus met zijde 4 cm?" },
     answer: 64, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 × 4 × 4.", en: "Volume = 4 × 4 × 4.", nl: "Volume = 4 × 4 × 4." }
+    hint: { fr: "Volume = 4 . 4 . 4.", en: "Volume = 4 . 4 . 4.", nl: "Volume = 4 . 4 . 4." }
   },
   {
     id: "G3_s_19", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 8 cm, 3 cm en 2 cm?" },
     answer: 48, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 3 × 2.", en: "Volume = 8 × 3 × 2.", nl: "Volume = 8 × 3 × 2." }
+    hint: { fr: "Volume = 8 . 3 . 2.", en: "Volume = 8 . 3 . 2.", nl: "Volume = 8 . 3 . 2." }
   },
   {
     id: "G3_s_20", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 4 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 4 cm and 2 cm?", nl: "Wat is het volume van een balk van 7 cm, 4 cm en 2 cm?" },
     answer: 56, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 4 × 2.", en: "Volume = 7 × 4 × 2.", nl: "Volume = 7 × 4 × 2." }
+    hint: { fr: "Volume = 7 . 4 . 2.", en: "Volume = 7 . 4 . 2.", nl: "Volume = 7 . 4 . 2." }
   },
   {
     id: "G3_s_21", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 6 cm ?", en: "What is the volume of a cube with side 6 cm?", nl: "Wat is het volume van een kubus met zijde 6 cm?" },
     answer: 216, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 × 6 × 6.", en: "Volume = 6 × 6 × 6.", nl: "Volume = 6 × 6 × 6." }
+    hint: { fr: "Volume = 6 . 6 . 6.", en: "Volume = 6 . 6 . 6.", nl: "Volume = 6 . 6 . 6." }
   },
   {
     id: "G3_s_22", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 2 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 2 cm and 5 cm?", nl: "Wat is het volume van een balk van 9 cm, 2 cm en 5 cm?" },
     answer: 90, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 × 2 × 5.", en: "Volume = 9 × 2 × 5.", nl: "Volume = 9 × 2 × 5." }
+    hint: { fr: "Volume = 9 . 2 . 5.", en: "Volume = 9 . 2 . 5.", nl: "Volume = 9 . 2 . 5." }
   },
   {
     id: "G3_s_23", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 1 cm ?", en: "What is the volume of a cube with side 1 cm?", nl: "Wat is het volume van een kubus met zijde 1 cm?" },
     answer: 1, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 1 × 1 × 1.", en: "Volume = 1 × 1 × 1.", nl: "Volume = 1 × 1 × 1." }
+    hint: { fr: "Volume = 1 . 1 . 1.", en: "Volume = 1 . 1 . 1.", nl: "Volume = 1 . 1 . 1." }
   },
   {
     id: "G3_s_24", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 3 cm, 3 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 3 cm, 3 cm and 5 cm?", nl: "Wat is het volume van een balk van 3 cm, 3 cm en 5 cm?" },
     answer: 45, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 × 3 × 5.", en: "Volume = 3 × 3 × 5.", nl: "Volume = 3 × 3 × 5." }
+    hint: { fr: "Volume = 3 . 3 . 5.", en: "Volume = 3 . 3 . 5.", nl: "Volume = 3 . 3 . 5." }
   },
   {
     id: "G3_s_25", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 5 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 5 cm and 2 cm?", nl: "Wat is het volume van een balk van 10 cm, 5 cm en 2 cm?" },
     answer: 100, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 5 × 2.", en: "Volume = 10 × 5 × 2.", nl: "Volume = 10 × 5 × 2." }
+    hint: { fr: "Volume = 10 . 5 . 2.", en: "Volume = 10 . 5 . 2.", nl: "Volume = 10 . 5 . 2." }
   },
   {
     id: "G3_s_26", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 6 cm, 3 cm en 2 cm?" },
     answer: 36, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 × 3 × 2.", en: "Volume = 6 × 3 × 2.", nl: "Volume = 6 × 3 × 2." }
+    hint: { fr: "Volume = 6 . 3 . 2.", en: "Volume = 6 . 3 . 2.", nl: "Volume = 6 . 3 . 2." }
   },
   {
     id: "G3_s_27", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 7 cm ?", en: "What is the volume of a cube with side 7 cm?", nl: "Wat is het volume van een kubus met zijde 7 cm?" },
     answer: 343, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 7 × 7.", en: "Volume = 7 × 7 × 7.", nl: "Volume = 7 × 7 × 7." }
+    hint: { fr: "Volume = 7 . 7 . 7.", en: "Volume = 7 . 7 . 7.", nl: "Volume = 7 . 7 . 7." }
   },
 
   // ── Level 2 — additional (G3_s_28 – G3_s_39) ─────────────────────────────
@@ -177,139 +177,139 @@ export const questions = [
     id: "G3_s_28", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un cube de côté 9 cm ?", en: "What is the volume of a cube with side 9 cm?", nl: "Wat is het volume van een kubus met zijde 9 cm?" },
     answer: 729, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 × 9 × 9 = 729.", en: "Volume = 9 × 9 × 9 = 729.", nl: "Volume = 9 × 9 × 9 = 729." }
+    hint: { fr: "Volume = 9 . 9 . 9 = 729.", en: "Volume = 9 . 9 . 9 = 729.", nl: "Volume = 9 . 9 . 9 = 729." }
   },
   {
     id: "G3_s_29", category: "G3", level: 2,
-    text: { fr: "Une boîte mesure 15 cm × 10 cm × 8 cm. Quel est son volume ?", en: "A box measures 15 cm × 10 cm × 8 cm. What is its volume?", nl: "Een doos meet 15 cm × 10 cm × 8 cm. Wat is het volume?" },
+    text: { fr: "Une boîte mesure 15 cm . 10 cm . 8 cm. Quel est son volume ?", en: "A box measures 15 cm . 10 cm . 8 cm. What is its volume?", nl: "Een doos meet 15 cm . 10 cm . 8 cm. Wat is het volume?" },
     answer: 1200, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 15 × 10 × 8.", en: "Volume = 15 × 10 × 8.", nl: "Volume = 15 × 10 × 8." }
+    hint: { fr: "Volume = 15 . 10 . 8.", en: "Volume = 15 . 10 . 8.", nl: "Volume = 15 . 10 . 8." }
   },
   {
     id: "G3_s_30", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 27 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 27 cm³. What is its side length?", nl: "Een kubus heeft een volume van 27 cm³. Hoe lang is zijn zijde?" },
     answer: 3, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 27 ? 3 × 3 × 3 = 27.", en: "What number cubed gives 27? 3 × 3 × 3 = 27.", nl: "Welk getal tot de derde macht geeft 27? 3 × 3 × 3 = 27." }
+    hint: { fr: "Quel nombre au cube donne 27 ? 3 . 3 . 3 = 27.", en: "What number cubed gives 27? 3 . 3 . 3 = 27.", nl: "Welk getal tot de derde macht geeft 27? 3 . 3 . 3 = 27." }
   },
   {
     id: "G3_s_31", category: "G3", level: 2,
-    text: { fr: "Un tiroir mesure 20 cm × 15 cm × 6 cm. Quel est son volume ?", en: "A drawer measures 20 cm × 15 cm × 6 cm. What is its volume?", nl: "Een lade meet 20 cm × 15 cm × 6 cm. Wat is het volume?" },
+    text: { fr: "Un tiroir mesure 20 cm . 15 cm . 6 cm. Quel est son volume ?", en: "A drawer measures 20 cm . 15 cm . 6 cm. What is its volume?", nl: "Een lade meet 20 cm . 15 cm . 6 cm. Wat is het volume?" },
     answer: 1800, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 20 × 15 × 6.", en: "Volume = 20 × 15 × 6.", nl: "Volume = 20 × 15 × 6." }
+    hint: { fr: "Volume = 20 . 15 . 6.", en: "Volume = 20 . 15 . 6.", nl: "Volume = 20 . 15 . 6." }
   },
   {
     id: "G3_s_32", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 125 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 125 cm³. What is its side length?", nl: "Een kubus heeft een volume van 125 cm³. Hoe lang is zijn zijde?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 125 ? 5 × 5 × 5 = 125.", en: "What number cubed gives 125? 5 × 5 × 5 = 125.", nl: "Welk getal tot de derde macht geeft 125? 5 × 5 × 5 = 125." }
+    hint: { fr: "Quel nombre au cube donne 125 ? 5 . 5 . 5 = 125.", en: "What number cubed gives 125? 5 . 5 . 5 = 125.", nl: "Welk getal tot de derde macht geeft 125? 5 . 5 . 5 = 125." }
   },
   {
     id: "G3_s_33", category: "G3", level: 2,
-    text: { fr: "Un bac à sable mesure 25 cm × 20 cm × 10 cm. Quel est son volume ?", en: "A sandbox measures 25 cm × 20 cm × 10 cm. What is its volume?", nl: "Een zandbak meet 25 cm × 20 cm × 10 cm. Wat is het volume?" },
+    text: { fr: "Un bac à sable mesure 25 cm . 20 cm . 10 cm. Quel est son volume ?", en: "A sandbox measures 25 cm . 20 cm . 10 cm. What is its volume?", nl: "Een zandbak meet 25 cm . 20 cm . 10 cm. Wat is het volume?" },
     answer: 5000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 25 × 20 × 10.", en: "Volume = 25 × 20 × 10.", nl: "Volume = 25 × 20 × 10." }
+    hint: { fr: "Volume = 25 . 20 . 10.", en: "Volume = 25 . 20 . 10.", nl: "Volume = 25 . 20 . 10." }
   },
   {
     id: "G3_s_34", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un pavé droit de 11 cm, 8 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 11 cm, 8 cm and 5 cm?", nl: "Wat is het volume van een balk van 11 cm, 8 cm en 5 cm?" },
     answer: 440, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 11 × 8 × 5.", en: "Volume = 11 × 8 × 5.", nl: "Volume = 11 × 8 × 5." }
+    hint: { fr: "Volume = 11 . 8 . 5.", en: "Volume = 11 . 8 . 5.", nl: "Volume = 11 . 8 . 5." }
   },
   {
     id: "G3_s_35", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 8 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 8 cm³. What is its side length?", nl: "Een kubus heeft een volume van 8 cm³. Hoe lang is zijn zijde?" },
     answer: 2, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 8 ? 2 × 2 × 2 = 8.", en: "What number cubed gives 8? 2 × 2 × 2 = 8.", nl: "Welk getal tot de derde macht geeft 8? 2 × 2 × 2 = 8." }
+    hint: { fr: "Quel nombre au cube donne 8 ? 2 . 2 . 2 = 8.", en: "What number cubed gives 8? 2 . 2 . 2 = 8.", nl: "Welk getal tot de derde macht geeft 8? 2 . 2 . 2 = 8." }
   },
   {
     id: "G3_s_36", category: "G3", level: 2,
-    text: { fr: "Un coffre mesure 50 cm × 30 cm × 20 cm. Quel est son volume ?", en: "A chest measures 50 cm × 30 cm × 20 cm. What is its volume?", nl: "Een kist meet 50 cm × 30 cm × 20 cm. Wat is het volume?" },
+    text: { fr: "Un coffre mesure 50 cm . 30 cm . 20 cm. Quel est son volume ?", en: "A chest measures 50 cm . 30 cm . 20 cm. What is its volume?", nl: "Een kist meet 50 cm . 30 cm . 20 cm. Wat is het volume?" },
     answer: 30000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 50 × 30 × 20.", en: "Volume = 50 × 30 × 20.", nl: "Volume = 50 × 30 × 20." }
+    hint: { fr: "Volume = 50 . 30 . 20.", en: "Volume = 50 . 30 . 20.", nl: "Volume = 50 . 30 . 20." }
   },
   {
     id: "G3_s_37", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 120 cm³. Sa longueur est 10 cm et sa largeur 4 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 120 cm³. Its length is 10 cm and width 4 cm. What is its height?", nl: "Een balk heeft een volume van 120 cm³. De lengte is 10 cm en de breedte 4 cm. Wat is de hoogte?" },
     answer: 3, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 120 ÷ (10 × 4) = 120 ÷ 40.", en: "Height = 120 ÷ (10 × 4) = 120 ÷ 40.", nl: "Hoogte = 120 ÷ (10 × 4) = 120 ÷ 40." }
+    hint: { fr: "Hauteur = 120 : (10 . 4) = 120 : 40.", en: "Height = 120 : (10 . 4) = 120 : 40.", nl: "Hoogte = 120 : (10 . 4) = 120 : 40." }
   },
   {
     id: "G3_s_38", category: "G3", level: 2,
     text: { fr: "Quel est le volume d'un pavé droit de 14 cm, 10 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 14 cm, 10 cm and 5 cm?", nl: "Wat is het volume van een balk van 14 cm, 10 cm en 5 cm?" },
     answer: 700, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 14 × 10 × 5.", en: "Volume = 14 × 10 × 5.", nl: "Volume = 14 × 10 × 5." }
+    hint: { fr: "Volume = 14 . 10 . 5.", en: "Volume = 14 . 10 . 5.", nl: "Volume = 14 . 10 . 5." }
   },
   {
     id: "G3_s_39", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 240 cm³. Sa longueur est 8 cm et sa hauteur 5 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 240 cm³. Its length is 8 cm and height 5 cm. What is its width?", nl: "Een balk heeft een volume van 240 cm³. De lengte is 8 cm en de hoogte 5 cm. Wat is de breedte?" },
     answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 240 ÷ (8 × 5) = 240 ÷ 40.", en: "Width = 240 ÷ (8 × 5) = 240 ÷ 40.", nl: "Breedte = 240 ÷ (8 × 5) = 240 ÷ 40." }
+    hint: { fr: "Largeur = 240 : (8 . 5) = 240 : 40.", en: "Width = 240 : (8 . 5) = 240 : 40.", nl: "Breedte = 240 : (8 . 5) = 240 : 40." }
   },
 
   // ── Level 3 — additional (G3_s_40 – G3_s_50) ─────────────────────────────
   {
     id: "G3_s_40", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 × 9 × 6 cm ?", en: "How many 3 cm cubes fit in a 12 × 9 × 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 × 9 × 6 cm?" },
+    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 . 9 . 6 cm ?", en: "How many 3 cm cubes fit in a 12 . 9 . 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 . 9 . 6 cm?" },
     answer: 24, tolerance: 0,
-    hint: { fr: "12/3 × 9/3 × 6/3 = 4 × 3 × 2.", en: "12/3 × 9/3 × 6/3 = 4 × 3 × 2.", nl: "12/3 × 9/3 × 6/3 = 4 × 3 × 2." }
+    hint: { fr: "12/3 . 9/3 . 6/3 = 4 . 3 . 2.", en: "12/3 . 9/3 . 6/3 = 4 . 3 . 2.", nl: "12/3 . 9/3 . 6/3 = 4 . 3 . 2." }
   },
   {
     id: "G3_s_41", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 50 × 20 × 30 cm est rempli à moitié. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 × 20 × 30 cm aquarium is half full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 × 20 × 30 cm is halfvol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un aquarium de 50 . 20 . 30 cm est rempli à moitié. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 . 20 . 30 cm aquarium is half full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 . 20 . 30 cm is halfvol. Hoeveel water bevat het (in cm³)?" },
     answer: 15000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis ÷ 2.", en: "Total volume = 30,000. Then ÷ 2.", nl: "Totaal volume = 30.000. Dan ÷ 2." }
+    hint: { fr: "Volume total = 30 000. Puis : 2.", en: "Total volume = 30,000. Then : 2.", nl: "Totaal volume = 30.000. Dan : 2." }
   },
   {
     id: "G3_s_42", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 pavés droits : un de 5 × 4 × 3 cm et un de 6 × 3 × 2 cm ?", en: "What is the total volume of 2 prisms: one of 5 × 4 × 3 cm and one of 6 × 3 × 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 5 × 4 × 3 cm en een van 6 × 3 × 2 cm?" },
+    text: { fr: "Quel est le volume total de 2 pavés droits : un de 5 . 4 . 3 cm et un de 6 . 3 . 2 cm ?", en: "What is the total volume of 2 prisms: one of 5 . 4 . 3 cm and one of 6 . 3 . 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 5 . 4 . 3 cm en een van 6 . 3 . 2 cm?" },
     answer: 96, tolerance: 0, unit: "cm³",
     hint: { fr: "60 + 36 = 96.", en: "60 + 36 = 96.", nl: "60 + 36 = 96." }
   },
   {
     id: "G3_s_43", category: "G3", level: 3,
-    text: { fr: "Un pavé de 10 × 8 × 6 cm a un cube de 4 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 10 × 8 × 6 cm has a 4 cm cube cut from a corner. What volume remains?", nl: "Een balk van 10 × 8 × 6 cm heeft een kubus van 4 cm uit een hoek gesneden. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 10 . 8 . 6 cm a un cube de 4 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 10 . 8 . 6 cm has a 4 cm cube cut from a corner. What volume remains?", nl: "Een balk van 10 . 8 . 6 cm heeft een kubus van 4 cm uit een hoek gesneden. Welk volume blijft over?" },
     answer: 416, tolerance: 0, unit: "cm³",
     hint: { fr: "480 - 64 = 416.", en: "480 - 64 = 416.", nl: "480 - 64 = 416." }
   },
   {
     id: "G3_s_44", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 20 × 15 × 10 cm ?", en: "How many 5 cm cubes fit in a 20 × 15 × 10 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 20 × 15 × 10 cm?" },
+    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 20 . 15 . 10 cm ?", en: "How many 5 cm cubes fit in a 20 . 15 . 10 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 20 . 15 . 10 cm?" },
     answer: 24, tolerance: 0,
-    hint: { fr: "20/5 × 15/5 × 10/5 = 4 × 3 × 2.", en: "20/5 × 15/5 × 10/5 = 4 × 3 × 2.", nl: "20/5 × 15/5 × 10/5 = 4 × 3 × 2." }
+    hint: { fr: "20/5 . 15/5 . 10/5 = 4 . 3 . 2.", en: "20/5 . 15/5 . 10/5 = 4 . 3 . 2.", nl: "20/5 . 15/5 . 10/5 = 4 . 3 . 2." }
   },
   {
     id: "G3_s_45", category: "G3", level: 3,
-    text: { fr: "Un bac de 30 × 20 × 10 cm est rempli au 1/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 30 × 20 × 10 cm is 1/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 30 × 20 × 10 cm is 1/4 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un bac de 30 . 20 . 10 cm est rempli au 1/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 30 . 20 . 10 cm is 1/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 30 . 20 . 10 cm is 1/4 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 1500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 6 000. Puis × 1/4.", en: "Total volume = 6,000. Then × 1/4.", nl: "Totaal volume = 6.000. Dan × 1/4." }
+    hint: { fr: "Volume total = 6 000. Puis . 1/4.", en: "Total volume = 6,000. Then . 1/4.", nl: "Totaal volume = 6.000. Dan . 1/4." }
   },
   {
     id: "G3_s_46", category: "G3", level: 3,
     text: { fr: "Quel est le volume total de 3 cubes identiques de côté 3 cm ?", en: "What is the total volume of 3 identical cubes with side 3 cm?", nl: "Wat is het totale volume van 3 identieke kubussen met zijde 3 cm?" },
     answer: 81, tolerance: 0, unit: "cm³",
-    hint: { fr: "3 × (3 × 3 × 3) = 3 × 27.", en: "3 × (3 × 3 × 3) = 3 × 27.", nl: "3 × (3 × 3 × 3) = 3 × 27." }
+    hint: { fr: "3 . (3 . 3 . 3) = 3 . 27.", en: "3 . (3 . 3 . 3) = 3 . 27.", nl: "3 . (3 . 3 . 3) = 3 . 27." }
   },
   {
     id: "G3_s_47", category: "G3", level: 3,
-    text: { fr: "Un pavé de 12 × 10 × 8 cm a un pavé de 6 × 4 × 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 12 × 10 × 8 cm has a 6 × 4 × 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 12 × 10 × 8 cm heeft een balk van 6 × 4 × 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 12 . 10 . 8 cm a un pavé de 6 . 4 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 12 . 10 . 8 cm has a 6 . 4 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 12 . 10 . 8 cm heeft een balk van 6 . 4 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
     answer: 888, tolerance: 0, unit: "cm³",
     hint: { fr: "960 - 72 = 888.", en: "960 - 72 = 888.", nl: "960 - 72 = 888." }
   },
   {
     id: "G3_s_48", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 16 × 12 × 8 cm ?", en: "How many 4 cm cubes fit in a 16 × 12 × 8 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 16 × 12 × 8 cm?" },
+    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 16 . 12 . 8 cm ?", en: "How many 4 cm cubes fit in a 16 . 12 . 8 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 16 . 12 . 8 cm?" },
     answer: 24, tolerance: 0,
-    hint: { fr: "16/4 × 12/4 × 8/4 = 4 × 3 × 2.", en: "16/4 × 12/4 × 8/4 = 4 × 3 × 2.", nl: "16/4 × 12/4 × 8/4 = 4 × 3 × 2." }
+    hint: { fr: "16/4 . 12/4 . 8/4 = 4 . 3 . 2.", en: "16/4 . 12/4 . 8/4 = 4 . 3 . 2.", nl: "16/4 . 12/4 . 8/4 = 4 . 3 . 2." }
   },
   {
     id: "G3_s_49", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 60 × 30 × 20 cm est rempli aux 2/3. Quel volume d'eau contient-il (en cm³) ?", en: "A 60 × 30 × 20 cm aquarium is 2/3 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 60 × 30 × 20 cm is 2/3 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un aquarium de 60 . 30 . 20 cm est rempli aux 2/3. Quel volume d'eau contient-il (en cm³) ?", en: "A 60 . 30 . 20 cm aquarium is 2/3 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 60 . 30 . 20 cm is 2/3 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 24000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 36 000. Puis × 2/3.", en: "Total volume = 36,000. Then × 2/3.", nl: "Totaal volume = 36.000. Dan × 2/3." }
+    hint: { fr: "Volume total = 36 000. Puis . 2/3.", en: "Total volume = 36,000. Then . 2/3.", nl: "Totaal volume = 36.000. Dan . 2/3." }
   },
   {
     id: "G3_s_50", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total d'un cube de côté 5 cm et d'un pavé droit de 10 × 4 × 3 cm ?", en: "What is the total volume of a cube with side 5 cm and a prism of 10 × 4 × 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 5 cm en een balk van 10 × 4 × 3 cm?" },
+    text: { fr: "Quel est le volume total d'un cube de côté 5 cm et d'un pavé droit de 10 . 4 . 3 cm ?", en: "What is the total volume of a cube with side 5 cm and a prism of 10 . 4 . 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 5 cm en een balk van 10 . 4 . 3 cm?" },
     answer: 245, tolerance: 0, unit: "cm³",
     hint: { fr: "125 + 120 = 245.", en: "125 + 120 = 245.", nl: "125 + 120 = 245." }
   },
@@ -319,127 +319,127 @@ export const questions = [
     id: "G3_s_51", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 9 cm ?", en: "What is the volume of a cube with side 9 cm?", nl: "Wat is het volume van een kubus met zijde 9 cm?" },
     answer: 729, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 × 9 × 9.", en: "Volume = 9 × 9 × 9.", nl: "Volume = 9 × 9 × 9." }
+    hint: { fr: "Volume = 9 . 9 . 9.", en: "Volume = 9 . 9 . 9.", nl: "Volume = 9 . 9 . 9." }
   },
   {
     id: "G3_s_52", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 5 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 5 cm and 2 cm?", nl: "Wat is het volume van een balk van 5 cm, 5 cm en 2 cm?" },
     answer: 50, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 × 5 × 2.", en: "Volume = 5 × 5 × 2.", nl: "Volume = 5 × 5 × 2." }
+    hint: { fr: "Volume = 5 . 5 . 2.", en: "Volume = 5 . 5 . 2.", nl: "Volume = 5 . 5 . 2." }
   },
   {
     id: "G3_s_53", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 3 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 3 cm and 3 cm?", nl: "Wat is het volume van een balk van 7 cm, 3 cm en 3 cm?" },
     answer: 63, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 3 × 3.", en: "Volume = 7 × 3 × 3.", nl: "Volume = 7 × 3 × 3." }
+    hint: { fr: "Volume = 7 . 3 . 3.", en: "Volume = 7 . 3 . 3.", nl: "Volume = 7 . 3 . 3." }
   },
   {
     id: "G3_s_54", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 10 cm ?", en: "What is the volume of a cube with side 10 cm?", nl: "Wat is het volume van een kubus met zijde 10 cm?" },
     answer: 1000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 10 × 10.", en: "Volume = 10 × 10 × 10.", nl: "Volume = 10 × 10 × 10." }
+    hint: { fr: "Volume = 10 . 10 . 10.", en: "Volume = 10 . 10 . 10.", nl: "Volume = 10 . 10 . 10." }
   },
   {
     id: "G3_s_55", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 4 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 4 cm and 5 cm?", nl: "Wat is het volume van een balk van 4 cm, 4 cm en 5 cm?" },
     answer: 80, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 × 4 × 5.", en: "Volume = 4 × 4 × 5.", nl: "Volume = 4 × 4 × 5." }
+    hint: { fr: "Volume = 4 . 4 . 5.", en: "Volume = 4 . 4 . 5.", nl: "Volume = 4 . 4 . 5." }
   },
   {
     id: "G3_s_56", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 2 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 2 cm and 5 cm?", nl: "Wat is het volume van een balk van 6 cm, 2 cm en 5 cm?" },
     answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 × 2 × 5.", en: "Volume = 6 × 2 × 5.", nl: "Volume = 6 × 2 × 5." }
+    hint: { fr: "Volume = 6 . 2 . 5.", en: "Volume = 6 . 2 . 5.", nl: "Volume = 6 . 2 . 5." }
   },
   {
     id: "G3_s_57", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 5 cm en 3 cm?" },
     answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 5 × 3.", en: "Volume = 8 × 5 × 3.", nl: "Volume = 8 × 5 × 3." }
+    hint: { fr: "Volume = 8 . 5 . 3.", en: "Volume = 8 . 5 . 3.", nl: "Volume = 8 . 5 . 3." }
   },
   {
     id: "G3_s_58", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 8 cm ?", en: "What is the volume of a cube with side 8 cm?", nl: "Wat is het volume van een kubus met zijde 8 cm?" },
     answer: 512, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 8 × 8.", en: "Volume = 8 × 8 × 8.", nl: "Volume = 8 × 8 × 8." }
+    hint: { fr: "Volume = 8 . 8 . 8.", en: "Volume = 8 . 8 . 8.", nl: "Volume = 8 . 8 . 8." }
   },
   {
     id: "G3_s_59", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 9 cm, 4 cm en 3 cm?" },
     answer: 108, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 × 4 × 3.", en: "Volume = 9 × 4 × 3.", nl: "Volume = 9 × 4 × 3." }
+    hint: { fr: "Volume = 9 . 4 . 3.", en: "Volume = 9 . 4 . 3.", nl: "Volume = 9 . 4 . 3." }
   },
   {
     id: "G3_s_60", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 4 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 4 cm and 2 cm?", nl: "Wat is het volume van een balk van 10 cm, 4 cm en 2 cm?" },
     answer: 80, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 4 × 2.", en: "Volume = 10 × 4 × 2.", nl: "Volume = 10 × 4 × 2." }
+    hint: { fr: "Volume = 10 . 4 . 2.", en: "Volume = 10 . 4 . 2.", nl: "Volume = 10 . 4 . 2." }
   },
   {
     id: "G3_s_61", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 3 cm, 2 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 3 cm, 2 cm and 4 cm?", nl: "Wat is het volume van een balk van 3 cm, 2 cm en 4 cm?" },
     answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 × 2 × 4.", en: "Volume = 3 × 2 × 4.", nl: "Volume = 3 × 2 × 4." }
+    hint: { fr: "Volume = 3 . 2 . 4.", en: "Volume = 3 . 2 . 4.", nl: "Volume = 3 . 2 . 4." }
   },
   {
     id: "G3_s_62", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 6 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 6 cm and 2 cm?", nl: "Wat is het volume van een balk van 5 cm, 6 cm en 2 cm?" },
     answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 × 6 × 2.", en: "Volume = 5 × 6 × 2.", nl: "Volume = 5 × 6 × 2." }
+    hint: { fr: "Volume = 5 . 6 . 2.", en: "Volume = 5 . 6 . 2.", nl: "Volume = 5 . 6 . 2." }
   },
   {
     id: "G3_s_63", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 5 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 5 cm and 4 cm?", nl: "Wat is het volume van een balk van 7 cm, 5 cm en 4 cm?" },
     answer: 140, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 5 × 4.", en: "Volume = 7 × 5 × 4.", nl: "Volume = 7 × 5 × 4." }
+    hint: { fr: "Volume = 7 . 5 . 4.", en: "Volume = 7 . 5 . 4.", nl: "Volume = 7 . 5 . 4." }
   },
   {
     id: "G3_s_64", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 3 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 3 cm and 4 cm?", nl: "Wat is het volume van een balk van 10 cm, 3 cm en 4 cm?" },
     answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 3 × 4.", en: "Volume = 10 × 3 × 4.", nl: "Volume = 10 × 3 × 4." }
+    hint: { fr: "Volume = 10 . 3 . 4.", en: "Volume = 10 . 3 . 4.", nl: "Volume = 10 . 3 . 4." }
   },
   {
     id: "G3_s_65", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 2 cm, 2 cm et 6 cm ?", en: "What is the volume of a rectangular prism: 2 cm, 2 cm and 6 cm?", nl: "Wat is het volume van een balk van 2 cm, 2 cm en 6 cm?" },
     answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 2 × 2 × 6.", en: "Volume = 2 × 2 × 6.", nl: "Volume = 2 × 2 × 6." }
+    hint: { fr: "Volume = 2 . 2 . 6.", en: "Volume = 2 . 2 . 6.", nl: "Volume = 2 . 2 . 6." }
   },
   {
     id: "G3_s_66", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 4 cm en 3 cm?" },
     answer: 96, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 4 × 3.", en: "Volume = 8 × 4 × 3.", nl: "Volume = 8 × 4 × 3." }
+    hint: { fr: "Volume = 8 . 4 . 3.", en: "Volume = 8 . 4 . 3.", nl: "Volume = 8 . 4 . 3." }
   },
   {
     id: "G3_s_67", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 6 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 6 cm and 3 cm?", nl: "Wat is het volume van een balk van 6 cm, 6 cm en 3 cm?" },
     answer: 108, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 × 6 × 3.", en: "Volume = 6 × 6 × 3.", nl: "Volume = 6 × 6 × 3." }
+    hint: { fr: "Volume = 6 . 6 . 3.", en: "Volume = 6 . 6 . 3.", nl: "Volume = 6 . 6 . 3." }
   },
   {
     id: "G3_s_68", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 9 cm, 3 cm en 2 cm?" },
     answer: 54, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 × 3 × 2.", en: "Volume = 9 × 3 × 2.", nl: "Volume = 9 × 3 × 2." }
+    hint: { fr: "Volume = 9 . 3 . 2.", en: "Volume = 9 . 3 . 2.", nl: "Volume = 9 . 3 . 2." }
   },
   {
     id: "G3_s_69", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 2 cm et 7 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 2 cm and 7 cm?", nl: "Wat is het volume van een balk van 4 cm, 2 cm en 7 cm?" },
     answer: 56, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 × 2 × 7.", en: "Volume = 4 × 2 × 7.", nl: "Volume = 4 × 2 × 7." }
+    hint: { fr: "Volume = 4 . 2 . 7.", en: "Volume = 4 . 2 . 7.", nl: "Volume = 4 . 2 . 7." }
   },
   {
     id: "G3_s_70", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 3 cm et 6 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 3 cm and 6 cm?", nl: "Wat is het volume van een balk van 5 cm, 3 cm en 6 cm?" },
     answer: 90, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 × 3 × 6.", en: "Volume = 5 × 3 × 6.", nl: "Volume = 5 × 3 × 6." }
+    hint: { fr: "Volume = 5 . 3 . 6.", en: "Volume = 5 . 3 . 6.", nl: "Volume = 5 . 3 . 6." }
   },
   {
     id: "G3_s_71", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 6 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 6 cm and 3 cm?", nl: "Wat is het volume van een balk van 10 cm, 6 cm en 3 cm?" },
     answer: 180, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 × 6 × 3.", en: "Volume = 10 × 6 × 3.", nl: "Volume = 10 × 6 × 3." }
+    hint: { fr: "Volume = 10 . 6 . 3.", en: "Volume = 10 . 6 . 3.", nl: "Volume = 10 . 6 . 3." }
   },
 
   // ── Level 2 — additional (G3_s_72 – G3_s_91) ─────────────────────────────
@@ -447,153 +447,153 @@ export const questions = [
     id: "G3_s_72", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 216 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 216 cm³. What is its side length?", nl: "Een kubus heeft een volume van 216 cm³. Hoe lang is zijn zijde?" },
     answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 216 ? 6 × 6 × 6 = 216.", en: "What number cubed gives 216? 6 × 6 × 6 = 216.", nl: "Welk getal tot de derde macht geeft 216? 6 × 6 × 6 = 216." }
+    hint: { fr: "Quel nombre au cube donne 216 ? 6 . 6 . 6 = 216.", en: "What number cubed gives 216? 6 . 6 . 6 = 216.", nl: "Welk getal tot de derde macht geeft 216? 6 . 6 . 6 = 216." }
   },
   {
     id: "G3_s_73", category: "G3", level: 2,
-    text: { fr: "Une valise mesure 40 cm × 25 cm × 15 cm. Quel est son volume ?", en: "A suitcase measures 40 cm × 25 cm × 15 cm. What is its volume?", nl: "Een koffer meet 40 cm × 25 cm × 15 cm. Wat is het volume?" },
+    text: { fr: "Une valise mesure 40 cm . 25 cm . 15 cm. Quel est son volume ?", en: "A suitcase measures 40 cm . 25 cm . 15 cm. What is its volume?", nl: "Een koffer meet 40 cm . 25 cm . 15 cm. Wat is het volume?" },
     answer: 15000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 40 × 25 × 15.", en: "Volume = 40 × 25 × 15.", nl: "Volume = 40 × 25 × 15." }
+    hint: { fr: "Volume = 40 . 25 . 15.", en: "Volume = 40 . 25 . 15.", nl: "Volume = 40 . 25 . 15." }
   },
   {
     id: "G3_s_74", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 180 cm³. Sa longueur est 9 cm et sa largeur 5 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 180 cm³. Its length is 9 cm and width 5 cm. What is its height?", nl: "Een balk heeft een volume van 180 cm³. De lengte is 9 cm en de breedte 5 cm. Wat is de hoogte?" },
     answer: 4, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 180 ÷ (9 × 5) = 180 ÷ 45.", en: "Height = 180 ÷ (9 × 5) = 180 ÷ 45.", nl: "Hoogte = 180 ÷ (9 × 5) = 180 ÷ 45." }
+    hint: { fr: "Hauteur = 180 : (9 . 5) = 180 : 45.", en: "Height = 180 : (9 . 5) = 180 : 45.", nl: "Hoogte = 180 : (9 . 5) = 180 : 45." }
   },
   {
     id: "G3_s_75", category: "G3", level: 2,
-    text: { fr: "Un réfrigérateur mesure 60 cm × 50 cm × 40 cm à l'intérieur. Quel est son volume ?", en: "A fridge measures 60 cm × 50 cm × 40 cm inside. What is its volume?", nl: "Een koelkast meet 60 cm × 50 cm × 40 cm van binnen. Wat is het volume?" },
+    text: { fr: "Un réfrigérateur mesure 60 cm . 50 cm . 40 cm à l'intérieur. Quel est son volume ?", en: "A fridge measures 60 cm . 50 cm . 40 cm inside. What is its volume?", nl: "Een koelkast meet 60 cm . 50 cm . 40 cm van binnen. Wat is het volume?" },
     answer: 120000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 60 × 50 × 40.", en: "Volume = 60 × 50 × 40.", nl: "Volume = 60 × 50 × 40." }
+    hint: { fr: "Volume = 60 . 50 . 40.", en: "Volume = 60 . 50 . 40.", nl: "Volume = 60 . 50 . 40." }
   },
   {
     id: "G3_s_76", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 343 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 343 cm³. What is its side length?", nl: "Een kubus heeft een volume van 343 cm³. Hoe lang is zijn zijde?" },
     answer: 7, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 343 ? 7 × 7 × 7 = 343.", en: "What number cubed gives 343? 7 × 7 × 7 = 343.", nl: "Welk getal tot de derde macht geeft 343? 7 × 7 × 7 = 343." }
+    hint: { fr: "Quel nombre au cube donne 343 ? 7 . 7 . 7 = 343.", en: "What number cubed gives 343? 7 . 7 . 7 = 343.", nl: "Welk getal tot de derde macht geeft 343? 7 . 7 . 7 = 343." }
   },
   {
     id: "G3_s_77", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 200 cm³. Sa longueur est 10 cm et sa hauteur 4 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 200 cm³. Its length is 10 cm and height 4 cm. What is its width?", nl: "Een balk heeft een volume van 200 cm³. De lengte is 10 cm en de hoogte 4 cm. Wat is de breedte?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 200 ÷ (10 × 4) = 200 ÷ 40.", en: "Width = 200 ÷ (10 × 4) = 200 ÷ 40.", nl: "Breedte = 200 ÷ (10 × 4) = 200 ÷ 40." }
+    hint: { fr: "Largeur = 200 : (10 . 4) = 200 : 40.", en: "Width = 200 : (10 . 4) = 200 : 40.", nl: "Breedte = 200 : (10 . 4) = 200 : 40." }
   },
   {
     id: "G3_s_78", category: "G3", level: 2,
-    text: { fr: "Une boîte à chaussures mesure 35 cm × 20 cm × 12 cm. Quel est son volume ?", en: "A shoe box measures 35 cm × 20 cm × 12 cm. What is its volume?", nl: "Een schoenendoos meet 35 cm × 20 cm × 12 cm. Wat is het volume?" },
+    text: { fr: "Une boîte à chaussures mesure 35 cm . 20 cm . 12 cm. Quel est son volume ?", en: "A shoe box measures 35 cm . 20 cm . 12 cm. What is its volume?", nl: "Een schoenendoos meet 35 cm . 20 cm . 12 cm. Wat is het volume?" },
     answer: 8400, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 35 × 20 × 12.", en: "Volume = 35 × 20 × 12.", nl: "Volume = 35 × 20 × 12." }
+    hint: { fr: "Volume = 35 . 20 . 12.", en: "Volume = 35 . 20 . 12.", nl: "Volume = 35 . 20 . 12." }
   },
   {
     id: "G3_s_79", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 360 cm³. Sa largeur est 6 cm et sa hauteur 10 cm. Quelle est sa longueur ?", en: "A rectangular prism has a volume of 360 cm³. Its width is 6 cm and height 10 cm. What is its length?", nl: "Een balk heeft een volume van 360 cm³. De breedte is 6 cm en de hoogte 10 cm. Wat is de lengte?" },
     answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Longueur = 360 ÷ (6 × 10) = 360 ÷ 60.", en: "Length = 360 ÷ (6 × 10) = 360 ÷ 60.", nl: "Lengte = 360 ÷ (6 × 10) = 360 ÷ 60." }
+    hint: { fr: "Longueur = 360 : (6 . 10) = 360 : 60.", en: "Length = 360 : (6 . 10) = 360 : 60.", nl: "Lengte = 360 : (6 . 10) = 360 : 60." }
   },
   {
     id: "G3_s_80", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 729 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 729 cm³. What is its side length?", nl: "Een kubus heeft een volume van 729 cm³. Hoe lang is zijn zijde?" },
     answer: 9, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 729 ? 9 × 9 × 9 = 729.", en: "What number cubed gives 729? 9 × 9 × 9 = 729.", nl: "Welk getal tot de derde macht geeft 729? 9 × 9 × 9 = 729." }
+    hint: { fr: "Quel nombre au cube donne 729 ? 9 . 9 . 9 = 729.", en: "What number cubed gives 729? 9 . 9 . 9 = 729.", nl: "Welk getal tot de derde macht geeft 729? 9 . 9 . 9 = 729." }
   },
   {
     id: "G3_s_81", category: "G3", level: 2,
-    text: { fr: "Un casier mesure 30 cm × 25 cm × 40 cm. Quel est son volume ?", en: "A locker measures 30 cm × 25 cm × 40 cm. What is its volume?", nl: "Een kluisje meet 30 cm × 25 cm × 40 cm. Wat is het volume?" },
+    text: { fr: "Un casier mesure 30 cm . 25 cm . 40 cm. Quel est son volume ?", en: "A locker measures 30 cm . 25 cm . 40 cm. What is its volume?", nl: "Een kluisje meet 30 cm . 25 cm . 40 cm. Wat is het volume?" },
     answer: 30000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 30 × 25 × 40.", en: "Volume = 30 × 25 × 40.", nl: "Volume = 30 × 25 × 40." }
+    hint: { fr: "Volume = 30 . 25 . 40.", en: "Volume = 30 . 25 . 40.", nl: "Volume = 30 . 25 . 40." }
   },
   {
     id: "G3_s_82", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 150 cm³. Sa longueur est 5 cm et sa largeur 6 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 150 cm³. Its length is 5 cm and width 6 cm. What is its height?", nl: "Een balk heeft een volume van 150 cm³. De lengte is 5 cm en de breedte 6 cm. Wat is de hoogte?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 150 ÷ (5 × 6) = 150 ÷ 30.", en: "Height = 150 ÷ (5 × 6) = 150 ÷ 30.", nl: "Hoogte = 150 ÷ (5 × 6) = 150 ÷ 30." }
+    hint: { fr: "Hauteur = 150 : (5 . 6) = 150 : 30.", en: "Height = 150 : (5 . 6) = 150 : 30.", nl: "Hoogte = 150 : (5 . 6) = 150 : 30." }
   },
   {
     id: "G3_s_83", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 512 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 512 cm³. What is its side length?", nl: "Een kubus heeft een volume van 512 cm³. Hoe lang is zijn zijde?" },
     answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 512 ? 8 × 8 × 8 = 512.", en: "What number cubed gives 512? 8 × 8 × 8 = 512.", nl: "Welk getal tot de derde macht geeft 512? 8 × 8 × 8 = 512." }
+    hint: { fr: "Quel nombre au cube donne 512 ? 8 . 8 . 8 = 512.", en: "What number cubed gives 512? 8 . 8 . 8 = 512.", nl: "Welk getal tot de derde macht geeft 512? 8 . 8 . 8 = 512." }
   },
   {
     id: "G3_s_84", category: "G3", level: 2,
-    text: { fr: "Un carton mesure 45 cm × 30 cm × 20 cm. Quel est son volume ?", en: "A cardboard box measures 45 cm × 30 cm × 20 cm. What is its volume?", nl: "Een kartonnen doos meet 45 cm × 30 cm × 20 cm. Wat is het volume?" },
+    text: { fr: "Un carton mesure 45 cm . 30 cm . 20 cm. Quel est son volume ?", en: "A cardboard box measures 45 cm . 30 cm . 20 cm. What is its volume?", nl: "Een kartonnen doos meet 45 cm . 30 cm . 20 cm. Wat is het volume?" },
     answer: 27000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 45 × 30 × 20.", en: "Volume = 45 × 30 × 20.", nl: "Volume = 45 × 30 × 20." }
+    hint: { fr: "Volume = 45 . 30 . 20.", en: "Volume = 45 . 30 . 20.", nl: "Volume = 45 . 30 . 20." }
   },
   {
     id: "G3_s_85", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 300 cm³. Sa longueur est 10 cm et sa hauteur 6 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 300 cm³. Its length is 10 cm and height 6 cm. What is its width?", nl: "Een balk heeft een volume van 300 cm³. De lengte is 10 cm en de hoogte 6 cm. Wat is de breedte?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 300 ÷ (10 × 6) = 300 ÷ 60.", en: "Width = 300 ÷ (10 × 6) = 300 ÷ 60.", nl: "Breedte = 300 ÷ (10 × 6) = 300 ÷ 60." }
+    hint: { fr: "Largeur = 300 : (10 . 6) = 300 : 60.", en: "Width = 300 : (10 . 6) = 300 : 60.", nl: "Breedte = 300 : (10 . 6) = 300 : 60." }
   },
   {
     id: "G3_s_86", category: "G3", level: 2,
     text: { fr: "Un cube a un volume de 1000 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 1000 cm³. What is its side length?", nl: "Een kubus heeft een volume van 1000 cm³. Hoe lang is zijn zijde?" },
     answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 1000 ? 10 × 10 × 10 = 1000.", en: "What number cubed gives 1000? 10 × 10 × 10 = 1000.", nl: "Welk getal tot de derde macht geeft 1000? 10 × 10 × 10 = 1000." }
+    hint: { fr: "Quel nombre au cube donne 1000 ? 10 . 10 . 10 = 1000.", en: "What number cubed gives 1000? 10 . 10 . 10 = 1000.", nl: "Welk getal tot de derde macht geeft 1000? 10 . 10 . 10 = 1000." }
   },
   {
     id: "G3_s_87", category: "G3", level: 2,
-    text: { fr: "Un bac de rangement mesure 20 cm × 12 cm × 8 cm. Quel est son volume ?", en: "A storage bin measures 20 cm × 12 cm × 8 cm. What is its volume?", nl: "Een opbergbak meet 20 cm × 12 cm × 8 cm. Wat is het volume?" },
+    text: { fr: "Un bac de rangement mesure 20 cm . 12 cm . 8 cm. Quel est son volume ?", en: "A storage bin measures 20 cm . 12 cm . 8 cm. What is its volume?", nl: "Een opbergbak meet 20 cm . 12 cm . 8 cm. Wat is het volume?" },
     answer: 1920, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 20 × 12 × 8.", en: "Volume = 20 × 12 × 8.", nl: "Volume = 20 × 12 × 8." }
+    hint: { fr: "Volume = 20 . 12 . 8.", en: "Volume = 20 . 12 . 8.", nl: "Volume = 20 . 12 . 8." }
   },
   {
     id: "G3_s_88", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 480 cm³. Sa longueur est 12 cm et sa largeur 8 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 480 cm³. Its length is 12 cm and width 8 cm. What is its height?", nl: "Een balk heeft een volume van 480 cm³. De lengte is 12 cm en de breedte 8 cm. Wat is de hoogte?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 480 ÷ (12 × 8) = 480 ÷ 96.", en: "Height = 480 ÷ (12 × 8) = 480 ÷ 96.", nl: "Hoogte = 480 ÷ (12 × 8) = 480 ÷ 96." }
+    hint: { fr: "Hauteur = 480 : (12 . 8) = 480 : 96.", en: "Height = 480 : (12 . 8) = 480 : 96.", nl: "Hoogte = 480 : (12 . 8) = 480 : 96." }
   },
   {
     id: "G3_s_89", category: "G3", level: 2,
-    text: { fr: "Une glacière mesure 35 cm × 25 cm × 20 cm. Quel est son volume ?", en: "A cooler measures 35 cm × 25 cm × 20 cm. What is its volume?", nl: "Een koelbox meet 35 cm × 25 cm × 20 cm. Wat is het volume?" },
+    text: { fr: "Une glacière mesure 35 cm . 25 cm . 20 cm. Quel est son volume ?", en: "A cooler measures 35 cm . 25 cm . 20 cm. What is its volume?", nl: "Een koelbox meet 35 cm . 25 cm . 20 cm. Wat is het volume?" },
     answer: 17500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 35 × 25 × 20.", en: "Volume = 35 × 25 × 20.", nl: "Volume = 35 × 25 × 20." }
+    hint: { fr: "Volume = 35 . 25 . 20.", en: "Volume = 35 . 25 . 20.", nl: "Volume = 35 . 25 . 20." }
   },
   {
     id: "G3_s_90", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 210 cm³. Sa largeur est 7 cm et sa hauteur 5 cm. Quelle est sa longueur ?", en: "A rectangular prism has a volume of 210 cm³. Its width is 7 cm and height 5 cm. What is its length?", nl: "Een balk heeft een volume van 210 cm³. De breedte is 7 cm en de hoogte 5 cm. Wat is de lengte?" },
     answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Longueur = 210 ÷ (7 × 5) = 210 ÷ 35.", en: "Length = 210 ÷ (7 × 5) = 210 ÷ 35.", nl: "Lengte = 210 ÷ (7 × 5) = 210 ÷ 35." }
+    hint: { fr: "Longueur = 210 : (7 . 5) = 210 : 35.", en: "Length = 210 : (7 . 5) = 210 : 35.", nl: "Lengte = 210 : (7 . 5) = 210 : 35." }
   },
   {
     id: "G3_s_91", category: "G3", level: 2,
-    text: { fr: "Un coffret à bijoux mesure 18 cm × 12 cm × 6 cm. Quel est son volume ?", en: "A jewelry box measures 18 cm × 12 cm × 6 cm. What is its volume?", nl: "Een juwelenkistje meet 18 cm × 12 cm × 6 cm. Wat is het volume?" },
+    text: { fr: "Un coffret à bijoux mesure 18 cm . 12 cm . 6 cm. Quel est son volume ?", en: "A jewelry box measures 18 cm . 12 cm . 6 cm. What is its volume?", nl: "Een juwelenkistje meet 18 cm . 12 cm . 6 cm. Wat is het volume?" },
     answer: 1296, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 18 × 12 × 6.", en: "Volume = 18 × 12 × 6.", nl: "Volume = 18 × 12 × 6." }
+    hint: { fr: "Volume = 18 . 12 . 6.", en: "Volume = 18 . 12 . 6.", nl: "Volume = 18 . 12 . 6." }
   },
 
   // ── Level 3 — additional (G3_s_92 – G3_s_111) ─────────────────────────────
   {
     id: "G3_s_92", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 12 × 10 × 8 cm ?", en: "How many 2 cm cubes fit in a 12 × 10 × 8 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 12 × 10 × 8 cm?" },
+    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 12 . 10 . 8 cm ?", en: "How many 2 cm cubes fit in a 12 . 10 . 8 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 12 . 10 . 8 cm?" },
     answer: 120, tolerance: 0,
-    hint: { fr: "12/2 × 10/2 × 8/2 = 6 × 5 × 4.", en: "12/2 × 10/2 × 8/2 = 6 × 5 × 4.", nl: "12/2 × 10/2 × 8/2 = 6 × 5 × 4." }
+    hint: { fr: "12/2 . 10/2 . 8/2 = 6 . 5 . 4.", en: "12/2 . 10/2 . 8/2 = 6 . 5 . 4.", nl: "12/2 . 10/2 . 8/2 = 6 . 5 . 4." }
   },
   {
     id: "G3_s_93", category: "G3", level: 3,
-    text: { fr: "Un pavé de 12 × 8 × 5 cm a un cube de 3 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 12 × 8 × 5 cm has a 3 cm cube cut from a corner. What volume remains?", nl: "Een balk van 12 × 8 × 5 cm heeft een kubus van 3 cm uit een hoek gesneden. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 12 . 8 . 5 cm a un cube de 3 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 12 . 8 . 5 cm has a 3 cm cube cut from a corner. What volume remains?", nl: "Een balk van 12 . 8 . 5 cm heeft een kubus van 3 cm uit een hoek gesneden. Welk volume blijft over?" },
     answer: 453, tolerance: 0, unit: "cm³",
     hint: { fr: "480 - 27 = 453.", en: "480 - 27 = 453.", nl: "480 - 27 = 453." }
   },
   {
     id: "G3_s_94", category: "G3", level: 3,
-    text: { fr: "Un bac de 20 × 10 × 12 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 20 × 10 × 12 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 20 × 10 × 12 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un bac de 20 . 10 . 12 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 20 . 10 . 12 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 20 . 10 . 12 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 1800, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 2 400. Puis × 3/4.", en: "Total volume = 2,400. Then × 3/4.", nl: "Totaal volume = 2.400. Dan × 3/4." }
+    hint: { fr: "Volume total = 2 400. Puis . 3/4.", en: "Total volume = 2,400. Then . 3/4.", nl: "Totaal volume = 2.400. Dan . 3/4." }
   },
   {
     id: "G3_s_95", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total d'un cube de côté 4 cm et d'un pavé droit de 6 × 5 × 3 cm ?", en: "What is the total volume of a cube with side 4 cm and a prism of 6 × 5 × 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 4 cm en een balk van 6 × 5 × 3 cm?" },
+    text: { fr: "Quel est le volume total d'un cube de côté 4 cm et d'un pavé droit de 6 . 5 . 3 cm ?", en: "What is the total volume of a cube with side 4 cm and a prism of 6 . 5 . 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 4 cm en een balk van 6 . 5 . 3 cm?" },
     answer: 154, tolerance: 0, unit: "cm³",
     hint: { fr: "64 + 90 = 154.", en: "64 + 90 = 154.", nl: "64 + 90 = 154." }
   },
   {
     id: "G3_s_96", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 15 × 12 × 9 cm ?", en: "How many 3 cm cubes fit in a 15 × 12 × 9 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 15 × 12 × 9 cm?" },
+    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 15 . 12 . 9 cm ?", en: "How many 3 cm cubes fit in a 15 . 12 . 9 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 15 . 12 . 9 cm?" },
     answer: 60, tolerance: 0,
-    hint: { fr: "15/3 × 12/3 × 9/3 = 5 × 4 × 3.", en: "15/3 × 12/3 × 9/3 = 5 × 4 × 3.", nl: "15/3 × 12/3 × 9/3 = 5 × 4 × 3." }
+    hint: { fr: "15/3 . 12/3 . 9/3 = 5 . 4 . 3.", en: "15/3 . 12/3 . 9/3 = 5 . 4 . 3.", nl: "15/3 . 12/3 . 9/3 = 5 . 4 . 3." }
   },
   {
     id: "G3_s_97", category: "G3", level: 3,
@@ -603,25 +603,25 @@ export const questions = [
   },
   {
     id: "G3_s_98", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 30 × 20 × 25 cm est rempli aux 2/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 30 × 20 × 25 cm aquarium is 2/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 30 × 20 × 25 cm is 2/5 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un aquarium de 30 . 20 . 25 cm est rempli aux 2/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 30 . 20 . 25 cm aquarium is 2/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 30 . 20 . 25 cm is 2/5 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 6000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 15 000. Puis × 2/5.", en: "Total volume = 15,000. Then × 2/5.", nl: "Totaal volume = 15.000. Dan × 2/5." }
+    hint: { fr: "Volume total = 15 000. Puis . 2/5.", en: "Total volume = 15,000. Then . 2/5.", nl: "Totaal volume = 15.000. Dan . 2/5." }
   },
   {
     id: "G3_s_99", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 pavés droits : un de 8 × 5 × 3 cm et un de 7 × 4 × 2 cm ?", en: "What is the total volume of 2 prisms: one of 8 × 5 × 3 cm and one of 7 × 4 × 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 8 × 5 × 3 cm en een van 7 × 4 × 2 cm?" },
+    text: { fr: "Quel est le volume total de 2 pavés droits : un de 8 . 5 . 3 cm et un de 7 . 4 . 2 cm ?", en: "What is the total volume of 2 prisms: one of 8 . 5 . 3 cm and one of 7 . 4 . 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 8 . 5 . 3 cm en een van 7 . 4 . 2 cm?" },
     answer: 176, tolerance: 0, unit: "cm³",
     hint: { fr: "120 + 56 = 176.", en: "120 + 56 = 176.", nl: "120 + 56 = 176." }
   },
   {
     id: "G3_s_100", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 25 × 20 × 15 cm ?", en: "How many 5 cm cubes fit in a 25 × 20 × 15 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 25 × 20 × 15 cm?" },
+    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 25 . 20 . 15 cm ?", en: "How many 5 cm cubes fit in a 25 . 20 . 15 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 25 . 20 . 15 cm?" },
     answer: 60, tolerance: 0,
-    hint: { fr: "25/5 × 20/5 × 15/5 = 5 × 4 × 3.", en: "25/5 × 20/5 × 15/5 = 5 × 4 × 3.", nl: "25/5 × 20/5 × 15/5 = 5 × 4 × 3." }
+    hint: { fr: "25/5 . 20/5 . 15/5 = 5 . 4 . 3.", en: "25/5 . 20/5 . 15/5 = 5 . 4 . 3.", nl: "25/5 . 20/5 . 15/5 = 5 . 4 . 3." }
   },
   {
     id: "G3_s_101", category: "G3", level: 3,
-    text: { fr: "Un pavé de 15 × 10 × 8 cm a un pavé de 5 × 4 × 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 15 × 10 × 8 cm has a 5 × 4 × 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 15 × 10 × 8 cm heeft een balk van 5 × 4 × 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 15 . 10 . 8 cm a un pavé de 5 . 4 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 15 . 10 . 8 cm has a 5 . 4 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 15 . 10 . 8 cm heeft een balk van 5 . 4 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
     answer: 1140, tolerance: 0, unit: "cm³",
     hint: { fr: "1200 - 60 = 1140.", en: "1200 - 60 = 1140.", nl: "1200 - 60 = 1140." }
   },
@@ -629,19 +629,19 @@ export const questions = [
     id: "G3_s_102", category: "G3", level: 3,
     text: { fr: "Quel est le volume total de 4 cubes identiques de côté 2 cm ?", en: "What is the total volume of 4 identical cubes with side 2 cm?", nl: "Wat is het totale volume van 4 identieke kubussen met zijde 2 cm?" },
     answer: 32, tolerance: 0, unit: "cm³",
-    hint: { fr: "4 × (2 × 2 × 2) = 4 × 8.", en: "4 × (2 × 2 × 2) = 4 × 8.", nl: "4 × (2 × 2 × 2) = 4 × 8." }
+    hint: { fr: "4 . (2 . 2 . 2) = 4 . 8.", en: "4 . (2 . 2 . 2) = 4 . 8.", nl: "4 . (2 . 2 . 2) = 4 . 8." }
   },
   {
     id: "G3_s_103", category: "G3", level: 3,
-    text: { fr: "Un bac de 40 × 30 × 20 cm est rempli aux 3/5. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 40 × 30 × 20 cm is 3/5 full. How much water does it hold (in cm³)?", nl: "Een bak van 40 × 30 × 20 cm is 3/5 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un bac de 40 . 30 . 20 cm est rempli aux 3/5. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 40 . 30 . 20 cm is 3/5 full. How much water does it hold (in cm³)?", nl: "Een bak van 40 . 30 . 20 cm is 3/5 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 14400, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 24 000. Puis × 3/5.", en: "Total volume = 24,000. Then × 3/5.", nl: "Totaal volume = 24.000. Dan × 3/5." }
+    hint: { fr: "Volume total = 24 000. Puis . 3/5.", en: "Total volume = 24,000. Then . 3/5.", nl: "Totaal volume = 24.000. Dan . 3/5." }
   },
   {
     id: "G3_s_104", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 20 × 16 × 12 cm ?", en: "How many 4 cm cubes fit in a 20 × 16 × 12 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 20 × 16 × 12 cm?" },
+    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 20 . 16 . 12 cm ?", en: "How many 4 cm cubes fit in a 20 . 16 . 12 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 20 . 16 . 12 cm?" },
     answer: 60, tolerance: 0,
-    hint: { fr: "20/4 × 16/4 × 12/4 = 5 × 4 × 3.", en: "20/4 × 16/4 × 12/4 = 5 × 4 × 3.", nl: "20/4 × 16/4 × 12/4 = 5 × 4 × 3." }
+    hint: { fr: "20/4 . 16/4 . 12/4 = 5 . 4 . 3.", en: "20/4 . 16/4 . 12/4 = 5 . 4 . 3.", nl: "20/4 . 16/4 . 12/4 = 5 . 4 . 3." }
   },
   {
     id: "G3_s_105", category: "G3", level: 3,
@@ -657,69 +657,69 @@ export const questions = [
   },
   {
     id: "G3_s_107", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 50 × 25 × 20 cm est rempli au 1/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 × 25 × 20 cm aquarium is 1/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 × 25 × 20 cm is 1/5 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un aquarium de 50 . 25 . 20 cm est rempli au 1/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 . 25 . 20 cm aquarium is 1/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 . 25 . 20 cm is 1/5 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 5000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 25 000. Puis × 1/5.", en: "Total volume = 25,000. Then × 1/5.", nl: "Totaal volume = 25.000. Dan × 1/5." }
+    hint: { fr: "Volume total = 25 000. Puis . 1/5.", en: "Total volume = 25,000. Then . 1/5.", nl: "Totaal volume = 25.000. Dan . 1/5." }
   },
   {
     id: "G3_s_108", category: "G3", level: 3,
-    text: { fr: "Un pavé de 20 × 10 × 6 cm a un pavé de 8 × 5 × 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 20 × 10 × 6 cm has a 8 × 5 × 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 20 × 10 × 6 cm heeft een balk van 8 × 5 × 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
+    text: { fr: "Un pavé de 20 . 10 . 6 cm a un pavé de 8 . 5 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 20 . 10 . 6 cm has a 8 . 5 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 20 . 10 . 6 cm heeft een balk van 8 . 5 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
     answer: 1080, tolerance: 0, unit: "cm³",
     hint: { fr: "1200 - 120 = 1080.", en: "1200 - 120 = 1080.", nl: "1200 - 120 = 1080." }
   },
   {
     id: "G3_s_109", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 14 × 10 × 6 cm ?", en: "How many 2 cm cubes fit in a 14 × 10 × 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 14 × 10 × 6 cm?" },
+    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 14 . 10 . 6 cm ?", en: "How many 2 cm cubes fit in a 14 . 10 . 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 14 . 10 . 6 cm?" },
     answer: 105, tolerance: 0,
-    hint: { fr: "14/2 × 10/2 × 6/2 = 7 × 5 × 3.", en: "14/2 × 10/2 × 6/2 = 7 × 5 × 3.", nl: "14/2 × 10/2 × 6/2 = 7 × 5 × 3." }
+    hint: { fr: "14/2 . 10/2 . 6/2 = 7 . 5 . 3.", en: "14/2 . 10/2 . 6/2 = 7 . 5 . 3.", nl: "14/2 . 10/2 . 6/2 = 7 . 5 . 3." }
   },
   {
     id: "G3_s_110", category: "G3", level: 3,
     text: { fr: "Quel est le volume total de 5 cubes identiques de côté 3 cm ?", en: "What is the total volume of 5 identical cubes with side 3 cm?", nl: "Wat is het totale volume van 5 identieke kubussen met zijde 3 cm?" },
     answer: 135, tolerance: 0, unit: "cm³",
-    hint: { fr: "5 × (3 × 3 × 3) = 5 × 27.", en: "5 × (3 × 3 × 3) = 5 × 27.", nl: "5 × (3 × 3 × 3) = 5 × 27." }
+    hint: { fr: "5 . (3 . 3 . 3) = 5 . 27.", en: "5 . (3 . 3 . 3) = 5 . 27.", nl: "5 . (3 . 3 . 3) = 5 . 27." }
   },
   {
     id: "G3_s_111", category: "G3", level: 3,
-    text: { fr: "Un bac de 24 × 18 × 10 cm est rempli aux 5/6. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 24 × 18 × 10 cm is 5/6 full. How much water does it hold (in cm³)?", nl: "Een bak van 24 × 18 × 10 cm is 5/6 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un bac de 24 . 18 . 10 cm est rempli aux 5/6. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 24 . 18 . 10 cm is 5/6 full. How much water does it hold (in cm³)?", nl: "Een bak van 24 . 18 . 10 cm is 5/6 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 3600, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 4 320. Puis × 5/6.", en: "Total volume = 4,320. Then × 5/6.", nl: "Totaal volume = 4.320. Dan × 5/6." }
+    hint: { fr: "Volume total = 4 320. Puis . 5/6.", en: "Total volume = 4,320. Then . 5/6.", nl: "Totaal volume = 4.320. Dan . 5/6." }
   },
   {
     id: "G3_s_112", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 5 cm en 3 cm?" },
     answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 × 5 × 3 = 120.", en: "Volume = 8 × 5 × 3 = 120.", nl: "Volume = 8 × 5 × 3 = 120." }
+    hint: { fr: "Volume = 8 . 5 . 3 = 120.", en: "Volume = 8 . 5 . 3 = 120.", nl: "Volume = 8 . 5 . 3 = 120." }
   },
   {
     id: "G3_s_113", category: "G3", level: 1,
     text: { fr: "Quel est le volume d'un cube de côté 7 cm ?", en: "What is the volume of a cube with side 7 cm?", nl: "Wat is het volume van een kubus met zijde 7 cm?" },
     answer: 343, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 × 7 × 7 = 343.", en: "Volume = 7 × 7 × 7 = 343.", nl: "Volume = 7 × 7 × 7 = 343." }
+    hint: { fr: "Volume = 7 . 7 . 7 = 343.", en: "Volume = 7 . 7 . 7 = 343.", nl: "Volume = 7 . 7 . 7 = 343." }
   },
   {
     id: "G3_s_114", category: "G3", level: 2,
     text: { fr: "Un pavé droit a un volume de 360 cm³. Sa longueur est 12 cm et sa largeur 6 cm. Quelle est sa hauteur en cm ?", en: "A rectangular prism has a volume of 360 cm³. Its length is 12 cm and width 6 cm. What is its height in cm?", nl: "Een balk heeft een volume van 360 cm³. De lengte is 12 cm en de breedte 6 cm. Wat is de hoogte in cm?" },
     answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 360 ÷ (12 × 6) = 360 ÷ 72 = 5.", en: "Height = 360 ÷ (12 × 6) = 360 ÷ 72 = 5.", nl: "Hoogte = 360 ÷ (12 × 6) = 360 ÷ 72 = 5." }
+    hint: { fr: "Hauteur = 360 : (12 . 6) = 360 : 72 = 5.", en: "Height = 360 : (12 . 6) = 360 : 72 = 5.", nl: "Hoogte = 360 : (12 . 6) = 360 : 72 = 5." }
   },
   {
     id: "G3_s_115", category: "G3", level: 2,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 × 9 × 6 cm ?", en: "How many 3 cm cubes fit in a 12 × 9 × 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 × 9 × 6 cm?" },
+    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 . 9 . 6 cm ?", en: "How many 3 cm cubes fit in a 12 . 9 . 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 . 9 . 6 cm?" },
     answer: 24, tolerance: 0,
-    hint: { fr: "12/3 × 9/3 × 6/3 = 4 × 3 × 2 = 24.", en: "12/3 × 9/3 × 6/3 = 4 × 3 × 2 = 24.", nl: "12/3 × 9/3 × 6/3 = 4 × 3 × 2 = 24." }
+    hint: { fr: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24.", en: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24.", nl: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24." }
   },
   {
     id: "G3_s_116", category: "G3", level: 3,
-    text: { fr: "Un grand pavé de 30 × 20 × 10 cm contient un pavé creux de 20 × 10 × 8 cm. Quel est le volume de matière restant ?", en: "A large prism of 30 × 20 × 10 cm has a hollow prism of 20 × 10 × 8 cm removed. What volume of material remains?", nl: "Een grote balk van 30 × 20 × 10 cm bevat een holle balk van 20 × 10 × 8 cm. Welk volume materiaal blijft over?" },
+    text: { fr: "Un grand pavé de 30 . 20 . 10 cm contient un pavé creux de 20 . 10 . 8 cm. Quel est le volume de matière restant ?", en: "A large prism of 30 . 20 . 10 cm has a hollow prism of 20 . 10 . 8 cm removed. What volume of material remains?", nl: "Een grote balk van 30 . 20 . 10 cm bevat een holle balk van 20 . 10 . 8 cm. Welk volume materiaal blijft over?" },
     answer: 4400, tolerance: 0, unit: "cm³",
     hint: { fr: "6 000 - 1 600 = 4 400.", en: "6,000 - 1,600 = 4,400.", nl: "6.000 - 1.600 = 4.400." }
   },
   {
     id: "G3_s_117", category: "G3", level: 3,
-    text: { fr: "Un réservoir de 50 × 30 × 20 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 50 × 30 × 20 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een reservoir van 50 × 30 × 20 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
+    text: { fr: "Un réservoir de 50 . 30 . 20 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 50 . 30 . 20 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een reservoir van 50 . 30 . 20 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
     answer: 22500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis × 3/4 = 22 500.", en: "Total volume = 30,000. Then × 3/4 = 22,500.", nl: "Totaal volume = 30.000. Dan × 3/4 = 22.500." }
+    hint: { fr: "Volume total = 30 000. Puis . 3/4 = 22 500.", en: "Total volume = 30,000. Then . 3/4 = 22,500.", nl: "Totaal volume = 30.000. Dan . 3/4 = 22.500." }
   },
 ];
 

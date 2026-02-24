@@ -17,7 +17,7 @@ export const questions = [
     id: "G5_s_2", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 8 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 8 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 8 cm. Wat is de omtrek?" },
     answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 8 × 3.", en: "3 equal sides: 8 × 3.", nl: "3 gelijke zijden: 8 × 3." }
+    hint: { fr: "3 côtés égaux : 8 . 3.", en: "3 equal sides: 8 . 3.", nl: "3 gelijke zijden: 8 . 3." }
   },
   {
     id: "G5_s_3", category: "G5", level: 1,
@@ -41,7 +41,7 @@ export const questions = [
     id: "G5_s_16", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 11 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 11 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 11 cm. Wat is de omtrek?" },
     answer: 33, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 11 × 3.", en: "3 equal sides: 11 × 3.", nl: "3 gelijke zijden: 11 × 3." }
+    hint: { fr: "3 côtés égaux : 11 . 3.", en: "3 equal sides: 11 . 3.", nl: "3 gelijke zijden: 11 . 3." }
   },
   {
     id: "G5_s_17", category: "G5", level: 1,
@@ -59,7 +59,7 @@ export const questions = [
     id: "G5_s_19", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 15 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 15 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 15 cm. Wat is de omtrek?" },
     answer: 45, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 15 × 3.", en: "3 equal sides: 15 × 3.", nl: "3 gelijke zijden: 15 × 3." }
+    hint: { fr: "3 côtés égaux : 15 . 3.", en: "3 equal sides: 15 . 3.", nl: "3 gelijke zijden: 15 . 3." }
   },
   {
     id: "G5_s_20", category: "G5", level: 1,
@@ -77,7 +77,7 @@ export const questions = [
     id: "G5_s_22", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 12 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 12 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 12 cm. Wat is de omtrek?" },
     answer: 36, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 12 × 3.", en: "3 equal sides: 12 × 3.", nl: "3 gelijke zijden: 12 × 3." }
+    hint: { fr: "3 côtés égaux : 12 . 3.", en: "3 equal sides: 12 . 3.", nl: "3 gelijke zijden: 12 . 3." }
   },
   {
     id: "G5_s_23", category: "G5", level: 1,
@@ -107,7 +107,7 @@ export const questions = [
     id: "G5_s_27", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 9 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 9 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 9 cm. Wat is de omtrek?" },
     answer: 27, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 9 × 3.", en: "3 equal sides: 9 × 3.", nl: "3 gelijke zijden: 9 × 3." }
+    hint: { fr: "3 côtés égaux : 9 . 3.", en: "3 equal sides: 9 . 3.", nl: "3 gelijke zijden: 9 . 3." }
   },
   // =========================================================================
   // Level 2 — Area of triangles (17 questions: s_6 – s_10, s_28 – s_39)
@@ -116,103 +116,103 @@ export const questions = [
     id: "G5_s_6", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 12 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 12 cm en hoogte 5 cm?" },
     answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = base × hauteur ÷ 2.", en: "Area = base × height ÷ 2.", nl: "Oppervlakte = basis × hoogte ÷ 2." }
+    hint: { fr: "Aire = base . hauteur : 2.", en: "Area = base . height : 2.", nl: "Oppervlakte = basis . hoogte : 2." }
   },
   {
     id: "G5_s_7", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 8 cm et de hauteur 11 cm ?", en: "What is the area of a triangle with base 8 cm and height 11 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 8 cm en hoogte 11 cm?" },
     answer: 44, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 × 11 ÷ 2.", en: "Area = 8 × 11 ÷ 2.", nl: "Oppervlakte = 8 × 11 ÷ 2." }
+    hint: { fr: "Aire = 8 . 11 : 2.", en: "Area = 8 . 11 : 2.", nl: "Oppervlakte = 8 . 11 : 2." }
   },
   {
     id: "G5_s_8", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 6 cm et 8 cm. Quelle est son aire ?", en: "A right triangle has legs of 6 cm and 8 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 6 cm en 8 cm. Wat is de oppervlakte?" },
     answer: 24, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 × 8 ÷ 2.", en: "Area = 6 × 8 ÷ 2.", nl: "Oppervlakte = 6 × 8 ÷ 2." }
+    hint: { fr: "Aire = 6 . 8 : 2.", en: "Area = 6 . 8 : 2.", nl: "Oppervlakte = 6 . 8 : 2." }
   },
   {
     id: "G5_s_9", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 16 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 7 cm?" },
     answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 × 7 ÷ 2.", en: "Area = 16 × 7 ÷ 2.", nl: "Oppervlakte = 16 × 7 ÷ 2." }
+    hint: { fr: "Aire = 16 . 7 : 2.", en: "Area = 16 . 7 : 2.", nl: "Oppervlakte = 16 . 7 : 2." }
   },
   {
     id: "G5_s_10", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 5 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 5 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 5 cm en 12 cm. Wat is de oppervlakte?" },
     answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 × 12 ÷ 2.", en: "Area = 5 × 12 ÷ 2.", nl: "Oppervlakte = 5 × 12 ÷ 2." }
+    hint: { fr: "Aire = 5 . 12 : 2.", en: "Area = 5 . 12 : 2.", nl: "Oppervlakte = 5 . 12 : 2." }
   },
   {
     id: "G5_s_28", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 10 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 10 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 10 cm en hoogte 7 cm?" },
     answer: 35, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 × 7 ÷ 2.", en: "Area = 10 × 7 ÷ 2.", nl: "Oppervlakte = 10 × 7 ÷ 2." }
+    hint: { fr: "Aire = 10 . 7 : 2.", en: "Area = 10 . 7 : 2.", nl: "Oppervlakte = 10 . 7 : 2." }
   },
   {
     id: "G5_s_29", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 12 cm. Wat is de oppervlakte?" },
     answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 × 12 ÷ 2.", en: "Area = 9 × 12 ÷ 2.", nl: "Oppervlakte = 9 × 12 ÷ 2." }
+    hint: { fr: "Aire = 9 . 12 : 2.", en: "Area = 9 . 12 : 2.", nl: "Oppervlakte = 9 . 12 : 2." }
   },
   {
     id: "G5_s_30", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 14 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 9 cm?" },
     answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 × 9 ÷ 2.", en: "Area = 14 × 9 ÷ 2.", nl: "Oppervlakte = 14 × 9 ÷ 2." }
+    hint: { fr: "Aire = 14 . 9 : 2.", en: "Area = 14 . 9 : 2.", nl: "Oppervlakte = 14 . 9 : 2." }
   },
   {
     id: "G5_s_31", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 20 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 20 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 20 cm en hoogte 6 cm?" },
     answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 × 6 ÷ 2.", en: "Area = 20 × 6 ÷ 2.", nl: "Oppervlakte = 20 × 6 ÷ 2." }
+    hint: { fr: "Aire = 20 . 6 : 2.", en: "Area = 20 . 6 : 2.", nl: "Oppervlakte = 20 . 6 : 2." }
   },
   {
     id: "G5_s_32", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 4 cm ?", en: "What is the area of a triangle with base 18 cm and height 4 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 4 cm?" },
     answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 × 4 ÷ 2.", en: "Area = 18 × 4 ÷ 2.", nl: "Oppervlakte = 18 × 4 ÷ 2." }
+    hint: { fr: "Aire = 18 . 4 : 2.", en: "Area = 18 . 4 : 2.", nl: "Oppervlakte = 18 . 4 : 2." }
   },
   {
     id: "G5_s_33", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 6 cm et de hauteur 14 cm ?", en: "What is the area of a triangle with base 6 cm and height 14 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 6 cm en hoogte 14 cm?" },
     answer: 42, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 × 14 ÷ 2.", en: "Area = 6 × 14 ÷ 2.", nl: "Oppervlakte = 6 × 14 ÷ 2." }
+    hint: { fr: "Aire = 6 . 14 : 2.", en: "Area = 6 . 14 : 2.", nl: "Oppervlakte = 6 . 14 : 2." }
   },
   {
     id: "G5_s_34", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 7 cm et 24 cm. Quelle est son aire ?", en: "A right triangle has legs of 7 cm and 24 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 7 cm en 24 cm. Wat is de oppervlakte?" },
     answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 × 24 ÷ 2.", en: "Area = 7 × 24 ÷ 2.", nl: "Oppervlakte = 7 × 24 ÷ 2." }
+    hint: { fr: "Aire = 7 . 24 : 2.", en: "Area = 7 . 24 : 2.", nl: "Oppervlakte = 7 . 24 : 2." }
   },
   {
     id: "G5_s_35", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 22 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 22 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 22 cm en hoogte 8 cm?" },
     answer: 88, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 22 × 8 ÷ 2.", en: "Area = 22 × 8 ÷ 2.", nl: "Oppervlakte = 22 × 8 ÷ 2." }
+    hint: { fr: "Aire = 22 . 8 : 2.", en: "Area = 22 . 8 : 2.", nl: "Oppervlakte = 22 . 8 : 2." }
   },
   {
     id: "G5_s_36", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 15 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 15 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 15 cm en hoogte 10 cm?" },
     answer: 75, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 × 10 ÷ 2.", en: "Area = 15 × 10 ÷ 2.", nl: "Oppervlakte = 15 × 10 ÷ 2." }
+    hint: { fr: "Aire = 15 . 10 : 2.", en: "Area = 15 . 10 : 2.", nl: "Oppervlakte = 15 . 10 : 2." }
   },
   {
     id: "G5_s_37", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 10 cm et 24 cm. Quelle est son aire ?", en: "A right triangle has legs of 10 cm and 24 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 10 cm en 24 cm. Wat is de oppervlakte?" },
     answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 × 24 ÷ 2.", en: "Area = 10 × 24 ÷ 2.", nl: "Oppervlakte = 10 × 24 ÷ 2." }
+    hint: { fr: "Aire = 10 . 24 : 2.", en: "Area = 10 . 24 : 2.", nl: "Oppervlakte = 10 . 24 : 2." }
   },
   {
     id: "G5_s_38", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 11 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 11 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 11 cm en hoogte 6 cm?" },
     answer: 33, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 × 6 ÷ 2.", en: "Area = 11 × 6 ÷ 2.", nl: "Oppervlakte = 11 × 6 ÷ 2." }
+    hint: { fr: "Aire = 11 . 6 : 2.", en: "Area = 11 . 6 : 2.", nl: "Oppervlakte = 11 . 6 : 2." }
   },
   {
     id: "G5_s_39", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 13 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 13 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 13 cm en hoogte 8 cm?" },
     answer: 52, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 13 × 8 ÷ 2.", en: "Area = 13 × 8 ÷ 2.", nl: "Oppervlakte = 13 × 8 ÷ 2." }
+    hint: { fr: "Aire = 13 . 8 : 2.", en: "Area = 13 . 8 : 2.", nl: "Oppervlakte = 13 . 8 : 2." }
   },
   // =========================================================================
   // Level 3 — Pythagorean theorem (16 questions: s_11 – s_15, s_40 – s_50)
@@ -320,7 +320,7 @@ export const questions = [
     id: "G5_s_51", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 14 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 14 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 14 cm. Wat is de omtrek?" },
     answer: 42, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 14 × 3.", en: "3 equal sides: 14 × 3.", nl: "3 gelijke zijden: 14 × 3." }
+    hint: { fr: "3 côtés égaux : 14 . 3.", en: "3 equal sides: 14 . 3.", nl: "3 gelijke zijden: 14 . 3." }
   },
   {
     id: "G5_s_52", category: "G5", level: 1,
@@ -338,7 +338,7 @@ export const questions = [
     id: "G5_s_54", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 7 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 7 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 7 cm. Wat is de omtrek?" },
     answer: 21, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 7 × 3.", en: "3 equal sides: 7 × 3.", nl: "3 gelijke zijden: 7 × 3." }
+    hint: { fr: "3 côtés égaux : 7 . 3.", en: "3 equal sides: 7 . 3.", nl: "3 gelijke zijden: 7 . 3." }
   },
   {
     id: "G5_s_55", category: "G5", level: 1,
@@ -356,7 +356,7 @@ export const questions = [
     id: "G5_s_57", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 13 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 13 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 13 cm. Wat is de omtrek?" },
     answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 13 × 3.", en: "3 equal sides: 13 × 3.", nl: "3 gelijke zijden: 13 × 3." }
+    hint: { fr: "3 côtés égaux : 13 . 3.", en: "3 equal sides: 13 . 3.", nl: "3 gelijke zijden: 13 . 3." }
   },
   {
     id: "G5_s_58", category: "G5", level: 1,
@@ -386,7 +386,7 @@ export const questions = [
     id: "G5_s_62", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 10 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 10 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 10 cm. Wat is de omtrek?" },
     answer: 30, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 10 × 3.", en: "3 equal sides: 10 × 3.", nl: "3 gelijke zijden: 10 × 3." }
+    hint: { fr: "3 côtés égaux : 10 . 3.", en: "3 equal sides: 10 . 3.", nl: "3 gelijke zijden: 10 . 3." }
   },
   {
     id: "G5_s_63", category: "G5", level: 1,
@@ -404,7 +404,7 @@ export const questions = [
     id: "G5_s_65", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 6 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 6 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 6 cm. Wat is de omtrek?" },
     answer: 18, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 6 × 3.", en: "3 equal sides: 6 × 3.", nl: "3 gelijke zijden: 6 × 3." }
+    hint: { fr: "3 côtés égaux : 6 . 3.", en: "3 equal sides: 6 . 3.", nl: "3 gelijke zijden: 6 . 3." }
   },
   {
     id: "G5_s_66", category: "G5", level: 1,
@@ -428,7 +428,7 @@ export const questions = [
     id: "G5_s_69", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 16 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 16 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 16 cm. Wat is de omtrek?" },
     answer: 48, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 16 × 3.", en: "3 equal sides: 16 × 3.", nl: "3 gelijke zijden: 16 × 3." }
+    hint: { fr: "3 côtés égaux : 16 . 3.", en: "3 equal sides: 16 . 3.", nl: "3 gelijke zijden: 16 . 3." }
   },
   {
     id: "G5_s_70", category: "G5", level: 1,
@@ -443,121 +443,121 @@ export const questions = [
     id: "G5_s_71", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 24 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 24 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 24 cm en hoogte 5 cm?" },
     answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 24 × 5 ÷ 2.", en: "Area = 24 × 5 ÷ 2.", nl: "Oppervlakte = 24 × 5 ÷ 2." }
+    hint: { fr: "Aire = 24 . 5 : 2.", en: "Area = 24 . 5 : 2.", nl: "Oppervlakte = 24 . 5 : 2." }
   },
   {
     id: "G5_s_72", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 8 cm et 15 cm. Quelle est son aire ?", en: "A right triangle has legs of 8 cm and 15 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 8 cm en 15 cm. Wat is de oppervlakte?" },
     answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 × 15 ÷ 2.", en: "Area = 8 × 15 ÷ 2.", nl: "Oppervlakte = 8 × 15 ÷ 2." }
+    hint: { fr: "Aire = 8 . 15 : 2.", en: "Area = 8 . 15 : 2.", nl: "Oppervlakte = 8 . 15 : 2." }
   },
   {
     id: "G5_s_73", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 9 cm et de hauteur 12 cm ?", en: "What is the area of a triangle with base 9 cm and height 12 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 9 cm en hoogte 12 cm?" },
     answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 × 12 ÷ 2.", en: "Area = 9 × 12 ÷ 2.", nl: "Oppervlakte = 9 × 12 ÷ 2." }
+    hint: { fr: "Aire = 9 . 12 : 2.", en: "Area = 9 . 12 : 2.", nl: "Oppervlakte = 9 . 12 : 2." }
   },
   {
     id: "G5_s_74", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 7 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 7 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 7 cm en hoogte 10 cm?" },
     answer: 35, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 × 10 ÷ 2.", en: "Area = 7 × 10 ÷ 2.", nl: "Oppervlakte = 7 × 10 ÷ 2." }
+    hint: { fr: "Aire = 7 . 10 : 2.", en: "Area = 7 . 10 : 2.", nl: "Oppervlakte = 7 . 10 : 2." }
   },
   {
     id: "G5_s_75", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 3 cm et 4 cm. Quelle est son aire ?", en: "A right triangle has legs of 3 cm and 4 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 3 cm en 4 cm. Wat is de oppervlakte?" },
     answer: 6, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 3 × 4 ÷ 2.", en: "Area = 3 × 4 ÷ 2.", nl: "Oppervlakte = 3 × 4 ÷ 2." }
+    hint: { fr: "Aire = 3 . 4 : 2.", en: "Area = 3 . 4 : 2.", nl: "Oppervlakte = 3 . 4 : 2." }
   },
   {
     id: "G5_s_76", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 11 cm ?", en: "What is the area of a triangle with base 16 cm and height 11 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 11 cm?" },
     answer: 88, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 × 11 ÷ 2.", en: "Area = 16 × 11 ÷ 2.", nl: "Oppervlakte = 16 × 11 ÷ 2." }
+    hint: { fr: "Aire = 16 . 11 : 2.", en: "Area = 16 . 11 : 2.", nl: "Oppervlakte = 16 . 11 : 2." }
   },
   {
     id: "G5_s_77", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 5 cm et de hauteur 18 cm ?", en: "What is the area of a triangle with base 5 cm and height 18 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 5 cm en hoogte 18 cm?" },
     answer: 45, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 × 18 ÷ 2.", en: "Area = 5 × 18 ÷ 2.", nl: "Oppervlakte = 5 × 18 ÷ 2." }
+    hint: { fr: "Aire = 5 . 18 : 2.", en: "Area = 5 . 18 : 2.", nl: "Oppervlakte = 5 . 18 : 2." }
   },
   {
     id: "G5_s_78", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 12 cm et 16 cm. Quelle est son aire ?", en: "A right triangle has legs of 12 cm and 16 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 12 cm en 16 cm. Wat is de oppervlakte?" },
     answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 × 16 ÷ 2.", en: "Area = 12 × 16 ÷ 2.", nl: "Oppervlakte = 12 × 16 ÷ 2." }
+    hint: { fr: "Aire = 12 . 16 : 2.", en: "Area = 12 . 16 : 2.", nl: "Oppervlakte = 12 . 16 : 2." }
   },
   {
     id: "G5_s_79", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 26 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 26 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 26 cm en hoogte 7 cm?" },
     answer: 91, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 26 × 7 ÷ 2.", en: "Area = 26 × 7 ÷ 2.", nl: "Oppervlakte = 26 × 7 ÷ 2." }
+    hint: { fr: "Aire = 26 . 7 : 2.", en: "Area = 26 . 7 : 2.", nl: "Oppervlakte = 26 . 7 : 2." }
   },
   {
     id: "G5_s_80", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 4 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 4 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 4 cm en hoogte 9 cm?" },
     answer: 18, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 4 × 9 ÷ 2.", en: "Area = 4 × 9 ÷ 2.", nl: "Oppervlakte = 4 × 9 ÷ 2." }
+    hint: { fr: "Aire = 4 . 9 : 2.", en: "Area = 4 . 9 : 2.", nl: "Oppervlakte = 4 . 9 : 2." }
   },
   {
     id: "G5_s_81", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 15 cm et 20 cm. Quelle est son aire ?", en: "A right triangle has legs of 15 cm and 20 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 15 cm en 20 cm. Wat is de oppervlakte?" },
     answer: 150, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 × 20 ÷ 2.", en: "Area = 15 × 20 ÷ 2.", nl: "Oppervlakte = 15 × 20 ÷ 2." }
+    hint: { fr: "Aire = 15 . 20 : 2.", en: "Area = 15 . 20 : 2.", nl: "Oppervlakte = 15 . 20 : 2." }
   },
   {
     id: "G5_s_82", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 13 cm ?", en: "What is the area of a triangle with base 12 cm and height 13 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 12 cm en hoogte 13 cm?" },
     answer: 78, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 × 13 ÷ 2.", en: "Area = 12 × 13 ÷ 2.", nl: "Oppervlakte = 12 × 13 ÷ 2." }
+    hint: { fr: "Aire = 12 . 13 : 2.", en: "Area = 12 . 13 : 2.", nl: "Oppervlakte = 12 . 13 : 2." }
   },
   {
     id: "G5_s_83", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 30 cm et de hauteur 4 cm ?", en: "What is the area of a triangle with base 30 cm and height 4 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 30 cm en hoogte 4 cm?" },
     answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 30 × 4 ÷ 2.", en: "Area = 30 × 4 ÷ 2.", nl: "Oppervlakte = 30 × 4 ÷ 2." }
+    hint: { fr: "Aire = 30 . 4 : 2.", en: "Area = 30 . 4 : 2.", nl: "Oppervlakte = 30 . 4 : 2." }
   },
   {
     id: "G5_s_84", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 20 cm et 21 cm. Quelle est son aire ?", en: "A right triangle has legs of 20 cm and 21 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 20 cm en 21 cm. Wat is de oppervlakte?" },
     answer: 210, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 × 21 ÷ 2.", en: "Area = 20 × 21 ÷ 2.", nl: "Oppervlakte = 20 × 21 ÷ 2." }
+    hint: { fr: "Aire = 20 . 21 : 2.", en: "Area = 20 . 21 : 2.", nl: "Oppervlakte = 20 . 21 : 2." }
   },
   {
     id: "G5_s_85", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 11 cm et de hauteur 14 cm ?", en: "What is the area of a triangle with base 11 cm and height 14 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 11 cm en hoogte 14 cm?" },
     answer: 77, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 × 14 ÷ 2.", en: "Area = 11 × 14 ÷ 2.", nl: "Oppervlakte = 11 × 14 ÷ 2." }
+    hint: { fr: "Aire = 11 . 14 : 2.", en: "Area = 11 . 14 : 2.", nl: "Oppervlakte = 11 . 14 : 2." }
   },
   {
     id: "G5_s_86", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 8 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 8 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 8 cm en hoogte 5 cm?" },
     answer: 20, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 × 5 ÷ 2.", en: "Area = 8 × 5 ÷ 2.", nl: "Oppervlakte = 8 × 5 ÷ 2." }
+    hint: { fr: "Aire = 8 . 5 : 2.", en: "Area = 8 . 5 : 2.", nl: "Oppervlakte = 8 . 5 : 2." }
   },
   {
     id: "G5_s_87", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 40 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 40 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 40 cm. Wat is de oppervlakte?" },
     answer: 180, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 × 40 ÷ 2.", en: "Area = 9 × 40 ÷ 2.", nl: "Oppervlakte = 9 × 40 ÷ 2." }
+    hint: { fr: "Aire = 9 . 40 : 2.", en: "Area = 9 . 40 : 2.", nl: "Oppervlakte = 9 . 40 : 2." }
   },
   {
     id: "G5_s_88", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 17 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 17 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 17 cm en hoogte 6 cm?" },
     answer: 51, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 17 × 6 ÷ 2.", en: "Area = 17 × 6 ÷ 2.", nl: "Oppervlakte = 17 × 6 ÷ 2." }
+    hint: { fr: "Aire = 17 . 6 : 2.", en: "Area = 17 . 6 : 2.", nl: "Oppervlakte = 17 . 6 : 2." }
   },
   {
     id: "G5_s_89", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 15 cm ?", en: "What is the area of a triangle with base 14 cm and height 15 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 15 cm?" },
     answer: 105, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 × 15 ÷ 2.", en: "Area = 14 × 15 ÷ 2.", nl: "Oppervlakte = 14 × 15 ÷ 2." }
+    hint: { fr: "Aire = 14 . 15 : 2.", en: "Area = 14 . 15 : 2.", nl: "Oppervlakte = 14 . 15 : 2." }
   },
   {
     id: "G5_s_90", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 5 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 5 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 5 cm en 12 cm. Wat is de oppervlakte?" },
     answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 × 12 ÷ 2.", en: "Area = 5 × 12 ÷ 2.", nl: "Oppervlakte = 5 × 12 ÷ 2." }
+    hint: { fr: "Aire = 5 . 12 : 2.", en: "Area = 5 . 12 : 2.", nl: "Oppervlakte = 5 . 12 : 2." }
   },
   // =========================================================================
   // Level 3 — Pythagorean theorem (21 questions: s_91 – s_111)
@@ -698,19 +698,19 @@ export const questions = [
     id: "G5_s_113", category: "G5", level: 1,
     text: { fr: "Un triangle équilatéral a un côté de 13 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 13 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 13 cm. Wat is de omtrek?" },
     answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 13 × 3.", en: "3 equal sides: 13 × 3.", nl: "3 gelijke zijden: 13 × 3." }
+    hint: { fr: "3 côtés égaux : 13 . 3.", en: "3 equal sides: 13 . 3.", nl: "3 gelijke zijden: 13 . 3." }
   },
   {
     id: "G5_s_114", category: "G5", level: 2,
     text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 18 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 7 cm?" },
     answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 × 7 ÷ 2 = 63.", en: "Area = 18 × 7 ÷ 2 = 63.", nl: "Oppervlakte = 18 × 7 ÷ 2 = 63." }
+    hint: { fr: "Aire = 18 . 7 : 2 = 63.", en: "Area = 18 . 7 : 2 = 63.", nl: "Oppervlakte = 18 . 7 : 2 = 63." }
   },
   {
     id: "G5_s_115", category: "G5", level: 2,
     text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 14 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 14 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 14 cm. Wat is de oppervlakte?" },
     answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 × 14 ÷ 2 = 63.", en: "Area = 9 × 14 ÷ 2 = 63.", nl: "Oppervlakte = 9 × 14 ÷ 2 = 63." }
+    hint: { fr: "Aire = 9 . 14 : 2 = 63.", en: "Area = 9 . 14 : 2 = 63.", nl: "Oppervlakte = 9 . 14 : 2 = 63." }
   },
   {
     id: "G5_s_116", category: "G5", level: 3,

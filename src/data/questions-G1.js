@@ -21,9 +21,9 @@ export const questions = [
     },
     answer: 26, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre = 2 × (longueur + largeur) = 2 × (8 + 5).",
-      en: "Perimeter = 2 × (length + width) = 2 × (8 + 5).",
-      nl: "Omtrek = 2 × (lengte + breedte) = 2 × (8 + 5)."
+      fr: "Périmètre = 2 . (longueur + largeur) = 2 . (8 + 5).",
+      en: "Perimeter = 2 . (length + width) = 2 . (8 + 5).",
+      nl: "Omtrek = 2 . (lengte + breedte) = 2 . (8 + 5)."
     }
   },
   {
@@ -35,9 +35,9 @@ export const questions = [
     },
     answer: 32, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (12 + 4).",
-      en: "P = 2 × (12 + 4).",
-      nl: "P = 2 × (12 + 4)."
+      fr: "P = 2 . (12 + 4).",
+      en: "P = 2 . (12 + 4).",
+      nl: "P = 2 . (12 + 4)."
     }
   },
   {
@@ -49,9 +49,9 @@ export const questions = [
     },
     answer: 44, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (15 + 7) = 2 × 22.",
-      en: "P = 2 × (15 + 7) = 2 × 22.",
-      nl: "P = 2 × (15 + 7) = 2 × 22."
+      fr: "P = 2 . (15 + 7) = 2 . 22.",
+      en: "P = 2 . (15 + 7) = 2 . 22.",
+      nl: "P = 2 . (15 + 7) = 2 . 22."
     }
   },
   {
@@ -63,9 +63,9 @@ export const questions = [
     },
     answer: 26, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (10 + 3).",
-      en: "P = 2 × (10 + 3).",
-      nl: "P = 2 × (10 + 3)."
+      fr: "P = 2 . (10 + 3).",
+      en: "P = 2 . (10 + 3).",
+      nl: "P = 2 . (10 + 3)."
     }
   },
   {
@@ -77,9 +77,9 @@ export const questions = [
     },
     answer: 30, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (6 + 9) = 2 × 15.",
-      en: "P = 2 × (6 + 9) = 2 × 15.",
-      nl: "P = 2 × (6 + 9) = 2 × 15."
+      fr: "P = 2 . (6 + 9) = 2 . 15.",
+      en: "P = 2 . (6 + 9) = 2 . 15.",
+      nl: "P = 2 . (6 + 9) = 2 . 15."
     }
   },
 
@@ -93,9 +93,9 @@ export const questions = [
     },
     answer: 28, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre d'un carré = 4 × côté = 4 × 7.",
-      en: "Perimeter of a square = 4 × side = 4 × 7.",
-      nl: "Omtrek van een vierkant = 4 × zijde = 4 × 7."
+      fr: "Périmètre d'un carré = 4 . côté = 4 . 7.",
+      en: "Perimeter of a square = 4 . side = 4 . 7.",
+      nl: "Omtrek van een vierkant = 4 . zijde = 4 . 7."
     }
   },
   {
@@ -107,9 +107,9 @@ export const questions = [
     },
     answer: 44, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 11.",
-      en: "P = 4 × 11.",
-      nl: "P = 4 × 11."
+      fr: "P = 4 . 11.",
+      en: "P = 4 . 11.",
+      nl: "P = 4 . 11."
     }
   },
   {
@@ -121,9 +121,9 @@ export const questions = [
     },
     answer: 20, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 5.",
-      en: "P = 4 × 5.",
-      nl: "P = 4 × 5."
+      fr: "P = 4 . 5.",
+      en: "P = 4 . 5.",
+      nl: "P = 4 . 5."
     }
   },
   {
@@ -135,9 +135,9 @@ export const questions = [
     },
     answer: 60, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 15.",
-      en: "P = 4 × 15.",
-      nl: "P = 4 × 15."
+      fr: "P = 4 . 15.",
+      en: "P = 4 . 15.",
+      nl: "P = 4 . 15."
     }
   },
 
@@ -151,9 +151,9 @@ export const questions = [
     },
     answer: 27, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre d'un triangle équilatéral = 3 × côté = 3 × 9.",
-      en: "Perimeter of an equilateral triangle = 3 × side = 3 × 9.",
-      nl: "Omtrek van een gelijkzijdige driehoek = 3 × zijde = 3 × 9."
+      fr: "Périmètre d'un triangle équilatéral = 3 . côté = 3 . 9.",
+      en: "Perimeter of an equilateral triangle = 3 . side = 3 . 9.",
+      nl: "Omtrek van een gelijkzijdige driehoek = 3 . zijde = 3 . 9."
     }
   },
   {
@@ -165,9 +165,9 @@ export const questions = [
     },
     answer: 18, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 6.",
-      en: "P = 3 × 6.",
-      nl: "P = 3 × 6."
+      fr: "P = 3 . 6.",
+      en: "P = 3 . 6.",
+      nl: "P = 3 . 6."
     }
   },
   {
@@ -179,9 +179,9 @@ export const questions = [
     },
     answer: 42, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 14.",
-      en: "P = 3 × 14.",
-      nl: "P = 3 × 14."
+      fr: "P = 3 . 14.",
+      en: "P = 3 . 14.",
+      nl: "P = 3 . 14."
     }
   },
 
@@ -195,9 +195,9 @@ export const questions = [
     },
     answer: 60, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (20 + 10).",
-      en: "P = 2 × (20 + 10).",
-      nl: "P = 2 × (20 + 10)."
+      fr: "P = 2 . (20 + 10).",
+      en: "P = 2 . (20 + 10).",
+      nl: "P = 2 . (20 + 10)."
     }
   },
   {
@@ -209,9 +209,9 @@ export const questions = [
     },
     answer: 36, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 9.",
-      en: "P = 4 × 9.",
-      nl: "P = 4 × 9."
+      fr: "P = 4 . 9.",
+      en: "P = 4 . 9.",
+      nl: "P = 4 . 9."
     }
   },
   {
@@ -223,9 +223,9 @@ export const questions = [
     },
     answer: 30, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 10.",
-      en: "P = 3 × 10.",
-      nl: "P = 3 × 10."
+      fr: "P = 3 . 10.",
+      en: "P = 3 . 10.",
+      nl: "P = 3 . 10."
     }
   },
   {
@@ -237,9 +237,9 @@ export const questions = [
     },
     answer: 48, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (18 + 6) = 2 × 24.",
-      en: "P = 2 × (18 + 6) = 2 × 24.",
-      nl: "P = 2 × (18 + 6) = 2 × 24."
+      fr: "P = 2 . (18 + 6) = 2 . 24.",
+      en: "P = 2 . (18 + 6) = 2 . 24.",
+      nl: "P = 2 . (18 + 6) = 2 . 24."
     }
   },
   {
@@ -251,9 +251,9 @@ export const questions = [
     },
     answer: 52, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 13.",
-      en: "P = 4 × 13.",
-      nl: "P = 4 × 13."
+      fr: "P = 4 . 13.",
+      en: "P = 4 . 13.",
+      nl: "P = 4 . 13."
     }
   },
 
@@ -273,9 +273,9 @@ export const questions = [
     // P = 2(L+w) => 30 = 2(10+w) => 15 = 10+w => w = 5
     answer: 5, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (L + l). Donc 30 = 2 × (10 + l). Résous pour trouver l.",
-      en: "P = 2 × (L + w). So 30 = 2 × (10 + w). Solve for w.",
-      nl: "P = 2 × (L + b). Dus 30 = 2 × (10 + b). Los op naar b."
+      fr: "P = 2 . (L + l). Donc 30 = 2 . (10 + l). Résous pour trouver l.",
+      en: "P = 2 . (L + w). So 30 = 2 . (10 + w). Solve for w.",
+      nl: "P = 2 . (L + b). Dus 30 = 2 . (10 + b). Los op naar b."
     }
   },
   {
@@ -288,9 +288,9 @@ export const questions = [
     // 42 = 2(L+8) => 21 = L+8 => L = 13
     answer: 13, tolerance: 0, unit: "cm",
     hint: {
-      fr: "42 = 2 × (L + 8). Divise par 2, puis soustrais 8.",
-      en: "42 = 2 × (L + 8). Divide by 2, then subtract 8.",
-      nl: "42 = 2 × (L + 8). Deel door 2, trek dan 8 af."
+      fr: "42 = 2 . (L + 8). Divise par 2, puis soustrais 8.",
+      en: "42 = 2 . (L + 8). Divide by 2, then subtract 8.",
+      nl: "42 = 2 . (L + 8). Deel door 2, trek dan 8 af."
     }
   },
   {
@@ -303,9 +303,9 @@ export const questions = [
     // 56 = 2(18+w) => 28 = 18+w => w = 10
     answer: 10, tolerance: 0, unit: "cm",
     hint: {
-      fr: "56 = 2 × (18 + l). Calcule la demi-somme puis soustrais 18.",
-      en: "56 = 2 × (18 + w). Find half the perimeter, then subtract 18.",
-      nl: "56 = 2 × (18 + b). Bereken de helft, trek dan 18 af."
+      fr: "56 = 2 . (18 + l). Calcule la demi-somme puis soustrais 18.",
+      en: "56 = 2 . (18 + w). Find half the perimeter, then subtract 18.",
+      nl: "56 = 2 . (18 + b). Bereken de helft, trek dan 18 af."
     }
   },
 
@@ -320,7 +320,7 @@ export const questions = [
     // 48 / 4 = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = périmètre ÷ 4 = 48 ÷ 4.",
+      fr: "Côté = périmètre : 4 = 48 : 4.",
       en: "Side = perimeter / 4 = 48 / 4.",
       nl: "Zijde = omtrek / 4 = 48 / 4."
     }
@@ -335,7 +335,7 @@ export const questions = [
     // 60 / 4 = 15
     answer: 15, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 60 ÷ 4.",
+      fr: "Côté = 60 : 4.",
       en: "Side = 60 / 4.",
       nl: "Zijde = 60 / 4."
     }
@@ -350,7 +350,7 @@ export const questions = [
     // 36 / 4 = 9
     answer: 9, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 36 ÷ 4.",
+      fr: "Côté = 36 : 4.",
       en: "Side = 36 / 4.",
       nl: "Zijde = 36 / 4."
     }
@@ -413,12 +413,12 @@ export const questions = [
       en: "Calculate the perimeter of a rectangle with length 12 cm and width 7 cm.",
       nl: "Bereken de omtrek van een rechthoek met lengte 12 cm en breedte 7 cm."
     },
-    // 2(12+7) = 2 × 19 = 38
+    // 2(12+7) = 2 . 19 = 38
     answer: 38, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (12 + 7).",
-      en: "P = 2 × (12 + 7).",
-      nl: "P = 2 × (12 + 7)."
+      fr: "P = 2 . (12 + 7).",
+      en: "P = 2 . (12 + 7).",
+      nl: "P = 2 . (12 + 7)."
     }
   },
   {
@@ -428,12 +428,12 @@ export const questions = [
       en: "A rectangle measures 25 cm by 11 cm. What is its perimeter?",
       nl: "Een rechthoek meet 25 cm op 11 cm. Wat is de omtrek?"
     },
-    // 2(25+11) = 2 × 36 = 72
+    // 2(25+11) = 2 . 36 = 72
     answer: 72, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (25 + 11) = 2 × 36.",
-      en: "P = 2 × (25 + 11) = 2 × 36.",
-      nl: "P = 2 × (25 + 11) = 2 × 36."
+      fr: "P = 2 . (25 + 11) = 2 . 36.",
+      en: "P = 2 . (25 + 11) = 2 . 36.",
+      nl: "P = 2 . (25 + 11) = 2 . 36."
     }
   },
 
@@ -448,7 +448,7 @@ export const questions = [
     // 36 / 3 = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = périmètre ÷ 3 = 36 ÷ 3.",
+      fr: "Côté = périmètre : 3 = 36 : 3.",
       en: "Side = perimeter / 3 = 36 / 3.",
       nl: "Zijde = omtrek / 3 = 36 / 3."
     }
@@ -462,12 +462,12 @@ export const questions = [
       en: "A rhombus has a side of 11 cm. What is its perimeter?",
       nl: "Een ruit heeft een zijde van 11 cm. Wat is de omtrek?"
     },
-    // 4 × 11 = 44
+    // 4 . 11 = 44
     answer: 44, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un losange a 4 côtés égaux. P = 4 × 11.",
-      en: "A rhombus has 4 equal sides. P = 4 × 11.",
-      nl: "Een ruit heeft 4 gelijke zijden. P = 4 × 11."
+      fr: "Un losange a 4 côtés égaux. P = 4 . 11.",
+      en: "A rhombus has 4 equal sides. P = 4 . 11.",
+      nl: "Een ruit heeft 4 gelijke zijden. P = 4 . 11."
     }
   },
 
@@ -479,12 +479,12 @@ export const questions = [
       en: "A parallelogram has sides of 14 cm and 9 cm. Calculate its perimeter.",
       nl: "Een parallellogram heeft zijden van 14 cm en 9 cm. Bereken de omtrek."
     },
-    // 2(14+9) = 2 × 23 = 46
+    // 2(14+9) = 2 . 23 = 46
     answer: 46, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (14 + 9), comme un rectangle.",
-      en: "P = 2 × (14 + 9), same formula as a rectangle.",
-      nl: "P = 2 × (14 + 9), dezelfde formule als een rechthoek."
+      fr: "P = 2 . (14 + 9), comme un rectangle.",
+      en: "P = 2 . (14 + 9), same formula as a rectangle.",
+      nl: "P = 2 . (14 + 9), dezelfde formule als een rechthoek."
     }
   },
 
@@ -496,12 +496,12 @@ export const questions = [
       en: "Calculate the perimeter of a regular pentagon with side 7 cm.",
       nl: "Bereken de omtrek van een regelmatige vijfhoek met zijde 7 cm."
     },
-    // 5 × 7 = 35
+    // 5 . 7 = 35
     answer: 35, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un pentagone régulier a 5 côtés égaux. P = 5 × 7.",
-      en: "A regular pentagon has 5 equal sides. P = 5 × 7.",
-      nl: "Een regelmatige vijfhoek heeft 5 gelijke zijden. P = 5 × 7."
+      fr: "Un pentagone régulier a 5 côtés égaux. P = 5 . 7.",
+      en: "A regular pentagon has 5 equal sides. P = 5 . 7.",
+      nl: "Een regelmatige vijfhoek heeft 5 gelijke zijden. P = 5 . 7."
     }
   },
 
@@ -552,12 +552,12 @@ export const questions = [
       en: "Calculate the perimeter of a regular hexagon with side 5 cm.",
       nl: "Bereken de omtrek van een regelmatige zeshoek met zijde 5 cm."
     },
-    // 6 × 5 = 30
+    // 6 . 5 = 30
     answer: 30, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un hexagone régulier a 6 côtés égaux. P = 6 × 5.",
-      en: "A regular hexagon has 6 equal sides. P = 6 × 5.",
-      nl: "Een regelmatige zeshoek heeft 6 gelijke zijden. P = 6 × 5."
+      fr: "Un hexagone régulier a 6 côtés égaux. P = 6 . 5.",
+      en: "A regular hexagon has 6 equal sides. P = 6 . 5.",
+      nl: "Een regelmatige zeshoek heeft 6 gelijke zijden. P = 6 . 5."
     }
   },
 
@@ -572,9 +572,9 @@ export const questions = [
     // P = 2(25+15) = 80, minus 3 = 77
     answer: 77, tolerance: 0, unit: "m",
     hint: {
-      fr: "Calcule d'abord le périmètre complet (2 × (25+15) = 80 m), puis retire l'ouverture de 3 m.",
-      en: "First calculate the full perimeter (2 × (25+15) = 80 m), then subtract the 3 m opening.",
-      nl: "Bereken eerst de volledige omtrek (2 × (25+15) = 80 m), trek dan de opening van 3 m af."
+      fr: "Calcule d'abord le périmètre complet (2 . (25+15) = 80 m), puis retire l'ouverture de 3 m.",
+      en: "First calculate the full perimeter (2 . (25+15) = 80 m), then subtract the 3 m opening.",
+      nl: "Bereken eerst de volledige omtrek (2 . (25+15) = 80 m), trek dan de opening van 3 m af."
     }
   },
   {
@@ -601,14 +601,14 @@ export const questions = [
       en: "Calculate the perimeter of a semicircle with diameter 10 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een halve cirkel met diameter 10 cm. (Gebruik pi = 3,14)"
     },
-    // Curved part = pi × d / 2 = 3.14 × 10 / 2 = 15.7
+    // Curved part = pi . d / 2 = 3.14 . 10 / 2 = 15.7
     // Straight part = d = 10
     // Total = 15.7 + 10 = 25.7
     answer: 25.7, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Périmètre = demi-circonférence + diamètre = (pi × 10 / 2) + 10 = 15,7 + 10.",
-      en: "Perimeter = half circumference + diameter = (pi × 10 / 2) + 10 = 15.7 + 10.",
-      nl: "Omtrek = halve omtrek cirkel + diameter = (pi × 10 / 2) + 10 = 15,7 + 10."
+      fr: "Périmètre = demi-circonférence + diamètre = (pi . 10 / 2) + 10 = 15,7 + 10.",
+      en: "Perimeter = half circumference + diameter = (pi . 10 / 2) + 10 = 15.7 + 10.",
+      nl: "Omtrek = halve omtrek cirkel + diameter = (pi . 10 / 2) + 10 = 15,7 + 10."
     }
   },
 
@@ -643,12 +643,12 @@ export const questions = [
       en: "Calculate the circumference of a circle with radius 7 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een cirkel met straal 7 cm. (Gebruik pi = 3,14)"
     },
-    // C = 2 × pi × r = 2 × 3.14 × 7 = 43.96
+    // C = 2 . pi . r = 2 . 3.14 . 7 = 43.96
     answer: 43.96, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "C = 2 × pi × rayon = 2 × 3,14 × 7.",
-      en: "C = 2 × pi × radius = 2 × 3.14 × 7.",
-      nl: "C = 2 × pi × straal = 2 × 3,14 × 7."
+      fr: "C = 2 . pi . rayon = 2 . 3,14 . 7.",
+      en: "C = 2 . pi . radius = 2 . 3.14 . 7.",
+      nl: "C = 2 . pi . straal = 2 . 3,14 . 7."
     }
   },
 
@@ -660,14 +660,14 @@ export const questions = [
       en: "A track is shaped like a 20 m by 10 m rectangle with a semicircle on each short end (diameter = 10 m). Calculate the total perimeter. (pi = 3.14)",
       nl: "Een baan heeft de vorm van een rechthoek van 20 m op 10 m, met een halve cirkel aan elke korte zijde (diameter = 10 m). Bereken de totale omtrek. (pi = 3,14)"
     },
-    // Two long sides: 2 × 20 = 40
-    // Two semicircles = one full circle of diameter 10: pi × 10 = 31.4
+    // Two long sides: 2 . 20 = 40
+    // Two semicircles = one full circle of diameter 10: pi . 10 = 31.4
     // Total = 40 + 31.4 = 71.4
     answer: 71.4, tolerance: 0.1, unit: "m",
     hint: {
-      fr: "2 longueurs (2 × 20 = 40 m) + 2 demi-cercles = 1 cercle complet (pi × 10 = 31,4 m). Total = 71,4 m.",
-      en: "2 lengths (2 × 20 = 40 m) + 2 semicircles = 1 full circle (pi × 10 = 31.4 m). Total = 71.4 m.",
-      nl: "2 lengtes (2 × 20 = 40 m) + 2 halve cirkels = 1 volledige cirkel (pi × 10 = 31,4 m). Totaal = 71,4 m."
+      fr: "2 longueurs (2 . 20 = 40 m) + 2 demi-cercles = 1 cercle complet (pi . 10 = 31,4 m). Total = 71,4 m.",
+      en: "2 lengths (2 . 20 = 40 m) + 2 semicircles = 1 full circle (pi . 10 = 31.4 m). Total = 71.4 m.",
+      nl: "2 lengtes (2 . 20 = 40 m) + 2 halve cirkels = 1 volledige cirkel (pi . 10 = 31,4 m). Totaal = 71,4 m."
     }
   },
 
@@ -679,12 +679,12 @@ export const questions = [
       en: "Calculate the perimeter of a regular octagon with side 4 cm.",
       nl: "Bereken de omtrek van een regelmatige achthoek met zijde 4 cm."
     },
-    // 8 × 4 = 32
+    // 8 . 4 = 32
     answer: 32, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un octogone régulier a 8 côtés. P = 8 × 4.",
-      en: "A regular octagon has 8 sides. P = 8 × 4.",
-      nl: "Een regelmatige achthoek heeft 8 zijden. P = 8 × 4."
+      fr: "Un octogone régulier a 8 côtés. P = 8 . 4.",
+      en: "A regular octagon has 8 sides. P = 8 . 4.",
+      nl: "Een regelmatige achthoek heeft 8 zijden. P = 8 . 4."
     }
   },
 
@@ -713,12 +713,12 @@ export const questions = [
       en: "A ribbon goes around a square gift with side 16 cm, plus a 12 cm bow. How much ribbon is needed?",
       nl: "Een lint gaat rond een vierkant cadeau met zijde 16 cm, plus een strik van 12 cm. Hoeveel lint is er nodig?"
     },
-    // P = 4 × 16 = 64, + 12 = 76
+    // P = 4 . 16 = 64, + 12 = 76
     answer: 76, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre = 4 × 16 = 64 cm, plus le noeud de 12 cm.",
-      en: "Perimeter = 4 × 16 = 64 cm, plus the 12 cm bow.",
-      nl: "Omtrek = 4 × 16 = 64 cm, plus de strik van 12 cm."
+      fr: "Périmètre = 4 . 16 = 64 cm, plus le noeud de 12 cm.",
+      en: "Perimeter = 4 . 16 = 64 cm, plus the 12 cm bow.",
+      nl: "Omtrek = 4 . 16 = 64 cm, plus de strik van 12 cm."
     }
   },
 
@@ -730,12 +730,12 @@ export const questions = [
       en: "A wheel has a diameter of 50 cm. What distance does it cover in one full turn? (pi = 3.14)",
       nl: "Een wiel heeft een diameter van 50 cm. Welke afstand legt het af in een volledige omwenteling? (pi = 3,14)"
     },
-    // C = pi × d = 3.14 × 50 = 157
+    // C = pi . d = 3.14 . 50 = 157
     answer: 157, tolerance: 0.5, unit: "cm",
     hint: {
-      fr: "Distance = pi × diamètre = 3,14 × 50.",
-      en: "Distance = pi × diameter = 3.14 × 50.",
-      nl: "Afstand = pi × diameter = 3,14 × 50."
+      fr: "Distance = pi . diamètre = 3,14 . 50.",
+      en: "Distance = pi . diameter = 3.14 . 50.",
+      nl: "Afstand = pi . diameter = 3,14 . 50."
     }
   },
 
@@ -747,12 +747,12 @@ export const questions = [
       en: "Two squares with side 6 cm are placed side by side to form a rectangle. What is the perimeter of the resulting rectangle?",
       nl: "Twee vierkanten met zijde 6 cm worden naast elkaar geplaatst om een rechthoek te vormen. Wat is de omtrek van de resulterende rechthoek?"
     },
-    // Rectangle 12 cm × 6 cm => P = 2(12+6) = 36
+    // Rectangle 12 cm . 6 cm => P = 2(12+6) = 36
     answer: 36, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Le rectangle obtenu mesure 12 cm × 6 cm. P = 2 × (12 + 6).",
-      en: "The resulting rectangle is 12 cm × 6 cm. P = 2 × (12 + 6).",
-      nl: "De resulterende rechthoek is 12 cm × 6 cm. P = 2 × (12 + 6)."
+      fr: "Le rectangle obtenu mesure 12 cm . 6 cm. P = 2 . (12 + 6).",
+      en: "The resulting rectangle is 12 cm . 6 cm. P = 2 . (12 + 6).",
+      nl: "De resulterende rechthoek is 12 cm . 6 cm. P = 2 . (12 + 6)."
     }
   },
 
@@ -760,9 +760,9 @@ export const questions = [
   {
     id: "G1_s_47", category: "G1", level: 3,
     text: {
-      fr: "Une figure en T est formée d'un rectangle horizontal de 12 cm × 3 cm et d'un rectangle vertical de 3 cm × 7 cm centré en dessous. Calcule le périmètre de cette figure.",
-      en: "A T-shape is formed by a horizontal rectangle 12 cm × 3 cm and a vertical rectangle 3 cm × 7 cm centered below it. Calculate the perimeter of this figure.",
-      nl: "Een T-vorm wordt gevormd door een horizontale rechthoek van 12 cm × 3 cm en een verticale rechthoek van 3 cm × 7 cm eronder gecentreerd. Bereken de omtrek van deze figuur."
+      fr: "Une figure en T est formée d'un rectangle horizontal de 12 cm . 3 cm et d'un rectangle vertical de 3 cm . 7 cm centré en dessous. Calcule le périmètre de cette figure.",
+      en: "A T-shape is formed by a horizontal rectangle 12 cm . 3 cm and a vertical rectangle 3 cm . 7 cm centered below it. Calculate the perimeter of this figure.",
+      nl: "Een T-vorm wordt gevormd door een horizontale rechthoek van 12 cm . 3 cm en een verticale rechthoek van 3 cm . 7 cm eronder gecentreerd. Bereken de omtrek van deze figuur."
     },
     // Trace the outline:
     // Top: 12
@@ -790,14 +790,14 @@ export const questions = [
       en: "Calculate the perimeter of a quarter circle with radius 8 cm. (pi = 3.14)",
       nl: "Bereken de omtrek van een kwart cirkel met straal 8 cm. (pi = 3,14)"
     },
-    // Arc = (2 × pi × 8) / 4 = 3.14 × 16 / 4 = 12.56
+    // Arc = (2 . pi . 8) / 4 = 3.14 . 16 / 4 = 12.56
     // Two straight edges (radii) = 8 + 8 = 16
     // Total = 12.56 + 16 = 28.56
     answer: 28.56, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Arc = 2 × pi × 8 / 4 = 12,56 cm. Ajoute les deux rayons : 12,56 + 8 + 8 = 28,56 cm.",
-      en: "Arc = 2 × pi × 8 / 4 = 12.56 cm. Add the two radii: 12.56 + 8 + 8 = 28.56 cm.",
-      nl: "Boog = 2 × pi × 8 / 4 = 12,56 cm. Voeg de twee stralen toe: 12,56 + 8 + 8 = 28,56 cm."
+      fr: "Arc = 2 . pi . 8 / 4 = 12,56 cm. Ajoute les deux rayons : 12,56 + 8 + 8 = 28,56 cm.",
+      en: "Arc = 2 . pi . 8 / 4 = 12.56 cm. Add the two radii: 12.56 + 8 + 8 = 28.56 cm.",
+      nl: "Boog = 2 . pi . 8 / 4 = 12,56 cm. Voeg de twee stralen toe: 12,56 + 8 + 8 = 28,56 cm."
     }
   },
 
@@ -810,12 +810,12 @@ export const questions = [
       nl: "Een vierkante tuin met zijde 12 m is omgeven door een pad van 1 m breed. Bereken de buitenomtrek (de buitenrand van het pad)."
     },
     // Outer square side = 12 + 1 + 1 = 14 m
-    // P = 4 × 14 = 56
+    // P = 4 . 14 = 56
     answer: 56, tolerance: 0, unit: "m",
     hint: {
-      fr: "Le carré extérieur a un côté de 12 + 2 × 1 = 14 m. P = 4 × 14.",
-      en: "The outer square has side 12 + 2 × 1 = 14 m. P = 4 × 14.",
-      nl: "Het buitenste vierkant heeft zijde 12 + 2 × 1 = 14 m. P = 4 × 14."
+      fr: "Le carré extérieur a un côté de 12 + 2 . 1 = 14 m. P = 4 . 14.",
+      en: "The outer square has side 12 + 2 . 1 = 14 m. P = 4 . 14.",
+      nl: "Het buitenste vierkant heeft zijde 12 + 2 . 1 = 14 m. P = 4 . 14."
     }
   },
 
@@ -854,12 +854,12 @@ export const questions = [
       en: "Calculate the perimeter of a rectangle with length 11 cm and width 6 cm.",
       nl: "Bereken de omtrek van een rechthoek met lengte 11 cm en breedte 6 cm."
     },
-    // 2 × (11 + 6) = 2 × 17 = 34
+    // 2 . (11 + 6) = 2 . 17 = 34
     answer: 34, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (11 + 6) = 2 × 17.",
-      en: "P = 2 × (11 + 6) = 2 × 17.",
-      nl: "P = 2 × (11 + 6) = 2 × 17."
+      fr: "P = 2 . (11 + 6) = 2 . 17.",
+      en: "P = 2 . (11 + 6) = 2 . 17.",
+      nl: "P = 2 . (11 + 6) = 2 . 17."
     }
   },
   {
@@ -869,12 +869,12 @@ export const questions = [
       en: "A rectangle is 14 cm long and 9 cm wide. What is its perimeter?",
       nl: "Een rechthoek is 14 cm lang en 9 cm breed. Wat is de omtrek?"
     },
-    // 2 × (14 + 9) = 2 × 23 = 46
+    // 2 . (14 + 9) = 2 . 23 = 46
     answer: 46, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (14 + 9) = 2 × 23.",
-      en: "P = 2 × (14 + 9) = 2 × 23.",
-      nl: "P = 2 × (14 + 9) = 2 × 23."
+      fr: "P = 2 . (14 + 9) = 2 . 23.",
+      en: "P = 2 . (14 + 9) = 2 . 23.",
+      nl: "P = 2 . (14 + 9) = 2 . 23."
     }
   },
   {
@@ -884,12 +884,12 @@ export const questions = [
       en: "Calculate the perimeter of a 7 cm by 3 cm rectangle.",
       nl: "Bereken de omtrek van een rechthoek van 7 cm op 3 cm."
     },
-    // 2 × (7 + 3) = 2 × 10 = 20
+    // 2 . (7 + 3) = 2 . 10 = 20
     answer: 20, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (7 + 3) = 2 × 10.",
-      en: "P = 2 × (7 + 3) = 2 × 10.",
-      nl: "P = 2 × (7 + 3) = 2 × 10."
+      fr: "P = 2 . (7 + 3) = 2 . 10.",
+      en: "P = 2 . (7 + 3) = 2 . 10.",
+      nl: "P = 2 . (7 + 3) = 2 . 10."
     }
   },
   {
@@ -899,12 +899,12 @@ export const questions = [
       en: "A rectangle has a length of 16 cm and a width of 8 cm. Calculate its perimeter.",
       nl: "Een rechthoek heeft een lengte van 16 cm en een breedte van 8 cm. Bereken de omtrek."
     },
-    // 2 × (16 + 8) = 2 × 24 = 48
+    // 2 . (16 + 8) = 2 . 24 = 48
     answer: 48, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (16 + 8) = 2 × 24.",
-      en: "P = 2 × (16 + 8) = 2 × 24.",
-      nl: "P = 2 × (16 + 8) = 2 × 24."
+      fr: "P = 2 . (16 + 8) = 2 . 24.",
+      en: "P = 2 . (16 + 8) = 2 . 24.",
+      nl: "P = 2 . (16 + 8) = 2 . 24."
     }
   },
   {
@@ -914,12 +914,12 @@ export const questions = [
       en: "What is the perimeter of a 19 cm by 11 cm rectangle?",
       nl: "Wat is de omtrek van een rechthoek van 19 cm op 11 cm?"
     },
-    // 2 × (19 + 11) = 2 × 30 = 60
+    // 2 . (19 + 11) = 2 . 30 = 60
     answer: 60, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (19 + 11) = 2 × 30.",
-      en: "P = 2 × (19 + 11) = 2 × 30.",
-      nl: "P = 2 × (19 + 11) = 2 × 30."
+      fr: "P = 2 . (19 + 11) = 2 . 30.",
+      en: "P = 2 . (19 + 11) = 2 . 30.",
+      nl: "P = 2 . (19 + 11) = 2 . 30."
     }
   },
   {
@@ -929,12 +929,12 @@ export const questions = [
       en: "A rectangle is 22 cm long and 13 cm wide. Calculate its perimeter.",
       nl: "Een rechthoek is 22 cm lang en 13 cm breed. Bereken de omtrek."
     },
-    // 2 × (22 + 13) = 2 × 35 = 70
+    // 2 . (22 + 13) = 2 . 35 = 70
     answer: 70, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (22 + 13) = 2 × 35.",
-      en: "P = 2 × (22 + 13) = 2 × 35.",
-      nl: "P = 2 × (22 + 13) = 2 × 35."
+      fr: "P = 2 . (22 + 13) = 2 . 35.",
+      en: "P = 2 . (22 + 13) = 2 . 35.",
+      nl: "P = 2 . (22 + 13) = 2 . 35."
     }
   },
   {
@@ -944,12 +944,12 @@ export const questions = [
       en: "Calculate the perimeter of a rectangle with length 5 cm and width 2 cm.",
       nl: "Bereken de omtrek van een rechthoek met lengte 5 cm en breedte 2 cm."
     },
-    // 2 × (5 + 2) = 2 × 7 = 14
+    // 2 . (5 + 2) = 2 . 7 = 14
     answer: 14, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (5 + 2) = 2 × 7.",
-      en: "P = 2 × (5 + 2) = 2 × 7.",
-      nl: "P = 2 × (5 + 2) = 2 × 7."
+      fr: "P = 2 . (5 + 2) = 2 . 7.",
+      en: "P = 2 . (5 + 2) = 2 . 7.",
+      nl: "P = 2 . (5 + 2) = 2 . 7."
     }
   },
 
@@ -961,12 +961,12 @@ export const questions = [
       en: "Calculate the perimeter of a square with side 6 cm.",
       nl: "Bereken de omtrek van een vierkant met zijde 6 cm."
     },
-    // 4 × 6 = 24
+    // 4 . 6 = 24
     answer: 24, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 6.",
-      en: "P = 4 × 6.",
-      nl: "P = 4 × 6."
+      fr: "P = 4 . 6.",
+      en: "P = 4 . 6.",
+      nl: "P = 4 . 6."
     }
   },
   {
@@ -976,12 +976,12 @@ export const questions = [
       en: "A square has a side of 18 cm. What is its perimeter?",
       nl: "Een vierkant heeft een zijde van 18 cm. Wat is de omtrek?"
     },
-    // 4 × 18 = 72
+    // 4 . 18 = 72
     answer: 72, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 18.",
-      en: "P = 4 × 18.",
-      nl: "P = 4 × 18."
+      fr: "P = 4 . 18.",
+      en: "P = 4 . 18.",
+      nl: "P = 4 . 18."
     }
   },
   {
@@ -991,12 +991,12 @@ export const questions = [
       en: "Calculate the perimeter of a square whose side measures 4 cm.",
       nl: "Bereken de omtrek van een vierkant waarvan de zijde 4 cm is."
     },
-    // 4 × 4 = 16
+    // 4 . 4 = 16
     answer: 16, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 4.",
-      en: "P = 4 × 4.",
-      nl: "P = 4 × 4."
+      fr: "P = 4 . 4.",
+      en: "P = 4 . 4.",
+      nl: "P = 4 . 4."
     }
   },
   {
@@ -1006,12 +1006,12 @@ export const questions = [
       en: "A square has a side of 20 cm. What is its perimeter?",
       nl: "Een vierkant heeft een zijde van 20 cm. Wat is de omtrek?"
     },
-    // 4 × 20 = 80
+    // 4 . 20 = 80
     answer: 80, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 20.",
-      en: "P = 4 × 20.",
-      nl: "P = 4 × 20."
+      fr: "P = 4 . 20.",
+      en: "P = 4 . 20.",
+      nl: "P = 4 . 20."
     }
   },
   {
@@ -1021,12 +1021,12 @@ export const questions = [
       en: "Calculate the perimeter of a square with side 3 cm.",
       nl: "Bereken de omtrek van een vierkant met zijde 3 cm."
     },
-    // 4 × 3 = 12
+    // 4 . 3 = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 3.",
-      en: "P = 4 × 3.",
-      nl: "P = 4 × 3."
+      fr: "P = 4 . 3.",
+      en: "P = 4 . 3.",
+      nl: "P = 4 . 3."
     }
   },
 
@@ -1038,12 +1038,12 @@ export const questions = [
       en: "Calculate the perimeter of an equilateral triangle with side 8 cm.",
       nl: "Bereken de omtrek van een gelijkzijdige driehoek met zijde 8 cm."
     },
-    // 3 × 8 = 24
+    // 3 . 8 = 24
     answer: 24, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 8.",
-      en: "P = 3 × 8.",
-      nl: "P = 3 × 8."
+      fr: "P = 3 . 8.",
+      en: "P = 3 . 8.",
+      nl: "P = 3 . 8."
     }
   },
   {
@@ -1053,12 +1053,12 @@ export const questions = [
       en: "An equilateral triangle has a side of 12 cm. What is its perimeter?",
       nl: "Een gelijkzijdige driehoek heeft een zijde van 12 cm. Wat is de omtrek?"
     },
-    // 3 × 12 = 36
+    // 3 . 12 = 36
     answer: 36, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 12.",
-      en: "P = 3 × 12.",
-      nl: "P = 3 × 12."
+      fr: "P = 3 . 12.",
+      en: "P = 3 . 12.",
+      nl: "P = 3 . 12."
     }
   },
   {
@@ -1068,12 +1068,12 @@ export const questions = [
       en: "Calculate the perimeter of an equilateral triangle where each side is 5 cm.",
       nl: "Bereken de omtrek van een gelijkzijdige driehoek waarvan elke zijde 5 cm is."
     },
-    // 3 × 5 = 15
+    // 3 . 5 = 15
     answer: 15, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 5.",
-      en: "P = 3 × 5.",
-      nl: "P = 3 × 5."
+      fr: "P = 3 . 5.",
+      en: "P = 3 . 5.",
+      nl: "P = 3 . 5."
     }
   },
   {
@@ -1083,12 +1083,12 @@ export const questions = [
       en: "An equilateral triangle has a side of 16 cm. Calculate its perimeter.",
       nl: "Een gelijkzijdige driehoek heeft een zijde van 16 cm. Bereken de omtrek."
     },
-    // 3 × 16 = 48
+    // 3 . 16 = 48
     answer: 48, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 16.",
-      en: "P = 3 × 16.",
-      nl: "P = 3 × 16."
+      fr: "P = 3 . 16.",
+      en: "P = 3 . 16.",
+      nl: "P = 3 . 16."
     }
   },
 
@@ -1100,12 +1100,12 @@ export const questions = [
       en: "A rectangle is 25 cm long and 5 cm wide. What is its perimeter?",
       nl: "Een rechthoek is 25 cm lang en 5 cm breed. Wat is de omtrek?"
     },
-    // 2 × (25 + 5) = 2 × 30 = 60
+    // 2 . (25 + 5) = 2 . 30 = 60
     answer: 60, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (25 + 5) = 2 × 30.",
-      en: "P = 2 × (25 + 5) = 2 × 30.",
-      nl: "P = 2 × (25 + 5) = 2 × 30."
+      fr: "P = 2 . (25 + 5) = 2 . 30.",
+      en: "P = 2 . (25 + 5) = 2 . 30.",
+      nl: "P = 2 . (25 + 5) = 2 . 30."
     }
   },
   {
@@ -1115,12 +1115,12 @@ export const questions = [
       en: "Calculate the perimeter of a square with side 14 cm.",
       nl: "Bereken de omtrek van een vierkant met zijde 14 cm."
     },
-    // 4 × 14 = 56
+    // 4 . 14 = 56
     answer: 56, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 4 × 14.",
-      en: "P = 4 × 14.",
-      nl: "P = 4 × 14."
+      fr: "P = 4 . 14.",
+      en: "P = 4 . 14.",
+      nl: "P = 4 . 14."
     }
   },
   {
@@ -1130,12 +1130,12 @@ export const questions = [
       en: "An equilateral triangle has a side of 20 cm. Calculate its perimeter.",
       nl: "Een gelijkzijdige driehoek heeft een zijde van 20 cm. Bereken de omtrek."
     },
-    // 3 × 20 = 60
+    // 3 . 20 = 60
     answer: 60, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 20.",
-      en: "P = 3 × 20.",
-      nl: "P = 3 × 20."
+      fr: "P = 3 . 20.",
+      en: "P = 3 . 20.",
+      nl: "P = 3 . 20."
     }
   },
   {
@@ -1145,12 +1145,12 @@ export const questions = [
       en: "Calculate the perimeter of a rectangle with length 13 cm and width 2 cm.",
       nl: "Bereken de omtrek van een rechthoek met lengte 13 cm en breedte 2 cm."
     },
-    // 2 × (13 + 2) = 2 × 15 = 30
+    // 2 . (13 + 2) = 2 . 15 = 30
     answer: 30, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (13 + 2) = 2 × 15.",
-      en: "P = 2 × (13 + 2) = 2 × 15.",
-      nl: "P = 2 × (13 + 2) = 2 × 15."
+      fr: "P = 2 . (13 + 2) = 2 . 15.",
+      en: "P = 2 . (13 + 2) = 2 . 15.",
+      nl: "P = 2 . (13 + 2) = 2 . 15."
     }
   },
 
@@ -1170,9 +1170,9 @@ export const questions = [
     // 50 = 2(15+w) => 25 = 15+w => w = 10
     answer: 10, tolerance: 0, unit: "cm",
     hint: {
-      fr: "50 = 2 × (15 + l). Divise par 2 : 25 = 15 + l. Donc l = 10.",
-      en: "50 = 2 × (15 + w). Divide by 2: 25 = 15 + w. So w = 10.",
-      nl: "50 = 2 × (15 + b). Deel door 2: 25 = 15 + b. Dus b = 10."
+      fr: "50 = 2 . (15 + l). Divise par 2 : 25 = 15 + l. Donc l = 10.",
+      en: "50 = 2 . (15 + w). Divide by 2: 25 = 15 + w. So w = 10.",
+      nl: "50 = 2 . (15 + b). Deel door 2: 25 = 15 + b. Dus b = 10."
     }
   },
   {
@@ -1185,9 +1185,9 @@ export const questions = [
     // 38 = 2(L+7) => 19 = L+7 => L = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "38 = 2 × (L + 7). Divise par 2, puis soustrais 7.",
-      en: "38 = 2 × (L + 7). Divide by 2, then subtract 7.",
-      nl: "38 = 2 × (L + 7). Deel door 2, trek dan 7 af."
+      fr: "38 = 2 . (L + 7). Divise par 2, puis soustrais 7.",
+      en: "38 = 2 . (L + 7). Divide by 2, then subtract 7.",
+      nl: "38 = 2 . (L + 7). Deel door 2, trek dan 7 af."
     }
   },
   {
@@ -1200,9 +1200,9 @@ export const questions = [
     // 64 = 2(20+w) => 32 = 20+w => w = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "64 = 2 × (20 + l). Calcule 64 ÷ 2 = 32, puis 32 - 20 = 12.",
-      en: "64 = 2 × (20 + w). Calculate 64 / 2 = 32, then 32 - 20 = 12.",
-      nl: "64 = 2 × (20 + b). Bereken 64 / 2 = 32, dan 32 - 20 = 12."
+      fr: "64 = 2 . (20 + l). Calcule 64 : 2 = 32, puis 32 - 20 = 12.",
+      en: "64 = 2 . (20 + w). Calculate 64 / 2 = 32, then 32 - 20 = 12.",
+      nl: "64 = 2 . (20 + b). Bereken 64 / 2 = 32, dan 32 - 20 = 12."
     }
   },
   {
@@ -1215,9 +1215,9 @@ export const questions = [
     // 46 = 2(L+9) => 23 = L+9 => L = 14
     answer: 14, tolerance: 0, unit: "cm",
     hint: {
-      fr: "46 = 2 × (L + 9). Donc L = 46 ÷ 2 - 9 = 23 - 9.",
-      en: "46 = 2 × (L + 9). So L = 46 / 2 - 9 = 23 - 9.",
-      nl: "46 = 2 × (L + 9). Dus L = 46 / 2 - 9 = 23 - 9."
+      fr: "46 = 2 . (L + 9). Donc L = 46 : 2 - 9 = 23 - 9.",
+      en: "46 = 2 . (L + 9). So L = 46 / 2 - 9 = 23 - 9.",
+      nl: "46 = 2 . (L + 9). Dus L = 46 / 2 - 9 = 23 - 9."
     }
   },
 
@@ -1232,7 +1232,7 @@ export const questions = [
     // 72 / 4 = 18
     answer: 18, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 72 ÷ 4.",
+      fr: "Côté = 72 : 4.",
       en: "Side = 72 / 4.",
       nl: "Zijde = 72 / 4."
     }
@@ -1247,7 +1247,7 @@ export const questions = [
     // 28 / 4 = 7
     answer: 7, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 28 ÷ 4.",
+      fr: "Côté = 28 : 4.",
       en: "Side = 28 / 4.",
       nl: "Zijde = 28 / 4."
     }
@@ -1262,7 +1262,7 @@ export const questions = [
     // 100 / 4 = 25
     answer: 25, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 100 ÷ 4.",
+      fr: "Côté = 100 : 4.",
       en: "Side = 100 / 4.",
       nl: "Zijde = 100 / 4."
     }
@@ -1279,7 +1279,7 @@ export const questions = [
     // 45 / 3 = 15
     answer: 15, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 45 ÷ 3.",
+      fr: "Côté = 45 : 3.",
       en: "Side = 45 / 3.",
       nl: "Zijde = 45 / 3."
     }
@@ -1294,7 +1294,7 @@ export const questions = [
     // 27 / 3 = 9
     answer: 9, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 27 ÷ 3.",
+      fr: "Côté = 27 : 3.",
       en: "Side = 27 / 3.",
       nl: "Zijde = 27 / 3."
     }
@@ -1355,12 +1355,12 @@ export const questions = [
       en: "Calculate the perimeter of a regular pentagon with side 9 cm.",
       nl: "Bereken de omtrek van een regelmatige vijfhoek met zijde 9 cm."
     },
-    // 5 × 9 = 45
+    // 5 . 9 = 45
     answer: 45, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un pentagone régulier a 5 côtés. P = 5 × 9.",
-      en: "A regular pentagon has 5 sides. P = 5 × 9.",
-      nl: "Een regelmatige vijfhoek heeft 5 zijden. P = 5 × 9."
+      fr: "Un pentagone régulier a 5 côtés. P = 5 . 9.",
+      en: "A regular pentagon has 5 sides. P = 5 . 9.",
+      nl: "Een regelmatige vijfhoek heeft 5 zijden. P = 5 . 9."
     }
   },
   {
@@ -1370,12 +1370,12 @@ export const questions = [
       en: "Calculate the perimeter of a regular hexagon with side 8 cm.",
       nl: "Bereken de omtrek van een regelmatige zeshoek met zijde 8 cm."
     },
-    // 6 × 8 = 48
+    // 6 . 8 = 48
     answer: 48, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un hexagone régulier a 6 côtés. P = 6 × 8.",
-      en: "A regular hexagon has 6 sides. P = 6 × 8.",
-      nl: "Een regelmatige zeshoek heeft 6 zijden. P = 6 × 8."
+      fr: "Un hexagone régulier a 6 côtés. P = 6 . 8.",
+      en: "A regular hexagon has 6 sides. P = 6 . 8.",
+      nl: "Een regelmatige zeshoek heeft 6 zijden. P = 6 . 8."
     }
   },
 
@@ -1387,12 +1387,12 @@ export const questions = [
       en: "A rhombus has a side of 14 cm. What is its perimeter?",
       nl: "Een ruit heeft een zijde van 14 cm. Wat is de omtrek?"
     },
-    // 4 × 14 = 56
+    // 4 . 14 = 56
     answer: 56, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Un losange a 4 côtés égaux. P = 4 × 14.",
-      en: "A rhombus has 4 equal sides. P = 4 × 14.",
-      nl: "Een ruit heeft 4 gelijke zijden. P = 4 × 14."
+      fr: "Un losange a 4 côtés égaux. P = 4 . 14.",
+      en: "A rhombus has 4 equal sides. P = 4 . 14.",
+      nl: "Een ruit heeft 4 gelijke zijden. P = 4 . 14."
     }
   },
 
@@ -1404,12 +1404,12 @@ export const questions = [
       en: "A parallelogram has sides of 11 cm and 7 cm. Calculate its perimeter.",
       nl: "Een parallellogram heeft zijden van 11 cm en 7 cm. Bereken de omtrek."
     },
-    // 2 × (11 + 7) = 2 × 18 = 36
+    // 2 . (11 + 7) = 2 . 18 = 36
     answer: 36, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (11 + 7) = 2 × 18.",
-      en: "P = 2 × (11 + 7) = 2 × 18.",
-      nl: "P = 2 × (11 + 7) = 2 × 18."
+      fr: "P = 2 . (11 + 7) = 2 . 18.",
+      en: "P = 2 . (11 + 7) = 2 . 18.",
+      nl: "P = 2 . (11 + 7) = 2 . 18."
     }
   },
 
@@ -1475,7 +1475,7 @@ export const questions = [
     // 60 / 5 = 12
     answer: 12, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Côté = 60 ÷ 5.",
+      fr: "Côté = 60 : 5.",
       en: "Side = 60 / 5.",
       nl: "Zijde = 60 / 5."
     }
@@ -1497,9 +1497,9 @@ export const questions = [
     // P = 2(18+12) = 60, minus 4 = 56
     answer: 56, tolerance: 0, unit: "m",
     hint: {
-      fr: "Périmètre complet = 2 × (18 + 12) = 60 m, puis retire l'ouverture de 4 m.",
-      en: "Full perimeter = 2 × (18 + 12) = 60 m, then subtract the 4 m opening.",
-      nl: "Volledige omtrek = 2 × (18 + 12) = 60 m, trek dan de opening van 4 m af."
+      fr: "Périmètre complet = 2 . (18 + 12) = 60 m, puis retire l'ouverture de 4 m.",
+      en: "Full perimeter = 2 . (18 + 12) = 60 m, then subtract the 4 m opening.",
+      nl: "Volledige omtrek = 2 . (18 + 12) = 60 m, trek dan de opening van 4 m af."
     }
   },
   {
@@ -1524,12 +1524,12 @@ export const questions = [
       en: "A square field with side 20 m has a river along one side. The other three sides are fenced. How much fencing is needed?",
       nl: "Een vierkant terrein met zijde 20 m heeft een rivier langs een zijde. De drie andere zijden worden omheind. Hoeveel omheining is er nodig?"
     },
-    // 3 × 20 = 60
+    // 3 . 20 = 60
     answer: 60, tolerance: 0, unit: "m",
     hint: {
-      fr: "3 côtés = 3 × 20 = 60 m.",
-      en: "3 sides = 3 × 20 = 60 m.",
-      nl: "3 zijden = 3 × 20 = 60 m."
+      fr: "3 côtés = 3 . 20 = 60 m.",
+      en: "3 sides = 3 . 20 = 60 m.",
+      nl: "3 zijden = 3 . 20 = 60 m."
     }
   },
 
@@ -1541,14 +1541,14 @@ export const questions = [
       en: "Calculate the perimeter of a semicircle with diameter 14 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een halve cirkel met diameter 14 cm. (Gebruik pi = 3,14)"
     },
-    // Curved part = pi × 14 / 2 = 3.14 × 7 = 21.98
+    // Curved part = pi . 14 / 2 = 3.14 . 7 = 21.98
     // Straight part = 14
     // Total = 21.98 + 14 = 35.98
     answer: 35.98, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Périmètre = (pi × 14 / 2) + 14 = 21,98 + 14.",
-      en: "Perimeter = (pi × 14 / 2) + 14 = 21.98 + 14.",
-      nl: "Omtrek = (pi × 14 / 2) + 14 = 21,98 + 14."
+      fr: "Périmètre = (pi . 14 / 2) + 14 = 21,98 + 14.",
+      en: "Perimeter = (pi . 14 / 2) + 14 = 21.98 + 14.",
+      nl: "Omtrek = (pi . 14 / 2) + 14 = 21,98 + 14."
     }
   },
   {
@@ -1558,14 +1558,14 @@ export const questions = [
       en: "Calculate the perimeter of a semicircle with diameter 20 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een halve cirkel met diameter 20 cm. (Gebruik pi = 3,14)"
     },
-    // Curved part = pi × 20 / 2 = 3.14 × 10 = 31.4
+    // Curved part = pi . 20 / 2 = 3.14 . 10 = 31.4
     // Straight part = 20
     // Total = 31.4 + 20 = 51.4
     answer: 51.4, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Périmètre = (pi × 20 / 2) + 20 = 31,4 + 20.",
-      en: "Perimeter = (pi × 20 / 2) + 20 = 31.4 + 20.",
-      nl: "Omtrek = (pi × 20 / 2) + 20 = 31,4 + 20."
+      fr: "Périmètre = (pi . 20 / 2) + 20 = 31,4 + 20.",
+      en: "Perimeter = (pi . 20 / 2) + 20 = 31.4 + 20.",
+      nl: "Omtrek = (pi . 20 / 2) + 20 = 31,4 + 20."
     }
   },
   {
@@ -1575,14 +1575,14 @@ export const questions = [
       en: "Calculate the perimeter of a semicircle with diameter 6 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een halve cirkel met diameter 6 cm. (Gebruik pi = 3,14)"
     },
-    // Curved part = pi × 6 / 2 = 3.14 × 3 = 9.42
+    // Curved part = pi . 6 / 2 = 3.14 . 3 = 9.42
     // Straight part = 6
     // Total = 9.42 + 6 = 15.42
     answer: 15.42, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Périmètre = (pi × 6 / 2) + 6 = 9,42 + 6.",
-      en: "Perimeter = (pi × 6 / 2) + 6 = 9.42 + 6.",
-      nl: "Omtrek = (pi × 6 / 2) + 6 = 9,42 + 6."
+      fr: "Périmètre = (pi . 6 / 2) + 6 = 9,42 + 6.",
+      en: "Perimeter = (pi . 6 / 2) + 6 = 9.42 + 6.",
+      nl: "Omtrek = (pi . 6 / 2) + 6 = 9,42 + 6."
     }
   },
 
@@ -1626,13 +1626,13 @@ export const questions = [
       en: "A window is shaped like a rectangle 80 cm tall and 40 cm wide, topped by a semicircle with diameter 40 cm. Calculate the perimeter of this window. (pi = 3.14)",
       nl: "Een raam heeft de vorm van een rechthoek van 80 cm hoog en 40 cm breed, met daarboven een halve cirkel met diameter 40 cm. Bereken de omtrek van dit raam. (pi = 3,14)"
     },
-    // Bottom: 40, two sides: 80+80=160, semicircle arc: pi×40/2 = 62.8
+    // Bottom: 40, two sides: 80+80=160, semicircle arc: pi.40/2 = 62.8
     // Total = 40 + 160 + 62.8 = 262.8
     answer: 262.8, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Bas (40) + deux côtés (80 + 80) + demi-cercle (pi × 40 / 2 = 62,8) = 262,8 cm.",
-      en: "Bottom (40) + two sides (80 + 80) + semicircle (pi × 40 / 2 = 62.8) = 262.8 cm.",
-      nl: "Onderkant (40) + twee zijden (80 + 80) + halve cirkel (pi × 40 / 2 = 62,8) = 262,8 cm."
+      fr: "Bas (40) + deux côtés (80 + 80) + demi-cercle (pi . 40 / 2 = 62,8) = 262,8 cm.",
+      en: "Bottom (40) + two sides (80 + 80) + semicircle (pi . 40 / 2 = 62.8) = 262.8 cm.",
+      nl: "Onderkant (40) + twee zijden (80 + 80) + halve cirkel (pi . 40 / 2 = 62,8) = 262,8 cm."
     }
   },
 
@@ -1640,9 +1640,9 @@ export const questions = [
   {
     id: "G1_s_100", category: "G1", level: 3,
     text: {
-      fr: "Deux rectangles sont accolés pour former un T : un rectangle horizontal de 16 cm × 4 cm et un rectangle vertical de 4 cm × 10 cm centré en dessous. Calcule le périmètre de cette figure.",
-      en: "Two rectangles form a T-shape: a horizontal rectangle 16 cm × 4 cm and a vertical rectangle 4 cm × 10 cm centered below. Calculate the perimeter of this figure.",
-      nl: "Twee rechthoeken vormen een T-vorm: een horizontale rechthoek van 16 cm × 4 cm en een verticale rechthoek van 4 cm × 10 cm eronder gecentreerd. Bereken de omtrek van deze figuur."
+      fr: "Deux rectangles sont accolés pour former un T : un rectangle horizontal de 16 cm . 4 cm et un rectangle vertical de 4 cm . 10 cm centré en dessous. Calcule le périmètre de cette figure.",
+      en: "Two rectangles form a T-shape: a horizontal rectangle 16 cm . 4 cm and a vertical rectangle 4 cm . 10 cm centered below. Calculate the perimeter of this figure.",
+      nl: "Twee rechthoeken vormen een T-vorm: een horizontale rechthoek van 16 cm . 4 cm en een verticale rechthoek van 4 cm . 10 cm eronder gecentreerd. Bereken de omtrek van deze figuur."
     },
     // Trace: top 16, right side down 4, go left (16-4)/2=6, down 10, bottom 4, up 10, go left 6, up 4
     // Total: 16 + 4 + 6 + 10 + 4 + 10 + 6 + 4 = 60
@@ -1662,12 +1662,12 @@ export const questions = [
       en: "Calculate the circumference of a circle with diameter 15 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een cirkel met diameter 15 cm. (Gebruik pi = 3,14)"
     },
-    // C = pi × d = 3.14 × 15 = 47.1
+    // C = pi . d = 3.14 . 15 = 47.1
     answer: 47.1, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "C = pi × diamètre = 3,14 × 15.",
-      en: "C = pi × diameter = 3.14 × 15.",
-      nl: "C = pi × diameter = 3,14 × 15."
+      fr: "C = pi . diamètre = 3,14 . 15.",
+      en: "C = pi . diameter = 3.14 . 15.",
+      nl: "C = pi . diameter = 3,14 . 15."
     }
   },
   {
@@ -1677,12 +1677,12 @@ export const questions = [
       en: "Calculate the circumference of a circle with radius 10 cm. (Use pi = 3.14)",
       nl: "Bereken de omtrek van een cirkel met straal 10 cm. (Gebruik pi = 3,14)"
     },
-    // C = 2 × pi × r = 2 × 3.14 × 10 = 62.8
+    // C = 2 . pi . r = 2 . 3.14 . 10 = 62.8
     answer: 62.8, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "C = 2 × pi × rayon = 2 × 3,14 × 10.",
-      en: "C = 2 × pi × radius = 2 × 3.14 × 10.",
-      nl: "C = 2 × pi × straal = 2 × 3,14 × 10."
+      fr: "C = 2 . pi . rayon = 2 . 3,14 . 10.",
+      en: "C = 2 . pi . radius = 2 . 3.14 . 10.",
+      nl: "C = 2 . pi . straal = 2 . 3,14 . 10."
     }
   },
 
@@ -1694,13 +1694,13 @@ export const questions = [
       en: "A rectangular garden 20 m by 14 m is surrounded by a 2 m wide path. Calculate the outer perimeter of the path.",
       nl: "Een rechthoekige tuin van 20 m op 14 m is omgeven door een pad van 2 m breed. Bereken de buitenomtrek van het pad."
     },
-    // Outer rectangle: (20+2+2) × (14+2+2) = 24 × 18
-    // P = 2 × (24 + 18) = 2 × 42 = 84
+    // Outer rectangle: (20+2+2) . (14+2+2) = 24 . 18
+    // P = 2 . (24 + 18) = 2 . 42 = 84
     answer: 84, tolerance: 0, unit: "m",
     hint: {
-      fr: "Rectangle extérieur : (20+4) × (14+4) = 24 × 18. P = 2 × (24 + 18) = 84 m.",
-      en: "Outer rectangle: (20+4) × (14+4) = 24 × 18. P = 2 × (24 + 18) = 84 m.",
-      nl: "Buitenste rechthoek: (20+4) × (14+4) = 24 × 18. P = 2 × (24 + 18) = 84 m."
+      fr: "Rectangle extérieur : (20+4) . (14+4) = 24 . 18. P = 2 . (24 + 18) = 84 m.",
+      en: "Outer rectangle: (20+4) . (14+4) = 24 . 18. P = 2 . (24 + 18) = 84 m.",
+      nl: "Buitenste rechthoek: (20+4) . (14+4) = 24 . 18. P = 2 . (24 + 18) = 84 m."
     }
   },
 
@@ -1712,12 +1712,12 @@ export const questions = [
       en: "Three squares with side 5 cm are placed side by side in a row to form a rectangle. What is the perimeter of the resulting rectangle?",
       nl: "Drie vierkanten met zijde 5 cm worden naast elkaar in een rij geplaatst om een rechthoek te vormen. Wat is de omtrek van de resulterende rechthoek?"
     },
-    // Rectangle 15 cm × 5 cm => P = 2(15+5) = 40
+    // Rectangle 15 cm . 5 cm => P = 2(15+5) = 40
     answer: 40, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Le rectangle obtenu mesure 15 cm × 5 cm. P = 2 × (15 + 5) = 40.",
-      en: "The resulting rectangle is 15 cm × 5 cm. P = 2 × (15 + 5) = 40.",
-      nl: "De resulterende rechthoek is 15 cm × 5 cm. P = 2 × (15 + 5) = 40."
+      fr: "Le rectangle obtenu mesure 15 cm . 5 cm. P = 2 . (15 + 5) = 40.",
+      en: "The resulting rectangle is 15 cm . 5 cm. P = 2 . (15 + 5) = 40.",
+      nl: "De resulterende rechthoek is 15 cm . 5 cm. P = 2 . (15 + 5) = 40."
     }
   },
 
@@ -1729,14 +1729,14 @@ export const questions = [
       en: "Calculate the perimeter of a quarter circle with radius 10 cm. (pi = 3.14)",
       nl: "Bereken de omtrek van een kwart cirkel met straal 10 cm. (pi = 3,14)"
     },
-    // Arc = 2 × pi × 10 / 4 = 3.14 × 20 / 4 = 15.7
+    // Arc = 2 . pi . 10 / 4 = 3.14 . 20 / 4 = 15.7
     // Two radii = 10 + 10 = 20
     // Total = 15.7 + 20 = 35.7
     answer: 35.7, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Arc = 2 × pi × 10 / 4 = 15,7 cm. Ajoute les deux rayons : 15,7 + 10 + 10 = 35,7 cm.",
-      en: "Arc = 2 × pi × 10 / 4 = 15.7 cm. Add the two radii: 15.7 + 10 + 10 = 35.7 cm.",
-      nl: "Boog = 2 × pi × 10 / 4 = 15,7 cm. Voeg de twee stralen toe: 15,7 + 10 + 10 = 35,7 cm."
+      fr: "Arc = 2 . pi . 10 / 4 = 15,7 cm. Ajoute les deux rayons : 15,7 + 10 + 10 = 35,7 cm.",
+      en: "Arc = 2 . pi . 10 / 4 = 15.7 cm. Add the two radii: 15.7 + 10 + 10 = 35.7 cm.",
+      nl: "Boog = 2 . pi . 10 / 4 = 15,7 cm. Voeg de twee stralen toe: 15,7 + 10 + 10 = 35,7 cm."
     }
   },
 
@@ -1768,9 +1768,9 @@ export const questions = [
     // P = 2(30+20) = 100, + 15 = 115
     answer: 115, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre = 2 × (30 + 20) = 100 cm, plus le noeud de 15 cm.",
-      en: "Perimeter = 2 × (30 + 20) = 100 cm, plus the 15 cm bow.",
-      nl: "Omtrek = 2 × (30 + 20) = 100 cm, plus de strik van 15 cm."
+      fr: "Périmètre = 2 . (30 + 20) = 100 cm, plus le noeud de 15 cm.",
+      en: "Perimeter = 2 . (30 + 20) = 100 cm, plus the 15 cm bow.",
+      nl: "Omtrek = 2 . (30 + 20) = 100 cm, plus de strik van 15 cm."
     }
   },
 
@@ -1800,12 +1800,12 @@ export const questions = [
       en: "A wheel has a diameter of 30 cm. What distance does it cover in one full turn? (pi = 3.14)",
       nl: "Een wiel heeft een diameter van 30 cm. Welke afstand legt het af in een volledige omwenteling? (pi = 3,14)"
     },
-    // C = pi × d = 3.14 × 30 = 94.2
+    // C = pi . d = 3.14 . 30 = 94.2
     answer: 94.2, tolerance: 0.1, unit: "cm",
     hint: {
-      fr: "Distance = pi × diamètre = 3,14 × 30.",
-      en: "Distance = pi × diameter = 3.14 × 30.",
-      nl: "Afstand = pi × diameter = 3,14 × 30."
+      fr: "Distance = pi . diamètre = 3,14 . 30.",
+      en: "Distance = pi . diameter = 3.14 . 30.",
+      nl: "Afstand = pi . diameter = 3,14 . 30."
     }
   },
 
@@ -1817,14 +1817,14 @@ export const questions = [
       en: "A track is shaped like a 30 m by 14 m rectangle with a semicircle on each short end (diameter = 14 m). Calculate the total perimeter. (pi = 3.14)",
       nl: "Een baan heeft de vorm van een rechthoek van 30 m op 14 m, met een halve cirkel aan elke korte zijde (diameter = 14 m). Bereken de totale omtrek. (pi = 3,14)"
     },
-    // Two long sides: 2 × 30 = 60
-    // Two semicircles = one full circle of diameter 14: pi × 14 = 43.96
+    // Two long sides: 2 . 30 = 60
+    // Two semicircles = one full circle of diameter 14: pi . 14 = 43.96
     // Total = 60 + 43.96 = 103.96
     answer: 103.96, tolerance: 0.1, unit: "m",
     hint: {
-      fr: "2 longueurs (2 × 30 = 60 m) + 2 demi-cercles = 1 cercle (pi × 14 = 43,96 m). Total = 103,96 m.",
-      en: "2 lengths (2 × 30 = 60 m) + 2 semicircles = 1 full circle (pi × 14 = 43.96 m). Total = 103.96 m.",
-      nl: "2 lengtes (2 × 30 = 60 m) + 2 halve cirkels = 1 volledige cirkel (pi × 14 = 43,96 m). Totaal = 103,96 m."
+      fr: "2 longueurs (2 . 30 = 60 m) + 2 demi-cercles = 1 cercle (pi . 14 = 43,96 m). Total = 103,96 m.",
+      en: "2 lengths (2 . 30 = 60 m) + 2 semicircles = 1 full circle (pi . 14 = 43.96 m). Total = 103.96 m.",
+      nl: "2 lengtes (2 . 30 = 60 m) + 2 halve cirkels = 1 volledige cirkel (pi . 14 = 43,96 m). Totaal = 103,96 m."
     }
   },
 
@@ -1839,9 +1839,9 @@ export const questions = [
     // P = 2(35+20) = 110, minus 4 minus 1 = 105
     answer: 105, tolerance: 0, unit: "m",
     hint: {
-      fr: "Périmètre complet = 2 × (35 + 20) = 110 m. Retire les ouvertures : 110 - 4 - 1 = 105 m.",
-      en: "Full perimeter = 2 × (35 + 20) = 110 m. Subtract the openings: 110 - 4 - 1 = 105 m.",
-      nl: "Volledige omtrek = 2 × (35 + 20) = 110 m. Trek de openingen af: 110 - 4 - 1 = 105 m."
+      fr: "Périmètre complet = 2 . (35 + 20) = 110 m. Retire les ouvertures : 110 - 4 - 1 = 105 m.",
+      en: "Full perimeter = 2 . (35 + 20) = 110 m. Subtract the openings: 110 - 4 - 1 = 105 m.",
+      nl: "Volledige omtrek = 2 . (35 + 20) = 110 m. Trek de openingen af: 110 - 4 - 1 = 105 m."
     }
   },
 
@@ -1855,9 +1855,9 @@ export const questions = [
     },
     answer: 52, tolerance: 0, unit: "cm",
     hint: {
-      fr: "Périmètre = 4 × 13 = 52 cm.",
-      en: "Perimeter = 4 × 13 = 52 cm.",
-      nl: "Omtrek = 4 × 13 = 52 cm."
+      fr: "Périmètre = 4 . 13 = 52 cm.",
+      en: "Perimeter = 4 . 13 = 52 cm.",
+      nl: "Omtrek = 4 . 13 = 52 cm."
     }
   },
   {
@@ -1869,9 +1869,9 @@ export const questions = [
     },
     answer: 50, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 2 × (18 + 7) = 2 × 25 = 50 cm.",
-      en: "P = 2 × (18 + 7) = 2 × 25 = 50 cm.",
-      nl: "P = 2 × (18 + 7) = 2 × 25 = 50 cm."
+      fr: "P = 2 . (18 + 7) = 2 . 25 = 50 cm.",
+      en: "P = 2 . (18 + 7) = 2 . 25 = 50 cm.",
+      nl: "P = 2 . (18 + 7) = 2 . 25 = 50 cm."
     }
   },
   {
@@ -1883,9 +1883,9 @@ export const questions = [
     },
     answer: 27, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 3 × 9 = 27 cm.",
-      en: "P = 3 × 9 = 27 cm.",
-      nl: "P = 3 × 9 = 27 cm."
+      fr: "P = 3 . 9 = 27 cm.",
+      en: "P = 3 . 9 = 27 cm.",
+      nl: "P = 3 . 9 = 27 cm."
     }
   },
   {
@@ -1911,9 +1911,9 @@ export const questions = [
     },
     answer: 36, tolerance: 0, unit: "cm",
     hint: {
-      fr: "P = 6 × 6 = 36 cm.",
-      en: "P = 6 × 6 = 36 cm.",
-      nl: "P = 6 × 6 = 36 cm."
+      fr: "P = 6 . 6 = 36 cm.",
+      en: "P = 6 . 6 = 36 cm.",
+      nl: "P = 6 . 6 = 36 cm."
     }
   },
   {
@@ -1925,9 +1925,9 @@ export const questions = [
     },
     answer: 146, tolerance: 0, unit: "m",
     hint: {
-      fr: "Dimensions extérieures : (40 + 2×2) = 44 m et (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m.",
-      en: "Outer dimensions: (40 + 2×2) = 44 m and (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m.",
-      nl: "Buitenafmetingen: (40 + 2×2) = 44 m en (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m."
+      fr: "Dimensions extérieures : (40 + 2.2) = 44 m et (25 + 2.2) = 29 m. P = 2 . (44 + 29) = 146 m.",
+      en: "Outer dimensions: (40 + 2.2) = 44 m and (25 + 2.2) = 29 m. P = 2 . (44 + 29) = 146 m.",
+      nl: "Buitenafmetingen: (40 + 2.2) = 44 m en (25 + 2.2) = 29 m. P = 2 . (44 + 29) = 146 m."
     }
   },
   {
@@ -1939,9 +1939,9 @@ export const questions = [
     },
     answer: 31.42, tolerance: 0.01, unit: "cm",
     hint: {
-      fr: "C = π × d = π × 10 ≈ 31,42 cm.",
-      en: "C = π × d = π × 10 ≈ 31.42 cm.",
-      nl: "C = π × d = π × 10 ≈ 31,42 cm."
+      fr: "C = π . d = π . 10 ≈ 31,42 cm.",
+      en: "C = π . d = π . 10 ≈ 31.42 cm.",
+      nl: "C = π . d = π . 10 ≈ 31,42 cm."
     }
   },
 ];
@@ -1976,9 +1976,9 @@ export function generate(level = 1) {
         },
         answer: 2 * (a + b), tolerance: 0, unit: 'cm',
         hint: {
-          fr: `P = 2 × (${a} + ${b}).`,
-          en: `P = 2 × (${a} + ${b}).`,
-          nl: `P = 2 × (${a} + ${b}).`
+          fr: `P = 2 . (${a} + ${b}).`,
+          en: `P = 2 . (${a} + ${b}).`,
+          nl: `P = 2 . (${a} + ${b}).`
         }
       };
     }
@@ -1995,9 +1995,9 @@ export function generate(level = 1) {
         },
         answer: 4 * s, tolerance: 0, unit: 'cm',
         hint: {
-          fr: `P = 4 × ${s}.`,
-          en: `P = 4 × ${s}.`,
-          nl: `P = 4 × ${s}.`
+          fr: `P = 4 . ${s}.`,
+          en: `P = 4 . ${s}.`,
+          nl: `P = 4 . ${s}.`
         }
       };
     }
@@ -2013,9 +2013,9 @@ export function generate(level = 1) {
       },
       answer: 3 * s, tolerance: 0, unit: 'cm',
       hint: {
-        fr: `P = 3 × ${s}.`,
-        en: `P = 3 × ${s}.`,
-        nl: `P = 3 × ${s}.`
+        fr: `P = 3 . ${s}.`,
+        en: `P = 3 . ${s}.`,
+        nl: `P = 3 . ${s}.`
       }
     };
   }
@@ -2037,7 +2037,7 @@ export function generate(level = 1) {
         },
         answer: side, tolerance: 0, unit: 'cm',
         hint: {
-          fr: `Côté = ${p} ÷ 4.`,
+          fr: `Côté = ${p} : 4.`,
           en: `Side = ${p} / 4.`,
           nl: `Zijde = ${p} / 4.`
         }
@@ -2058,9 +2058,9 @@ export function generate(level = 1) {
         },
         answer: w, tolerance: 0, unit: 'cm',
         hint: {
-          fr: `${p} = 2 × (${l} + l). Résous pour l.`,
-          en: `${p} = 2 × (${l} + w). Solve for w.`,
-          nl: `${p} = 2 × (${l} + b). Los op naar b.`
+          fr: `${p} = 2 . (${l} + l). Résous pour l.`,
+          en: `${p} = 2 . (${l} + w). Solve for w.`,
+          nl: `${p} = 2 . (${l} + b). Los op naar b.`
         }
       };
     }
@@ -2101,9 +2101,9 @@ export function generate(level = 1) {
     },
     answer: sides * s, tolerance: 0, unit: 'cm',
     hint: {
-      fr: `P = ${sides} × ${s}.`,
-      en: `P = ${sides} × ${s}.`,
-      nl: `P = ${sides} × ${s}.`
+      fr: `P = ${sides} . ${s}.`,
+      en: `P = ${sides} . ${s}.`,
+      nl: `P = ${sides} . ${s}.`
     }
   };
 }

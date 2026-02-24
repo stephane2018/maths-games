@@ -11,97 +11,97 @@ export const questions = [
     id: "N6_s_1", category: "N6", level: 1,
     text: { fr: "Calcule : 2⁴", en: "Calculate: 2⁴", nl: "Bereken: 2⁴" },
     answer: 16, tolerance: 0,
-    hint: { fr: "2⁴ = 2 × 2 × 2 × 2", en: "2⁴ = 2 × 2 × 2 × 2", nl: "2⁴ = 2 × 2 × 2 × 2" }
+    hint: { fr: "2⁴ = 2 . 2 . 2 . 2", en: "2⁴ = 2 . 2 . 2 . 2", nl: "2⁴ = 2 . 2 . 2 . 2" }
   },
   {
     id: "N6_s_2", category: "N6", level: 1,
     text: { fr: "Calcule : 3³", en: "Calculate: 3³", nl: "Bereken: 3³" },
     answer: 27, tolerance: 0,
-    hint: { fr: "3³ = 3 × 3 × 3", en: "3³ = 3 × 3 × 3", nl: "3³ = 3 × 3 × 3" }
+    hint: { fr: "3³ = 3 . 3 . 3", en: "3³ = 3 . 3 . 3", nl: "3³ = 3 . 3 . 3" }
   },
   {
     id: "N6_s_3", category: "N6", level: 1,
     text: { fr: "Calcule : 5²", en: "Calculate: 5²", nl: "Bereken: 5²" },
     answer: 25, tolerance: 0,
-    hint: { fr: "5² = 5 × 5", en: "5² = 5 × 5", nl: "5² = 5 × 5" }
+    hint: { fr: "5² = 5 . 5", en: "5² = 5 . 5", nl: "5² = 5 . 5" }
   },
   {
     id: "N6_s_4", category: "N6", level: 1,
     text: { fr: "Calcule : 10³", en: "Calculate: 10³", nl: "Bereken: 10³" },
     answer: 1000, tolerance: 0,
-    hint: { fr: "10³ = 10 × 10 × 10", en: "10³ = 10 × 10 × 10", nl: "10³ = 10 × 10 × 10" }
+    hint: { fr: "10³ = 10 . 10 . 10", en: "10³ = 10 . 10 . 10", nl: "10³ = 10 . 10 . 10" }
   },
   {
     id: "N6_s_5", category: "N6", level: 1,
     text: { fr: "Calcule : 7²", en: "Calculate: 7²", nl: "Bereken: 7²" },
     answer: 49, tolerance: 0,
-    hint: { fr: "7² = 7 × 7", en: "7² = 7 × 7", nl: "7² = 7 × 7" }
+    hint: { fr: "7² = 7 . 7", en: "7² = 7 . 7", nl: "7² = 7 . 7" }
   },
   {
     id: "N6_s_16", category: "N6", level: 1,
     text: { fr: "Calcule : 4³", en: "Calculate: 4³", nl: "Bereken: 4³" },
     answer: 64, tolerance: 0,
-    hint: { fr: "4³ = 4 × 4 × 4 = 64", en: "4³ = 4 × 4 × 4 = 64", nl: "4³ = 4 × 4 × 4 = 64" }
+    hint: { fr: "4³ = 4 . 4 . 4 = 64", en: "4³ = 4 . 4 . 4 = 64", nl: "4³ = 4 . 4 . 4 = 64" }
   },
   {
     id: "N6_s_17", category: "N6", level: 1,
     text: { fr: "Calcule : 6²", en: "Calculate: 6²", nl: "Bereken: 6²" },
     answer: 36, tolerance: 0,
-    hint: { fr: "6² = 6 × 6 = 36", en: "6² = 6 × 6 = 36", nl: "6² = 6 × 6 = 36" }
+    hint: { fr: "6² = 6 . 6 = 36", en: "6² = 6 . 6 = 36", nl: "6² = 6 . 6 = 36" }
   },
   {
     id: "N6_s_18", category: "N6", level: 1,
     text: { fr: "Calcule : 8²", en: "Calculate: 8²", nl: "Bereken: 8²" },
     answer: 64, tolerance: 0,
-    hint: { fr: "8² = 8 × 8 = 64", en: "8² = 8 × 8 = 64", nl: "8² = 8 × 8 = 64" }
+    hint: { fr: "8² = 8 . 8 = 64", en: "8² = 8 . 8 = 64", nl: "8² = 8 . 8 = 64" }
   },
   {
     id: "N6_s_19", category: "N6", level: 1,
     text: { fr: "Calcule : 9²", en: "Calculate: 9²", nl: "Bereken: 9²" },
     answer: 81, tolerance: 0,
-    hint: { fr: "9² = 9 × 9 = 81", en: "9² = 9 × 9 = 81", nl: "9² = 9 × 9 = 81" }
+    hint: { fr: "9² = 9 . 9 = 81", en: "9² = 9 . 9 = 81", nl: "9² = 9 . 9 = 81" }
   },
   {
     id: "N6_s_20", category: "N6", level: 1,
     text: { fr: "Calcule : 11²", en: "Calculate: 11²", nl: "Bereken: 11²" },
     answer: 121, tolerance: 0,
-    hint: { fr: "11² = 11 × 11 = 121", en: "11² = 11 × 11 = 121", nl: "11² = 11 × 11 = 121" }
+    hint: { fr: "11² = 11 . 11 = 121", en: "11² = 11 . 11 = 121", nl: "11² = 11 . 11 = 121" }
   },
   {
     id: "N6_s_21", category: "N6", level: 1,
     text: { fr: "Calcule : 10²", en: "Calculate: 10²", nl: "Bereken: 10²" },
     answer: 100, tolerance: 0,
-    hint: { fr: "10² = 10 × 10 = 100", en: "10² = 10 × 10 = 100", nl: "10² = 10 × 10 = 100" }
+    hint: { fr: "10² = 10 . 10 = 100", en: "10² = 10 . 10 = 100", nl: "10² = 10 . 10 = 100" }
   },
   {
     id: "N6_s_22", category: "N6", level: 1,
     text: { fr: "Calcule : 2³", en: "Calculate: 2³", nl: "Bereken: 2³" },
     answer: 8, tolerance: 0,
-    hint: { fr: "2³ = 2 × 2 × 2 = 8", en: "2³ = 2 × 2 × 2 = 8", nl: "2³ = 2 × 2 × 2 = 8" }
+    hint: { fr: "2³ = 2 . 2 . 2 = 8", en: "2³ = 2 . 2 . 2 = 8", nl: "2³ = 2 . 2 . 2 = 8" }
   },
   {
     id: "N6_s_23", category: "N6", level: 1,
     text: { fr: "Calcule : 4²", en: "Calculate: 4²", nl: "Bereken: 4²" },
     answer: 16, tolerance: 0,
-    hint: { fr: "4² = 4 × 4 = 16", en: "4² = 4 × 4 = 16", nl: "4² = 4 × 4 = 16" }
+    hint: { fr: "4² = 4 . 4 = 16", en: "4² = 4 . 4 = 16", nl: "4² = 4 . 4 = 16" }
   },
   {
     id: "N6_s_24", category: "N6", level: 1,
     text: { fr: "Calcule : 12²", en: "Calculate: 12²", nl: "Bereken: 12²" },
     answer: 144, tolerance: 0,
-    hint: { fr: "12² = 12 × 12 = 144", en: "12² = 12 × 12 = 144", nl: "12² = 12 × 12 = 144" }
+    hint: { fr: "12² = 12 . 12 = 144", en: "12² = 12 . 12 = 144", nl: "12² = 12 . 12 = 144" }
   },
   {
     id: "N6_s_25", category: "N6", level: 1,
     text: { fr: "Calcule : 5³", en: "Calculate: 5³", nl: "Bereken: 5³" },
     answer: 125, tolerance: 0,
-    hint: { fr: "5³ = 5 × 5 × 5 = 125", en: "5³ = 5 × 5 × 5 = 125", nl: "5³ = 5 × 5 × 5 = 125" }
+    hint: { fr: "5³ = 5 . 5 . 5 = 125", en: "5³ = 5 . 5 . 5 = 125", nl: "5³ = 5 . 5 . 5 = 125" }
   },
   {
     id: "N6_s_26", category: "N6", level: 1,
     text: { fr: "Calcule : 6³", en: "Calculate: 6³", nl: "Bereken: 6³" },
     answer: 216, tolerance: 0,
-    hint: { fr: "6³ = 6 × 6 × 6 = 216", en: "6³ = 6 × 6 × 6 = 216", nl: "6³ = 6 × 6 × 6 = 216" }
+    hint: { fr: "6³ = 6 . 6 . 6 = 216", en: "6³ = 6 . 6 . 6 = 216", nl: "6³ = 6 . 6 . 6 = 216" }
   },
   {
     id: "N6_s_27", category: "N6", level: 1,
@@ -113,121 +113,121 @@ export const questions = [
     id: "N6_s_51", category: "N6", level: 1,
     text: { fr: "Calcule : 3²", en: "Calculate: 3²", nl: "Bereken: 3²" },
     answer: 9, tolerance: 0,
-    hint: { fr: "3² = 3 × 3 = 9", en: "3² = 3 × 3 = 9", nl: "3² = 3 × 3 = 9" }
+    hint: { fr: "3² = 3 . 3 = 9", en: "3² = 3 . 3 = 9", nl: "3² = 3 . 3 = 9" }
   },
   {
     id: "N6_s_52", category: "N6", level: 1,
     text: { fr: "Calcule : 2²", en: "Calculate: 2²", nl: "Bereken: 2²" },
     answer: 4, tolerance: 0,
-    hint: { fr: "2² = 2 × 2 = 4", en: "2² = 2 × 2 = 4", nl: "2² = 2 × 2 = 4" }
+    hint: { fr: "2² = 2 . 2 = 4", en: "2² = 2 . 2 = 4", nl: "2² = 2 . 2 = 4" }
   },
   {
     id: "N6_s_53", category: "N6", level: 1,
     text: { fr: "Calcule : 13²", en: "Calculate: 13²", nl: "Bereken: 13²" },
     answer: 169, tolerance: 0,
-    hint: { fr: "13² = 13 × 13 = 169", en: "13² = 13 × 13 = 169", nl: "13² = 13 × 13 = 169" }
+    hint: { fr: "13² = 13 . 13 = 169", en: "13² = 13 . 13 = 169", nl: "13² = 13 . 13 = 169" }
   },
   {
     id: "N6_s_54", category: "N6", level: 1,
     text: { fr: "Calcule : 14²", en: "Calculate: 14²", nl: "Bereken: 14²" },
     answer: 196, tolerance: 0,
-    hint: { fr: "14² = 14 × 14 = 196", en: "14² = 14 × 14 = 196", nl: "14² = 14 × 14 = 196" }
+    hint: { fr: "14² = 14 . 14 = 196", en: "14² = 14 . 14 = 196", nl: "14² = 14 . 14 = 196" }
   },
   {
     id: "N6_s_55", category: "N6", level: 1,
     text: { fr: "Calcule : 15²", en: "Calculate: 15²", nl: "Bereken: 15²" },
     answer: 225, tolerance: 0,
-    hint: { fr: "15² = 15 × 15 = 225", en: "15² = 15 × 15 = 225", nl: "15² = 15 × 15 = 225" }
+    hint: { fr: "15² = 15 . 15 = 225", en: "15² = 15 . 15 = 225", nl: "15² = 15 . 15 = 225" }
   },
   {
     id: "N6_s_56", category: "N6", level: 1,
     text: { fr: "Calcule : 7³", en: "Calculate: 7³", nl: "Bereken: 7³" },
     answer: 343, tolerance: 0,
-    hint: { fr: "7³ = 7 × 7 × 7 = 343", en: "7³ = 7 × 7 × 7 = 343", nl: "7³ = 7 × 7 × 7 = 343" }
+    hint: { fr: "7³ = 7 . 7 . 7 = 343", en: "7³ = 7 . 7 . 7 = 343", nl: "7³ = 7 . 7 . 7 = 343" }
   },
   {
     id: "N6_s_57", category: "N6", level: 1,
     text: { fr: "Calcule : 8³", en: "Calculate: 8³", nl: "Bereken: 8³" },
     answer: 512, tolerance: 0,
-    hint: { fr: "8³ = 8 × 8 × 8 = 512", en: "8³ = 8 × 8 × 8 = 512", nl: "8³ = 8 × 8 × 8 = 512" }
+    hint: { fr: "8³ = 8 . 8 . 8 = 512", en: "8³ = 8 . 8 . 8 = 512", nl: "8³ = 8 . 8 . 8 = 512" }
   },
   {
     id: "N6_s_58", category: "N6", level: 1,
     text: { fr: "Calcule : 9³", en: "Calculate: 9³", nl: "Bereken: 9³" },
     answer: 729, tolerance: 0,
-    hint: { fr: "9³ = 9 × 9 × 9 = 729", en: "9³ = 9 × 9 × 9 = 729", nl: "9³ = 9 × 9 × 9 = 729" }
+    hint: { fr: "9³ = 9 . 9 . 9 = 729", en: "9³ = 9 . 9 . 9 = 729", nl: "9³ = 9 . 9 . 9 = 729" }
   },
   {
     id: "N6_s_59", category: "N6", level: 1,
     text: { fr: "Calcule : 3⁴", en: "Calculate: 3⁴", nl: "Bereken: 3⁴" },
     answer: 81, tolerance: 0,
-    hint: { fr: "3⁴ = 3 × 3 × 3 × 3 = 81", en: "3⁴ = 3 × 3 × 3 × 3 = 81", nl: "3⁴ = 3 × 3 × 3 × 3 = 81" }
+    hint: { fr: "3⁴ = 3 . 3 . 3 . 3 = 81", en: "3⁴ = 3 . 3 . 3 . 3 = 81", nl: "3⁴ = 3 . 3 . 3 . 3 = 81" }
   },
   {
     id: "N6_s_60", category: "N6", level: 1,
     text: { fr: "Calcule : 2⁵", en: "Calculate: 2⁵", nl: "Bereken: 2⁵" },
     answer: 32, tolerance: 0,
-    hint: { fr: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32", en: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32", nl: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32" }
+    hint: { fr: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32", en: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32", nl: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32" }
   },
   {
     id: "N6_s_61", category: "N6", level: 1,
     text: { fr: "Calcule : 4⁴", en: "Calculate: 4⁴", nl: "Bereken: 4⁴" },
     answer: 256, tolerance: 0,
-    hint: { fr: "4⁴ = 4 × 4 × 4 × 4 = 256", en: "4⁴ = 4 × 4 × 4 × 4 = 256", nl: "4⁴ = 4 × 4 × 4 × 4 = 256" }
+    hint: { fr: "4⁴ = 4 . 4 . 4 . 4 = 256", en: "4⁴ = 4 . 4 . 4 . 4 = 256", nl: "4⁴ = 4 . 4 . 4 . 4 = 256" }
   },
   {
     id: "N6_s_62", category: "N6", level: 1,
     text: { fr: "Calcule : 5⁴", en: "Calculate: 5⁴", nl: "Bereken: 5⁴" },
     answer: 625, tolerance: 0,
-    hint: { fr: "5⁴ = 5 × 5 × 5 × 5 = 625", en: "5⁴ = 5 × 5 × 5 × 5 = 625", nl: "5⁴ = 5 × 5 × 5 × 5 = 625" }
+    hint: { fr: "5⁴ = 5 . 5 . 5 . 5 = 625", en: "5⁴ = 5 . 5 . 5 . 5 = 625", nl: "5⁴ = 5 . 5 . 5 . 5 = 625" }
   },
   {
     id: "N6_s_63", category: "N6", level: 1,
     text: { fr: "Calcule : 10⁴", en: "Calculate: 10⁴", nl: "Bereken: 10⁴" },
     answer: 10000, tolerance: 0,
-    hint: { fr: "10⁴ = 10 × 10 × 10 × 10 = 10 000", en: "10⁴ = 10 × 10 × 10 × 10 = 10,000", nl: "10⁴ = 10 × 10 × 10 × 10 = 10.000" }
+    hint: { fr: "10⁴ = 10 . 10 . 10 . 10 = 10 000", en: "10⁴ = 10 . 10 . 10 . 10 = 10,000", nl: "10⁴ = 10 . 10 . 10 . 10 = 10.000" }
   },
   {
     id: "N6_s_64", category: "N6", level: 1,
     text: { fr: "Calcule : 20²", en: "Calculate: 20²", nl: "Bereken: 20²" },
     answer: 400, tolerance: 0,
-    hint: { fr: "20² = 20 × 20 = 400", en: "20² = 20 × 20 = 400", nl: "20² = 20 × 20 = 400" }
+    hint: { fr: "20² = 20 . 20 = 400", en: "20² = 20 . 20 = 400", nl: "20² = 20 . 20 = 400" }
   },
   {
     id: "N6_s_65", category: "N6", level: 1,
     text: { fr: "Calcule : 25²", en: "Calculate: 25²", nl: "Bereken: 25²" },
     answer: 625, tolerance: 0,
-    hint: { fr: "25² = 25 × 25 = 625", en: "25² = 25 × 25 = 625", nl: "25² = 25 × 25 = 625" }
+    hint: { fr: "25² = 25 . 25 = 625", en: "25² = 25 . 25 = 625", nl: "25² = 25 . 25 = 625" }
   },
   {
     id: "N6_s_66", category: "N6", level: 1,
     text: { fr: "Calcule : 3⁵", en: "Calculate: 3⁵", nl: "Bereken: 3⁵" },
     answer: 243, tolerance: 0,
-    hint: { fr: "3⁵ = 3 × 3 × 3 × 3 × 3 = 243", en: "3⁵ = 3 × 3 × 3 × 3 × 3 = 243", nl: "3⁵ = 3 × 3 × 3 × 3 × 3 = 243" }
+    hint: { fr: "3⁵ = 3 . 3 . 3 . 3 . 3 = 243", en: "3⁵ = 3 . 3 . 3 . 3 . 3 = 243", nl: "3⁵ = 3 . 3 . 3 . 3 . 3 = 243" }
   },
   {
     id: "N6_s_67", category: "N6", level: 1,
     text: { fr: "Calcule : 10⁵", en: "Calculate: 10⁵", nl: "Bereken: 10⁵" },
     answer: 100000, tolerance: 0,
-    hint: { fr: "10⁵ = 10 × 10 × 10 × 10 × 10 = 100 000", en: "10⁵ = 10 × 10 × 10 × 10 × 10 = 100,000", nl: "10⁵ = 10 × 10 × 10 × 10 × 10 = 100.000" }
+    hint: { fr: "10⁵ = 10 . 10 . 10 . 10 . 10 = 100 000", en: "10⁵ = 10 . 10 . 10 . 10 . 10 = 100,000", nl: "10⁵ = 10 . 10 . 10 . 10 . 10 = 100.000" }
   },
   {
     id: "N6_s_68", category: "N6", level: 1,
     text: { fr: "Calcule : 2³", en: "Calculate: 2³", nl: "Bereken: 2³" },
     answer: 8, tolerance: 0,
-    hint: { fr: "2³ = 2 × 2 × 2 = 8", en: "2³ = 2 × 2 × 2 = 8", nl: "2³ = 2 × 2 × 2 = 8" }
+    hint: { fr: "2³ = 2 . 2 . 2 = 8", en: "2³ = 2 . 2 . 2 = 8", nl: "2³ = 2 . 2 . 2 = 8" }
   },
   {
     id: "N6_s_69", category: "N6", level: 1,
     text: { fr: "Calcule : 30²", en: "Calculate: 30²", nl: "Bereken: 30²" },
     answer: 900, tolerance: 0,
-    hint: { fr: "30² = 30 × 30 = 900", en: "30² = 30 × 30 = 900", nl: "30² = 30 × 30 = 900" }
+    hint: { fr: "30² = 30 . 30 = 900", en: "30² = 30 . 30 = 900", nl: "30² = 30 . 30 = 900" }
   },
   {
     id: "N6_s_70", category: "N6", level: 1,
     text: { fr: "Calcule : 11³", en: "Calculate: 11³", nl: "Bereken: 11³" },
     answer: 1331, tolerance: 0,
-    hint: { fr: "11³ = 11 × 11 × 11 = 1331", en: "11³ = 11 × 11 × 11 = 1,331", nl: "11³ = 11 × 11 × 11 = 1.331" }
+    hint: { fr: "11³ = 11 . 11 . 11 = 1331", en: "11³ = 11 . 11 . 11 = 1,331", nl: "11³ = 11 . 11 . 11 = 1.331" }
   },
 
   // ───────────────────────────────────────────────────────────────────────────
@@ -235,21 +235,21 @@ export const questions = [
   // ───────────────────────────────────────────────────────────────────────────
   {
     id: "N6_s_6", category: "N6", level: 2,
-    text: { fr: "Calcule : 2³ × 2²", en: "Calculate: 2³ × 2²", nl: "Bereken: 2³ × 2²" },
+    text: { fr: "Calcule : 2³ . 2²", en: "Calculate: 2³ . 2²", nl: "Bereken: 2³ . 2²" },
     answer: 32, tolerance: 0,
-    hint: { fr: "2³ = 8 et 2² = 4. Donc 8 × 4 = 32.", en: "2³ = 8 and 2² = 4. So 8 × 4 = 32.", nl: "2³ = 8 en 2² = 4. Dus 8 × 4 = 32." }
+    hint: { fr: "2³ = 8 et 2² = 4. Donc 8 . 4 = 32.", en: "2³ = 8 and 2² = 4. So 8 . 4 = 32.", nl: "2³ = 8 en 2² = 4. Dus 8 . 4 = 32." }
   },
   {
     id: "N6_s_7", category: "N6", level: 2,
-    text: { fr: "Calcule : 3² × 3", en: "Calculate: 3² × 3", nl: "Bereken: 3² × 3" },
+    text: { fr: "Calcule : 3² . 3", en: "Calculate: 3² . 3", nl: "Bereken: 3² . 3" },
     answer: 27, tolerance: 0,
-    hint: { fr: "3² = 9, puis 9 × 3 = 27.", en: "3² = 9, then 9 × 3 = 27.", nl: "3² = 9, dan 9 × 3 = 27." }
+    hint: { fr: "3² = 9, puis 9 . 3 = 27.", en: "3² = 9, then 9 . 3 = 27.", nl: "3² = 9, dan 9 . 3 = 27." }
   },
   {
     id: "N6_s_8", category: "N6", level: 2,
-    text: { fr: "Calcule : 4³ ÷ 4", en: "Calculate: 4³ ÷ 4", nl: "Bereken: 4³ ÷ 4" },
+    text: { fr: "Calcule : 4³ : 4", en: "Calculate: 4³ : 4", nl: "Bereken: 4³ : 4" },
     answer: 16, tolerance: 0,
-    hint: { fr: "4³ = 64, puis 64 ÷ 4 = 16.", en: "4³ = 64, then 64 ÷ 4 = 16.", nl: "4³ = 64, dan 64 ÷ 4 = 16." }
+    hint: { fr: "4³ = 64, puis 64 : 4 = 16.", en: "4³ = 64, then 64 : 4 = 16.", nl: "4³ = 64, dan 64 : 4 = 16." }
   },
   {
     id: "N6_s_9", category: "N6", level: 2,
@@ -261,7 +261,7 @@ export const questions = [
     id: "N6_s_10", category: "N6", level: 2,
     text: { fr: "Calcule : 2⁵", en: "Calculate: 2⁵", nl: "Bereken: 2⁵" },
     answer: 32, tolerance: 0,
-    hint: { fr: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32", en: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32", nl: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32" }
+    hint: { fr: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32", en: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32", nl: "2⁵ = 2 . 2 . 2 . 2 . 2 = 32" }
   },
   {
     id: "N6_s_28", category: "N6", level: 2,
@@ -277,9 +277,9 @@ export const questions = [
   },
   {
     id: "N6_s_30", category: "N6", level: 2,
-    text: { fr: "Calcule : 2⁴ × 2", en: "Calculate: 2⁴ × 2", nl: "Bereken: 2⁴ × 2" },
+    text: { fr: "Calcule : 2⁴ . 2", en: "Calculate: 2⁴ . 2", nl: "Bereken: 2⁴ . 2" },
     answer: 32, tolerance: 0,
-    hint: { fr: "2⁴ = 16, puis 16 × 2 = 32.", en: "2⁴ = 16, then 16 × 2 = 32.", nl: "2⁴ = 16, dan 16 × 2 = 32." }
+    hint: { fr: "2⁴ = 16, puis 16 . 2 = 32.", en: "2⁴ = 16, then 16 . 2 = 32.", nl: "2⁴ = 16, dan 16 . 2 = 32." }
   },
   {
     id: "N6_s_31", category: "N6", level: 2,
@@ -289,15 +289,15 @@ export const questions = [
   },
   {
     id: "N6_s_32", category: "N6", level: 2,
-    text: { fr: "Calcule : 3³ ÷ 3", en: "Calculate: 3³ ÷ 3", nl: "Bereken: 3³ ÷ 3" },
+    text: { fr: "Calcule : 3³ : 3", en: "Calculate: 3³ : 3", nl: "Bereken: 3³ : 3" },
     answer: 9, tolerance: 0,
-    hint: { fr: "3³ = 27, puis 27 ÷ 3 = 9.", en: "3³ = 27, then 27 ÷ 3 = 9.", nl: "3³ = 27, dan 27 ÷ 3 = 9." }
+    hint: { fr: "3³ = 27, puis 27 : 3 = 9.", en: "3³ = 27, then 27 : 3 = 9.", nl: "3³ = 27, dan 27 : 3 = 9." }
   },
   {
     id: "N6_s_33", category: "N6", level: 2,
-    text: { fr: "Calcule : 10² ÷ 5²", en: "Calculate: 10² ÷ 5²", nl: "Bereken: 10² ÷ 5²" },
+    text: { fr: "Calcule : 10² : 5²", en: "Calculate: 10² : 5²", nl: "Bereken: 10² : 5²" },
     answer: 4, tolerance: 0,
-    hint: { fr: "10² = 100 et 5² = 25. Donc 100 ÷ 25 = 4.", en: "10² = 100 and 5² = 25. So 100 ÷ 25 = 4.", nl: "10² = 100 en 5² = 25. Dus 100 ÷ 25 = 4." }
+    hint: { fr: "10² = 100 et 5² = 25. Donc 100 : 25 = 4.", en: "10² = 100 and 5² = 25. So 100 : 25 = 4.", nl: "10² = 100 en 5² = 25. Dus 100 : 25 = 4." }
   },
   {
     id: "N6_s_34", category: "N6", level: 2,
@@ -313,9 +313,9 @@ export const questions = [
   },
   {
     id: "N6_s_36", category: "N6", level: 2,
-    text: { fr: "Calcule : 4² × 2²", en: "Calculate: 4² × 2²", nl: "Bereken: 4² × 2²" },
+    text: { fr: "Calcule : 4² . 2²", en: "Calculate: 4² . 2²", nl: "Bereken: 4² . 2²" },
     answer: 64, tolerance: 0,
-    hint: { fr: "4² = 16 et 2² = 4. Donc 16 × 4 = 64.", en: "4² = 16 and 2² = 4. So 16 × 4 = 64.", nl: "4² = 16 en 2² = 4. Dus 16 × 4 = 64." }
+    hint: { fr: "4² = 16 et 2² = 4. Donc 16 . 4 = 64.", en: "4² = 16 and 2² = 4. So 16 . 4 = 64.", nl: "4² = 16 en 2² = 4. Dus 16 . 4 = 64." }
   },
   {
     id: "N6_s_37", category: "N6", level: 2,
@@ -325,15 +325,15 @@ export const questions = [
   },
   {
     id: "N6_s_38", category: "N6", level: 2,
-    text: { fr: "Calcule : 2³ × 3²", en: "Calculate: 2³ × 3²", nl: "Bereken: 2³ × 3²" },
+    text: { fr: "Calcule : 2³ . 3²", en: "Calculate: 2³ . 3²", nl: "Bereken: 2³ . 3²" },
     answer: 72, tolerance: 0,
-    hint: { fr: "2³ = 8 et 3² = 9. Donc 8 × 9 = 72.", en: "2³ = 8 and 3² = 9. So 8 × 9 = 72.", nl: "2³ = 8 en 3² = 9. Dus 8 × 9 = 72." }
+    hint: { fr: "2³ = 8 et 3² = 9. Donc 8 . 9 = 72.", en: "2³ = 8 and 3² = 9. So 8 . 9 = 72.", nl: "2³ = 8 en 3² = 9. Dus 8 . 9 = 72." }
   },
   {
     id: "N6_s_39", category: "N6", level: 2,
-    text: { fr: "Calcule : 10³ ÷ 10²", en: "Calculate: 10³ ÷ 10²", nl: "Bereken: 10³ ÷ 10²" },
+    text: { fr: "Calcule : 10³ : 10²", en: "Calculate: 10³ : 10²", nl: "Bereken: 10³ : 10²" },
     answer: 10, tolerance: 0,
-    hint: { fr: "10³ = 1000 et 10² = 100. Donc 1000 ÷ 100 = 10.", en: "10³ = 1000 and 10² = 100. So 1000 ÷ 100 = 10.", nl: "10³ = 1000 en 10² = 100. Dus 1000 ÷ 100 = 10." }
+    hint: { fr: "10³ = 1000 et 10² = 100. Donc 1000 : 100 = 10.", en: "10³ = 1000 and 10² = 100. So 1000 : 100 = 10.", nl: "10³ = 1000 en 10² = 100. Dus 1000 : 100 = 10." }
   },
   {
     id: "N6_s_71", category: "N6", level: 2,
@@ -349,15 +349,15 @@ export const questions = [
   },
   {
     id: "N6_s_73", category: "N6", level: 2,
-    text: { fr: "Calcule : 3² × 2²", en: "Calculate: 3² × 2²", nl: "Bereken: 3² × 2²" },
+    text: { fr: "Calcule : 3² . 2²", en: "Calculate: 3² . 2²", nl: "Bereken: 3² . 2²" },
     answer: 36, tolerance: 0,
-    hint: { fr: "3² = 9 et 2² = 4. Donc 9 × 4 = 36.", en: "3² = 9 and 2² = 4. So 9 × 4 = 36.", nl: "3² = 9 en 2² = 4. Dus 9 × 4 = 36." }
+    hint: { fr: "3² = 9 et 2² = 4. Donc 9 . 4 = 36.", en: "3² = 9 and 2² = 4. So 9 . 4 = 36.", nl: "3² = 9 en 2² = 4. Dus 9 . 4 = 36." }
   },
   {
     id: "N6_s_74", category: "N6", level: 2,
-    text: { fr: "Calcule : 5³ ÷ 5²", en: "Calculate: 5³ ÷ 5²", nl: "Bereken: 5³ ÷ 5²" },
+    text: { fr: "Calcule : 5³ : 5²", en: "Calculate: 5³ : 5²", nl: "Bereken: 5³ : 5²" },
     answer: 5, tolerance: 0,
-    hint: { fr: "5³ = 125 et 5² = 25. Donc 125 ÷ 25 = 5.", en: "5³ = 125 and 5² = 25. So 125 ÷ 25 = 5.", nl: "5³ = 125 en 5² = 25. Dus 125 ÷ 25 = 5." }
+    hint: { fr: "5³ = 125 et 5² = 25. Donc 125 : 25 = 5.", en: "5³ = 125 and 5² = 25. So 125 : 25 = 5.", nl: "5³ = 125 en 5² = 25. Dus 125 : 25 = 5." }
   },
   {
     id: "N6_s_75", category: "N6", level: 2,
@@ -379,9 +379,9 @@ export const questions = [
   },
   {
     id: "N6_s_78", category: "N6", level: 2,
-    text: { fr: "Calcule : 5² × 2³", en: "Calculate: 5² × 2³", nl: "Bereken: 5² × 2³" },
+    text: { fr: "Calcule : 5² . 2³", en: "Calculate: 5² . 2³", nl: "Bereken: 5² . 2³" },
     answer: 200, tolerance: 0,
-    hint: { fr: "5² = 25 et 2³ = 8. Donc 25 × 8 = 200.", en: "5² = 25 and 2³ = 8. So 25 × 8 = 200.", nl: "5² = 25 en 2³ = 8. Dus 25 × 8 = 200." }
+    hint: { fr: "5² = 25 et 2³ = 8. Donc 25 . 8 = 200.", en: "5² = 25 and 2³ = 8. So 25 . 8 = 200.", nl: "5² = 25 en 2³ = 8. Dus 25 . 8 = 200." }
   },
   {
     id: "N6_s_79", category: "N6", level: 2,
@@ -391,15 +391,15 @@ export const questions = [
   },
   {
     id: "N6_s_80", category: "N6", level: 2,
-    text: { fr: "Calcule : 2⁴ × 3", en: "Calculate: 2⁴ × 3", nl: "Bereken: 2⁴ × 3" },
+    text: { fr: "Calcule : 2⁴ . 3", en: "Calculate: 2⁴ . 3", nl: "Bereken: 2⁴ . 3" },
     answer: 48, tolerance: 0,
-    hint: { fr: "2⁴ = 16, puis 16 × 3 = 48.", en: "2⁴ = 16, then 16 × 3 = 48.", nl: "2⁴ = 16, dan 16 × 3 = 48." }
+    hint: { fr: "2⁴ = 16, puis 16 . 3 = 48.", en: "2⁴ = 16, then 16 . 3 = 48.", nl: "2⁴ = 16, dan 16 . 3 = 48." }
   },
   {
     id: "N6_s_81", category: "N6", level: 2,
-    text: { fr: "Calcule : 4³ ÷ 2³", en: "Calculate: 4³ ÷ 2³", nl: "Bereken: 4³ ÷ 2³" },
+    text: { fr: "Calcule : 4³ : 2³", en: "Calculate: 4³ : 2³", nl: "Bereken: 4³ : 2³" },
     answer: 8, tolerance: 0,
-    hint: { fr: "4³ = 64 et 2³ = 8. Donc 64 ÷ 8 = 8.", en: "4³ = 64 and 2³ = 8. So 64 ÷ 8 = 8.", nl: "4³ = 64 en 2³ = 8. Dus 64 ÷ 8 = 8." }
+    hint: { fr: "4³ = 64 et 2³ = 8. Donc 64 : 8 = 8.", en: "4³ = 64 and 2³ = 8. So 64 : 8 = 8.", nl: "4³ = 64 en 2³ = 8. Dus 64 : 8 = 8." }
   },
   {
     id: "N6_s_82", category: "N6", level: 2,
@@ -409,15 +409,15 @@ export const questions = [
   },
   {
     id: "N6_s_83", category: "N6", level: 2,
-    text: { fr: "Calcule : 3³ × 2", en: "Calculate: 3³ × 2", nl: "Bereken: 3³ × 2" },
+    text: { fr: "Calcule : 3³ . 2", en: "Calculate: 3³ . 2", nl: "Bereken: 3³ . 2" },
     answer: 54, tolerance: 0,
-    hint: { fr: "3³ = 27, puis 27 × 2 = 54.", en: "3³ = 27, then 27 × 2 = 54.", nl: "3³ = 27, dan 27 × 2 = 54." }
+    hint: { fr: "3³ = 27, puis 27 . 2 = 54.", en: "3³ = 27, then 27 . 2 = 54.", nl: "3³ = 27, dan 27 . 2 = 54." }
   },
   {
     id: "N6_s_84", category: "N6", level: 2,
-    text: { fr: "Calcule : 6² ÷ 3²", en: "Calculate: 6² ÷ 3²", nl: "Bereken: 6² ÷ 3²" },
+    text: { fr: "Calcule : 6² : 3²", en: "Calculate: 6² : 3²", nl: "Bereken: 6² : 3²" },
     answer: 4, tolerance: 0,
-    hint: { fr: "6² = 36 et 3² = 9. Donc 36 ÷ 9 = 4.", en: "6² = 36 and 3² = 9. So 36 ÷ 9 = 4.", nl: "6² = 36 en 3² = 9. Dus 36 ÷ 9 = 4." }
+    hint: { fr: "6² = 36 et 3² = 9. Donc 36 : 9 = 4.", en: "6² = 36 and 3² = 9. So 36 : 9 = 4.", nl: "6² = 36 en 3² = 9. Dus 36 : 9 = 4." }
   },
   {
     id: "N6_s_85", category: "N6", level: 2,
@@ -427,15 +427,15 @@ export const questions = [
   },
   {
     id: "N6_s_86", category: "N6", level: 2,
-    text: { fr: "Calcule : 12² ÷ 4²", en: "Calculate: 12² ÷ 4²", nl: "Bereken: 12² ÷ 4²" },
+    text: { fr: "Calcule : 12² : 4²", en: "Calculate: 12² : 4²", nl: "Bereken: 12² : 4²" },
     answer: 9, tolerance: 0,
-    hint: { fr: "12² = 144 et 4² = 16. Donc 144 ÷ 16 = 9.", en: "12² = 144 and 4² = 16. So 144 ÷ 16 = 9.", nl: "12² = 144 en 4² = 16. Dus 144 ÷ 16 = 9." }
+    hint: { fr: "12² = 144 et 4² = 16. Donc 144 : 16 = 9.", en: "12² = 144 and 4² = 16. So 144 : 16 = 9.", nl: "12² = 144 en 4² = 16. Dus 144 : 16 = 9." }
   },
   {
     id: "N6_s_87", category: "N6", level: 2,
-    text: { fr: "Calcule : 2³ × 5", en: "Calculate: 2³ × 5", nl: "Bereken: 2³ × 5" },
+    text: { fr: "Calcule : 2³ . 5", en: "Calculate: 2³ . 5", nl: "Bereken: 2³ . 5" },
     answer: 40, tolerance: 0,
-    hint: { fr: "2³ = 8, puis 8 × 5 = 40.", en: "2³ = 8, then 8 × 5 = 40.", nl: "2³ = 8, dan 8 × 5 = 40." }
+    hint: { fr: "2³ = 8, puis 8 . 5 = 40.", en: "2³ = 8, then 8 . 5 = 40.", nl: "2³ = 8, dan 8 . 5 = 40." }
   },
   {
     id: "N6_s_88", category: "N6", level: 2,
@@ -445,9 +445,9 @@ export const questions = [
   },
   {
     id: "N6_s_89", category: "N6", level: 2,
-    text: { fr: "Calcule : 3² × 4²", en: "Calculate: 3² × 4²", nl: "Bereken: 3² × 4²" },
+    text: { fr: "Calcule : 3² . 4²", en: "Calculate: 3² . 4²", nl: "Bereken: 3² . 4²" },
     answer: 144, tolerance: 0,
-    hint: { fr: "3² = 9 et 4² = 16. Donc 9 × 16 = 144.", en: "3² = 9 and 4² = 16. So 9 × 16 = 144.", nl: "3² = 9 en 4² = 16. Dus 9 × 16 = 144." }
+    hint: { fr: "3² = 9 et 4² = 16. Donc 9 . 16 = 144.", en: "3² = 9 and 4² = 16. So 9 . 16 = 144.", nl: "3² = 9 en 4² = 16. Dus 9 . 16 = 144." }
   },
   {
     id: "N6_s_90", category: "N6", level: 2,
@@ -463,7 +463,7 @@ export const questions = [
     id: "N6_s_11", category: "N6", level: 3,
     text: { fr: "Calcule : (-3)³", en: "Calculate: (-3)³", nl: "Bereken: (-3)³" },
     answer: -27, tolerance: 0,
-    hint: { fr: "(-3)³ = (-3) × (-3) × (-3) = 9 × (-3) = -27", en: "(-3)³ = (-3) × (-3) × (-3) = 9 × (-3) = -27", nl: "(-3)³ = (-3) × (-3) × (-3) = 9 × (-3) = -27" }
+    hint: { fr: "(-3)³ = (-3) . (-3) . (-3) = 9 . (-3) = -27", en: "(-3)³ = (-3) . (-3) . (-3) = 9 . (-3) = -27", nl: "(-3)³ = (-3) . (-3) . (-3) = 9 . (-3) = -27" }
   },
   {
     id: "N6_s_12", category: "N6", level: 3,
@@ -493,7 +493,7 @@ export const questions = [
     id: "N6_s_40", category: "N6", level: 3,
     text: { fr: "Calcule : (-2)³", en: "Calculate: (-2)³", nl: "Bereken: (-2)³" },
     answer: -8, tolerance: 0,
-    hint: { fr: "(-2)³ = (-2) × (-2) × (-2) = 4 × (-2) = -8", en: "(-2)³ = (-2) × (-2) × (-2) = 4 × (-2) = -8", nl: "(-2)³ = (-2) × (-2) × (-2) = 4 × (-2) = -8" }
+    hint: { fr: "(-2)³ = (-2) . (-2) . (-2) = 4 . (-2) = -8", en: "(-2)³ = (-2) . (-2) . (-2) = 4 . (-2) = -8", nl: "(-2)³ = (-2) . (-2) . (-2) = 4 . (-2) = -8" }
   },
   {
     id: "N6_s_41", category: "N6", level: 3,
@@ -505,13 +505,13 @@ export const questions = [
     id: "N6_s_42", category: "N6", level: 3,
     text: { fr: "Calcule : (-4)²", en: "Calculate: (-4)²", nl: "Bereken: (-4)²" },
     answer: 16, tolerance: 0,
-    hint: { fr: "Exposant pair : (-4)² = (-4) × (-4) = 16.", en: "Even exponent: (-4)² = (-4) × (-4) = 16.", nl: "Even exponent: (-4)² = (-4) × (-4) = 16." }
+    hint: { fr: "Exposant pair : (-4)² = (-4) . (-4) = 16.", en: "Even exponent: (-4)² = (-4) . (-4) = 16.", nl: "Even exponent: (-4)² = (-4) . (-4) = 16." }
   },
   {
     id: "N6_s_43", category: "N6", level: 3,
     text: { fr: "Calcule : (3²)³", en: "Calculate: (3²)³", nl: "Bereken: (3²)³" },
     answer: 729, tolerance: 0,
-    hint: { fr: "3² = 9, puis 9³ = 9 × 9 × 9 = 729.", en: "3² = 9, then 9³ = 9 × 9 × 9 = 729.", nl: "3² = 9, dan 9³ = 9 × 9 × 9 = 729." }
+    hint: { fr: "3² = 9, puis 9³ = 9 . 9 . 9 = 729.", en: "3² = 9, then 9³ = 9 . 9 . 9 = 729.", nl: "3² = 9, dan 9³ = 9 . 9 . 9 = 729." }
   },
   {
     id: "N6_s_44", category: "N6", level: 3,
@@ -535,7 +535,7 @@ export const questions = [
     id: "N6_s_47", category: "N6", level: 3,
     text: { fr: "Calcule : (-4)³", en: "Calculate: (-4)³", nl: "Bereken: (-4)³" },
     answer: -64, tolerance: 0,
-    hint: { fr: "(-4)³ = (-4) × (-4) × (-4) = 16 × (-4) = -64.", en: "(-4)³ = (-4) × (-4) × (-4) = 16 × (-4) = -64.", nl: "(-4)³ = (-4) × (-4) × (-4) = 16 × (-4) = -64." }
+    hint: { fr: "(-4)³ = (-4) . (-4) . (-4) = 16 . (-4) = -64.", en: "(-4)³ = (-4) . (-4) . (-4) = 16 . (-4) = -64.", nl: "(-4)³ = (-4) . (-4) . (-4) = 16 . (-4) = -64." }
   },
   {
     id: "N6_s_48", category: "N6", level: 3,
@@ -559,19 +559,19 @@ export const questions = [
     id: "N6_s_91", category: "N6", level: 3,
     text: { fr: "Calcule : (-5)³", en: "Calculate: (-5)³", nl: "Bereken: (-5)³" },
     answer: -125, tolerance: 0,
-    hint: { fr: "(-5)³ = (-5) × (-5) × (-5) = 25 × (-5) = -125", en: "(-5)³ = (-5) × (-5) × (-5) = 25 × (-5) = -125", nl: "(-5)³ = (-5) × (-5) × (-5) = 25 × (-5) = -125" }
+    hint: { fr: "(-5)³ = (-5) . (-5) . (-5) = 25 . (-5) = -125", en: "(-5)³ = (-5) . (-5) . (-5) = 25 . (-5) = -125", nl: "(-5)³ = (-5) . (-5) . (-5) = 25 . (-5) = -125" }
   },
   {
     id: "N6_s_92", category: "N6", level: 3,
     text: { fr: "Calcule : (-6)²", en: "Calculate: (-6)²", nl: "Bereken: (-6)²" },
     answer: 36, tolerance: 0,
-    hint: { fr: "Exposant pair : (-6)² = (-6) × (-6) = 36.", en: "Even exponent: (-6)² = (-6) × (-6) = 36.", nl: "Even exponent: (-6)² = (-6) × (-6) = 36." }
+    hint: { fr: "Exposant pair : (-6)² = (-6) . (-6) = 36.", en: "Even exponent: (-6)² = (-6) . (-6) = 36.", nl: "Even exponent: (-6)² = (-6) . (-6) = 36." }
   },
   {
     id: "N6_s_93", category: "N6", level: 3,
     text: { fr: "Calcule : (-7)²", en: "Calculate: (-7)²", nl: "Bereken: (-7)²" },
     answer: 49, tolerance: 0,
-    hint: { fr: "Exposant pair : (-7)² = (-7) × (-7) = 49.", en: "Even exponent: (-7)² = (-7) × (-7) = 49.", nl: "Even exponent: (-7)² = (-7) × (-7) = 49." }
+    hint: { fr: "Exposant pair : (-7)² = (-7) . (-7) = 49.", en: "Even exponent: (-7)² = (-7) . (-7) = 49.", nl: "Even exponent: (-7)² = (-7) . (-7) = 49." }
   },
   {
     id: "N6_s_94", category: "N6", level: 3,
@@ -589,7 +589,7 @@ export const questions = [
     id: "N6_s_96", category: "N6", level: 3,
     text: { fr: "Calcule : (2²)³", en: "Calculate: (2²)³", nl: "Bereken: (2²)³" },
     answer: 64, tolerance: 0,
-    hint: { fr: "2² = 4, puis 4³ = 4 × 4 × 4 = 64.", en: "2² = 4, then 4³ = 4 × 4 × 4 = 64.", nl: "2² = 4, dan 4³ = 4 × 4 × 4 = 64." }
+    hint: { fr: "2² = 4, puis 4³ = 4 . 4 . 4 = 64.", en: "2² = 4, then 4³ = 4 . 4 . 4 = 64.", nl: "2² = 4, dan 4³ = 4 . 4 . 4 = 64." }
   },
   {
     id: "N6_s_97", category: "N6", level: 3,
@@ -601,7 +601,7 @@ export const questions = [
     id: "N6_s_98", category: "N6", level: 3,
     text: { fr: "Calcule : (-10)³", en: "Calculate: (-10)³", nl: "Bereken: (-10)³" },
     answer: -1000, tolerance: 0,
-    hint: { fr: "(-10)³ = (-10) × (-10) × (-10) = 100 × (-10) = -1000", en: "(-10)³ = (-10) × (-10) × (-10) = 100 × (-10) = -1,000", nl: "(-10)³ = (-10) × (-10) × (-10) = 100 × (-10) = -1.000" }
+    hint: { fr: "(-10)³ = (-10) . (-10) . (-10) = 100 . (-10) = -1000", en: "(-10)³ = (-10) . (-10) . (-10) = 100 . (-10) = -1,000", nl: "(-10)³ = (-10) . (-10) . (-10) = 100 . (-10) = -1.000" }
   },
   {
     id: "N6_s_99", category: "N6", level: 3,
@@ -611,9 +611,9 @@ export const questions = [
   },
   {
     id: "N6_s_100", category: "N6", level: 3,
-    text: { fr: "Calcule : (-1)⁴ × (-1)³", en: "Calculate: (-1)⁴ × (-1)³", nl: "Bereken: (-1)⁴ × (-1)³" },
+    text: { fr: "Calcule : (-1)⁴ . (-1)³", en: "Calculate: (-1)⁴ . (-1)³", nl: "Bereken: (-1)⁴ . (-1)³" },
     answer: -1, tolerance: 0,
-    hint: { fr: "(-1)⁴ = 1 et (-1)³ = -1. Donc 1 × (-1) = -1.", en: "(-1)⁴ = 1 and (-1)³ = -1. So 1 × (-1) = -1.", nl: "(-1)⁴ = 1 en (-1)³ = -1. Dus 1 × (-1) = -1." }
+    hint: { fr: "(-1)⁴ = 1 et (-1)³ = -1. Donc 1 . (-1) = -1.", en: "(-1)⁴ = 1 and (-1)³ = -1. So 1 . (-1) = -1.", nl: "(-1)⁴ = 1 en (-1)³ = -1. Dus 1 . (-1) = -1." }
   },
   {
     id: "N6_s_101", category: "N6", level: 3,
@@ -629,15 +629,15 @@ export const questions = [
   },
   {
     id: "N6_s_103", category: "N6", level: 3,
-    text: { fr: "Calcule : (-2)³ × (-3)²", en: "Calculate: (-2)³ × (-3)²", nl: "Bereken: (-2)³ × (-3)²" },
+    text: { fr: "Calcule : (-2)³ . (-3)²", en: "Calculate: (-2)³ . (-3)²", nl: "Bereken: (-2)³ . (-3)²" },
     answer: -72, tolerance: 0,
-    hint: { fr: "(-2)³ = -8 et (-3)² = 9. Donc (-8) × 9 = -72.", en: "(-2)³ = -8 and (-3)² = 9. So (-8) × 9 = -72.", nl: "(-2)³ = -8 en (-3)² = 9. Dus (-8) × 9 = -72." }
+    hint: { fr: "(-2)³ = -8 et (-3)² = 9. Donc (-8) . 9 = -72.", en: "(-2)³ = -8 and (-3)² = 9. So (-8) . 9 = -72.", nl: "(-2)³ = -8 en (-3)² = 9. Dus (-8) . 9 = -72." }
   },
   {
     id: "N6_s_104", category: "N6", level: 3,
     text: { fr: "Calcule : (-8)²", en: "Calculate: (-8)²", nl: "Bereken: (-8)²" },
     answer: 64, tolerance: 0,
-    hint: { fr: "Exposant pair : (-8)² = (-8) × (-8) = 64.", en: "Even exponent: (-8)² = (-8) × (-8) = 64.", nl: "Even exponent: (-8)² = (-8) × (-8) = 64." }
+    hint: { fr: "Exposant pair : (-8)² = (-8) . (-8) = 64.", en: "Even exponent: (-8)² = (-8) . (-8) = 64.", nl: "Even exponent: (-8)² = (-8) . (-8) = 64." }
   },
   {
     id: "N6_s_105", category: "N6", level: 3,
@@ -655,19 +655,19 @@ export const questions = [
     id: "N6_s_107", category: "N6", level: 3,
     text: { fr: "Calcule : (-6)³", en: "Calculate: (-6)³", nl: "Bereken: (-6)³" },
     answer: -216, tolerance: 0,
-    hint: { fr: "(-6)³ = (-6) × (-6) × (-6) = 36 × (-6) = -216", en: "(-6)³ = (-6) × (-6) × (-6) = 36 × (-6) = -216", nl: "(-6)³ = (-6) × (-6) × (-6) = 36 × (-6) = -216" }
+    hint: { fr: "(-6)³ = (-6) . (-6) . (-6) = 36 . (-6) = -216", en: "(-6)³ = (-6) . (-6) . (-6) = 36 . (-6) = -216", nl: "(-6)³ = (-6) . (-6) . (-6) = 36 . (-6) = -216" }
   },
   {
     id: "N6_s_108", category: "N6", level: 3,
-    text: { fr: "Calcule : (-2)⁴ × (-3)", en: "Calculate: (-2)⁴ × (-3)", nl: "Bereken: (-2)⁴ × (-3)" },
+    text: { fr: "Calcule : (-2)⁴ . (-3)", en: "Calculate: (-2)⁴ . (-3)", nl: "Bereken: (-2)⁴ . (-3)" },
     answer: -48, tolerance: 0,
-    hint: { fr: "(-2)⁴ = 16, puis 16 × (-3) = -48.", en: "(-2)⁴ = 16, then 16 × (-3) = -48.", nl: "(-2)⁴ = 16, dan 16 × (-3) = -48." }
+    hint: { fr: "(-2)⁴ = 16, puis 16 . (-3) = -48.", en: "(-2)⁴ = 16, then 16 . (-3) = -48.", nl: "(-2)⁴ = 16, dan 16 . (-3) = -48." }
   },
   {
     id: "N6_s_109", category: "N6", level: 3,
-    text: { fr: "Calcule : (-3)² × (-2)²", en: "Calculate: (-3)² × (-2)²", nl: "Bereken: (-3)² × (-2)²" },
+    text: { fr: "Calcule : (-3)² . (-2)²", en: "Calculate: (-3)² . (-2)²", nl: "Bereken: (-3)² . (-2)²" },
     answer: 36, tolerance: 0,
-    hint: { fr: "(-3)² = 9 et (-2)² = 4. Donc 9 × 4 = 36.", en: "(-3)² = 9 and (-2)² = 4. So 9 × 4 = 36.", nl: "(-3)² = 9 en (-2)² = 4. Dus 9 × 4 = 36." }
+    hint: { fr: "(-3)² = 9 et (-2)² = 4. Donc 9 . 4 = 36.", en: "(-3)² = 9 and (-2)² = 4. So 9 . 4 = 36.", nl: "(-3)² = 9 en (-2)² = 4. Dus 9 . 4 = 36." }
   },
   {
     id: "N6_s_110", category: "N6", level: 3,
@@ -685,13 +685,13 @@ export const questions = [
     id: "N6_s_112", category: "N6", level: 1,
     text: { fr: "Calcule : 7²", en: "Calculate: 7²", nl: "Bereken: 7²" },
     answer: 49, tolerance: 0,
-    hint: { fr: "7² = 7 × 7 = 49.", en: "7² = 7 × 7 = 49.", nl: "7² = 7 × 7 = 49." }
+    hint: { fr: "7² = 7 . 7 = 49.", en: "7² = 7 . 7 = 49.", nl: "7² = 7 . 7 = 49." }
   },
   {
     id: "N6_s_113", category: "N6", level: 1,
     text: { fr: "Calcule : 4³", en: "Calculate: 4³", nl: "Bereken: 4³" },
     answer: 64, tolerance: 0,
-    hint: { fr: "4³ = 4 × 4 × 4 = 64.", en: "4³ = 4 × 4 × 4 = 64.", nl: "4³ = 4 × 4 × 4 = 64." }
+    hint: { fr: "4³ = 4 . 4 . 4 = 64.", en: "4³ = 4 . 4 . 4 = 64.", nl: "4³ = 4 . 4 . 4 = 64." }
   },
   {
     id: "N6_s_114", category: "N6", level: 2,

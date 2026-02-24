@@ -219,13 +219,13 @@ export const questions = [
     id: "G4_s_11", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 40°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 40°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 40°. Hoeveel is elke basishoek?" },
     answer: 70, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 40°) ÷ 2 = ?", en: "(180° - 40°) ÷ 2 = ?", nl: "(180° - 40°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 40°) : 2 = ?", en: "(180° - 40°) : 2 = ?", nl: "(180° - 40°) : 2 = ?" }
   },
   {
     id: "G4_s_12", category: "G4", level: 3,
     text: { fr: "Combien mesure un angle au centre d'un hexagone régulier ?", en: "What is a central angle of a regular hexagon?", nl: "Hoeveel is een middelpuntshoek van een regelmatige zeshoek?" },
     answer: 60, tolerance: 0, unit: "°",
-    hint: { fr: "360° ÷ 6 = ?", en: "360° ÷ 6 = ?", nl: "360° ÷ 6 = ?" }
+    hint: { fr: "360° : 6 = ?", en: "360° : 6 = ?", nl: "360° : 6 = ?" }
   },
   {
     id: "G4_s_13", category: "G4", level: 3,
@@ -243,20 +243,20 @@ export const questions = [
     id: "G4_s_15", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un pentagone régulier ?", en: "What is each interior angle of a regular pentagon?", nl: "Hoeveel is elke binnenhoek van een regelmatige vijfhoek?" },
     answer: 108, tolerance: 0, unit: "°",
-    hint: { fr: "(5 - 2) × 180° ÷ 5 = 540° ÷ 5.", en: "(5 - 2) × 180° ÷ 5 = 540° ÷ 5.", nl: "(5 - 2) × 180° ÷ 5 = 540° ÷ 5." }
+    hint: { fr: "(5 - 2) . 180° : 5 = 540° : 5.", en: "(5 - 2) . 180° : 5 = 540° : 5.", nl: "(5 - 2) . 180° : 5 = 540° : 5." }
   },
   // --- Level 3 continued (G4_s_40 – G4_s_50) ---
   {
     id: "G4_s_40", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 80°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 80°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 80°. Hoeveel is elke basishoek?" },
     answer: 50, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 80°) ÷ 2 = ?", en: "(180° - 80°) ÷ 2 = ?", nl: "(180° - 80°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 80°) : 2 = ?", en: "(180° - 80°) : 2 = ?", nl: "(180° - 80°) : 2 = ?" }
   },
   {
     id: "G4_s_41", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un hexagone régulier ?", en: "What is each interior angle of a regular hexagon?", nl: "Hoeveel is elke binnenhoek van een regelmatige zeshoek?" },
     answer: 120, tolerance: 0, unit: "°",
-    hint: { fr: "(6 - 2) × 180° ÷ 6 = 720° ÷ 6.", en: "(6 - 2) × 180° ÷ 6 = 720° ÷ 6.", nl: "(6 - 2) × 180° ÷ 6 = 720° ÷ 6." }
+    hint: { fr: "(6 - 2) . 180° : 6 = 720° : 6.", en: "(6 - 2) . 180° : 6 = 720° : 6.", nl: "(6 - 2) . 180° : 6 = 720° : 6." }
   },
   {
     id: "G4_s_42", category: "G4", level: 3,
@@ -274,19 +274,19 @@ export const questions = [
     id: "G4_s_44", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 65°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 65°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 65°. Hoeveel is de tophoek?" },
     answer: 50, tolerance: 0, unit: "°",
-    hint: { fr: "180° - 2 × 65° = ?", en: "180° - 2 × 65° = ?", nl: "180° - 2 × 65° = ?" }
+    hint: { fr: "180° - 2 . 65° = ?", en: "180° - 2 . 65° = ?", nl: "180° - 2 . 65° = ?" }
   },
   {
     id: "G4_s_45", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un octogone régulier ?", en: "What is each interior angle of a regular octagon?", nl: "Hoeveel is elke binnenhoek van een regelmatige achthoek?" },
     answer: 135, tolerance: 0, unit: "°",
-    hint: { fr: "(8 - 2) × 180° ÷ 8 = 1080° ÷ 8.", en: "(8 - 2) × 180° ÷ 8 = 1080° ÷ 8.", nl: "(8 - 2) × 180° ÷ 8 = 1080° ÷ 8." }
+    hint: { fr: "(8 - 2) . 180° : 8 = 1080° : 8.", en: "(8 - 2) . 180° : 8 = 1080° : 8.", nl: "(8 - 2) . 180° : 8 = 1080° : 8." }
   },
   {
     id: "G4_s_46", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 100°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 100°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 100°. Hoeveel is elke basishoek?" },
     answer: 40, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 100°) ÷ 2 = ?", en: "(180° - 100°) ÷ 2 = ?", nl: "(180° - 100°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 100°) : 2 = ?", en: "(180° - 100°) : 2 = ?", nl: "(180° - 100°) : 2 = ?" }
   },
   {
     id: "G4_s_47", category: "G4", level: 3,
@@ -304,13 +304,13 @@ export const questions = [
     id: "G4_s_49", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un triangle équilatéral ?", en: "What is each interior angle of an equilateral triangle?", nl: "Hoeveel is elke binnenhoek van een gelijkzijdige driehoek?" },
     answer: 60, tolerance: 0, unit: "°",
-    hint: { fr: "180° ÷ 3 = ?", en: "180° ÷ 3 = ?", nl: "180° ÷ 3 = ?" }
+    hint: { fr: "180° : 3 = ?", en: "180° : 3 = ?", nl: "180° : 3 = ?" }
   },
   {
     id: "G4_s_50", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un carré ?", en: "What is each interior angle of a square?", nl: "Hoeveel is elke binnenhoek van een vierkant?" },
     answer: 90, tolerance: 0, unit: "°",
-    hint: { fr: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4.", en: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4.", nl: "(4 - 2) × 180° ÷ 4 = 360° ÷ 4." }
+    hint: { fr: "(4 - 2) . 180° : 4 = 360° : 4.", en: "(4 - 2) . 180° : 4 = 360° : 4.", nl: "(4 - 2) . 180° : 4 = 360° : 4." }
   },
 
   // ===== NEW QUESTIONS G4_s_51 – G4_s_111 =====
@@ -570,13 +570,13 @@ export const questions = [
     id: "G4_s_92", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 50°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 50°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 50°. Hoeveel is elke basishoek?" },
     answer: 65, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 50°) ÷ 2 = ?", en: "(180° - 50°) ÷ 2 = ?", nl: "(180° - 50°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 50°) : 2 = ?", en: "(180° - 50°) : 2 = ?", nl: "(180° - 50°) : 2 = ?" }
   },
   {
     id: "G4_s_93", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un décagone régulier (10 côtés) ?", en: "What is each interior angle of a regular decagon (10 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige tienhoek (10 zijden)?" },
     answer: 144, tolerance: 0, unit: "°",
-    hint: { fr: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10.", en: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10.", nl: "(10 - 2) × 180° ÷ 10 = 1440° ÷ 10." }
+    hint: { fr: "(10 - 2) . 180° : 10 = 1440° : 10.", en: "(10 - 2) . 180° : 10 = 1440° : 10.", nl: "(10 - 2) . 180° : 10 = 1440° : 10." }
   },
   {
     id: "G4_s_94", category: "G4", level: 3,
@@ -594,19 +594,19 @@ export const questions = [
     id: "G4_s_96", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 72°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 72°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 72°. Hoeveel is de tophoek?" },
     answer: 36, tolerance: 0, unit: "°",
-    hint: { fr: "180° - 2 × 72° = ?", en: "180° - 2 × 72° = ?", nl: "180° - 2 × 72° = ?" }
+    hint: { fr: "180° - 2 . 72° = ?", en: "180° - 2 . 72° = ?", nl: "180° - 2 . 72° = ?" }
   },
   {
     id: "G4_s_97", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle extérieur d'un hexagone régulier ?", en: "What is each exterior angle of a regular hexagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige zeshoek?" },
     answer: 60, tolerance: 0, unit: "°",
-    hint: { fr: "360° ÷ 6 = ?", en: "360° ÷ 6 = ?", nl: "360° ÷ 6 = ?" }
+    hint: { fr: "360° : 6 = ?", en: "360° : 6 = ?", nl: "360° : 6 = ?" }
   },
   {
     id: "G4_s_98", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 36°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 36°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 36°. Hoeveel is elke basishoek?" },
     answer: 72, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 36°) ÷ 2 = ?", en: "(180° - 36°) ÷ 2 = ?", nl: "(180° - 36°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 36°) : 2 = ?", en: "(180° - 36°) : 2 = ?", nl: "(180° - 36°) : 2 = ?" }
   },
   {
     id: "G4_s_99", category: "G4", level: 3,
@@ -618,7 +618,7 @@ export const questions = [
     id: "G4_s_100", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle extérieur d'un pentagone régulier ?", en: "What is each exterior angle of a regular pentagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige vijfhoek?" },
     answer: 72, tolerance: 0, unit: "°",
-    hint: { fr: "360° ÷ 5 = ?", en: "360° ÷ 5 = ?", nl: "360° ÷ 5 = ?" }
+    hint: { fr: "360° : 5 = ?", en: "360° : 5 = ?", nl: "360° : 5 = ?" }
   },
   {
     id: "G4_s_101", category: "G4", level: 3,
@@ -630,13 +630,13 @@ export const questions = [
     id: "G4_s_102", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 55°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 55°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 55°. Hoeveel is de tophoek?" },
     answer: 70, tolerance: 0, unit: "°",
-    hint: { fr: "180° - 2 × 55° = ?", en: "180° - 2 × 55° = ?", nl: "180° - 2 × 55° = ?" }
+    hint: { fr: "180° - 2 . 55° = ?", en: "180° - 2 . 55° = ?", nl: "180° - 2 . 55° = ?" }
   },
   {
     id: "G4_s_103", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un ennéagone régulier (9 côtés) ?", en: "What is each interior angle of a regular nonagon (9 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige negenhoek (9 zijden)?" },
     answer: 140, tolerance: 0, unit: "°",
-    hint: { fr: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9.", en: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9.", nl: "(9 - 2) × 180° ÷ 9 = 1260° ÷ 9." }
+    hint: { fr: "(9 - 2) . 180° : 9 = 1260° : 9.", en: "(9 - 2) . 180° : 9 = 1260° : 9.", nl: "(9 - 2) . 180° : 9 = 1260° : 9." }
   },
   {
     id: "G4_s_104", category: "G4", level: 3,
@@ -648,13 +648,13 @@ export const questions = [
     id: "G4_s_105", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, l'angle au sommet mesure 120°. Combien mesure chaque angle de base ?", en: "In an isosceles triangle, the apex angle is 120°. What is each base angle?", nl: "In een gelijkbenige driehoek is de tophoek 120°. Hoeveel is elke basishoek?" },
     answer: 30, tolerance: 0, unit: "°",
-    hint: { fr: "(180° - 120°) ÷ 2 = ?", en: "(180° - 120°) ÷ 2 = ?", nl: "(180° - 120°) ÷ 2 = ?" }
+    hint: { fr: "(180° - 120°) : 2 = ?", en: "(180° - 120°) : 2 = ?", nl: "(180° - 120°) : 2 = ?" }
   },
   {
     id: "G4_s_106", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle extérieur d'un octogone régulier ?", en: "What is each exterior angle of a regular octagon?", nl: "Hoeveel is elke buitenhoek van een regelmatige achthoek?" },
     answer: 45, tolerance: 0, unit: "°",
-    hint: { fr: "360° ÷ 8 = ?", en: "360° ÷ 8 = ?", nl: "360° ÷ 8 = ?" }
+    hint: { fr: "360° : 8 = ?", en: "360° : 8 = ?", nl: "360° : 8 = ?" }
   },
   {
     id: "G4_s_107", category: "G4", level: 3,
@@ -672,19 +672,19 @@ export const questions = [
     id: "G4_s_109", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle extérieur d'un décagone régulier (10 côtés) ?", en: "What is each exterior angle of a regular decagon (10 sides)?", nl: "Hoeveel is elke buitenhoek van een regelmatige tienhoek (10 zijden)?" },
     answer: 36, tolerance: 0, unit: "°",
-    hint: { fr: "360° ÷ 10 = ?", en: "360° ÷ 10 = ?", nl: "360° ÷ 10 = ?" }
+    hint: { fr: "360° : 10 = ?", en: "360° : 10 = ?", nl: "360° : 10 = ?" }
   },
   {
     id: "G4_s_110", category: "G4", level: 3,
     text: { fr: "Dans un triangle isocèle, chaque angle de base mesure 40°. Combien mesure l'angle au sommet ?", en: "In an isosceles triangle, each base angle is 40°. What is the apex angle?", nl: "In een gelijkbenige driehoek is elke basishoek 40°. Hoeveel is de tophoek?" },
     answer: 100, tolerance: 0, unit: "°",
-    hint: { fr: "180° - 2 × 40° = ?", en: "180° - 2 × 40° = ?", nl: "180° - 2 × 40° = ?" }
+    hint: { fr: "180° - 2 . 40° = ?", en: "180° - 2 . 40° = ?", nl: "180° - 2 . 40° = ?" }
   },
   {
     id: "G4_s_111", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un heptagone régulier (7 côtés) ?", en: "What is each interior angle of a regular heptagon (7 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige zevenhoek (7 zijden)?" },
     answer: 128.57, tolerance: 0.01, unit: "°",
-    hint: { fr: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°.", en: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128.57°.", nl: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°." }
+    hint: { fr: "(7 - 2) . 180° : 7 = 900° : 7 ≈ 128,57°.", en: "(7 - 2) . 180° : 7 = 900° : 7 ≈ 128.57°.", nl: "(7 - 2) . 180° : 7 = 900° : 7 ≈ 128,57°." }
   },
   {
     id: "G4_s_112", category: "G4", level: 1,
@@ -714,7 +714,7 @@ export const questions = [
     id: "G4_s_116", category: "G4", level: 3,
     text: { fr: "Combien mesure chaque angle intérieur d'un octogone régulier (8 côtés) ?", en: "What is each interior angle of a regular octagon (8 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige achthoek (8 zijden)?" },
     answer: 135, tolerance: 0, unit: "°",
-    hint: { fr: "(8 - 2) × 180° ÷ 8 = 1 080° ÷ 8 = 135°.", en: "(8 - 2) × 180° ÷ 8 = 1,080° ÷ 8 = 135°.", nl: "(8 - 2) × 180° ÷ 8 = 1.080° ÷ 8 = 135°." }
+    hint: { fr: "(8 - 2) . 180° : 8 = 1 080° : 8 = 135°.", en: "(8 - 2) . 180° : 8 = 1,080° : 8 = 135°.", nl: "(8 - 2) . 180° : 8 = 1.080° : 8 = 135°." }
   },
   {
     id: "G4_s_117", category: "G4", level: 3,

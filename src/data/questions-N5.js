@@ -115,105 +115,105 @@ export const questions = [
   // =========================================================================
   {
     id: "N5_s_6", category: "N5", level: 2,
-    text: { fr: "Calcule : 2,5 × 4", en: "Calculate: 2.5 × 4", nl: "Bereken: 2,5 × 4" },
+    text: { fr: "Calcule : 2,5 . 4", en: "Calculate: 2.5 . 4", nl: "Bereken: 2,5 . 4" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "2 × 4 = 8, 0,5 × 4 = 2. Total = 10.", en: "2 × 4 = 8, 0.5 × 4 = 2. Total = 10.", nl: "2 × 4 = 8, 0,5 × 4 = 2. Totaal = 10." }
+    hint: { fr: "2 . 4 = 8, 0,5 . 4 = 2. Total = 10.", en: "2 . 4 = 8, 0.5 . 4 = 2. Total = 10.", nl: "2 . 4 = 8, 0,5 . 4 = 2. Totaal = 10." }
   },
   {
     id: "N5_s_7", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,2 × 5", en: "Calculate: 3.2 × 5", nl: "Bereken: 3,2 × 5" },
+    text: { fr: "Calcule : 3,2 . 5", en: "Calculate: 3.2 . 5", nl: "Bereken: 3,2 . 5" },
     answer: 16, tolerance: 0.01,
-    hint: { fr: "3 × 5 = 15, 0,2 × 5 = 1. Total = 16.", en: "3 × 5 = 15, 0.2 × 5 = 1. Total = 16.", nl: "3 × 5 = 15, 0,2 × 5 = 1. Totaal = 16." }
+    hint: { fr: "3 . 5 = 15, 0,2 . 5 = 1. Total = 16.", en: "3 . 5 = 15, 0.2 . 5 = 1. Total = 16.", nl: "3 . 5 = 15, 0,2 . 5 = 1. Totaal = 16." }
   },
   {
     id: "N5_s_8", category: "N5", level: 2,
-    text: { fr: "Calcule : 1,5 × 1,2", en: "Calculate: 1.5 × 1.2", nl: "Bereken: 1,5 × 1,2" },
+    text: { fr: "Calcule : 1,5 . 1,2", en: "Calculate: 1.5 . 1.2", nl: "Bereken: 1,5 . 1,2" },
     answer: 1.8, tolerance: 0.01,
-    hint: { fr: "15 × 12 = 180, puis place 2 décimales → 1,80.", en: "15 × 12 = 180, then place 2 decimals → 1.80.", nl: "15 × 12 = 180, plaats dan 2 decimalen → 1,80." }
+    hint: { fr: "15 . 12 = 180, puis place 2 décimales → 1,80.", en: "15 . 12 = 180, then place 2 decimals → 1.80.", nl: "15 . 12 = 180, plaats dan 2 decimalen → 1,80." }
   },
   {
     id: "N5_s_9", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,7 × 8", en: "Calculate: 0.7 × 8", nl: "Bereken: 0,7 × 8" },
+    text: { fr: "Calcule : 0,7 . 8", en: "Calculate: 0.7 . 8", nl: "Bereken: 0,7 . 8" },
     answer: 5.6, tolerance: 0.01,
-    hint: { fr: "7 × 8 = 56, puis place 1 décimale → 5,6.", en: "7 × 8 = 56, then place 1 decimal → 5.6.", nl: "7 × 8 = 56, plaats dan 1 decimaal → 5,6." }
+    hint: { fr: "7 . 8 = 56, puis place 1 décimale → 5,6.", en: "7 . 8 = 56, then place 1 decimal → 5.6.", nl: "7 . 8 = 56, plaats dan 1 decimaal → 5,6." }
   },
   {
     id: "N5_s_10", category: "N5", level: 2,
-    text: { fr: "Calcule : 4,5 × 2,2", en: "Calculate: 4.5 × 2.2", nl: "Bereken: 4,5 × 2,2" },
+    text: { fr: "Calcule : 4,5 . 2,2", en: "Calculate: 4.5 . 2.2", nl: "Bereken: 4,5 . 2,2" },
     answer: 9.9, tolerance: 0.01,
-    hint: { fr: "45 × 22 = 990, puis place 2 décimales → 9,90.", en: "45 × 22 = 990, then place 2 decimals → 9.90.", nl: "45 × 22 = 990, plaats dan 2 decimalen → 9,90." }
+    hint: { fr: "45 . 22 = 990, puis place 2 décimales → 9,90.", en: "45 . 22 = 990, then place 2 decimals → 9.90.", nl: "45 . 22 = 990, plaats dan 2 decimalen → 9,90." }
   },
   {
     id: "N5_s_28", category: "N5", level: 2,
-    text: { fr: "Calcule : 6,5 × 3", en: "Calculate: 6.5 × 3", nl: "Bereken: 6,5 × 3" },
+    text: { fr: "Calcule : 6,5 . 3", en: "Calculate: 6.5 . 3", nl: "Bereken: 6,5 . 3" },
     answer: 19.5, tolerance: 0.01,
-    hint: { fr: "6 × 3 = 18, 0,5 × 3 = 1,5. Total = 19,5.", en: "6 × 3 = 18, 0.5 × 3 = 1.5. Total = 19.5.", nl: "6 × 3 = 18, 0,5 × 3 = 1,5. Totaal = 19,5." }
+    hint: { fr: "6 . 3 = 18, 0,5 . 3 = 1,5. Total = 19,5.", en: "6 . 3 = 18, 0.5 . 3 = 1.5. Total = 19.5.", nl: "6 . 3 = 18, 0,5 . 3 = 1,5. Totaal = 19,5." }
   },
   {
     id: "N5_s_29", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,4 × 7", en: "Calculate: 0.4 × 7", nl: "Bereken: 0,4 × 7" },
+    text: { fr: "Calcule : 0,4 . 7", en: "Calculate: 0.4 . 7", nl: "Bereken: 0,4 . 7" },
     answer: 2.8, tolerance: 0.01,
-    hint: { fr: "4 × 7 = 28, puis place 1 décimale → 2,8.", en: "4 × 7 = 28, then place 1 decimal → 2.8.", nl: "4 × 7 = 28, plaats dan 1 decimaal → 2,8." }
+    hint: { fr: "4 . 7 = 28, puis place 1 décimale → 2,8.", en: "4 . 7 = 28, then place 1 decimal → 2.8.", nl: "4 . 7 = 28, plaats dan 1 decimaal → 2,8." }
   },
   {
     id: "N5_s_30", category: "N5", level: 2,
-    text: { fr: "Calcule : 2,3 × 1,5", en: "Calculate: 2.3 × 1.5", nl: "Bereken: 2,3 × 1,5" },
+    text: { fr: "Calcule : 2,3 . 1,5", en: "Calculate: 2.3 . 1.5", nl: "Bereken: 2,3 . 1,5" },
     answer: 3.45, tolerance: 0.01,
-    hint: { fr: "23 × 15 = 345, puis place 2 décimales → 3,45.", en: "23 × 15 = 345, then place 2 decimals → 3.45.", nl: "23 × 15 = 345, plaats dan 2 decimalen → 3,45." }
+    hint: { fr: "23 . 15 = 345, puis place 2 décimales → 3,45.", en: "23 . 15 = 345, then place 2 decimals → 3.45.", nl: "23 . 15 = 345, plaats dan 2 decimalen → 3,45." }
   },
   {
     id: "N5_s_31", category: "N5", level: 2,
-    text: { fr: "Calcule : 5,4 × 6", en: "Calculate: 5.4 × 6", nl: "Bereken: 5,4 × 6" },
+    text: { fr: "Calcule : 5,4 . 6", en: "Calculate: 5.4 . 6", nl: "Bereken: 5,4 . 6" },
     answer: 32.4, tolerance: 0.01,
-    hint: { fr: "5 × 6 = 30, 0,4 × 6 = 2,4. Total = 32,4.", en: "5 × 6 = 30, 0.4 × 6 = 2.4. Total = 32.4.", nl: "5 × 6 = 30, 0,4 × 6 = 2,4. Totaal = 32,4." }
+    hint: { fr: "5 . 6 = 30, 0,4 . 6 = 2,4. Total = 32,4.", en: "5 . 6 = 30, 0.4 . 6 = 2.4. Total = 32.4.", nl: "5 . 6 = 30, 0,4 . 6 = 2,4. Totaal = 32,4." }
   },
   {
     id: "N5_s_32", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,6 × 2,5", en: "Calculate: 3.6 × 2.5", nl: "Bereken: 3,6 × 2,5" },
+    text: { fr: "Calcule : 3,6 . 2,5", en: "Calculate: 3.6 . 2.5", nl: "Bereken: 3,6 . 2,5" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "36 × 25 = 900, puis place 2 décimales → 9,00.", en: "36 × 25 = 900, then place 2 decimals → 9.00.", nl: "36 × 25 = 900, plaats dan 2 decimalen → 9,00." }
+    hint: { fr: "36 . 25 = 900, puis place 2 décimales → 9,00.", en: "36 . 25 = 900, then place 2 decimals → 9.00.", nl: "36 . 25 = 900, plaats dan 2 decimalen → 9,00." }
   },
   {
     id: "N5_s_33", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,9 × 9", en: "Calculate: 0.9 × 9", nl: "Bereken: 0,9 × 9" },
+    text: { fr: "Calcule : 0,9 . 9", en: "Calculate: 0.9 . 9", nl: "Bereken: 0,9 . 9" },
     answer: 8.1, tolerance: 0.01,
-    hint: { fr: "9 × 9 = 81, puis place 1 décimale → 8,1.", en: "9 × 9 = 81, then place 1 decimal → 8.1.", nl: "9 × 9 = 81, plaats dan 1 decimaal → 8,1." }
+    hint: { fr: "9 . 9 = 81, puis place 1 décimale → 8,1.", en: "9 . 9 = 81, then place 1 decimal → 8.1.", nl: "9 . 9 = 81, plaats dan 1 decimaal → 8,1." }
   },
   {
     id: "N5_s_34", category: "N5", level: 2,
-    text: { fr: "Calcule : 7,2 × 4", en: "Calculate: 7.2 × 4", nl: "Bereken: 7,2 × 4" },
+    text: { fr: "Calcule : 7,2 . 4", en: "Calculate: 7.2 . 4", nl: "Bereken: 7,2 . 4" },
     answer: 28.8, tolerance: 0.01,
-    hint: { fr: "7 × 4 = 28, 0,2 × 4 = 0,8. Total = 28,8.", en: "7 × 4 = 28, 0.2 × 4 = 0.8. Total = 28.8.", nl: "7 × 4 = 28, 0,2 × 4 = 0,8. Totaal = 28,8." }
+    hint: { fr: "7 . 4 = 28, 0,2 . 4 = 0,8. Total = 28,8.", en: "7 . 4 = 28, 0.2 . 4 = 0.8. Total = 28.8.", nl: "7 . 4 = 28, 0,2 . 4 = 0,8. Totaal = 28,8." }
   },
   {
     id: "N5_s_35", category: "N5", level: 2,
-    text: { fr: "Calcule : 1,8 × 3,5", en: "Calculate: 1.8 × 3.5", nl: "Bereken: 1,8 × 3,5" },
+    text: { fr: "Calcule : 1,8 . 3,5", en: "Calculate: 1.8 . 3.5", nl: "Bereken: 1,8 . 3,5" },
     answer: 6.3, tolerance: 0.01,
-    hint: { fr: "18 × 35 = 630, puis place 2 décimales → 6,30.", en: "18 × 35 = 630, then place 2 decimals → 6.30.", nl: "18 × 35 = 630, plaats dan 2 decimalen → 6,30." }
+    hint: { fr: "18 . 35 = 630, puis place 2 décimales → 6,30.", en: "18 . 35 = 630, then place 2 decimals → 6.30.", nl: "18 . 35 = 630, plaats dan 2 decimalen → 6,30." }
   },
   {
     id: "N5_s_36", category: "N5", level: 2,
-    text: { fr: "Calcule : 4,8 × 2,5", en: "Calculate: 4.8 × 2.5", nl: "Bereken: 4,8 × 2,5" },
+    text: { fr: "Calcule : 4,8 . 2,5", en: "Calculate: 4.8 . 2.5", nl: "Bereken: 4,8 . 2,5" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "48 × 25 = 1200, puis place 2 décimales → 12,00.", en: "48 × 25 = 1200, then place 2 decimals → 12.00.", nl: "48 × 25 = 1200, plaats dan 2 decimalen → 12,00." }
+    hint: { fr: "48 . 25 = 1200, puis place 2 décimales → 12,00.", en: "48 . 25 = 1200, then place 2 decimals → 12.00.", nl: "48 . 25 = 1200, plaats dan 2 decimalen → 12,00." }
   },
   {
     id: "N5_s_37", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,6 × 0,5", en: "Calculate: 0.6 × 0.5", nl: "Bereken: 0,6 × 0,5" },
+    text: { fr: "Calcule : 0,6 . 0,5", en: "Calculate: 0.6 . 0.5", nl: "Bereken: 0,6 . 0,5" },
     answer: 0.3, tolerance: 0.01,
-    hint: { fr: "6 × 5 = 30, puis place 2 décimales → 0,30.", en: "6 × 5 = 30, then place 2 decimals → 0.30.", nl: "6 × 5 = 30, plaats dan 2 decimalen → 0,30." }
+    hint: { fr: "6 . 5 = 30, puis place 2 décimales → 0,30.", en: "6 . 5 = 30, then place 2 decimals → 0.30.", nl: "6 . 5 = 30, plaats dan 2 decimalen → 0,30." }
   },
   {
     id: "N5_s_38", category: "N5", level: 2,
-    text: { fr: "Calcule : 8,5 × 2", en: "Calculate: 8.5 × 2", nl: "Bereken: 8,5 × 2" },
+    text: { fr: "Calcule : 8,5 . 2", en: "Calculate: 8.5 . 2", nl: "Bereken: 8,5 . 2" },
     answer: 17, tolerance: 0.01,
-    hint: { fr: "8 × 2 = 16, 0,5 × 2 = 1. Total = 17.", en: "8 × 2 = 16, 0.5 × 2 = 1. Total = 17.", nl: "8 × 2 = 16, 0,5 × 2 = 1. Totaal = 17." }
+    hint: { fr: "8 . 2 = 16, 0,5 . 2 = 1. Total = 17.", en: "8 . 2 = 16, 0.5 . 2 = 1. Total = 17.", nl: "8 . 2 = 16, 0,5 . 2 = 1. Totaal = 17." }
   },
   {
     id: "N5_s_39", category: "N5", level: 2,
-    text: { fr: "Calcule : 2,4 × 3,5", en: "Calculate: 2.4 × 3.5", nl: "Bereken: 2,4 × 3,5" },
+    text: { fr: "Calcule : 2,4 . 3,5", en: "Calculate: 2.4 . 3.5", nl: "Bereken: 2,4 . 3,5" },
     answer: 8.4, tolerance: 0.01,
-    hint: { fr: "24 × 35 = 840, puis place 2 décimales → 8,40.", en: "24 × 35 = 840, then place 2 decimals → 8.40.", nl: "24 × 35 = 840, plaats dan 2 decimalen → 8,40." }
+    hint: { fr: "24 . 35 = 840, puis place 2 décimales → 8,40.", en: "24 . 35 = 840, then place 2 decimals → 8.40.", nl: "24 . 35 = 840, plaats dan 2 decimalen → 8,40." }
   },
 
   // =========================================================================
@@ -221,99 +221,99 @@ export const questions = [
   // =========================================================================
   {
     id: "N5_s_11", category: "N5", level: 3,
-    text: { fr: "Calcule : 7,5 ÷ 2,5", en: "Calculate: 7.5 ÷ 2.5", nl: "Bereken: 7,5 ÷ 2,5" },
+    text: { fr: "Calcule : 7,5 : 2,5", en: "Calculate: 7.5 : 2.5", nl: "Bereken: 7,5 : 2,5" },
     answer: 3, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 2 : 15 ÷ 5 = 3.", en: "Multiply both by 2: 15 ÷ 5 = 3.", nl: "Vermenigvuldig beide met 2: 15 ÷ 5 = 3." }
+    hint: { fr: "Multiplie les deux par 2 : 15 : 5 = 3.", en: "Multiply both by 2: 15 : 5 = 3.", nl: "Vermenigvuldig beide met 2: 15 : 5 = 3." }
   },
   {
     id: "N5_s_12", category: "N5", level: 3,
-    text: { fr: "Calcule : 12,6 ÷ 0,3", en: "Calculate: 12.6 ÷ 0.3", nl: "Bereken: 12,6 ÷ 0,3" },
+    text: { fr: "Calcule : 12,6 : 0,3", en: "Calculate: 12.6 : 0.3", nl: "Bereken: 12,6 : 0,3" },
     answer: 42, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 126 ÷ 3 = 42.", en: "Multiply both by 10: 126 ÷ 3 = 42.", nl: "Vermenigvuldig beide met 10: 126 ÷ 3 = 42." }
+    hint: { fr: "Multiplie les deux par 10 : 126 : 3 = 42.", en: "Multiply both by 10: 126 : 3 = 42.", nl: "Vermenigvuldig beide met 10: 126 : 3 = 42." }
   },
   {
     id: "N5_s_13", category: "N5", level: 3,
-    text: { fr: "Calcule : 3,6 × 2,5 + 1,4", en: "Calculate: 3.6 × 2.5 + 1.4", nl: "Bereken: 3,6 × 2,5 + 1,4" },
+    text: { fr: "Calcule : 3,6 . 2,5 + 1,4", en: "Calculate: 3.6 . 2.5 + 1.4", nl: "Bereken: 3,6 . 2,5 + 1,4" },
     answer: 10.4, tolerance: 0.01,
-    hint: { fr: "D'abord 3,6 × 2,5 = 9, puis + 1,4.", en: "First 3.6 × 2.5 = 9, then + 1.4.", nl: "Eerst 3,6 × 2,5 = 9, dan + 1,4." }
+    hint: { fr: "D'abord 3,6 . 2,5 = 9, puis + 1,4.", en: "First 3.6 . 2.5 = 9, then + 1.4.", nl: "Eerst 3,6 . 2,5 = 9, dan + 1,4." }
   },
   {
     id: "N5_s_14", category: "N5", level: 3,
-    text: { fr: "Calcule : 15,75 ÷ 3,5", en: "Calculate: 15.75 ÷ 3.5", nl: "Bereken: 15,75 ÷ 3,5" },
+    text: { fr: "Calcule : 15,75 : 3,5", en: "Calculate: 15.75 : 3.5", nl: "Bereken: 15,75 : 3,5" },
     answer: 4.5, tolerance: 0.01,
-    hint: { fr: "Multiplie par 2 : 31,5 ÷ 7 = 4,5.", en: "Multiply by 2: 31.5 ÷ 7 = 4.5.", nl: "Vermenigvuldig met 2: 31,5 ÷ 7 = 4,5." }
+    hint: { fr: "Multiplie par 2 : 31,5 : 7 = 4,5.", en: "Multiply by 2: 31.5 : 7 = 4.5.", nl: "Vermenigvuldig met 2: 31,5 : 7 = 4,5." }
   },
   {
     id: "N5_s_15", category: "N5", level: 3,
-    text: { fr: "Calcule : 2,4 × 3,5 - 1,4", en: "Calculate: 2.4 × 3.5 - 1.4", nl: "Bereken: 2,4 × 3,5 - 1,4" },
+    text: { fr: "Calcule : 2,4 . 3,5 - 1,4", en: "Calculate: 2.4 . 3.5 - 1.4", nl: "Bereken: 2,4 . 3,5 - 1,4" },
     answer: 7, tolerance: 0.01,
-    hint: { fr: "D'abord 2,4 × 3,5 = 8,4, puis - 1,4.", en: "First 2.4 × 3.5 = 8.4, then - 1.4.", nl: "Eerst 2,4 × 3,5 = 8,4, dan - 1,4." }
+    hint: { fr: "D'abord 2,4 . 3,5 = 8,4, puis - 1,4.", en: "First 2.4 . 3.5 = 8.4, then - 1.4.", nl: "Eerst 2,4 . 3,5 = 8,4, dan - 1,4." }
   },
   {
     id: "N5_s_40", category: "N5", level: 3,
-    text: { fr: "Calcule : 9,6 ÷ 1,6", en: "Calculate: 9.6 ÷ 1.6", nl: "Bereken: 9,6 ÷ 1,6" },
+    text: { fr: "Calcule : 9,6 : 1,6", en: "Calculate: 9.6 : 1.6", nl: "Bereken: 9,6 : 1,6" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 5 : 48 ÷ 8 = 6.", en: "Multiply both by 5: 48 ÷ 8 = 6.", nl: "Vermenigvuldig beide met 5: 48 ÷ 8 = 6." }
+    hint: { fr: "Multiplie les deux par 5 : 48 : 8 = 6.", en: "Multiply both by 5: 48 : 8 = 6.", nl: "Vermenigvuldig beide met 5: 48 : 8 = 6." }
   },
   {
     id: "N5_s_41", category: "N5", level: 3,
-    text: { fr: "Calcule : 18,9 ÷ 2,7", en: "Calculate: 18.9 ÷ 2.7", nl: "Bereken: 18,9 ÷ 2,7" },
+    text: { fr: "Calcule : 18,9 : 2,7", en: "Calculate: 18.9 : 2.7", nl: "Bereken: 18,9 : 2,7" },
     answer: 7, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 189 ÷ 27 = 7.", en: "Multiply both by 10: 189 ÷ 27 = 7.", nl: "Vermenigvuldig beide met 10: 189 ÷ 27 = 7." }
+    hint: { fr: "Multiplie les deux par 10 : 189 : 27 = 7.", en: "Multiply both by 10: 189 : 27 = 7.", nl: "Vermenigvuldig beide met 10: 189 : 27 = 7." }
   },
   {
     id: "N5_s_42", category: "N5", level: 3,
-    text: { fr: "Calcule : 4,5 × 2,4 - 3,8", en: "Calculate: 4.5 × 2.4 - 3.8", nl: "Bereken: 4,5 × 2,4 - 3,8" },
+    text: { fr: "Calcule : 4,5 . 2,4 - 3,8", en: "Calculate: 4.5 . 2.4 - 3.8", nl: "Bereken: 4,5 . 2,4 - 3,8" },
     answer: 7, tolerance: 0.01,
-    hint: { fr: "D'abord 4,5 × 2,4 = 10,8, puis - 3,8 = 7.", en: "First 4.5 × 2.4 = 10.8, then - 3.8 = 7.", nl: "Eerst 4,5 × 2,4 = 10,8, dan - 3,8 = 7." }
+    hint: { fr: "D'abord 4,5 . 2,4 = 10,8, puis - 3,8 = 7.", en: "First 4.5 . 2.4 = 10.8, then - 3.8 = 7.", nl: "Eerst 4,5 . 2,4 = 10,8, dan - 3,8 = 7." }
   },
   {
     id: "N5_s_43", category: "N5", level: 3,
-    text: { fr: "Calcule : 8,4 ÷ 0,7", en: "Calculate: 8.4 ÷ 0.7", nl: "Bereken: 8,4 ÷ 0,7" },
+    text: { fr: "Calcule : 8,4 : 0,7", en: "Calculate: 8.4 : 0.7", nl: "Bereken: 8,4 : 0,7" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 84 ÷ 7 = 12.", en: "Multiply both by 10: 84 ÷ 7 = 12.", nl: "Vermenigvuldig beide met 10: 84 ÷ 7 = 12." }
+    hint: { fr: "Multiplie les deux par 10 : 84 : 7 = 12.", en: "Multiply both by 10: 84 : 7 = 12.", nl: "Vermenigvuldig beide met 10: 84 : 7 = 12." }
   },
   {
     id: "N5_s_44", category: "N5", level: 3,
-    text: { fr: "Calcule : 5,6 ÷ 0,8", en: "Calculate: 5.6 ÷ 0.8", nl: "Bereken: 5,6 ÷ 0,8" },
+    text: { fr: "Calcule : 5,6 : 0,8", en: "Calculate: 5.6 : 0.8", nl: "Bereken: 5,6 : 0,8" },
     answer: 7, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 56 ÷ 8 = 7.", en: "Multiply both by 10: 56 ÷ 8 = 7.", nl: "Vermenigvuldig beide met 10: 56 ÷ 8 = 7." }
+    hint: { fr: "Multiplie les deux par 10 : 56 : 8 = 7.", en: "Multiply both by 10: 56 : 8 = 7.", nl: "Vermenigvuldig beide met 10: 56 : 8 = 7." }
   },
   {
     id: "N5_s_45", category: "N5", level: 3,
-    text: { fr: "Calcule : 1,5 × 4,2 + 2,7", en: "Calculate: 1.5 × 4.2 + 2.7", nl: "Bereken: 1,5 × 4,2 + 2,7" },
+    text: { fr: "Calcule : 1,5 . 4,2 + 2,7", en: "Calculate: 1.5 . 4.2 + 2.7", nl: "Bereken: 1,5 . 4,2 + 2,7" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "D'abord 1,5 × 4,2 = 6,3, puis + 2,7 = 9.", en: "First 1.5 × 4.2 = 6.3, then + 2.7 = 9.", nl: "Eerst 1,5 × 4,2 = 6,3, dan + 2,7 = 9." }
+    hint: { fr: "D'abord 1,5 . 4,2 = 6,3, puis + 2,7 = 9.", en: "First 1.5 . 4.2 = 6.3, then + 2.7 = 9.", nl: "Eerst 1,5 . 4,2 = 6,3, dan + 2,7 = 9." }
   },
   {
     id: "N5_s_46", category: "N5", level: 3,
-    text: { fr: "Calcule : 20,4 ÷ 3,4", en: "Calculate: 20.4 ÷ 3.4", nl: "Bereken: 20,4 ÷ 3,4" },
+    text: { fr: "Calcule : 20,4 : 3,4", en: "Calculate: 20.4 : 3.4", nl: "Bereken: 20,4 : 3,4" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 204 ÷ 34 = 6.", en: "Multiply both by 10: 204 ÷ 34 = 6.", nl: "Vermenigvuldig beide met 10: 204 ÷ 34 = 6." }
+    hint: { fr: "Multiplie les deux par 10 : 204 : 34 = 6.", en: "Multiply both by 10: 204 : 34 = 6.", nl: "Vermenigvuldig beide met 10: 204 : 34 = 6." }
   },
   {
     id: "N5_s_47", category: "N5", level: 3,
-    text: { fr: "Calcule : 6,3 ÷ 0,9 + 3,5", en: "Calculate: 6.3 ÷ 0.9 + 3.5", nl: "Bereken: 6,3 ÷ 0,9 + 3,5" },
+    text: { fr: "Calcule : 6,3 : 0,9 + 3,5", en: "Calculate: 6.3 : 0.9 + 3.5", nl: "Bereken: 6,3 : 0,9 + 3,5" },
     answer: 10.5, tolerance: 0.01,
-    hint: { fr: "D'abord 6,3 ÷ 0,9 = 7, puis + 3,5 = 10,5.", en: "First 6.3 ÷ 0.9 = 7, then + 3.5 = 10.5.", nl: "Eerst 6,3 ÷ 0,9 = 7, dan + 3,5 = 10,5." }
+    hint: { fr: "D'abord 6,3 : 0,9 = 7, puis + 3,5 = 10,5.", en: "First 6.3 : 0.9 = 7, then + 3.5 = 10.5.", nl: "Eerst 6,3 : 0,9 = 7, dan + 3,5 = 10,5." }
   },
   {
     id: "N5_s_48", category: "N5", level: 3,
-    text: { fr: "Calcule : 14,4 ÷ 1,2", en: "Calculate: 14.4 ÷ 1.2", nl: "Bereken: 14,4 ÷ 1,2" },
+    text: { fr: "Calcule : 14,4 : 1,2", en: "Calculate: 14.4 : 1.2", nl: "Bereken: 14,4 : 1,2" },
     answer: 12, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 144 ÷ 12 = 12.", en: "Multiply both by 10: 144 ÷ 12 = 12.", nl: "Vermenigvuldig beide met 10: 144 ÷ 12 = 12." }
+    hint: { fr: "Multiplie les deux par 10 : 144 : 12 = 12.", en: "Multiply both by 10: 144 : 12 = 12.", nl: "Vermenigvuldig beide met 10: 144 : 12 = 12." }
   },
   {
     id: "N5_s_49", category: "N5", level: 3,
-    text: { fr: "Calcule : 2,5 × 3,6 - 4,5", en: "Calculate: 2.5 × 3.6 - 4.5", nl: "Bereken: 2,5 × 3,6 - 4,5" },
+    text: { fr: "Calcule : 2,5 . 3,6 - 4,5", en: "Calculate: 2.5 . 3.6 - 4.5", nl: "Bereken: 2,5 . 3,6 - 4,5" },
     answer: 4.5, tolerance: 0.01,
-    hint: { fr: "D'abord 2,5 × 3,6 = 9, puis - 4,5 = 4,5.", en: "First 2.5 × 3.6 = 9, then - 4.5 = 4.5.", nl: "Eerst 2,5 × 3,6 = 9, dan - 4,5 = 4,5." }
+    hint: { fr: "D'abord 2,5 . 3,6 = 9, puis - 4,5 = 4,5.", en: "First 2.5 . 3.6 = 9, then - 4.5 = 4.5.", nl: "Eerst 2,5 . 3,6 = 9, dan - 4,5 = 4,5." }
   },
   {
     id: "N5_s_50", category: "N5", level: 3,
-    text: { fr: "Calcule : 16,8 ÷ 2,4 + 1,8", en: "Calculate: 16.8 ÷ 2.4 + 1.8", nl: "Bereken: 16,8 ÷ 2,4 + 1,8" },
+    text: { fr: "Calcule : 16,8 : 2,4 + 1,8", en: "Calculate: 16.8 : 2.4 + 1.8", nl: "Bereken: 16,8 : 2,4 + 1,8" },
     answer: 8.8, tolerance: 0.01,
-    hint: { fr: "D'abord 16,8 ÷ 2,4 = 7, puis + 1,8 = 8,8.", en: "First 16.8 ÷ 2.4 = 7, then + 1.8 = 8.8.", nl: "Eerst 16,8 ÷ 2,4 = 7, dan + 1,8 = 8,8." }
+    hint: { fr: "D'abord 16,8 : 2,4 = 7, puis + 1,8 = 8,8.", en: "First 16.8 : 2.4 = 7, then + 1.8 = 8.8.", nl: "Eerst 16,8 : 2,4 = 7, dan + 1,8 = 8,8." }
   },
 
   // =========================================================================
@@ -445,129 +445,129 @@ export const questions = [
   // =========================================================================
   {
     id: "N5_s_71", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,4 × 3", en: "Calculate: 3.4 × 3", nl: "Bereken: 3,4 × 3" },
+    text: { fr: "Calcule : 3,4 . 3", en: "Calculate: 3.4 . 3", nl: "Bereken: 3,4 . 3" },
     answer: 10.2, tolerance: 0.01,
-    hint: { fr: "3 × 3 = 9, 0,4 × 3 = 1,2. Total = 10,2.", en: "3 × 3 = 9, 0.4 × 3 = 1.2. Total = 10.2.", nl: "3 × 3 = 9, 0,4 × 3 = 1,2. Totaal = 10,2." }
+    hint: { fr: "3 . 3 = 9, 0,4 . 3 = 1,2. Total = 10,2.", en: "3 . 3 = 9, 0.4 . 3 = 1.2. Total = 10.2.", nl: "3 . 3 = 9, 0,4 . 3 = 1,2. Totaal = 10,2." }
   },
   {
     id: "N5_s_72", category: "N5", level: 2,
-    text: { fr: "Calcule : 5,6 × 5", en: "Calculate: 5.6 × 5", nl: "Bereken: 5,6 × 5" },
+    text: { fr: "Calcule : 5,6 . 5", en: "Calculate: 5.6 . 5", nl: "Bereken: 5,6 . 5" },
     answer: 28, tolerance: 0.01,
-    hint: { fr: "5 × 5 = 25, 0,6 × 5 = 3. Total = 28.", en: "5 × 5 = 25, 0.6 × 5 = 3. Total = 28.", nl: "5 × 5 = 25, 0,6 × 5 = 3. Totaal = 28." }
+    hint: { fr: "5 . 5 = 25, 0,6 . 5 = 3. Total = 28.", en: "5 . 5 = 25, 0.6 . 5 = 3. Total = 28.", nl: "5 . 5 = 25, 0,6 . 5 = 3. Totaal = 28." }
   },
   {
     id: "N5_s_73", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,8 × 6", en: "Calculate: 0.8 × 6", nl: "Bereken: 0,8 × 6" },
+    text: { fr: "Calcule : 0,8 . 6", en: "Calculate: 0.8 . 6", nl: "Bereken: 0,8 . 6" },
     answer: 4.8, tolerance: 0.01,
-    hint: { fr: "8 × 6 = 48, puis place 1 décimale → 4,8.", en: "8 × 6 = 48, then place 1 decimal → 4.8.", nl: "8 × 6 = 48, plaats dan 1 decimaal → 4,8." }
+    hint: { fr: "8 . 6 = 48, puis place 1 décimale → 4,8.", en: "8 . 6 = 48, then place 1 decimal → 4.8.", nl: "8 . 6 = 48, plaats dan 1 decimaal → 4,8." }
   },
   {
     id: "N5_s_74", category: "N5", level: 2,
-    text: { fr: "Calcule : 1,6 × 2,5", en: "Calculate: 1.6 × 2.5", nl: "Bereken: 1,6 × 2,5" },
+    text: { fr: "Calcule : 1,6 . 2,5", en: "Calculate: 1.6 . 2.5", nl: "Bereken: 1,6 . 2,5" },
     answer: 4, tolerance: 0.01,
-    hint: { fr: "16 × 25 = 400, puis place 2 décimales → 4,00.", en: "16 × 25 = 400, then place 2 decimals → 4.00.", nl: "16 × 25 = 400, plaats dan 2 decimalen → 4,00." }
+    hint: { fr: "16 . 25 = 400, puis place 2 décimales → 4,00.", en: "16 . 25 = 400, then place 2 decimals → 4.00.", nl: "16 . 25 = 400, plaats dan 2 decimalen → 4,00." }
   },
   {
     id: "N5_s_75", category: "N5", level: 2,
-    text: { fr: "Calcule : 4,2 × 7", en: "Calculate: 4.2 × 7", nl: "Bereken: 4,2 × 7" },
+    text: { fr: "Calcule : 4,2 . 7", en: "Calculate: 4.2 . 7", nl: "Bereken: 4,2 . 7" },
     answer: 29.4, tolerance: 0.01,
-    hint: { fr: "4 × 7 = 28, 0,2 × 7 = 1,4. Total = 29,4.", en: "4 × 7 = 28, 0.2 × 7 = 1.4. Total = 29.4.", nl: "4 × 7 = 28, 0,2 × 7 = 1,4. Totaal = 29,4." }
+    hint: { fr: "4 . 7 = 28, 0,2 . 7 = 1,4. Total = 29,4.", en: "4 . 7 = 28, 0.2 . 7 = 1.4. Total = 29.4.", nl: "4 . 7 = 28, 0,2 . 7 = 1,4. Totaal = 29,4." }
   },
   {
     id: "N5_s_76", category: "N5", level: 2,
-    text: { fr: "Calcule : 2,8 × 1,5", en: "Calculate: 2.8 × 1.5", nl: "Bereken: 2,8 × 1,5" },
+    text: { fr: "Calcule : 2,8 . 1,5", en: "Calculate: 2.8 . 1.5", nl: "Bereken: 2,8 . 1,5" },
     answer: 4.2, tolerance: 0.01,
-    hint: { fr: "28 × 15 = 420, puis place 2 décimales → 4,20.", en: "28 × 15 = 420, then place 2 decimals → 4.20.", nl: "28 × 15 = 420, plaats dan 2 decimalen → 4,20." }
+    hint: { fr: "28 . 15 = 420, puis place 2 décimales → 4,20.", en: "28 . 15 = 420, then place 2 decimals → 4.20.", nl: "28 . 15 = 420, plaats dan 2 decimalen → 4,20." }
   },
   {
     id: "N5_s_77", category: "N5", level: 2,
-    text: { fr: "Calcule : 9,5 × 4", en: "Calculate: 9.5 × 4", nl: "Bereken: 9,5 × 4" },
+    text: { fr: "Calcule : 9,5 . 4", en: "Calculate: 9.5 . 4", nl: "Bereken: 9,5 . 4" },
     answer: 38, tolerance: 0.01,
-    hint: { fr: "9 × 4 = 36, 0,5 × 4 = 2. Total = 38.", en: "9 × 4 = 36, 0.5 × 4 = 2. Total = 38.", nl: "9 × 4 = 36, 0,5 × 4 = 2. Totaal = 38." }
+    hint: { fr: "9 . 4 = 36, 0,5 . 4 = 2. Total = 38.", en: "9 . 4 = 36, 0.5 . 4 = 2. Total = 38.", nl: "9 . 4 = 36, 0,5 . 4 = 2. Totaal = 38." }
   },
   {
     id: "N5_s_78", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,3 × 9", en: "Calculate: 0.3 × 9", nl: "Bereken: 0,3 × 9" },
+    text: { fr: "Calcule : 0,3 . 9", en: "Calculate: 0.3 . 9", nl: "Bereken: 0,3 . 9" },
     answer: 2.7, tolerance: 0.01,
-    hint: { fr: "3 × 9 = 27, puis place 1 décimale → 2,7.", en: "3 × 9 = 27, then place 1 decimal → 2.7.", nl: "3 × 9 = 27, plaats dan 1 decimaal → 2,7." }
+    hint: { fr: "3 . 9 = 27, puis place 1 décimale → 2,7.", en: "3 . 9 = 27, then place 1 decimal → 2.7.", nl: "3 . 9 = 27, plaats dan 1 decimaal → 2,7." }
   },
   {
     id: "N5_s_79", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,5 × 2,4", en: "Calculate: 3.5 × 2.4", nl: "Bereken: 3,5 × 2,4" },
+    text: { fr: "Calcule : 3,5 . 2,4", en: "Calculate: 3.5 . 2.4", nl: "Bereken: 3,5 . 2,4" },
     answer: 8.4, tolerance: 0.01,
-    hint: { fr: "35 × 24 = 840, puis place 2 décimales → 8,40.", en: "35 × 24 = 840, then place 2 decimals → 8.40.", nl: "35 × 24 = 840, plaats dan 2 decimalen → 8,40." }
+    hint: { fr: "35 . 24 = 840, puis place 2 décimales → 8,40.", en: "35 . 24 = 840, then place 2 decimals → 8.40.", nl: "35 . 24 = 840, plaats dan 2 decimalen → 8,40." }
   },
   {
     id: "N5_s_80", category: "N5", level: 2,
-    text: { fr: "Calcule : 6,8 × 2", en: "Calculate: 6.8 × 2", nl: "Bereken: 6,8 × 2" },
+    text: { fr: "Calcule : 6,8 . 2", en: "Calculate: 6.8 . 2", nl: "Bereken: 6,8 . 2" },
     answer: 13.6, tolerance: 0.01,
-    hint: { fr: "6 × 2 = 12, 0,8 × 2 = 1,6. Total = 13,6.", en: "6 × 2 = 12, 0.8 × 2 = 1.6. Total = 13.6.", nl: "6 × 2 = 12, 0,8 × 2 = 1,6. Totaal = 13,6." }
+    hint: { fr: "6 . 2 = 12, 0,8 . 2 = 1,6. Total = 13,6.", en: "6 . 2 = 12, 0.8 . 2 = 1.6. Total = 13.6.", nl: "6 . 2 = 12, 0,8 . 2 = 1,6. Totaal = 13,6." }
   },
   {
     id: "N5_s_81", category: "N5", level: 2,
-    text: { fr: "Calcule : 1,4 × 3,5", en: "Calculate: 1.4 × 3.5", nl: "Bereken: 1,4 × 3,5" },
+    text: { fr: "Calcule : 1,4 . 3,5", en: "Calculate: 1.4 . 3.5", nl: "Bereken: 1,4 . 3,5" },
     answer: 4.9, tolerance: 0.01,
-    hint: { fr: "14 × 35 = 490, puis place 2 décimales → 4,90.", en: "14 × 35 = 490, then place 2 decimals → 4.90.", nl: "14 × 35 = 490, plaats dan 2 decimalen → 4,90." }
+    hint: { fr: "14 . 35 = 490, puis place 2 décimales → 4,90.", en: "14 . 35 = 490, then place 2 decimals → 4.90.", nl: "14 . 35 = 490, plaats dan 2 decimalen → 4,90." }
   },
   {
     id: "N5_s_82", category: "N5", level: 2,
-    text: { fr: "Calcule : 7,5 × 8", en: "Calculate: 7.5 × 8", nl: "Bereken: 7,5 × 8" },
+    text: { fr: "Calcule : 7,5 . 8", en: "Calculate: 7.5 . 8", nl: "Bereken: 7,5 . 8" },
     answer: 60, tolerance: 0.01,
-    hint: { fr: "7 × 8 = 56, 0,5 × 8 = 4. Total = 60.", en: "7 × 8 = 56, 0.5 × 8 = 4. Total = 60.", nl: "7 × 8 = 56, 0,5 × 8 = 4. Totaal = 60." }
+    hint: { fr: "7 . 8 = 56, 0,5 . 8 = 4. Total = 60.", en: "7 . 8 = 56, 0.5 . 8 = 4. Total = 60.", nl: "7 . 8 = 56, 0,5 . 8 = 4. Totaal = 60." }
   },
   {
     id: "N5_s_83", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,5 × 0,8", en: "Calculate: 0.5 × 0.8", nl: "Bereken: 0,5 × 0,8" },
+    text: { fr: "Calcule : 0,5 . 0,8", en: "Calculate: 0.5 . 0.8", nl: "Bereken: 0,5 . 0,8" },
     answer: 0.4, tolerance: 0.01,
-    hint: { fr: "5 × 8 = 40, puis place 2 décimales → 0,40.", en: "5 × 8 = 40, then place 2 decimals → 0.40.", nl: "5 × 8 = 40, plaats dan 2 decimalen → 0,40." }
+    hint: { fr: "5 . 8 = 40, puis place 2 décimales → 0,40.", en: "5 . 8 = 40, then place 2 decimals → 0.40.", nl: "5 . 8 = 40, plaats dan 2 decimalen → 0,40." }
   },
   {
     id: "N5_s_84", category: "N5", level: 2,
-    text: { fr: "Calcule : 2,6 × 4,5", en: "Calculate: 2.6 × 4.5", nl: "Bereken: 2,6 × 4,5" },
+    text: { fr: "Calcule : 2,6 . 4,5", en: "Calculate: 2.6 . 4.5", nl: "Bereken: 2,6 . 4,5" },
     answer: 11.7, tolerance: 0.01,
-    hint: { fr: "26 × 45 = 1170, puis place 2 décimales → 11,70.", en: "26 × 45 = 1170, then place 2 decimals → 11.70.", nl: "26 × 45 = 1170, plaats dan 2 decimalen → 11,70." }
+    hint: { fr: "26 . 45 = 1170, puis place 2 décimales → 11,70.", en: "26 . 45 = 1170, then place 2 decimals → 11.70.", nl: "26 . 45 = 1170, plaats dan 2 decimalen → 11,70." }
   },
   {
     id: "N5_s_85", category: "N5", level: 2,
-    text: { fr: "Calcule : 8,4 × 5", en: "Calculate: 8.4 × 5", nl: "Bereken: 8,4 × 5" },
+    text: { fr: "Calcule : 8,4 . 5", en: "Calculate: 8.4 . 5", nl: "Bereken: 8,4 . 5" },
     answer: 42, tolerance: 0.01,
-    hint: { fr: "8 × 5 = 40, 0,4 × 5 = 2. Total = 42.", en: "8 × 5 = 40, 0.4 × 5 = 2. Total = 42.", nl: "8 × 5 = 40, 0,4 × 5 = 2. Totaal = 42." }
+    hint: { fr: "8 . 5 = 40, 0,4 . 5 = 2. Total = 42.", en: "8 . 5 = 40, 0.4 . 5 = 2. Total = 42.", nl: "8 . 5 = 40, 0,4 . 5 = 2. Totaal = 42." }
   },
   {
     id: "N5_s_86", category: "N5", level: 2,
-    text: { fr: "Calcule : 1,2 × 4,5", en: "Calculate: 1.2 × 4.5", nl: "Bereken: 1,2 × 4,5" },
+    text: { fr: "Calcule : 1,2 . 4,5", en: "Calculate: 1.2 . 4.5", nl: "Bereken: 1,2 . 4,5" },
     answer: 5.4, tolerance: 0.01,
-    hint: { fr: "12 × 45 = 540, puis place 2 décimales → 5,40.", en: "12 × 45 = 540, then place 2 decimals → 5.40.", nl: "12 × 45 = 540, plaats dan 2 decimalen → 5,40." }
+    hint: { fr: "12 . 45 = 540, puis place 2 décimales → 5,40.", en: "12 . 45 = 540, then place 2 decimals → 5.40.", nl: "12 . 45 = 540, plaats dan 2 decimalen → 5,40." }
   },
   {
     id: "N5_s_87", category: "N5", level: 2,
-    text: { fr: "Calcule : 0,7 × 0,4", en: "Calculate: 0.7 × 0.4", nl: "Bereken: 0,7 × 0,4" },
+    text: { fr: "Calcule : 0,7 . 0,4", en: "Calculate: 0.7 . 0.4", nl: "Bereken: 0,7 . 0,4" },
     answer: 0.28, tolerance: 0.01,
-    hint: { fr: "7 × 4 = 28, puis place 2 décimales → 0,28.", en: "7 × 4 = 28, then place 2 decimals → 0.28.", nl: "7 × 4 = 28, plaats dan 2 decimalen → 0,28." }
+    hint: { fr: "7 . 4 = 28, puis place 2 décimales → 0,28.", en: "7 . 4 = 28, then place 2 decimals → 0.28.", nl: "7 . 4 = 28, plaats dan 2 decimalen → 0,28." }
   },
   {
     id: "N5_s_88", category: "N5", level: 2,
-    text: { fr: "Calcule : 6,2 × 3", en: "Calculate: 6.2 × 3", nl: "Bereken: 6,2 × 3" },
+    text: { fr: "Calcule : 6,2 . 3", en: "Calculate: 6.2 . 3", nl: "Bereken: 6,2 . 3" },
     answer: 18.6, tolerance: 0.01,
-    hint: { fr: "6 × 3 = 18, 0,2 × 3 = 0,6. Total = 18,6.", en: "6 × 3 = 18, 0.2 × 3 = 0.6. Total = 18.6.", nl: "6 × 3 = 18, 0,2 × 3 = 0,6. Totaal = 18,6." }
+    hint: { fr: "6 . 3 = 18, 0,2 . 3 = 0,6. Total = 18,6.", en: "6 . 3 = 18, 0.2 . 3 = 0.6. Total = 18.6.", nl: "6 . 3 = 18, 0,2 . 3 = 0,6. Totaal = 18,6." }
   },
   {
     id: "N5_s_89", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,8 × 2,5", en: "Calculate: 3.8 × 2.5", nl: "Bereken: 3,8 × 2,5" },
+    text: { fr: "Calcule : 3,8 . 2,5", en: "Calculate: 3.8 . 2.5", nl: "Bereken: 3,8 . 2,5" },
     answer: 9.5, tolerance: 0.01,
-    hint: { fr: "38 × 25 = 950, puis place 2 décimales → 9,50.", en: "38 × 25 = 950, then place 2 decimals → 9.50.", nl: "38 × 25 = 950, plaats dan 2 decimalen → 9,50." }
+    hint: { fr: "38 . 25 = 950, puis place 2 décimales → 9,50.", en: "38 . 25 = 950, then place 2 decimals → 9.50.", nl: "38 . 25 = 950, plaats dan 2 decimalen → 9,50." }
   },
   {
     id: "N5_s_90", category: "N5", level: 2,
-    text: { fr: "Calcule : 4,5 × 1,6", en: "Calculate: 4.5 × 1.6", nl: "Bereken: 4,5 × 1,6" },
+    text: { fr: "Calcule : 4,5 . 1,6", en: "Calculate: 4.5 . 1.6", nl: "Bereken: 4,5 . 1,6" },
     answer: 7.2, tolerance: 0.01,
-    hint: { fr: "45 × 16 = 720, puis place 2 décimales → 7,20.", en: "45 × 16 = 720, then place 2 decimals → 7.20.", nl: "45 × 16 = 720, plaats dan 2 decimalen → 7,20." }
+    hint: { fr: "45 . 16 = 720, puis place 2 décimales → 7,20.", en: "45 . 16 = 720, then place 2 decimals → 7.20.", nl: "45 . 16 = 720, plaats dan 2 decimalen → 7,20." }
   },
   {
     id: "N5_s_91", category: "N5", level: 2,
-    text: { fr: "Calcule : 5,5 × 3,6", en: "Calculate: 5.5 × 3.6", nl: "Bereken: 5,5 × 3,6" },
+    text: { fr: "Calcule : 5,5 . 3,6", en: "Calculate: 5.5 . 3.6", nl: "Bereken: 5,5 . 3,6" },
     answer: 19.8, tolerance: 0.01,
-    hint: { fr: "55 × 36 = 1980, puis place 2 décimales → 19,80.", en: "55 × 36 = 1980, then place 2 decimals → 19.80.", nl: "55 × 36 = 1980, plaats dan 2 decimalen → 19,80." }
+    hint: { fr: "55 . 36 = 1980, puis place 2 décimales → 19,80.", en: "55 . 36 = 1980, then place 2 decimals → 19.80.", nl: "55 . 36 = 1980, plaats dan 2 decimalen → 19,80." }
   },
 
   // =========================================================================
@@ -575,123 +575,123 @@ export const questions = [
   // =========================================================================
   {
     id: "N5_s_92", category: "N5", level: 3,
-    text: { fr: "Calcule : 13,5 ÷ 2,7", en: "Calculate: 13.5 ÷ 2.7", nl: "Bereken: 13,5 ÷ 2,7" },
+    text: { fr: "Calcule : 13,5 : 2,7", en: "Calculate: 13.5 : 2.7", nl: "Bereken: 13,5 : 2,7" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 135 ÷ 27 = 5.", en: "Multiply both by 10: 135 ÷ 27 = 5.", nl: "Vermenigvuldig beide met 10: 135 ÷ 27 = 5." }
+    hint: { fr: "Multiplie les deux par 10 : 135 : 27 = 5.", en: "Multiply both by 10: 135 : 27 = 5.", nl: "Vermenigvuldig beide met 10: 135 : 27 = 5." }
   },
   {
     id: "N5_s_93", category: "N5", level: 3,
-    text: { fr: "Calcule : 4,8 ÷ 0,6", en: "Calculate: 4.8 ÷ 0.6", nl: "Bereken: 4,8 ÷ 0,6" },
+    text: { fr: "Calcule : 4,8 : 0,6", en: "Calculate: 4.8 : 0.6", nl: "Bereken: 4,8 : 0,6" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 48 ÷ 6 = 8.", en: "Multiply both by 10: 48 ÷ 6 = 8.", nl: "Vermenigvuldig beide met 10: 48 ÷ 6 = 8." }
+    hint: { fr: "Multiplie les deux par 10 : 48 : 6 = 8.", en: "Multiply both by 10: 48 : 6 = 8.", nl: "Vermenigvuldig beide met 10: 48 : 6 = 8." }
   },
   {
     id: "N5_s_94", category: "N5", level: 3,
-    text: { fr: "Calcule : 2,5 × 4,8 - 3,0", en: "Calculate: 2.5 × 4.8 - 3.0", nl: "Bereken: 2,5 × 4,8 - 3,0" },
+    text: { fr: "Calcule : 2,5 . 4,8 - 3,0", en: "Calculate: 2.5 . 4.8 - 3.0", nl: "Bereken: 2,5 . 4,8 - 3,0" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "D'abord 2,5 × 4,8 = 12, puis - 3 = 9.", en: "First 2.5 × 4.8 = 12, then - 3 = 9.", nl: "Eerst 2,5 × 4,8 = 12, dan - 3 = 9." }
+    hint: { fr: "D'abord 2,5 . 4,8 = 12, puis - 3 = 9.", en: "First 2.5 . 4.8 = 12, then - 3 = 9.", nl: "Eerst 2,5 . 4,8 = 12, dan - 3 = 9." }
   },
   {
     id: "N5_s_95", category: "N5", level: 3,
-    text: { fr: "Calcule : 22,5 ÷ 4,5", en: "Calculate: 22.5 ÷ 4.5", nl: "Bereken: 22,5 ÷ 4,5" },
+    text: { fr: "Calcule : 22,5 : 4,5", en: "Calculate: 22.5 : 4.5", nl: "Bereken: 22,5 : 4,5" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 2 : 45 ÷ 9 = 5.", en: "Multiply both by 2: 45 ÷ 9 = 5.", nl: "Vermenigvuldig beide met 2: 45 ÷ 9 = 5." }
+    hint: { fr: "Multiplie les deux par 2 : 45 : 9 = 5.", en: "Multiply both by 2: 45 : 9 = 5.", nl: "Vermenigvuldig beide met 2: 45 : 9 = 5." }
   },
   {
     id: "N5_s_96", category: "N5", level: 3,
-    text: { fr: "Calcule : 7,2 ÷ 0,9 + 2,4", en: "Calculate: 7.2 ÷ 0.9 + 2.4", nl: "Bereken: 7,2 ÷ 0,9 + 2,4" },
+    text: { fr: "Calcule : 7,2 : 0,9 + 2,4", en: "Calculate: 7.2 : 0.9 + 2.4", nl: "Bereken: 7,2 : 0,9 + 2,4" },
     answer: 10.4, tolerance: 0.01,
-    hint: { fr: "D'abord 7,2 ÷ 0,9 = 8, puis + 2,4 = 10,4.", en: "First 7.2 ÷ 0.9 = 8, then + 2.4 = 10.4.", nl: "Eerst 7,2 ÷ 0,9 = 8, dan + 2,4 = 10,4." }
+    hint: { fr: "D'abord 7,2 : 0,9 = 8, puis + 2,4 = 10,4.", en: "First 7.2 : 0.9 = 8, then + 2.4 = 10.4.", nl: "Eerst 7,2 : 0,9 = 8, dan + 2,4 = 10,4." }
   },
   {
     id: "N5_s_97", category: "N5", level: 3,
-    text: { fr: "Calcule : 17,5 ÷ 3,5", en: "Calculate: 17.5 ÷ 3.5", nl: "Bereken: 17,5 ÷ 3,5" },
+    text: { fr: "Calcule : 17,5 : 3,5", en: "Calculate: 17.5 : 3.5", nl: "Bereken: 17,5 : 3,5" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 2 : 35 ÷ 7 = 5.", en: "Multiply both by 2: 35 ÷ 7 = 5.", nl: "Vermenigvuldig beide met 2: 35 ÷ 7 = 5." }
+    hint: { fr: "Multiplie les deux par 2 : 35 : 7 = 5.", en: "Multiply both by 2: 35 : 7 = 5.", nl: "Vermenigvuldig beide met 2: 35 : 7 = 5." }
   },
   {
     id: "N5_s_98", category: "N5", level: 3,
-    text: { fr: "Calcule : 3,2 × 2,5 + 2,0", en: "Calculate: 3.2 × 2.5 + 2.0", nl: "Bereken: 3,2 × 2,5 + 2,0" },
+    text: { fr: "Calcule : 3,2 . 2,5 + 2,0", en: "Calculate: 3.2 . 2.5 + 2.0", nl: "Bereken: 3,2 . 2,5 + 2,0" },
     answer: 10, tolerance: 0.01,
-    hint: { fr: "D'abord 3,2 × 2,5 = 8, puis + 2 = 10.", en: "First 3.2 × 2.5 = 8, then + 2 = 10.", nl: "Eerst 3,2 × 2,5 = 8, dan + 2 = 10." }
+    hint: { fr: "D'abord 3,2 . 2,5 = 8, puis + 2 = 10.", en: "First 3.2 . 2.5 = 8, then + 2 = 10.", nl: "Eerst 3,2 . 2,5 = 8, dan + 2 = 10." }
   },
   {
     id: "N5_s_99", category: "N5", level: 3,
-    text: { fr: "Calcule : 10,8 ÷ 1,8", en: "Calculate: 10.8 ÷ 1.8", nl: "Bereken: 10,8 ÷ 1,8" },
+    text: { fr: "Calcule : 10,8 : 1,8", en: "Calculate: 10.8 : 1.8", nl: "Bereken: 10,8 : 1,8" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 108 ÷ 18 = 6.", en: "Multiply both by 10: 108 ÷ 18 = 6.", nl: "Vermenigvuldig beide met 10: 108 ÷ 18 = 6." }
+    hint: { fr: "Multiplie les deux par 10 : 108 : 18 = 6.", en: "Multiply both by 10: 108 : 18 = 6.", nl: "Vermenigvuldig beide met 10: 108 : 18 = 6." }
   },
   {
     id: "N5_s_100", category: "N5", level: 3,
-    text: { fr: "Calcule : 6,4 ÷ 0,8 - 2,5", en: "Calculate: 6.4 ÷ 0.8 - 2.5", nl: "Bereken: 6,4 ÷ 0,8 - 2,5" },
+    text: { fr: "Calcule : 6,4 : 0,8 - 2,5", en: "Calculate: 6.4 : 0.8 - 2.5", nl: "Bereken: 6,4 : 0,8 - 2,5" },
     answer: 5.5, tolerance: 0.01,
-    hint: { fr: "D'abord 6,4 ÷ 0,8 = 8, puis - 2,5 = 5,5.", en: "First 6.4 ÷ 0.8 = 8, then - 2.5 = 5.5.", nl: "Eerst 6,4 ÷ 0,8 = 8, dan - 2,5 = 5,5." }
+    hint: { fr: "D'abord 6,4 : 0,8 = 8, puis - 2,5 = 5,5.", en: "First 6.4 : 0.8 = 8, then - 2.5 = 5.5.", nl: "Eerst 6,4 : 0,8 = 8, dan - 2,5 = 5,5." }
   },
   {
     id: "N5_s_101", category: "N5", level: 3,
-    text: { fr: "Calcule : 24,3 ÷ 8,1", en: "Calculate: 24.3 ÷ 8.1", nl: "Bereken: 24,3 ÷ 8,1" },
+    text: { fr: "Calcule : 24,3 : 8,1", en: "Calculate: 24.3 : 8.1", nl: "Bereken: 24,3 : 8,1" },
     answer: 3, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 243 ÷ 81 = 3.", en: "Multiply both by 10: 243 ÷ 81 = 3.", nl: "Vermenigvuldig beide met 10: 243 ÷ 81 = 3." }
+    hint: { fr: "Multiplie les deux par 10 : 243 : 81 = 3.", en: "Multiply both by 10: 243 : 81 = 3.", nl: "Vermenigvuldig beide met 10: 243 : 81 = 3." }
   },
   {
     id: "N5_s_102", category: "N5", level: 3,
-    text: { fr: "Calcule : 1,8 × 4,5 + 0,9", en: "Calculate: 1.8 × 4.5 + 0.9", nl: "Bereken: 1,8 × 4,5 + 0,9" },
+    text: { fr: "Calcule : 1,8 . 4,5 + 0,9", en: "Calculate: 1.8 . 4.5 + 0.9", nl: "Bereken: 1,8 . 4,5 + 0,9" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "D'abord 1,8 × 4,5 = 8,1, puis + 0,9 = 9.", en: "First 1.8 × 4.5 = 8.1, then + 0.9 = 9.", nl: "Eerst 1,8 × 4,5 = 8,1, dan + 0,9 = 9." }
+    hint: { fr: "D'abord 1,8 . 4,5 = 8,1, puis + 0,9 = 9.", en: "First 1.8 . 4.5 = 8.1, then + 0.9 = 9.", nl: "Eerst 1,8 . 4,5 = 8,1, dan + 0,9 = 9." }
   },
   {
     id: "N5_s_103", category: "N5", level: 3,
-    text: { fr: "Calcule : 31,5 ÷ 6,3", en: "Calculate: 31.5 ÷ 6.3", nl: "Bereken: 31,5 ÷ 6,3" },
+    text: { fr: "Calcule : 31,5 : 6,3", en: "Calculate: 31.5 : 6.3", nl: "Bereken: 31,5 : 6,3" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 315 ÷ 63 = 5.", en: "Multiply both by 10: 315 ÷ 63 = 5.", nl: "Vermenigvuldig beide met 10: 315 ÷ 63 = 5." }
+    hint: { fr: "Multiplie les deux par 10 : 315 : 63 = 5.", en: "Multiply both by 10: 315 : 63 = 5.", nl: "Vermenigvuldig beide met 10: 315 : 63 = 5." }
   },
   {
     id: "N5_s_104", category: "N5", level: 3,
-    text: { fr: "Calcule : 3,5 × 1,8 - 1,3", en: "Calculate: 3.5 × 1.8 - 1.3", nl: "Bereken: 3,5 × 1,8 - 1,3" },
+    text: { fr: "Calcule : 3,5 . 1,8 - 1,3", en: "Calculate: 3.5 . 1.8 - 1.3", nl: "Bereken: 3,5 . 1,8 - 1,3" },
     answer: 5, tolerance: 0.01,
-    hint: { fr: "D'abord 3,5 × 1,8 = 6,3, puis - 1,3 = 5.", en: "First 3.5 × 1.8 = 6.3, then - 1.3 = 5.", nl: "Eerst 3,5 × 1,8 = 6,3, dan - 1,3 = 5." }
+    hint: { fr: "D'abord 3,5 . 1,8 = 6,3, puis - 1,3 = 5.", en: "First 3.5 . 1.8 = 6.3, then - 1.3 = 5.", nl: "Eerst 3,5 . 1,8 = 6,3, dan - 1,3 = 5." }
   },
   {
     id: "N5_s_105", category: "N5", level: 3,
-    text: { fr: "Calcule : 19,2 ÷ 3,2", en: "Calculate: 19.2 ÷ 3.2", nl: "Bereken: 19,2 ÷ 3,2" },
+    text: { fr: "Calcule : 19,2 : 3,2", en: "Calculate: 19.2 : 3.2", nl: "Bereken: 19,2 : 3,2" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 192 ÷ 32 = 6.", en: "Multiply both by 10: 192 ÷ 32 = 6.", nl: "Vermenigvuldig beide met 10: 192 ÷ 32 = 6." }
+    hint: { fr: "Multiplie les deux par 10 : 192 : 32 = 6.", en: "Multiply both by 10: 192 : 32 = 6.", nl: "Vermenigvuldig beide met 10: 192 : 32 = 6." }
   },
   {
     id: "N5_s_106", category: "N5", level: 3,
-    text: { fr: "Calcule : 4,5 ÷ 0,5 + 3,2", en: "Calculate: 4.5 ÷ 0.5 + 3.2", nl: "Bereken: 4,5 ÷ 0,5 + 3,2" },
+    text: { fr: "Calcule : 4,5 : 0,5 + 3,2", en: "Calculate: 4.5 : 0.5 + 3.2", nl: "Bereken: 4,5 : 0,5 + 3,2" },
     answer: 12.2, tolerance: 0.01,
-    hint: { fr: "D'abord 4,5 ÷ 0,5 = 9, puis + 3,2 = 12,2.", en: "First 4.5 ÷ 0.5 = 9, then + 3.2 = 12.2.", nl: "Eerst 4,5 ÷ 0,5 = 9, dan + 3,2 = 12,2." }
+    hint: { fr: "D'abord 4,5 : 0,5 = 9, puis + 3,2 = 12,2.", en: "First 4.5 : 0.5 = 9, then + 3.2 = 12.2.", nl: "Eerst 4,5 : 0,5 = 9, dan + 3,2 = 12,2." }
   },
   {
     id: "N5_s_107", category: "N5", level: 3,
-    text: { fr: "Calcule : 11,2 ÷ 1,4", en: "Calculate: 11.2 ÷ 1.4", nl: "Bereken: 11,2 ÷ 1,4" },
+    text: { fr: "Calcule : 11,2 : 1,4", en: "Calculate: 11.2 : 1.4", nl: "Bereken: 11,2 : 1,4" },
     answer: 8, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 112 ÷ 14 = 8.", en: "Multiply both by 10: 112 ÷ 14 = 8.", nl: "Vermenigvuldig beide met 10: 112 ÷ 14 = 8." }
+    hint: { fr: "Multiplie les deux par 10 : 112 : 14 = 8.", en: "Multiply both by 10: 112 : 14 = 8.", nl: "Vermenigvuldig beide met 10: 112 : 14 = 8." }
   },
   {
     id: "N5_s_108", category: "N5", level: 3,
-    text: { fr: "Calcule : 2,4 × 3,5 + 2,6", en: "Calculate: 2.4 × 3.5 + 2.6", nl: "Bereken: 2,4 × 3,5 + 2,6" },
+    text: { fr: "Calcule : 2,4 . 3,5 + 2,6", en: "Calculate: 2.4 . 3.5 + 2.6", nl: "Bereken: 2,4 . 3,5 + 2,6" },
     answer: 11, tolerance: 0.01,
-    hint: { fr: "D'abord 2,4 × 3,5 = 8,4, puis + 2,6 = 11.", en: "First 2.4 × 3.5 = 8.4, then + 2.6 = 11.", nl: "Eerst 2,4 × 3,5 = 8,4, dan + 2,6 = 11." }
+    hint: { fr: "D'abord 2,4 . 3,5 = 8,4, puis + 2,6 = 11.", en: "First 2.4 . 3.5 = 8.4, then + 2.6 = 11.", nl: "Eerst 2,4 . 3,5 = 8,4, dan + 2,6 = 11." }
   },
   {
     id: "N5_s_109", category: "N5", level: 3,
-    text: { fr: "Calcule : 27,6 ÷ 4,6", en: "Calculate: 27.6 ÷ 4.6", nl: "Bereken: 27,6 ÷ 4,6" },
+    text: { fr: "Calcule : 27,6 : 4,6", en: "Calculate: 27.6 : 4.6", nl: "Bereken: 27,6 : 4,6" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 276 ÷ 46 = 6.", en: "Multiply both by 10: 276 ÷ 46 = 6.", nl: "Vermenigvuldig beide met 10: 276 ÷ 46 = 6." }
+    hint: { fr: "Multiplie les deux par 10 : 276 : 46 = 6.", en: "Multiply both by 10: 276 : 46 = 6.", nl: "Vermenigvuldig beide met 10: 276 : 46 = 6." }
   },
   {
     id: "N5_s_110", category: "N5", level: 3,
-    text: { fr: "Calcule : 5,4 × 2,5 - 4,5", en: "Calculate: 5.4 × 2.5 - 4.5", nl: "Bereken: 5,4 × 2,5 - 4,5" },
+    text: { fr: "Calcule : 5,4 . 2,5 - 4,5", en: "Calculate: 5.4 . 2.5 - 4.5", nl: "Bereken: 5,4 . 2,5 - 4,5" },
     answer: 9, tolerance: 0.01,
-    hint: { fr: "D'abord 5,4 × 2,5 = 13,5, puis - 4,5 = 9.", en: "First 5.4 × 2.5 = 13.5, then - 4.5 = 9.", nl: "Eerst 5,4 × 2,5 = 13,5, dan - 4,5 = 9." }
+    hint: { fr: "D'abord 5,4 . 2,5 = 13,5, puis - 4,5 = 9.", en: "First 5.4 . 2.5 = 13.5, then - 4.5 = 9.", nl: "Eerst 5,4 . 2,5 = 13,5, dan - 4,5 = 9." }
   },
   {
     id: "N5_s_111", category: "N5", level: 3,
-    text: { fr: "Calcule : 36,4 ÷ 5,2 + 4,8", en: "Calculate: 36.4 ÷ 5.2 + 4.8", nl: "Bereken: 36,4 ÷ 5,2 + 4,8" },
+    text: { fr: "Calcule : 36,4 : 5,2 + 4,8", en: "Calculate: 36.4 : 5.2 + 4.8", nl: "Bereken: 36,4 : 5,2 + 4,8" },
     answer: 11.8, tolerance: 0.01,
-    hint: { fr: "D'abord 36,4 ÷ 5,2 = 7, puis + 4,8 = 11,8.", en: "First 36.4 ÷ 5.2 = 7, then + 4.8 = 11.8.", nl: "Eerst 36,4 ÷ 5,2 = 7, dan + 4,8 = 11,8." }
+    hint: { fr: "D'abord 36,4 : 5,2 = 7, puis + 4,8 = 11,8.", en: "First 36.4 : 5.2 = 7, then + 4.8 = 11.8.", nl: "Eerst 36,4 : 5,2 = 7, dan + 4,8 = 11,8." }
   },
   {
     id: "N5_s_112", category: "N5", level: 1,
@@ -707,27 +707,27 @@ export const questions = [
   },
   {
     id: "N5_s_114", category: "N5", level: 2,
-    text: { fr: "Calcule : 3,6 × 4,5", en: "Calculate: 3.6 × 4.5", nl: "Bereken: 3,6 × 4,5" },
+    text: { fr: "Calcule : 3,6 . 4,5", en: "Calculate: 3.6 . 4.5", nl: "Bereken: 3,6 . 4,5" },
     answer: 16.2, tolerance: 0.01,
-    hint: { fr: "36 × 45 = 1620, puis place 2 décimales : 16,20.", en: "36 × 45 = 1620, then place 2 decimals: 16.20.", nl: "36 × 45 = 1620, plaats dan 2 decimalen: 16,20." }
+    hint: { fr: "36 . 45 = 1620, puis place 2 décimales : 16,20.", en: "36 . 45 = 1620, then place 2 decimals: 16.20.", nl: "36 . 45 = 1620, plaats dan 2 decimalen: 16,20." }
   },
   {
     id: "N5_s_115", category: "N5", level: 2,
-    text: { fr: "Calcule : 18,6 ÷ 3,1", en: "Calculate: 18.6 ÷ 3.1", nl: "Bereken: 18,6 ÷ 3,1" },
+    text: { fr: "Calcule : 18,6 : 3,1", en: "Calculate: 18.6 : 3.1", nl: "Bereken: 18,6 : 3,1" },
     answer: 6, tolerance: 0.01,
-    hint: { fr: "Multiplie les deux par 10 : 186 ÷ 31 = 6.", en: "Multiply both by 10: 186 ÷ 31 = 6.", nl: "Vermenigvuldig beide met 10: 186 ÷ 31 = 6." }
+    hint: { fr: "Multiplie les deux par 10 : 186 : 31 = 6.", en: "Multiply both by 10: 186 : 31 = 6.", nl: "Vermenigvuldig beide met 10: 186 : 31 = 6." }
   },
   {
     id: "N5_s_116", category: "N5", level: 3,
-    text: { fr: "Calcule : 4,8 × 2,5 + 3,2", en: "Calculate: 4.8 × 2.5 + 3.2", nl: "Bereken: 4,8 × 2,5 + 3,2" },
+    text: { fr: "Calcule : 4,8 . 2,5 + 3,2", en: "Calculate: 4.8 . 2.5 + 3.2", nl: "Bereken: 4,8 . 2,5 + 3,2" },
     answer: 15.2, tolerance: 0.01,
-    hint: { fr: "D'abord 4,8 × 2,5 = 12, puis + 3,2 = 15,2.", en: "First 4.8 × 2.5 = 12, then + 3.2 = 15.2.", nl: "Eerst 4,8 × 2,5 = 12, dan + 3,2 = 15,2." }
+    hint: { fr: "D'abord 4,8 . 2,5 = 12, puis + 3,2 = 15,2.", en: "First 4.8 . 2.5 = 12, then + 3.2 = 15.2.", nl: "Eerst 4,8 . 2,5 = 12, dan + 3,2 = 15,2." }
   },
   {
     id: "N5_s_117", category: "N5", level: 3,
-    text: { fr: "Calcule : 22,4 ÷ 3,2 - 1,5", en: "Calculate: 22.4 ÷ 3.2 - 1.5", nl: "Bereken: 22,4 ÷ 3,2 - 1,5" },
+    text: { fr: "Calcule : 22,4 : 3,2 - 1,5", en: "Calculate: 22.4 : 3.2 - 1.5", nl: "Bereken: 22,4 : 3,2 - 1,5" },
     answer: 5.5, tolerance: 0.01,
-    hint: { fr: "D'abord 22,4 ÷ 3,2 = 7, puis - 1,5 = 5,5.", en: "First 22.4 ÷ 3.2 = 7, then - 1.5 = 5.5.", nl: "Eerst 22,4 ÷ 3,2 = 7, dan - 1,5 = 5,5." }
+    hint: { fr: "D'abord 22,4 : 3,2 = 7, puis - 1,5 = 5,5.", en: "First 22.4 : 3.2 = 7, then - 1.5 = 5.5.", nl: "Eerst 22,4 : 3,2 = 7, dan - 1,5 = 5,5." }
   },
 ];
 
@@ -742,10 +742,10 @@ export function generate(level = 1) {
   if (level === 2) {
     const a = rand(11, 50) / 10; const b = rand(2, 9);
     const answer = Math.round(a * b * 100) / 100;
-    return { id, category: 'N5', level, text: { fr: `Calcule : ${a.toFixed(1).replace('.', ',')} × ${b}`, en: `Calculate: ${a.toFixed(1)} × ${b}`, nl: `Bereken: ${a.toFixed(1).replace('.', ',')} × ${b}` }, answer, tolerance: 0.01 };
+    return { id, category: 'N5', level, text: { fr: `Calcule : ${a.toFixed(1).replace('.', ',')} . ${b}`, en: `Calculate: ${a.toFixed(1)} . ${b}`, nl: `Bereken: ${a.toFixed(1).replace('.', ',')} . ${b}` }, answer, tolerance: 0.01 };
   }
   const a = rand(2, 9); const b = rand(2, 9); const product = a * b;
   const divisor = a + rand(1, 5) / 10;
   const dividend = Math.round(divisor * b * 100) / 100;
-  return { id, category: 'N5', level, text: { fr: `Calcule : ${dividend.toString().replace('.', ',')} ÷ ${divisor.toString().replace('.', ',')}`, en: `Calculate: ${dividend} ÷ ${divisor}`, nl: `Bereken: ${dividend.toString().replace('.', ',')} ÷ ${divisor.toString().replace('.', ',')}` }, answer: b, tolerance: 0.01 };
+  return { id, category: 'N5', level, text: { fr: `Calcule : ${dividend.toString().replace('.', ',')} : ${divisor.toString().replace('.', ',')}`, en: `Calculate: ${dividend} : ${divisor}`, nl: `Bereken: ${dividend.toString().replace('.', ',')} : ${divisor.toString().replace('.', ',')}` }, answer: b, tolerance: 0.01 };
 }

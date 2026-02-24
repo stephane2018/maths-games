@@ -1606,9 +1606,9 @@ export const questions = [
     },
     answer: 3, tolerance: 0,
     hint: {
-      fr: "31 = 4 × 7 + reste. Quel est le reste ?",
-      en: "31 = 4 × 7 + remainder. What is the remainder?",
-      nl: "31 = 4 × 7 + rest. Wat is de rest?"
+      fr: "31 = 4 . 7 + reste. Quel est le reste ?",
+      en: "31 = 4 . 7 + remainder. What is the remainder?",
+      nl: "31 = 4 . 7 + rest. Wat is de rest?"
     }
   },
   {
@@ -1648,9 +1648,9 @@ export const questions = [
     },
     answer: 2, tolerance: 0,
     hint: {
-      fr: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2.",
-      en: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2.",
-      nl: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2."
+      fr: "2 . (-3)² + 5 . (-3) - 1 = 2 . 9 - 15 - 1 = 18 - 15 - 1 = 2.",
+      en: "2 . (-3)² + 5 . (-3) - 1 = 2 . 9 - 15 - 1 = 18 - 15 - 1 = 2.",
+      nl: "2 . (-3)² + 5 . (-3) - 1 = 2 . 9 - 15 - 1 = 18 - 15 - 1 = 2."
     }
   },
   {
@@ -1662,9 +1662,9 @@ export const questions = [
     },
     answer: 18, tolerance: 0,
     hint: {
-      fr: "36 = 2² × 3² et 54 = 2 × 3³. Le PGCD = 2 × 3² = 18.",
-      en: "36 = 2² × 3² and 54 = 2 × 3³. The GCD = 2 × 3² = 18.",
-      nl: "36 = 2² × 3² en 54 = 2 × 3³. De GGD = 2 × 3² = 18."
+      fr: "36 = 2² . 3² et 54 = 2 . 3³. Le PGCD = 2 . 3² = 18.",
+      en: "36 = 2² . 3² and 54 = 2 . 3³. The GCD = 2 . 3² = 18.",
+      nl: "36 = 2² . 3² en 54 = 2 . 3³. De GGD = 2 . 3² = 18."
     }
   },
   {
@@ -1676,9 +1676,9 @@ export const questions = [
     },
     answer: 38, tolerance: 0,
     hint: {
-      fr: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (attention : soustraire un négatif = additionner).",
-      en: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (note: subtracting a negative = adding).",
-      nl: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (let op: een negatief aftrekken = optellen)."
+      fr: "2³ - 2 . 4 . (-3) + 2 . 9 = 8 + 24 + 18 = 38 (attention : soustraire un négatif = additionner).",
+      en: "2³ - 2 . 4 . (-3) + 2 . 9 = 8 + 24 + 18 = 38 (note: subtracting a negative = adding).",
+      nl: "2³ - 2 . 4 . (-3) + 2 . 9 = 8 + 24 + 18 = 38 (let op: een negatief aftrekken = optellen)."
     }
   },
   {
@@ -1690,9 +1690,9 @@ export const questions = [
     },
     answer: 90, tolerance: 0,
     hint: {
-      fr: "18 = 2 × 3² et 30 = 2 × 3 × 5. PPCM = 2 × 3² × 5 = 90.",
-      en: "18 = 2 × 3² and 30 = 2 × 3 × 5. LCM = 2 × 3² × 5 = 90.",
-      nl: "18 = 2 × 3² en 30 = 2 × 3 × 5. KGV = 2 × 3² × 5 = 90."
+      fr: "18 = 2 . 3² et 30 = 2 . 3 . 5. PPCM = 2 . 3² . 5 = 90.",
+      en: "18 = 2 . 3² and 30 = 2 . 3 . 5. LCM = 2 . 3² . 5 = 90.",
+      nl: "18 = 2 . 3² en 30 = 2 . 3 . 5. KGV = 2 . 3² . 5 = 90."
     }
   },
 ];
