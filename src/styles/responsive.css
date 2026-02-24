@@ -783,42 +783,37 @@
   .screen-content { padding: 4px; gap: 4px; }
   .title { font-size: 1.2rem; }
 
-  /* Landscape compact: rope on top (smaller), panels side by side below */
+  /* Landscape compact: numpad | rope | numpad (row layout) */
   .game-layout {
-    flex-direction: column;
+    flex-direction: row;
     gap: 3px;
     padding: 3px;
     height: calc(100dvh - 50px);
     max-height: none;
   }
 
+  .game-layout .panels-row {
+    display: contents;
+  }
+
   .game-layout .rope-section {
-    order: 0;
-    flex: 0 0 auto;
-    min-height: 60px;
-    max-height: 70px;
-    width: 100%;
+    order: 1;
+    flex: 1;
+    min-height: unset;
+    max-height: none;
+    width: auto;
   }
 
   .game-layout .rope-arena {
-    min-height: 60px;
-    max-height: 70px;
-  }
-
-  .game-layout .panels-row {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    flex: 1;
-    min-height: 0;
-    order: 1;
+    min-height: unset;
+    max-height: none;
   }
 
   .game-layout .player-panel {
-    flex: 1 1 0;
+    flex: 1;
+    max-width: 35%;
     gap: 2px;
     padding: 3px;
-    max-width: none;
     min-width: 0;
     flex-direction: column;
   }

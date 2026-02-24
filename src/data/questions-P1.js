@@ -1914,7 +1914,126 @@ export const questions = [
       en: "After decrease: 500 × 0.80 = 400. After increase: 400 × 1.05 = 420.",
       nl: "Na daling: 500 × 0,80 = 400. Na stijging: 400 × 1,05 = 420."
     }
-  }
+  },
+  {
+    id: "P1_s_112",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 5 cahiers coûtent 15 €, combien coûtent 8 cahiers ?",
+      en: "If 5 notebooks cost €15, how much do 8 notebooks cost?",
+      nl: "Als 5 schriften €15 kosten, hoeveel kosten 8 schriften?"
+    },
+    answer: 24,
+    tolerance: 0,
+    hint: {
+      fr: "Prix d'un cahier : 15 ÷ 5 = 3 €. Puis 3 × 8 = 24.",
+      en: "Price of one notebook: 15 ÷ 5 = 3. Then 3 × 8 = 24.",
+      nl: "Prijs van één schrift: 15 ÷ 5 = 3. Dan 3 × 8 = 24."
+    }
+  },
+  {
+    id: "P1_s_113",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Une voiture consomme 6 litres pour 100 km. Combien de litres faut-il pour 250 km ?",
+      en: "A car uses 6 liters per 100 km. How many liters for 250 km?",
+      nl: "Een auto verbruikt 6 liter per 100 km. Hoeveel liter voor 250 km?"
+    },
+    answer: 15,
+    tolerance: 0,
+    hint: {
+      fr: "6 ÷ 100 = 0,06 L/km. 0,06 × 250 = 15.",
+      en: "6 ÷ 100 = 0.06 L/km. 0.06 × 250 = 15.",
+      nl: "6 ÷ 100 = 0,06 L/km. 0,06 × 250 = 15."
+    }
+  },
+  {
+    id: "P1_s_114",
+    category: "P1",
+    level: 1,
+    text: {
+      fr: "Si 2 kg de farine coûtent 3 €, combien coûtent 10 kg ?",
+      en: "If 2 kg of flour cost €3, how much do 10 kg cost?",
+      nl: "Als 2 kg bloem €3 kosten, hoeveel kosten 10 kg?"
+    },
+    answer: 15,
+    tolerance: 0,
+    hint: {
+      fr: "Prix d'1 kg : 3 ÷ 2 = 1,5 €. Puis 1,5 × 10 = 15.",
+      en: "Price of 1 kg: 3 ÷ 2 = 1.5. Then 1.5 × 10 = 15.",
+      nl: "Prijs van 1 kg: 3 ÷ 2 = 1,5. Dan 1,5 × 10 = 15."
+    }
+  },
+  {
+    id: "P1_s_115",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Un pull à 80 € est soldé à 25 %. Quel est le prix après réduction ?",
+      en: "A sweater at €80 has a 25% discount. What is the reduced price?",
+      nl: "Een trui van €80 heeft 25% korting. Wat is de verlaagde prijs?"
+    },
+    answer: 60,
+    tolerance: 0,
+    hint: {
+      fr: "Réduction : 80 × 0,25 = 20. Prix soldé : 80 − 20 = 60.",
+      en: "Discount: 80 × 0.25 = 20. Sale price: 80 − 20 = 60.",
+      nl: "Korting: 80 × 0,25 = 20. Verkoopprijs: 80 − 20 = 60."
+    }
+  },
+  {
+    id: "P1_s_116",
+    category: "P1",
+    level: 2,
+    text: {
+      fr: "Dans une classe de 40 élèves, 30 % sont des filles. Combien y a-t-il de garçons ?",
+      en: "In a class of 40 students, 30% are girls. How many boys are there?",
+      nl: "In een klas van 40 leerlingen is 30% meisjes. Hoeveel jongens zijn er?"
+    },
+    answer: 28,
+    tolerance: 0,
+    hint: {
+      fr: "Filles : 40 × 0,30 = 12. Garçons : 40 − 12 = 28.",
+      en: "Girls: 40 × 0.30 = 12. Boys: 40 − 12 = 28.",
+      nl: "Meisjes: 40 × 0,30 = 12. Jongens: 40 − 12 = 28."
+    }
+  },
+  {
+    id: "P1_s_117",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un produit croisé : 4/7 = x/35. Quelle est la valeur de x ?",
+      en: "Cross-multiplication: 4/7 = x/35. What is x?",
+      nl: "Kruisproduct: 4/7 = x/35. Wat is x?"
+    },
+    answer: 20,
+    tolerance: 0,
+    hint: {
+      fr: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20.",
+      en: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20.",
+      nl: "x = 4 × 35 ÷ 7 = 140 ÷ 7 = 20."
+    }
+  },
+  {
+    id: "P1_s_118",
+    category: "P1",
+    level: 3,
+    text: {
+      fr: "Un article coûte 250 € hors taxe. La TVA est de 21 %. Quel est le prix TTC ?",
+      en: "An item costs €250 before tax. VAT is 21%. What is the price including tax?",
+      nl: "Een artikel kost €250 exclusief btw. De btw is 21%. Wat is de prijs inclusief btw?"
+    },
+    answer: 302.5,
+    tolerance: 0.01,
+    hint: {
+      fr: "TVA : 250 × 0,21 = 52,50. Prix TTC : 250 + 52,50 = 302,50.",
+      en: "VAT: 250 × 0.21 = 52.50. Price incl. tax: 250 + 52.50 = 302.50.",
+      nl: "Btw: 250 × 0,21 = 52,50. Prijs incl. btw: 250 + 52,50 = 302,50."
+    }
+  },
 ];
 
 /**

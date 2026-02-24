@@ -38,8 +38,7 @@
     "G2": "Hoeken",
     "M1": "Omrekeningen",
     "D1": "Tabellen",
-    "D2": "Statistiek",
-    "R1": "Problemen"
+    "D2": "Statistiek"
   },
   "game": {
     "blue": "Blauw",
@@ -123,8 +122,7 @@
     "proportions": "Evenredigheid",
     "geometry": "Meetkunde",
     "measures": "Grootheden",
-    "data": "Gegevens",
-    "problems": "Redeneren"
+    "data": "Gegevens"
   },
   "wizard": {
     "title": "BEREID JE TEAMS VOOR",

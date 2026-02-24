@@ -33,7 +33,6 @@ export const BLUE_SUBCATS = [
   { code: 'N6', name: 'Puissances', icon: '⚡', color: '#3B82F6' },
   { code: 'D2', name: 'Statistiques', icon: '📈', color: '#3B82F6' },
   { code: 'M1', name: 'Conversions', icon: '📏', color: '#3B82F6' },
-  { code: 'R1', name: 'Raisonnement', icon: '🧠', color: '#3B82F6' },
 ];
 
 export const RED_SUBCATS = [

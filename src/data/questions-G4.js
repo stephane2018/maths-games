@@ -686,6 +686,42 @@ export const questions = [
     answer: 128.57, tolerance: 0.01, unit: "°",
     hint: { fr: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°.", en: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128.57°.", nl: "(7 - 2) × 180° ÷ 7 = 900° ÷ 7 ≈ 128,57°." }
   },
+  {
+    id: "G4_s_112", category: "G4", level: 1,
+    text: { fr: "Quel est le complément d'un angle de 28° ?", en: "What is the complement of a 28° angle?", nl: "Wat is het complement van een hoek van 28°?" },
+    answer: 62, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 28° = 62°.", en: "90° - 28° = 62°.", nl: "90° - 28° = 62°." }
+  },
+  {
+    id: "G4_s_113", category: "G4", level: 1,
+    text: { fr: "Deux angles complémentaires : l'un mesure 54°. Combien mesure l'autre ?", en: "Two complementary angles: one is 54°. What is the other?", nl: "Twee complementaire hoeken: de ene is 54°. Hoeveel is de andere?" },
+    answer: 36, tolerance: 0, unit: "°",
+    hint: { fr: "90° - 54° = 36°.", en: "90° - 54° = 36°.", nl: "90° - 54° = 36°." }
+  },
+  {
+    id: "G4_s_114", category: "G4", level: 2,
+    text: { fr: "Dans un triangle, deux angles mesurent 65° et 48°. Combien mesure le troisième angle ?", en: "In a triangle, two angles are 65° and 48°. What is the third angle?", nl: "In een driehoek zijn twee hoeken 65° en 48°. Hoeveel is de derde hoek?" },
+    answer: 67, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 65° - 48° = 67°.", en: "180° - 65° - 48° = 67°.", nl: "180° - 65° - 48° = 67°." }
+  },
+  {
+    id: "G4_s_115", category: "G4", level: 2,
+    text: { fr: "Quel est le supplément d'un angle de 115° ?", en: "What is the supplement of a 115° angle?", nl: "Wat is het supplement van een hoek van 115°?" },
+    answer: 65, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 115° = 65°.", en: "180° - 115° = 65°.", nl: "180° - 115° = 65°." }
+  },
+  {
+    id: "G4_s_116", category: "G4", level: 3,
+    text: { fr: "Combien mesure chaque angle intérieur d'un octogone régulier (8 côtés) ?", en: "What is each interior angle of a regular octagon (8 sides)?", nl: "Hoeveel is elke binnenhoek van een regelmatige achthoek (8 zijden)?" },
+    answer: 135, tolerance: 0, unit: "°",
+    hint: { fr: "(8 - 2) × 180° ÷ 8 = 1 080° ÷ 8 = 135°.", en: "(8 - 2) × 180° ÷ 8 = 1,080° ÷ 8 = 135°.", nl: "(8 - 2) × 180° ÷ 8 = 1.080° ÷ 8 = 135°." }
+  },
+  {
+    id: "G4_s_117", category: "G4", level: 3,
+    text: { fr: "Dans un parallélogramme, un angle mesure 72°. Combien mesure l'angle consécutif ?", en: "In a parallelogram, one angle is 72°. What is the consecutive angle?", nl: "In een parallellogram is een hoek 72°. Hoeveel is de opeenvolgende hoek?" },
+    answer: 108, tolerance: 0, unit: "°",
+    hint: { fr: "180° - 72° = 108°.", en: "180° - 72° = 108°.", nl: "180° - 72° = 108°." }
+  },
 ];
 
 export function generate(level = 1) {

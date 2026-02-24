@@ -1697,7 +1697,105 @@ export const questions = [
       en: "Initial total = 6 x 15 = 90. Add 3 x 21 = 63. New total = 153. Divide by 9.",
       nl: "Oorspronkelijk totaal = 6 x 15 = 90. Tel 3 x 21 = 63 erbij. Nieuw totaal = 153. Deel door 9."
     }
-  }
+  },
+  {
+    id: "D1_s_112", category: "D1", level: 1,
+    text: {
+      fr: "Un tableau montre les ventes : lundi 12, mardi 18, mercredi 15. Quel est le total des ventes ?",
+      en: "A table shows sales: Monday 12, Tuesday 18, Wednesday 15. What is the total sales?",
+      nl: "Een tabel toont de verkoop: maandag 12, dinsdag 18, woensdag 15. Wat is de totale verkoop?"
+    },
+    answer: 45, tolerance: 0,
+    hint: {
+      fr: "12 + 18 + 15 = 45.",
+      en: "12 + 18 + 15 = 45.",
+      nl: "12 + 18 + 15 = 45."
+    }
+  },
+  {
+    id: "D1_s_113", category: "D1", level: 1,
+    text: {
+      fr: "La moyenne de 10, 20 et 30 est ?",
+      en: "What is the mean of 10, 20, and 30?",
+      nl: "Wat is het gemiddelde van 10, 20 en 30?"
+    },
+    answer: 20, tolerance: 0,
+    hint: {
+      fr: "(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.",
+      en: "(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.",
+      nl: "(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20."
+    }
+  },
+  {
+    id: "D1_s_114", category: "D1", level: 1,
+    text: {
+      fr: "Un diagramme indique : A = 25, B = 35, C = 40. Quelle catégorie a la plus grande valeur ?",
+      en: "A chart shows: A = 25, B = 35, C = 40. What is the value of the largest category?",
+      nl: "Een diagram toont: A = 25, B = 35, C = 40. Wat is de waarde van de grootste categorie?"
+    },
+    answer: 40, tolerance: 0,
+    hint: {
+      fr: "Compare les trois valeurs : 40 est la plus grande.",
+      en: "Compare the three values: 40 is the largest.",
+      nl: "Vergelijk de drie waarden: 40 is de grootste."
+    }
+  },
+  {
+    id: "D1_s_115", category: "D1", level: 2,
+    text: {
+      fr: "La moyenne de 5 nombres est 12. Si on enlève le nombre 7, quelle est la nouvelle moyenne des 4 nombres restants ?",
+      en: "The mean of 5 numbers is 12. If 7 is removed, what is the new mean of the 4 remaining numbers?",
+      nl: "Het gemiddelde van 5 getallen is 12. Als 7 wordt verwijderd, wat is het nieuwe gemiddelde van de 4 overgebleven getallen?"
+    },
+    answer: 13.25, tolerance: 0.01,
+    hint: {
+      fr: "Total = 5 × 12 = 60. Nouveau total = 60 − 7 = 53. 53 ÷ 4 = 13,25.",
+      en: "Total = 5 × 12 = 60. New total = 60 − 7 = 53. 53 ÷ 4 = 13.25.",
+      nl: "Totaal = 5 × 12 = 60. Nieuw totaal = 60 − 7 = 53. 53 ÷ 4 = 13,25."
+    }
+  },
+  {
+    id: "D1_s_116", category: "D1", level: 2,
+    text: {
+      fr: "Un graphique montre les températures sur 4 jours : 8, 12, 6, 14. Quelle est la moyenne ?",
+      en: "A graph shows temperatures over 4 days: 8, 12, 6, 14. What is the mean?",
+      nl: "Een grafiek toont temperaturen over 4 dagen: 8, 12, 6, 14. Wat is het gemiddelde?"
+    },
+    answer: 10, tolerance: 0,
+    hint: {
+      fr: "(8 + 12 + 6 + 14) ÷ 4 = 40 ÷ 4 = 10.",
+      en: "(8 + 12 + 6 + 14) ÷ 4 = 40 ÷ 4 = 10.",
+      nl: "(8 + 12 + 6 + 14) ÷ 4 = 40 ÷ 4 = 10."
+    }
+  },
+  {
+    id: "D1_s_117", category: "D1", level: 3,
+    text: {
+      fr: "Moyenne pondérée : math (coeff. 3) = 14, français (coeff. 2) = 16, sciences (coeff. 1) = 10. Quelle est la moyenne pondérée ?",
+      en: "Weighted average: math (weight 3) = 14, French (weight 2) = 16, science (weight 1) = 10. What is the weighted average?",
+      nl: "Gewogen gemiddelde: wiskunde (coëff. 3) = 14, Frans (coëff. 2) = 16, wetenschappen (coëff. 1) = 10. Wat is het gewogen gemiddelde?"
+    },
+    answer: 14, tolerance: 0,
+    hint: {
+      fr: "(14×3 + 16×2 + 10×1) ÷ (3+2+1) = (42+32+10) ÷ 6 = 84 ÷ 6 = 14.",
+      en: "(14×3 + 16×2 + 10×1) ÷ (3+2+1) = (42+32+10) ÷ 6 = 84 ÷ 6 = 14.",
+      nl: "(14×3 + 16×2 + 10×1) ÷ (3+2+1) = (42+32+10) ÷ 6 = 84 ÷ 6 = 14."
+    }
+  },
+  {
+    id: "D1_s_118", category: "D1", level: 3,
+    text: {
+      fr: "La moyenne de 8 valeurs est 22. On retire deux valeurs : 10 et 14. Quelle est la nouvelle moyenne des 6 valeurs restantes ?",
+      en: "The mean of 8 values is 22. Two values are removed: 10 and 14. What is the new mean of the 6 remaining values?",
+      nl: "Het gemiddelde van 8 waarden is 22. Twee waarden worden verwijderd: 10 en 14. Wat is het nieuwe gemiddelde van de 6 overgebleven waarden?"
+    },
+    answer: 25.33, tolerance: 0.01,
+    hint: {
+      fr: "Total = 8 × 22 = 176. Nouveau total = 176 − 10 − 14 = 152. 152 ÷ 6 ≈ 25,33.",
+      en: "Total = 8 × 22 = 176. New total = 176 − 10 − 14 = 152. 152 ÷ 6 ≈ 25.33.",
+      nl: "Totaal = 8 × 22 = 176. Nieuw totaal = 176 − 10 − 14 = 152. 152 ÷ 6 ≈ 25,33."
+    }
+  },
 ];
 
 /**

@@ -685,6 +685,42 @@ export const questions = [
     answer: 222, tolerance: 0, unit: "cm²",
     hint: { fr: "2 × (60 + 36 + 15) = 2 × 111 = 222.", en: "2 × (60 + 36 + 15) = 2 × 111 = 222.", nl: "2 × (60 + 36 + 15) = 2 × 111 = 222." }
   },
+  {
+    id: "G7_s_112", category: "G7", level: 1,
+    text: { fr: "Combien d'arêtes a un pavé droit ?", en: "How many edges does a rectangular prism have?", nl: "Hoeveel ribben heeft een balk?" },
+    answer: 12, tolerance: 0,
+    hint: { fr: "4 arêtes en haut + 4 en bas + 4 verticales = 12.", en: "4 top + 4 bottom + 4 vertical = 12.", nl: "4 boven + 4 onder + 4 verticale = 12." }
+  },
+  {
+    id: "G7_s_113", category: "G7", level: 1,
+    text: { fr: "Combien de sommets a une pyramide à base carrée ?", en: "How many vertices does a square-based pyramid have?", nl: "Hoeveel hoekpunten heeft een piramide met vierkant grondvlak?" },
+    answer: 5, tolerance: 0,
+    hint: { fr: "4 sommets à la base + 1 sommet au sommet = 5.", en: "4 base vertices + 1 apex = 5.", nl: "4 hoekpunten aan de basis + 1 top = 5." }
+  },
+  {
+    id: "G7_s_114", category: "G7", level: 2,
+    text: { fr: "Calcule l'aire totale d'un cube de côté 9 cm.", en: "Calculate the total surface area of a cube with side 9 cm.", nl: "Bereken de totale oppervlakte van een kubus met zijde 9 cm." },
+    answer: 486, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 6 × 9² = 6 × 81 = 486.", en: "Area = 6 × 9² = 6 × 81 = 486.", nl: "Oppervlakte = 6 × 9² = 6 × 81 = 486." }
+  },
+  {
+    id: "G7_s_115", category: "G7", level: 2,
+    text: { fr: "Combien de faces a un prisme à base pentagonale ?", en: "How many faces does a pentagonal prism have?", nl: "Hoeveel vlakken heeft een vijfhoekig prisma?" },
+    answer: 7, tolerance: 0,
+    hint: { fr: "2 pentagones + 5 rectangles = 7.", en: "2 pentagons + 5 rectangles = 7.", nl: "2 vijfhoeken + 5 rechthoeken = 7." }
+  },
+  {
+    id: "G7_s_116", category: "G7", level: 3,
+    text: { fr: "Quelle est l'aire totale d'un pavé droit de 8 cm × 6 cm × 5 cm ?", en: "What is the total surface area of an 8 × 6 × 5 cm rectangular prism?", nl: "Wat is de totale oppervlakte van een balk van 8 × 6 × 5 cm?" },
+    answer: 236, tolerance: 0, unit: "cm²",
+    hint: { fr: "2 × (48 + 40 + 30) = 2 × 118 = 236.", en: "2 × (48 + 40 + 30) = 2 × 118 = 236.", nl: "2 × (48 + 40 + 30) = 2 × 118 = 236." }
+  },
+  {
+    id: "G7_s_117", category: "G7", level: 3,
+    text: { fr: "Un cube a une aire totale de 384 cm². Quel est son côté ?", en: "A cube has a total surface area of 384 cm². What is its side?", nl: "Een kubus heeft een totale oppervlakte van 384 cm². Wat is de zijde?" },
+    answer: 8, tolerance: 0, unit: "cm",
+    hint: { fr: "6 × côté² = 384, donc côté² = 64, côté = 8.", en: "6 × side² = 384, so side² = 64, side = 8.", nl: "6 × zijde² = 384, dus zijde² = 64, zijde = 8." }
+  },
 ];
 
 export function generate(level = 1) {

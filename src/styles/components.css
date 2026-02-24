@@ -490,6 +490,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   transition: all var(--speed) var(--ease);
   flex-shrink: 0;
   line-height: 1.5;
@@ -510,10 +511,33 @@
   border: 2px solid #BFDBFE;
 }
 
-.question-display.red-bg { 
-  background: #FEF2F2; 
+.question-display.red-bg {
+  background: #FEF2F2;
   color: #991B1B;
   border: 2px solid #FECACA;
+}
+
+/* Vertical fraction display */
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin: 0 3px;
+  position: relative;
+}
+
+.fraction-num, .fraction-den {
+  padding: 0 4px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.fraction-bar {
+  width: 100%;
+  height: 2px;
+  background: currentColor;
 }
 
 .hint-btn {

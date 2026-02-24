@@ -117,6 +117,25 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
   const questionText = getQuestionText(currentQuestion);
 
+  // Render fractions as vertical stacked display
+  const renderMathText = (text) => {
+    const parts = text.split(/(\d+\/\d+)/);
+    if (parts.length === 1) return text;
+    return parts.map((part, i) => {
+      const match = part.match(/^(\d+)\/(\d+)$/);
+      if (match) {
+        return (
+          <span key={i} className="fraction">
+            <span className="fraction-num">{match[1]}</span>
+            <span className="fraction-bar" />
+            <span className="fraction-den">{match[2]}</span>
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
   // Ajuster la taille de police selon la longueur du texte
   const getQuestionFontSize = (text) => {
     const length = text.length;
@@ -173,11 +192,11 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         className={`question-display ${team === 'blue' ? 'blue-bg' : 'red-bg'} ${questionAnim ? 'anim-scale-in' : ''}`}
         style={feedbackStyle}
       >
-        {questionText}
+        {renderMathText(questionText)}
       </div>
 
       {hintText && (
-        <div className="hint-display">{hintText}</div>
+        <div className="hint-display">{renderMathText(hintText)}</div>
       )}
 
       <Numpad

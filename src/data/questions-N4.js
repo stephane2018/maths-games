@@ -694,6 +694,48 @@ export const questions = [
     answer: 20, tolerance: 0,
     hint: { fr: "Multiplie les fractions : 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Puis 1/5 de 100.", en: "Multiply: 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Then 1/5 of 100.", nl: "Vermenigvuldig: 3/4 × 2/3 × 2/5 = 12/60 = 1/5. Dan 1/5 van 100." }
   },
+  {
+    id: "N4_s_112", category: "N4", level: 1,
+    text: { fr: "Combien font 2/5 de 45 ?", en: "What is 2/5 of 45?", nl: "Hoeveel is 2/5 van 45?" },
+    answer: 18, tolerance: 0,
+    hint: { fr: "Divise 45 par 5 = 9, puis multiplie par 2.", en: "Divide 45 by 5 = 9, then multiply by 2.", nl: "Deel 45 door 5 = 9, vermenigvuldig dan met 2." }
+  },
+  {
+    id: "N4_s_113", category: "N4", level: 1,
+    text: { fr: "Combien font 3/8 de 64 ?", en: "What is 3/8 of 64?", nl: "Hoeveel is 3/8 van 64?" },
+    answer: 24, tolerance: 0,
+    hint: { fr: "Divise 64 par 8 = 8, puis multiplie par 3.", en: "Divide 64 by 8 = 8, then multiply by 3.", nl: "Deel 64 door 8 = 8, vermenigvuldig dan met 3." }
+  },
+  {
+    id: "N4_s_114", category: "N4", level: 1,
+    text: { fr: "Combien font 5/6 de 42 ?", en: "What is 5/6 of 42?", nl: "Hoeveel is 5/6 van 42?" },
+    answer: 35, tolerance: 0,
+    hint: { fr: "Divise 42 par 6 = 7, puis multiplie par 5.", en: "Divide 42 by 6 = 7, then multiply by 5.", nl: "Deel 42 door 6 = 7, vermenigvuldig dan met 5." }
+  },
+  {
+    id: "N4_s_115", category: "N4", level: 2,
+    text: { fr: "Si 3/7 d'un nombre est 27, quel est ce nombre ?", en: "If 3/7 of a number is 27, what is the number?", nl: "Als 3/7 van een getal 27 is, wat is dat getal?" },
+    answer: 63, tolerance: 0,
+    hint: { fr: "Si 3/7 = 27, alors 1/7 = 9, donc le nombre = 63.", en: "If 3/7 = 27, then 1/7 = 9, so the number = 63.", nl: "Als 3/7 = 27, dan 1/7 = 9, dus het getal = 63." }
+  },
+  {
+    id: "N4_s_116", category: "N4", level: 2,
+    text: { fr: "Combien font 2/3 de 54 plus 1/4 de 28 ?", en: "What is 2/3 of 54 plus 1/4 of 28?", nl: "Hoeveel is 2/3 van 54 plus 1/4 van 28?" },
+    answer: 43, tolerance: 0,
+    hint: { fr: "2/3 de 54 = 36 et 1/4 de 28 = 7. Donc 36 + 7 = 43.", en: "2/3 of 54 = 36 and 1/4 of 28 = 7. So 36 + 7 = 43.", nl: "2/3 van 54 = 36 en 1/4 van 28 = 7. Dus 36 + 7 = 43." }
+  },
+  {
+    id: "N4_s_117", category: "N4", level: 3,
+    text: { fr: "Si 5/8 d'un nombre est 40, quel est ce nombre ?", en: "If 5/8 of a number is 40, what is the number?", nl: "Als 5/8 van een getal 40 is, wat is dat getal?" },
+    answer: 64, tolerance: 0,
+    hint: { fr: "Si 5/8 = 40, alors 1/8 = 8, donc le nombre = 64.", en: "If 5/8 = 40, then 1/8 = 8, so the number = 64.", nl: "Als 5/8 = 40, dan 1/8 = 8, dus het getal = 64." }
+  },
+  {
+    id: "N4_s_118", category: "N4", level: 3,
+    text: { fr: "Combien font 4/5 de 3/4 de 60 ?", en: "What is 4/5 of 3/4 of 60?", nl: "Hoeveel is 4/5 van 3/4 van 60?" },
+    answer: 36, tolerance: 0,
+    hint: { fr: "3/4 de 60 = 45, puis 4/5 de 45 = 36.", en: "3/4 of 60 = 45, then 4/5 of 45 = 36.", nl: "3/4 van 60 = 45, dan 4/5 van 45 = 36." }
+  },
 ];
 
 export function generate(level = 1) {

@@ -683,6 +683,42 @@ export const questions = [
     answer: 18.75, tolerance: 0.01,
     hint: { fr: "Total = 80. Nouveau total = 80 - 5 = 75. 75 ÷ 4 = 18,75.", en: "Total = 80. New total = 80 - 5 = 75. 75 ÷ 4 = 18.75.", nl: "Totaal = 80. Nieuw totaal = 80 - 5 = 75. 75 ÷ 4 = 18,75." }
   },
+  {
+    id: "D2_s_112", category: "D2", level: 1,
+    text: { fr: "Quelle est la moyenne de : 14, 18, 10, 22 ?", en: "What is the mean of: 14, 18, 10, 22?", nl: "Wat is het gemiddelde van: 14, 18, 10, 22?" },
+    answer: 16, tolerance: 0,
+    hint: { fr: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16.", en: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16.", nl: "(14 + 18 + 10 + 22) ÷ 4 = 64 ÷ 4 = 16." }
+  },
+  {
+    id: "D2_s_113", category: "D2", level: 1,
+    text: { fr: "Quelle est la moyenne de : 5, 11, 8, 16 ?", en: "What is the mean of: 5, 11, 8, 16?", nl: "Wat is het gemiddelde van: 5, 11, 8, 16?" },
+    answer: 10, tolerance: 0,
+    hint: { fr: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10.", en: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10.", nl: "(5 + 11 + 8 + 16) ÷ 4 = 40 ÷ 4 = 10." }
+  },
+  {
+    id: "D2_s_114", category: "D2", level: 2,
+    text: { fr: "Données : 3, 7, 7, 9, 12, 15. Quelle est la médiane ?", en: "Data: 3, 7, 7, 9, 12, 15. What is the median?", nl: "Data: 3, 7, 7, 9, 12, 15. Wat is de mediaan?" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "6 valeurs triées. La médiane est la moyenne des 3e et 4e : (7 + 9) ÷ 2 = 8.", en: "6 sorted values. The median is the average of the 3rd and 4th: (7 + 9) ÷ 2 = 8.", nl: "6 gesorteerde waarden. De mediaan is het gemiddelde van de 3e en 4e: (7 + 9) ÷ 2 = 8." }
+  },
+  {
+    id: "D2_s_115", category: "D2", level: 2,
+    text: { fr: "Données : 2, 5, 8, 11, 20. Quelle est l'étendue ?", en: "Data: 2, 5, 8, 11, 20. What is the range?", nl: "Data: 2, 5, 8, 11, 20. Wat is het bereik?" },
+    answer: 18, tolerance: 0,
+    hint: { fr: "Étendue = valeur max − valeur min = 20 − 2 = 18.", en: "Range = max − min = 20 − 2 = 18.", nl: "Bereik = max − min = 20 − 2 = 18." }
+  },
+  {
+    id: "D2_s_116", category: "D2", level: 3,
+    text: { fr: "La moyenne de 6 nombres est 14. On ajoute le nombre 28. Quelle est la nouvelle moyenne ?", en: "The mean of 6 numbers is 14. The number 28 is added. What is the new mean?", nl: "Het gemiddelde van 6 getallen is 14. Het getal 28 wordt toegevoegd. Wat is het nieuwe gemiddelde?" },
+    answer: 16, tolerance: 0,
+    hint: { fr: "Total = 6 × 14 = 84. Nouveau total = 84 + 28 = 112. 112 ÷ 7 = 16.", en: "Total = 6 × 14 = 84. New total = 84 + 28 = 112. 112 ÷ 7 = 16.", nl: "Totaal = 6 × 14 = 84. Nieuw totaal = 84 + 28 = 112. 112 ÷ 7 = 16." }
+  },
+  {
+    id: "D2_s_117", category: "D2", level: 3,
+    text: { fr: "Données : 4, 4, 6, 8, 8, 8, 10. Donne le mode.", en: "Data: 4, 4, 6, 8, 8, 8, 10. What is the mode?", nl: "Data: 4, 4, 6, 8, 8, 8, 10. Wat is de modus?" },
+    answer: 8, tolerance: 0,
+    hint: { fr: "Le mode est la valeur la plus fréquente. 8 apparaît 3 fois.", en: "The mode is the most frequent value. 8 appears 3 times.", nl: "De modus is de meest voorkomende waarde. 8 komt 3 keer voor." }
+  },
 ];
 
 export function generate(level = 1) {

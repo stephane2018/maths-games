@@ -20,7 +20,7 @@ import { questions as questionsP1, generate as generateP1 } from './questions-P1
 import { questions as questionsD1, generate as generateD1 } from './questions-D1.js';
 import { questions as questionsD2, generate as generateD2 } from './questions-D2.js';
 import { questions as questionsM1, generate as generateM1 } from './questions-M1.js';
-import { questions as questionsR1, generate as generateR1 } from './questions-R1.js';
+
 
 export const allCategories = [
   {
@@ -125,12 +125,6 @@ export const allCategories = [
     questions: questionsM1,
     generate: generateM1,
   },
-  {
-    code: 'R1',
-    label: { fr: 'Problèmes complexes', en: 'Problèmes complexes', nl: 'Problèmes complexes' },
-    questions: questionsR1,
-    generate: generateR1,
-  }
 ];
 
 export function getCategoryByCode(code) {

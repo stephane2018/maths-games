@@ -1596,7 +1596,105 @@ export const questions = [
       en: "3^2 + 3 x (-2) - (-2)^2 = 9 - 6 - 4 = -1.",
       nl: "3^2 + 3 x (-2) - (-2)^2 = 9 - 6 - 4 = -1."
     }
-  }
+  },
+  {
+    id: "N2_s_113", category: "N2", level: 1,
+    text: {
+      fr: "Quel est le reste de 31 divisé par 7 ?",
+      en: "What is the remainder of 31 divided by 7?",
+      nl: "Wat is de rest van 31 gedeeld door 7?"
+    },
+    answer: 3, tolerance: 0,
+    hint: {
+      fr: "31 = 4 × 7 + reste. Quel est le reste ?",
+      en: "31 = 4 × 7 + remainder. What is the remainder?",
+      nl: "31 = 4 × 7 + rest. Wat is de rest?"
+    }
+  },
+  {
+    id: "N2_s_114", category: "N2", level: 1,
+    text: {
+      fr: "Quel est le PGCD de 18 et 24 ?",
+      en: "What is the GCD of 18 and 24?",
+      nl: "Wat is de GGD van 18 en 24?"
+    },
+    answer: 6, tolerance: 0,
+    hint: {
+      fr: "Liste les diviseurs de 18 et de 24, puis trouve le plus grand commun.",
+      en: "List the divisors of 18 and 24, then find the largest common one.",
+      nl: "Lijst de delers van 18 en 24, en vind de grootste gemeenschappelijke."
+    }
+  },
+  {
+    id: "N2_s_115", category: "N2", level: 1,
+    text: {
+      fr: "Quel est le PPCM de 6 et 8 ?",
+      en: "What is the LCM of 6 and 8?",
+      nl: "Wat is het KGV van 6 en 8?"
+    },
+    answer: 24, tolerance: 0,
+    hint: {
+      fr: "Les multiples de 6 : 6, 12, 18, 24... Les multiples de 8 : 8, 16, 24... Le premier commun est 24.",
+      en: "Multiples of 6: 6, 12, 18, 24... Multiples of 8: 8, 16, 24... The first common one is 24.",
+      nl: "Veelvouden van 6: 6, 12, 18, 24... Veelvouden van 8: 8, 16, 24... Het eerste gemeenschappelijke is 24."
+    }
+  },
+  {
+    id: "N2_s_116", category: "N2", level: 2,
+    text: {
+      fr: "Si x = -3, calcule : 2x² + 5x - 1",
+      en: "If x = -3, calculate: 2x² + 5x - 1",
+      nl: "Als x = -3, bereken: 2x² + 5x - 1"
+    },
+    answer: 2, tolerance: 0,
+    hint: {
+      fr: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2.",
+      en: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2.",
+      nl: "2 × (-3)² + 5 × (-3) - 1 = 2 × 9 - 15 - 1 = 18 - 15 - 1 = 2."
+    }
+  },
+  {
+    id: "N2_s_117", category: "N2", level: 2,
+    text: {
+      fr: "Quel est le PGCD de 36 et 54 ?",
+      en: "What is the GCD of 36 and 54?",
+      nl: "Wat is de GGD van 36 en 54?"
+    },
+    answer: 18, tolerance: 0,
+    hint: {
+      fr: "36 = 2² × 3² et 54 = 2 × 3³. Le PGCD = 2 × 3² = 18.",
+      en: "36 = 2² × 3² and 54 = 2 × 3³. The GCD = 2 × 3² = 18.",
+      nl: "36 = 2² × 3² en 54 = 2 × 3³. De GGD = 2 × 3² = 18."
+    }
+  },
+  {
+    id: "N2_s_118", category: "N2", level: 3,
+    text: {
+      fr: "Si a = 2 et b = -3, calcule : a³ - 2a²b + ab²",
+      en: "If a = 2 and b = -3, calculate: a³ - 2a²b + ab²",
+      nl: "Als a = 2 en b = -3, bereken: a³ - 2a²b + ab²"
+    },
+    answer: 38, tolerance: 0,
+    hint: {
+      fr: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (attention : soustraire un négatif = additionner).",
+      en: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (note: subtracting a negative = adding).",
+      nl: "2³ - 2 × 4 × (-3) + 2 × 9 = 8 + 24 + 18 = 38 (let op: een negatief aftrekken = optellen)."
+    }
+  },
+  {
+    id: "N2_s_119", category: "N2", level: 3,
+    text: {
+      fr: "Quel est le PPCM de 18 et 30 ?",
+      en: "What is the LCM of 18 and 30?",
+      nl: "Wat is het KGV van 18 en 30?"
+    },
+    answer: 90, tolerance: 0,
+    hint: {
+      fr: "18 = 2 × 3² et 30 = 2 × 3 × 5. PPCM = 2 × 3² × 5 = 90.",
+      en: "18 = 2 × 3² and 30 = 2 × 3 × 5. LCM = 2 × 3² × 5 = 90.",
+      nl: "18 = 2 × 3² en 30 = 2 × 3 × 5. KGV = 2 × 3² × 5 = 90."
+    }
+  },
 ];
 
 // =============================================================================

@@ -1843,7 +1843,107 @@ export const questions = [
       en: "Full perimeter = 2 × (35 + 20) = 110 m. Subtract the openings: 110 - 4 - 1 = 105 m.",
       nl: "Volledige omtrek = 2 × (35 + 20) = 110 m. Trek de openingen af: 110 - 4 - 1 = 105 m."
     }
-  }
+  },
+
+  // --- Additional questions (G1_s_112 – G1_s_118) ---
+  {
+    id: "G1_s_112", category: "G1", level: 1,
+    text: {
+      fr: "Calcule le périmètre d'un carré de côté 13 cm.",
+      en: "Calculate the perimeter of a square with side 13 cm.",
+      nl: "Bereken de omtrek van een vierkant met zijde 13 cm."
+    },
+    answer: 52, tolerance: 0, unit: "cm",
+    hint: {
+      fr: "Périmètre = 4 × 13 = 52 cm.",
+      en: "Perimeter = 4 × 13 = 52 cm.",
+      nl: "Omtrek = 4 × 13 = 52 cm."
+    }
+  },
+  {
+    id: "G1_s_113", category: "G1", level: 1,
+    text: {
+      fr: "Un rectangle mesure 18 cm de long et 7 cm de large. Quel est son périmètre ?",
+      en: "A rectangle is 18 cm long and 7 cm wide. What is its perimeter?",
+      nl: "Een rechthoek is 18 cm lang en 7 cm breed. Wat is de omtrek?"
+    },
+    answer: 50, tolerance: 0, unit: "cm",
+    hint: {
+      fr: "P = 2 × (18 + 7) = 2 × 25 = 50 cm.",
+      en: "P = 2 × (18 + 7) = 2 × 25 = 50 cm.",
+      nl: "P = 2 × (18 + 7) = 2 × 25 = 50 cm."
+    }
+  },
+  {
+    id: "G1_s_114", category: "G1", level: 1,
+    text: {
+      fr: "Calcule le périmètre d'un triangle équilatéral de côté 9 cm.",
+      en: "Calculate the perimeter of an equilateral triangle with side 9 cm.",
+      nl: "Bereken de omtrek van een gelijkzijdige driehoek met zijde 9 cm."
+    },
+    answer: 27, tolerance: 0, unit: "cm",
+    hint: {
+      fr: "P = 3 × 9 = 27 cm.",
+      en: "P = 3 × 9 = 27 cm.",
+      nl: "P = 3 × 9 = 27 cm."
+    }
+  },
+  {
+    id: "G1_s_115", category: "G1", level: 2,
+    text: {
+      fr: "Un triangle isocèle a deux côtés de 12 cm et une base de 7 cm. Quel est son périmètre ?",
+      en: "An isosceles triangle has two sides of 12 cm and a base of 7 cm. What is its perimeter?",
+      nl: "Een gelijkbenige driehoek heeft twee zijden van 12 cm en een basis van 7 cm. Wat is de omtrek?"
+    },
+    answer: 31, tolerance: 0, unit: "cm",
+    hint: {
+      fr: "P = 12 + 12 + 7 = 31 cm.",
+      en: "P = 12 + 12 + 7 = 31 cm.",
+      nl: "P = 12 + 12 + 7 = 31 cm."
+    }
+  },
+  {
+    id: "G1_s_116", category: "G1", level: 2,
+    text: {
+      fr: "Calcule le périmètre d'un hexagone régulier de côté 6 cm.",
+      en: "Calculate the perimeter of a regular hexagon with side 6 cm.",
+      nl: "Bereken de omtrek van een regelmatige zeshoek met zijde 6 cm."
+    },
+    answer: 36, tolerance: 0, unit: "cm",
+    hint: {
+      fr: "P = 6 × 6 = 36 cm.",
+      en: "P = 6 × 6 = 36 cm.",
+      nl: "P = 6 × 6 = 36 cm."
+    }
+  },
+  {
+    id: "G1_s_117", category: "G1", level: 3,
+    text: {
+      fr: "Un terrain rectangulaire de 40 m sur 25 m est entouré d'un chemin de 2 m de large à l'extérieur. Quel est le périmètre extérieur du chemin ?",
+      en: "A rectangular field 40 m by 25 m is surrounded by a 2 m wide path on the outside. What is the outer perimeter of the path?",
+      nl: "Een rechthoekig terrein van 40 m op 25 m is omgeven door een pad van 2 m breed aan de buitenkant. Wat is de buitenomtrek van het pad?"
+    },
+    answer: 146, tolerance: 0, unit: "m",
+    hint: {
+      fr: "Dimensions extérieures : (40 + 2×2) = 44 m et (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m.",
+      en: "Outer dimensions: (40 + 2×2) = 44 m and (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m.",
+      nl: "Buitenafmetingen: (40 + 2×2) = 44 m en (25 + 2×2) = 29 m. P = 2 × (44 + 29) = 146 m."
+    }
+  },
+  {
+    id: "G1_s_118", category: "G1", level: 3,
+    text: {
+      fr: "Calcule la circonférence d'un cercle de diamètre 10 cm. Arrondis au centième.",
+      en: "Calculate the circumference of a circle with diameter 10 cm. Round to the nearest hundredth.",
+      nl: "Bereken de omtrek van een cirkel met diameter 10 cm. Rond af op honderdsten."
+    },
+    answer: 31.42, tolerance: 0.01, unit: "cm",
+    hint: {
+      fr: "C = π × d = π × 10 ≈ 31,42 cm.",
+      en: "C = π × d = π × 10 ≈ 31.42 cm.",
+      nl: "C = π × d = π × 10 ≈ 31,42 cm."
+    }
+  },
 ];
 
 // =============================================================================

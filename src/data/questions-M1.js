@@ -693,6 +693,48 @@ export const questions = [
     answer: 17.5, tolerance: 0.01,
     hint: { fr: "63 ÷ 3,6 = 17,5.", en: "63 ÷ 3.6 = 17.5.", nl: "63 ÷ 3,6 = 17,5." }
   },
+  {
+    id: "M1_s_112", category: "M1", level: 1,
+    text: { fr: "Combien de millimètres dans 4,5 cm ?", en: "How many millimeters in 4.5 cm?", nl: "Hoeveel millimeter in 4,5 cm?" },
+    answer: 45, tolerance: 0,
+    hint: { fr: "1 cm = 10 mm. 4,5 × 10 = 45.", en: "1 cm = 10 mm. 4.5 × 10 = 45.", nl: "1 cm = 10 mm. 4,5 × 10 = 45." }
+  },
+  {
+    id: "M1_s_113", category: "M1", level: 1,
+    text: { fr: "Combien de secondes dans 5 minutes ?", en: "How many seconds in 5 minutes?", nl: "Hoeveel seconden in 5 minuten?" },
+    answer: 300, tolerance: 0,
+    hint: { fr: "1 min = 60 s. 5 × 60 = 300.", en: "1 min = 60 s. 5 × 60 = 300.", nl: "1 min = 60 s. 5 × 60 = 300." }
+  },
+  {
+    id: "M1_s_114", category: "M1", level: 1,
+    text: { fr: "Combien de centilitres dans 3,2 litres ?", en: "How many centiliters in 3.2 liters?", nl: "Hoeveel centiliter in 3,2 liter?" },
+    answer: 320, tolerance: 0,
+    hint: { fr: "1 L = 100 cL. 3,2 × 100 = 320.", en: "1 L = 100 cL. 3.2 × 100 = 320.", nl: "1 L = 100 cL. 3,2 × 100 = 320." }
+  },
+  {
+    id: "M1_s_115", category: "M1", level: 2,
+    text: { fr: "Combien de kg dans 4 750 g ?", en: "How many kg in 4,750 g?", nl: "Hoeveel kg in 4750 g?" },
+    answer: 4.75, tolerance: 0.01,
+    hint: { fr: "1 kg = 1000 g. 4750 ÷ 1000 = 4,75.", en: "1 kg = 1000 g. 4,750 ÷ 1,000 = 4.75.", nl: "1 kg = 1000 g. 4750 ÷ 1000 = 4,75." }
+  },
+  {
+    id: "M1_s_116", category: "M1", level: 2,
+    text: { fr: "Convertis 2 h 45 min en minutes.", en: "Convert 2 h 45 min to minutes.", nl: "Reken 2 u 45 min om naar minuten." },
+    answer: 165, tolerance: 0,
+    hint: { fr: "2 × 60 + 45 = 120 + 45 = 165.", en: "2 × 60 + 45 = 120 + 45 = 165.", nl: "2 × 60 + 45 = 120 + 45 = 165." }
+  },
+  {
+    id: "M1_s_117", category: "M1", level: 3,
+    text: { fr: "Convertis 90 km/h en m/s.", en: "Convert 90 km/h to m/s.", nl: "Reken 90 km/u om naar m/s." },
+    answer: 25, tolerance: 0,
+    hint: { fr: "90 ÷ 3,6 = 25.", en: "90 ÷ 3.6 = 25.", nl: "90 ÷ 3,6 = 25." }
+  },
+  {
+    id: "M1_s_118", category: "M1", level: 3,
+    text: { fr: "Un terrain rectangulaire mesure 120 m par 85 m. Quelle est sa superficie en ares ?", en: "A rectangular field measures 120 m by 85 m. What is its area in ares?", nl: "Een rechthoekig terrein is 120 m bij 85 m. Wat is de oppervlakte in are?" },
+    answer: 102, tolerance: 0,
+    hint: { fr: "Superficie = 120 × 85 = 10 200 m². 1 are = 100 m². 10 200 ÷ 100 = 102.", en: "Area = 120 × 85 = 10,200 m². 1 are = 100 m². 10,200 ÷ 100 = 102.", nl: "Oppervlakte = 120 × 85 = 10.200 m². 1 are = 100 m². 10.200 ÷ 100 = 102." }
+  },
 ];
 
 export function generate(level = 1) {

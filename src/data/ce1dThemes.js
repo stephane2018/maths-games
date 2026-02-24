@@ -65,16 +65,6 @@ export const CE1D_THEMES = [
     subcategories: [
       { code: 'M1', name: { fr: 'Conversions d\'unités', en: 'Unit conversions', nl: 'Eenheden omrekenen' } }
     ]
-  },
-  {
-    id: 'problems',
-    icon: '🧩',
-    name: { fr: 'Résolution de problèmes', en: 'Problem solving', nl: 'Probleemoplossing' },
-    categories: ['R1'],
-    color: '#EC4899',
-    subcategories: [
-      { code: 'R1', name: { fr: 'Problèmes & raisonnement', en: 'Word problems & reasoning', nl: 'Redeneerproblemen' } }
-    ]
   }
 ];
 

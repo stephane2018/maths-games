@@ -682,6 +682,48 @@ export const questions = [
     answer: 2, tolerance: 0.1, unit: "cm",
     hint: { fr: "r = 12,56 ÷ 6,28 = 2.", en: "r = 12.56 ÷ 6.28 = 2.", nl: "r = 12,56 ÷ 6,28 = 2." }
   },
+  {
+    id: "G6_s_112", category: "G6", level: 1,
+    text: { fr: "Un cercle a un rayon de 18 cm. Quel est son diamètre ?", en: "A circle has a radius of 18 cm. What is its diameter?", nl: "Een cirkel heeft een straal van 18 cm. Wat is de diameter?" },
+    answer: 36, tolerance: 0, unit: "cm",
+    hint: { fr: "Diamètre = 2 × 18.", en: "Diameter = 2 × 18.", nl: "Diameter = 2 × 18." }
+  },
+  {
+    id: "G6_s_113", category: "G6", level: 1,
+    text: { fr: "Un cercle a un diamètre de 44 cm. Quel est son rayon ?", en: "A circle has a diameter of 44 cm. What is its radius?", nl: "Een cirkel heeft een diameter van 44 cm. Wat is de straal?" },
+    answer: 22, tolerance: 0, unit: "cm",
+    hint: { fr: "Rayon = 44 ÷ 2.", en: "Radius = 44 ÷ 2.", nl: "Straal = 44 ÷ 2." }
+  },
+  {
+    id: "G6_s_114", category: "G6", level: 1,
+    text: { fr: "Un cercle a un diamètre de 15 cm. Quel est son rayon ?", en: "A circle has a diameter of 15 cm. What is its radius?", nl: "Een cirkel heeft een diameter van 15 cm. Wat is de straal?" },
+    answer: 7.5, tolerance: 0.01, unit: "cm",
+    hint: { fr: "Rayon = 15 ÷ 2 = 7,5.", en: "Radius = 15 ÷ 2 = 7.5.", nl: "Straal = 15 ÷ 2 = 7,5." }
+  },
+  {
+    id: "G6_s_115", category: "G6", level: 2,
+    text: { fr: "Calcule le périmètre d'un cercle de rayon 9 cm (π = 3,14).", en: "Calculate the circumference of a circle with radius 9 cm (π = 3.14).", nl: "Bereken de omtrek van een cirkel met straal 9 cm (π = 3,14)." },
+    answer: 56.52, tolerance: 0.1, unit: "cm",
+    hint: { fr: "Périmètre = 2 × 3,14 × 9 = 56,52.", en: "Circumference = 2 × 3.14 × 9 = 56.52.", nl: "Omtrek = 2 × 3,14 × 9 = 56,52." }
+  },
+  {
+    id: "G6_s_116", category: "G6", level: 2,
+    text: { fr: "Calcule le périmètre d'un cercle de diamètre 16 cm (π = 3,14).", en: "Calculate the circumference of a circle with diameter 16 cm (π = 3.14).", nl: "Bereken de omtrek van een cirkel met diameter 16 cm (π = 3,14)." },
+    answer: 50.24, tolerance: 0.1, unit: "cm",
+    hint: { fr: "Périmètre = 3,14 × 16 = 50,24.", en: "Circumference = 3.14 × 16 = 50.24.", nl: "Omtrek = 3,14 × 16 = 50,24." }
+  },
+  {
+    id: "G6_s_117", category: "G6", level: 3,
+    text: { fr: "Calcule l'aire d'un cercle de rayon 8 cm (π = 3,14).", en: "Calculate the area of a circle with radius 8 cm (π = 3.14).", nl: "Bereken de oppervlakte van een cirkel met straal 8 cm (π = 3,14)." },
+    answer: 200.96, tolerance: 0.1, unit: "cm²",
+    hint: { fr: "Aire = 3,14 × 64 = 200,96.", en: "Area = 3.14 × 64 = 200.96.", nl: "Oppervlakte = 3,14 × 64 = 200,96." }
+  },
+  {
+    id: "G6_s_118", category: "G6", level: 3,
+    text: { fr: "Un cercle a un périmètre de 62,8 cm (π = 3,14). Quel est son rayon ?", en: "A circle has a circumference of 62.8 cm (π = 3.14). What is its radius?", nl: "Een cirkel heeft een omtrek van 62,8 cm (π = 3,14). Wat is de straal?" },
+    answer: 10, tolerance: 0.1, unit: "cm",
+    hint: { fr: "r = 62,8 ÷ 6,28 = 10.", en: "r = 62.8 ÷ 6.28 = 10.", nl: "r = 62,8 ÷ 6,28 = 10." }
+  },
 ];
 
 export function generate(level = 1) {

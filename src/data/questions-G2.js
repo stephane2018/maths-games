@@ -682,6 +682,42 @@ export const questions = [
     answer: 140, tolerance: 0, unit: "cm²",
     hint: { fr: "Aire = (26 + 14) × 7 ÷ 2 = 40 × 7 ÷ 2.", en: "Area = (26 + 14) × 7 ÷ 2 = 40 × 7 ÷ 2.", nl: "Oppervlakte = (26 + 14) × 7 ÷ 2 = 40 × 7 ÷ 2." }
   },
+  {
+    id: "G2_s_112", category: "G2", level: 1,
+    text: { fr: "Quelle est l'aire d'un rectangle de 11 cm sur 7 cm ?", en: "What is the area of an 11 cm by 7 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 11 cm op 7 cm?" },
+    answer: 77, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 11 × 7 = 77.", en: "Area = 11 × 7 = 77.", nl: "Oppervlakte = 11 × 7 = 77." }
+  },
+  {
+    id: "G2_s_113", category: "G2", level: 1,
+    text: { fr: "Quelle est l'aire d'un carré de côté 14 cm ?", en: "What is the area of a square with side 14 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 14 cm?" },
+    answer: 196, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 14 × 14 = 196.", en: "Area = 14 × 14 = 196.", nl: "Oppervlakte = 14 × 14 = 196." }
+  },
+  {
+    id: "G2_s_114", category: "G2", level: 2,
+    text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 16 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 9 cm?" },
+    answer: 72, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 16 × 9 ÷ 2 = 72.", en: "Area = 16 × 9 ÷ 2 = 72.", nl: "Oppervlakte = 16 × 9 ÷ 2 = 72." }
+  },
+  {
+    id: "G2_s_115", category: "G2", level: 2,
+    text: { fr: "Quelle est l'aire d'un parallélogramme de base 13 cm et de hauteur 8 cm ?", en: "What is the area of a parallelogram with base 13 cm and height 8 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 13 cm en hoogte 8 cm?" },
+    answer: 104, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = base × hauteur = 13 × 8 = 104.", en: "Area = base × height = 13 × 8 = 104.", nl: "Oppervlakte = basis × hoogte = 13 × 8 = 104." }
+  },
+  {
+    id: "G2_s_116", category: "G2", level: 3,
+    text: { fr: "Une forme est composée de deux rectangles : l'un de 12 cm sur 5 cm et l'autre de 8 cm sur 3 cm. Quelle est l'aire totale ?", en: "A shape is made of two rectangles: one 12 cm by 5 cm and the other 8 cm by 3 cm. What is the total area?", nl: "Een vorm bestaat uit twee rechthoeken: een van 12 cm op 5 cm en een van 8 cm op 3 cm. Wat is de totale oppervlakte?" },
+    answer: 84, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = (12 × 5) + (8 × 3) = 60 + 24 = 84.", en: "Area = (12 × 5) + (8 × 3) = 60 + 24 = 84.", nl: "Oppervlakte = (12 × 5) + (8 × 3) = 60 + 24 = 84." }
+  },
+  {
+    id: "G2_s_117", category: "G2", level: 3,
+    text: { fr: "Quelle est l'aire d'un trapèze de bases 18 cm et 10 cm, et de hauteur 8 cm ?", en: "What is the area of a trapezoid with bases 18 cm and 10 cm, and height 8 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 18 cm en 10 cm, en hoogte 8 cm?" },
+    answer: 112, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = (18 + 10) × 8 ÷ 2 = 28 × 8 ÷ 2 = 112.", en: "Area = (18 + 10) × 8 ÷ 2 = 28 × 8 ÷ 2 = 112.", nl: "Oppervlakte = (18 + 10) × 8 ÷ 2 = 28 × 8 ÷ 2 = 112." }
+  },
 ];
 
 export function generate(level = 1) {

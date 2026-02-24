@@ -688,6 +688,42 @@ export const questions = [
     answer: 52, tolerance: 0, unit: "cm",
     hint: { fr: "c² = 400 + 2304 = 2704. Donc c = 52.", en: "c² = 400 + 2304 = 2704. So c = 52.", nl: "c² = 400 + 2304 = 2704. Dus c = 52." }
   },
+  {
+    id: "G5_s_112", category: "G5", level: 1,
+    text: { fr: "Un triangle a des côtés de 14 cm, 18 cm et 20 cm. Quel est son périmètre ?", en: "A triangle has sides 14 cm, 18 cm and 20 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 14 cm, 18 cm en 20 cm. Wat is de omtrek?" },
+    answer: 52, tolerance: 0, unit: "cm",
+    hint: { fr: "14 + 18 + 20 = 52.", en: "14 + 18 + 20 = 52.", nl: "14 + 18 + 20 = 52." }
+  },
+  {
+    id: "G5_s_113", category: "G5", level: 1,
+    text: { fr: "Un triangle équilatéral a un côté de 13 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 13 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 13 cm. Wat is de omtrek?" },
+    answer: 39, tolerance: 0, unit: "cm",
+    hint: { fr: "3 côtés égaux : 13 × 3.", en: "3 equal sides: 13 × 3.", nl: "3 gelijke zijden: 13 × 3." }
+  },
+  {
+    id: "G5_s_114", category: "G5", level: 2,
+    text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 18 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 7 cm?" },
+    answer: 63, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 18 × 7 ÷ 2 = 63.", en: "Area = 18 × 7 ÷ 2 = 63.", nl: "Oppervlakte = 18 × 7 ÷ 2 = 63." }
+  },
+  {
+    id: "G5_s_115", category: "G5", level: 2,
+    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 14 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 14 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 14 cm. Wat is de oppervlakte?" },
+    answer: 63, tolerance: 0, unit: "cm²",
+    hint: { fr: "Aire = 9 × 14 ÷ 2 = 63.", en: "Area = 9 × 14 ÷ 2 = 63.", nl: "Oppervlakte = 9 × 14 ÷ 2 = 63." }
+  },
+  {
+    id: "G5_s_116", category: "G5", level: 3,
+    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 40 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 9 cm and 40 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 9 cm en 40 cm. Wat is de hypotenusa?" },
+    answer: 41, tolerance: 0, unit: "cm",
+    hint: { fr: "c² = 81 + 1600 = 1681. Donc c = 41.", en: "c² = 81 + 1600 = 1681. So c = 41.", nl: "c² = 81 + 1600 = 1681. Dus c = 41." }
+  },
+  {
+    id: "G5_s_117", category: "G5", level: 3,
+    text: { fr: "Un triangle rectangle a une hypoténuse de 65 cm et une cathète de 33 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 65 cm and a leg of 33 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 65 cm en een zijde van 33 cm. Wat is de andere zijde?" },
+    answer: 56, tolerance: 0, unit: "cm",
+    hint: { fr: "b² = 4225 - 1089 = 3136. Donc b = 56.", en: "b² = 4225 - 1089 = 3136. So b = 56.", nl: "b² = 4225 - 1089 = 3136. Dus b = 56." }
+  },
 ];
 
 export function generate(level = 1) {

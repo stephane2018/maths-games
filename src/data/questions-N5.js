@@ -693,6 +693,42 @@ export const questions = [
     answer: 11.8, tolerance: 0.01,
     hint: { fr: "D'abord 36,4 ÷ 5,2 = 7, puis + 4,8 = 11,8.", en: "First 36.4 ÷ 5.2 = 7, then + 4.8 = 11.8.", nl: "Eerst 36,4 ÷ 5,2 = 7, dan + 4,8 = 11,8." }
   },
+  {
+    id: "N5_s_112", category: "N5", level: 1,
+    text: { fr: "Calcule : 7,3 + 4,9", en: "Calculate: 7.3 + 4.9", nl: "Bereken: 7,3 + 4,9" },
+    answer: 12.2, tolerance: 0.01,
+    hint: { fr: "Additionne les dixièmes : 3 + 9 = 12, retiens 1. Puis 7 + 4 + 1 = 12.", en: "Add the tenths: 3 + 9 = 12, carry 1. Then 7 + 4 + 1 = 12.", nl: "Tel de tienden op: 3 + 9 = 12, onthoud 1. Dan 7 + 4 + 1 = 12." }
+  },
+  {
+    id: "N5_s_113", category: "N5", level: 1,
+    text: { fr: "Calcule : 15,6 - 8,9", en: "Calculate: 15.6 - 8.9", nl: "Bereken: 15,6 - 8,9" },
+    answer: 6.7, tolerance: 0.01,
+    hint: { fr: "Aligne les virgules et soustrais : 15,6 - 8,9 = 6,7.", en: "Align the decimals and subtract: 15.6 - 8.9 = 6.7.", nl: "Lijn de komma's uit en trek af: 15,6 - 8,9 = 6,7." }
+  },
+  {
+    id: "N5_s_114", category: "N5", level: 2,
+    text: { fr: "Calcule : 3,6 × 4,5", en: "Calculate: 3.6 × 4.5", nl: "Bereken: 3,6 × 4,5" },
+    answer: 16.2, tolerance: 0.01,
+    hint: { fr: "36 × 45 = 1620, puis place 2 décimales : 16,20.", en: "36 × 45 = 1620, then place 2 decimals: 16.20.", nl: "36 × 45 = 1620, plaats dan 2 decimalen: 16,20." }
+  },
+  {
+    id: "N5_s_115", category: "N5", level: 2,
+    text: { fr: "Calcule : 18,6 ÷ 3,1", en: "Calculate: 18.6 ÷ 3.1", nl: "Bereken: 18,6 ÷ 3,1" },
+    answer: 6, tolerance: 0.01,
+    hint: { fr: "Multiplie les deux par 10 : 186 ÷ 31 = 6.", en: "Multiply both by 10: 186 ÷ 31 = 6.", nl: "Vermenigvuldig beide met 10: 186 ÷ 31 = 6." }
+  },
+  {
+    id: "N5_s_116", category: "N5", level: 3,
+    text: { fr: "Calcule : 4,8 × 2,5 + 3,2", en: "Calculate: 4.8 × 2.5 + 3.2", nl: "Bereken: 4,8 × 2,5 + 3,2" },
+    answer: 15.2, tolerance: 0.01,
+    hint: { fr: "D'abord 4,8 × 2,5 = 12, puis + 3,2 = 15,2.", en: "First 4.8 × 2.5 = 12, then + 3.2 = 15.2.", nl: "Eerst 4,8 × 2,5 = 12, dan + 3,2 = 15,2." }
+  },
+  {
+    id: "N5_s_117", category: "N5", level: 3,
+    text: { fr: "Calcule : 22,4 ÷ 3,2 - 1,5", en: "Calculate: 22.4 ÷ 3.2 - 1.5", nl: "Bereken: 22,4 ÷ 3,2 - 1,5" },
+    answer: 5.5, tolerance: 0.01,
+    hint: { fr: "D'abord 22,4 ÷ 3,2 = 7, puis - 1,5 = 5,5.", en: "First 22.4 ÷ 3.2 = 7, then - 1.5 = 5.5.", nl: "Eerst 22,4 ÷ 3,2 = 7, dan - 1,5 = 5,5." }
+  },
 ];
 
 export function generate(level = 1) {

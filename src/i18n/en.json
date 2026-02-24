@@ -38,8 +38,7 @@
     "G2": "Angles",
     "M1": "Conversions",
     "D1": "Tables",
-    "D2": "Statistics",
-    "R1": "Problems"
+    "D2": "Statistics"
   },
   "game": {
     "blue": "Blue",
@@ -123,8 +122,7 @@
     "proportions": "Proportionality",
     "geometry": "Geometry",
     "measures": "Measurements",
-    "data": "Data & Charts",
-    "problems": "Reasoning"
+    "data": "Data & Charts"
   },
   "wizard": {
     "title": "PREPARE YOUR TEAMS",

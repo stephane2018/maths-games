@@ -681,6 +681,42 @@ export const questions = [
     answer: -59, tolerance: 0,
     hint: { fr: "(-2)⁵ = -32 et (-3)³ = -27. Donc -32 + (-27) = -59.", en: "(-2)⁵ = -32 and (-3)³ = -27. So -32 + (-27) = -59.", nl: "(-2)⁵ = -32 en (-3)³ = -27. Dus -32 + (-27) = -59." }
   },
+  {
+    id: "N6_s_112", category: "N6", level: 1,
+    text: { fr: "Calcule : 7²", en: "Calculate: 7²", nl: "Bereken: 7²" },
+    answer: 49, tolerance: 0,
+    hint: { fr: "7² = 7 × 7 = 49.", en: "7² = 7 × 7 = 49.", nl: "7² = 7 × 7 = 49." }
+  },
+  {
+    id: "N6_s_113", category: "N6", level: 1,
+    text: { fr: "Calcule : 4³", en: "Calculate: 4³", nl: "Bereken: 4³" },
+    answer: 64, tolerance: 0,
+    hint: { fr: "4³ = 4 × 4 × 4 = 64.", en: "4³ = 4 × 4 × 4 = 64.", nl: "4³ = 4 × 4 × 4 = 64." }
+  },
+  {
+    id: "N6_s_114", category: "N6", level: 2,
+    text: { fr: "Calcule : 3² + 4²", en: "Calculate: 3² + 4²", nl: "Bereken: 3² + 4²" },
+    answer: 25, tolerance: 0,
+    hint: { fr: "3² = 9 et 4² = 16. Donc 9 + 16 = 25.", en: "3² = 9 and 4² = 16. So 9 + 16 = 25.", nl: "3² = 9 en 4² = 16. Dus 9 + 16 = 25." }
+  },
+  {
+    id: "N6_s_115", category: "N6", level: 2,
+    text: { fr: "Calcule : 2⁵ - 3²", en: "Calculate: 2⁵ - 3²", nl: "Bereken: 2⁵ - 3²" },
+    answer: 23, tolerance: 0,
+    hint: { fr: "2⁵ = 32 et 3² = 9. Donc 32 - 9 = 23.", en: "2⁵ = 32 and 3² = 9. So 32 - 9 = 23.", nl: "2⁵ = 32 en 3² = 9. Dus 32 - 9 = 23." }
+  },
+  {
+    id: "N6_s_116", category: "N6", level: 3,
+    text: { fr: "Calcule : (-4)³ + 2⁶", en: "Calculate: (-4)³ + 2⁶", nl: "Bereken: (-4)³ + 2⁶" },
+    answer: 0, tolerance: 0,
+    hint: { fr: "(-4)³ = -64 et 2⁶ = 64. Donc -64 + 64 = 0.", en: "(-4)³ = -64 and 2⁶ = 64. So -64 + 64 = 0.", nl: "(-4)³ = -64 en 2⁶ = 64. Dus -64 + 64 = 0." }
+  },
+  {
+    id: "N6_s_117", category: "N6", level: 3,
+    text: { fr: "Calcule : (2³)² - (-5)²", en: "Calculate: (2³)² - (-5)²", nl: "Bereken: (2³)² - (-5)²" },
+    answer: 39, tolerance: 0,
+    hint: { fr: "2³ = 8, puis 8² = 64. (-5)² = 25. Donc 64 - 25 = 39.", en: "2³ = 8, then 8² = 64. (-5)² = 25. So 64 - 25 = 39.", nl: "2³ = 8, dan 8² = 64. (-5)² = 25. Dus 64 - 25 = 39." }
+  },
 ];
 
 export function generate(level = 1) {

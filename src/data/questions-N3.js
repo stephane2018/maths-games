@@ -696,6 +696,48 @@ export const questions = [
     answer: 39, tolerance: 0,
     hint: { fr: "Parenthèses intérieures, puis multiplication intérieure, puis puissance, puis division et soustraction.", en: "Inner parentheses, then inner multiplication, then power, then division and subtraction.", nl: "Binnenste haakjes, dan binnenste vermenigvuldiging, dan macht, dan deling en aftrekking." }
   },
+  {
+    id: "N3_s_112", category: "N3", level: 1,
+    text: { fr: "Calcule : 8 + 15 ÷ 3", en: "Calculate: 8 + 15 ÷ 3", nl: "Bereken: 8 + 15 ÷ 3" },
+    answer: 13, tolerance: 0,
+    hint: { fr: "Effectue d'abord la division, puis l'addition.", en: "Do the division first, then the addition.", nl: "Doe eerst de deling, dan de optelling." }
+  },
+  {
+    id: "N3_s_113", category: "N3", level: 1,
+    text: { fr: "Calcule : 5 × 6 - 18 ÷ 2", en: "Calculate: 5 × 6 - 18 ÷ 2", nl: "Bereken: 5 × 6 - 18 ÷ 2" },
+    answer: 21, tolerance: 0,
+    hint: { fr: "Effectue d'abord les multiplications et divisions, puis la soustraction.", en: "Do multiplications and divisions first, then the subtraction.", nl: "Doe eerst de vermenigvuldigingen en delingen, dan de aftrekking." }
+  },
+  {
+    id: "N3_s_114", category: "N3", level: 1,
+    text: { fr: "Calcule : 40 - 3 × 7 + 2", en: "Calculate: 40 - 3 × 7 + 2", nl: "Bereken: 40 - 3 × 7 + 2" },
+    answer: 21, tolerance: 0,
+    hint: { fr: "Multiplication d'abord : 3 × 7 = 21, puis 40 - 21 + 2.", en: "Multiplication first: 3 × 7 = 21, then 40 - 21 + 2.", nl: "Vermenigvuldiging eerst: 3 × 7 = 21, dan 40 - 21 + 2." }
+  },
+  {
+    id: "N3_s_115", category: "N3", level: 2,
+    text: { fr: "Calcule : (12 - 4) × (3 + 2)", en: "Calculate: (12 - 4) × (3 + 2)", nl: "Bereken: (12 - 4) × (3 + 2)" },
+    answer: 40, tolerance: 0,
+    hint: { fr: "Calcule chaque parenthèse d'abord : 8 × 5.", en: "Calculate each parenthesis first: 8 × 5.", nl: "Bereken elke haakje eerst: 8 × 5." }
+  },
+  {
+    id: "N3_s_116", category: "N3", level: 2,
+    text: { fr: "Calcule : 3 × (14 - 6) + 4²", en: "Calculate: 3 × (14 - 6) + 4²", nl: "Bereken: 3 × (14 - 6) + 4²" },
+    answer: 40, tolerance: 0,
+    hint: { fr: "Parenthèse : 14 - 6 = 8, puissance : 4² = 16, puis 3 × 8 + 16.", en: "Parenthesis: 14 - 6 = 8, power: 4² = 16, then 3 × 8 + 16.", nl: "Haakje: 14 - 6 = 8, macht: 4² = 16, dan 3 × 8 + 16." }
+  },
+  {
+    id: "N3_s_117", category: "N3", level: 3,
+    text: { fr: "Calcule : (2³ + 4) × 3 - 6²", en: "Calculate: (2³ + 4) × 3 - 6²", nl: "Bereken: (2³ + 4) × 3 - 6²" },
+    answer: 0, tolerance: 0,
+    hint: { fr: "2³ = 8, donc (8 + 4) = 12, puis 12 × 3 = 36, et 6² = 36. Donc 36 - 36 = 0.", en: "2³ = 8, so (8 + 4) = 12, then 12 × 3 = 36, and 6² = 36. So 36 - 36 = 0.", nl: "2³ = 8, dus (8 + 4) = 12, dan 12 × 3 = 36, en 6² = 36. Dus 36 - 36 = 0." }
+  },
+  {
+    id: "N3_s_118", category: "N3", level: 3,
+    text: { fr: "Calcule : 5² × 2 - (7 + 3)² ÷ 5", en: "Calculate: 5² × 2 - (7 + 3)² ÷ 5", nl: "Bereken: 5² × 2 - (7 + 3)² ÷ 5" },
+    answer: 30, tolerance: 0,
+    hint: { fr: "5² = 25, (7 + 3) = 10, 10² = 100. Puis 25 × 2 - 100 ÷ 5 = 50 - 20 = 30.", en: "5² = 25, (7 + 3) = 10, 10² = 100. Then 25 × 2 - 100 ÷ 5 = 50 - 20 = 30.", nl: "5² = 25, (7 + 3) = 10, 10² = 100. Dan 25 × 2 - 100 ÷ 5 = 50 - 20 = 30." }
+  },
 ];
 
 export function generate(level = 1) {

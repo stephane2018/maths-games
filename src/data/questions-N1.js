@@ -1266,7 +1266,84 @@ export const questions = [
       en: "(-2)⁴ = 16 (even exponent = positive) and (-3)³ = -27. Subtracting -27 is the same as adding 27.",
       nl: "(-2)⁴ = 16 (even exponent = positief) en (-3)³ = -27. -27 aftrekken is hetzelfde als 27 optellen."
     }
-  }
+  },
+  {
+    id: "N1_s_113", category: "N1", level: 1,
+    text: { fr: "Calcule : 36 ÷ 4 + 7 × 2", en: "Calculate: 36 ÷ 4 + 7 × 2", nl: "Bereken: 36 ÷ 4 + 7 × 2" },
+    // 9 + 14 = 23
+    answer: 23, tolerance: 0,
+    hint: {
+      fr: "Effectue d'abord les multiplications et divisions, puis l'addition.",
+      en: "Do the multiplications and divisions first, then the addition.",
+      nl: "Doe eerst de vermenigvuldigingen en delingen, dan de optelling."
+    }
+  },
+  {
+    id: "N1_s_114", category: "N1", level: 1,
+    text: { fr: "Calcule : 50 - 6 × 5 + 8", en: "Calculate: 50 - 6 × 5 + 8", nl: "Bereken: 50 - 6 × 5 + 8" },
+    // 50 - 30 + 8 = 28
+    answer: 28, tolerance: 0,
+    hint: {
+      fr: "Effectue d'abord la multiplication, puis les additions et soustractions de gauche à droite.",
+      en: "Do the multiplication first, then additions and subtractions left to right.",
+      nl: "Doe eerst de vermenigvuldiging, dan optellingen en aftrekkingen van links naar rechts."
+    }
+  },
+  {
+    id: "N1_s_115", category: "N1", level: 1,
+    text: { fr: "Calcule : 4 × 9 - 12 ÷ 3", en: "Calculate: 4 × 9 - 12 ÷ 3", nl: "Bereken: 4 × 9 - 12 ÷ 3" },
+    // 36 - 4 = 32
+    answer: 32, tolerance: 0,
+    hint: {
+      fr: "Effectue les multiplications et divisions d'abord, puis la soustraction.",
+      en: "Do the multiplications and divisions first, then the subtraction.",
+      nl: "Doe eerst de vermenigvuldigingen en delingen, dan de aftrekking."
+    }
+  },
+  {
+    id: "N1_s_116", category: "N1", level: 2,
+    text: { fr: "Calcule : (15 + 3) × 4 - 2²", en: "Calculate: (15 + 3) × 4 - 2²", nl: "Bereken: (15 + 3) × 4 - 2²" },
+    // 18 × 4 - 4 = 72 - 4 = 68
+    answer: 68, tolerance: 0,
+    hint: {
+      fr: "Parenthèse d'abord, puis la puissance, puis la multiplication, puis la soustraction.",
+      en: "Parentheses first, then the power, then multiplication, then subtraction.",
+      nl: "Haakjes eerst, dan de macht, dan vermenigvuldiging, dan aftrekking."
+    }
+  },
+  {
+    id: "N1_s_117", category: "N1", level: 2,
+    text: { fr: "Calcule : 3² × 5 - (40 ÷ 8)", en: "Calculate: 3² × 5 - (40 ÷ 8)", nl: "Bereken: 3² × 5 - (40 ÷ 8)" },
+    // 9 × 5 - 5 = 45 - 5 = 40
+    answer: 40, tolerance: 0,
+    hint: {
+      fr: "Calcule la puissance et la parenthèse, puis la multiplication, puis la soustraction.",
+      en: "Calculate the power and the parenthesis, then multiply, then subtract.",
+      nl: "Bereken de macht en de haakjes, dan vermenigvuldigen, dan aftrekken."
+    }
+  },
+  {
+    id: "N1_s_118", category: "N1", level: 3,
+    text: { fr: "Calcule : (-3)³ + 4 × 5²", en: "Calculate: (-3)³ + 4 × 5²", nl: "Bereken: (-3)³ + 4 × 5²" },
+    // -27 + 4 × 25 = -27 + 100 = 73
+    answer: 73, tolerance: 0,
+    hint: {
+      fr: "(-3)³ = -27 et 5² = 25. Effectue la multiplication, puis l'addition.",
+      en: "(-3)³ = -27 and 5² = 25. Do the multiplication, then the addition.",
+      nl: "(-3)³ = -27 en 5² = 25. Doe de vermenigvuldiging, dan de optelling."
+    }
+  },
+  {
+    id: "N1_s_119", category: "N1", level: 3,
+    text: { fr: "Calcule : 2 × (-4)² + 3 × (-2)³", en: "Calculate: 2 × (-4)² + 3 × (-2)³", nl: "Bereken: 2 × (-4)² + 3 × (-2)³" },
+    // 2 × 16 + 3 × (-8) = 32 - 24 = 8
+    answer: 8, tolerance: 0,
+    hint: {
+      fr: "(-4)² = 16 et (-2)³ = -8. Effectue les multiplications, puis l'addition.",
+      en: "(-4)² = 16 and (-2)³ = -8. Do the multiplications, then the addition.",
+      nl: "(-4)² = 16 en (-2)³ = -8. Doe de vermenigvuldigingen, dan de optelling."
+    }
+  },
 ];
 
 /**
