@@ -61,7 +61,7 @@ export default function AboutScreen() {
                 Messenger
               </a>
               <a 
-                href="tel:+32123456789" 
+                href="tel:+32488434262" 
                 className="contact-link phone"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
