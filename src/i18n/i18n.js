@@ -14,6 +14,7 @@ export function setLang(lang) {
   if (translations[lang]) {
     currentLang = lang;
     localStorage.setItem('math-tow-lang', lang);
+    document.documentElement.lang = lang;
     notifyListeners();
     updateDOM();
   }
@@ -85,4 +86,5 @@ export function initLang() {
       currentLang = browserLang;
     }
   }
+  document.documentElement.lang = currentLang;
 }

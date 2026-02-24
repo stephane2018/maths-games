@@ -5,7 +5,7 @@ import { useNavigation } from '../contexts/NavigationContext.jsx';
 export default function AboutScreen() {
   const { t } = useI18n();
   const sound = useSound();
-  const { pop } = useNavigation();
+  const { pop, push } = useNavigation();
 
   return (
     <div className="screen">
@@ -84,6 +84,29 @@ export default function AboutScreen() {
           </div>
 
           <p className="about-description">{t('about.description')}</p>
+        </div>
+
+        {/* Section Informations légales */}
+        <div className="about-card card">
+          <h2 className="title" style={{ marginBottom: '24px', fontSize: '1.5rem' }}>{t('legal.title')}</h2>
+
+          <div className="about-list">
+            <AboutItem label={t('legal.responsible')} value="Léopold Minko" />
+            <AboutItem label={t('legal.contact')} value="Instagram / Messenger" />
+            <AboutItem label={t('legal.hosting')} value={t('legal.hostingValue')} />
+          </div>
+
+          <div style={{ marginTop: '16px' }}>
+            <div style={{ fontWeight: 700, marginBottom: '8px' }}>{t('legal.gdpr')}</div>
+            <p className="about-description" style={{ marginBottom: '12px' }}>{t('legal.gdprText')}</p>
+            <button
+              className="btn btn-outline"
+              style={{ width: '100%' }}
+              onClick={() => { sound.buttonClick(); push('Settings'); }}
+            >
+              {t('legal.deleteLink')}
+            </button>
+          </div>
         </div>
       </div>
     </div>

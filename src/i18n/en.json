@@ -110,7 +110,10 @@
     "difficulty": "AI difficulty",
     "easy": "Easy",
     "medium": "Medium",
-    "hard": "Hard"
+    "hard": "Hard",
+    "deleteAll": "Delete all my data",
+    "deleteConfirm": "All your data (profile, leaderboard, preferences) will be permanently deleted. Continue?",
+    "deleteSuccess": "Data deleted"
   },
   "difficulty": {
     "easy": "Easy",
@@ -164,6 +167,22 @@
     "version": "Version",
     "versionValue": "1.0",
     "description": "A math remediation tool for the Belgian CE1D exam."
+  },
+  "consent": {
+    "text": "This app stores your progress only on your device (localStorage). No data is sent to any server.",
+    "accept": "Accept",
+    "schoolMode": "School mode",
+    "schoolModeDesc": "No data will be saved"
+  },
+  "legal": {
+    "title": "Legal information",
+    "responsible": "Responsible",
+    "contact": "Contact",
+    "hosting": "Hosting",
+    "hostingValue": "Vercel Inc.",
+    "gdpr": "Data protection",
+    "gdprText": "This app stores your data only on your device (localStorage). No data is sent to any server. You can delete your data at any time in Settings.",
+    "deleteLink": "Delete my data"
   },
   "leaderboard": {
     "title": "Leaderboard",

@@ -4,6 +4,7 @@ import { useSound } from '../contexts/SoundContext.jsx';
 import { useStorage } from '../contexts/StorageContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { getRoundTime, setRoundTime, ROUND_TIME_OPTIONS } from '../engine/GameConfig.js';
+import ConfirmDialog from '../components/ConfirmDialog.jsx';
 
 function Toggle({ label, description, isActive, onChange }) {
   const [active, setActive] = useState(isActive);
@@ -34,6 +35,8 @@ export default function SettingsScreen() {
   const [currentDifficulty, setCurrentDifficulty] = useState(
     localStorage.getItem('math-tow-difficulty') || 'medium'
   );
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
 
   return (
     <div className="screen">
@@ -129,8 +132,39 @@ export default function SettingsScreen() {
               ))}
             </div>
           </div>
+
+          <div style={{ width: '100%', borderTop: '1px solid var(--border)', paddingTop: '20px', marginTop: '4px' }}>
+            <button
+              className="btn btn-red"
+              style={{ width: '100%' }}
+              onClick={() => { sound.buttonClick(); setShowDeleteConfirm(true); }}
+            >
+              {t('settings.deleteAll')}
+            </button>
+            {deleteSuccess && (
+              <div style={{ textAlign: 'center', color: 'var(--green)', fontWeight: 700, marginTop: '8px' }}>
+                {t('settings.deleteSuccess')}
+              </div>
+            )}
+          </div>
         </div>
       </div>
+
+      <ConfirmDialog
+        open={showDeleteConfirm}
+        message={t('settings.deleteConfirm')}
+        confirmText={t('game.yes')}
+        cancelText={t('game.no')}
+        onConfirm={() => {
+          storage.clearAll();
+          setShowDeleteConfirm(false);
+          setDeleteSuccess(true);
+          setCurrentDifficulty('medium');
+          setCurrentRoundTime(getRoundTime());
+          setTimeout(() => setDeleteSuccess(false), 3000);
+        }}
+        onCancel={() => setShowDeleteConfirm(false)}
+      />
     </div>
   );
 }

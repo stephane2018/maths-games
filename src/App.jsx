@@ -4,6 +4,7 @@ import { SoundProvider, useSound } from './contexts/SoundContext.jsx';
 import { StorageProvider } from './contexts/StorageContext.jsx';
 import { NavigationProvider } from './contexts/NavigationContext.jsx';
 import ModalContainer from './components/ModalContainer.jsx';
+import ConsentBanner from './components/ConsentBanner.jsx';
 
 function AppContent() {
   const { t } = useI18n();
@@ -37,6 +38,7 @@ function AppContent() {
   return (
     <>
       <ModalContainer />
+      <ConsentBanner />
       <footer className="app-footer">&copy; 2026 Mathlaclasse by Léopold Minko</footer>
     </>
   );

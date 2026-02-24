@@ -110,7 +110,10 @@
     "difficulty": "AI moeilijkheid",
     "easy": "Makkelijk",
     "medium": "Normaal",
-    "hard": "Moeilijk"
+    "hard": "Moeilijk",
+    "deleteAll": "Al mijn gegevens verwijderen",
+    "deleteConfirm": "Al je gegevens (profiel, klassement, voorkeuren) worden definitief verwijderd. Doorgaan?",
+    "deleteSuccess": "Gegevens verwijderd"
   },
   "difficulty": {
     "easy": "Makkelijk",
@@ -164,6 +167,22 @@
     "version": "Versie",
     "versionValue": "1.0",
     "description": "Een wiskundige remediëring tool voor het Belgische CE1D-examen."
+  },
+  "consent": {
+    "text": "Deze app slaat je voortgang alleen op je apparaat op (localStorage). Er worden geen gegevens naar een server gestuurd.",
+    "accept": "Accepteren",
+    "schoolMode": "Schoolmodus",
+    "schoolModeDesc": "Er worden geen gegevens opgeslagen"
+  },
+  "legal": {
+    "title": "Juridische informatie",
+    "responsible": "Verantwoordelijke",
+    "contact": "Contact",
+    "hosting": "Hosting",
+    "hostingValue": "Vercel Inc.",
+    "gdpr": "Gegevensbescherming",
+    "gdprText": "Deze app slaat je gegevens alleen op je apparaat op (localStorage). Er worden geen gegevens naar een server gestuurd. Je kunt je gegevens op elk moment verwijderen in de Instellingen.",
+    "deleteLink": "Mijn gegevens verwijderen"
   },
   "leaderboard": {
     "title": "Klassement",

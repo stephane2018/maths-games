@@ -114,6 +114,13 @@ class StorageManager {
   resetLeaderboard() {
     localStorage.removeItem(LEADERBOARD_KEY);
   }
+
+  clearAll() {
+    this.resetProfile();
+    this.resetLeaderboard();
+    localStorage.removeItem('math-tow-difficulty');
+    localStorage.removeItem('math-tow-roundTime');
+  }
 }
 
 export const storage = new StorageManager();

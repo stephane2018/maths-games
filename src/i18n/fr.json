@@ -110,7 +110,10 @@
     "difficulty": "Difficulté IA",
     "easy": "Facile",
     "medium": "Normal",
-    "hard": "Difficile"
+    "hard": "Difficile",
+    "deleteAll": "Supprimer toutes mes données",
+    "deleteConfirm": "Toutes vos données (profil, classement, préférences) seront définitivement supprimées. Continuer ?",
+    "deleteSuccess": "Données supprimées"
   },
   "difficulty": {
     "easy": "Facile",
@@ -167,6 +170,22 @@
     "version": "Version",
     "versionValue": "1.0",
     "description": "Outil de remédiation mathématique pour le CE1D belge."
+  },
+  "consent": {
+    "text": "Cette application stocke vos progrès uniquement sur votre appareil (localStorage). Aucune donnée n'est envoyée à un serveur.",
+    "accept": "Accepter",
+    "schoolMode": "Mode école",
+    "schoolModeDesc": "Aucune donnée ne sera sauvegardée"
+  },
+  "legal": {
+    "title": "Informations légales",
+    "responsible": "Responsable",
+    "contact": "Contact",
+    "hosting": "Hébergement",
+    "hostingValue": "Vercel Inc.",
+    "gdpr": "Protection des données",
+    "gdprText": "Cette application stocke vos données uniquement sur votre appareil (localStorage). Aucune donnée n'est envoyée à un serveur. Vous pouvez supprimer vos données à tout moment dans les Paramètres.",
+    "deleteLink": "Supprimer mes données"
   },
   "leaderboard": {
     "title": "Classement",
