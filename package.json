@@ -1,7 +1,7 @@
 {
   "name": "maths-tug-of-war",
   "version": "1.0.0",
-  "description": "Jeu éducatif Tir à la Corde Mathématique - CE1D",
+  "description": "Jeu éducatif Tir à la Corde Mathématique - 2e secondaire",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,7 @@
     "education",
     "math",
     "game",
-    "CE1D"
+    "2e secondaire"
   ],
   "license": "MIT",
   "devDependencies": {

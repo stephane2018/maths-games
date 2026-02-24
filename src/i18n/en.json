@@ -1,9 +1,9 @@
 {
   "app": {
     "title": "Tug of War",
-    "subtitle": "Mathematics CE1D",
+    "subtitle": "Mathematics – Year 8",
     "brand": "Mathlaclasse by Léopold Minko",
-    "startupTitle": "CE1D — Tug of War",
+    "startupTitle": "Mathematics Year 8 — Tug of War",
     "startupDesc": "A remediation tool created by Léopold Minko -  Mathlaclasse"
   },
   "home": {
@@ -132,7 +132,7 @@
     "step1": "Themes",
     "step2": "Difficulty",
     "step3": "Teams",
-    "themesTitle": "CE1D Themes",
+    "themesTitle": "Maths themes",
     "themesDesc": "Select one or more themes",
     "operationsTitle": "Operations",
     "operationsDesc": "Select one or more operations",
@@ -160,13 +160,15 @@
     "title": "About",
     "creator": "Creator",
     "creatorName": "Léopold Minko",
+    "creatorTitle": "Mathematics Teacher & Creator of Mathlaclasse",
+    "creatorBio": "Passionate about teaching mathematics, I created this remediation tool to help students prepare for the end-of-year certification exam in a fun and interactive way.",
     "project": "Project",
     "projectName": "Mathlaclasse",
     "year": "Year",
     "yearValue": "2026",
     "version": "Version",
     "versionValue": "1.0",
-    "description": "A math remediation tool for the Belgian CE1D exam."
+    "description": "A math remediation tool for Year 8 students."
   },
   "consent": {
     "text": "This app stores your progress only on your device (localStorage). No data is sent to any server.",

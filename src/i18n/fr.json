@@ -1,9 +1,9 @@
 {
   "app": {
     "title": "Tir à la Corde",
-    "subtitle": "Mathématiques CE1D",
+    "subtitle": "Mathématiques 2e secondaire",
     "brand": "Mathlaclasse by Léopold Minko",
-    "startupTitle": "CE1D — Tir à la corde",
+    "startupTitle": "Mathématiques 2e secondaire — Tir à la corde",
     "startupDesc": "Un outil de remédiation créé par Léopold Minko - Mathlaclasse"
   },
   "home": {
@@ -132,7 +132,7 @@
     "step1": "Thèmes",
     "step2": "Difficulté",
     "step3": "Équipes",
-    "themesTitle": "Thèmes CE1D",
+    "themesTitle": "Thèmes mathématiques",
     "themesDesc": "Sélectionnez un ou plusieurs thèmes",
     "operationsTitle": "Opérations",
     "operationsDesc": "Sélectionnez une ou plusieurs opérations",
@@ -161,7 +161,7 @@
     "creator": "Créateur",
     "creatorName": "Léopold Minko",
     "creatorTitle": "Professeur de Mathématiques & Créateur de Mathlaclasse",
-    "creatorBio": "Passionné par l'enseignement des mathématiques, j'ai créé cet outil de remédiation pour aider les élèves à se préparer au CE1D de manière ludique et interactive.",
+    "creatorBio": "Passionné par l'enseignement des mathématiques, j'ai créé cet outil de remédiation pour aider les élèves à se préparer à l'examen certificatif de fin d'année de manière ludique et interactive.",
     "phone": "Téléphone",
     "project": "Projet",
     "projectName": "Mathlaclasse",
@@ -169,7 +169,7 @@
     "yearValue": "2026",
     "version": "Version",
     "versionValue": "1.0",
-    "description": "Outil de remédiation mathématique pour le CE1D belge."
+    "description": "Outil de remédiation mathématique pour la 2e secondaire."
   },
   "consent": {
     "text": "Cette application stocke vos progrès uniquement sur votre appareil (localStorage). Aucune donnée n'est envoyée à un serveur.",

@@ -1,9 +1,9 @@
 {
   "app": {
     "title": "Touwtrekken",
-    "subtitle": "Wiskunde CE1D",
+    "subtitle": "Wiskunde 2e middelbaar",
     "brand": "Mathlaclasse by Léopold Minko",
-    "startupTitle": "CE1D — Touwtrekken",
+    "startupTitle": "Wiskunde 2e middelbaar — Touwtrekken",
     "startupDesc": "Een remediëringstool gemaakt door Léopold Minko - Mathlaclasse"
   },
   "home": {
@@ -132,7 +132,7 @@
     "step1": "Thema's",
     "step2": "Moeilijkheid",
     "step3": "Teams",
-    "themesTitle": "CE1D Thema's",
+    "themesTitle": "Wiskundethema's",
     "themesDesc": "Selecteer een of meer thema's",
     "operationsTitle": "Bewerkingen",
     "operationsDesc": "Selecteer een of meer bewerkingen",
@@ -160,13 +160,15 @@
     "title": "Over",
     "creator": "Maker",
     "creatorName": "Léopold Minko",
+    "creatorTitle": "Wiskundeleraar & Maker van Mathlaclasse",
+    "creatorBio": "Gepassioneerd door het onderwijzen van wiskunde heb ik deze remediëringstool gemaakt om leerlingen te helpen zich op een leuke en interactieve manier voor te bereiden op het certificeringsexamen aan het einde van het jaar.",
     "project": "Project",
     "projectName": "Mathlaclasse",
     "year": "Jaar",
     "yearValue": "2026",
     "version": "Versie",
     "versionValue": "1.0",
-    "description": "Een wiskundige remediëring tool voor het Belgische CE1D-examen."
+    "description": "Een wiskundige remediëring tool voor het 2e middelbaar."
   },
   "consent": {
     "text": "Deze app slaat je voortgang alleen op je apparaat op (localStorage). Er worden geen gegevens naar een server gestuurd.",
