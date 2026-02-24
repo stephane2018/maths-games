@@ -134,12 +134,16 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     return renderMathParts(text);
   };
 
-  // Render fraction notation (e.g. 3/4) as vertical stacked display
+  // Render fraction notation as vertical stacked display
+  // Matches: 3/4, 15/20, x/35, 80/6, etc.
+  const fractionRegex = /([a-zA-Z\d]+\/\d+)/;
+  const fractionMatchRegex = /^([a-zA-Z\d]+)\/(\d+)$/;
+
   const renderMathParts = (text) => {
-    const parts = text.split(/(\d+\/\d+)/);
+    const parts = text.split(fractionRegex);
     if (parts.length === 1) return text;
     return parts.map((part, i) => {
-      const match = part.match(/^(\d+)\/(\d+)$/);
+      const match = part.match(fractionMatchRegex);
       if (match) {
         return (
           <span key={i} className="fraction">
