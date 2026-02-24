@@ -484,12 +484,12 @@
   padding: 14px 16px;
   font-size: 1.3rem;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   min-height: 60px;
   max-height: 140px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   transition: all var(--speed) var(--ease);
   flex-shrink: 0;
@@ -515,6 +515,14 @@
   background: #FEF2F2;
   color: #991B1B;
   border: 2px solid #FECACA;
+}
+
+/* Math expressions on their own line, never broken (dyslexia-friendly) */
+.math-expr {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
 }
 
 /* Vertical fraction display */

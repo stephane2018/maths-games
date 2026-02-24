@@ -117,8 +117,25 @@ const QuestionPanel = forwardRef(function QuestionPanel({
 
   const questionText = getQuestionText(currentQuestion);
 
-  // Render fractions as vertical stacked display
+  // Render fractions as vertical stacked display and keep math expressions on one line
   const renderMathText = (text) => {
+    // Split "Résous : 3x = 27" into label + math expression
+    const colonIdx = text.indexOf(' : ');
+    if (colonIdx !== -1) {
+      const label = text.slice(0, colonIdx + 3);
+      const expr = text.slice(colonIdx + 3);
+      return (
+        <>
+          {label}
+          <span className="math-expr">{renderMathParts(expr)}</span>
+        </>
+      );
+    }
+    return renderMathParts(text);
+  };
+
+  // Render fraction notation (e.g. 3/4) as vertical stacked display
+  const renderMathParts = (text) => {
     const parts = text.split(/(\d+\/\d+)/);
     if (parts.length === 1) return text;
     return parts.map((part, i) => {
