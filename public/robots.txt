@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://mathlaclasse.netlify.app/sitemap.xml
+Sitemap: https://mathlaclasse.vercel.app/sitemap.xml
 
 # Crawl-delay pour éviter la surcharge
 Crawl-delay: 1
