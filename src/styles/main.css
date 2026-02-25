@@ -223,6 +223,16 @@ body {
   color: var(--blue);
 }
 
+.consent-banner .btn-outline {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.consent-banner .btn-outline:hover {
+  border-color: white;
+  color: white;
+}
+
 .btn-lg {
   min-height: 64px;
   padding: 16px 40px;
