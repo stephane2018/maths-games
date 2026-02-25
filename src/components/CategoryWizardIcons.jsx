@@ -11,14 +11,11 @@ export function NumbersIcon({ color }) {
   );
 }
 
-export function ProportionsIcon({ color }) {
+export function PowersIcon({ color }) {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      <line x1="8" y1="40" x2="24" y2="8" stroke={color} strokeWidth="3" strokeLinecap="round" />
-      <line x1="24" y1="8" x2="40" y2="40" stroke={color} strokeWidth="3" strokeLinecap="round" />
-      <line x1="14" y1="28" x2="34" y2="28" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="14" cy="28" r="3" fill={color} />
-      <circle cx="34" cy="28" r="3" fill={color} />
+      <text x="14" y="36" fill={color} fontSize="28" fontWeight="bold" fontFamily="system-ui">x</text>
+      <text x="34" y="18" fill={color} fontSize="16" fontWeight="bold" fontFamily="system-ui">n</text>
     </svg>
   );
 }
@@ -67,7 +64,7 @@ export function ProblemsIcon({ color }) {
 
 export const THEME_ICONS = {
   numbers: NumbersIcon,
-  proportions: ProportionsIcon,
+  powers: PowersIcon,
   geometry: GeometryIcon,
   measures: MeasuresIcon,
   data: DataIcon,

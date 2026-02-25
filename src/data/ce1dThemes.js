@@ -36,13 +36,13 @@ export const CE1D_THEMES = [
     ]
   },
   {
-    id: 'proportions',
-    icon: '⚖️',
-    name: { fr: 'Proportionnalité', en: 'Proportionality', nl: 'Evenredigheid' },
-    categories: ['P1'],
+    id: 'powers',
+    icon: '⚡',
+    name: { fr: 'Puissances', en: 'Powers', nl: 'Machten' },
+    categories: ['N3'],
     color: '#10B981',
     subcategories: [
-      { code: 'P1', name: { fr: 'Grandeurs proportionnelles', en: 'Proportional quantities', nl: 'Evenredige grootheden' } }
+      { code: 'N3', name: { fr: 'Puissances', en: 'Powers', nl: 'Machten' } }
     ]
   },
   {
