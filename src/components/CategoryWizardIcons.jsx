@@ -66,8 +66,6 @@ export const THEME_ICONS = {
   numbers: NumbersIcon,
   powers: PowersIcon,
   geometry: GeometryIcon,
-  measures: MeasuresIcon,
-  data: DataIcon,
   problems: ProblemsIcon,
 };
 

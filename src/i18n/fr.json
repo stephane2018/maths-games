@@ -123,9 +123,7 @@
   "themes": {
     "numbers": "Nombres & Opérations",
     "powers": "Puissances",
-    "geometry": "Géométrie",
-    "measures": "Grandeurs",
-    "data": "Données"
+    "geometry": "Géométrie"
   },
   "wizard": {
     "title": "PRÉPAREZ VOS ÉQUIPES",

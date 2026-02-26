@@ -30,6 +30,14 @@ export function NavigationProvider({ children }) {
     setSharedState({});
   }, []);
 
+  const goTo = useCallback((targetScreen) => {
+    setModalStack(prev => {
+      const idx = prev.findLastIndex(entry => entry.screen === targetScreen);
+      if (idx >= 0) return prev.slice(0, idx + 1);
+      return prev; // fallback: stay where we are
+    });
+  }, []);
+
   const updateSharedState = useCallback((data) => {
     setSharedState(prev => ({ ...prev, ...data }));
   }, []);
@@ -42,6 +50,7 @@ export function NavigationProvider({ children }) {
       push,
       pop,
       goHome,
+      goTo,
       sharedState,
       updateSharedState,
       currentView,

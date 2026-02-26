@@ -10,11 +10,12 @@ import { STATES } from '../engine/MatchState.js';
 import QuestionPanel from '../components/QuestionPanel.jsx';
 import RopeScene from '../components/RopeScene.jsx';
 import ConfirmDialog from '../components/ConfirmDialog.jsx';
+import { getSubcategoryByCode } from '../data/ce1dThemes.js';
 
 export default function GameScreen() {
   const { t, lang, setLang } = useI18n();
   const sound = useSound();
-  const { push, goHome, sharedState } = useNavigation();
+  const { push, goHome, goTo, sharedState, modalStack } = useNavigation();
 
   const params = sharedState || {};
   const mode = params.mode || 'solo';
@@ -26,6 +27,19 @@ export default function GameScreen() {
   const numRounds = params.numRounds || CONFIG.NUM_ROUNDS;
   const roundTime = params.timePerQuestion !== undefined ? params.timePerQuestion : getRoundTime();
   const startLevel = difficulty === 'hard' ? 3 : difficulty === 'medium' ? 2 : 1;
+
+  // Derive chapter title from categories
+  const chapterTitle = (() => {
+    if (categories.length === 1) {
+      const sub = getSubcategoryByCode(categories[0]);
+      return sub?.name[lang] || t('game.title');
+    }
+    if (categories.length <= 3) {
+      const names = categories.map(c => getSubcategoryByCode(c)?.name[lang]).filter(Boolean);
+      if (names.length > 0) return names.join(' + ');
+    }
+    return t('game.title');
+  })();
 
   // Calculer le nombre de hints disponibles selon le temps choisi
   const getMaxHints = (time) => {
@@ -134,6 +148,8 @@ export default function GameScreen() {
       setRedDisabled(true);
       aiRef.current.simulateAnswer(q).then((aiResult) => {
         if (match.state !== STATES.PLAYING) return;
+        // Show AI's answer on red numpad display
+        redPanelRef.current?.showAiAnswer(aiResult.correct ? q.answer : aiResult.answer);
         if (aiResult.correct) {
           handleAnswer('red', String(q.answer), q, aiResult.delay / 1000);
         } else {
@@ -381,7 +397,7 @@ export default function GameScreen() {
           />
         </div>
         <div className="top-bar-center">
-          <h1 className="game-title">{t('game.title')}</h1>
+          <h1 className="game-title">{chapterTitle}</h1>
         </div>
         <div className="top-bar-right">
           <select className="lang-selector" value={lang} onChange={handleLangChange}>
@@ -469,7 +485,12 @@ export default function GameScreen() {
           sound.stopBgMusic();
           match.destroy();
           if (aiRef.current) aiRef.current.destroy();
-          goHome();
+          const hasCategoryInStack = modalStack.some(entry => entry.screen === 'Category');
+          if (hasCategoryInStack) {
+            goTo('Category');
+          } else {
+            goHome();
+          }
         }}
         onCancel={() => setShowQuitConfirm(false)}
       />

@@ -29,10 +29,7 @@ export const BLUE_SUBCATS = [
   { code: 'N2', name: 'Opérations', icon: '➕', color: '#3B82F6' },
   { code: 'N3', name: 'Priorités', icon: '🎯', color: '#3B82F6' },
   { code: 'N4', name: 'Équations', icon: '⚖️', color: '#3B82F6' },
-  { code: 'N5', name: 'Décimaux', icon: '📊', color: '#3B82F6' },
   { code: 'N6', name: 'Puissances', icon: '⚡', color: '#3B82F6' },
-  { code: 'D2', name: 'Statistiques', icon: '📈', color: '#3B82F6' },
-  { code: 'M1', name: 'Conversions', icon: '📏', color: '#3B82F6' },
 ];
 
 export const RED_SUBCATS = [
@@ -41,10 +38,8 @@ export const RED_SUBCATS = [
   { code: 'G3', name: 'Volumes', icon: '📦', color: '#EF4444' },
   { code: 'G4', name: 'Angles', icon: '📐', color: '#EF4444' },
   { code: 'G5', name: 'Triangles', icon: '🔺', color: '#EF4444' },
-  { code: 'G6', name: 'Cercles', icon: '⭕', color: '#EF4444' },
   { code: 'G7', name: 'Solides', icon: '🎲', color: '#EF4444' },
   { code: 'P1', name: 'Proportions', icon: '⚖️', color: '#EF4444' },
-  { code: 'D1', name: 'Tableaux', icon: '📊', color: '#EF4444' },
 ];
 
 // Toutes les sous-catégories jouables

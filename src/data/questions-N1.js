@@ -1344,6 +1344,433 @@ export const questions = [
       nl: "(-4)² = 16 en (-2)³ = -8. Doe de vermenigvuldigingen, dan de optelling."
     }
   },
+  // ===========================================================================
+  // CE1D EXAM QUESTIONS — Extracted from CE1D 2010-2022 corrected PDF
+  // Calcul numérique - Supplementary questions
+  // ===========================================================================
+
+  // --- Level 1: Division/multiplication chains (CE1D 2011, 2015) ---
+  {
+    id: "N1_ce_1", category: "N1", level: 1,
+    text: { fr: "Calcule : 24 : 3 . 2", en: "Calculate: 24 : 3 . 2", nl: "Bereken: 24 : 3 . 2" },
+    // 24 : 3 = 8, 8 . 2 = 16
+    answer: 16, tolerance: 0,
+    hint: {
+      fr: "Divisions et multiplications s'effectuent de gauche à droite : 24 : 3 = 8, puis 8 . 2.",
+      en: "Divisions and multiplications are done left to right: 24 : 3 = 8, then 8 . 2.",
+      nl: "Delingen en vermenigvuldigingen worden van links naar rechts uitgevoerd: 24 : 3 = 8, dan 8 . 2."
+    }
+  },
+  {
+    id: "N1_ce_2", category: "N1", level: 1,
+    text: { fr: "Calcule : 18 : 3 . 2", en: "Calculate: 18 : 3 . 2", nl: "Bereken: 18 : 3 . 2" },
+    // 18 : 3 = 6, 6 . 2 = 12
+    answer: 12, tolerance: 0,
+    hint: {
+      fr: "De gauche à droite : 18 : 3 = 6, puis 6 . 2 = 12.",
+      en: "Left to right: 18 : 3 = 6, then 6 . 2 = 12.",
+      nl: "Van links naar rechts: 18 : 3 = 6, dan 6 . 2 = 12."
+    }
+  },
+  {
+    id: "N1_ce_3", category: "N1", level: 1,
+    text: { fr: "Calcule : 24 : 2 . (3 - 1)", en: "Calculate: 24 : 2 . (3 - 1)", nl: "Bereken: 24 : 2 . (3 - 1)" },
+    // 24 : 2 . 2 = 12 . 2 = 24
+    answer: 24, tolerance: 0,
+    hint: {
+      fr: "Parenthèse d'abord : 3 - 1 = 2. Puis de gauche à droite : 24 : 2 = 12, et 12 . 2 = 24.",
+      en: "Parentheses first: 3 - 1 = 2. Then left to right: 24 : 2 = 12, and 12 . 2 = 24.",
+      nl: "Haakjes eerst: 3 - 1 = 2. Dan van links naar rechts: 24 : 2 = 12, en 12 . 2 = 24."
+    }
+  },
+  {
+    id: "N1_ce_4", category: "N1", level: 1,
+    text: { fr: "Calcule : 15 : 3 . 4", en: "Calculate: 15 : 3 . 4", nl: "Bereken: 15 : 3 . 4" },
+    // 5 . 4 = 20
+    answer: 20, tolerance: 0,
+    hint: {
+      fr: "De gauche à droite : 15 : 3 = 5, puis 5 . 4 = 20.",
+      en: "Left to right: 15 : 3 = 5, then 5 . 4 = 20.",
+      nl: "Van links naar rechts: 15 : 3 = 5, dan 5 . 4 = 20."
+    }
+  },
+
+  // --- Level 2: Powers with negatives, product of powers (CE1D 2016, 2018, 2021) ---
+  {
+    id: "N1_ce_5", category: "N1", level: 2,
+    text: { fr: "Calcule : (-3)² . (-2)³", en: "Calculate: (-3)² . (-2)³", nl: "Bereken: (-3)² . (-2)³" },
+    // 9 . (-8) = -72
+    answer: -72, tolerance: 0,
+    hint: {
+      fr: "(-3)² = 9 (carré = positif). (-2)³ = -8 (cube = négatif). Puis 9 . (-8) = -72.",
+      en: "(-3)² = 9 (square = positive). (-2)³ = -8 (cube = negative). Then 9 . (-8) = -72.",
+      nl: "(-3)² = 9 (kwadraat = positief). (-2)³ = -8 (derde macht = negatief). Dan 9 . (-8) = -72."
+    }
+  },
+  {
+    id: "N1_ce_6", category: "N1", level: 2,
+    text: { fr: "Calcule : 3 - 4² . (-1 + 6)", en: "Calculate: 3 - 4² . (-1 + 6)", nl: "Bereken: 3 - 4² . (-1 + 6)" },
+    // 3 - 16 . 5 = 3 - 80 = -77
+    answer: -77, tolerance: 0,
+    hint: {
+      fr: "Parenthèse : -1 + 6 = 5. Puissance : 4² = 16. Puis 3 - 16 . 5 = 3 - 80 = -77.",
+      en: "Parentheses: -1 + 6 = 5. Power: 4² = 16. Then 3 - 16 . 5 = 3 - 80 = -77.",
+      nl: "Haakjes: -1 + 6 = 5. Macht: 4² = 16. Dan 3 - 16 . 5 = 3 - 80 = -77."
+    }
+  },
+  {
+    id: "N1_ce_7", category: "N1", level: 2,
+    text: { fr: "Calcule : 40 + 3 . 5²", en: "Calculate: 40 + 3 . 5²", nl: "Bereken: 40 + 3 . 5²" },
+    // 40 + 3 . 25 = 40 + 75 = 115
+    answer: 115, tolerance: 0,
+    hint: {
+      fr: "Puissance d'abord : 5² = 25. Puis multiplication : 3 . 25 = 75. Enfin 40 + 75.",
+      en: "Power first: 5² = 25. Then multiplication: 3 . 25 = 75. Finally 40 + 75.",
+      nl: "Macht eerst: 5² = 25. Dan vermenigvuldiging: 3 . 25 = 75. Ten slotte 40 + 75."
+    }
+  },
+  {
+    id: "N1_ce_8", category: "N1", level: 2,
+    text: { fr: "Calcule : (2 - 5)³ + 1", en: "Calculate: (2 - 5)³ + 1", nl: "Bereken: (2 - 5)³ + 1" },
+    // (-3)³ + 1 = -27 + 1 = -26
+    answer: -26, tolerance: 0,
+    hint: {
+      fr: "2 - 5 = -3. Puis (-3)³ = -27. Enfin -27 + 1 = -26.",
+      en: "2 - 5 = -3. Then (-3)³ = -27. Finally -27 + 1 = -26.",
+      nl: "2 - 5 = -3. Dan (-3)³ = -27. Ten slotte -27 + 1 = -26."
+    }
+  },
+  {
+    id: "N1_ce_9", category: "N1", level: 2,
+    text: { fr: "Calcule : 15 : 3 . (-5)", en: "Calculate: 15 : 3 . (-5)", nl: "Bereken: 15 : 3 . (-5)" },
+    // 5 . (-5) = -25
+    answer: -25, tolerance: 0,
+    hint: {
+      fr: "De gauche à droite : 15 : 3 = 5. Puis 5 . (-5) = -25.",
+      en: "Left to right: 15 : 3 = 5. Then 5 . (-5) = -25.",
+      nl: "Van links naar rechts: 15 : 3 = 5. Dan 5 . (-5) = -25."
+    }
+  },
+  {
+    id: "N1_ce_10", category: "N1", level: 2,
+    text: { fr: "Calcule : -(-3)²", en: "Calculate: -(-3)²", nl: "Bereken: -(-3)²" },
+    // -(9) = -9
+    answer: -9, tolerance: 0,
+    hint: {
+      fr: "(-3)² = 9. Le signe « - » devant s'applique après : -(9) = -9.",
+      en: "(-3)² = 9. The minus sign in front applies after: -(9) = -9.",
+      nl: "(-3)² = 9. Het minteken ervoor wordt daarna toegepast: -(9) = -9."
+    }
+  },
+  {
+    id: "N1_ce_11", category: "N1", level: 2,
+    text: { fr: "Calcule : (-2)³ + (-2)²", en: "Calculate: (-2)³ + (-2)²", nl: "Bereken: (-2)³ + (-2)²" },
+    // -8 + 4 = -4
+    answer: -4, tolerance: 0,
+    hint: {
+      fr: "(-2)³ = -8 et (-2)² = 4. Puis -8 + 4 = -4.",
+      en: "(-2)³ = -8 and (-2)² = 4. Then -8 + 4 = -4.",
+      nl: "(-2)³ = -8 en (-2)² = 4. Dan -8 + 4 = -4."
+    }
+  },
+  {
+    id: "N1_ce_12", category: "N1", level: 2,
+    text: { fr: "Calcule : 24 : (-2) . (-3 + 9)", en: "Calculate: 24 : (-2) . (-3 + 9)", nl: "Bereken: 24 : (-2) . (-3 + 9)" },
+    // 24 : (-2) . 6 = -12 . 6 = -72
+    answer: -72, tolerance: 0,
+    hint: {
+      fr: "Parenthèse : -3 + 9 = 6. Puis 24 : (-2) = -12. Enfin -12 . 6 = -72.",
+      en: "Parentheses: -3 + 9 = 6. Then 24 : (-2) = -12. Finally -12 . 6 = -72.",
+      nl: "Haakjes: -3 + 9 = 6. Dan 24 : (-2) = -12. Ten slotte -12 . 6 = -72."
+    }
+  },
+  {
+    id: "N1_ce_13", category: "N1", level: 2,
+    text: { fr: "Calcule : (-3)³ - (-2)⁴", en: "Calculate: (-3)³ - (-2)⁴", nl: "Bereken: (-3)³ - (-2)⁴" },
+    // -27 - 16 = -43
+    answer: -43, tolerance: 0,
+    hint: {
+      fr: "(-3)³ = -27 et (-2)⁴ = 16 (exposant pair → positif). Puis -27 - 16 = -43.",
+      en: "(-3)³ = -27 and (-2)⁴ = 16 (even exponent → positive). Then -27 - 16 = -43.",
+      nl: "(-3)³ = -27 en (-2)⁴ = 16 (even exponent → positief). Dan -27 - 16 = -43."
+    }
+  },
+  {
+    id: "N1_ce_14", category: "N1", level: 2,
+    text: { fr: "Calcule : 36 - 6 . 2³", en: "Calculate: 36 - 6 . 2³", nl: "Bereken: 36 - 6 . 2³" },
+    // 36 - 6 . 8 = 36 - 48 = -12
+    answer: -12, tolerance: 0,
+    hint: {
+      fr: "2³ = 8. Puis 6 . 8 = 48. Enfin 36 - 48 = -12.",
+      en: "2³ = 8. Then 6 . 8 = 48. Finally 36 - 48 = -12.",
+      nl: "2³ = 8. Dan 6 . 8 = 48. Ten slotte 36 - 48 = -12."
+    }
+  },
+  {
+    id: "N1_ce_15", category: "N1", level: 2,
+    text: { fr: "Calcule : 7 . (5 - 8)² + 5", en: "Calculate: 7 . (5 - 8)² + 5", nl: "Bereken: 7 . (5 - 8)² + 5" },
+    // 7 . (-3)² + 5 = 7 . 9 + 5 = 63 + 5 = 68
+    answer: 68, tolerance: 0,
+    hint: {
+      fr: "5 - 8 = -3. Puis (-3)² = 9. Ensuite 7 . 9 = 63. Enfin 63 + 5 = 68.",
+      en: "5 - 8 = -3. Then (-3)² = 9. Then 7 . 9 = 63. Finally 63 + 5 = 68.",
+      nl: "5 - 8 = -3. Dan (-3)² = 9. Dan 7 . 9 = 63. Ten slotte 63 + 5 = 68."
+    }
+  },
+  {
+    id: "N1_ce_16", category: "N1", level: 2,
+    text: { fr: "Calcule : -3 + 4 . (-7)", en: "Calculate: -3 + 4 . (-7)", nl: "Bereken: -3 + 4 . (-7)" },
+    // -3 + (-28) = -31
+    answer: -31, tolerance: 0,
+    hint: {
+      fr: "Multiplication d'abord : 4 . (-7) = -28. Puis -3 + (-28) = -3 - 28 = -31.",
+      en: "Multiplication first: 4 . (-7) = -28. Then -3 + (-28) = -3 - 28 = -31.",
+      nl: "Vermenigvuldiging eerst: 4 . (-7) = -28. Dan -3 + (-28) = -3 - 28 = -31."
+    }
+  },
+  {
+    id: "N1_ce_17", category: "N1", level: 2,
+    text: { fr: "Calcule : 8 + (2 - 4)² . 3", en: "Calculate: 8 + (2 - 4)² . 3", nl: "Bereken: 8 + (2 - 4)² . 3" },
+    // 8 + (-2)² . 3 = 8 + 4 . 3 = 8 + 12 = 20
+    answer: 20, tolerance: 0,
+    hint: {
+      fr: "2 - 4 = -2. Puis (-2)² = 4. Ensuite 4 . 3 = 12. Enfin 8 + 12 = 20.",
+      en: "2 - 4 = -2. Then (-2)² = 4. Then 4 . 3 = 12. Finally 8 + 12 = 20.",
+      nl: "2 - 4 = -2. Dan (-2)² = 4. Dan 4 . 3 = 12. Ten slotte 8 + 12 = 20."
+    }
+  },
+
+  // --- Level 3: Variable substitution (CE1D 2012, 2014, 2016, 2017, 2018, 2019, 2021, 2022) ---
+  {
+    id: "N1_ce_18", category: "N1", level: 3,
+    text: { fr: "Si a = -2, b = 3 et c = -5. Calcule : a²b + c", en: "If a = -2, b = 3 and c = -5. Calculate: a²b + c", nl: "Als a = -2, b = 3 en c = -5. Bereken: a²b + c" },
+    // (-2)² . 3 + (-5) = 4 . 3 - 5 = 12 - 5 = 7
+    answer: 7, tolerance: 0,
+    hint: {
+      fr: "a² = (-2)² = 4. Puis a²b = 4 . 3 = 12. Enfin 12 + c = 12 + (-5) = 7.",
+      en: "a² = (-2)² = 4. Then a²b = 4 . 3 = 12. Finally 12 + c = 12 + (-5) = 7.",
+      nl: "a² = (-2)² = 4. Dan a²b = 4 . 3 = 12. Ten slotte 12 + c = 12 + (-5) = 7."
+    }
+  },
+  {
+    id: "N1_ce_19", category: "N1", level: 3,
+    text: { fr: "Si a = -2, b = 3 et c = -5. Calcule : (b - a)³ : c", en: "If a = -2, b = 3 and c = -5. Calculate: (b - a)³ : c", nl: "Als a = -2, b = 3 en c = -5. Bereken: (b - a)³ : c" },
+    // (3+2)³ / (-5) = 125 / (-5) = -25
+    answer: -25, tolerance: 0,
+    hint: {
+      fr: "b - a = 3 - (-2) = 5. Puis 5³ = 125. Enfin 125 : (-5) = -25.",
+      en: "b - a = 3 - (-2) = 5. Then 5³ = 125. Finally 125 : (-5) = -25.",
+      nl: "b - a = 3 - (-2) = 5. Dan 5³ = 125. Ten slotte 125 : (-5) = -25."
+    }
+  },
+  {
+    id: "N1_ce_20", category: "N1", level: 3,
+    text: { fr: "Si x = 4. Calcule : 2x² - 3x + 1", en: "If x = 4. Calculate: 2x² - 3x + 1", nl: "Als x = 4. Bereken: 2x² - 3x + 1" },
+    // 2 . 16 - 12 + 1 = 32 - 12 + 1 = 21
+    answer: 21, tolerance: 0,
+    hint: {
+      fr: "x² = 16. Puis 2 . 16 = 32, 3 . 4 = 12. Enfin 32 - 12 + 1 = 21.",
+      en: "x² = 16. Then 2 . 16 = 32, 3 . 4 = 12. Finally 32 - 12 + 1 = 21.",
+      nl: "x² = 16. Dan 2 . 16 = 32, 3 . 4 = 12. Ten slotte 32 - 12 + 1 = 21."
+    }
+  },
+  {
+    id: "N1_ce_21", category: "N1", level: 3,
+    text: { fr: "Si x = -1. Calcule : x³ + 2x² + x + 3", en: "If x = -1. Calculate: x³ + 2x² + x + 3", nl: "Als x = -1. Bereken: x³ + 2x² + x + 3" },
+    // (-1)³ + 2 . 1 + (-1) + 3 = -1 + 2 - 1 + 3 = 3
+    answer: 3, tolerance: 0,
+    hint: {
+      fr: "(-1)³ = -1, (-1)² = 1. Puis -1 + 2 . 1 + (-1) + 3 = -1 + 2 - 1 + 3 = 3.",
+      en: "(-1)³ = -1, (-1)² = 1. Then -1 + 2 . 1 + (-1) + 3 = -1 + 2 - 1 + 3 = 3.",
+      nl: "(-1)³ = -1, (-1)² = 1. Dan -1 + 2 . 1 + (-1) + 3 = -1 + 2 - 1 + 3 = 3."
+    }
+  },
+  {
+    id: "N1_ce_22", category: "N1", level: 3,
+    text: { fr: "Si a = -3, b = 2 et c = -1. Calcule : a² - c", en: "If a = -3, b = 2 and c = -1. Calculate: a² - c", nl: "Als a = -3, b = 2 en c = -1. Bereken: a² - c" },
+    // (-3)² - (-1) = 9 + 1 = 10
+    answer: 10, tolerance: 0,
+    hint: {
+      fr: "a² = (-3)² = 9. Puis 9 - c = 9 - (-1) = 9 + 1 = 10.",
+      en: "a² = (-3)² = 9. Then 9 - c = 9 - (-1) = 9 + 1 = 10.",
+      nl: "a² = (-3)² = 9. Dan 9 - c = 9 - (-1) = 9 + 1 = 10."
+    }
+  },
+  {
+    id: "N1_ce_23", category: "N1", level: 3,
+    text: { fr: "Si a = -3, b = 2 et c = -1. Calcule : 2b + ac", en: "If a = -3, b = 2 and c = -1. Calculate: 2b + ac", nl: "Als a = -3, b = 2 en c = -1. Bereken: 2b + ac" },
+    // 2 . 2 + (-3)(-1) = 4 + 3 = 7
+    answer: 7, tolerance: 0,
+    hint: {
+      fr: "2b = 2 . 2 = 4. ac = (-3) . (-1) = 3. Puis 4 + 3 = 7.",
+      en: "2b = 2 . 2 = 4. ac = (-3) . (-1) = 3. Then 4 + 3 = 7.",
+      nl: "2b = 2 . 2 = 4. ac = (-3) . (-1) = 3. Dan 4 + 3 = 7."
+    }
+  },
+  {
+    id: "N1_ce_24", category: "N1", level: 3,
+    text: { fr: "Si x = -1, y = 2 et z = -3. Calcule : 2x³", en: "If x = -1, y = 2 and z = -3. Calculate: 2x³", nl: "Als x = -1, y = 2 en z = -3. Bereken: 2x³" },
+    // 2 . (-1)³ = 2 . (-1) = -2
+    answer: -2, tolerance: 0,
+    hint: {
+      fr: "x³ = (-1)³ = -1. Puis 2 . (-1) = -2.",
+      en: "x³ = (-1)³ = -1. Then 2 . (-1) = -2.",
+      nl: "x³ = (-1)³ = -1. Dan 2 . (-1) = -2."
+    }
+  },
+  {
+    id: "N1_ce_25", category: "N1", level: 3,
+    text: { fr: "Si x = -1, y = 2 et z = -3. Calcule : x + yz", en: "If x = -1, y = 2 and z = -3. Calculate: x + yz", nl: "Als x = -1, y = 2 en z = -3. Bereken: x + yz" },
+    // -1 + 2 . (-3) = -1 + (-6) = -7
+    answer: -7, tolerance: 0,
+    hint: {
+      fr: "yz = 2 . (-3) = -6. Puis x + yz = -1 + (-6) = -7.",
+      en: "yz = 2 . (-3) = -6. Then x + yz = -1 + (-6) = -7.",
+      nl: "yz = 2 . (-3) = -6. Dan x + yz = -1 + (-6) = -7."
+    }
+  },
+  {
+    id: "N1_ce_26", category: "N1", level: 3,
+    text: { fr: "Si x = -2. Calcule : 3x² - 2x - 1", en: "If x = -2. Calculate: 3x² - 2x - 1", nl: "Als x = -2. Bereken: 3x² - 2x - 1" },
+    // 3 . 4 - 2 . (-2) - 1 = 12 + 4 - 1 = 15
+    answer: 15, tolerance: 0,
+    hint: {
+      fr: "x² = 4. 3 . 4 = 12. -2x = -2 . (-2) = 4. Puis 12 + 4 - 1 = 15.",
+      en: "x² = 4. 3 . 4 = 12. -2x = -2 . (-2) = 4. Then 12 + 4 - 1 = 15.",
+      nl: "x² = 4. 3 . 4 = 12. -2x = -2 . (-2) = 4. Dan 12 + 4 - 1 = 15."
+    }
+  },
+  {
+    id: "N1_ce_27", category: "N1", level: 3,
+    text: { fr: "Si x = 3, y = -2 et z = 0. Calcule : 2x + 4y - z", en: "If x = 3, y = -2 and z = 0. Calculate: 2x + 4y - z", nl: "Als x = 3, y = -2 en z = 0. Bereken: 2x + 4y - z" },
+    // 6 + (-8) - 0 = -2
+    answer: -2, tolerance: 0,
+    hint: {
+      fr: "2x = 6, 4y = 4 . (-2) = -8, z = 0. Puis 6 + (-8) - 0 = -2.",
+      en: "2x = 6, 4y = 4 . (-2) = -8, z = 0. Then 6 + (-8) - 0 = -2.",
+      nl: "2x = 6, 4y = 4 . (-2) = -8, z = 0. Dan 6 + (-8) - 0 = -2."
+    }
+  },
+  {
+    id: "N1_ce_28", category: "N1", level: 3,
+    text: { fr: "Si x = 3, y = -2 et z = 0. Calcule : y³ + x", en: "If x = 3, y = -2 and z = 0. Calculate: y³ + x", nl: "Als x = 3, y = -2 en z = 0. Bereken: y³ + x" },
+    // (-2)³ + 3 = -8 + 3 = -5
+    answer: -5, tolerance: 0,
+    hint: {
+      fr: "y³ = (-2)³ = -8. Puis -8 + x = -8 + 3 = -5.",
+      en: "y³ = (-2)³ = -8. Then -8 + x = -8 + 3 = -5.",
+      nl: "y³ = (-2)³ = -8. Dan -8 + x = -8 + 3 = -5."
+    }
+  },
+  {
+    id: "N1_ce_29", category: "N1", level: 3,
+    text: { fr: "Si n = -3. Calcule : 2n² - n - 1", en: "If n = -3. Calculate: 2n² - n - 1", nl: "Als n = -3. Bereken: 2n² - n - 1" },
+    // 2 . 9 - (-3) - 1 = 18 + 3 - 1 = 20
+    answer: 20, tolerance: 0,
+    hint: {
+      fr: "n² = 9. 2 . 9 = 18. -n = -(-3) = 3. Puis 18 + 3 - 1 = 20.",
+      en: "n² = 9. 2 . 9 = 18. -n = -(-3) = 3. Then 18 + 3 - 1 = 20.",
+      nl: "n² = 9. 2 . 9 = 18. -n = -(-3) = 3. Dan 18 + 3 - 1 = 20."
+    }
+  },
+
+  // --- Level 2: PGCD (CE1D 2016, 2019, 2022) ---
+  {
+    id: "N1_ce_30", category: "N1", level: 2,
+    text: { fr: "Calcule le PGCD de 56 et 96", en: "Calculate the GCD of 56 and 96", nl: "Bereken de GGD van 56 en 96" },
+    answer: 8, tolerance: 0,
+    hint: {
+      fr: "56 = 2³ . 7 et 96 = 2⁵ . 3. PGCD = facteurs communs avec le plus petit exposant = 2³ = 8.",
+      en: "56 = 2³ . 7 and 96 = 2⁵ . 3. GCD = common factors with smallest exponent = 2³ = 8.",
+      nl: "56 = 2³ . 7 en 96 = 2⁵ . 3. GGD = gemeenschappelijke factoren met kleinste exponent = 2³ = 8."
+    }
+  },
+  {
+    id: "N1_ce_31", category: "N1", level: 2,
+    text: { fr: "Calcule le PGCD de 126 et 540", en: "Calculate the GCD of 126 and 540", nl: "Bereken de GGD van 126 en 540" },
+    answer: 18, tolerance: 0,
+    hint: {
+      fr: "126 = 2 . 3² . 7 et 540 = 2² . 3³ . 5. PGCD = 2 . 3² = 18.",
+      en: "126 = 2 . 3² . 7 and 540 = 2² . 3³ . 5. GCD = 2 . 3² = 18.",
+      nl: "126 = 2 . 3² . 7 en 540 = 2² . 3³ . 5. GGD = 2 . 3² = 18."
+    }
+  },
+  {
+    id: "N1_ce_32", category: "N1", level: 2,
+    text: { fr: "Calcule le PGCD de 132 et 84", en: "Calculate the GCD of 132 and 84", nl: "Bereken de GGD van 132 en 84" },
+    // 132 = 2² . 3 . 11, 84 = 2² . 3 . 7 → PGCD = 2² . 3 = 12
+    answer: 12, tolerance: 0,
+    hint: {
+      fr: "132 = 2² . 3 . 11 et 84 = 2² . 3 . 7. PGCD = 2² . 3 = 12.",
+      en: "132 = 2² . 3 . 11 and 84 = 2² . 3 . 7. GCD = 2² . 3 = 12.",
+      nl: "132 = 2² . 3 . 11 en 84 = 2² . 3 . 7. GGD = 2² . 3 = 12."
+    }
+  },
+
+  // --- Level 1: Percentage calculations (CE1D 2011, 2013, 2014) ---
+  {
+    id: "N1_ce_33", category: "N1", level: 1,
+    text: { fr: "Calcule 25% de 200", en: "Calculate 25% of 200", nl: "Bereken 25% van 200" },
+    answer: 50, tolerance: 0,
+    hint: {
+      fr: "25% = 25/100 = 1/4. Donc 200 . 25/100 = 50.",
+      en: "25% = 25/100 = 1/4. So 200 . 25/100 = 50.",
+      nl: "25% = 25/100 = 1/4. Dus 200 . 25/100 = 50."
+    }
+  },
+  {
+    id: "N1_ce_34", category: "N1", level: 1,
+    text: { fr: "Calcule 15% de 20", en: "Calculate 15% of 20", nl: "Bereken 15% van 20" },
+    answer: 3, tolerance: 0,
+    hint: {
+      fr: "15% de 20 = 20 . 15/100 = 300/100 = 3.",
+      en: "15% of 20 = 20 . 15/100 = 300/100 = 3.",
+      nl: "15% van 20 = 20 . 15/100 = 300/100 = 3."
+    }
+  },
+  {
+    id: "N1_ce_35", category: "N1", level: 1,
+    text: { fr: "Calcule 60% de 30", en: "Calculate 60% of 30", nl: "Bereken 60% van 30" },
+    answer: 18, tolerance: 0,
+    hint: {
+      fr: "60% de 30 = 30 . 60/100 = 1800/100 = 18.",
+      en: "60% of 30 = 30 . 60/100 = 1800/100 = 18.",
+      nl: "60% van 30 = 30 . 60/100 = 1800/100 = 18."
+    }
+  },
+  {
+    id: "N1_ce_36", category: "N1", level: 1,
+    text: { fr: "Calcule 10% de 450", en: "Calculate 10% of 450", nl: "Bereken 10% van 450" },
+    answer: 45, tolerance: 0,
+    hint: {
+      fr: "10% = diviser par 10. Donc 450 : 10 = 45.",
+      en: "10% = divide by 10. So 450 : 10 = 45.",
+      nl: "10% = delen door 10. Dus 450 : 10 = 45."
+    }
+  },
+  {
+    id: "N1_ce_37", category: "N1", level: 1,
+    text: { fr: "Calcule 15% de 160", en: "Calculate 15% of 160", nl: "Bereken 15% van 160" },
+    answer: 24, tolerance: 0,
+    hint: {
+      fr: "15% de 160 = 160 . 15/100 = 24.",
+      en: "15% of 160 = 160 . 15/100 = 24.",
+      nl: "15% van 160 = 160 . 15/100 = 24."
+    }
+  },
+
+  // --- Level 3: Scientific notation (CE1D 2021) ---
+  {
+    id: "N1_ce_38", category: "N1", level: 3,
+    text: { fr: "Calcule : 10^-5 . 10^4 (en décimal)", en: "Calculate: 10^-5 . 10^4 (in decimal)", nl: "Bereken: 10^-5 . 10^4 (in decimaal)" },
+    // 10^(-5+4) = 10^(-1) = 0.1
+    answer: 0.1, tolerance: 0,
+    hint: {
+      fr: "Même base → additionne les exposants : 10^(-5+4) = 10^(-1) = 0,1.",
+      en: "Same base → add exponents: 10^(-5+4) = 10^(-1) = 0.1.",
+      nl: "Zelfde grondtal → tel de exponenten op: 10^(-5+4) = 10^(-1) = 0,1."
+    }
+  },
 ];
 
 /**

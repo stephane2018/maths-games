@@ -123,9 +123,7 @@
   "themes": {
     "numbers": "Getallen & Bewerkingen",
     "powers": "Machten",
-    "geometry": "Meetkunde",
-    "measures": "Grootheden",
-    "data": "Gegevens"
+    "geometry": "Meetkunde"
   },
   "wizard": {
     "title": "BEREID JE TEAMS VOOR",

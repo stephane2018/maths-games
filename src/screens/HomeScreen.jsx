@@ -52,14 +52,10 @@ export default function HomeScreen() {
           onClick={() => {
             if (!dailyCompleted) {
               sound.buttonClick();
-              push('Game', {
+              push('Category', {
                 mode: 'solo',
-                categories: dailyChallenge.categories,
-                difficulty: dailyChallenge.difficulty,
-                numRounds: dailyChallenge.numRounds,
-                blueName: t('game.blue'),
-                redName: 'AI',
                 isDaily: true,
+                dailyBonusXP: dailyChallenge.bonusXP,
               }, true);
             }
           }}

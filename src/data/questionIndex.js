@@ -7,19 +7,14 @@ import { questions as questionsN1, generate as generateN1 } from './questions-N1
 import { questions as questionsN2, generate as generateN2 } from './questions-N2.js';
 import { questions as questionsN3, generate as generateN3 } from './questions-N3.js';
 import { questions as questionsN4, generate as generateN4 } from './questions-N4.js';
-import { questions as questionsN5, generate as generateN5 } from './questions-N5.js';
 import { questions as questionsN6, generate as generateN6 } from './questions-N6.js';
 import { questions as questionsG1, generate as generateG1 } from './questions-G1.js';
 import { questions as questionsG2, generate as generateG2 } from './questions-G2.js';
 import { questions as questionsG3, generate as generateG3 } from './questions-G3.js';
 import { questions as questionsG4, generate as generateG4 } from './questions-G4.js';
 import { questions as questionsG5, generate as generateG5 } from './questions-G5.js';
-import { questions as questionsG6, generate as generateG6 } from './questions-G6.js';
 import { questions as questionsG7, generate as generateG7 } from './questions-G7.js';
 import { questions as questionsP1, generate as generateP1 } from './questions-P1.js';
-import { questions as questionsD1, generate as generateD1 } from './questions-D1.js';
-import { questions as questionsD2, generate as generateD2 } from './questions-D2.js';
-import { questions as questionsM1, generate as generateM1 } from './questions-M1.js';
 
 
 export const allCategories = [
@@ -46,12 +41,6 @@ export const allCategories = [
     label: { fr: 'Équations', en: 'Équations', nl: 'Équations' },
     questions: questionsN4,
     generate: generateN4,
-  },
-  {
-    code: 'N5',
-    label: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' },
-    questions: questionsN5,
-    generate: generateN5,
   },
   {
     code: 'N6',
@@ -90,12 +79,6 @@ export const allCategories = [
     generate: generateG5,
   },
   {
-    code: 'G6',
-    label: { fr: 'Solides', en: 'Solides', nl: 'Solides' },
-    questions: questionsG6,
-    generate: generateG6,
-  },
-  {
     code: 'G7',
     label: { fr: 'Programmes de construction', en: 'Programmes de construction', nl: 'Programmes de construction' },
     questions: questionsG7,
@@ -106,24 +89,6 @@ export const allCategories = [
     label: { fr: 'Grandeurs proportionnelles', en: 'Grandeurs proportionnelles', nl: 'Grandeurs proportionnelles' },
     questions: questionsP1,
     generate: generateP1,
-  },
-  {
-    code: 'D1',
-    label: { fr: 'Traitement de données', en: 'Traitement de données', nl: 'Traitement de données' },
-    questions: questionsD1,
-    generate: generateD1,
-  },
-  {
-    code: 'D2',
-    label: { fr: 'Statistiques', en: 'Statistiques', nl: 'Statistiques' },
-    questions: questionsD2,
-    generate: generateD2,
-  },
-  {
-    code: 'M1',
-    label: { fr: 'Conversions et mesures', en: 'Conversions et mesures', nl: 'Conversions et mesures' },
-    questions: questionsM1,
-    generate: generateM1,
   },
 ];
 

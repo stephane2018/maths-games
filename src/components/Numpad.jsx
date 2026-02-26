@@ -72,11 +72,14 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     setTimeout(() => setFeedbackClass(''), 600);
   }, []);
 
+  const showValue = useCallback((val) => setValue(String(val)), []);
+
   useImperativeHandle(ref, () => ({
     handleKeyboard,
     clear,
     showCorrect,
     showWrong,
+    showValue,
   }));
 
   const buttons = [

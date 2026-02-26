@@ -123,9 +123,7 @@
   "themes": {
     "numbers": "Numbers & Operations",
     "powers": "Powers",
-    "geometry": "Geometry",
-    "measures": "Measurements",
-    "data": "Data & Charts"
+    "geometry": "Geometry"
   },
   "wizard": {
     "title": "PREPARE YOUR TEAMS",

@@ -81,6 +81,10 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     numpadRef.current?.handleKeyboard(key);
   }, []);
 
+  const showAiAnswer = useCallback((val) => {
+    numpadRef.current?.showValue(String(val));
+  }, []);
+
   useImperativeHandle(ref, () => ({
     setQuestion,
     showCorrectFeedback,
@@ -88,6 +92,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     updateScore,
     showStreak,
     showHint,
+    showAiAnswer,
     getCurrentQuestion: () => currentQuestionRef.current,
     setDisabled: () => {}, // disabled is controlled by prop
     clear,
@@ -135,25 +140,55 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   };
 
   // Render fraction notation as vertical stacked display
-  // Matches: 3/4, 15/20, x/35, 80/6, etc.
-  const fractionRegex = /([a-zA-Z\d]+\/\d+)/;
-  const fractionMatchRegex = /^([a-zA-Z\d]+)\/(\d+)$/;
+  // Matches: 3/4, 15/20, x/35, 2x/5, -3/4, (2x+1)/3 etc.
+  const fractionRegex = /(\([^)]+\)\/\d+|-?[a-zA-Z\d]+\/\d+)/;
+  const parenFractionMatch = /^\(([^)]+)\)\/(\d+)$/;
+  const simpleFractionMatch = /^(-?[a-zA-Z\d]+)\/(\d+)$/;
+
+  // Render superscript notation: a^2 → a², 2^3 → 2³, 10^4 → 10⁴
+  const renderTextWithSuperscripts = (text) => {
+    const superscriptRegex = /(\w+)\^(\d+)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let m;
+    while ((m = superscriptRegex.exec(text)) !== null) {
+      if (m.index > lastIndex) parts.push(text.slice(lastIndex, m.index));
+      parts.push(
+        <span key={`sup-${m.index}`}>
+          {m[1]}<sup>{m[2]}</sup>
+        </span>
+      );
+      lastIndex = m.index + m[0].length;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return parts.length > 1 ? parts : text;
+  };
 
   const renderMathParts = (text) => {
     const parts = text.split(fractionRegex);
-    if (parts.length === 1) return text;
+    if (parts.length === 1) return renderTextWithSuperscripts(text);
     return parts.map((part, i) => {
-      const match = part.match(fractionMatchRegex);
-      if (match) {
+      const parenMatch = part.match(parenFractionMatch);
+      if (parenMatch) {
         return (
           <span key={i} className="fraction">
-            <span className="fraction-num">{match[1]}</span>
+            <span className="fraction-num">{renderTextWithSuperscripts(parenMatch[1])}</span>
             <span className="fraction-bar" />
-            <span className="fraction-den">{match[2]}</span>
+            <span className="fraction-den">{parenMatch[2]}</span>
           </span>
         );
       }
-      return part;
+      const simpleMatch = part.match(simpleFractionMatch);
+      if (simpleMatch) {
+        return (
+          <span key={i} className="fraction">
+            <span className="fraction-num">{renderTextWithSuperscripts(simpleMatch[1])}</span>
+            <span className="fraction-bar" />
+            <span className="fraction-den">{simpleMatch[2]}</span>
+          </span>
+        );
+      }
+      return renderTextWithSuperscripts(part);
     });
   };
 

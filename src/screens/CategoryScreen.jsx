@@ -114,6 +114,7 @@ export default function CategoryScreen() {
       timePerQuestion: selectedTimePerQuestion,
       blueName: blueName || t('game.blue'),
       redName: mode === 'versus' ? (redName || t('game.red')) : 'AI',
+      isDaily: sharedState.isDaily || false,
     }, true);
   }
 
