@@ -6,6 +6,7 @@ import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { calculateMatchXP, addXP, getLevelInfo, checkAchievements, updateProfileAfterMatch, getAchievementIcons } from '../systems/XPSystem.js';
 import { updateStreak, getTodayStr } from '../systems/DailyChallengeSystem.js';
 import { createConfetti } from '../utils/confetti.js';
+import { GlassButton } from '../components/GlassUI.jsx';
 
 export default function ResultScreen() {
   const { t } = useI18n();
@@ -123,8 +124,25 @@ export default function ResultScreen() {
   const icons = getAchievementIcons();
 
   return (
-    <div className="screen" style={{ background: 'var(--bg)' }} ref={containerRef}>
-      <div className="screen-content stagger-children">
+    <div className="screen" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }} ref={containerRef}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <h1 className={`result-winner ${winnerClass} anim-bounce-in`}>{winnerText}</h1>
 
         <div className="card result-card">
@@ -193,35 +211,54 @@ export default function ResultScreen() {
 
         {/* Action buttons */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%', maxWidth: '400px' }}>
-          <button
-            className="btn btn-green btn-lg"
-            style={{ width: '100%' }}
+          <GlassButton
+            variant="gradient"
+            size="lg"
+            className="w-full"
             onClick={() => {
               sound.buttonClick();
               push('Game', { mode, categories, difficulty: difficulty || 'medium', numRounds: numRounds || 3, blueName, redName }, true);
             }}
+            icon={
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+              </svg>
+            }
           >
             {t('result.quickReplay')}
-          </button>
+          </GlassButton>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <button
-              className="btn btn-blue btn-lg"
-              style={{ flex: '1' }}
+            <GlassButton
+              variant="glass"
+              size="lg"
+              className="flex-1"
               onClick={() => {
                 sound.buttonClick();
                 push('Category', { mode }, true);
               }}
+              icon={
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              }
             >
               {t('result.playAgain')}
-            </button>
+            </GlassButton>
 
-            <button
-              className="btn btn-outline btn-lg"
-              style={{ flex: '1' }}
+            <GlassButton
+              variant="outline"
+              size="lg"
+              className="flex-1"
               onClick={() => { sound.buttonClick(); goHome(); }}
+              icon={
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              }
             >
               {t('result.home')}
-            </button>
+            </GlassButton>
           </div>
         </div>
       </div>

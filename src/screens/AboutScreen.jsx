@@ -1,6 +1,7 @@
 import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
+import { GlassButton } from '../components/GlassUI.jsx';
 
 export default function AboutScreen() {
   const { t } = useI18n();
@@ -8,20 +9,44 @@ export default function AboutScreen() {
   const { pop, push } = useNavigation();
 
   return (
-    <div className="screen">
-      <div className="top-bar">
+    <div className="screen" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
         <div className="top-bar-left">
-          <button
-            className="back-btn"
+          <GlassButton
+            variant="glass"
+            size="sm"
             onClick={() => { sound.buttonClick(); pop(); }}
+            icon={
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+            }
           >
             {t('mode.back')}
-          </button>
+          </GlassButton>
         </div>
         <div className="top-bar-right" />
       </div>
 
-      <div className="screen-content">
+      <div className="screen-content" style={{ position: 'relative', zIndex: 1 }}>
         {/* Section Créateur */}
         <div className="creator-section card">
           <div className="creator-photo-container">
@@ -99,13 +124,14 @@ export default function AboutScreen() {
           <div style={{ marginTop: '16px' }}>
             <div style={{ fontWeight: 700, marginBottom: '8px' }}>{t('legal.gdpr')}</div>
             <p className="about-description" style={{ marginBottom: '12px' }}>{t('legal.gdprText')}</p>
-            <button
-              className="btn btn-outline"
-              style={{ width: '100%' }}
+            <GlassButton
+              variant="glass"
+              size="md"
+              className="w-full"
               onClick={() => { sound.buttonClick(); push('Settings'); }}
             >
               {t('legal.deleteLink')}
-            </button>
+            </GlassButton>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import { useState, useRef, useImperativeHandle, forwardRef, useCallback } from 'react';
 import { useSound } from '../contexts/SoundContext.jsx';
 
-const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = false, hasDecimal = false, hasNegative = false }, ref) {
+const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = false, hasDecimal = false, hasNegative = false, hasAlphabet = false }, ref) {
   const sound = useSound();
   const [value, setValue] = useState('');
   const [feedbackClass, setFeedbackClass] = useState('');
+  const [mode, setMode] = useState('numeric'); // 'numeric' or 'alphabet'
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const displayRef = useRef(null);
 
   const handleKey = useCallback((key) => {
@@ -41,10 +43,30 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
       return;
     }
 
+    if (key === 'switch') {
+      sound.buttonClick();
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setMode(prev => prev === 'numeric' ? 'alphabet' : 'numeric');
+        setIsTransitioning(false);
+      }, 150);
+      return;
+    }
+
+    // Letter or special character key
+    if (typeof key === 'string' && key.length === 1 && isNaN(key)) {
+      sound.buttonClick();
+      setValue(prev => {
+        if (prev.length >= 20) return prev;
+        return prev + key;
+      });
+      return;
+    }
+
     // Number key
     sound.buttonClick();
     setValue(prev => {
-      if (prev.replace('-', '').replace('.', '').length >= 8) return prev;
+      if (prev.replace('-', '').replace('.', '').length >= 20) return prev;
       if (prev === '0' && key !== '0') return key;
       if (prev === '0' && key === '0') return prev;
       return prev + key;
@@ -82,12 +104,21 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     showValue,
   }));
 
-  const buttons = [
+  const numericButtons = [
     ['1', '2', '3'],
     ['4', '5', '6'],
     ['7', '8', '9'],
     ['clear', '0', 'submit'],
   ];
+
+  const alphabetButtons = [
+    ['a', 'b', 'c', 'd'],
+    ['m', 'n', 'x', 'y'],
+    ['x²', 'y²', '²', 'clear'],
+    ['0', '1', '2', 'submit'],
+  ];
+
+  const buttons = mode === 'numeric' ? numericButtons : alphabetButtons;
 
   return (
     <div
@@ -98,8 +129,16 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
         {value || '\u00A0'}
       </div>
 
-      <div className="numpad-grid">
-        {buttons.flat().map((key) => {
+      <div
+        className="numpad-grid"
+        style={{
+          gridTemplateColumns: mode === 'alphabet' ? 'repeat(4, 1fr)' : 'repeat(3, 1fr)',
+          opacity: isTransitioning ? 0 : 1,
+          transform: isTransitioning ? 'scale(0.95)' : 'scale(1)',
+          transition: 'opacity 0.15s ease, transform 0.15s ease'
+        }}
+      >
+        {buttons.flat().map((key, idx) => {
           let btnClass = 'numpad-btn';
           let label = key;
           if (key === 'clear') { btnClass += ' clear'; label = '\u2715'; }
@@ -107,13 +146,22 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
 
           return (
             <button
-              key={key}
+              key={key + idx}
               className={btnClass}
               data-key={key}
               onClick={(e) => { e.preventDefault(); handleKey(key); }}
-              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
-              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
-              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerDown={(e) => {
+                e.currentTarget.style.transform = 'scale(0.95)';
+                e.currentTarget.style.transition = 'transform 0.1s ease';
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
               style={{ touchAction: 'manipulation' }}
             >
               {label}
@@ -122,7 +170,31 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
         })}
       </div>
 
-      {(hasDecimal || hasNegative) && (
+      {hasAlphabet && (
+        <div style={{ marginTop: '6px' }}>
+          <button
+            className="numpad-btn numpad-btn-switch"
+            onClick={() => handleKey('switch')}
+            onPointerDown={(e) => {
+              e.currentTarget.style.transform = 'scale(0.95)';
+              e.currentTarget.style.transition = 'transform 0.1s ease';
+            }}
+            onPointerUp={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            onPointerLeave={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            style={{ touchAction: 'manipulation', width: '100%' }}
+          >
+            {mode === 'numeric' ? 'ABC' : '123'}
+          </button>
+        </div>
+      )}
+
+      {!hasAlphabet && (hasDecimal || hasNegative) && (
         <div style={{
           display: 'grid',
           gridTemplateColumns: hasNegative && hasDecimal ? '1fr 1fr' : '1fr',
@@ -130,24 +202,42 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
           marginTop: '6px',
         }}>
           {hasNegative && (
-            <button 
-              className="numpad-btn" 
+            <button
+              className="numpad-btn"
               onClick={() => handleKey('negative')}
-              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
-              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
-              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerDown={(e) => {
+                e.currentTarget.style.transform = 'scale(0.95)';
+                e.currentTarget.style.transition = 'transform 0.1s ease';
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
               style={{ touchAction: 'manipulation' }}
             >
               +/-
             </button>
           )}
           {hasDecimal && (
-            <button 
-              className="numpad-btn" 
+            <button
+              className="numpad-btn"
               onClick={() => handleKey('dot')}
-              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
-              onPointerUp={(e) => { e.currentTarget.style.transform = ''; }}
-              onPointerLeave={(e) => { e.currentTarget.style.transform = ''; }}
+              onPointerDown={(e) => {
+                e.currentTarget.style.transform = 'scale(0.95)';
+                e.currentTarget.style.transition = 'transform 0.1s ease';
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
               style={{ touchAction: 'manipulation' }}
             >
               ,

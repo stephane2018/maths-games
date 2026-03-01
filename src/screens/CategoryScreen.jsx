@@ -3,7 +3,6 @@ import { useI18n } from '../contexts/I18nContext.jsx';
 import { useSound } from '../contexts/SoundContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { CE1D_THEMES, getCategoriesToLoad } from '../data/ce1dThemes.js';
-import { MathBackground } from '../components/CategoryWizardIcons.jsx';
 import {
   DIFF_ICONS,
   TEAM_ICONS,
@@ -14,6 +13,14 @@ import {
   RED_SUBCATS,
   ALL_PLAYABLE_CODES,
 } from '../constants/categoryWizardConstants.js';
+import {
+  GlassButton,
+  GlassCard,
+  StepIndicator,
+  GlassCheckbox,
+  GlassBadge,
+  ProgressDots,
+} from '../components/GlassUI.jsx';
 
 export default function CategoryScreen() {
   const { t } = useI18n();
@@ -23,14 +30,14 @@ export default function CategoryScreen() {
 
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedThemes, setSelectedThemes] = useState(new Set(['numbers']));
-  const [selectedSubcategories, setSelectedSubcategories] = useState(new Set(['N1'])); // Au moins une par défaut
+  const [selectedSubcategories, setSelectedSubcategories] = useState(new Set(['A2'])); // Au moins une par défaut (PEMDAS)
 
   function toggleSelectAll() {
     sound.buttonClick();
     const playableSelected = ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c));
     if (playableSelected.length === ALL_PLAYABLE_CODES.length) {
-      // Tout est coché → ne garder que N1
-      setSelectedSubcategories(new Set(['N1']));
+      // Tout est coché → ne garder que A2 (PEMDAS)
+      setSelectedSubcategories(new Set(['A2']));
     } else {
       // Tout cocher
       setSelectedSubcategories(new Set(ALL_PLAYABLE_CODES));
@@ -121,79 +128,120 @@ export default function CategoryScreen() {
   const animClass = slideDirection === 'right' ? 'wizard-slide-in-right' : 'wizard-slide-in-left';
 
   return (
-    <div className="screen category-fullpage">
-      {/* Decorative math background */}
-      <MathBackground />
+    <div className="screen category-fullpage" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      {/* Decorative math background - désactivé pour utiliser background.png */}
+      {/* <MathBackground /> */}
 
       <div className="category-content">
         <div className="wizard-body">
-          <h2 className="wizard-title">{t('wizard.title')}</h2>
-          {/* Step indicator */}
-          <div className="wizard-steps">
-            {[1, 2, 3].map((step, idx) => (
-              <div key={step} style={{ display: 'contents' }}>
-                {idx > 0 && (
-                  <div className={`wizard-step-line ${step <= currentStep ? 'active' : ''}`} />
-                )}
-                <div className="wizard-step-group">
-                  <div className={`wizard-step-circle ${step <= currentStep ? 'active' : ''}`}>{step}</div>
-                  <div className={`wizard-step-label ${step === currentStep ? 'active' : ''}`}>
-                    {t(`wizard.step${step}`)}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Step indicator with glassmorphism */}
+          <StepIndicator
+            currentStep={currentStep}
+            steps={[
+              { label: t('wizard.step1') },
+              { label: t('wizard.step2') },
+              { label: t('wizard.step3') },
+            ]}
+          />
 
-          {/* Step 1: Subcategory selection - 2 columns blue/red + CORRIGES */}
+          {/* Step 1: Subcategory selection - Tailwind version */}
           {currentStep === 1 && (
-            <div className={`wizard-step-content ${animClass}`} key="step1">
-              <h3 className="wizard-section-title">{t('wizard.themesTitle')}</h3>
+            <div className={`text-center  flex-none flex flex-col items-center w-full ${animClass}`} key="step1">
+              <h3 className="text-4xl font-black text-slate-800 mb-3">Thèmes mathématiques</h3>
+              <p className="text-slate-600 mb-6 text-base">Sélectionne les thèmes que tu souhaites étudier.</p>
 
               {/* Toggle all + counter */}
-              <div className="wizard-subcat-toolbar">
-                <button
-                  className="wizard-toggle-all-btn"
+              <div className="flex items-center justify-between w-full max-w-[900px] mb-4 px-2">
+                <GlassButton
+                  className='!p-2'
+                  variant="glass"
+                  size="md"
+                
                   onClick={toggleSelectAll}
+                  icon={<span className="text-lg">{ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length === ALL_PLAYABLE_CODES.length ? '☑' : '☐'}</span>}
                 >
                   {ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length === ALL_PLAYABLE_CODES.length
                     ? 'Tout désélectionner'
                     : 'Tout sélectionner'}
-                </button>
-                <span className="wizard-subcat-counter">
-                  {ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length}/{ALL_PLAYABLE_CODES.length} sélectionné{ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length > 1 ? 's' : ''}
+                </GlassButton>
+                <GlassButton
+                  variant="gradient"
+                  size="md"
+                  className='!p-2'
+                  onClick={goNext}
+                  icon={<span>→</span>}
+                >
+                  Suivant
+                </GlassButton>
+              </div>
+
+              {/* Counter */}
+              <div className="text-center mb- !py-2">
+                <span className="text-lg font-bold text-slate-600">
+                  {ALL_PLAYABLE_CODES.filter(c => selectedSubcategories.has(c)).length}/{ALL_PLAYABLE_CODES.length} sélectionnés
                 </span>
               </div>
 
-              {/* Grid de cards avec icônes */}
-              <div className="wizard-subcat-cards-grid">
+              {/* Grid de cards avec icônes - Glassmorphism version */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-[900px] p-1 box-border">
                 {[...BLUE_SUBCATS, ...RED_SUBCATS].map(subcat => {
                   const isSelected = selectedSubcategories.has(subcat.code);
-                  const color = BLUE_SUBCATS.find(s => s.code === subcat.code) ? '#3B82F6' : '#EF4444';
                   return (
-                    <div
+                    <GlassCard
                       key={subcat.code}
-                      className={`wizard-subcat-card ${isSelected ? 'selected' : ''}`}
+                      selected={isSelected}
                       onClick={() => toggleSubcategory(subcat.code)}
-                      style={{
-                        '--card-color': color,
-                        borderColor: isSelected ? color : '#E2E8F0',
-                        backgroundColor: isSelected ? `${color}08` : 'white',
-                      }}
+                      borderColor={subcat.color}
                     >
-                      <div className={`wizard-subcat-card-checkbox ${isSelected ? 'checked' : ''}`} style={{ '--cb-color': color }}>
-                        {isSelected && <span>✓</span>}
-                      </div>
-                      <div className="wizard-subcat-card-icon" style={{ color }}>
-                        {subcat.icon}
-                      </div>
-                      <div className="wizard-subcat-card-code" style={{ color }}>
+                      {/* Checkbox */}
+                      <GlassCheckbox
+                        checked={isSelected}
+                        color={subcat.color}
+                      />
+
+                      {/* Code Badge */}
+                      <GlassBadge color={subcat.color}>
                         {subcat.code}
+                      </GlassBadge>
+
+                      {/* Math Illustration */}
+                      <div className="w-full h-20 mb-1 flex items-center justify-center">
+                        <div className="text-4xl md:text-5xl" style={{
+                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))',
+                        }}>
+                          {subcat.icon}
+                        </div>
                       </div>
-                      <div className="wizard-subcat-card-name" style={{ color: isSelected ? color : '#64748B' }}>
+
+                      {/* Name */}
+                      <div className="text-sm md:text-base text-center leading-tight font-bold text-slate-800 transition-all duration-200 px-1">
                         {subcat.name}
                       </div>
-                    </div>
+
+                      {/* Progress dots */}
+                      <ProgressDots
+                        total={6}
+                        active={isSelected ? 6 : 0}
+                        color={subcat.color}
+                      />
+                    </GlassCard>
                   );
                 })}
               </div>
@@ -276,20 +324,52 @@ export default function CategoryScreen() {
             </div>
           )}
 
-          {/* Buttons */}
-          <div className="wizard-buttons">
-            <button className="btn btn-outline wizard-btn-back" onClick={goBack}
-              dangerouslySetInnerHTML={{ __html: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> ${t('wizard.back')}` }}
-            />
+          {/* Buttons - Glassmorphism style */}
+          <div className="flex items-center justify-center gap-4 mt-8 mb-8">
+            <GlassButton
+              variant="glass"
+              size="lg"
+              className='!p-2'
+              onClick={goBack}
+              icon={
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"/>
+                  <polyline points="12 19 5 12 12 5"/>
+                </svg>
+              }
+            >
+              {t('wizard.back')}
+            </GlassButton>
 
             {currentStep < 3 ? (
-              <button className="btn btn-blue wizard-btn-next" onClick={goNext}
-                dangerouslySetInnerHTML={{ __html: `${t('wizard.next')} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>` }}
-              />
+              <GlassButton
+                variant="gradient"
+                className='!p-2'
+                size="lg"
+                onClick={goNext}
+                icon={
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                }
+              >
+                {t('wizard.next')}
+              </GlassButton>
             ) : (
-              <button className="btn btn-blue wizard-btn-next" onClick={startGame}
-                dangerouslySetInnerHTML={{ __html: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px"><polygon points="5 3 19 12 5 21 5 3"/></svg> ${t('wizard.startGame')}` }}
-              />
+              <GlassButton
+                variant="gradient"
+                className='!p-2'
+                size="lg"
+                onClick={startGame}
+                icon={
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                }
+              >
+                {t('wizard.startGame')}
+              </GlassButton>
             )}
           </div>
         </div>

@@ -3,6 +3,7 @@ import { useSound } from '../contexts/SoundContext.jsx';
 import { useStorage } from '../contexts/StorageContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { CE1D_THEMES } from '../data/ce1dThemes.js';
+import { GlassButton } from '../components/GlassUI.jsx';
 
 function getBestTheme(categoryBreakdown) {
   const themeAccuracy = {};
@@ -79,19 +80,44 @@ export default function LeaderboardScreen() {
   const rankColors = ['#F59E0B', '#94A3B8', '#B45309'];
 
   return (
-    <div className="screen">
-      <div className="top-bar">
+    <div className="screen" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
         <div className="top-bar-left">
-          <button
-            className="back-btn"
+          <GlassButton
+            variant="glass"
+            size="sm"
             onClick={() => { sound.buttonClick(); pop(); }}
-            dangerouslySetInnerHTML={{ __html: '&#8592; ' + t('mode.back') }}
-          />
+            icon={
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+            }
+          >
+            {t('mode.back')}
+          </GlassButton>
         </div>
         <div className="top-bar-right" />
       </div>
 
-      <div className="screen-content stagger-children">
+      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <h1 className="title">{t('leaderboard.title')}</h1>
 
         {rankings.length === 0 && (

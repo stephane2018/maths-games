@@ -4,6 +4,7 @@ import { useStorage } from '../contexts/StorageContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { getLevelInfo } from '../systems/XPSystem.js';
 import { getDailyChallenge, getTodayStr, getCurrentStreak } from '../systems/DailyChallengeSystem.js';
+import { GlassButton } from '../components/GlassUI.jsx';
 
 function Logo() {
   return (
@@ -32,8 +33,25 @@ export default function HomeScreen() {
   const dailyCompleted = profile.dailyChallenge?.lastCompleted === today;
 
   return (
-    <div className="screen home-screen">
-      <div className="screen-content stagger-children">
+    <div className="screen home-screen" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <Logo />
         <h1 className="home-title">{t('app.title')}</h1>
         <p className="subtitle">{t('app.subtitle')}</p>
@@ -71,33 +89,63 @@ export default function HomeScreen() {
         </div>
 
         <div className="home-buttons">
-          <button
-            className="btn btn-blue btn-lg"
+          <GlassButton
+            variant="gradient"
+            size="lg"
+            className='!p-2'
             onClick={() => { sound.buttonClick(); push('ModeSelect'); }}
+            icon={
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            }
           >
             {t('home.play')}
-          </button>
+          </GlassButton>
 
-          <button
-            className="btn btn-outline btn-lg"
+          <GlassButton
+            variant="glass"
+            size="lg"
+            className='!p-2'
             onClick={() => { sound.buttonClick(); push('Profile'); }}
+            icon={
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            }
           >
             {t('home.profile')}
-          </button>
+          </GlassButton>
 
-          <button
-            className="btn btn-outline btn-lg"
+          <GlassButton
+            variant="glass"
+            size="lg"
+            className='!p-2'
             onClick={() => { sound.buttonClick(); push('Leaderboard'); }}
+            icon={
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 16v6m-8-6v6m4-10v10M3 3h18v18H3z"/>
+              </svg>
+            }
           >
             {t('home.leaderboard')}
-          </button>
+          </GlassButton>
 
-          <button
-            className="btn btn-outline btn-lg"
+          <GlassButton
+            variant="glass"
+            size="lg"
+            className='!p-2'
             onClick={() => { sound.buttonClick(); push('Settings'); }}
+            icon={
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v6m0 6v6m4.2-15l-1.2 2.1m-6 10.4L7.8 23M23 12h-6m-6 0H1m15-4.2l-2.1 1.2m-10.4 6L1 7.8M23 16.2l-5.1-3m-10.4-6L1 16.2"/>
+              </svg>
+            }
           >
             {t('home.settings')}
-          </button>
+          </GlassButton>
         </div>
 
         <div className="home-bottom-row">

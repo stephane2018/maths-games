@@ -23,23 +23,26 @@ export const TIME_OPTIONS = [
   { value: 0, label: 'Illimité' },
 ];
 
-// Sous-catégories CE1D avec icônes emoji
+// Sous-catégories selon l'image avec les codes A1-A11, P1, G1-G2, P2
 export const BLUE_SUBCATS = [
-  { code: 'N1', name: 'Nombres', icon: '🔢', color: '#3B82F6' },
-  { code: 'N2', name: 'Opérations', icon: '➕', color: '#3B82F6' },
-  { code: 'N3', name: 'Priorités', icon: '🎯', color: '#3B82F6' },
-  { code: 'N4', name: 'Équations', icon: '⚖️', color: '#3B82F6' },
-  { code: 'N6', name: 'Puissances', icon: '⚡', color: '#3B82F6' },
+  { code: 'A1', name: 'Suppression des parenthèses', icon: '🧩', color: '#F59E0B' },
+  { code: 'A2', name: 'PEMDAS', icon: '🎯', color: '#3B82F6' },
+  { code: 'A3', name: 'Puissances', icon: '⚡', color: '#60A5FA' },
+  { code: 'A4', name: 'PPCM et PGCD', icon: '⚙️', color: '#60A5FA' },
+  { code: 'A5', name: 'Simple distributivité', icon: '➕', color: '#F59E0B' },
+  { code: 'A6', name: 'Double distributivité', icon: '📐', color: '#3B82F6' },
+  { code: 'A7', name: 'Calcul littéral', icon: '📖', color: '#60A5FA' },
+  { code: 'A8', name: 'Produits remarquables', icon: '✨', color: '#60A5FA' },
+  { code: 'A9', name: 'Fractions', icon: '🧮', color: '#F59E0B' },
+  { code: 'A10', name: 'Équations', icon: '⚖️', color: '#3B82F6' },
+  { code: 'A11', name: 'Inégalités triangulaires', icon: '📐', color: '#60A5FA' },
+  { code: 'P1', name: 'Proportionnalité', icon: '⚖️', color: '#60A5FA' },
 ];
 
 export const RED_SUBCATS = [
-  { code: 'G1', name: 'Périmètres', icon: '📐', color: '#EF4444' },
-  { code: 'G2', name: 'Aires', icon: '🟦', color: '#EF4444' },
-  { code: 'G3', name: 'Volumes', icon: '📦', color: '#EF4444' },
-  { code: 'G4', name: 'Angles', icon: '📐', color: '#EF4444' },
-  { code: 'G5', name: 'Triangles', icon: '🔺', color: '#EF4444' },
-  { code: 'G7', name: 'Solides', icon: '🎲', color: '#EF4444' },
-  { code: 'P1', name: 'Proportions', icon: '⚖️', color: '#EF4444' },
+  { code: 'G1', name: 'Périmètre et aire', icon: '📐', color: '#3B82F6' },
+  { code: 'G2', name: 'Angles', icon: '📏', color: '#3B82F6' },
+  { code: 'P2', name: 'Traitement des données', icon: '📊', color: '#60A5FA' },
 ];
 
 // Toutes les sous-catégories jouables

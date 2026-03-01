@@ -5,6 +5,7 @@ import { useStorage } from '../contexts/StorageContext.jsx';
 import { useNavigation } from '../contexts/NavigationContext.jsx';
 import { getRoundTime, setRoundTime, ROUND_TIME_OPTIONS } from '../engine/GameConfig.js';
 import ConfirmDialog from '../components/ConfirmDialog.jsx';
+import { GlassButton } from '../components/GlassUI.jsx';
 
 function Toggle({ label, description, isActive, onChange }) {
   const [active, setActive] = useState(isActive);
@@ -39,19 +40,45 @@ export default function SettingsScreen() {
   const [deleteSuccess, setDeleteSuccess] = useState(false);
 
   return (
-    <div className="screen">
-      <div className="top-bar">
+    <div className="screen" style={{
+      backgroundImage: 'url(/background.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      position: 'relative',
+    }}>
+      {/* Gradient overlay - top and bottom */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
         <div className="top-bar-left">
-          <button
-            className="back-btn"
+          <GlassButton
+            variant="glass"
+            size="sm"
+            className='p-2!'
             onClick={() => { sound.buttonClick(); pop(); }}
-            dangerouslySetInnerHTML={{ __html: '&#8592; ' + t('mode.back') }}
-          />
+            icon={
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+            }
+          >
+            {t('mode.back')}
+          </GlassButton>
         </div>
         <div className="top-bar-right" />
       </div>
 
-      <div className="screen-content stagger-children">
+      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <h1 className="title">{t('settings.title')}</h1>
 
         <div className="card" style={{ width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -81,10 +108,12 @@ export default function SettingsScreen() {
               {ROUND_TIME_OPTIONS.map(sec => {
                 const label = sec < 60 ? `${sec}s` : `${sec / 60}min`;
                 return (
-                  <button
+                  <GlassButton
                     key={sec}
-                    className={`btn ${currentRoundTime === sec ? 'btn-blue' : 'btn-outline'}`}
-                    style={{ flex: '1', padding: '10px', minWidth: '60px' }}
+                    variant={currentRoundTime === sec ? 'gradient' : 'outline'}
+                    size="md"
+                    className="flex-1"
+                    style={{ minWidth: '60px' }}
                     onClick={() => {
                       sound.buttonClick();
                       setRoundTime(sec);
@@ -92,7 +121,7 @@ export default function SettingsScreen() {
                     }}
                   >
                     {label}
-                  </button>
+                  </GlassButton>
                 );
               })}
             </div>
@@ -117,10 +146,11 @@ export default function SettingsScreen() {
             <div style={{ fontWeight: '700', marginBottom: '8px' }}>{t('settings.difficulty')}</div>
             <div style={{ display: 'flex', gap: '8px' }}>
               {['easy', 'medium', 'hard'].map(diff => (
-                <button
+                <GlassButton
                   key={diff}
-                  className={`btn ${currentDifficulty === diff ? 'btn-blue' : 'btn-outline'}`}
-                  style={{ flex: '1', padding: '10px' }}
+                  variant={currentDifficulty === diff ? 'gradient' : 'outline'}
+                  size="md"
+                  className="flex-1"
                   onClick={() => {
                     sound.buttonClick();
                     localStorage.setItem('math-tow-difficulty', diff);
@@ -128,19 +158,26 @@ export default function SettingsScreen() {
                   }}
                 >
                   {t(`difficulty.${diff}`)}
-                </button>
+                </GlassButton>
               ))}
             </div>
           </div>
 
           <div style={{ width: '100%', borderTop: '1px solid var(--border)', paddingTop: '20px', marginTop: '4px' }}>
-            <button
-              className="btn btn-red"
-              style={{ width: '100%' }}
+            <GlassButton
+              variant="glass"
+              size="md"
+              className="w-full"
+              style={{
+                background: 'rgba(239, 68, 68, 0.9)',
+                borderColor: 'rgba(220, 38, 38, 0.8)',
+                color: 'white',
+                fontWeight: '700',
+              }}
               onClick={() => { sound.buttonClick(); setShowDeleteConfirm(true); }}
             >
               {t('settings.deleteAll')}
-            </button>
+            </GlassButton>
             {deleteSuccess && (
               <div style={{ textAlign: 'center', color: 'var(--green)', fontWeight: 700, marginTop: '8px' }}>
                 {t('settings.deleteSuccess')}

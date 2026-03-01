@@ -262,6 +262,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         disabled={disabled}
         hasDecimal={true}
         hasNegative={false}
+        hasAlphabet={true} 
       />
     </div>
   );

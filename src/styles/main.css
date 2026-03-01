@@ -2,6 +2,30 @@
    MATH TUG OF WAR - Main Styles
    ======================================== */
 
+@import "tailwindcss";
+
+/* Tailwind v4 Custom Theme Configuration */
+@theme {
+  --font-sans: 'Comic Sans MS', 'OpenDyslexic', 'Lexend', 'Nunito', system-ui, sans-serif;
+
+  --color-blue: #3B82F6;
+  --color-blue-light: #EFF6FF;
+  --color-blue-dark: #1E3A8A;
+  --color-red: #EF4444;
+  --color-red-light: #FEF2F2;
+  --color-amber: #F59E0B;
+  --color-sky: #60A5FA;
+
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-card-selected: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  --radius-card: 16px;
+
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
 :root {
   /* Team colors */
   --blue: #3B82F6;
@@ -81,7 +105,11 @@ html {
 
 body {
   font-family: var(--font);
-  background: var(--bg);
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text);
   min-height: 100%;
   height: 100%;
@@ -221,6 +249,44 @@ body {
 .btn-outline:hover {
   border-color: var(--blue);
   color: var(--blue);
+}
+
+/* Glassmorphism button styles - matching design image */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: #475569;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-glass:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-glass:active {
+  transform: scale(0.98);
+}
+
+/* Blue gradient button - matching design */
+.btn-blue-gradient {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+  color: white;
+  font-weight: 900;
+  border: none;
+}
+
+.btn-blue-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-blue-gradient:active {
+  transform: scale(0.98);
 }
 
 .consent-banner .btn-outline {
