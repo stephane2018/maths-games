@@ -42,7 +42,6 @@ export default function HomeScreen() {
       position: 'relative',
       overflow: 'auto',
     }}>
-      {/* Gradient overlay - top and bottom */}
       <div style={{
         position: 'absolute',
         top: 0,

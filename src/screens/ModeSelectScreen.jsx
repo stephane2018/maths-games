@@ -42,6 +42,7 @@ export default function ModeSelectScreen() {
       backgroundRepeat: 'no-repeat',
       minHeight: '100vh',
       position: 'relative',
+      overflow: 'auto',
     }}>
       {/* Gradient overlay - top and bottom */}
       <div style={{
@@ -72,7 +73,7 @@ export default function ModeSelectScreen() {
         <div className="top-bar-right" />
       </div>
 
-      <div className="screen-content" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="screen-content" style={{ position: 'relative', zIndex: 1, overflow: 'visible' }}>
         <h1 className="title anim-slide-down">{t('mode.title')}</h1>
 
         <div className="mode-cards">
