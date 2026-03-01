@@ -84,7 +84,7 @@ export default function HomeScreen() {
             </div>
           )}
           <div className="daily-title">{dailyChallenge.themeIcon} {t('home.dailyChallenge')}</div>
-          <div className="daily-theme">{t(`themes.${dailyChallenge.theme}`)} — +{dailyChallenge.bonusXP} XP</div>
+          <div className="daily-theme"> +{dailyChallenge.bonusXP} XP</div>
           {dailyCompleted && <div className="daily-done">{'\u2705'} {t('home.dailyDone')}</div>}
         </div>
 
@@ -92,7 +92,7 @@ export default function HomeScreen() {
           <GlassButton
             variant="gradient"
             size="lg"
-            className='!p-2'
+            className='!p-3'
             onClick={() => { sound.buttonClick(); push('ModeSelect'); }}
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -106,7 +106,7 @@ export default function HomeScreen() {
           <GlassButton
             variant="glass"
             size="lg"
-            className='!p-2'
+            className='!p-3'
             onClick={() => { sound.buttonClick(); push('Profile'); }}
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -121,7 +121,7 @@ export default function HomeScreen() {
           <GlassButton
             variant="glass"
             size="lg"
-            className='!p-2'
+            className='!p-3'
             onClick={() => { sound.buttonClick(); push('Leaderboard'); }}
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -135,7 +135,7 @@ export default function HomeScreen() {
           <GlassButton
             variant="glass"
             size="lg"
-            className='!p-2'
+            className='!p-3'
             onClick={() => { sound.buttonClick(); push('Settings'); }}
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
