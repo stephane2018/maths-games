@@ -113,8 +113,9 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
 
   const alphabetButtons = [
     ['a', 'b', 'c', 'd'],
-    ['m', 'n', 'x', 'y'],
-    ['x²', 'y²', '²', 'clear'],
+    ['a²', 'b²', 'c²', 'd²'],
+    ['x', 'y', 'x²', 'y²'],
+    ['+', '-', '²', 'clear'],
     ['0', '1', '2', 'submit'],
   ];
 
