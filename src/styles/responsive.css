@@ -35,7 +35,56 @@
   }
 
   .home-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .home-brand {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .home-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+
+  .home-buttons {
+    max-width: 100%;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .mode-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .mode-card {
+    padding: 20px 16px;
+  }
+
+  .mode-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .mode-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .mode-card-desc {
+    font-size: 0.8rem;
   }
 
   .game-layout {
@@ -177,6 +226,50 @@
   .title { font-size: 1.5rem; }
   .subtitle { font-size: 0.95rem; }
 
+  .home-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .home-brand {
+    font-size: 0.85rem;
+  }
+
+  .home-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .home-buttons {
+    max-width: 100%;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .mode-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .mode-card {
+    padding: 24px 18px;
+  }
+
+  .mode-card-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 12px;
+  }
+
+  .mode-card-title {
+    font-size: 1.2rem;
+  }
+
+  .mode-card-desc {
+    font-size: 0.9rem;
+  }
+
   .app-footer {
     font-size: 0.6rem;
     bottom: 6px;
@@ -218,11 +311,16 @@
   }
   
   /* Scroll horizontal uniquement pour les listes et stats */
-  .mode-cards,
   .about-list,
   .result-stats {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .screen-content {
+    padding: 12px;
+    gap: 12px;
+    justify-content: center;
   }
 
   .card { padding: 14px; }
