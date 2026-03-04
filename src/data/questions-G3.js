@@ -1,735 +1,1702 @@
-// =============================================================================
-// G3 - Volumes
-// CE1D Belgian exam - Trilingual (FR / EN / NL)
-// =============================================================================
-
 export const questions = [
-  // Level 1 — Volume of rectangular prisms and cubes
   {
-    id: "G3_s_1", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 4 cm, 3 cm en 2 cm?" },
-    answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = L . l . h.", en: "Volume = L . w . h.", nl: "Volume = L . b . h." }
-  },
-  {
-    id: "G3_s_2", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 5 cm ?", en: "What is the volume of a cube with side 5 cm?", nl: "Wat is het volume van een kubus met zijde 5 cm?" },
-    answer: 125, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = côté³ = 5 . 5 . 5.", en: "Volume = side³ = 5 . 5 . 5.", nl: "Volume = zijde³ = 5 . 5 . 5." }
-  },
-  {
-    id: "G3_s_3", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 2 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 2 cm and 3 cm?", nl: "Wat is het volume van een balk van 10 cm, 2 cm en 3 cm?" },
-    answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 2 . 3.", en: "Volume = 10 . 2 . 3.", nl: "Volume = 10 . 2 . 3." }
-  },
-  {
-    id: "G3_s_4", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 3 cm ?", en: "What is the volume of a cube with side 3 cm?", nl: "Wat is het volume van een kubus met zijde 3 cm?" },
-    answer: 27, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 . 3 . 3.", en: "Volume = 3 . 3 . 3.", nl: "Volume = 3 . 3 . 3." }
-  },
-  {
-    id: "G3_s_5", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 5 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 5 cm and 4 cm?", nl: "Wat is het volume van een balk van 6 cm, 5 cm en 4 cm?" },
-    answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 . 5 . 4.", en: "Volume = 6 . 5 . 4.", nl: "Volume = 6 . 5 . 4." }
-  },
-  // Level 2 — Larger prisms, inverse problems
-  {
-    id: "G3_s_6", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un cube de côté 8 cm ?", en: "What is the volume of a cube with side 8 cm?", nl: "Wat is het volume van een kubus met zijde 8 cm?" },
-    answer: 512, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 8 . 8 = 512.", en: "Volume = 8 . 8 . 8 = 512.", nl: "Volume = 8 . 8 . 8 = 512." }
-  },
-  {
-    id: "G3_s_7", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un pavé droit de 12 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 12 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 12 cm, 5 cm en 3 cm?" },
-    answer: 180, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 12 . 5 . 3.", en: "Volume = 12 . 5 . 3.", nl: "Volume = 12 . 5 . 3." }
-  },
-  {
-    id: "G3_s_8", category: "G3", level: 2,
-    text: { fr: "Un aquarium mesure 30 cm . 20 cm . 15 cm. Quel est son volume en cm³ ?", en: "An aquarium measures 30 cm . 20 cm . 15 cm. What is its volume in cm³?", nl: "Een aquarium meet 30 cm . 20 cm . 15 cm. Wat is het volume in cm³?" },
-    answer: 9000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 30 . 20 . 15.", en: "Volume = 30 . 20 . 15.", nl: "Volume = 30 . 20 . 15." }
-  },
-  {
-    id: "G3_s_9", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 7 cm et 10 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 7 cm and 10 cm?", nl: "Wat is het volume van een balk van 7 cm, 7 cm en 10 cm?" },
-    answer: 490, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 7 . 10.", en: "Volume = 7 . 7 . 10.", nl: "Volume = 7 . 7 . 10." }
-  },
-  {
-    id: "G3_s_10", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 64 cm³. Quel est la longueur de son côté ?", en: "A cube has a volume of 64 cm³. What is its side length?", nl: "Een kubus heeft een volume van 64 cm³. Hoe lang is zijn zijde?" },
-    answer: 4, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 64 ? 4 . 4 . 4 = 64.", en: "What number cubed gives 64? 4 . 4 . 4 = 64.", nl: "Welk getal tot de derde macht geeft 64? 4 . 4 . 4 = 64." }
-  },
-  // Level 3 — Composite volumes, counting cubes
-  {
-    id: "G3_s_11", category: "G3", level: 3,
-    text: { fr: "Un pavé de 8 . 6 . 5 cm a un cube de 2 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 8 . 6 . 5 cm has a 2 cm cube cut from a corner. What volume remains?", nl: "Een balk van 8 . 6 . 5 cm heeft een kubus van 2 cm uit een hoek gesneden. Welk volume blijft over?" },
-    answer: 232, tolerance: 0, unit: "cm³",
-    hint: { fr: "240 - 8 = 232.", en: "240 - 8 = 232.", nl: "240 - 8 = 232." }
-  },
-  {
-    id: "G3_s_12", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 10 . 8 . 6 cm ?", en: "How many 2 cm cubes fit in a 10 . 8 . 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 10 . 8 . 6 cm?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "10/2 . 8/2 . 6/2 = 5 . 4 . 3.", en: "10/2 . 8/2 . 6/2 = 5 . 4 . 3.", nl: "10/2 . 8/2 . 6/2 = 5 . 4 . 3." }
-  },
-  {
-    id: "G3_s_13", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 40 . 25 . 30 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A 40 . 25 . 30 cm aquarium is 3/4 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 40 . 25 . 30 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 22500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis . 3/4.", en: "Total volume = 30,000. Then . 3/4.", nl: "Totaal volume = 30.000. Dan . 3/4." }
-  },
-  {
-    id: "G3_s_14", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 cubes : un de côté 3 cm et un de côté 4 cm ?", en: "What is the total volume of 2 cubes: one with side 3 cm and one with side 4 cm?", nl: "Wat is het totale volume van 2 kubussen: een met zijde 3 cm en een met zijde 4 cm?" },
-    answer: 91, tolerance: 0, unit: "cm³",
-    hint: { fr: "3³ + 4³ = 27 + 64.", en: "3³ + 4³ = 27 + 64.", nl: "3³ + 4³ = 27 + 64." }
-  },
-  {
-    id: "G3_s_15", category: "G3", level: 3,
-    text: { fr: "Un cube de 10 cm d'arête a un cube de 5 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A cube with 10 cm edge has a 5 cm cube removed from a corner. What volume remains?", nl: "Een kubus met ribbe 10 cm heeft een kubus van 5 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 875, tolerance: 0, unit: "cm³",
-    hint: { fr: "1000 - 125 = 875.", en: "1000 - 125 = 875.", nl: "1000 - 125 = 875." }
-  },
-
-  // ── Level 1 — additional (G3_s_16 – G3_s_27) ─────────────────────────────
-  {
-    id: "G3_s_16", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 2 cm ?", en: "What is the volume of a cube with side 2 cm?", nl: "Wat is het volume van een kubus met zijde 2 cm?" },
-    answer: 8, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 2 . 2 . 2.", en: "Volume = 2 . 2 . 2.", nl: "Volume = 2 . 2 . 2." }
-  },
-  {
-    id: "G3_s_17", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 5 cm, 4 cm en 3 cm?" },
-    answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 . 4 . 3.", en: "Volume = 5 . 4 . 3.", nl: "Volume = 5 . 4 . 3." }
-  },
-  {
-    id: "G3_s_18", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 4 cm ?", en: "What is the volume of a cube with side 4 cm?", nl: "Wat is het volume van een kubus met zijde 4 cm?" },
-    answer: 64, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 . 4 . 4.", en: "Volume = 4 . 4 . 4.", nl: "Volume = 4 . 4 . 4." }
-  },
-  {
-    id: "G3_s_19", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 8 cm, 3 cm en 2 cm?" },
-    answer: 48, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 3 . 2.", en: "Volume = 8 . 3 . 2.", nl: "Volume = 8 . 3 . 2." }
-  },
-  {
-    id: "G3_s_20", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 4 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 4 cm and 2 cm?", nl: "Wat is het volume van een balk van 7 cm, 4 cm en 2 cm?" },
-    answer: 56, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 4 . 2.", en: "Volume = 7 . 4 . 2.", nl: "Volume = 7 . 4 . 2." }
-  },
-  {
-    id: "G3_s_21", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 6 cm ?", en: "What is the volume of a cube with side 6 cm?", nl: "Wat is het volume van een kubus met zijde 6 cm?" },
-    answer: 216, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 . 6 . 6.", en: "Volume = 6 . 6 . 6.", nl: "Volume = 6 . 6 . 6." }
-  },
-  {
-    id: "G3_s_22", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 2 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 2 cm and 5 cm?", nl: "Wat is het volume van een balk van 9 cm, 2 cm en 5 cm?" },
-    answer: 90, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 . 2 . 5.", en: "Volume = 9 . 2 . 5.", nl: "Volume = 9 . 2 . 5." }
-  },
-  {
-    id: "G3_s_23", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 1 cm ?", en: "What is the volume of a cube with side 1 cm?", nl: "Wat is het volume van een kubus met zijde 1 cm?" },
-    answer: 1, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 1 . 1 . 1.", en: "Volume = 1 . 1 . 1.", nl: "Volume = 1 . 1 . 1." }
-  },
-  {
-    id: "G3_s_24", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 3 cm, 3 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 3 cm, 3 cm and 5 cm?", nl: "Wat is het volume van een balk van 3 cm, 3 cm en 5 cm?" },
-    answer: 45, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 . 3 . 5.", en: "Volume = 3 . 3 . 5.", nl: "Volume = 3 . 3 . 5." }
-  },
-  {
-    id: "G3_s_25", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 5 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 5 cm and 2 cm?", nl: "Wat is het volume van een balk van 10 cm, 5 cm en 2 cm?" },
-    answer: 100, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 5 . 2.", en: "Volume = 10 . 5 . 2.", nl: "Volume = 10 . 5 . 2." }
-  },
-  {
-    id: "G3_s_26", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 6 cm, 3 cm en 2 cm?" },
-    answer: 36, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 . 3 . 2.", en: "Volume = 6 . 3 . 2.", nl: "Volume = 6 . 3 . 2." }
-  },
-  {
-    id: "G3_s_27", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 7 cm ?", en: "What is the volume of a cube with side 7 cm?", nl: "Wat is het volume van een kubus met zijde 7 cm?" },
-    answer: 343, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 7 . 7.", en: "Volume = 7 . 7 . 7.", nl: "Volume = 7 . 7 . 7." }
-  },
-
-  // ── Level 2 — additional (G3_s_28 – G3_s_39) ─────────────────────────────
-  {
-    id: "G3_s_28", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un cube de côté 9 cm ?", en: "What is the volume of a cube with side 9 cm?", nl: "Wat is het volume van een kubus met zijde 9 cm?" },
-    answer: 729, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 . 9 . 9 = 729.", en: "Volume = 9 . 9 . 9 = 729.", nl: "Volume = 9 . 9 . 9 = 729." }
-  },
-  {
-    id: "G3_s_29", category: "G3", level: 2,
-    text: { fr: "Une boîte mesure 15 cm . 10 cm . 8 cm. Quel est son volume ?", en: "A box measures 15 cm . 10 cm . 8 cm. What is its volume?", nl: "Een doos meet 15 cm . 10 cm . 8 cm. Wat is het volume?" },
-    answer: 1200, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 15 . 10 . 8.", en: "Volume = 15 . 10 . 8.", nl: "Volume = 15 . 10 . 8." }
-  },
-  {
-    id: "G3_s_30", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 27 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 27 cm³. What is its side length?", nl: "Een kubus heeft een volume van 27 cm³. Hoe lang is zijn zijde?" },
-    answer: 3, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 27 ? 3 . 3 . 3 = 27.", en: "What number cubed gives 27? 3 . 3 . 3 = 27.", nl: "Welk getal tot de derde macht geeft 27? 3 . 3 . 3 = 27." }
-  },
-  {
-    id: "G3_s_31", category: "G3", level: 2,
-    text: { fr: "Un tiroir mesure 20 cm . 15 cm . 6 cm. Quel est son volume ?", en: "A drawer measures 20 cm . 15 cm . 6 cm. What is its volume?", nl: "Een lade meet 20 cm . 15 cm . 6 cm. Wat is het volume?" },
-    answer: 1800, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 20 . 15 . 6.", en: "Volume = 20 . 15 . 6.", nl: "Volume = 20 . 15 . 6." }
-  },
-  {
-    id: "G3_s_32", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 125 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 125 cm³. What is its side length?", nl: "Een kubus heeft een volume van 125 cm³. Hoe lang is zijn zijde?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 125 ? 5 . 5 . 5 = 125.", en: "What number cubed gives 125? 5 . 5 . 5 = 125.", nl: "Welk getal tot de derde macht geeft 125? 5 . 5 . 5 = 125." }
-  },
-  {
-    id: "G3_s_33", category: "G3", level: 2,
-    text: { fr: "Un bac à sable mesure 25 cm . 20 cm . 10 cm. Quel est son volume ?", en: "A sandbox measures 25 cm . 20 cm . 10 cm. What is its volume?", nl: "Een zandbak meet 25 cm . 20 cm . 10 cm. Wat is het volume?" },
-    answer: 5000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 25 . 20 . 10.", en: "Volume = 25 . 20 . 10.", nl: "Volume = 25 . 20 . 10." }
-  },
-  {
-    id: "G3_s_34", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un pavé droit de 11 cm, 8 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 11 cm, 8 cm and 5 cm?", nl: "Wat is het volume van een balk van 11 cm, 8 cm en 5 cm?" },
-    answer: 440, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 11 . 8 . 5.", en: "Volume = 11 . 8 . 5.", nl: "Volume = 11 . 8 . 5." }
-  },
-  {
-    id: "G3_s_35", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 8 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 8 cm³. What is its side length?", nl: "Een kubus heeft een volume van 8 cm³. Hoe lang is zijn zijde?" },
-    answer: 2, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 8 ? 2 . 2 . 2 = 8.", en: "What number cubed gives 8? 2 . 2 . 2 = 8.", nl: "Welk getal tot de derde macht geeft 8? 2 . 2 . 2 = 8." }
-  },
-  {
-    id: "G3_s_36", category: "G3", level: 2,
-    text: { fr: "Un coffre mesure 50 cm . 30 cm . 20 cm. Quel est son volume ?", en: "A chest measures 50 cm . 30 cm . 20 cm. What is its volume?", nl: "Een kist meet 50 cm . 30 cm . 20 cm. Wat is het volume?" },
-    answer: 30000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 50 . 30 . 20.", en: "Volume = 50 . 30 . 20.", nl: "Volume = 50 . 30 . 20." }
-  },
-  {
-    id: "G3_s_37", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 120 cm³. Sa longueur est 10 cm et sa largeur 4 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 120 cm³. Its length is 10 cm and width 4 cm. What is its height?", nl: "Een balk heeft een volume van 120 cm³. De lengte is 10 cm en de breedte 4 cm. Wat is de hoogte?" },
-    answer: 3, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 120 : (10 . 4) = 120 : 40.", en: "Height = 120 : (10 . 4) = 120 : 40.", nl: "Hoogte = 120 : (10 . 4) = 120 : 40." }
-  },
-  {
-    id: "G3_s_38", category: "G3", level: 2,
-    text: { fr: "Quel est le volume d'un pavé droit de 14 cm, 10 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 14 cm, 10 cm and 5 cm?", nl: "Wat is het volume van een balk van 14 cm, 10 cm en 5 cm?" },
-    answer: 700, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 14 . 10 . 5.", en: "Volume = 14 . 10 . 5.", nl: "Volume = 14 . 10 . 5." }
-  },
-  {
-    id: "G3_s_39", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 240 cm³. Sa longueur est 8 cm et sa hauteur 5 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 240 cm³. Its length is 8 cm and height 5 cm. What is its width?", nl: "Een balk heeft een volume van 240 cm³. De lengte is 8 cm en de hoogte 5 cm. Wat is de breedte?" },
-    answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 240 : (8 . 5) = 240 : 40.", en: "Width = 240 : (8 . 5) = 240 : 40.", nl: "Breedte = 240 : (8 . 5) = 240 : 40." }
-  },
-
-  // ── Level 3 — additional (G3_s_40 – G3_s_50) ─────────────────────────────
-  {
-    id: "G3_s_40", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 . 9 . 6 cm ?", en: "How many 3 cm cubes fit in a 12 . 9 . 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 . 9 . 6 cm?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "12/3 . 9/3 . 6/3 = 4 . 3 . 2.", en: "12/3 . 9/3 . 6/3 = 4 . 3 . 2.", nl: "12/3 . 9/3 . 6/3 = 4 . 3 . 2." }
-  },
-  {
-    id: "G3_s_41", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 50 . 20 . 30 cm est rempli à moitié. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 . 20 . 30 cm aquarium is half full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 . 20 . 30 cm is halfvol. Hoeveel water bevat het (in cm³)?" },
-    answer: 15000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis : 2.", en: "Total volume = 30,000. Then : 2.", nl: "Totaal volume = 30.000. Dan : 2." }
-  },
-  {
-    id: "G3_s_42", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 pavés droits : un de 5 . 4 . 3 cm et un de 6 . 3 . 2 cm ?", en: "What is the total volume of 2 prisms: one of 5 . 4 . 3 cm and one of 6 . 3 . 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 5 . 4 . 3 cm en een van 6 . 3 . 2 cm?" },
-    answer: 96, tolerance: 0, unit: "cm³",
-    hint: { fr: "60 + 36 = 96.", en: "60 + 36 = 96.", nl: "60 + 36 = 96." }
-  },
-  {
-    id: "G3_s_43", category: "G3", level: 3,
-    text: { fr: "Un pavé de 10 . 8 . 6 cm a un cube de 4 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 10 . 8 . 6 cm has a 4 cm cube cut from a corner. What volume remains?", nl: "Een balk van 10 . 8 . 6 cm heeft een kubus van 4 cm uit een hoek gesneden. Welk volume blijft over?" },
-    answer: 416, tolerance: 0, unit: "cm³",
-    hint: { fr: "480 - 64 = 416.", en: "480 - 64 = 416.", nl: "480 - 64 = 416." }
-  },
-  {
-    id: "G3_s_44", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 20 . 15 . 10 cm ?", en: "How many 5 cm cubes fit in a 20 . 15 . 10 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 20 . 15 . 10 cm?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "20/5 . 15/5 . 10/5 = 4 . 3 . 2.", en: "20/5 . 15/5 . 10/5 = 4 . 3 . 2.", nl: "20/5 . 15/5 . 10/5 = 4 . 3 . 2." }
-  },
-  {
-    id: "G3_s_45", category: "G3", level: 3,
-    text: { fr: "Un bac de 30 . 20 . 10 cm est rempli au 1/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 30 . 20 . 10 cm is 1/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 30 . 20 . 10 cm is 1/4 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 1500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 6 000. Puis . 1/4.", en: "Total volume = 6,000. Then . 1/4.", nl: "Totaal volume = 6.000. Dan . 1/4." }
-  },
-  {
-    id: "G3_s_46", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 3 cubes identiques de côté 3 cm ?", en: "What is the total volume of 3 identical cubes with side 3 cm?", nl: "Wat is het totale volume van 3 identieke kubussen met zijde 3 cm?" },
-    answer: 81, tolerance: 0, unit: "cm³",
-    hint: { fr: "3 . (3 . 3 . 3) = 3 . 27.", en: "3 . (3 . 3 . 3) = 3 . 27.", nl: "3 . (3 . 3 . 3) = 3 . 27." }
-  },
-  {
-    id: "G3_s_47", category: "G3", level: 3,
-    text: { fr: "Un pavé de 12 . 10 . 8 cm a un pavé de 6 . 4 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 12 . 10 . 8 cm has a 6 . 4 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 12 . 10 . 8 cm heeft een balk van 6 . 4 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 888, tolerance: 0, unit: "cm³",
-    hint: { fr: "960 - 72 = 888.", en: "960 - 72 = 888.", nl: "960 - 72 = 888." }
-  },
-  {
-    id: "G3_s_48", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 16 . 12 . 8 cm ?", en: "How many 4 cm cubes fit in a 16 . 12 . 8 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 16 . 12 . 8 cm?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "16/4 . 12/4 . 8/4 = 4 . 3 . 2.", en: "16/4 . 12/4 . 8/4 = 4 . 3 . 2.", nl: "16/4 . 12/4 . 8/4 = 4 . 3 . 2." }
-  },
-  {
-    id: "G3_s_49", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 60 . 30 . 20 cm est rempli aux 2/3. Quel volume d'eau contient-il (en cm³) ?", en: "A 60 . 30 . 20 cm aquarium is 2/3 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 60 . 30 . 20 cm is 2/3 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 24000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 36 000. Puis . 2/3.", en: "Total volume = 36,000. Then . 2/3.", nl: "Totaal volume = 36.000. Dan . 2/3." }
-  },
-  {
-    id: "G3_s_50", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total d'un cube de côté 5 cm et d'un pavé droit de 10 . 4 . 3 cm ?", en: "What is the total volume of a cube with side 5 cm and a prism of 10 . 4 . 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 5 cm en een balk van 10 . 4 . 3 cm?" },
-    answer: 245, tolerance: 0, unit: "cm³",
-    hint: { fr: "125 + 120 = 245.", en: "125 + 120 = 245.", nl: "125 + 120 = 245." }
-  },
-
-  // ── Level 1 — additional (G3_s_51 – G3_s_71) ─────────────────────────────
-  {
-    id: "G3_s_51", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 9 cm ?", en: "What is the volume of a cube with side 9 cm?", nl: "Wat is het volume van een kubus met zijde 9 cm?" },
-    answer: 729, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 . 9 . 9.", en: "Volume = 9 . 9 . 9.", nl: "Volume = 9 . 9 . 9." }
-  },
-  {
-    id: "G3_s_52", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 5 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 5 cm and 2 cm?", nl: "Wat is het volume van een balk van 5 cm, 5 cm en 2 cm?" },
-    answer: 50, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 . 5 . 2.", en: "Volume = 5 . 5 . 2.", nl: "Volume = 5 . 5 . 2." }
-  },
-  {
-    id: "G3_s_53", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 3 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 3 cm and 3 cm?", nl: "Wat is het volume van een balk van 7 cm, 3 cm en 3 cm?" },
-    answer: 63, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 3 . 3.", en: "Volume = 7 . 3 . 3.", nl: "Volume = 7 . 3 . 3." }
-  },
-  {
-    id: "G3_s_54", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 10 cm ?", en: "What is the volume of a cube with side 10 cm?", nl: "Wat is het volume van een kubus met zijde 10 cm?" },
-    answer: 1000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 10 . 10.", en: "Volume = 10 . 10 . 10.", nl: "Volume = 10 . 10 . 10." }
-  },
-  {
-    id: "G3_s_55", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 4 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 4 cm and 5 cm?", nl: "Wat is het volume van een balk van 4 cm, 4 cm en 5 cm?" },
-    answer: 80, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 . 4 . 5.", en: "Volume = 4 . 4 . 5.", nl: "Volume = 4 . 4 . 5." }
-  },
-  {
-    id: "G3_s_56", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 2 cm et 5 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 2 cm and 5 cm?", nl: "Wat is het volume van een balk van 6 cm, 2 cm en 5 cm?" },
-    answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 . 2 . 5.", en: "Volume = 6 . 2 . 5.", nl: "Volume = 6 . 2 . 5." }
-  },
-  {
-    id: "G3_s_57", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 5 cm en 3 cm?" },
-    answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 5 . 3.", en: "Volume = 8 . 5 . 3.", nl: "Volume = 8 . 5 . 3." }
-  },
-  {
-    id: "G3_s_58", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 8 cm ?", en: "What is the volume of a cube with side 8 cm?", nl: "Wat is het volume van een kubus met zijde 8 cm?" },
-    answer: 512, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 8 . 8.", en: "Volume = 8 . 8 . 8.", nl: "Volume = 8 . 8 . 8." }
-  },
-  {
-    id: "G3_s_59", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 9 cm, 4 cm en 3 cm?" },
-    answer: 108, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 . 4 . 3.", en: "Volume = 9 . 4 . 3.", nl: "Volume = 9 . 4 . 3." }
-  },
-  {
-    id: "G3_s_60", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 4 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 4 cm and 2 cm?", nl: "Wat is het volume van een balk van 10 cm, 4 cm en 2 cm?" },
-    answer: 80, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 4 . 2.", en: "Volume = 10 . 4 . 2.", nl: "Volume = 10 . 4 . 2." }
-  },
-  {
-    id: "G3_s_61", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 3 cm, 2 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 3 cm, 2 cm and 4 cm?", nl: "Wat is het volume van een balk van 3 cm, 2 cm en 4 cm?" },
-    answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 3 . 2 . 4.", en: "Volume = 3 . 2 . 4.", nl: "Volume = 3 . 2 . 4." }
-  },
-  {
-    id: "G3_s_62", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 6 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 6 cm and 2 cm?", nl: "Wat is het volume van een balk van 5 cm, 6 cm en 2 cm?" },
-    answer: 60, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 . 6 . 2.", en: "Volume = 5 . 6 . 2.", nl: "Volume = 5 . 6 . 2." }
-  },
-  {
-    id: "G3_s_63", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 7 cm, 5 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 7 cm, 5 cm and 4 cm?", nl: "Wat is het volume van een balk van 7 cm, 5 cm en 4 cm?" },
-    answer: 140, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 5 . 4.", en: "Volume = 7 . 5 . 4.", nl: "Volume = 7 . 5 . 4." }
-  },
-  {
-    id: "G3_s_64", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 3 cm et 4 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 3 cm and 4 cm?", nl: "Wat is het volume van een balk van 10 cm, 3 cm en 4 cm?" },
-    answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 3 . 4.", en: "Volume = 10 . 3 . 4.", nl: "Volume = 10 . 3 . 4." }
-  },
-  {
-    id: "G3_s_65", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 2 cm, 2 cm et 6 cm ?", en: "What is the volume of a rectangular prism: 2 cm, 2 cm and 6 cm?", nl: "Wat is het volume van een balk van 2 cm, 2 cm en 6 cm?" },
-    answer: 24, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 2 . 2 . 6.", en: "Volume = 2 . 2 . 6.", nl: "Volume = 2 . 2 . 6." }
-  },
-  {
-    id: "G3_s_66", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 4 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 4 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 4 cm en 3 cm?" },
-    answer: 96, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 4 . 3.", en: "Volume = 8 . 4 . 3.", nl: "Volume = 8 . 4 . 3." }
-  },
-  {
-    id: "G3_s_67", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 6 cm, 6 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 6 cm, 6 cm and 3 cm?", nl: "Wat is het volume van een balk van 6 cm, 6 cm en 3 cm?" },
-    answer: 108, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 6 . 6 . 3.", en: "Volume = 6 . 6 . 3.", nl: "Volume = 6 . 6 . 3." }
-  },
-  {
-    id: "G3_s_68", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 9 cm, 3 cm et 2 cm ?", en: "What is the volume of a rectangular prism: 9 cm, 3 cm and 2 cm?", nl: "Wat is het volume van een balk van 9 cm, 3 cm en 2 cm?" },
-    answer: 54, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 9 . 3 . 2.", en: "Volume = 9 . 3 . 2.", nl: "Volume = 9 . 3 . 2." }
-  },
-  {
-    id: "G3_s_69", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 4 cm, 2 cm et 7 cm ?", en: "What is the volume of a rectangular prism: 4 cm, 2 cm and 7 cm?", nl: "Wat is het volume van een balk van 4 cm, 2 cm en 7 cm?" },
-    answer: 56, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 4 . 2 . 7.", en: "Volume = 4 . 2 . 7.", nl: "Volume = 4 . 2 . 7." }
-  },
-  {
-    id: "G3_s_70", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 5 cm, 3 cm et 6 cm ?", en: "What is the volume of a rectangular prism: 5 cm, 3 cm and 6 cm?", nl: "Wat is het volume van een balk van 5 cm, 3 cm en 6 cm?" },
-    answer: 90, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 5 . 3 . 6.", en: "Volume = 5 . 3 . 6.", nl: "Volume = 5 . 3 . 6." }
-  },
-  {
-    id: "G3_s_71", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 10 cm, 6 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 10 cm, 6 cm and 3 cm?", nl: "Wat is het volume van een balk van 10 cm, 6 cm en 3 cm?" },
-    answer: 180, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 10 . 6 . 3.", en: "Volume = 10 . 6 . 3.", nl: "Volume = 10 . 6 . 3." }
-  },
-
-  // ── Level 2 — additional (G3_s_72 – G3_s_91) ─────────────────────────────
-  {
-    id: "G3_s_72", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 216 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 216 cm³. What is its side length?", nl: "Een kubus heeft een volume van 216 cm³. Hoe lang is zijn zijde?" },
-    answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 216 ? 6 . 6 . 6 = 216.", en: "What number cubed gives 216? 6 . 6 . 6 = 216.", nl: "Welk getal tot de derde macht geeft 216? 6 . 6 . 6 = 216." }
-  },
-  {
-    id: "G3_s_73", category: "G3", level: 2,
-    text: { fr: "Une valise mesure 40 cm . 25 cm . 15 cm. Quel est son volume ?", en: "A suitcase measures 40 cm . 25 cm . 15 cm. What is its volume?", nl: "Een koffer meet 40 cm . 25 cm . 15 cm. Wat is het volume?" },
-    answer: 15000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 40 . 25 . 15.", en: "Volume = 40 . 25 . 15.", nl: "Volume = 40 . 25 . 15." }
-  },
-  {
-    id: "G3_s_74", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 180 cm³. Sa longueur est 9 cm et sa largeur 5 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 180 cm³. Its length is 9 cm and width 5 cm. What is its height?", nl: "Een balk heeft een volume van 180 cm³. De lengte is 9 cm en de breedte 5 cm. Wat is de hoogte?" },
-    answer: 4, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 180 : (9 . 5) = 180 : 45.", en: "Height = 180 : (9 . 5) = 180 : 45.", nl: "Hoogte = 180 : (9 . 5) = 180 : 45." }
-  },
-  {
-    id: "G3_s_75", category: "G3", level: 2,
-    text: { fr: "Un réfrigérateur mesure 60 cm . 50 cm . 40 cm à l'intérieur. Quel est son volume ?", en: "A fridge measures 60 cm . 50 cm . 40 cm inside. What is its volume?", nl: "Een koelkast meet 60 cm . 50 cm . 40 cm van binnen. Wat is het volume?" },
-    answer: 120000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 60 . 50 . 40.", en: "Volume = 60 . 50 . 40.", nl: "Volume = 60 . 50 . 40." }
-  },
-  {
-    id: "G3_s_76", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 343 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 343 cm³. What is its side length?", nl: "Een kubus heeft een volume van 343 cm³. Hoe lang is zijn zijde?" },
-    answer: 7, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 343 ? 7 . 7 . 7 = 343.", en: "What number cubed gives 343? 7 . 7 . 7 = 343.", nl: "Welk getal tot de derde macht geeft 343? 7 . 7 . 7 = 343." }
-  },
-  {
-    id: "G3_s_77", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 200 cm³. Sa longueur est 10 cm et sa hauteur 4 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 200 cm³. Its length is 10 cm and height 4 cm. What is its width?", nl: "Een balk heeft een volume van 200 cm³. De lengte is 10 cm en de hoogte 4 cm. Wat is de breedte?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 200 : (10 . 4) = 200 : 40.", en: "Width = 200 : (10 . 4) = 200 : 40.", nl: "Breedte = 200 : (10 . 4) = 200 : 40." }
-  },
-  {
-    id: "G3_s_78", category: "G3", level: 2,
-    text: { fr: "Une boîte à chaussures mesure 35 cm . 20 cm . 12 cm. Quel est son volume ?", en: "A shoe box measures 35 cm . 20 cm . 12 cm. What is its volume?", nl: "Een schoenendoos meet 35 cm . 20 cm . 12 cm. Wat is het volume?" },
-    answer: 8400, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 35 . 20 . 12.", en: "Volume = 35 . 20 . 12.", nl: "Volume = 35 . 20 . 12." }
-  },
-  {
-    id: "G3_s_79", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 360 cm³. Sa largeur est 6 cm et sa hauteur 10 cm. Quelle est sa longueur ?", en: "A rectangular prism has a volume of 360 cm³. Its width is 6 cm and height 10 cm. What is its length?", nl: "Een balk heeft een volume van 360 cm³. De breedte is 6 cm en de hoogte 10 cm. Wat is de lengte?" },
-    answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Longueur = 360 : (6 . 10) = 360 : 60.", en: "Length = 360 : (6 . 10) = 360 : 60.", nl: "Lengte = 360 : (6 . 10) = 360 : 60." }
-  },
-  {
-    id: "G3_s_80", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 729 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 729 cm³. What is its side length?", nl: "Een kubus heeft een volume van 729 cm³. Hoe lang is zijn zijde?" },
-    answer: 9, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 729 ? 9 . 9 . 9 = 729.", en: "What number cubed gives 729? 9 . 9 . 9 = 729.", nl: "Welk getal tot de derde macht geeft 729? 9 . 9 . 9 = 729." }
-  },
-  {
-    id: "G3_s_81", category: "G3", level: 2,
-    text: { fr: "Un casier mesure 30 cm . 25 cm . 40 cm. Quel est son volume ?", en: "A locker measures 30 cm . 25 cm . 40 cm. What is its volume?", nl: "Een kluisje meet 30 cm . 25 cm . 40 cm. Wat is het volume?" },
-    answer: 30000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 30 . 25 . 40.", en: "Volume = 30 . 25 . 40.", nl: "Volume = 30 . 25 . 40." }
-  },
-  {
-    id: "G3_s_82", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 150 cm³. Sa longueur est 5 cm et sa largeur 6 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 150 cm³. Its length is 5 cm and width 6 cm. What is its height?", nl: "Een balk heeft een volume van 150 cm³. De lengte is 5 cm en de breedte 6 cm. Wat is de hoogte?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 150 : (5 . 6) = 150 : 30.", en: "Height = 150 : (5 . 6) = 150 : 30.", nl: "Hoogte = 150 : (5 . 6) = 150 : 30." }
-  },
-  {
-    id: "G3_s_83", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 512 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 512 cm³. What is its side length?", nl: "Een kubus heeft een volume van 512 cm³. Hoe lang is zijn zijde?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 512 ? 8 . 8 . 8 = 512.", en: "What number cubed gives 512? 8 . 8 . 8 = 512.", nl: "Welk getal tot de derde macht geeft 512? 8 . 8 . 8 = 512." }
-  },
-  {
-    id: "G3_s_84", category: "G3", level: 2,
-    text: { fr: "Un carton mesure 45 cm . 30 cm . 20 cm. Quel est son volume ?", en: "A cardboard box measures 45 cm . 30 cm . 20 cm. What is its volume?", nl: "Een kartonnen doos meet 45 cm . 30 cm . 20 cm. Wat is het volume?" },
-    answer: 27000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 45 . 30 . 20.", en: "Volume = 45 . 30 . 20.", nl: "Volume = 45 . 30 . 20." }
-  },
-  {
-    id: "G3_s_85", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 300 cm³. Sa longueur est 10 cm et sa hauteur 6 cm. Quelle est sa largeur ?", en: "A rectangular prism has a volume of 300 cm³. Its length is 10 cm and height 6 cm. What is its width?", nl: "Een balk heeft een volume van 300 cm³. De lengte is 10 cm en de hoogte 6 cm. Wat is de breedte?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = 300 : (10 . 6) = 300 : 60.", en: "Width = 300 : (10 . 6) = 300 : 60.", nl: "Breedte = 300 : (10 . 6) = 300 : 60." }
-  },
-  {
-    id: "G3_s_86", category: "G3", level: 2,
-    text: { fr: "Un cube a un volume de 1000 cm³. Quelle est la longueur de son côté ?", en: "A cube has a volume of 1000 cm³. What is its side length?", nl: "Een kubus heeft een volume van 1000 cm³. Hoe lang is zijn zijde?" },
-    answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "Quel nombre au cube donne 1000 ? 10 . 10 . 10 = 1000.", en: "What number cubed gives 1000? 10 . 10 . 10 = 1000.", nl: "Welk getal tot de derde macht geeft 1000? 10 . 10 . 10 = 1000." }
-  },
-  {
-    id: "G3_s_87", category: "G3", level: 2,
-    text: { fr: "Un bac de rangement mesure 20 cm . 12 cm . 8 cm. Quel est son volume ?", en: "A storage bin measures 20 cm . 12 cm . 8 cm. What is its volume?", nl: "Een opbergbak meet 20 cm . 12 cm . 8 cm. Wat is het volume?" },
-    answer: 1920, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 20 . 12 . 8.", en: "Volume = 20 . 12 . 8.", nl: "Volume = 20 . 12 . 8." }
-  },
-  {
-    id: "G3_s_88", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 480 cm³. Sa longueur est 12 cm et sa largeur 8 cm. Quelle est sa hauteur ?", en: "A rectangular prism has a volume of 480 cm³. Its length is 12 cm and width 8 cm. What is its height?", nl: "Een balk heeft een volume van 480 cm³. De lengte is 12 cm en de breedte 8 cm. Wat is de hoogte?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 480 : (12 . 8) = 480 : 96.", en: "Height = 480 : (12 . 8) = 480 : 96.", nl: "Hoogte = 480 : (12 . 8) = 480 : 96." }
-  },
-  {
-    id: "G3_s_89", category: "G3", level: 2,
-    text: { fr: "Une glacière mesure 35 cm . 25 cm . 20 cm. Quel est son volume ?", en: "A cooler measures 35 cm . 25 cm . 20 cm. What is its volume?", nl: "Een koelbox meet 35 cm . 25 cm . 20 cm. Wat is het volume?" },
-    answer: 17500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 35 . 25 . 20.", en: "Volume = 35 . 25 . 20.", nl: "Volume = 35 . 25 . 20." }
-  },
-  {
-    id: "G3_s_90", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 210 cm³. Sa largeur est 7 cm et sa hauteur 5 cm. Quelle est sa longueur ?", en: "A rectangular prism has a volume of 210 cm³. Its width is 7 cm and height 5 cm. What is its length?", nl: "Een balk heeft een volume van 210 cm³. De breedte is 7 cm en de hoogte 5 cm. Wat is de lengte?" },
-    answer: 6, tolerance: 0, unit: "cm",
-    hint: { fr: "Longueur = 210 : (7 . 5) = 210 : 35.", en: "Length = 210 : (7 . 5) = 210 : 35.", nl: "Lengte = 210 : (7 . 5) = 210 : 35." }
-  },
-  {
-    id: "G3_s_91", category: "G3", level: 2,
-    text: { fr: "Un coffret à bijoux mesure 18 cm . 12 cm . 6 cm. Quel est son volume ?", en: "A jewelry box measures 18 cm . 12 cm . 6 cm. What is its volume?", nl: "Een juwelenkistje meet 18 cm . 12 cm . 6 cm. Wat is het volume?" },
-    answer: 1296, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 18 . 12 . 6.", en: "Volume = 18 . 12 . 6.", nl: "Volume = 18 . 12 . 6." }
-  },
-
-  // ── Level 3 — additional (G3_s_92 – G3_s_111) ─────────────────────────────
-  {
-    id: "G3_s_92", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 12 . 10 . 8 cm ?", en: "How many 2 cm cubes fit in a 12 . 10 . 8 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 12 . 10 . 8 cm?" },
-    answer: 120, tolerance: 0,
-    hint: { fr: "12/2 . 10/2 . 8/2 = 6 . 5 . 4.", en: "12/2 . 10/2 . 8/2 = 6 . 5 . 4.", nl: "12/2 . 10/2 . 8/2 = 6 . 5 . 4." }
-  },
-  {
-    id: "G3_s_93", category: "G3", level: 3,
-    text: { fr: "Un pavé de 12 . 8 . 5 cm a un cube de 3 cm découpé dans un coin. Quel est le volume restant ?", en: "A prism of 12 . 8 . 5 cm has a 3 cm cube cut from a corner. What volume remains?", nl: "Een balk van 12 . 8 . 5 cm heeft een kubus van 3 cm uit een hoek gesneden. Welk volume blijft over?" },
-    answer: 453, tolerance: 0, unit: "cm³",
-    hint: { fr: "480 - 27 = 453.", en: "480 - 27 = 453.", nl: "480 - 27 = 453." }
-  },
-  {
-    id: "G3_s_94", category: "G3", level: 3,
-    text: { fr: "Un bac de 20 . 10 . 12 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 20 . 10 . 12 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een bak van 20 . 10 . 12 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 1800, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 2 400. Puis . 3/4.", en: "Total volume = 2,400. Then . 3/4.", nl: "Totaal volume = 2.400. Dan . 3/4." }
-  },
-  {
-    id: "G3_s_95", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total d'un cube de côté 4 cm et d'un pavé droit de 6 . 5 . 3 cm ?", en: "What is the total volume of a cube with side 4 cm and a prism of 6 . 5 . 3 cm?", nl: "Wat is het totale volume van een kubus met zijde 4 cm en een balk van 6 . 5 . 3 cm?" },
-    answer: 154, tolerance: 0, unit: "cm³",
-    hint: { fr: "64 + 90 = 154.", en: "64 + 90 = 154.", nl: "64 + 90 = 154." }
-  },
-  {
-    id: "G3_s_96", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 15 . 12 . 9 cm ?", en: "How many 3 cm cubes fit in a 15 . 12 . 9 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 15 . 12 . 9 cm?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "15/3 . 12/3 . 9/3 = 5 . 4 . 3.", en: "15/3 . 12/3 . 9/3 = 5 . 4 . 3.", nl: "15/3 . 12/3 . 9/3 = 5 . 4 . 3." }
-  },
-  {
-    id: "G3_s_97", category: "G3", level: 3,
-    text: { fr: "Un cube de 8 cm d'arête a un cube de 4 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A cube with 8 cm edge has a 4 cm cube removed from a corner. What volume remains?", nl: "Een kubus met ribbe 8 cm heeft een kubus van 4 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 448, tolerance: 0, unit: "cm³",
-    hint: { fr: "512 - 64 = 448.", en: "512 - 64 = 448.", nl: "512 - 64 = 448." }
-  },
-  {
-    id: "G3_s_98", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 30 . 20 . 25 cm est rempli aux 2/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 30 . 20 . 25 cm aquarium is 2/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 30 . 20 . 25 cm is 2/5 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 6000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 15 000. Puis . 2/5.", en: "Total volume = 15,000. Then . 2/5.", nl: "Totaal volume = 15.000. Dan . 2/5." }
-  },
-  {
-    id: "G3_s_99", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 pavés droits : un de 8 . 5 . 3 cm et un de 7 . 4 . 2 cm ?", en: "What is the total volume of 2 prisms: one of 8 . 5 . 3 cm and one of 7 . 4 . 2 cm?", nl: "Wat is het totale volume van 2 balken: een van 8 . 5 . 3 cm en een van 7 . 4 . 2 cm?" },
-    answer: 176, tolerance: 0, unit: "cm³",
-    hint: { fr: "120 + 56 = 176.", en: "120 + 56 = 176.", nl: "120 + 56 = 176." }
-  },
-  {
-    id: "G3_s_100", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 5 cm peut-on ranger dans une boîte de 25 . 20 . 15 cm ?", en: "How many 5 cm cubes fit in a 25 . 20 . 15 cm box?", nl: "Hoeveel kubussen van 5 cm passen in een doos van 25 . 20 . 15 cm?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "25/5 . 20/5 . 15/5 = 5 . 4 . 3.", en: "25/5 . 20/5 . 15/5 = 5 . 4 . 3.", nl: "25/5 . 20/5 . 15/5 = 5 . 4 . 3." }
-  },
-  {
-    id: "G3_s_101", category: "G3", level: 3,
-    text: { fr: "Un pavé de 15 . 10 . 8 cm a un pavé de 5 . 4 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 15 . 10 . 8 cm has a 5 . 4 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 15 . 10 . 8 cm heeft een balk van 5 . 4 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 1140, tolerance: 0, unit: "cm³",
-    hint: { fr: "1200 - 60 = 1140.", en: "1200 - 60 = 1140.", nl: "1200 - 60 = 1140." }
-  },
-  {
-    id: "G3_s_102", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 4 cubes identiques de côté 2 cm ?", en: "What is the total volume of 4 identical cubes with side 2 cm?", nl: "Wat is het totale volume van 4 identieke kubussen met zijde 2 cm?" },
-    answer: 32, tolerance: 0, unit: "cm³",
-    hint: { fr: "4 . (2 . 2 . 2) = 4 . 8.", en: "4 . (2 . 2 . 2) = 4 . 8.", nl: "4 . (2 . 2 . 2) = 4 . 8." }
-  },
-  {
-    id: "G3_s_103", category: "G3", level: 3,
-    text: { fr: "Un bac de 40 . 30 . 20 cm est rempli aux 3/5. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 40 . 30 . 20 cm is 3/5 full. How much water does it hold (in cm³)?", nl: "Een bak van 40 . 30 . 20 cm is 3/5 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 14400, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 24 000. Puis . 3/5.", en: "Total volume = 24,000. Then . 3/5.", nl: "Totaal volume = 24.000. Dan . 3/5." }
-  },
-  {
-    id: "G3_s_104", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 4 cm peut-on ranger dans une boîte de 20 . 16 . 12 cm ?", en: "How many 4 cm cubes fit in a 20 . 16 . 12 cm box?", nl: "Hoeveel kubussen van 4 cm passen in een doos van 20 . 16 . 12 cm?" },
-    answer: 60, tolerance: 0,
-    hint: { fr: "20/4 . 16/4 . 12/4 = 5 . 4 . 3.", en: "20/4 . 16/4 . 12/4 = 5 . 4 . 3.", nl: "20/4 . 16/4 . 12/4 = 5 . 4 . 3." }
-  },
-  {
-    id: "G3_s_105", category: "G3", level: 3,
-    text: { fr: "Un cube de 6 cm d'arête a un cube de 2 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A cube with 6 cm edge has a 2 cm cube removed from a corner. What volume remains?", nl: "Een kubus met ribbe 6 cm heeft een kubus van 2 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 208, tolerance: 0, unit: "cm³",
-    hint: { fr: "216 - 8 = 208.", en: "216 - 8 = 208.", nl: "216 - 8 = 208." }
-  },
-  {
-    id: "G3_s_106", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 2 cubes : un de côté 5 cm et un de côté 3 cm ?", en: "What is the total volume of 2 cubes: one with side 5 cm and one with side 3 cm?", nl: "Wat is het totale volume van 2 kubussen: een met zijde 5 cm en een met zijde 3 cm?" },
-    answer: 152, tolerance: 0, unit: "cm³",
-    hint: { fr: "5³ + 3³ = 125 + 27.", en: "5³ + 3³ = 125 + 27.", nl: "5³ + 3³ = 125 + 27." }
-  },
-  {
-    id: "G3_s_107", category: "G3", level: 3,
-    text: { fr: "Un aquarium de 50 . 25 . 20 cm est rempli au 1/5. Quel volume d'eau contient-il (en cm³) ?", en: "A 50 . 25 . 20 cm aquarium is 1/5 full. How much water does it hold (in cm³)?", nl: "Een aquarium van 50 . 25 . 20 cm is 1/5 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 5000, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 25 000. Puis . 1/5.", en: "Total volume = 25,000. Then . 1/5.", nl: "Totaal volume = 25.000. Dan . 1/5." }
-  },
-  {
-    id: "G3_s_108", category: "G3", level: 3,
-    text: { fr: "Un pavé de 20 . 10 . 6 cm a un pavé de 8 . 5 . 3 cm retiré d'un coin. Quel volume reste-t-il ?", en: "A prism of 20 . 10 . 6 cm has a 8 . 5 . 3 cm prism removed from a corner. What volume remains?", nl: "Een balk van 20 . 10 . 6 cm heeft een balk van 8 . 5 . 3 cm uit een hoek verwijderd. Welk volume blijft over?" },
-    answer: 1080, tolerance: 0, unit: "cm³",
-    hint: { fr: "1200 - 120 = 1080.", en: "1200 - 120 = 1080.", nl: "1200 - 120 = 1080." }
-  },
-  {
-    id: "G3_s_109", category: "G3", level: 3,
-    text: { fr: "Combien de cubes de 2 cm peut-on ranger dans une boîte de 14 . 10 . 6 cm ?", en: "How many 2 cm cubes fit in a 14 . 10 . 6 cm box?", nl: "Hoeveel kubussen van 2 cm passen in een doos van 14 . 10 . 6 cm?" },
-    answer: 105, tolerance: 0,
-    hint: { fr: "14/2 . 10/2 . 6/2 = 7 . 5 . 3.", en: "14/2 . 10/2 . 6/2 = 7 . 5 . 3.", nl: "14/2 . 10/2 . 6/2 = 7 . 5 . 3." }
-  },
-  {
-    id: "G3_s_110", category: "G3", level: 3,
-    text: { fr: "Quel est le volume total de 5 cubes identiques de côté 3 cm ?", en: "What is the total volume of 5 identical cubes with side 3 cm?", nl: "Wat is het totale volume van 5 identieke kubussen met zijde 3 cm?" },
-    answer: 135, tolerance: 0, unit: "cm³",
-    hint: { fr: "5 . (3 . 3 . 3) = 5 . 27.", en: "5 . (3 . 3 . 3) = 5 . 27.", nl: "5 . (3 . 3 . 3) = 5 . 27." }
-  },
-  {
-    id: "G3_s_111", category: "G3", level: 3,
-    text: { fr: "Un bac de 24 . 18 . 10 cm est rempli aux 5/6. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 24 . 18 . 10 cm is 5/6 full. How much water does it hold (in cm³)?", nl: "Een bak van 24 . 18 . 10 cm is 5/6 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 3600, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 4 320. Puis . 5/6.", en: "Total volume = 4,320. Then . 5/6.", nl: "Totaal volume = 4.320. Dan . 5/6." }
-  },
-  {
-    id: "G3_s_112", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un pavé droit de 8 cm, 5 cm et 3 cm ?", en: "What is the volume of a rectangular prism: 8 cm, 5 cm and 3 cm?", nl: "Wat is het volume van een balk van 8 cm, 5 cm en 3 cm?" },
-    answer: 120, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 8 . 5 . 3 = 120.", en: "Volume = 8 . 5 . 3 = 120.", nl: "Volume = 8 . 5 . 3 = 120." }
-  },
-  {
-    id: "G3_s_113", category: "G3", level: 1,
-    text: { fr: "Quel est le volume d'un cube de côté 7 cm ?", en: "What is the volume of a cube with side 7 cm?", nl: "Wat is het volume van een kubus met zijde 7 cm?" },
-    answer: 343, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume = 7 . 7 . 7 = 343.", en: "Volume = 7 . 7 . 7 = 343.", nl: "Volume = 7 . 7 . 7 = 343." }
-  },
-  {
-    id: "G3_s_114", category: "G3", level: 2,
-    text: { fr: "Un pavé droit a un volume de 360 cm³. Sa longueur est 12 cm et sa largeur 6 cm. Quelle est sa hauteur en cm ?", en: "A rectangular prism has a volume of 360 cm³. Its length is 12 cm and width 6 cm. What is its height in cm?", nl: "Een balk heeft een volume van 360 cm³. De lengte is 12 cm en de breedte 6 cm. Wat is de hoogte in cm?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = 360 : (12 . 6) = 360 : 72 = 5.", en: "Height = 360 : (12 . 6) = 360 : 72 = 5.", nl: "Hoogte = 360 : (12 . 6) = 360 : 72 = 5." }
-  },
-  {
-    id: "G3_s_115", category: "G3", level: 2,
-    text: { fr: "Combien de cubes de 3 cm peut-on ranger dans une boîte de 12 . 9 . 6 cm ?", en: "How many 3 cm cubes fit in a 12 . 9 . 6 cm box?", nl: "Hoeveel kubussen van 3 cm passen in een doos van 12 . 9 . 6 cm?" },
-    answer: 24, tolerance: 0,
-    hint: { fr: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24.", en: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24.", nl: "12/3 . 9/3 . 6/3 = 4 . 3 . 2 = 24." }
-  },
-  {
-    id: "G3_s_116", category: "G3", level: 3,
-    text: { fr: "Un grand pavé de 30 . 20 . 10 cm contient un pavé creux de 20 . 10 . 8 cm. Quel est le volume de matière restant ?", en: "A large prism of 30 . 20 . 10 cm has a hollow prism of 20 . 10 . 8 cm removed. What volume of material remains?", nl: "Een grote balk van 30 . 20 . 10 cm bevat een holle balk van 20 . 10 . 8 cm. Welk volume materiaal blijft over?" },
-    answer: 4400, tolerance: 0, unit: "cm³",
-    hint: { fr: "6 000 - 1 600 = 4 400.", en: "6,000 - 1,600 = 4,400.", nl: "6.000 - 1.600 = 4.400." }
-  },
-  {
-    id: "G3_s_117", category: "G3", level: 3,
-    text: { fr: "Un réservoir de 50 . 30 . 20 cm est rempli aux 3/4. Quel volume d'eau contient-il (en cm³) ?", en: "A tank of 50 . 30 . 20 cm is 3/4 full. How much water does it hold (in cm³)?", nl: "Een reservoir van 50 . 30 . 20 cm is 3/4 vol. Hoeveel water bevat het (in cm³)?" },
-    answer: 22500, tolerance: 0, unit: "cm³",
-    hint: { fr: "Volume total = 30 000. Puis . 3/4 = 22 500.", en: "Total volume = 30,000. Then . 3/4 = 22,500.", nl: "Totaal volume = 30.000. Dan . 3/4 = 22.500." }
-  },
-];
-
-export function generate(level = 1) {
-  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  const id = `G3_gen_${Date.now()}_${rand(100, 999)}`;
-  if (level <= 1) {
-    const a = rand(2, 10); const b = rand(2, 8); const c = rand(2, 6);
-    return { id, category: 'G3', level, text: { fr: `Quel est le volume d'un pavé droit de ${a} cm, ${b} cm et ${c} cm ?`, en: `What is the volume of a rectangular prism: ${a} cm, ${b} cm and ${c} cm?`, nl: `Wat is het volume van een balk van ${a} cm, ${b} cm en ${c} cm?` }, answer: a * b * c, tolerance: 0 };
+    "id": "G3_new_1",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont complémentaires. L’un mesure 35°. CALCULE l’autre angle.",
+      "en": "ofux angles sont complémentaires. L’un mesure 35°. Calculate l’autre angle.",
+      "nl": "vanux angles sont complémentaires. L’un mesure 35°. Bereken l’autre angle."
+    },
+    "answer": "55",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_2",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont supplémentaires. L’un mesure 120°. CALCULE l’autre angle.",
+      "en": "ofux angles sont supplémentaires. L’un mesure 120°. Calculate l’autre angle.",
+      "nl": "vanux angles sont supplémentaires. L’un mesure 120°. Bereken l’autre angle."
+    },
+    "answer": "60",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_3",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont opposés par le sommet. L’un mesure 47°. CALCULE l’autre angle.",
+      "en": "ofux angles sont opposés par le sommet. L’un mesure 47°. Calculate l’autre angle.",
+      "nl": "vanux angles sont opposés par le sommet. L’un mesure 47°. Bereken l’autre angle."
+    },
+    "answer": "47",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_4",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont supplémentaires. L’un mesure 88°. CALCULE l’autre angle.",
+      "en": "ofux angles sont supplémentaires. L’un mesure 88°. Calculate l’autre angle.",
+      "nl": "vanux angles sont supplémentaires. L’un mesure 88°. Bereken l’autre angle."
+    },
+    "answer": "92",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_5",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont complémentaires. L’un mesure 62°. CALCULE l’autre angle.",
+      "en": "ofux angles sont complémentaires. L’un mesure 62°. Calculate l’autre angle.",
+      "nl": "vanux angles sont complémentaires. L’un mesure 62°. Bereken l’autre angle."
+    },
+    "answer": "28",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_6",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Un angle mesure 50°. CALCULE son angle alterne interne.",
+      "en": "Un angle mesure 50°. Calculate son angle alterne interne.",
+      "nl": "Un angle mesure 50°. Bereken son angle alterne interne."
+    },
+    "answer": "50",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_7",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Un angle mesure 110°. CALCULE son angle correspondant.",
+      "en": "Un angle mesure 110°. Calculate son angle correspondant.",
+      "nl": "Un angle mesure 110°. Bereken son angle correspondant."
+    },
+    "answer": "110",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_8",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Un angle alterne externe mesure 72°. CALCULE l’angle correspondant.",
+      "en": "Un angle alterne externe mesure 72°. Calculate l’angle correspondant.",
+      "nl": "Un angle alterne externe mesure 72°. Bereken l’angle correspondant."
+    },
+    "answer": "72",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_9",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Un angle mesure 135°. CALCULE l’angle supplémentaire formé sur la même droite.",
+      "en": "Un angle mesure 135°. Calculate l’angle supplémentaire formé sur la même droite.",
+      "nl": "Un angle mesure 135°. Bereken l’angle supplémentaire formé sur la même droite."
+    },
+    "answer": "45",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_10",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Un angle mesure 60°. PEUT-ON affirmer que l’angle alterne interne mesure 60° ? ÉCRIS 0 si on ne peut pas conclure.",
+      "en": "Un angle mesure 60°. PEUT-ON affirmer que l’angle alterne interne mesure 60° ? Write 0 si on ne peut pas conclure.",
+      "nl": "Un angle mesure 60°. PEUT-ON affirmer que l’angle alterne interne mesure 60° ? Schrijf 0 si on ne peut pas conclure."
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_11",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Un angle mesure 45°. PEUT-ON affirmer que l’angle correspondant mesure 45° ? ÉCRIS 0 si on ne peut pas conclure.",
+      "en": "Un angle mesure 45°. PEUT-ON affirmer que l’angle correspondant mesure 45° ? Write 0 si on ne peut pas conclure.",
+      "nl": "Un angle mesure 45°. PEUT-ON affirmer que l’angle correspondant mesure 45° ? Schrijf 0 si on ne peut pas conclure."
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_12",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Un angle mesure 40°. CALCULE son angle correspondant.",
+      "en": "Un angle mesure 40°. Calculate son angle correspondant.",
+      "nl": "Un angle mesure 40°. Bereken son angle correspondant."
+    },
+    "answer": "40",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_13",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "CALCULE ensuite l’angle supplémentaire du précédent.",
+      "en": "Calculate ensuite l’angle supplémentaire du précéofnt.",
+      "nl": "Bereken ensuite l’angle supplémentaire du précévannt."
+    },
+    "answer": "140",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_14",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Un angle mesure 75°. CALCULE l’angle alterne interne.",
+      "en": "Un angle mesure 75°. Calculate l’angle alterne interne.",
+      "nl": "Un angle mesure 75°. Bereken l’angle alterne interne."
+    },
+    "answer": "75",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_new_15",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "CALCULE l’angle supplémentaire du précédent.",
+      "en": "Calculate l’angle supplémentaire du précéofnt.",
+      "nl": "Bereken l’angle supplémentaire du précévannt."
+    },
+    "answer": "105",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Utilise les propriétés des angles : complémentaires (90°), supplémentaires (180°), droites parallèles.",
+      "en": "Use angle properties: complementary (90°), supplementary (180°), parallel lines.",
+      "nl": "Gebruik hoekeigenschappen: complementair (90°), supplementair (180°), evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_1",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 30°.",
+      "en": "Calculate the complementary angle of 30°.",
+      "nl": "Bereken de complementaire hoek van 30°."
+    },
+    "answer": 60,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_gen_2",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 45°.",
+      "en": "Calculate the complementary angle of 45°.",
+      "nl": "Bereken de complementaire hoek van 45°."
+    },
+    "answer": 45,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_gen_3",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 25°.",
+      "en": "Calculate the complementary angle of 25°.",
+      "nl": "Bereken de complementaire hoek van 25°."
+    },
+    "answer": 65,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_gen_4",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 70°.",
+      "en": "Calculate the complementary angle of 70°.",
+      "nl": "Bereken de complementaire hoek van 70°."
+    },
+    "answer": 20,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_gen_5",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 55°.",
+      "en": "Calculate the complementary angle of 55°.",
+      "nl": "Bereken de complementaire hoek van 55°."
+    },
+    "answer": 35,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_gen_6",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 60°.",
+      "en": "Calculate the supplementary angle of 60°.",
+      "nl": "Bereken de supplementaire hoek van 60°."
+    },
+    "answer": 120,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_gen_7",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 90°.",
+      "en": "Calculate the supplementary angle of 90°.",
+      "nl": "Bereken de supplementaire hoek van 90°."
+    },
+    "answer": 90,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_gen_8",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 45°.",
+      "en": "Calculate the supplementary angle of 45°.",
+      "nl": "Bereken de supplementaire hoek van 45°."
+    },
+    "answer": 135,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_gen_9",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 110°.",
+      "en": "Calculate the supplementary angle of 110°.",
+      "nl": "Bereken de supplementaire hoek van 110°."
+    },
+    "answer": 70,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_gen_10",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 75°.",
+      "en": "Calculate the supplementary angle of 75°.",
+      "nl": "Bereken de supplementaire hoek van 75°."
+    },
+    "answer": 105,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_gen_11",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 65°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 65°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 65° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 65,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_12",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 40°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 40°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 40° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 40,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_13",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 75°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 75°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 75° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 75,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_14",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 55°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 55°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 55° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 55,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_15",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 80°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 80°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 80° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 80,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_16",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 95°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 95°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 95° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 95,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_17",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 50°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 50°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 50° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 50,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_18",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 70°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 70°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 70° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 70,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_19",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 85°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 85°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 85° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 85,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_20",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 100°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 100°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 100° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 100,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_21",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 60°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 60°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 60° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 60,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_22",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 45°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 45°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 45° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 45,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_23",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 90°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 90°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 90° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 90,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_24",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 110°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 110°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 110° is, bereken de overeenkomstige hoek."
+    },
+    "answer": 110,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_25",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 35°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 35°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 35° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": 35,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes et correspondants sont égaux avec des droites parallèles.",
+      "en": "Alternate interior and corresponding angles are equal with parallel lines.",
+      "nl": "Verwisselende binnen- en overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_26",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles adjacents font 180°. Si l'un vaut 125°, calcule l'autre.",
+      "en": "Deux angles adjacents font 180°. Si l'un vaut 125°, calcule l'autre (in degrees).",
+      "nl": "Deux angles adjacents font 180°. Si l'un vaut 125°, calcule l'autre (in graden)."
+    },
+    "answer": 55,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_27",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Trois angles autour d'un point. Deux valent 80° et 120°. Calcule le 3e.",
+      "en": "Trois angles autour d'un point. Deux valent 80° et 120°. Calcule le 3e (in degrees).",
+      "nl": "Trois angles autour d'un point. Deux valent 80° et 120°. Calcule le 3e (in graden)."
+    },
+    "answer": 160,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_28",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Un angle droit est divisé en deux. Une partie vaut 35°. Calcule l'autre.",
+      "en": "Un angle droit est divisé en deux. Une partie vaut 35°. Calcule l'autre (in degrees).",
+      "nl": "Un angle droit est divisé en deux. Une partie vaut 35°. Calcule l'autre (in graden)."
+    },
+    "answer": 55,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_29",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Somme de 3 angles = 180°. Deux valent 50° et 70°. Calcule le 3e.",
+      "en": "Somme de 3 angles = 180°. Deux valent 50° et 70°. Calcule le 3e (in degrees).",
+      "nl": "Somme de 3 angles = 180°. Deux valent 50° et 70°. Calcule le 3e (in graden)."
+    },
+    "answer": 60,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_30",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Angles opposés par le sommet. L'un vaut 115°. Calcule l'autre.",
+      "en": "Angles opposés par le sommet. L'un vaut 115°. Calcule l'autre (in degrees).",
+      "nl": "Angles opposés par le sommet. L'un vaut 115°. Calcule l'autre (in graden)."
+    },
+    "answer": 115,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_31",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles complémentaires. L'un vaut 2 fois l'autre. Calcule le plus petit.",
+      "en": "Deux angles complémentaires. L'un vaut 2 fois l'autre. Calcule le plus petit (in degrees).",
+      "nl": "Deux angles complémentaires. L'un vaut 2 fois l'autre. Calcule le plus petit (in graden)."
+    },
+    "answer": 30,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_32",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles supplémentaires. L'un vaut 3 fois l'autre. Calcule le plus petit.",
+      "en": "Deux angles supplémentaires. L'un vaut 3 fois l'autre. Calcule le plus petit (in degrees).",
+      "nl": "Deux angles supplémentaires. L'un vaut 3 fois l'autre. Calcule le plus petit (in graden)."
+    },
+    "answer": 45,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_33",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Angle plat divisé en 3 parts égales. Calcule chaque part.",
+      "en": "Angle plat divisé en 3 parts égales. Calcule chaque part (in degrees).",
+      "nl": "Angle plat divisé en 3 parts égales. Calcule chaque part (in graden)."
+    },
+    "answer": 60,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_34",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Quatre angles autour d'un point, tous égaux. Calcule chaque angle.",
+      "en": "Quatre angles autour d'un point, tous égaux. Calcule chaque angle (in degrees).",
+      "nl": "Quatre angles autour d'un point, tous égaux. Calcule chaque angle (in graden)."
+    },
+    "answer": 90,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_35",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle: deux angles valent 65° et 45°. Calcule le 3e angle.",
+      "en": "Triangle: deux angles valent 65° et 45°. Calcule le 3e angle (in degrees).",
+      "nl": "Triangle: deux angles valent 65° et 45°. Calcule le 3e angle (in graden)."
+    },
+    "answer": 70,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_36",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle rectangle: un angle aigu vaut 35°. Calcule l'autre angle aigu.",
+      "en": "Triangle rectangle: un angle aigu vaut 35°. Calcule l'autre angle aigu (in degrees).",
+      "nl": "Triangle rectangle: un angle aigu vaut 35°. Calcule l'autre angle aigu (in graden)."
+    },
+    "answer": 55,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_37",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle isocèle: l'angle au sommet vaut 40°. Calcule un angle de base.",
+      "en": "Triangle isocèle: l'angle au sommet vaut 40°. Calcule un angle de base (in degrees).",
+      "nl": "Triangle isocèle: l'angle au sommet vaut 40°. Calcule un angle de base (in graden)."
+    },
+    "answer": 70,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_38",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle équilatéral: calcule chaque angle.",
+      "en": "Triangle équilatéral: calcule chaque angle (in degrees).",
+      "nl": "Triangle équilatéral: calcule chaque angle (in graden)."
+    },
+    "answer": 60,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_39",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Angle extérieur d'un triangle vaut 120°. Un angle intérieur non adjacent vaut 70°. Calcule l'autre.",
+      "en": "Angle extérieur d'un triangle vaut 120°. Un angle intérieur non adjacent vaut 70°. Calcule l'autre (in degrees).",
+      "nl": "Angle extérieur d'un triangle vaut 120°. Un angle intérieur non adjacent vaut 70°. Calcule l'autre (in graden)."
+    },
+    "answer": 50,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_gen_40",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux droites parallèles coupées par une sécante. Un angle vaut 135°. Calcule son angle opposé interne.",
+      "en": "Deux droites parallèles coupées par une sécante. Un angle vaut 135°. Calcule son angle opposé interne (in degrees).",
+      "nl": "Deux droites parallèles coupées par une sécante. Un angle vaut 135°. Calcule son angle opposé interne (in graden)."
+    },
+    "answer": 45,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise les propriétés: somme angles triangle=180°, angles autour point=360°, droites parallèles.",
+      "en": "Use properties: triangle angles sum=180°, angles around point=360°, parallel lines.",
+      "nl": "Gebruik eigenschappen: driehoek hoeken som=180°, hoeken rond punt=360°, evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_1",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 15°.",
+      "en": "Calculate the complementary angle of 15°.",
+      "nl": "Bereken de complementaire hoek van 15°."
+    },
+    "answer": "75",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_add_2",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 80°.",
+      "en": "Calculate the complementary angle of 80°.",
+      "nl": "Bereken de complementaire hoek van 80°."
+    },
+    "answer": "10",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_add_3",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 125°.",
+      "en": "Calculate the supplementary angle of 125°.",
+      "nl": "Bereken de supplementaire hoek van 125°."
+    },
+    "answer": "55",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_4",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 35°.",
+      "en": "Calculate the supplementary angle of 35°.",
+      "nl": "Bereken de supplementaire hoek van 35°."
+    },
+    "answer": "145",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_5",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont opposés par le sommet. L'un mesure 82°. Calcule l'autre.",
+      "en": "Two angles are vertically opposite. One measures 82°. Calculate the other.",
+      "nl": "Twee hoeken zijn overstaande hoeken. Eén meet 82°. Bereken de andere."
+    },
+    "answer": "82",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles opposés par le sommet sont égaux.",
+      "en": "Vertically opposite angles are equal.",
+      "nl": "Overstaande hoeken zijn gelijk."
+    }
+  },
+  {
+    "id": "G3_add_6",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 38°.",
+      "en": "Calculate the complementary angle of 38°.",
+      "nl": "Bereken de complementaire hoek van 38°."
+    },
+    "answer": "52",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_add_7",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 155°.",
+      "en": "Calculate the supplementary angle of 155°.",
+      "nl": "Bereken de supplementaire hoek van 155°."
+    },
+    "answer": "25",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_8",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Avec deux droites parallèles coupées par une sécante, si un angle vaut 72°, calcule son angle correspondant.",
+      "en": "With two parallel lines cut by a transversal, if an angle is 72°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen gesneden door een transversaal, als een hoek 72° is, bereken de overeenkomstige hoek."
+    },
+    "answer": "72",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles correspondants sont égaux avec des droites parallèles.",
+      "en": "Corresponding angles are equal with parallel lines.",
+      "nl": "Overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_9",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 105°, calcule son angle alterne-interne.",
+      "en": "With two parallel lines, if an angle is 105°, calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 105° is, bereken de verwisselende binnenhoek."
+    },
+    "answer": "105",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes sont égaux avec des droites parallèles.",
+      "en": "Alternate interior angles are equal with parallel lines.",
+      "nl": "Verwisselende binnenhoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_10",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 12°.",
+      "en": "Calculate the complementary angle of 12°.",
+      "nl": "Bereken de complementaire hoek van 12°."
+    },
+    "answer": "78",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_add_11",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 98°.",
+      "en": "Calculate the supplementary angle of 98°.",
+      "nl": "Bereken de supplementaire hoek van 98°."
+    },
+    "answer": "82",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_12",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Avec deux droites parallèles, si un angle vaut 132°, calcule son angle correspondant.",
+      "en": "With two parallel lines, if an angle is 132°, calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen, als een hoek 132° is, bereken de overeenkomstige hoek."
+    },
+    "answer": "132",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles correspondants sont égaux avec des droites parallèles.",
+      "en": "Corresponding angles are equal with parallel lines.",
+      "nl": "Overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_13",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Deux angles sont opposés par le sommet. L'un mesure 143°. Calcule l'autre.",
+      "en": "Two angles are vertically opposite. One measures 143°. Calculate the other.",
+      "nl": "Twee hoeken zijn overstaande hoeken. Eén meet 143°. Bereken de andere."
+    },
+    "answer": "143",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles opposés par le sommet sont égaux.",
+      "en": "Vertically opposite angles are equal.",
+      "nl": "Overstaande hoeken zijn gelijk."
+    }
+  },
+  {
+    "id": "G3_add_14",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle complémentaire de 5°.",
+      "en": "Calculate the complementary angle of 5°.",
+      "nl": "Bereken de complementaire hoek van 5°."
+    },
+    "answer": "85",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles complémentaires somment à 90°.",
+      "en": "Two complementary angles sum to 90°.",
+      "nl": "Twee complementaire hoeken tellen op tot 90°."
+    }
+  },
+  {
+    "id": "G3_add_15",
+    "category": "G3",
+    "level": 1,
+    "text": {
+      "fr": "Calcule l'angle supplémentaire de 15°.",
+      "en": "Calculate the supplementary angle of 15°.",
+      "nl": "Bereken de supplementaire hoek van 15°."
+    },
+    "answer": "165",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles supplémentaires somment à 180°.",
+      "en": "Two supplementary angles sum to 180°.",
+      "nl": "Twee supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_16",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 118°. Calcule l'angle supplémentaire adjacent.",
+      "en": "With two parallel lines, an angle is 118°. Calculate the adjacent supplementary angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 118°. Bereken de aangrenzende supplementaire hoek."
+    },
+    "answer": "62",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles supplémentaires adjacents somment à 180°.",
+      "en": "Adjacent supplementary angles sum to 180°.",
+      "nl": "Aangrenzende supplementaire hoeken tellen op tot 180°."
+    }
+  },
+  {
+    "id": "G3_add_17",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles complémentaires sont dans le rapport 2:1. Calcule le plus grand angle.",
+      "en": "Two complementary angles are in the ratio 2:1. Calculate the larger angle.",
+      "nl": "Twee complementaire hoeken zijn in de verhouding 2:1. Bereken de grootste hoek."
+    },
+    "answer": "60",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 2x et x, alors 2x + x = 90.",
+      "en": "If the angles are 2x and x, then 2x + x = 90.",
+      "nl": "Als de hoeken 2x en x zijn, dan is 2x + x = 90."
+    }
+  },
+  {
+    "id": "G3_add_18",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles supplémentaires sont dans le rapport 4:1. Calcule le plus petit angle.",
+      "en": "Two supplementary angles are in the ratio 4:1. Calculate the smaller angle.",
+      "nl": "Twee supplementaire hoeken zijn in de verhouding 4:1. Bereken de kleinste hoek."
+    },
+    "answer": "36",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 4x et x, alors 4x + x = 180.",
+      "en": "If the angles are 4x and x, then 4x + x = 180.",
+      "nl": "Als de hoeken 4x en x zijn, dan is 4x + x = 180."
+    }
+  },
+  {
+    "id": "G3_add_19",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 47°. Calcule l'angle alterne-externe.",
+      "en": "With two parallel lines, an angle is 47°. Calculate the alternate exterior angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 47°. Bereken de verwisselende buitenhoek."
+    },
+    "answer": "47",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-externes sont égaux avec des droites parallèles.",
+      "en": "Alternate exterior angles are equal with parallel lines.",
+      "nl": "Verwisselende buitenhoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_20",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles adjacents sur une droite. L'un mesure 73°. Calcule l'autre.",
+      "en": "Two adjacent angles on a line. One measures 73°. Calculate the other.",
+      "nl": "Twee aangrenzende hoeken op een lijn. Eén meet 73°. Bereken de andere."
+    },
+    "answer": "107",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Deux angles adjacents sur une droite sont supplémentaires (180°).",
+      "en": "Two adjacent angles on a line are supplementary (180°).",
+      "nl": "Twee aangrenzende hoeken op een lijn zijn supplementair (180°)."
+    }
+  },
+  {
+    "id": "G3_add_21",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 128°. Calcule son angle alterne-interne.",
+      "en": "With two parallel lines, an angle is 128°. Calculate its alternate interior angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 128°. Bereken de verwisselende binnenhoek."
+    },
+    "answer": "128",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-internes sont égaux avec des droites parallèles.",
+      "en": "Alternate interior angles are equal with parallel lines.",
+      "nl": "Verwisselende binnenhoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_22",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles complémentaires diffèrent de 20°. Calcule le plus grand.",
+      "en": "Two complementary angles differ by 20°. Calculate the larger one.",
+      "nl": "Twee complementaire hoeken verschillen 20°. Bereken de grootste."
+    },
+    "answer": "55",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont x et x-20, alors x + (x-20) = 90.",
+      "en": "If the angles are x and x-20, then x + (x-20) = 90.",
+      "nl": "Als de hoeken x en x-20 zijn, dan is x + (x-20) = 90."
+    }
+  },
+  {
+    "id": "G3_add_23",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles supplémentaires diffèrent de 40°. Calcule le plus petit.",
+      "en": "Two supplementary angles differ by 40°. Calculate the smaller one.",
+      "nl": "Twee supplementaire hoeken verschillen 40°. Bereken de kleinste."
+    },
+    "answer": "70",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont x et x+40, alors x + (x+40) = 180.",
+      "en": "If the angles are x and x+40, then x + (x+40) = 180.",
+      "nl": "Als de hoeken x en x+40 zijn, dan is x + (x+40) = 180."
+    }
+  },
+  {
+    "id": "G3_add_24",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 89°. Calcule son angle correspondant.",
+      "en": "With two parallel lines, an angle is 89°. Calculate its corresponding angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 89°. Bereken de overeenkomstige hoek."
+    },
+    "answer": "89",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles correspondants sont égaux avec des droites parallèles.",
+      "en": "Corresponding angles are equal with parallel lines.",
+      "nl": "Overeenkomstige hoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_25",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Trois angles autour d'un point. Deux mesurent 95° et 110°. Calcule le troisième.",
+      "en": "Three angles around a point. Two measure 95° and 110°. Calculate the third.",
+      "nl": "Drie hoeken rond een punt. Twee meten 95° en 110°. Bereken de derde."
+    },
+    "answer": "155",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles autour d'un point somment à 360°.",
+      "en": "Angles around a point sum to 360°.",
+      "nl": "Hoeken rond een punt tellen op tot 360°."
+    }
+  },
+  {
+    "id": "G3_add_26",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 153°. Calcule l'angle intérieur du même côté.",
+      "en": "With two parallel lines, an angle is 153°. Calculate the co-interior angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 153°. Bereken de co-binnenhoek."
+    },
+    "answer": "27",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles intérieurs du même côté sont supplémentaires (180°) avec des droites parallèles.",
+      "en": "Co-interior angles are supplementary (180°) with parallel lines.",
+      "nl": "Co-binnenhoeken zijn supplementair (180°) bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_27",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles complémentaires sont dans le rapport 5:4. Calcule le plus petit.",
+      "en": "Two complementary angles are in the ratio 5:4. Calculate the smaller one.",
+      "nl": "Twee complementaire hoeken zijn in de verhouding 5:4. Bereken de kleinste."
+    },
+    "answer": "40",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 5x et 4x, alors 5x + 4x = 90.",
+      "en": "If the angles are 5x and 4x, then 5x + 4x = 90.",
+      "nl": "Als de hoeken 5x en 4x zijn, dan is 5x + 4x = 90."
+    }
+  },
+  {
+    "id": "G3_add_28",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle vaut 64°. Calcule l'angle alterne-externe.",
+      "en": "With two parallel lines, an angle is 64°. Calculate the alternate exterior angle.",
+      "nl": "Met twee evenwijdige lijnen is een hoek 64°. Bereken de verwisselende buitenhoek."
+    },
+    "answer": "64",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles alternes-externes sont égaux avec des droites parallèles.",
+      "en": "Alternate exterior angles are equal with parallel lines.",
+      "nl": "Verwisselende buitenhoeken zijn gelijk bij evenwijdige lijnen."
+    }
+  },
+  {
+    "id": "G3_add_29",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Deux angles supplémentaires sont dans le rapport 7:2. Calcule le plus grand.",
+      "en": "Two supplementary angles are in the ratio 7:2. Calculate the larger one.",
+      "nl": "Twee supplementaire hoeken zijn in de verhouding 7:2. Bereken de grootste."
+    },
+    "answer": "140",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 7x et 2x, alors 7x + 2x = 180.",
+      "en": "If the angles are 7x and 2x, then 7x + 2x = 180.",
+      "nl": "Als de hoeken 7x en 2x zijn, dan is 7x + 2x = 180."
+    }
+  },
+  {
+    "id": "G3_add_30",
+    "category": "G3",
+    "level": 2,
+    "text": {
+      "fr": "Quatre angles autour d'un point. Trois mesurent 72°, 88° et 95°. Calcule le quatrième.",
+      "en": "Four angles around a point. Three measure 72°, 88°, and 95°. Calculate the fourth.",
+      "nl": "Vier hoeken rond een punt. Drie meten 72°, 88° en 95°. Bereken de vierde."
+    },
+    "answer": "105",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles autour d'un point somment à 360°.",
+      "en": "Angles around a point sum to 360°.",
+      "nl": "Hoeken rond een punt tellen op tot 360°."
+    }
+  },
+  {
+    "id": "G3_add_31",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles complémentaires. L'un vaut 3 fois l'autre moins 10°. Calcule le plus petit.",
+      "en": "Two complementary angles. One is 3 times the other minus 10°. Calculate the smaller one.",
+      "nl": "Twee complementaire hoeken. Eén is 3 keer de andere min 10°. Bereken de kleinste."
+    },
+    "answer": "25",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si x est le plus petit, alors x + (3x - 10) = 90.",
+      "en": "If x is the smaller, then x + (3x - 10) = 90.",
+      "nl": "Als x de kleinste is, dan is x + (3x - 10) = 90."
+    }
+  },
+  {
+    "id": "G3_add_32",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles supplémentaires. L'un vaut le double de l'autre plus 30°. Calcule le plus grand.",
+      "en": "Two supplementary angles. One is twice the other plus 30°. Calculate the larger one.",
+      "nl": "Twee supplementaire hoeken. Eén is twee keer de andere plus 30°. Bereken de grootste."
+    },
+    "answer": "130",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si x est le plus petit, alors x + (2x + 30) = 180.",
+      "en": "If x is the smaller, then x + (2x + 30) = 180.",
+      "nl": "Als x de kleinste is, dan is x + (2x + 30) = 180."
+    }
+  },
+  {
+    "id": "G3_add_33",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle isocèle: un angle de base vaut 48°. Calcule l'angle au sommet.",
+      "en": "Isosceles triangle: a base angle is 48°. Calculate the apex angle.",
+      "nl": "Gelijkbenige driehoek: een basishoek is 48°. Bereken de tophoek."
+    },
+    "answer": "84",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Dans un triangle isocèle, les deux angles de base sont égaux. Somme = 180°.",
+      "en": "In an isosceles triangle, the two base angles are equal. Sum = 180°.",
+      "nl": "In een gelijkbenige driehoek zijn de twee basishoeken gelijk. Som = 180°."
+    }
+  },
+  {
+    "id": "G3_add_34",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle rectangle isocèle: calcule chaque angle aigu.",
+      "en": "Right isosceles triangle: calculate each acute angle.",
+      "nl": "Rechthoekige gelijkbenige driehoek: bereken elke scherpe hoek."
+    },
+    "answer": "45",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un triangle rectangle isocèle a un angle de 90° et deux angles égaux.",
+      "en": "A right isosceles triangle has one 90° angle and two equal angles.",
+      "nl": "Een rechthoekige gelijkbenige driehoek heeft één hoek van 90° en twee gelijke hoeken."
+    }
+  },
+  {
+    "id": "G3_add_35",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Avec deux droites parallèles, un angle intérieur du même côté vaut 112°. Calcule l'autre angle intérieur du même côté.",
+      "en": "With two parallel lines, a co-interior angle is 112°. Calculate the other co-interior angle.",
+      "nl": "Met twee evenwijdige lijnen is een co-binnenhoek 112°. Bereken de andere co-binnenhoek."
+    },
+    "answer": "68",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles intérieurs du même côté sont supplémentaires (180°).",
+      "en": "Co-interior angles are supplementary (180°).",
+      "nl": "Co-binnenhoeken zijn supplementair (180°)."
+    }
+  },
+  {
+    "id": "G3_add_36",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle: un angle extérieur vaut 138°. Un angle intérieur non adjacent vaut 82°. Calcule l'autre angle intérieur non adjacent.",
+      "en": "Triangle: an exterior angle is 138°. One non-adjacent interior angle is 82°. Calculate the other non-adjacent interior angle.",
+      "nl": "Driehoek: een buitenhoek is 138°. Eén niet-aangrenzende binnenhoek is 82°. Bereken de andere niet-aangrenzende binnenhoek."
+    },
+    "answer": "56",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un angle extérieur d'un triangle égale la somme des deux angles intérieurs non adjacents.",
+      "en": "An exterior angle of a triangle equals the sum of the two non-adjacent interior angles.",
+      "nl": "Een buitenhoek van een driehoek is gelijk aan de som van de twee niet-aangrenzende binnenhoeken."
+    }
+  },
+  {
+    "id": "G3_add_37",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles complémentaires sont dans le rapport 8:1. Calcule le plus grand.",
+      "en": "Two complementary angles are in the ratio 8:1. Calculate the larger one.",
+      "nl": "Twee complementaire hoeken zijn in de verhouding 8:1. Bereken de grootste."
+    },
+    "answer": "80",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 8x et x, alors 8x + x = 90.",
+      "en": "If the angles are 8x and x, then 8x + x = 90.",
+      "nl": "Als de hoeken 8x en x zijn, dan is 8x + x = 90."
+    }
+  },
+  {
+    "id": "G3_add_38",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles supplémentaires sont dans le rapport 11:4. Calcule le plus petit.",
+      "en": "Two supplementary angles are in the ratio 11:4. Calculate the smaller one.",
+      "nl": "Twee supplementaire hoeken zijn in de verhouding 11:4. Bereken de kleinste."
+    },
+    "answer": "48",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 11x et 4x, alors 11x + 4x = 180.",
+      "en": "If the angles are 11x and 4x, then 11x + 4x = 180.",
+      "nl": "Als de hoeken 11x en 4x zijn, dan is 11x + 4x = 180."
+    }
+  },
+  {
+    "id": "G3_add_39",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Angle plat divisé en trois angles dans le rapport 2:3:4. Calcule le plus grand angle.",
+      "en": "Straight angle divided into three angles in the ratio 2:3:4. Calculate the largest angle.",
+      "nl": "Rechte hoek verdeeld in drie hoeken in de verhouding 2:3:4. Bereken de grootste hoek."
+    },
+    "answer": "80",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 2x, 3x et 4x, alors 2x + 3x + 4x = 180.",
+      "en": "If the angles are 2x, 3x and 4x, then 2x + 3x + 4x = 180.",
+      "nl": "Als de hoeken 2x, 3x en 4x zijn, dan is 2x + 3x + 4x = 180."
+    }
+  },
+  {
+    "id": "G3_add_40",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle isocèle: l'angle au sommet vaut 100°. Calcule un angle de base.",
+      "en": "Isosceles triangle: the apex angle is 100°. Calculate a base angle.",
+      "nl": "Gelijkbenige driehoek: de tophoek is 100°. Bereken een basishoek."
+    },
+    "answer": "40",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Dans un triangle isocèle, les deux angles de base sont égaux. Somme = 180°.",
+      "en": "In an isosceles triangle, the two base angles are equal. Sum = 180°.",
+      "nl": "In een gelijkbenige driehoek zijn de twee basishoeken gelijk. Som = 180°."
+    }
+  },
+  {
+    "id": "G3_add_41",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Cinq angles autour d'un point sont égaux. Calcule chaque angle.",
+      "en": "Five equal angles around a point. Calculate each angle.",
+      "nl": "Vijf gelijke hoeken rond een punt. Bereken elke hoek."
+    },
+    "answer": "72",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles autour d'un point somment à 360°.",
+      "en": "Angles around a point sum to 360°.",
+      "nl": "Hoeken rond een punt tellen op tot 360°."
+    }
+  },
+  {
+    "id": "G3_add_42",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Triangle: deux angles sont dans le rapport 3:5. Le troisième angle vaut 60°. Calcule le plus grand des deux autres angles.",
+      "en": "Triangle: two angles are in the ratio 3:5. The third angle is 60°. Calculate the larger of the other two angles.",
+      "nl": "Driehoek: twee hoeken zijn in de verhouding 3:5. De derde hoek is 60°. Bereken de grootste van de andere twee hoeken."
+    },
+    "answer": "75",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont 3x et 5x, alors 3x + 5x + 60 = 180.",
+      "en": "If the angles are 3x and 5x, then 3x + 5x + 60 = 180.",
+      "nl": "Als de hoeken 3x en 5x zijn, dan is 3x + 5x + 60 = 180."
+    }
+  },
+  {
+    "id": "G3_add_43",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux droites se coupent. Un des quatre angles formés vaut 127°. Calcule l'angle adjacent.",
+      "en": "Two lines intersect. One of the four angles formed is 127°. Calculate the adjacent angle.",
+      "nl": "Twee lijnen snijden elkaar. Eén van de vier gevormde hoeken is 127°. Bereken de aangrenzende hoek."
+    },
+    "answer": "53",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les angles adjacents formés par deux droites sécantes sont supplémentaires.",
+      "en": "Adjacent angles formed by two intersecting lines are supplementary.",
+      "nl": "Aangrenzende hoeken gevormd door twee snijdende lijnen zijn supplementair."
+    }
+  },
+  {
+    "id": "G3_add_44",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Deux angles complémentaires. Le premier vaut la moitié du second plus 15°. Calcule le plus grand.",
+      "en": "Two complementary angles. The first is half the second plus 15°. Calculate the larger one.",
+      "nl": "Twee complementaire hoeken. De eerste is de helft van de tweede plus 15°. Bereken de grootste."
+    },
+    "answer": "50",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si x est le second, alors (x/2 + 15) + x = 90.",
+      "en": "If x is the second, then (x/2 + 15) + x = 90.",
+      "nl": "Als x de tweede is, dan is (x/2 + 15) + x = 90."
+    }
+  },
+  {
+    "id": "G3_add_45",
+    "category": "G3",
+    "level": 3,
+    "text": {
+      "fr": "Angle complet divisé en quatre angles dans le rapport 1:2:3:4. Calcule le deuxième plus grand angle.",
+      "en": "Complete angle divided into four angles in the ratio 1:2:3:4. Calculate the second largest angle.",
+      "nl": "Volledige hoek verdeeld in vier hoeken in de verhouding 1:2:3:4. Bereken de op één na grootste hoek."
+    },
+    "answer": "108",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si les angles sont x, 2x, 3x et 4x, alors x + 2x + 3x + 4x = 360.",
+      "en": "If the angles are x, 2x, 3x and 4x, then x + 2x + 3x + 4x = 360.",
+      "nl": "Als de hoeken x, 2x, 3x en 4x zijn, dan is x + 2x + 3x + 4x = 360."
+    }
   }
-  const side = rand(3, 12);
-  return { id, category: 'G3', level, text: { fr: `Quel est le volume d'un cube de côté ${side} cm ?`, en: `What is the volume of a cube with side ${side} cm?`, nl: `Wat is het volume van een kubus met zijde ${side} cm?` }, answer: side * side * side, tolerance: 0 };
-}
+];

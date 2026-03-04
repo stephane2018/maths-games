@@ -9,12 +9,20 @@ import { questions as questionsN3, generate as generateN3 } from './questions-N3
 import { questions as questionsN4, generate as generateN4 } from './questions-N4.js';
 import { questions as questionsN6, generate as generateN6 } from './questions-N6.js';
 import { questions as questionsG1, generate as generateG1 } from './questions-G1.js';
-import { questions as questionsG2, generate as generateG2 } from './questions-G2.js';
-import { questions as questionsG3, generate as generateG3 } from './questions-G3.js';
-import { questions as questionsG4, generate as generateG4 } from './questions-G4.js';
-import { questions as questionsG5, generate as generateG5 } from './questions-G5.js';
+import { questions as questionsG2 } from './questions-G2.js';
+import { questions as questionsG3 } from './questions-G3.js';
+import { questions as questionsG4 } from './questions-G4.js';
+import { questions as questionsG5 } from './questions-G5.js';
 import { questions as questionsG7, generate as generateG7 } from './questions-G7.js';
-import { questions as questionsP1, generate as generateP1 } from './questions-P1.js';
+import { questions as questionsP1 } from './questions-P1.js';
+import { questions as questionsD1 } from './questions-D1.js';
+import { questions as questionsA1 } from './questions-A1.js';
+import { questions as questionsA2 } from './questions-A2.js';
+import { questions as questionsA3 } from './questions-A3.js';
+import { questions as questionsA4 } from './questions-A4.js';
+import { questions as questionsA5 } from './questions-A5.js';
+import { questions as questionsA8 } from './questions-A8.js';
+import { questions as questionsA9 } from './questions-A9.js';
 
 
 export const allCategories = [
@@ -56,27 +64,23 @@ export const allCategories = [
   },
   {
     code: 'G2',
-    label: { fr: 'Transformations du plan', en: 'Transformations du plan', nl: 'Transformations du plan' },
+    label: { fr: 'Figures planes et diagonales', en: 'Plane figures and diagonals', nl: 'Vlakke figuren en diagonalen' },
     questions: questionsG2,
-    generate: generateG2,
   },
   {
     code: 'G3',
-    label: { fr: 'Repérage', en: 'Repérage', nl: 'Repérage' },
+    label: { fr: 'Angles et droites parallèles', en: 'Angles and parallel lines', nl: 'Hoeken en evenwijdige lijnen' },
     questions: questionsG3,
-    generate: generateG3,
   },
   {
     code: 'G4',
-    label: { fr: 'Angles', en: 'Angles', nl: 'Angles' },
+    label: { fr: 'Triangles', en: 'Triangles', nl: 'Driehoeken' },
     questions: questionsG4,
-    generate: generateG4,
   },
   {
     code: 'G5',
-    label: { fr: 'Figures planes', en: 'Figures planes', nl: 'Figures planes' },
+    label: { fr: 'Inégalité triangulaire', en: 'Triangle Inequality', nl: 'Driehoeksongelijkheid' },
     questions: questionsG5,
-    generate: generateG5,
   },
   {
     code: 'G7',
@@ -86,9 +90,48 @@ export const allCategories = [
   },
   {
     code: 'P1',
-    label: { fr: 'Grandeurs proportionnelles', en: 'Grandeurs proportionnelles', nl: 'Grandeurs proportionnelles' },
+    label: { fr: 'Proportionnalité', en: 'Proportionality', nl: 'Evenredigheid' },
     questions: questionsP1,
-    generate: generateP1,
+  },
+  {
+    code: 'D1',
+    label: { fr: 'Statistiques et Probabilités', en: 'Statistics and Probability', nl: 'Statistiek en Kansrekening' },
+    questions: questionsD1,
+  },
+  {
+    code: 'A1',
+    label: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' },
+    questions: questionsA1,
+  },
+  {
+    code: 'A2',
+    label: { fr: 'Double distributivité', en: 'Double Distributivity', nl: 'Dubbele distributiviteit' },
+    questions: questionsA2,
+  },
+  {
+    code: 'A3',
+    label: { fr: 'Calcul littéral', en: 'Literal Calculation', nl: 'Letterrekenen' },
+    questions: questionsA3,
+  },
+  {
+    code: 'A4',
+    label: { fr: 'PPCM et PGCD', en: 'LCM and GCD', nl: 'KGV en GGD' },
+    questions: questionsA4,
+  },
+  {
+    code: 'A5',
+    label: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' },
+    questions: questionsA5,
+  },
+  {
+    code: 'A8',
+    label: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' },
+    questions: questionsA8,
+  },
+  {
+    code: 'A9',
+    label: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' },
+    questions: questionsA9,
   },
 ];
 

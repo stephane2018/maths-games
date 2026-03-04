@@ -12,6 +12,12 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
   const handleKey = useCallback((key) => {
     if (disabled) return;
 
+    if (key === 'backspace') {
+      sound.buttonClick();
+      setValue(prev => prev.slice(0, -1));
+      return;
+    }
+
     if (key === 'clear') {
       sound.buttonClick();
       setValue('');
@@ -76,7 +82,8 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
   const handleKeyboard = useCallback((key) => {
     if (disabled) return;
     if (key >= '0' && key <= '9') handleKey(key);
-    else if (key === 'Backspace' || key === 'Delete') handleKey('clear');
+    else if (key === 'Backspace') handleKey('backspace');
+    else if (key === 'Delete') handleKey('clear');
     else if (key === 'Enter') handleKey('submit');
     else if (key === '.' || key === ',') handleKey('dot');
     else if (key === '-') handleKey('negative');
@@ -108,15 +115,15 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     ['1', '2', '3'],
     ['4', '5', '6'],
     ['7', '8', '9'],
-    ['clear', '0', 'submit'],
+    ['clear', '0', 'backspace'],
   ];
 
   const alphabetButtons = [
     ['a', 'b', 'c', 'd'],
     ['a²', 'b²', 'c²', 'd²'],
     ['x', 'y', 'x²', 'y²'],
-    ['+', '-', '²', 'clear'],
-    ['0', '1', '2', 'submit'],
+    ['+', '-', '²', 'backspace'],
+    ['clear'],
   ];
 
   const buttons = mode === 'numeric' ? numericButtons : alphabetButtons;
@@ -139,40 +146,66 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
           transition: 'opacity 0.15s ease, transform 0.15s ease'
         }}
       >
-        {buttons.flat().map((key, idx) => {
-          let btnClass = 'numpad-btn';
-          let label = key;
-          if (key === 'clear') { btnClass += ' clear'; label = '\u2715'; }
-          else if (key === 'submit') { btnClass += ' submit'; label = '\u2713'; }
+        {buttons.map((row) =>
+          row.map((key, idx) => {
+            // Si un bouton est seul sur sa ligne, le faire prendre toute la largeur
+            const isFullWidthButton = row.length === 1 && (key === 'submit' || key === 'clear');
+            const fullWidthStyle = isFullWidthButton ? { gridColumn: '1 / -1' } : {};
 
-          return (
-            <button
-              key={key + idx}
-              className={btnClass}
-              data-key={key}
-              onClick={(e) => { e.preventDefault(); handleKey(key); }}
-              onPointerDown={(e) => {
-                e.currentTarget.style.transform = 'scale(0.95)';
-                e.currentTarget.style.transition = 'transform 0.1s ease';
-              }}
-              onPointerUp={(e) => {
-                e.currentTarget.style.transform = '';
-                e.currentTarget.style.transition = '';
-              }}
-              onPointerLeave={(e) => {
-                e.currentTarget.style.transform = '';
-                e.currentTarget.style.transition = '';
-              }}
-              style={{ touchAction: 'manipulation' }}
-            >
-              {label}
-            </button>
-          );
-        })}
+            let btnClass = 'numpad-btn';
+            let label = key;
+            if (key === 'clear') { btnClass += ' clear'; label = '\u2715'; }
+            else if (key === 'backspace') { btnClass += ' backspace'; label = '\u232B'; }
+            else if (key === 'submit') { btnClass += ' submit'; label = '\u2713'; }
+
+            return (
+              <button
+                key={key + idx}
+                className={btnClass}
+                data-key={key}
+                onClick={(e) => { e.preventDefault(); handleKey(key); }}
+                onPointerDown={(e) => {
+                  e.currentTarget.style.transform = 'scale(0.95)';
+                  e.currentTarget.style.transition = 'transform 0.1s ease';
+                }}
+                onPointerUp={(e) => {
+                  e.currentTarget.style.transform = '';
+                  e.currentTarget.style.transition = '';
+                }}
+                onPointerLeave={(e) => {
+                  e.currentTarget.style.transform = '';
+                  e.currentTarget.style.transition = '';
+                }}
+                style={{ touchAction: 'manipulation', ...fullWidthStyle }}
+              >
+                {label}
+              </button>
+            );
+          })
+        )}
       </div>
 
       {hasAlphabet && (
-        <div style={{ marginTop: '6px' }}>
+        <div style={{ marginTop: '6px', display: 'flex', gap: '6px' }}>
+          <button
+            className="numpad-btn submit"
+            onClick={() => handleKey('submit')}
+            onPointerDown={(e) => {
+              e.currentTarget.style.transform = 'scale(0.95)';
+              e.currentTarget.style.transition = 'transform 0.1s ease';
+            }}
+            onPointerUp={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            onPointerLeave={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            style={{ touchAction: 'manipulation', flex: 1 }}
+          >
+            ✓
+          </button>
           <button
             className="numpad-btn numpad-btn-switch"
             onClick={() => handleKey('switch')}
@@ -188,9 +221,43 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
               e.currentTarget.style.transform = '';
               e.currentTarget.style.transition = '';
             }}
-            style={{ touchAction: 'manipulation', width: '100%' }}
+            style={{
+              touchAction: 'manipulation',
+              flex: 0.5,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '4px',
+              fontSize: '0.9em'
+            }}
           >
-            {mode === 'numeric' ? 'ABC' : '123'}
+            <span style={{ opacity: 0.7 }}>⇄</span>
+
+            <span style={{ fontWeight: 'bold' }}>{mode === 'numeric' ? 'ABC' : '123'}</span>
+          </button>
+        </div>
+      )}
+
+      {!hasAlphabet && (
+        <div style={{ marginTop: '6px', display: 'flex', gap: '6px' }}>
+          <button
+            className="numpad-btn submit"
+            onClick={() => handleKey('submit')}
+            onPointerDown={(e) => {
+              e.currentTarget.style.transform = 'scale(0.95)';
+              e.currentTarget.style.transition = 'transform 0.1s ease';
+            }}
+            onPointerUp={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            onPointerLeave={(e) => {
+              e.currentTarget.style.transform = '';
+              e.currentTarget.style.transition = '';
+            }}
+            style={{ touchAction: 'manipulation', flex: 1 }}
+          >
+            ✓
           </button>
         </div>
       )}

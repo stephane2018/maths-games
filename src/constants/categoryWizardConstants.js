@@ -50,3 +50,34 @@ export const ALL_PLAYABLE_CODES = [
   ...BLUE_SUBCATS.map(s => s.code),
   ...RED_SUBCATS.map(s => s.code),
 ];
+
+// Mapping entre les codes d'interface (A1-A11, P1-P2, G1-G2) et les vrais codes de questionIndex.js
+export const CATEGORY_CODE_MAPPING = {
+  // Algèbre - BLUE_SUBCATS
+  'A1': 'A1',  // Suppression des parenthèses → Distributivité simple
+  'A2': 'N3',  // PEMDAS → Puissances
+  'A3': 'N3',  // Puissances → Puissances
+  'A4': 'A4',  // PPCM et PGCD → PPCM et PGCD
+  'A5': 'A1',  // Simple distributivité → Distributivité simple
+  'A6': 'A2',  // Double distributivité → Double distributivité
+  'A7': 'A3',  // Calcul littéral → Calcul littéral
+  'A8': 'A8',  // Produits remarquables → Produits remarquables
+  'A9': 'A9',  // Fractions → Fractions
+  'A10': 'A5', // Équations → Équations du 1er degré
+  'A11': 'G5', // Inégalités triangulaires → Inégalité triangulaire
+  'P1': 'P1',  // Proportionnalité → Proportionnalité
+
+  // Géométrie - RED_SUBCATS
+  'G1': 'G1',  // Périmètre et aire → Distances
+  'G2': 'G3',  // Angles → Angles et droites parallèles
+  'P2': 'D1',  // Traitement des données → Statistiques et Probabilités
+};
+
+/**
+ * Convertit un code d'interface en code réel de questionIndex
+ * @param {string} interfaceCode - Code de l'interface (ex: 'A11')
+ * @returns {string} Code réel (ex: 'G5')
+ */
+export function getRealCategoryCode(interfaceCode) {
+  return CATEGORY_CODE_MAPPING[interfaceCode] || interfaceCode;
+}

@@ -1,737 +1,1362 @@
-// =============================================================================
-// G2 - Aires (surfaces)
-// CE1D Belgian exam - Trilingual (FR / EN / NL)
-// =============================================================================
-
 export const questions = [
-  // Level 1 — Area of rectangles and squares
   {
-    id: "G2_s_1", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 8 cm sur 5 cm ?", en: "What is the area of an 8 cm by 5 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 8 cm op 5 cm?" },
-    answer: 40, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = longueur . largeur.", en: "Area = length . width.", nl: "Oppervlakte = lengte . breedte." }
-  },
-  {
-    id: "G2_s_2", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 7 cm ?", en: "What is the area of a square with side 7 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 7 cm?" },
-    answer: 49, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = côté . côté.", en: "Area = side . side.", nl: "Oppervlakte = zijde . zijde." }
-  },
-  {
-    id: "G2_s_3", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 12 cm sur 3 cm ?", en: "What is the area of a 12 cm by 3 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 12 cm op 3 cm?" },
-    answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 3.", en: "Area = 12 . 3.", nl: "Oppervlakte = 12 . 3." }
-  },
-  {
-    id: "G2_s_4", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 9 cm ?", en: "What is the area of a square with side 9 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 9 cm?" },
-    answer: 81, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 9.", en: "Area = 9 . 9.", nl: "Oppervlakte = 9 . 9." }
-  },
-  {
-    id: "G2_s_5", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 15 cm sur 4 cm ?", en: "What is the area of a 15 cm by 4 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 15 cm op 4 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 4.", en: "Area = 15 . 4.", nl: "Oppervlakte = 15 . 4." }
-  },
-  {
-    id: "G2_s_16", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 6 cm sur 9 cm ?", en: "What is the area of a 6 cm by 9 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 6 cm op 9 cm?" },
-    answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 9.", en: "Area = 6 . 9.", nl: "Oppervlakte = 6 . 9." }
-  },
-  {
-    id: "G2_s_17", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 11 cm ?", en: "What is the area of a square with side 11 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 11 cm?" },
-    answer: 121, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 11.", en: "Area = 11 . 11.", nl: "Oppervlakte = 11 . 11." }
-  },
-  {
-    id: "G2_s_18", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 7 cm sur 13 cm ?", en: "What is the area of a 7 cm by 13 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 7 cm op 13 cm?" },
-    answer: 91, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 . 13.", en: "Area = 7 . 13.", nl: "Oppervlakte = 7 . 13." }
-  },
-  {
-    id: "G2_s_19", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 5 cm ?", en: "What is the area of a square with side 5 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 5 cm?" },
-    answer: 25, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 . 5.", en: "Area = 5 . 5.", nl: "Oppervlakte = 5 . 5." }
-  },
-  {
-    id: "G2_s_20", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 20 cm sur 6 cm ?", en: "What is the area of a 20 cm by 6 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 20 cm op 6 cm?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 6.", en: "Area = 20 . 6.", nl: "Oppervlakte = 20 . 6." }
-  },
-  {
-    id: "G2_s_21", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 12 cm ?", en: "What is the area of a square with side 12 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 12 cm?" },
-    answer: 144, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 12.", en: "Area = 12 . 12.", nl: "Oppervlakte = 12 . 12." }
-  },
-  {
-    id: "G2_s_22", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 11 cm sur 8 cm ?", en: "What is the area of an 11 cm by 8 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 11 cm op 8 cm?" },
-    answer: 88, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 8.", en: "Area = 11 . 8.", nl: "Oppervlakte = 11 . 8." }
-  },
-  {
-    id: "G2_s_23", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 14 cm sur 7 cm ?", en: "What is the area of a 14 cm by 7 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 14 cm op 7 cm?" },
-    answer: 98, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 7.", en: "Area = 14 . 7.", nl: "Oppervlakte = 14 . 7." }
-  },
-  {
-    id: "G2_s_24", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 15 cm ?", en: "What is the area of a square with side 15 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 15 cm?" },
-    answer: 225, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 15.", en: "Area = 15 . 15.", nl: "Oppervlakte = 15 . 15." }
-  },
-  {
-    id: "G2_s_25", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 9 cm sur 4 cm ?", en: "What is the area of a 9 cm by 4 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 9 cm op 4 cm?" },
-    answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 4.", en: "Area = 9 . 4.", nl: "Oppervlakte = 9 . 4." }
-  },
-  {
-    id: "G2_s_26", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 6 cm ?", en: "What is the area of a square with side 6 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 6 cm?" },
-    answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 6.", en: "Area = 6 . 6.", nl: "Oppervlakte = 6 . 6." }
-  },
-  {
-    id: "G2_s_27", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 18 cm sur 5 cm ?", en: "What is the area of an 18 cm by 5 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 18 cm op 5 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 5.", en: "Area = 18 . 5.", nl: "Oppervlakte = 18 . 5." }
-  },
-  // Level 2 — Area of triangles and parallelograms
-  {
-    id: "G2_s_6", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 10 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 10 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 10 cm en hoogte 6 cm?" },
-    answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = base . hauteur : 2.", en: "Area = base . height : 2.", nl: "Oppervlakte = basis . hoogte : 2." }
-  },
-  {
-    id: "G2_s_7", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 8 cm et de hauteur 5 cm ?", en: "What is the area of a parallelogram with base 8 cm and height 5 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 8 cm en hoogte 5 cm?" },
-    answer: 40, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = base . hauteur.", en: "Area = base . height.", nl: "Oppervlakte = basis . hoogte." }
-  },
-  {
-    id: "G2_s_8", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 14 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 8 cm?" },
-    answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 8 : 2 = 56.", en: "Area = 14 . 8 : 2 = 56.", nl: "Oppervlakte = 14 . 8 : 2 = 56." }
-  },
-  {
-    id: "G2_s_9", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 6 cm et 10 cm ?", en: "What is the area of a rhombus with diagonals 6 cm and 10 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 6 cm en 10 cm?" },
-    answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (d₁ . d₂) : 2.", en: "Area = (d₁ . d₂) : 2.", nl: "Oppervlakte = (d₁ . d₂) : 2." }
-  },
-  {
-    id: "G2_s_10", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 20 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 20 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 20 cm en hoogte 9 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 9 : 2.", en: "Area = 20 . 9 : 2.", nl: "Oppervlakte = 20 . 9 : 2." }
-  },
-  {
-    id: "G2_s_28", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 12 cm et de hauteur 7 cm ?", en: "What is the area of a parallelogram with base 12 cm and height 7 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 12 cm en hoogte 7 cm?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 7.", en: "Area = 12 . 7.", nl: "Oppervlakte = 12 . 7." }
-  },
-  {
-    id: "G2_s_29", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 16 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 5 cm?" },
-    answer: 40, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 5 : 2.", en: "Area = 16 . 5 : 2.", nl: "Oppervlakte = 16 . 5 : 2." }
-  },
-  {
-    id: "G2_s_30", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 8 cm et 14 cm ?", en: "What is the area of a rhombus with diagonals 8 cm and 14 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 8 cm en 14 cm?" },
-    answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (8 . 14) : 2.", en: "Area = (8 . 14) : 2.", nl: "Oppervlakte = (8 . 14) : 2." }
-  },
-  {
-    id: "G2_s_31", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 15 cm et de hauteur 4 cm ?", en: "What is the area of a parallelogram with base 15 cm and height 4 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 15 cm en hoogte 4 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 4.", en: "Area = 15 . 4.", nl: "Oppervlakte = 15 . 4." }
-  },
-  {
-    id: "G2_s_32", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 18 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 10 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 10 : 2.", en: "Area = 18 . 10 : 2.", nl: "Oppervlakte = 18 . 10 : 2." }
-  },
-  {
-    id: "G2_s_33", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 12 cm et 16 cm ?", en: "What is the area of a rhombus with diagonals 12 cm and 16 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 12 cm en 16 cm?" },
-    answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (12 . 16) : 2.", en: "Area = (12 . 16) : 2.", nl: "Oppervlakte = (12 . 16) : 2." }
-  },
-  {
-    id: "G2_s_34", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 11 cm ?", en: "What is the area of a triangle with base 12 cm and height 11 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 12 cm en hoogte 11 cm?" },
-    answer: 66, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 11 : 2.", en: "Area = 12 . 11 : 2.", nl: "Oppervlakte = 12 . 11 : 2." }
-  },
-  {
-    id: "G2_s_35", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 9 cm et de hauteur 8 cm ?", en: "What is the area of a parallelogram with base 9 cm and height 8 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 9 cm en hoogte 8 cm?" },
-    answer: 72, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 8.", en: "Area = 9 . 8.", nl: "Oppervlakte = 9 . 8." }
-  },
-  {
-    id: "G2_s_36", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 22 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 22 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 22 cm en hoogte 6 cm?" },
-    answer: 66, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 22 . 6 : 2.", en: "Area = 22 . 6 : 2.", nl: "Oppervlakte = 22 . 6 : 2." }
-  },
-  {
-    id: "G2_s_37", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 10 cm et 18 cm ?", en: "What is the area of a rhombus with diagonals 10 cm and 18 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 10 cm en 18 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (10 . 18) : 2.", en: "Area = (10 . 18) : 2.", nl: "Oppervlakte = (10 . 18) : 2." }
-  },
-  {
-    id: "G2_s_38", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 11 cm et de hauteur 6 cm ?", en: "What is the area of a parallelogram with base 11 cm and height 6 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 11 cm en hoogte 6 cm?" },
-    answer: 66, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 6.", en: "Area = 11 . 6.", nl: "Oppervlakte = 11 . 6." }
-  },
-  {
-    id: "G2_s_39", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 24 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 24 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 24 cm en hoogte 7 cm?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 24 . 7 : 2.", en: "Area = 24 . 7 : 2.", nl: "Oppervlakte = 24 . 7 : 2." }
-  },
-  // Level 3 — Composite shapes, trapezoids
-  {
-    id: "G2_s_11", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 10 cm . 8 cm a un carré de 3 cm découpé dans un coin. Quelle est l'aire restante ?", en: "A 10 cm . 8 cm rectangle has a 3 cm square cut from a corner. What area remains?", nl: "Een rechthoek van 10 cm . 8 cm heeft een vierkant van 3 cm uitgesneden in een hoek. Welke oppervlakte blijft over?" },
-    answer: 71, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 8 - 3 . 3 = 80 - 9.", en: "Area = 10 . 8 - 3 . 3 = 80 - 9.", nl: "Oppervlakte = 10 . 8 - 3 . 3 = 80 - 9." }
-  },
-  {
-    id: "G2_s_12", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 12 cm et 8 cm, et de hauteur 5 cm ?", en: "What is the area of a trapezoid with bases 12 cm and 8 cm, and height 5 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 12 cm en 8 cm, en hoogte 5 cm?" },
-    answer: 50, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (B + b) . h : 2 = (12 + 8) . 5 : 2.", en: "Area = (B + b) . h : 2 = (12 + 8) . 5 : 2.", nl: "Oppervlakte = (B + b) . h : 2 = (12 + 8) . 5 : 2." }
-  },
-  {
-    id: "G2_s_13", category: "G2", level: 3,
-    text: { fr: "Un carré de 10 cm contient un triangle de base 10 cm et hauteur 10 cm. Quelle est l'aire en dehors du triangle ?", en: "A 10 cm square contains a triangle with base 10 cm and height 10 cm. What is the area outside the triangle?", nl: "Een vierkant van 10 cm bevat een driehoek met basis 10 cm en hoogte 10 cm. Wat is de oppervlakte buiten de driehoek?" },
-    answer: 50, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire carré - aire triangle = 100 - 50.", en: "Square area - triangle area = 100 - 50.", nl: "Vierkant - driehoek = 100 - 50." }
-  },
-  {
-    id: "G2_s_14", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 15 cm et 9 cm, et de hauteur 7 cm ?", en: "What is the area of a trapezoid with bases 15 cm and 9 cm, and height 7 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 15 cm en 9 cm, en hoogte 7 cm?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (15 + 9) . 7 : 2 = 24 . 7 : 2.", en: "Area = (15 + 9) . 7 : 2 = 24 . 7 : 2.", nl: "Oppervlakte = (15 + 9) . 7 : 2 = 24 . 7 : 2." }
-  },
-  {
-    id: "G2_s_15", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 12 cm . 6 cm a un triangle de base 12 cm et hauteur 6 cm découpé. Quelle est l'aire restante ?", en: "A 12 cm . 6 cm rectangle has a triangle (base 12, height 6) cut out. What area remains?", nl: "Een rechthoek van 12 . 6 cm heeft een driehoek (basis 12, hoogte 6) uitgesneden. Welke oppervlakte blijft?" },
-    answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "72 - (12 . 6 : 2) = 72 - 36.", en: "72 - (12 . 6 : 2) = 72 - 36.", nl: "72 - (12 . 6 : 2) = 72 - 36." }
-  },
-  {
-    id: "G2_s_40", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 18 cm et 10 cm, et de hauteur 6 cm ?", en: "What is the area of a trapezoid with bases 18 cm and 10 cm, and height 6 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 18 cm en 10 cm, en hoogte 6 cm?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (18 + 10) . 6 : 2 = 28 . 6 : 2.", en: "Area = (18 + 10) . 6 : 2 = 28 . 6 : 2.", nl: "Oppervlakte = (18 + 10) . 6 : 2 = 28 . 6 : 2." }
-  },
-  {
-    id: "G2_s_41", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 14 cm . 10 cm a un carré de 4 cm découpé dans un coin. Quelle est l'aire restante ?", en: "A 14 cm . 10 cm rectangle has a 4 cm square cut from a corner. What area remains?", nl: "Een rechthoek van 14 cm . 10 cm heeft een vierkant van 4 cm uitgesneden in een hoek. Welke oppervlakte blijft over?" },
-    answer: 124, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 10 - 4 . 4 = 140 - 16.", en: "Area = 14 . 10 - 4 . 4 = 140 - 16.", nl: "Oppervlakte = 14 . 10 - 4 . 4 = 140 - 16." }
-  },
-  {
-    id: "G2_s_42", category: "G2", level: 3,
-    text: { fr: "Une forme est composée d'un rectangle de 10 cm . 4 cm et d'un carré de côté 4 cm collé sur le côté. Quelle est l'aire totale ?", en: "A shape is made of a 10 cm . 4 cm rectangle and a square with side 4 cm attached to its side. What is the total area?", nl: "Een vorm bestaat uit een rechthoek van 10 cm . 4 cm en een vierkant met zijde 4 cm eraan vastgeplakt. Wat is de totale oppervlakte?" },
-    answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 4 + 4 . 4 = 40 + 16.", en: "Area = 10 . 4 + 4 . 4 = 40 + 16.", nl: "Oppervlakte = 10 . 4 + 4 . 4 = 40 + 16." }
-  },
-  {
-    id: "G2_s_43", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 20 cm et 14 cm, et de hauteur 8 cm ?", en: "What is the area of a trapezoid with bases 20 cm and 14 cm, and height 8 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 20 cm en 14 cm, en hoogte 8 cm?" },
-    answer: 136, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (20 + 14) . 8 : 2 = 34 . 8 : 2.", en: "Area = (20 + 14) . 8 : 2 = 34 . 8 : 2.", nl: "Oppervlakte = (20 + 14) . 8 : 2 = 34 . 8 : 2." }
-  },
-  {
-    id: "G2_s_44", category: "G2", level: 3,
-    text: { fr: "Un rectangle a une aire de 96 cm². Sa longueur est 12 cm. Quelle est sa largeur en cm ?", en: "A rectangle has an area of 96 cm². Its length is 12 cm. What is its width in cm?", nl: "Een rechthoek heeft een oppervlakte van 96 cm². De lengte is 12 cm. Wat is de breedte in cm?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = aire : longueur = 96 : 12.", en: "Width = area : length = 96 : 12.", nl: "Breedte = oppervlakte : lengte = 96 : 12." }
-  },
-  {
-    id: "G2_s_45", category: "G2", level: 3,
-    text: { fr: "Un carré de 12 cm contient deux triangles identiques de base 12 cm et hauteur 6 cm. Quelle est l'aire en dehors des triangles ?", en: "A 12 cm square contains two identical triangles, each with base 12 cm and height 6 cm. What is the area outside the triangles?", nl: "Een vierkant van 12 cm bevat twee identieke driehoeken met basis 12 cm en hoogte 6 cm. Wat is de oppervlakte buiten de driehoeken?" },
-    answer: 72, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 12 - 2 . (12 . 6 : 2) = 144 - 72.", en: "Area = 12 . 12 - 2 . (12 . 6 : 2) = 144 - 72.", nl: "Oppervlakte = 12 . 12 - 2 . (12 . 6 : 2) = 144 - 72." }
-  },
-  {
-    id: "G2_s_46", category: "G2", level: 3,
-    text: { fr: "Une forme en L est composée de deux rectangles : 8 cm . 3 cm et 5 cm . 3 cm. Quelle est l'aire totale ?", en: "An L-shape is made of two rectangles: 8 cm . 3 cm and 5 cm . 3 cm. What is the total area?", nl: "Een L-vorm bestaat uit twee rechthoeken: 8 cm . 3 cm en 5 cm . 3 cm. Wat is de totale oppervlakte?" },
-    answer: 39, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 3 + 5 . 3 = 24 + 15.", en: "Area = 8 . 3 + 5 . 3 = 24 + 15.", nl: "Oppervlakte = 8 . 3 + 5 . 3 = 24 + 15." }
-  },
-  {
-    id: "G2_s_47", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 16 cm et 10 cm, et de hauteur 9 cm ?", en: "What is the area of a trapezoid with bases 16 cm and 10 cm, and height 9 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 16 cm en 10 cm, en hoogte 9 cm?" },
-    answer: 117, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (16 + 10) . 9 : 2 = 26 . 9 : 2.", en: "Area = (16 + 10) . 9 : 2 = 26 . 9 : 2.", nl: "Oppervlakte = (16 + 10) . 9 : 2 = 26 . 9 : 2." }
-  },
-  {
-    id: "G2_s_48", category: "G2", level: 3,
-    text: { fr: "Un triangle a une aire de 45 cm². Sa base mesure 10 cm. Quelle est sa hauteur en cm ?", en: "A triangle has an area of 45 cm². Its base is 10 cm. What is its height in cm?", nl: "Een driehoek heeft een oppervlakte van 45 cm². De basis is 10 cm. Wat is de hoogte in cm?" },
-    answer: 9, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = aire . 2 : base = 90 : 10.", en: "Height = area . 2 : base = 90 : 10.", nl: "Hoogte = oppervlakte . 2 : basis = 90 : 10." }
-  },
-  {
-    id: "G2_s_49", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 16 cm . 10 cm a deux carrés de 3 cm découpés dans deux coins opposés. Quelle est l'aire restante ?", en: "A 16 cm . 10 cm rectangle has two 3 cm squares cut from opposite corners. What area remains?", nl: "Een rechthoek van 16 cm . 10 cm heeft twee vierkanten van 3 cm uitgesneden in twee tegenoverliggende hoeken. Welke oppervlakte blijft over?" },
-    answer: 142, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 10 - 2 . (3 . 3) = 160 - 18.", en: "Area = 16 . 10 - 2 . (3 . 3) = 160 - 18.", nl: "Oppervlakte = 16 . 10 - 2 . (3 . 3) = 160 - 18." }
-  },
-  {
-    id: "G2_s_50", category: "G2", level: 3,
-    text: { fr: "Une forme est composée d'un rectangle de 12 cm . 8 cm surmonté d'un triangle de base 12 cm et hauteur 5 cm. Quelle est l'aire totale ?", en: "A shape is made of a 12 cm . 8 cm rectangle with a triangle on top (base 12 cm, height 5 cm). What is the total area?", nl: "Een vorm bestaat uit een rechthoek van 12 cm . 8 cm met daarboven een driehoek (basis 12 cm, hoogte 5 cm). Wat is de totale oppervlakte?" },
-    answer: 126, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 8 + 12 . 5 : 2 = 96 + 30.", en: "Area = 12 . 8 + 12 . 5 : 2 = 96 + 30.", nl: "Oppervlakte = 12 . 8 + 12 . 5 : 2 = 96 + 30." }
-  },
-  // -------------------------------------------------------------------------
-  // Level 1 — Rectangles and squares (G2_s_51 – G2_s_70)
-  // -------------------------------------------------------------------------
-  {
-    id: "G2_s_51", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 10 cm sur 7 cm ?", en: "What is the area of a 10 cm by 7 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 10 cm op 7 cm?" },
-    answer: 70, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 7.", en: "Area = 10 . 7.", nl: "Oppervlakte = 10 . 7." }
-  },
-  {
-    id: "G2_s_52", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 13 cm ?", en: "What is the area of a square with side 13 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 13 cm?" },
-    answer: 169, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 13 . 13.", en: "Area = 13 . 13.", nl: "Oppervlakte = 13 . 13." }
-  },
-  {
-    id: "G2_s_53", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 16 cm sur 9 cm ?", en: "What is the area of a 16 cm by 9 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 16 cm op 9 cm?" },
-    answer: 144, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 9.", en: "Area = 16 . 9.", nl: "Oppervlakte = 16 . 9." }
-  },
-  {
-    id: "G2_s_54", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 8 cm ?", en: "What is the area of a square with side 8 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 8 cm?" },
-    answer: 64, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 8.", en: "Area = 8 . 8.", nl: "Oppervlakte = 8 . 8." }
-  },
-  {
-    id: "G2_s_55", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 13 cm sur 6 cm ?", en: "What is the area of a 13 cm by 6 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 13 cm op 6 cm?" },
-    answer: 78, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 13 . 6.", en: "Area = 13 . 6.", nl: "Oppervlakte = 13 . 6." }
-  },
-  {
-    id: "G2_s_56", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 19 cm sur 3 cm ?", en: "What is the area of a 19 cm by 3 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 19 cm op 3 cm?" },
-    answer: 57, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 19 . 3.", en: "Area = 19 . 3.", nl: "Oppervlakte = 19 . 3." }
-  },
-  {
-    id: "G2_s_57", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 14 cm ?", en: "What is the area of a square with side 14 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 14 cm?" },
-    answer: 196, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 14.", en: "Area = 14 . 14.", nl: "Oppervlakte = 14 . 14." }
-  },
-  {
-    id: "G2_s_58", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 17 cm sur 8 cm ?", en: "What is the area of a 17 cm by 8 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 17 cm op 8 cm?" },
-    answer: 136, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 17 . 8.", en: "Area = 17 . 8.", nl: "Oppervlakte = 17 . 8." }
-  },
-  {
-    id: "G2_s_59", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 10 cm ?", en: "What is the area of a square with side 10 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 10 cm?" },
-    answer: 100, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 10.", en: "Area = 10 . 10.", nl: "Oppervlakte = 10 . 10." }
-  },
-  {
-    id: "G2_s_60", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 5 cm sur 11 cm ?", en: "What is the area of a 5 cm by 11 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 5 cm op 11 cm?" },
-    answer: 55, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 . 11.", en: "Area = 5 . 11.", nl: "Oppervlakte = 5 . 11." }
-  },
-  {
-    id: "G2_s_61", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 4 cm sur 14 cm ?", en: "What is the area of a 4 cm by 14 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 4 cm op 14 cm?" },
-    answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 4 . 14.", en: "Area = 4 . 14.", nl: "Oppervlakte = 4 . 14." }
-  },
-  {
-    id: "G2_s_62", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 16 cm ?", en: "What is the area of a square with side 16 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 16 cm?" },
-    answer: 256, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 16.", en: "Area = 16 . 16.", nl: "Oppervlakte = 16 . 16." }
-  },
-  {
-    id: "G2_s_63", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 3 cm sur 18 cm ?", en: "What is the area of a 3 cm by 18 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 3 cm op 18 cm?" },
-    answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 3 . 18.", en: "Area = 3 . 18.", nl: "Oppervlakte = 3 . 18." }
-  },
-  {
-    id: "G2_s_64", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 25 cm sur 4 cm ?", en: "What is the area of a 25 cm by 4 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 25 cm op 4 cm?" },
-    answer: 100, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 25 . 4.", en: "Area = 25 . 4.", nl: "Oppervlakte = 25 . 4." }
-  },
-  {
-    id: "G2_s_65", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 4 cm ?", en: "What is the area of a square with side 4 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 4 cm?" },
-    answer: 16, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 4 . 4.", en: "Area = 4 . 4.", nl: "Oppervlakte = 4 . 4." }
-  },
-  {
-    id: "G2_s_66", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 22 cm sur 5 cm ?", en: "What is the area of a 22 cm by 5 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 22 cm op 5 cm?" },
-    answer: 110, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 22 . 5.", en: "Area = 22 . 5.", nl: "Oppervlakte = 22 . 5." }
-  },
-  {
-    id: "G2_s_67", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 18 cm ?", en: "What is the area of a square with side 18 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 18 cm?" },
-    answer: 324, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 18.", en: "Area = 18 . 18.", nl: "Oppervlakte = 18 . 18." }
-  },
-  {
-    id: "G2_s_68", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 6 cm sur 15 cm ?", en: "What is the area of a 6 cm by 15 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 6 cm op 15 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 15.", en: "Area = 6 . 15.", nl: "Oppervlakte = 6 . 15." }
-  },
-  {
-    id: "G2_s_69", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 20 cm ?", en: "What is the area of a square with side 20 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 20 cm?" },
-    answer: 400, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 20.", en: "Area = 20 . 20.", nl: "Oppervlakte = 20 . 20." }
-  },
-  {
-    id: "G2_s_70", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 8 cm sur 12 cm ?", en: "What is the area of an 8 cm by 12 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 8 cm op 12 cm?" },
-    answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 12.", en: "Area = 8 . 12.", nl: "Oppervlakte = 8 . 12." }
-  },
-  // -------------------------------------------------------------------------
-  // Level 2 — Triangles, parallelograms, rhombuses (G2_s_71 – G2_s_90)
-  // -------------------------------------------------------------------------
-  {
-    id: "G2_s_71", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 8 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 8 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 8 cm en hoogte 6 cm?" },
-    answer: 24, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 6 : 2.", en: "Area = 8 . 6 : 2.", nl: "Oppervlakte = 8 . 6 : 2." }
-  },
-  {
-    id: "G2_s_72", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 14 cm et de hauteur 9 cm ?", en: "What is the area of a parallelogram with base 14 cm and height 9 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 14 cm en hoogte 9 cm?" },
-    answer: 126, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 9.", en: "Area = 14 . 9.", nl: "Oppervlakte = 14 . 9." }
-  },
-  {
-    id: "G2_s_73", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 14 cm et 10 cm ?", en: "What is the area of a rhombus with diagonals 14 cm and 10 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 14 cm en 10 cm?" },
-    answer: 70, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (14 . 10) : 2.", en: "Area = (14 . 10) : 2.", nl: "Oppervlakte = (14 . 10) : 2." }
-  },
-  {
-    id: "G2_s_74", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 26 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 26 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 26 cm en hoogte 8 cm?" },
-    answer: 104, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 26 . 8 : 2.", en: "Area = 26 . 8 : 2.", nl: "Oppervlakte = 26 . 8 : 2." }
-  },
-  {
-    id: "G2_s_75", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 7 cm et de hauteur 11 cm ?", en: "What is the area of a parallelogram with base 7 cm and height 11 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 7 cm en hoogte 11 cm?" },
-    answer: 77, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 . 11.", en: "Area = 7 . 11.", nl: "Oppervlakte = 7 . 11." }
-  },
-  {
-    id: "G2_s_76", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 30 cm et de hauteur 4 cm ?", en: "What is the area of a triangle with base 30 cm and height 4 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 30 cm en hoogte 4 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 30 . 4 : 2.", en: "Area = 30 . 4 : 2.", nl: "Oppervlakte = 30 . 4 : 2." }
-  },
-  {
-    id: "G2_s_77", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 20 cm et 12 cm ?", en: "What is the area of a rhombus with diagonals 20 cm and 12 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 20 cm en 12 cm?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (20 . 12) : 2.", en: "Area = (20 . 12) : 2.", nl: "Oppervlakte = (20 . 12) : 2." }
-  },
-  {
-    id: "G2_s_78", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 18 cm et de hauteur 3 cm ?", en: "What is the area of a parallelogram with base 18 cm and height 3 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 18 cm en hoogte 3 cm?" },
-    answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 3.", en: "Area = 18 . 3.", nl: "Oppervlakte = 18 . 3." }
-  },
-  {
-    id: "G2_s_79", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 6 cm et de hauteur 14 cm ?", en: "What is the area of a triangle with base 6 cm and height 14 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 6 cm en hoogte 14 cm?" },
-    answer: 42, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 14 : 2.", en: "Area = 6 . 14 : 2.", nl: "Oppervlakte = 6 . 14 : 2." }
-  },
-  {
-    id: "G2_s_80", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 16 cm et 6 cm ?", en: "What is the area of a rhombus with diagonals 16 cm and 6 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 16 cm en 6 cm?" },
-    answer: 48, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (16 . 6) : 2.", en: "Area = (16 . 6) : 2.", nl: "Oppervlakte = (16 . 6) : 2." }
-  },
-  {
-    id: "G2_s_81", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 10 cm et de hauteur 12 cm ?", en: "What is the area of a triangle with base 10 cm and height 12 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 10 cm en hoogte 12 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 12 : 2.", en: "Area = 10 . 12 : 2.", nl: "Oppervlakte = 10 . 12 : 2." }
-  },
-  {
-    id: "G2_s_82", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 20 cm et de hauteur 5 cm ?", en: "What is the area of a parallelogram with base 20 cm and height 5 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 20 cm en hoogte 5 cm?" },
-    answer: 100, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 5.", en: "Area = 20 . 5.", nl: "Oppervlakte = 20 . 5." }
-  },
-  {
-    id: "G2_s_83", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 18 cm et 8 cm ?", en: "What is the area of a rhombus with diagonals 18 cm and 8 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 18 cm en 8 cm?" },
-    answer: 72, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (18 . 8) : 2.", en: "Area = (18 . 8) : 2.", nl: "Oppervlakte = (18 . 8) : 2." }
-  },
-  {
-    id: "G2_s_84", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 28 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 28 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 28 cm en hoogte 5 cm?" },
-    answer: 70, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 28 . 5 : 2.", en: "Area = 28 . 5 : 2.", nl: "Oppervlakte = 28 . 5 : 2." }
-  },
-  {
-    id: "G2_s_85", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 6 cm et de hauteur 13 cm ?", en: "What is the area of a parallelogram with base 6 cm and height 13 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 6 cm en hoogte 13 cm?" },
-    answer: 78, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 13.", en: "Area = 6 . 13.", nl: "Oppervlakte = 6 . 13." }
-  },
-  {
-    id: "G2_s_86", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 14 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 10 cm?" },
-    answer: 70, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 10 : 2.", en: "Area = 14 . 10 : 2.", nl: "Oppervlakte = 14 . 10 : 2." }
-  },
-  {
-    id: "G2_s_87", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 24 cm et 10 cm ?", en: "What is the area of a rhombus with diagonals 24 cm and 10 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 24 cm en 10 cm?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (24 . 10) : 2.", en: "Area = (24 . 10) : 2.", nl: "Oppervlakte = (24 . 10) : 2." }
-  },
-  {
-    id: "G2_s_88", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 16 cm et de hauteur 7 cm ?", en: "What is the area of a parallelogram with base 16 cm and height 7 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 16 cm en hoogte 7 cm?" },
-    answer: 112, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 7.", en: "Area = 16 . 7.", nl: "Oppervlakte = 16 . 7." }
-  },
-  {
-    id: "G2_s_89", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 32 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 32 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 32 cm en hoogte 6 cm?" },
-    answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 32 . 6 : 2.", en: "Area = 32 . 6 : 2.", nl: "Oppervlakte = 32 . 6 : 2." }
-  },
-  {
-    id: "G2_s_90", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un losange de diagonales 22 cm et 14 cm ?", en: "What is the area of a rhombus with diagonals 22 cm and 14 cm?", nl: "Wat is de oppervlakte van een ruit met diagonalen 22 cm en 14 cm?" },
-    answer: 154, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (22 . 14) : 2.", en: "Area = (22 . 14) : 2.", nl: "Oppervlakte = (22 . 14) : 2." }
-  },
-  // -------------------------------------------------------------------------
-  // Level 3 — Trapezoids, composite shapes, inverse problems (G2_s_91 – G2_s_111)
-  // -------------------------------------------------------------------------
-  {
-    id: "G2_s_91", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 14 cm et 6 cm, et de hauteur 8 cm ?", en: "What is the area of a trapezoid with bases 14 cm and 6 cm, and height 8 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 14 cm en 6 cm, en hoogte 8 cm?" },
-    answer: 80, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (14 + 6) . 8 : 2 = 20 . 8 : 2.", en: "Area = (14 + 6) . 8 : 2 = 20 . 8 : 2.", nl: "Oppervlakte = (14 + 6) . 8 : 2 = 20 . 8 : 2." }
-  },
-  {
-    id: "G2_s_92", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 18 cm . 10 cm a un carré de 5 cm découpé dans un coin. Quelle est l'aire restante ?", en: "An 18 cm . 10 cm rectangle has a 5 cm square cut from a corner. What area remains?", nl: "Een rechthoek van 18 cm . 10 cm heeft een vierkant van 5 cm uitgesneden in een hoek. Welke oppervlakte blijft over?" },
-    answer: 155, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 10 - 5 . 5 = 180 - 25.", en: "Area = 18 . 10 - 5 . 5 = 180 - 25.", nl: "Oppervlakte = 18 . 10 - 5 . 5 = 180 - 25." }
-  },
-  {
-    id: "G2_s_93", category: "G2", level: 3,
-    text: { fr: "Un rectangle a une aire de 72 cm². Sa longueur est 9 cm. Quelle est sa largeur en cm ?", en: "A rectangle has an area of 72 cm². Its length is 9 cm. What is its width in cm?", nl: "Een rechthoek heeft een oppervlakte van 72 cm². De lengte is 9 cm. Wat is de breedte in cm?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "Largeur = aire : longueur = 72 : 9.", en: "Width = area : length = 72 : 9.", nl: "Breedte = oppervlakte : lengte = 72 : 9." }
-  },
-  {
-    id: "G2_s_94", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 22 cm et 12 cm, et de hauteur 10 cm ?", en: "What is the area of a trapezoid with bases 22 cm and 12 cm, and height 10 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 22 cm en 12 cm, en hoogte 10 cm?" },
-    answer: 170, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (22 + 12) . 10 : 2 = 34 . 10 : 2.", en: "Area = (22 + 12) . 10 : 2 = 34 . 10 : 2.", nl: "Oppervlakte = (22 + 12) . 10 : 2 = 34 . 10 : 2." }
-  },
-  {
-    id: "G2_s_95", category: "G2", level: 3,
-    text: { fr: "Une forme en T est composée d'un rectangle de 12 cm . 3 cm et d'un rectangle de 4 cm . 7 cm. Quelle est l'aire totale ?", en: "A T-shape is made of a 12 cm . 3 cm rectangle and a 4 cm . 7 cm rectangle. What is the total area?", nl: "Een T-vorm bestaat uit een rechthoek van 12 cm . 3 cm en een rechthoek van 4 cm . 7 cm. Wat is de totale oppervlakte?" },
-    answer: 64, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 3 + 4 . 7 = 36 + 28.", en: "Area = 12 . 3 + 4 . 7 = 36 + 28.", nl: "Oppervlakte = 12 . 3 + 4 . 7 = 36 + 28." }
-  },
-  {
-    id: "G2_s_96", category: "G2", level: 3,
-    text: { fr: "Un triangle a une aire de 60 cm². Sa base mesure 12 cm. Quelle est sa hauteur en cm ?", en: "A triangle has an area of 60 cm². Its base is 12 cm. What is its height in cm?", nl: "Een driehoek heeft een oppervlakte van 60 cm². De basis is 12 cm. Wat is de hoogte in cm?" },
-    answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = aire . 2 : base = 120 : 12.", en: "Height = area . 2 : base = 120 : 12.", nl: "Hoogte = oppervlakte . 2 : basis = 120 : 12." }
-  },
-  {
-    id: "G2_s_97", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 10 cm et 6 cm, et de hauteur 12 cm ?", en: "What is the area of a trapezoid with bases 10 cm and 6 cm, and height 12 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 10 cm en 6 cm, en hoogte 12 cm?" },
-    answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (10 + 6) . 12 : 2 = 16 . 12 : 2.", en: "Area = (10 + 6) . 12 : 2 = 16 . 12 : 2.", nl: "Oppervlakte = (10 + 6) . 12 : 2 = 16 . 12 : 2." }
-  },
-  {
-    id: "G2_s_98", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 20 cm . 12 cm a un triangle de base 20 cm et hauteur 12 cm découpé. Quelle est l'aire restante ?", en: "A 20 cm . 12 cm rectangle has a triangle (base 20, height 12) cut out. What area remains?", nl: "Een rechthoek van 20 . 12 cm heeft een driehoek (basis 20, hoogte 12) uitgesneden. Welke oppervlakte blijft?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 12 - 20 . 12 : 2 = 240 - 120.", en: "Area = 20 . 12 - 20 . 12 : 2 = 240 - 120.", nl: "Oppervlakte = 20 . 12 - 20 . 12 : 2 = 240 - 120." }
-  },
-  {
-    id: "G2_s_99", category: "G2", level: 3,
-    text: { fr: "Un carré a une aire de 64 cm². Quel est son côté en cm ?", en: "A square has an area of 64 cm². What is its side in cm?", nl: "Een vierkant heeft een oppervlakte van 64 cm². Wat is de zijde in cm?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "Côté = √64 = 8.", en: "Side = √64 = 8.", nl: "Zijde = √64 = 8." }
-  },
-  {
-    id: "G2_s_100", category: "G2", level: 3,
-    text: { fr: "Une forme est composée d'un rectangle de 15 cm . 6 cm surmonté d'un triangle de base 15 cm et hauteur 4 cm. Quelle est l'aire totale ?", en: "A shape is made of a 15 cm . 6 cm rectangle with a triangle on top (base 15 cm, height 4 cm). What is the total area?", nl: "Een vorm bestaat uit een rechthoek van 15 cm . 6 cm met daarboven een driehoek (basis 15 cm, hoogte 4 cm). Wat is de totale oppervlakte?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 6 + 15 . 4 : 2 = 90 + 30.", en: "Area = 15 . 6 + 15 . 4 : 2 = 90 + 30.", nl: "Oppervlakte = 15 . 6 + 15 . 4 : 2 = 90 + 30." }
-  },
-  {
-    id: "G2_s_101", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 24 cm et 16 cm, et de hauteur 5 cm ?", en: "What is the area of a trapezoid with bases 24 cm and 16 cm, and height 5 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 24 cm en 16 cm, en hoogte 5 cm?" },
-    answer: 100, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (24 + 16) . 5 : 2 = 40 . 5 : 2.", en: "Area = (24 + 16) . 5 : 2 = 40 . 5 : 2.", nl: "Oppervlakte = (24 + 16) . 5 : 2 = 40 . 5 : 2." }
-  },
-  {
-    id: "G2_s_102", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 15 cm . 10 cm a deux carrés de 2 cm découpés dans deux coins. Quelle est l'aire restante ?", en: "A 15 cm . 10 cm rectangle has two 2 cm squares cut from two corners. What area remains?", nl: "Een rechthoek van 15 cm . 10 cm heeft twee vierkanten van 2 cm uitgesneden in twee hoeken. Welke oppervlakte blijft over?" },
-    answer: 142, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 10 - 2 . (2 . 2) = 150 - 8.", en: "Area = 15 . 10 - 2 . (2 . 2) = 150 - 8.", nl: "Oppervlakte = 15 . 10 - 2 . (2 . 2) = 150 - 8." }
-  },
-  {
-    id: "G2_s_103", category: "G2", level: 3,
-    text: { fr: "Un parallélogramme a une aire de 108 cm². Sa base est 12 cm. Quelle est sa hauteur en cm ?", en: "A parallelogram has an area of 108 cm². Its base is 12 cm. What is its height in cm?", nl: "Een parallellogram heeft een oppervlakte van 108 cm². De basis is 12 cm. Wat is de hoogte in cm?" },
-    answer: 9, tolerance: 0, unit: "cm",
-    hint: { fr: "Hauteur = aire : base = 108 : 12.", en: "Height = area : base = 108 : 12.", nl: "Hoogte = oppervlakte : basis = 108 : 12." }
-  },
-  {
-    id: "G2_s_104", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 30 cm et 18 cm, et de hauteur 6 cm ?", en: "What is the area of a trapezoid with bases 30 cm and 18 cm, and height 6 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 30 cm en 18 cm, en hoogte 6 cm?" },
-    answer: 144, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (30 + 18) . 6 : 2 = 48 . 6 : 2.", en: "Area = (30 + 18) . 6 : 2 = 48 . 6 : 2.", nl: "Oppervlakte = (30 + 18) . 6 : 2 = 48 . 6 : 2." }
-  },
-  {
-    id: "G2_s_105", category: "G2", level: 3,
-    text: { fr: "Une forme en L est composée de deux rectangles : 10 cm . 4 cm et 6 cm . 5 cm. Quelle est l'aire totale ?", en: "An L-shape is made of two rectangles: 10 cm . 4 cm and 6 cm . 5 cm. What is the total area?", nl: "Een L-vorm bestaat uit twee rechthoeken: 10 cm . 4 cm en 6 cm . 5 cm. Wat is de totale oppervlakte?" },
-    answer: 70, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 4 + 6 . 5 = 40 + 30.", en: "Area = 10 . 4 + 6 . 5 = 40 + 30.", nl: "Oppervlakte = 10 . 4 + 6 . 5 = 40 + 30." }
-  },
-  {
-    id: "G2_s_106", category: "G2", level: 3,
-    text: { fr: "Un carré a une aire de 144 cm². Quel est son côté en cm ?", en: "A square has an area of 144 cm². What is its side in cm?", nl: "Een vierkant heeft een oppervlakte van 144 cm². Wat is de zijde in cm?" },
-    answer: 12, tolerance: 0, unit: "cm",
-    hint: { fr: "Côté = √144 = 12.", en: "Side = √144 = 12.", nl: "Zijde = √144 = 12." }
-  },
-  {
-    id: "G2_s_107", category: "G2", level: 3,
-    text: { fr: "Un rectangle de 20 cm . 14 cm a un rectangle de 8 cm . 6 cm découpé à l'intérieur. Quelle est l'aire restante ?", en: "A 20 cm . 14 cm rectangle has an 8 cm . 6 cm rectangle cut from inside. What area remains?", nl: "Een rechthoek van 20 cm . 14 cm heeft een rechthoek van 8 cm . 6 cm binnenin uitgesneden. Welke oppervlakte blijft over?" },
-    answer: 232, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 14 - 8 . 6 = 280 - 48.", en: "Area = 20 . 14 - 8 . 6 = 280 - 48.", nl: "Oppervlakte = 20 . 14 - 8 . 6 = 280 - 48." }
-  },
-  {
-    id: "G2_s_108", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 11 cm et 7 cm, et de hauteur 10 cm ?", en: "What is the area of a trapezoid with bases 11 cm and 7 cm, and height 10 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 11 cm en 7 cm, en hoogte 10 cm?" },
-    answer: 90, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (11 + 7) . 10 : 2 = 18 . 10 : 2.", en: "Area = (11 + 7) . 10 : 2 = 18 . 10 : 2.", nl: "Oppervlakte = (11 + 7) . 10 : 2 = 18 . 10 : 2." }
-  },
-  {
-    id: "G2_s_109", category: "G2", level: 3,
-    text: { fr: "Un rectangle a une aire de 150 cm². Sa largeur est 10 cm. Quelle est sa longueur en cm ?", en: "A rectangle has an area of 150 cm². Its width is 10 cm. What is its length in cm?", nl: "Een rechthoek heeft een oppervlakte van 150 cm². De breedte is 10 cm. Wat is de lengte in cm?" },
-    answer: 15, tolerance: 0, unit: "cm",
-    hint: { fr: "Longueur = aire : largeur = 150 : 10.", en: "Length = area : width = 150 : 10.", nl: "Lengte = oppervlakte : breedte = 150 : 10." }
-  },
-  {
-    id: "G2_s_110", category: "G2", level: 3,
-    text: { fr: "Une forme est composée d'un carré de côté 10 cm et d'un triangle de base 10 cm et hauteur 6 cm collé sur un côté. Quelle est l'aire totale ?", en: "A shape is made of a square with side 10 cm and a triangle (base 10 cm, height 6 cm) attached to one side. What is the total area?", nl: "Een vorm bestaat uit een vierkant met zijde 10 cm en een driehoek (basis 10 cm, hoogte 6 cm) vastgeplakt aan een zijde. Wat is de totale oppervlakte?" },
-    answer: 130, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 10 + 10 . 6 : 2 = 100 + 30.", en: "Area = 10 . 10 + 10 . 6 : 2 = 100 + 30.", nl: "Oppervlakte = 10 . 10 + 10 . 6 : 2 = 100 + 30." }
-  },
-  {
-    id: "G2_s_111", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 26 cm et 14 cm, et de hauteur 7 cm ?", en: "What is the area of a trapezoid with bases 26 cm and 14 cm, and height 7 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 26 cm en 14 cm, en hoogte 7 cm?" },
-    answer: 140, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (26 + 14) . 7 : 2 = 40 . 7 : 2.", en: "Area = (26 + 14) . 7 : 2 = 40 . 7 : 2.", nl: "Oppervlakte = (26 + 14) . 7 : 2 = 40 . 7 : 2." }
-  },
-  {
-    id: "G2_s_112", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un rectangle de 11 cm sur 7 cm ?", en: "What is the area of an 11 cm by 7 cm rectangle?", nl: "Wat is de oppervlakte van een rechthoek van 11 cm op 7 cm?" },
-    answer: 77, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 7 = 77.", en: "Area = 11 . 7 = 77.", nl: "Oppervlakte = 11 . 7 = 77." }
-  },
-  {
-    id: "G2_s_113", category: "G2", level: 1,
-    text: { fr: "Quelle est l'aire d'un carré de côté 14 cm ?", en: "What is the area of a square with side 14 cm?", nl: "Wat is de oppervlakte van een vierkant met zijde 14 cm?" },
-    answer: 196, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 14 = 196.", en: "Area = 14 . 14 = 196.", nl: "Oppervlakte = 14 . 14 = 196." }
-  },
-  {
-    id: "G2_s_114", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 16 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 9 cm?" },
-    answer: 72, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 9 : 2 = 72.", en: "Area = 16 . 9 : 2 = 72.", nl: "Oppervlakte = 16 . 9 : 2 = 72." }
-  },
-  {
-    id: "G2_s_115", category: "G2", level: 2,
-    text: { fr: "Quelle est l'aire d'un parallélogramme de base 13 cm et de hauteur 8 cm ?", en: "What is the area of a parallelogram with base 13 cm and height 8 cm?", nl: "Wat is de oppervlakte van een parallellogram met basis 13 cm en hoogte 8 cm?" },
-    answer: 104, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = base . hauteur = 13 . 8 = 104.", en: "Area = base . height = 13 . 8 = 104.", nl: "Oppervlakte = basis . hoogte = 13 . 8 = 104." }
-  },
-  {
-    id: "G2_s_116", category: "G2", level: 3,
-    text: { fr: "Une forme est composée de deux rectangles : l'un de 12 cm sur 5 cm et l'autre de 8 cm sur 3 cm. Quelle est l'aire totale ?", en: "A shape is made of two rectangles: one 12 cm by 5 cm and the other 8 cm by 3 cm. What is the total area?", nl: "Een vorm bestaat uit twee rechthoeken: een van 12 cm op 5 cm en een van 8 cm op 3 cm. Wat is de totale oppervlakte?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (12 . 5) + (8 . 3) = 60 + 24 = 84.", en: "Area = (12 . 5) + (8 . 3) = 60 + 24 = 84.", nl: "Oppervlakte = (12 . 5) + (8 . 3) = 60 + 24 = 84." }
-  },
-  {
-    id: "G2_s_117", category: "G2", level: 3,
-    text: { fr: "Quelle est l'aire d'un trapèze de bases 18 cm et 10 cm, et de hauteur 8 cm ?", en: "What is the area of a trapezoid with bases 18 cm and 10 cm, and height 8 cm?", nl: "Wat is de oppervlakte van een trapezium met bases 18 cm en 10 cm, en hoogte 8 cm?" },
-    answer: 112, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = (18 + 10) . 8 : 2 = 28 . 8 : 2 = 112.", en: "Area = (18 + 10) . 8 : 2 = 28 . 8 : 2 = 112.", nl: "Oppervlakte = (18 + 10) . 8 : 2 = 28 . 8 : 2 = 112." }
-  },
+    "id": "G2_new_1",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Ses diagonales sont ses seuls axes de symétrie → ______",
+      "en": "Ses diagonales sont ses seuls axes of symétrie → ______",
+      "nl": "Ses diagonales sont ses seuls axes van symétrie → ______"
+    },
+    "answer": "Losange",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_2",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Ses diagonales sont perpendiculaires et se coupent en leur milieu → ______",
+      "en": "Ses diagonales sont perpendiculaires et se coupent en leur milieu → ______",
+      "nl": "Ses diagonales sont perpendiculaires et se coupent en leur milieu → ______"
+    },
+    "answer": "Losange",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_3",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Ses diagonales sont de même longueur et se coupent en leur milieu → ______",
+      "en": "Ses diagonales sont of même longueur et se coupent en leur milieu → ______",
+      "nl": "Ses diagonales sont van même longueur et se coupent en leur milieu → ______"
+    },
+    "answer": "Rectangle",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_4",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Ses diagonales sont perpendiculaires, de même longueur et se coupent en leur milieu → ______",
+      "en": "Ses diagonales sont perpendiculaires, of même longueur et se coupent en leur milieu → ______",
+      "nl": "Ses diagonales sont perpendiculaires, van même longueur et se coupent en leur milieu → ______"
+    },
+    "answer": "Carré",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_5",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un rectangle a des diagonales perpendiculaires → ___",
+      "en": "Un rectangle a ofs diagonales perpendiculaires → ___",
+      "nl": "Un rectangle a vans diagonales perpendiculaires → ___"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_6",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Les diagonales d’un parallélogramme se coupent en leur milieu → ___",
+      "en": "Les diagonales d’un parallélogramme se coupent en leur milieu → ___",
+      "nl": "Les diagonales d’un parallélogramme se coupent en leur milieu → ___"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_7",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un losange a des diagonales de même longueur → ___",
+      "en": "Un losange a ofs diagonales of même longueur → ___",
+      "nl": "Un losange a vans diagonales van même longueur → ___"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_8",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un carré a des diagonales perpendiculaires → ___",
+      "en": "Un carré a ofs diagonales perpendiculaires → ___",
+      "nl": "Un carré a vans diagonales perpendiculaires → ___"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_9",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un parallélogramme, les diagonales se coupent en leur ______.",
+      "en": "Dans un parallélogramme, les diagonales se coupent en leur ______.",
+      "nl": "Dans un parallélogramme, les diagonales se coupent en leur ______."
+    },
+    "answer": "milieu",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_10",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un rectangle, les diagonales sont de même ______.",
+      "en": "Dans un rectangle, les diagonales sont of même ______.",
+      "nl": "Dans un rectangle, les diagonales sont van même ______."
+    },
+    "answer": "longueur",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_11",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Dans un losange, les diagonales sont ______ entre elles.",
+      "en": "Dans un losange, les diagonales sont ______ entre elles.",
+      "nl": "Dans un losange, les diagonales sont ______ entre elles."
+    },
+    "answer": "perpendiculaires",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_12",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère dont les diagonales sont perpendiculaires est toujours un losange → ___",
+      "en": "Un quadrilatère dont les diagonales sont perpendiculaires est toujours un losange → ___",
+      "nl": "Un quadrilatère dont les diagonales sont perpendiculaires est toujours un losange → ___"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_13",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère dont les diagonales sont de même longueur est toujours un rectangle → ___",
+      "en": "Un quadrilatère dont les diagonales sont of même longueur est toujours un rectangle → ___",
+      "nl": "Un quadrilatère dont les diagonales sont van même longueur est toujours un rectangle → ___"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_14",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Si un quadrilatère a ses diagonales qui se coupent en leur milieu, c’est un parallélogramme → ___",
+      "en": "Si un quadrilatère a ses diagonales qui se coupent en leur milieu, c’est un parallélogramme → ___",
+      "nl": "Si un quadrilatère a ses diagonales qui se coupent en leur milieu, c’est un parallélogramme → ___"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_new_15",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un carré est à la fois rectangle et losange → ___",
+      "en": "Un carré est à la fois rectangle et losange → ___",
+      "nl": "Un carré est à la fois rectangle et losange → ___"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Compte les diagonales avec la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Count diagonals with formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Tel diagonalen met formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_1",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un triangle ?",
+      "en": "How many diagonals does a triangle have?",
+      "nl": "Hoeveel diagonalen heeft een driehoek?"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Use the formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Gebruik de formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_2",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un quadrilatère ?",
+      "en": "How many diagonals does a quadrilateral have?",
+      "nl": "Hoeveel diagonalen heeft een vierhoek?"
+    },
+    "answer": "2",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Use the formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Gebruik de formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_3",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un pentagone ?",
+      "en": "How many diagonals does a pentagon have?",
+      "nl": "Hoeveel diagonalen heeft een vijfhoek?"
+    },
+    "answer": "5",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Use the formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Gebruik de formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_4",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un hexagone ?",
+      "en": "How many diagonals does a hexagon have?",
+      "nl": "Hoeveel diagonalen heeft een zeshoek?"
+    },
+    "answer": "9",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Use the formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Gebruik de formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_5",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un carré a 4 côtés. Combien de diagonales possède-t-il ?",
+      "en": "A square has 4 sides. How many diagonals does it have?",
+      "nl": "Een vierkant heeft 4 zijden. Hoeveel diagonalen heeft het?"
+    },
+    "answer": "2",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 pour un polygone à n côtés.",
+      "en": "Use the formula n(n-3)/2 for an n-sided polygon.",
+      "nl": "Gebruik de formule n(n-3)/2 voor een n-hoek."
+    }
+  },
+  {
+    "id": "G2_add_6",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un rectangle, les diagonales se coupent-elles en leur milieu ? (1=oui, 0=non)",
+      "en": "In a rectangle, do the diagonals bisect each other? (1=yes, 0=no)",
+      "nl": "In een rechthoek, snijden de diagonalen elkaar in het midden? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un rectangle se coupent toujours en leur milieu.",
+      "en": "The diagonals of a rectangle always bisect each other.",
+      "nl": "De diagonalen van een rechthoek snijden elkaar altijd in het midden."
+    }
+  },
+  {
+    "id": "G2_add_7",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un losange, les diagonales sont-elles de même longueur ? (1=oui, 0=non)",
+      "en": "In a rhombus, are the diagonals of equal length? (1=yes, 0=no)",
+      "nl": "In een ruit, zijn de diagonalen even lang? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un losange ne sont pas toujours de même longueur, sauf si c'est un carré.",
+      "en": "The diagonals of a rhombus are not always equal, except if it's a square.",
+      "nl": "De diagonalen van een ruit zijn niet altijd gelijk, behalve als het een vierkant is."
+    }
+  },
+  {
+    "id": "G2_add_8",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un carré, les diagonales sont-elles perpendiculaires ? (1=oui, 0=non)",
+      "en": "In a square, are the diagonals perpendicular? (1=yes, 0=no)",
+      "nl": "In een vierkant, staan de diagonalen loodrecht op elkaar? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un carré sont toujours perpendiculaires.",
+      "en": "The diagonals of a square are always perpendicular.",
+      "nl": "De diagonalen van een vierkant staan altijd loodrecht op elkaar."
+    }
+  },
+  {
+    "id": "G2_add_9",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un parallélogramme a des diagonales de même longueur. Est-ce un rectangle ? (1=oui, 0=non)",
+      "en": "A parallelogram has diagonals of equal length. Is it a rectangle? (1=yes, 0=no)",
+      "nl": "Een parallellogram heeft diagonalen van gelijke lengte. Is het een rechthoek? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si un parallélogramme a des diagonales égales, c'est un rectangle.",
+      "en": "If a parallelogram has equal diagonals, it's a rectangle.",
+      "nl": "Als een parallellogram gelijke diagonalen heeft, is het een rechthoek."
+    }
+  },
+  {
+    "id": "G2_add_10",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un quadrilatère dont les 4 côtés sont égaux est nécessairement un carré. (1=oui, 0=non)",
+      "en": "A quadrilateral with 4 equal sides is necessarily a square. (1=yes, 0=no)",
+      "nl": "Een vierhoek met 4 gelijke zijden is noodzakelijk een vierkant. (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un losange a 4 côtés égaux mais ce n'est pas toujours un carré.",
+      "en": "A rhombus has 4 equal sides but it's not always a square.",
+      "nl": "Een ruit heeft 4 gelijke zijden maar is niet altijd een vierkant."
+    }
+  },
+  {
+    "id": "G2_add_11",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un heptagone (7 côtés) ?",
+      "en": "How many diagonals does a heptagon (7 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een zevenhoek (7 zijden)?"
+    },
+    "answer": "14",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=7.",
+      "en": "Use the formula n(n-3)/2 with n=7.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=7."
+    }
+  },
+  {
+    "id": "G2_add_12",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Les diagonales d'un trapèze se coupent-elles toujours en leur milieu ? (1=oui, 0=non)",
+      "en": "Do the diagonals of a trapezoid always bisect each other? (1=yes, 0=no)",
+      "nl": "Snijden de diagonalen van een trapezium elkaar altijd in het midden? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un trapèze ne se coupent pas toujours en leur milieu.",
+      "en": "The diagonals of a trapezoid don't always bisect each other.",
+      "nl": "De diagonalen van een trapezium snijden elkaar niet altijd in het midden."
+    }
+  },
+  {
+    "id": "G2_add_13",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un rectangle a 4 angles droits. Combien de diagonales possède-t-il ?",
+      "en": "A rectangle has 4 right angles. How many diagonals does it have?",
+      "nl": "Een rechthoek heeft 4 rechte hoeken. Hoeveel diagonalen heeft het?"
+    },
+    "answer": "2",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un rectangle est un quadrilatère, donc n=4.",
+      "en": "A rectangle is a quadrilateral, so n=4.",
+      "nl": "Een rechthoek is een vierhoek, dus n=4."
+    }
+  },
+  {
+    "id": "G2_add_14",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un losange, les diagonales sont-elles perpendiculaires ? (1=oui, 0=non)",
+      "en": "In a rhombus, are the diagonals perpendicular? (1=yes, 0=no)",
+      "nl": "In een ruit, staan de diagonalen loodrecht op elkaar? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un losange sont toujours perpendiculaires.",
+      "en": "The diagonals of a rhombus are always perpendicular.",
+      "nl": "De diagonalen van een ruit staan altijd loodrecht op elkaar."
+    }
+  },
+  {
+    "id": "G2_add_15",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un carré, les diagonales sont-elles de même longueur ? (1=oui, 0=non)",
+      "en": "In a square, are the diagonals of equal length? (1=yes, 0=no)",
+      "nl": "In een vierkant, zijn de diagonalen even lang? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un carré sont toujours de même longueur.",
+      "en": "The diagonals of a square are always of equal length.",
+      "nl": "De diagonalen van een vierkant zijn altijd even lang."
+    }
+  },
+  {
+    "id": "G2_add_16",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un octogone (8 côtés) ?",
+      "en": "How many diagonals does an octagon (8 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een achthoek (8 zijden)?"
+    },
+    "answer": "20",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=8.",
+      "en": "Use the formula n(n-3)/2 with n=8.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=8."
+    }
+  },
+  {
+    "id": "G2_add_17",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme. (1=oui, 0=non)",
+      "en": "A quadrilateral whose diagonals bisect each other is a parallelogram. (1=yes, 0=no)",
+      "nl": "Een vierhoek waarvan de diagonalen elkaar in het midden snijden is een parallellogram. (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "C'est une propriété caractéristique du parallélogramme.",
+      "en": "This is a characteristic property of parallelograms.",
+      "nl": "Dit is een karakteristieke eigenschap van parallelogrammen."
+    }
+  },
+  {
+    "id": "G2_add_18",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Dans un rectangle, les diagonales sont-elles de même longueur ? (1=oui, 0=non)",
+      "en": "In a rectangle, are the diagonals of equal length? (1=yes, 0=no)",
+      "nl": "In een rechthoek, zijn de diagonalen even lang? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un rectangle sont toujours de même longueur.",
+      "en": "The diagonals of a rectangle are always of equal length.",
+      "nl": "De diagonalen van een rechthoek zijn altijd even lang."
+    }
+  },
+  {
+    "id": "G2_add_19",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un polygone possède 5 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 5 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 5 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "5",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 5.",
+      "en": "Solve the equation n(n-3)/2 = 5.",
+      "nl": "Los de vergelijking n(n-3)/2 = 5 op."
+    }
+  },
+  {
+    "id": "G2_add_20",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un ennéagone (9 côtés) ?",
+      "en": "How many diagonals does a nonagon (9 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een negenhoek (9 zijden)?"
+    },
+    "answer": "27",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=9.",
+      "en": "Use the formula n(n-3)/2 with n=9.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=9."
+    }
+  },
+  {
+    "id": "G2_add_21",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Un parallélogramme a des diagonales perpendiculaires. Est-ce un losange ? (1=oui, 0=non)",
+      "en": "A parallelogram has perpendicular diagonals. Is it a rhombus? (1=yes, 0=no)",
+      "nl": "Een parallellogram heeft loodrechte diagonalen. Is het een ruit? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si un parallélogramme a des diagonales perpendiculaires, c'est un losange.",
+      "en": "If a parallelogram has perpendicular diagonals, it's a rhombus.",
+      "nl": "Als een parallellogram loodrechte diagonalen heeft, is het een ruit."
+    }
+  },
+  {
+    "id": "G2_add_22",
+    "category": "G2",
+    "level": 1,
+    "text": {
+      "fr": "Combien de diagonales possède un décagone (10 côtés) ?",
+      "en": "How many diagonals does a decagon (10 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een tienhoek (10 zijden)?"
+    },
+    "answer": "35",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=10.",
+      "en": "Use the formula n(n-3)/2 with n=10.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=10."
+    }
+  },
+  {
+    "id": "G2_add_23",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone possède 9 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 9 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 9 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "6",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 9.",
+      "en": "Solve the equation n(n-3)/2 = 9.",
+      "nl": "Los de vergelijking n(n-3)/2 = 9 op."
+    }
+  },
+  {
+    "id": "G2_add_24",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone possède 14 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 14 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 14 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "7",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 14.",
+      "en": "Solve the equation n(n-3)/2 = 14.",
+      "nl": "Los de vergelijking n(n-3)/2 = 14 op."
+    }
+  },
+  {
+    "id": "G2_add_25",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère a des diagonales perpendiculaires qui se coupent en leur milieu. Quel type de figure est-ce ?",
+      "en": "A quadrilateral has perpendicular diagonals that bisect each other. What type of figure is it?",
+      "nl": "Een vierhoek heeft loodrechte diagonalen die elkaar in het midden snijden. Welk type figuur is het?"
+    },
+    "answer": "Losange",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Ces propriétés caractérisent un losange.",
+      "en": "These properties characterize a rhombus.",
+      "nl": "Deze eigenschappen kenmerken een ruit."
+    }
+  },
+  {
+    "id": "G2_add_26",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère a des diagonales de même longueur qui se coupent en leur milieu. Quel type de figure est-ce ?",
+      "en": "A quadrilateral has diagonals of equal length that bisect each other. What type of figure is it?",
+      "nl": "Een vierhoek heeft diagonalen van gelijke lengte die elkaar in het midden snijden. Welk type figuur is het?"
+    },
+    "answer": "Rectangle",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Ces propriétés caractérisent un rectangle.",
+      "en": "These properties characterize a rectangle.",
+      "nl": "Deze eigenschappen kenmerken een rechthoek."
+    }
+  },
+  {
+    "id": "G2_add_27",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Combien de diagonales possède un dodécagone (12 côtés) ?",
+      "en": "How many diagonals does a dodecagon (12 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een twaalfhoek (12 zijden)?"
+    },
+    "answer": "54",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=12.",
+      "en": "Use the formula n(n-3)/2 with n=12.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=12."
+    }
+  },
+  {
+    "id": "G2_add_28",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Dans un losange ABCD, les diagonales AC et BD mesurent respectivement 10 cm et 6 cm. Quel est le périmètre du losange ?",
+      "en": "In a rhombus ABCD, the diagonals AC and BD measure 10 cm and 6 cm respectively. What is the perimeter of the rhombus?",
+      "nl": "In een ruit ABCD meten de diagonalen AC en BD respectievelijk 10 cm en 6 cm. Wat is de omtrek van de ruit?"
+    },
+    "answer": "√34",
+    "tolerance": 0.1,
+    "hint": {
+      "fr": "Les diagonales d'un losange se coupent perpendiculairement en leur milieu. Utilise le théorème de Pythagore.",
+      "en": "The diagonals of a rhombus bisect each other perpendicularly. Use the Pythagorean theorem.",
+      "nl": "De diagonalen van een ruit snijden elkaar loodrecht in het midden. Gebruik de stelling van Pythagoras."
+    }
+  },
+  {
+    "id": "G2_add_29",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone possède 20 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 20 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 20 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "8",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 20.",
+      "en": "Solve the equation n(n-3)/2 = 20.",
+      "nl": "Los de vergelijking n(n-3)/2 = 20 op."
+    }
+  },
+  {
+    "id": "G2_add_30",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un parallélogramme a 4 angles droits. Quel type de figure est-ce ?",
+      "en": "A parallelogram has 4 right angles. What type of figure is it?",
+      "nl": "Een parallellogram heeft 4 rechte hoeken. Welk type figuur is het?"
+    },
+    "answer": "Rectangle",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un parallélogramme avec 4 angles droits est un rectangle.",
+      "en": "A parallelogram with 4 right angles is a rectangle.",
+      "nl": "Een parallellogram met 4 rechte hoeken is een rechthoek."
+    }
+  },
+  {
+    "id": "G2_add_31",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un losange a 4 angles droits. Quel type de figure est-ce ?",
+      "en": "A rhombus has 4 right angles. What type of figure is it?",
+      "nl": "Een ruit heeft 4 rechte hoeken. Welk type figuur is het?"
+    },
+    "answer": "Carré",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un losange avec 4 angles droits est un carré.",
+      "en": "A rhombus with 4 right angles is a square.",
+      "nl": "Een ruit met 4 rechte hoeken is een vierkant."
+    }
+  },
+  {
+    "id": "G2_add_32",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 15 côtés ?",
+      "en": "How many diagonals does a 15-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 15-hoek?"
+    },
+    "answer": "90",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=15.",
+      "en": "Use the formula n(n-3)/2 with n=15.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=15."
+    }
+  },
+  {
+    "id": "G2_add_33",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère a ses 4 côtés égaux et ses diagonales perpendiculaires. Est-ce nécessairement un carré ? (1=oui, 0=non)",
+      "en": "A quadrilateral has 4 equal sides and perpendicular diagonals. Is it necessarily a square? (1=yes, 0=no)",
+      "nl": "Een vierhoek heeft 4 gelijke zijden en loodrechte diagonalen. Is het noodzakelijk een vierkant? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Cela pourrait être un losange qui n'est pas un carré.",
+      "en": "It could be a rhombus that is not a square.",
+      "nl": "Het zou een ruit kunnen zijn die geen vierkant is."
+    }
+  },
+  {
+    "id": "G2_add_34",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un trapèze isocèle a-t-il des diagonales de même longueur ? (1=oui, 0=non)",
+      "en": "Does an isosceles trapezoid have diagonals of equal length? (1=yes, 0=no)",
+      "nl": "Heeft een gelijkbenig trapezium diagonalen van gelijke lengte? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un trapèze isocèle sont toujours de même longueur.",
+      "en": "The diagonals of an isosceles trapezoid are always of equal length.",
+      "nl": "De diagonalen van een gelijkbenig trapezium zijn altijd even lang."
+    }
+  },
+  {
+    "id": "G2_add_35",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone possède 27 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 27 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 27 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "9",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 27.",
+      "en": "Solve the equation n(n-3)/2 = 27.",
+      "nl": "Los de vergelijking n(n-3)/2 = 27 op."
+    }
+  },
+  {
+    "id": "G2_add_36",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un rectangle a des diagonales perpendiculaires. Est-ce un carré ? (1=oui, 0=non)",
+      "en": "A rectangle has perpendicular diagonals. Is it a square? (1=yes, 0=no)",
+      "nl": "Een rechthoek heeft loodrechte diagonalen. Is het een vierkant? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Si un rectangle a des diagonales perpendiculaires, c'est un carré.",
+      "en": "If a rectangle has perpendicular diagonals, it's a square.",
+      "nl": "Als een rechthoek loodrechte diagonalen heeft, is het een vierkant."
+    }
+  },
+  {
+    "id": "G2_add_37",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère a deux paires de côtés parallèles. Quel est son nom générique ?",
+      "en": "A quadrilateral has two pairs of parallel sides. What is its generic name?",
+      "nl": "Een vierhoek heeft twee paar parallelle zijden. Wat is de generieke naam?"
+    },
+    "answer": "Parallélogramme",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un quadrilatère avec deux paires de côtés parallèles est un parallélogramme.",
+      "en": "A quadrilateral with two pairs of parallel sides is a parallelogram.",
+      "nl": "Een vierhoek met twee paar parallelle zijden is een parallellogram."
+    }
+  },
+  {
+    "id": "G2_add_38",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 20 côtés ?",
+      "en": "How many diagonals does a 20-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 20-hoek?"
+    },
+    "answer": "170",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=20.",
+      "en": "Use the formula n(n-3)/2 with n=20.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=20."
+    }
+  },
+  {
+    "id": "G2_add_39",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un parallélogramme a des côtés consécutifs de même longueur. Quel type de figure est-ce ?",
+      "en": "A parallelogram has consecutive sides of equal length. What type of figure is it?",
+      "nl": "Een parallellogram heeft opeenvolgende zijden van gelijke lengte. Welk type figuur is het?"
+    },
+    "answer": "Losange",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un parallélogramme avec des côtés consécutifs égaux est un losange.",
+      "en": "A parallelogram with equal consecutive sides is a rhombus.",
+      "nl": "Een parallellogram met gelijke opeenvolgende zijden is een ruit."
+    }
+  },
+  {
+    "id": "G2_add_40",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone possède 35 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 35 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 35 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "10",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 35.",
+      "en": "Solve the equation n(n-3)/2 = 35.",
+      "nl": "Los de vergelijking n(n-3)/2 = 35 op."
+    }
+  },
+  {
+    "id": "G2_add_41",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un cerf-volant (kite) a-t-il des diagonales perpendiculaires ? (1=oui, 0=non)",
+      "en": "Does a kite have perpendicular diagonals? (1=yes, 0=no)",
+      "nl": "Heeft een vlieger loodrechte diagonalen? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un cerf-volant sont toujours perpendiculaires.",
+      "en": "The diagonals of a kite are always perpendicular.",
+      "nl": "De diagonalen van een vlieger zijn altijd loodrecht."
+    }
+  },
+  {
+    "id": "G2_add_42",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 11 côtés ?",
+      "en": "How many diagonals does an 11-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 11-hoek?"
+    },
+    "answer": "44",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=11.",
+      "en": "Use the formula n(n-3)/2 with n=11.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=11."
+    }
+  },
+  {
+    "id": "G2_add_43",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un polygone a 2 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 2 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 2 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "4",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 2.",
+      "en": "Solve the equation n(n-3)/2 = 2.",
+      "nl": "Los de vergelijking n(n-3)/2 = 2 op."
+    }
+  },
+  {
+    "id": "G2_add_44",
+    "category": "G2",
+    "level": 2,
+    "text": {
+      "fr": "Un quadrilatère avec une seule paire de côtés parallèles s'appelle un _____.",
+      "en": "A quadrilateral with one pair of parallel sides is called a _____.",
+      "nl": "Een vierhoek met één paar parallelle zijden heet een _____."
+    },
+    "answer": "Trapèze",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un quadrilatère avec une seule paire de côtés parallèles est un trapèze.",
+      "en": "A quadrilateral with one pair of parallel sides is a trapezoid.",
+      "nl": "Een vierhoek met één paar parallelle zijden is een trapezium."
+    }
+  },
+  {
+    "id": "G2_add_45",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 54 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 54 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 54 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "12",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 54.",
+      "en": "Solve the equation n(n-3)/2 = 54.",
+      "nl": "Los de vergelijking n(n-3)/2 = 54 op."
+    }
+  },
+  {
+    "id": "G2_add_46",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 25 côtés ?",
+      "en": "How many diagonals does a 25-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 25-hoek?"
+    },
+    "answer": "275",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=25.",
+      "en": "Use the formula n(n-3)/2 with n=25.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=25."
+    }
+  },
+  {
+    "id": "G2_add_47",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 90 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 90 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 90 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "15",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 90.",
+      "en": "Solve the equation n(n-3)/2 = 90.",
+      "nl": "Los de vergelijking n(n-3)/2 = 90 op."
+    }
+  },
+  {
+    "id": "G2_add_48",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Dans un rectangle ABCD, la diagonale AC mesure 13 cm. Si AB = 5 cm, quelle est la longueur de BC ?",
+      "en": "In a rectangle ABCD, the diagonal AC measures 13 cm. If AB = 5 cm, what is the length of BC?",
+      "nl": "In een rechthoek ABCD meet de diagonaal AC 13 cm. Als AB = 5 cm, wat is de lengte van BC?"
+    },
+    "answer": "12",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise le théorème de Pythagore dans le triangle rectangle ABC.",
+      "en": "Use the Pythagorean theorem in the right triangle ABC.",
+      "nl": "Gebruik de stelling van Pythagoras in de rechthoekige driehoek ABC."
+    }
+  },
+  {
+    "id": "G2_add_49",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 30 côtés ?",
+      "en": "How many diagonals does a 30-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 30-hoek?"
+    },
+    "answer": "405",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=30.",
+      "en": "Use the formula n(n-3)/2 with n=30.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=30."
+    }
+  },
+  {
+    "id": "G2_add_50",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 119 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 119 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 119 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "17",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 119.",
+      "en": "Solve the equation n(n-3)/2 = 119.",
+      "nl": "Los de vergelijking n(n-3)/2 = 119 op."
+    }
+  },
+  {
+    "id": "G2_add_51",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Dans un losange, les diagonales mesurent 24 cm et 18 cm. Quelle est la longueur d'un côté du losange ?",
+      "en": "In a rhombus, the diagonals measure 24 cm and 18 cm. What is the length of a side of the rhombus?",
+      "nl": "In een ruit meten de diagonalen 24 cm en 18 cm. Wat is de lengte van een zijde van de ruit?"
+    },
+    "answer": "15",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un losange se coupent perpendiculairement en leur milieu. Utilise le théorème de Pythagore.",
+      "en": "The diagonals of a rhombus bisect each other perpendicularly. Use the Pythagorean theorem.",
+      "nl": "De diagonalen van een ruit snijden elkaar loodrecht in het midden. Gebruik de stelling van Pythagoras."
+    }
+  },
+  {
+    "id": "G2_add_52",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 50 côtés ?",
+      "en": "How many diagonals does a 50-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 50-hoek?"
+    },
+    "answer": "1175",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=50.",
+      "en": "Use the formula n(n-3)/2 with n=50.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=50."
+    }
+  },
+  {
+    "id": "G2_add_53",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 170 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 170 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 170 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "20",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 170.",
+      "en": "Solve the equation n(n-3)/2 = 170.",
+      "nl": "Los de vergelijking n(n-3)/2 = 170 op."
+    }
+  },
+  {
+    "id": "G2_add_54",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Dans un carré de côté 10 cm, quelle est la longueur d'une diagonale ? (arrondi à 0.1 près)",
+      "en": "In a square with side 10 cm, what is the length of a diagonal? (round to 0.1)",
+      "nl": "In een vierkant met zijde 10 cm, wat is de lengte van een diagonaal? (rond af op 0.1)"
+    },
+    "answer": "14.1",
+    "tolerance": 0.2,
+    "hint": {
+      "fr": "Utilise le théorème de Pythagore: d² = côté² + côté².",
+      "en": "Use the Pythagorean theorem: d² = side² + side².",
+      "nl": "Gebruik de stelling van Pythagoras: d² = zijde² + zijde²."
+    }
+  },
+  {
+    "id": "G2_add_55",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone régulier a un angle intérieur de 144°. Combien de diagonales possède-t-il ?",
+      "en": "A regular polygon has an interior angle of 144°. How many diagonals does it have?",
+      "nl": "Een regelmatige veelhoek heeft een binnenhoek van 144°. Hoeveel diagonalen heeft het?"
+    },
+    "answer": "35",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve d'abord le nombre de côtés avec la formule (n-2)×180/n = 144, puis calcule les diagonales.",
+      "en": "First find the number of sides with the formula (n-2)×180/n = 144, then calculate the diagonals.",
+      "nl": "Vind eerst het aantal zijden met de formule (n-2)×180/n = 144, bereken dan de diagonalen."
+    }
+  },
+  {
+    "id": "G2_add_56",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 100 côtés ?",
+      "en": "How many diagonals does a 100-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 100-hoek?"
+    },
+    "answer": "4850",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=100.",
+      "en": "Use the formula n(n-3)/2 with n=100.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=100."
+    }
+  },
+  {
+    "id": "G2_add_57",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 230 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 230 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 230 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "23",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 230.",
+      "en": "Solve the equation n(n-3)/2 = 230.",
+      "nl": "Los de vergelijking n(n-3)/2 = 230 op."
+    }
+  },
+  {
+    "id": "G2_add_58",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Dans un rectangle de longueur 15 cm et de largeur 8 cm, quelle est la longueur d'une diagonale ?",
+      "en": "In a rectangle with length 15 cm and width 8 cm, what is the length of a diagonal?",
+      "nl": "In een rechthoek met lengte 15 cm en breedte 8 cm, wat is de lengte van een diagonaal?"
+    },
+    "answer": "17",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise le théorème de Pythagore: d² = longueur² + largeur².",
+      "en": "Use the Pythagorean theorem: d² = length² + width².",
+      "nl": "Gebruik de stelling van Pythagoras: d² = lengte² + breedte²."
+    }
+  },
+  {
+    "id": "G2_add_59",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone régulier a un angle extérieur de 30°. Combien de diagonales possède-t-il ?",
+      "en": "A regular polygon has an exterior angle of 30°. How many diagonals does it have?",
+      "nl": "Een regelmatige veelhoek heeft een buitenhoek van 30°. Hoeveel diagonalen heeft het?"
+    },
+    "answer": "54",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve d'abord le nombre de côtés avec 360/angle extérieur, puis calcule les diagonales.",
+      "en": "First find the number of sides with 360/exterior angle, then calculate the diagonals.",
+      "nl": "Vind eerst het aantal zijden met 360/buitenhoek, bereken dan de diagonalen."
+    }
+  },
+  {
+    "id": "G2_add_60",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un icosagone (20 côtés) ?",
+      "en": "How many diagonals does an icosagon (20 sides) have?",
+      "nl": "Hoeveel diagonalen heeft een twintighoek (20 zijden)?"
+    },
+    "answer": "170",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=20.",
+      "en": "Use the formula n(n-3)/2 with n=20.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=20."
+    }
+  },
+  {
+    "id": "G2_add_61",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 275 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 275 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 275 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "25",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 275.",
+      "en": "Solve the equation n(n-3)/2 = 275.",
+      "nl": "Los de vergelijking n(n-3)/2 = 275 op."
+    }
+  },
+  {
+    "id": "G2_add_62",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Dans un losange, une diagonale mesure 16 cm et un côté mesure 10 cm. Quelle est la longueur de l'autre diagonale ?",
+      "en": "In a rhombus, one diagonal measures 16 cm and a side measures 10 cm. What is the length of the other diagonal?",
+      "nl": "In een ruit meet één diagonaal 16 cm en een zijde meet 10 cm. Wat is de lengte van de andere diagonaal?"
+    },
+    "answer": "12",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Les diagonales d'un losange se coupent perpendiculairement en leur milieu. Utilise le théorème de Pythagore.",
+      "en": "The diagonals of a rhombus bisect each other perpendicularly. Use the Pythagorean theorem.",
+      "nl": "De diagonalen van een ruit snijden elkaar loodrecht in het midden. Gebruik de stelling van Pythagoras."
+    }
+  },
+  {
+    "id": "G2_add_63",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone régulier a un angle intérieur de 150°. Combien de diagonales possède-t-il ?",
+      "en": "A regular polygon has an interior angle of 150°. How many diagonals does it have?",
+      "nl": "Een regelmatige veelhoek heeft een binnenhoek van 150°. Hoeveel diagonalen heeft het?"
+    },
+    "answer": "54",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve d'abord le nombre de côtés avec la formule (n-2)×180/n = 150, puis calcule les diagonales.",
+      "en": "First find the number of sides with the formula (n-2)×180/n = 150, then calculate the diagonals.",
+      "nl": "Vind eerst het aantal zijden met de formule (n-2)×180/n = 150, bereken dan de diagonalen."
+    }
+  },
+  {
+    "id": "G2_add_64",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Combien de diagonales possède un polygone à 40 côtés ?",
+      "en": "How many diagonals does a 40-sided polygon have?",
+      "nl": "Hoeveel diagonalen heeft een 40-hoek?"
+    },
+    "answer": "740",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule n(n-3)/2 avec n=40.",
+      "en": "Use the formula n(n-3)/2 with n=40.",
+      "nl": "Gebruik de formule n(n-3)/2 met n=40."
+    }
+  },
+  {
+    "id": "G2_add_65",
+    "category": "G2",
+    "level": 3,
+    "text": {
+      "fr": "Un polygone possède 405 diagonales. Combien de côtés a-t-il ?",
+      "en": "A polygon has 405 diagonals. How many sides does it have?",
+      "nl": "Een veelhoek heeft 405 diagonalen. Hoeveel zijden heeft het?"
+    },
+    "answer": "30",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Résous l'équation n(n-3)/2 = 405.",
+      "en": "Solve the equation n(n-3)/2 = 405.",
+      "nl": "Los de vergelijking n(n-3)/2 = 405 op."
+    }
+  }
 ];
-
-export function generate(level = 1) {
-  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  const id = `G2_gen_${Date.now()}_${rand(100, 999)}`;
-  if (level <= 1) {
-    const a = rand(3, 20); const b = rand(3, 15);
-    return { id, category: 'G2', level, text: { fr: `Quelle est l'aire d'un rectangle de ${a} cm sur ${b} cm ?`, en: `What is the area of a ${a} cm by ${b} cm rectangle?`, nl: `Wat is de oppervlakte van een rechthoek van ${a} cm op ${b} cm?` }, answer: a * b, tolerance: 0 };
-  }
-  if (level === 2) {
-    const base = rand(4, 20) * 2; const h = rand(3, 15);
-    return { id, category: 'G2', level, text: { fr: `Quelle est l'aire d'un triangle de base ${base} cm et de hauteur ${h} cm ?`, en: `What is the area of a triangle with base ${base} cm and height ${h} cm?`, nl: `Wat is de oppervlakte van een driehoek met basis ${base} cm en hoogte ${h} cm?` }, answer: base * h / 2, tolerance: 0 };
-  }
-  const B = rand(8, 20); const b = rand(4, B - 1); const h = rand(3, 12);
-  const answer = (B + b) * h / 2;
-  return { id, category: 'G2', level, text: { fr: `Quelle est l'aire d'un trapèze de bases ${B} cm et ${b} cm, et de hauteur ${h} cm ?`, en: `What is the area of a trapezoid with bases ${B} cm and ${b} cm, and height ${h} cm?`, nl: `Wat is de oppervlakte van een trapezium met bases ${B} cm en ${b} cm, en hoogte ${h} cm?` }, answer, tolerance: 0.01 };
-}

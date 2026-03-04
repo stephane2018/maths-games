@@ -28,8 +28,9 @@ export function getDailyChallenge(dateStr) {
   const themeIndex = Math.floor(rng() * CE1D_THEMES.length);
   const theme = CE1D_THEMES[themeIndex];
   const categories = getCategoriesToLoad([theme.id]);
-  const difficulties = ['easy', 'medium', 'hard'];
-  const difficulty = difficulties[Math.floor(rng() * 3)];
+
+  // Le défi du jour utilise toujours le niveau maximum (hard)
+  const difficulty = 'hard';
 
   return {
     date: dateStr,

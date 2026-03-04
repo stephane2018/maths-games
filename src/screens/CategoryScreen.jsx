@@ -12,6 +12,7 @@ import {
   BLUE_SUBCATS,
   RED_SUBCATS,
   ALL_PLAYABLE_CODES,
+  getRealCategoryCode,
 } from '../constants/categoryWizardConstants.js';
 import {
   GlassButton,
@@ -105,8 +106,8 @@ export default function CategoryScreen() {
     sound.buttonClick();
     const blueName = blueNameRef.current?.value.trim() || '';
     const redName = redNameRef.current?.value.trim() || '';
-    // Utiliser directement les sous-catégories sélectionnées (N1, G1, etc.)
-    const categories = Array.from(selectedSubcategories);
+    // Convertir les codes d'interface (A11, etc.) en vrais codes (G5, etc.)
+    const categories = Array.from(selectedSubcategories).map(code => getRealCategoryCode(code));
 
     if (categories.length === 0) {
       return;

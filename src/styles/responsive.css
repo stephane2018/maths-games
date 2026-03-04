@@ -100,6 +100,17 @@
     font-size: 0.8rem;
   }
 
+  /* Bouton switch plus compact sur très petits écrans */
+  .numpad-btn-switch {
+    font-size: 0.7rem !important;
+    gap: 2px !important;
+    padding: 2px 4px !important;
+  }
+
+  .numpad-btn-switch span {
+    font-size: 0.65rem !important;
+  }
+
   .hint-btn {
     font-size: 0.5rem;
     padding: 1px 4px;
@@ -292,6 +303,23 @@
     min-height: 40px;
     font-size: 1.1rem;
     font-weight: 700;
+  }
+
+  /* Mode alphabet: 4 colonnes avec boutons plus petits */
+  .numpad-grid[style*="grid-template-columns: repeat(4, 1fr)"] .numpad-btn {
+    font-size: 0.95rem;
+    min-height: 36px;
+  }
+
+  /* Bouton switch optimisé pour petits écrans */
+  .numpad-btn-switch {
+    font-size: 0.75rem !important;
+    gap: 3px !important;
+    min-height: 40px !important;
+  }
+
+  .numpad-btn-switch span {
+    font-size: 0.7rem !important;
   }
 
   /* Arena score bar compact */

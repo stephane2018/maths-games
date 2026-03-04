@@ -43,6 +43,22 @@ export const CE1D_THEMES = [
       { code: 'N3', name: { fr: 'Puissances', en: 'Powers', nl: 'Machten' } }
     ]
   },
+  {
+    id: 'algebra',
+    icon: '🔤',
+    name: { fr: 'Algèbre', en: 'Algebra', nl: 'Algebra' },
+    categories: ['A1', 'A2', 'A3', 'A4', 'A5', 'A8', 'A9'],
+    color: '#F59E0B',
+    subcategories: [
+      { code: 'A1', name: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' } },
+      { code: 'A2', name: { fr: 'Double distributivité', en: 'Double Distributivity', nl: 'Dubbele distributiviteit' } },
+      { code: 'A3', name: { fr: 'Calcul littéral', en: 'Literal Calculation', nl: 'Letterrekenen' } },
+      { code: 'A4', name: { fr: 'PPCM et PGCD', en: 'LCM and GCD', nl: 'KGV en GGD' } },
+      { code: 'A5', name: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' } },
+      { code: 'A8', name: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' } },
+      { code: 'A9', name: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' } }
+    ]
+  },
 ];
 
 export function getCategoriesToLoad(selectedThemeIds) {

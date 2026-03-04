@@ -431,6 +431,7 @@ export default function GameScreen() {
             onAnswer={(val, q, time) => handleAnswer('blue', val, q, time)}
             onHintRequest={handleHintRequest}
             hintsRemaining={blueHintsRemaining}
+            showHintButton={difficulty !== 'hard'}
             disabled={blueDisabled}
           />
           <QuestionPanel
@@ -440,7 +441,7 @@ export default function GameScreen() {
             onAnswer={(val, q, time) => handleAnswer('red', val, q, time)}
             onHintRequest={mode === 'versus' ? handleHintRequest : undefined}
             hintsRemaining={redHintsRemaining}
-            showHintButton={mode === 'versus'}
+            showHintButton={mode === 'versus' && difficulty !== 'hard'}
             disabled={redDisabled}
           />
         </div>

@@ -1,745 +1,2212 @@
-// =============================================================================
-// G5 - Triangles
-// CE1D Belgian exam - Trilingual (FR / EN / NL)
-// =============================================================================
-
 export const questions = [
-  // =========================================================================
-  // Level 1 — Perimeter of triangles (17 questions: s_1 – s_5, s_16 – s_27)
-  // =========================================================================
   {
-    id: "G5_s_1", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 5 cm, 7 cm et 10 cm. Quel est son périmètre ?", en: "A triangle has sides 5 cm, 7 cm and 10 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 5 cm, 7 cm en 10 cm. Wat is de omtrek?" },
-    answer: 22, tolerance: 0, unit: "cm",
-    hint: { fr: "Périmètre = somme des côtés.", en: "Perimeter = sum of sides.", nl: "Omtrek = som van zijden." }
-  },
-  {
-    id: "G5_s_2", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 8 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 8 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 8 cm. Wat is de omtrek?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 8 . 3.", en: "3 equal sides: 8 . 3.", nl: "3 gelijke zijden: 8 . 3." }
-  },
-  {
-    id: "G5_s_3", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 3 cm, 4 cm et 5 cm. Quel est son périmètre ?", en: "A triangle has sides 3 cm, 4 cm and 5 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 3 cm, 4 cm en 5 cm. Wat is de omtrek?" },
-    answer: 12, tolerance: 0, unit: "cm",
-    hint: { fr: "3 + 4 + 5.", en: "3 + 4 + 5.", nl: "3 + 4 + 5." }
-  },
-  {
-    id: "G5_s_4", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 6 cm et un côté de 4 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 6 cm and one of 4 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 6 cm en een van 4 cm. Wat is de omtrek?" },
-    answer: 16, tolerance: 0, unit: "cm",
-    hint: { fr: "6 + 6 + 4.", en: "6 + 6 + 4.", nl: "6 + 6 + 4." }
-  },
-  {
-    id: "G5_s_5", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 9 cm, 12 cm et 15 cm. Quel est son périmètre ?", en: "A triangle has sides 9 cm, 12 cm and 15 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 9 cm, 12 cm en 15 cm. Wat is de omtrek?" },
-    answer: 36, tolerance: 0, unit: "cm",
-    hint: { fr: "9 + 12 + 15.", en: "9 + 12 + 15.", nl: "9 + 12 + 15." }
-  },
-  {
-    id: "G5_s_16", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 11 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 11 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 11 cm. Wat is de omtrek?" },
-    answer: 33, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 11 . 3.", en: "3 equal sides: 11 . 3.", nl: "3 gelijke zijden: 11 . 3." }
-  },
-  {
-    id: "G5_s_17", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 9 cm et un côté de 5 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 9 cm and one of 5 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 9 cm en een van 5 cm. Wat is de omtrek?" },
-    answer: 23, tolerance: 0, unit: "cm",
-    hint: { fr: "9 + 9 + 5.", en: "9 + 9 + 5.", nl: "9 + 9 + 5." }
-  },
-  {
-    id: "G5_s_18", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 7 cm, 11 cm et 13 cm. Quel est son périmètre ?", en: "A triangle has sides 7 cm, 11 cm and 13 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 7 cm, 11 cm en 13 cm. Wat is de omtrek?" },
-    answer: 31, tolerance: 0, unit: "cm",
-    hint: { fr: "7 + 11 + 13.", en: "7 + 11 + 13.", nl: "7 + 11 + 13." }
-  },
-  {
-    id: "G5_s_19", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 15 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 15 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 15 cm. Wat is de omtrek?" },
-    answer: 45, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 15 . 3.", en: "3 equal sides: 15 . 3.", nl: "3 gelijke zijden: 15 . 3." }
-  },
-  {
-    id: "G5_s_20", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 10 cm et un côté de 7 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 10 cm and one of 7 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 10 cm en een van 7 cm. Wat is de omtrek?" },
-    answer: 27, tolerance: 0, unit: "cm",
-    hint: { fr: "10 + 10 + 7.", en: "10 + 10 + 7.", nl: "10 + 10 + 7." }
-  },
-  {
-    id: "G5_s_21", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 6 cm, 10 cm et 13 cm. Quel est son périmètre ?", en: "A triangle has sides 6 cm, 10 cm and 13 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 6 cm, 10 cm en 13 cm. Wat is de omtrek?" },
-    answer: 29, tolerance: 0, unit: "cm",
-    hint: { fr: "6 + 10 + 13.", en: "6 + 10 + 13.", nl: "6 + 10 + 13." }
-  },
-  {
-    id: "G5_s_22", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 12 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 12 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 12 cm. Wat is de omtrek?" },
-    answer: 36, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 12 . 3.", en: "3 equal sides: 12 . 3.", nl: "3 gelijke zijden: 12 . 3." }
-  },
-  {
-    id: "G5_s_23", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 7 cm et un côté de 10 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 7 cm and one of 10 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 7 cm en een van 10 cm. Wat is de omtrek?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "7 + 7 + 10.", en: "7 + 7 + 10.", nl: "7 + 7 + 10." }
-  },
-  {
-    id: "G5_s_24", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 4 cm, 8 cm et 9 cm. Quel est son périmètre ?", en: "A triangle has sides 4 cm, 8 cm and 9 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 4 cm, 8 cm en 9 cm. Wat is de omtrek?" },
-    answer: 21, tolerance: 0, unit: "cm",
-    hint: { fr: "4 + 8 + 9.", en: "4 + 8 + 9.", nl: "4 + 8 + 9." }
-  },
-  {
-    id: "G5_s_25", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 13 cm et un côté de 8 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 13 cm and one of 8 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 13 cm en een van 8 cm. Wat is de omtrek?" },
-    answer: 34, tolerance: 0, unit: "cm",
-    hint: { fr: "13 + 13 + 8.", en: "13 + 13 + 8.", nl: "13 + 13 + 8." }
-  },
-  {
-    id: "G5_s_26", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 11 cm, 14 cm et 17 cm. Quel est son périmètre ?", en: "A triangle has sides 11 cm, 14 cm and 17 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 11 cm, 14 cm en 17 cm. Wat is de omtrek?" },
-    answer: 42, tolerance: 0, unit: "cm",
-    hint: { fr: "11 + 14 + 17.", en: "11 + 14 + 17.", nl: "11 + 14 + 17." }
-  },
-  {
-    id: "G5_s_27", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 9 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 9 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 9 cm. Wat is de omtrek?" },
-    answer: 27, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 9 . 3.", en: "3 equal sides: 9 . 3.", nl: "3 gelijke zijden: 9 . 3." }
-  },
-  // =========================================================================
-  // Level 2 — Area of triangles (17 questions: s_6 – s_10, s_28 – s_39)
-  // =========================================================================
-  {
-    id: "G5_s_6", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 12 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 12 cm en hoogte 5 cm?" },
-    answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = base . hauteur : 2.", en: "Area = base . height : 2.", nl: "Oppervlakte = basis . hoogte : 2." }
-  },
-  {
-    id: "G5_s_7", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 8 cm et de hauteur 11 cm ?", en: "What is the area of a triangle with base 8 cm and height 11 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 8 cm en hoogte 11 cm?" },
-    answer: 44, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 11 : 2.", en: "Area = 8 . 11 : 2.", nl: "Oppervlakte = 8 . 11 : 2." }
-  },
-  {
-    id: "G5_s_8", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 6 cm et 8 cm. Quelle est son aire ?", en: "A right triangle has legs of 6 cm and 8 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 6 cm en 8 cm. Wat is de oppervlakte?" },
-    answer: 24, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 8 : 2.", en: "Area = 6 . 8 : 2.", nl: "Oppervlakte = 6 . 8 : 2." }
-  },
-  {
-    id: "G5_s_9", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 16 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 7 cm?" },
-    answer: 56, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 7 : 2.", en: "Area = 16 . 7 : 2.", nl: "Oppervlakte = 16 . 7 : 2." }
-  },
-  {
-    id: "G5_s_10", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 5 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 5 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 5 cm en 12 cm. Wat is de oppervlakte?" },
-    answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 . 12 : 2.", en: "Area = 5 . 12 : 2.", nl: "Oppervlakte = 5 . 12 : 2." }
-  },
-  {
-    id: "G5_s_28", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 10 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 10 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 10 cm en hoogte 7 cm?" },
-    answer: 35, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 7 : 2.", en: "Area = 10 . 7 : 2.", nl: "Oppervlakte = 10 . 7 : 2." }
-  },
-  {
-    id: "G5_s_29", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 12 cm. Wat is de oppervlakte?" },
-    answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 12 : 2.", en: "Area = 9 . 12 : 2.", nl: "Oppervlakte = 9 . 12 : 2." }
-  },
-  {
-    id: "G5_s_30", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 14 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 9 cm?" },
-    answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 9 : 2.", en: "Area = 14 . 9 : 2.", nl: "Oppervlakte = 14 . 9 : 2." }
-  },
-  {
-    id: "G5_s_31", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 20 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 20 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 20 cm en hoogte 6 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 6 : 2.", en: "Area = 20 . 6 : 2.", nl: "Oppervlakte = 20 . 6 : 2." }
-  },
-  {
-    id: "G5_s_32", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 4 cm ?", en: "What is the area of a triangle with base 18 cm and height 4 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 4 cm?" },
-    answer: 36, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 4 : 2.", en: "Area = 18 . 4 : 2.", nl: "Oppervlakte = 18 . 4 : 2." }
-  },
-  {
-    id: "G5_s_33", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 6 cm et de hauteur 14 cm ?", en: "What is the area of a triangle with base 6 cm and height 14 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 6 cm en hoogte 14 cm?" },
-    answer: 42, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 6 . 14 : 2.", en: "Area = 6 . 14 : 2.", nl: "Oppervlakte = 6 . 14 : 2." }
-  },
-  {
-    id: "G5_s_34", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 7 cm et 24 cm. Quelle est son aire ?", en: "A right triangle has legs of 7 cm and 24 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 7 cm en 24 cm. Wat is de oppervlakte?" },
-    answer: 84, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 . 24 : 2.", en: "Area = 7 . 24 : 2.", nl: "Oppervlakte = 7 . 24 : 2." }
-  },
-  {
-    id: "G5_s_35", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 22 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 22 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 22 cm en hoogte 8 cm?" },
-    answer: 88, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 22 . 8 : 2.", en: "Area = 22 . 8 : 2.", nl: "Oppervlakte = 22 . 8 : 2." }
-  },
-  {
-    id: "G5_s_36", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 15 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 15 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 15 cm en hoogte 10 cm?" },
-    answer: 75, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 10 : 2.", en: "Area = 15 . 10 : 2.", nl: "Oppervlakte = 15 . 10 : 2." }
-  },
-  {
-    id: "G5_s_37", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 10 cm et 24 cm. Quelle est son aire ?", en: "A right triangle has legs of 10 cm and 24 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 10 cm en 24 cm. Wat is de oppervlakte?" },
-    answer: 120, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 10 . 24 : 2.", en: "Area = 10 . 24 : 2.", nl: "Oppervlakte = 10 . 24 : 2." }
-  },
-  {
-    id: "G5_s_38", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 11 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 11 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 11 cm en hoogte 6 cm?" },
-    answer: 33, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 6 : 2.", en: "Area = 11 . 6 : 2.", nl: "Oppervlakte = 11 . 6 : 2." }
-  },
-  {
-    id: "G5_s_39", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 13 cm et de hauteur 8 cm ?", en: "What is the area of a triangle with base 13 cm and height 8 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 13 cm en hoogte 8 cm?" },
-    answer: 52, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 13 . 8 : 2.", en: "Area = 13 . 8 : 2.", nl: "Oppervlakte = 13 . 8 : 2." }
-  },
-  // =========================================================================
-  // Level 3 — Pythagorean theorem (16 questions: s_11 – s_15, s_40 – s_50)
-  // =========================================================================
-  {
-    id: "G5_s_11", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 3 cm et 4 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 3 cm and 4 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 3 cm en 4 cm. Wat is de hypotenusa?" },
-    answer: 5, tolerance: 0, unit: "cm",
-    hint: { fr: "Pythagore : c² = 3² + 4² = 9 + 16 = 25.", en: "Pythagoras: c² = 3² + 4² = 9 + 16 = 25.", nl: "Pythagoras: c² = 3² + 4² = 9 + 16 = 25." }
-  },
-  {
-    id: "G5_s_12", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 6 cm et 8 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 6 cm and 8 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 6 cm en 8 cm. Wat is de hypotenusa?" },
-    answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 36 + 64 = 100. Donc c = 10.", en: "c² = 36 + 64 = 100. So c = 10.", nl: "c² = 36 + 64 = 100. Dus c = 10." }
-  },
-  {
-    id: "G5_s_13", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 13 cm et une cathète de 5 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 13 cm and a leg of 5 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 13 cm en een zijde van 5 cm. Wat is de andere zijde?" },
-    answer: 12, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 13² - 5² = 169 - 25 = 144.", en: "b² = 13² - 5² = 169 - 25 = 144.", nl: "b² = 13² - 5² = 169 - 25 = 144." }
-  },
-  {
-    id: "G5_s_14", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 5 cm et 12 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 5 cm and 12 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 5 cm en 12 cm. Wat is de hypotenusa?" },
-    answer: 13, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 25 + 144 = 169. Donc c = 13.", en: "c² = 25 + 144 = 169. So c = 13.", nl: "c² = 25 + 144 = 169. Dus c = 13." }
-  },
-  {
-    id: "G5_s_15", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 10 cm et une cathète de 6 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 10 cm and a leg of 6 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 10 cm en een zijde van 6 cm. Wat is de andere zijde?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 100 - 36 = 64. Donc b = 8.", en: "b² = 100 - 36 = 64. So b = 8.", nl: "b² = 100 - 36 = 64. Dus b = 8." }
-  },
-  {
-    id: "G5_s_40", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 8 cm et 15 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 8 cm and 15 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 8 cm en 15 cm. Wat is de hypotenusa?" },
-    answer: 17, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 64 + 225 = 289. Donc c = 17.", en: "c² = 64 + 225 = 289. So c = 17.", nl: "c² = 64 + 225 = 289. Dus c = 17." }
-  },
-  {
-    id: "G5_s_41", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 25 cm et une cathète de 7 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 25 cm and a leg of 7 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 25 cm en een zijde van 7 cm. Wat is de andere zijde?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 625 - 49 = 576. Donc b = 24.", en: "b² = 625 - 49 = 576. So b = 24.", nl: "b² = 625 - 49 = 576. Dus b = 24." }
-  },
-  {
-    id: "G5_s_42", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 12 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 9 cm and 12 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 9 cm en 12 cm. Wat is de hypotenusa?" },
-    answer: 15, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 81 + 144 = 225. Donc c = 15.", en: "c² = 81 + 144 = 225. So c = 15.", nl: "c² = 81 + 144 = 225. Dus c = 15." }
-  },
-  {
-    id: "G5_s_43", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 17 cm et une cathète de 15 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 17 cm and a leg of 15 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 17 cm en een zijde van 15 cm. Wat is de andere zijde?" },
-    answer: 8, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 289 - 225 = 64. Donc b = 8.", en: "b² = 289 - 225 = 64. So b = 8.", nl: "b² = 289 - 225 = 64. Dus b = 8." }
-  },
-  {
-    id: "G5_s_44", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 40 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 9 cm and 40 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 9 cm en 40 cm. Wat is de hypotenusa?" },
-    answer: 41, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 81 + 1600 = 1681. Donc c = 41.", en: "c² = 81 + 1600 = 1681. So c = 41.", nl: "c² = 81 + 1600 = 1681. Dus c = 41." }
-  },
-  {
-    id: "G5_s_45", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 20 cm et 21 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 20 cm and 21 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 20 cm en 21 cm. Wat is de hypotenusa?" },
-    answer: 29, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 400 + 441 = 841. Donc c = 29.", en: "c² = 400 + 441 = 841. So c = 29.", nl: "c² = 400 + 441 = 841. Dus c = 29." }
-  },
-  {
-    id: "G5_s_46", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 41 cm et une cathète de 9 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 41 cm and a leg of 9 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 41 cm en een zijde van 9 cm. Wat is de andere zijde?" },
-    answer: 40, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 1681 - 81 = 1600. Donc b = 40.", en: "b² = 1681 - 81 = 1600. So b = 40.", nl: "b² = 1681 - 81 = 1600. Dus b = 40." }
-  },
-  {
-    id: "G5_s_47", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 12 cm et 16 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 12 cm and 16 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 12 cm en 16 cm. Wat is de hypotenusa?" },
-    answer: 20, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 144 + 256 = 400. Donc c = 20.", en: "c² = 144 + 256 = 400. So c = 20.", nl: "c² = 144 + 256 = 400. Dus c = 20." }
-  },
-  {
-    id: "G5_s_48", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 29 cm et une cathète de 20 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 29 cm and a leg of 20 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 29 cm en een zijde van 20 cm. Wat is de andere zijde?" },
-    answer: 21, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 841 - 400 = 441. Donc b = 21.", en: "b² = 841 - 400 = 441. So b = 21.", nl: "b² = 841 - 400 = 441. Dus b = 21." }
-  },
-  {
-    id: "G5_s_49", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 15 cm et 20 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 15 cm and 20 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 15 cm en 20 cm. Wat is de hypotenusa?" },
-    answer: 25, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 225 + 400 = 625. Donc c = 25.", en: "c² = 225 + 400 = 625. So c = 25.", nl: "c² = 225 + 400 = 625. Dus c = 25." }
-  },
-  {
-    id: "G5_s_50", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 26 cm et une cathète de 10 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 26 cm and a leg of 10 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 26 cm en een zijde van 10 cm. Wat is de andere zijde?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 676 - 100 = 576. Donc b = 24.", en: "b² = 676 - 100 = 576. So b = 24.", nl: "b² = 676 - 100 = 576. Dus b = 24." }
-  },
-  // =========================================================================
-  // Level 1 — Perimeter of triangles (20 questions: s_51 – s_70)
-  // =========================================================================
-  {
-    id: "G5_s_51", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 14 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 14 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 14 cm. Wat is de omtrek?" },
-    answer: 42, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 14 . 3.", en: "3 equal sides: 14 . 3.", nl: "3 gelijke zijden: 14 . 3." }
-  },
-  {
-    id: "G5_s_52", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 11 cm et un côté de 6 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 11 cm and one of 6 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 11 cm en een van 6 cm. Wat is de omtrek?" },
-    answer: 28, tolerance: 0, unit: "cm",
-    hint: { fr: "11 + 11 + 6.", en: "11 + 11 + 6.", nl: "11 + 11 + 6." }
-  },
-  {
-    id: "G5_s_53", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 8 cm, 13 cm et 15 cm. Quel est son périmètre ?", en: "A triangle has sides 8 cm, 13 cm and 15 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 8 cm, 13 cm en 15 cm. Wat is de omtrek?" },
-    answer: 36, tolerance: 0, unit: "cm",
-    hint: { fr: "8 + 13 + 15.", en: "8 + 13 + 15.", nl: "8 + 13 + 15." }
-  },
-  {
-    id: "G5_s_54", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 7 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 7 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 7 cm. Wat is de omtrek?" },
-    answer: 21, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 7 . 3.", en: "3 equal sides: 7 . 3.", nl: "3 gelijke zijden: 7 . 3." }
-  },
-  {
-    id: "G5_s_55", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 8 cm et un côté de 12 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 8 cm and one of 12 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 8 cm en een van 12 cm. Wat is de omtrek?" },
-    answer: 28, tolerance: 0, unit: "cm",
-    hint: { fr: "8 + 8 + 12.", en: "8 + 8 + 12.", nl: "8 + 8 + 12." }
-  },
-  {
-    id: "G5_s_56", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 10 cm, 14 cm et 18 cm. Quel est son périmètre ?", en: "A triangle has sides 10 cm, 14 cm and 18 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 10 cm, 14 cm en 18 cm. Wat is de omtrek?" },
-    answer: 42, tolerance: 0, unit: "cm",
-    hint: { fr: "10 + 14 + 18.", en: "10 + 14 + 18.", nl: "10 + 14 + 18." }
-  },
-  {
-    id: "G5_s_57", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 13 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 13 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 13 cm. Wat is de omtrek?" },
-    answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 13 . 3.", en: "3 equal sides: 13 . 3.", nl: "3 gelijke zijden: 13 . 3." }
-  },
-  {
-    id: "G5_s_58", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 15 cm et un côté de 9 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 15 cm and one of 9 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 15 cm en een van 9 cm. Wat is de omtrek?" },
-    answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "15 + 15 + 9.", en: "15 + 15 + 9.", nl: "15 + 15 + 9." }
-  },
-  {
-    id: "G5_s_59", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 5 cm, 9 cm et 11 cm. Quel est son périmètre ?", en: "A triangle has sides 5 cm, 9 cm and 11 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 5 cm, 9 cm en 11 cm. Wat is de omtrek?" },
-    answer: 25, tolerance: 0, unit: "cm",
-    hint: { fr: "5 + 9 + 11.", en: "5 + 9 + 11.", nl: "5 + 9 + 11." }
-  },
-  {
-    id: "G5_s_60", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 12 cm et un côté de 10 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 12 cm and one of 10 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 12 cm en een van 10 cm. Wat is de omtrek?" },
-    answer: 34, tolerance: 0, unit: "cm",
-    hint: { fr: "12 + 12 + 10.", en: "12 + 12 + 10.", nl: "12 + 12 + 10." }
-  },
-  {
-    id: "G5_s_61", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 6 cm, 7 cm et 11 cm. Quel est son périmètre ?", en: "A triangle has sides 6 cm, 7 cm and 11 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 6 cm, 7 cm en 11 cm. Wat is de omtrek?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "6 + 7 + 11.", en: "6 + 7 + 11.", nl: "6 + 7 + 11." }
-  },
-  {
-    id: "G5_s_62", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 10 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 10 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 10 cm. Wat is de omtrek?" },
-    answer: 30, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 10 . 3.", en: "3 equal sides: 10 . 3.", nl: "3 gelijke zijden: 10 . 3." }
-  },
-  {
-    id: "G5_s_63", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 14 cm et un côté de 11 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 14 cm and one of 11 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 14 cm en een van 11 cm. Wat is de omtrek?" },
-    answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "14 + 14 + 11.", en: "14 + 14 + 11.", nl: "14 + 14 + 11." }
-  },
-  {
-    id: "G5_s_64", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 12 cm, 15 cm et 20 cm. Quel est son périmètre ?", en: "A triangle has sides 12 cm, 15 cm and 20 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 12 cm, 15 cm en 20 cm. Wat is de omtrek?" },
-    answer: 47, tolerance: 0, unit: "cm",
-    hint: { fr: "12 + 15 + 20.", en: "12 + 15 + 20.", nl: "12 + 15 + 20." }
-  },
-  {
-    id: "G5_s_65", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 6 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 6 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 6 cm. Wat is de omtrek?" },
-    answer: 18, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 6 . 3.", en: "3 equal sides: 6 . 3.", nl: "3 gelijke zijden: 6 . 3." }
-  },
-  {
-    id: "G5_s_66", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 9 cm, 10 cm et 14 cm. Quel est son périmètre ?", en: "A triangle has sides 9 cm, 10 cm and 14 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 9 cm, 10 cm en 14 cm. Wat is de omtrek?" },
-    answer: 33, tolerance: 0, unit: "cm",
-    hint: { fr: "9 + 10 + 14.", en: "9 + 10 + 14.", nl: "9 + 10 + 14." }
-  },
-  {
-    id: "G5_s_67", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 5 cm et un côté de 8 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 5 cm and one of 8 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 5 cm en een van 8 cm. Wat is de omtrek?" },
-    answer: 18, tolerance: 0, unit: "cm",
-    hint: { fr: "5 + 5 + 8.", en: "5 + 5 + 8.", nl: "5 + 5 + 8." }
-  },
-  {
-    id: "G5_s_68", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 7 cm, 16 cm et 18 cm. Quel est son périmètre ?", en: "A triangle has sides 7 cm, 16 cm and 18 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 7 cm, 16 cm en 18 cm. Wat is de omtrek?" },
-    answer: 41, tolerance: 0, unit: "cm",
-    hint: { fr: "7 + 16 + 18.", en: "7 + 16 + 18.", nl: "7 + 16 + 18." }
-  },
-  {
-    id: "G5_s_69", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 16 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 16 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 16 cm. Wat is de omtrek?" },
-    answer: 48, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 16 . 3.", en: "3 equal sides: 16 . 3.", nl: "3 gelijke zijden: 16 . 3." }
-  },
-  {
-    id: "G5_s_70", category: "G5", level: 1,
-    text: { fr: "Un triangle isocèle a deux côtés de 16 cm et un côté de 14 cm. Quel est son périmètre ?", en: "An isosceles triangle has two sides of 16 cm and one of 14 cm. What is its perimeter?", nl: "Een gelijkbenige driehoek heeft twee zijden van 16 cm en een van 14 cm. Wat is de omtrek?" },
-    answer: 46, tolerance: 0, unit: "cm",
-    hint: { fr: "16 + 16 + 14.", en: "16 + 16 + 14.", nl: "16 + 16 + 14." }
-  },
-  // =========================================================================
-  // Level 2 — Area of triangles (20 questions: s_71 – s_90)
-  // =========================================================================
-  {
-    id: "G5_s_71", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 24 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 24 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 24 cm en hoogte 5 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 24 . 5 : 2.", en: "Area = 24 . 5 : 2.", nl: "Oppervlakte = 24 . 5 : 2." }
-  },
-  {
-    id: "G5_s_72", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 8 cm et 15 cm. Quelle est son aire ?", en: "A right triangle has legs of 8 cm and 15 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 8 cm en 15 cm. Wat is de oppervlakte?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 15 : 2.", en: "Area = 8 . 15 : 2.", nl: "Oppervlakte = 8 . 15 : 2." }
-  },
-  {
-    id: "G5_s_73", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 9 cm et de hauteur 12 cm ?", en: "What is the area of a triangle with base 9 cm and height 12 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 9 cm en hoogte 12 cm?" },
-    answer: 54, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 12 : 2.", en: "Area = 9 . 12 : 2.", nl: "Oppervlakte = 9 . 12 : 2." }
-  },
-  {
-    id: "G5_s_74", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 7 cm et de hauteur 10 cm ?", en: "What is the area of a triangle with base 7 cm and height 10 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 7 cm en hoogte 10 cm?" },
-    answer: 35, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 7 . 10 : 2.", en: "Area = 7 . 10 : 2.", nl: "Oppervlakte = 7 . 10 : 2." }
-  },
-  {
-    id: "G5_s_75", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 3 cm et 4 cm. Quelle est son aire ?", en: "A right triangle has legs of 3 cm and 4 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 3 cm en 4 cm. Wat is de oppervlakte?" },
-    answer: 6, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 3 . 4 : 2.", en: "Area = 3 . 4 : 2.", nl: "Oppervlakte = 3 . 4 : 2." }
-  },
-  {
-    id: "G5_s_76", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 16 cm et de hauteur 11 cm ?", en: "What is the area of a triangle with base 16 cm and height 11 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 16 cm en hoogte 11 cm?" },
-    answer: 88, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 16 . 11 : 2.", en: "Area = 16 . 11 : 2.", nl: "Oppervlakte = 16 . 11 : 2." }
-  },
-  {
-    id: "G5_s_77", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 5 cm et de hauteur 18 cm ?", en: "What is the area of a triangle with base 5 cm and height 18 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 5 cm en hoogte 18 cm?" },
-    answer: 45, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 . 18 : 2.", en: "Area = 5 . 18 : 2.", nl: "Oppervlakte = 5 . 18 : 2." }
-  },
-  {
-    id: "G5_s_78", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 12 cm et 16 cm. Quelle est son aire ?", en: "A right triangle has legs of 12 cm and 16 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 12 cm en 16 cm. Wat is de oppervlakte?" },
-    answer: 96, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 16 : 2.", en: "Area = 12 . 16 : 2.", nl: "Oppervlakte = 12 . 16 : 2." }
-  },
-  {
-    id: "G5_s_79", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 26 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 26 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 26 cm en hoogte 7 cm?" },
-    answer: 91, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 26 . 7 : 2.", en: "Area = 26 . 7 : 2.", nl: "Oppervlakte = 26 . 7 : 2." }
-  },
-  {
-    id: "G5_s_80", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 4 cm et de hauteur 9 cm ?", en: "What is the area of a triangle with base 4 cm and height 9 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 4 cm en hoogte 9 cm?" },
-    answer: 18, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 4 . 9 : 2.", en: "Area = 4 . 9 : 2.", nl: "Oppervlakte = 4 . 9 : 2." }
-  },
-  {
-    id: "G5_s_81", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 15 cm et 20 cm. Quelle est son aire ?", en: "A right triangle has legs of 15 cm and 20 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 15 cm en 20 cm. Wat is de oppervlakte?" },
-    answer: 150, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 15 . 20 : 2.", en: "Area = 15 . 20 : 2.", nl: "Oppervlakte = 15 . 20 : 2." }
-  },
-  {
-    id: "G5_s_82", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 13 cm ?", en: "What is the area of a triangle with base 12 cm and height 13 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 12 cm en hoogte 13 cm?" },
-    answer: 78, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 12 . 13 : 2.", en: "Area = 12 . 13 : 2.", nl: "Oppervlakte = 12 . 13 : 2." }
-  },
-  {
-    id: "G5_s_83", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 30 cm et de hauteur 4 cm ?", en: "What is the area of a triangle with base 30 cm and height 4 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 30 cm en hoogte 4 cm?" },
-    answer: 60, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 30 . 4 : 2.", en: "Area = 30 . 4 : 2.", nl: "Oppervlakte = 30 . 4 : 2." }
-  },
-  {
-    id: "G5_s_84", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 20 cm et 21 cm. Quelle est son aire ?", en: "A right triangle has legs of 20 cm and 21 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 20 cm en 21 cm. Wat is de oppervlakte?" },
-    answer: 210, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 20 . 21 : 2.", en: "Area = 20 . 21 : 2.", nl: "Oppervlakte = 20 . 21 : 2." }
-  },
-  {
-    id: "G5_s_85", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 11 cm et de hauteur 14 cm ?", en: "What is the area of a triangle with base 11 cm and height 14 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 11 cm en hoogte 14 cm?" },
-    answer: 77, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 11 . 14 : 2.", en: "Area = 11 . 14 : 2.", nl: "Oppervlakte = 11 . 14 : 2." }
-  },
-  {
-    id: "G5_s_86", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 8 cm et de hauteur 5 cm ?", en: "What is the area of a triangle with base 8 cm and height 5 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 8 cm en hoogte 5 cm?" },
-    answer: 20, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 8 . 5 : 2.", en: "Area = 8 . 5 : 2.", nl: "Oppervlakte = 8 . 5 : 2." }
-  },
-  {
-    id: "G5_s_87", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 40 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 40 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 40 cm. Wat is de oppervlakte?" },
-    answer: 180, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 40 : 2.", en: "Area = 9 . 40 : 2.", nl: "Oppervlakte = 9 . 40 : 2." }
-  },
-  {
-    id: "G5_s_88", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 17 cm et de hauteur 6 cm ?", en: "What is the area of a triangle with base 17 cm and height 6 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 17 cm en hoogte 6 cm?" },
-    answer: 51, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 17 . 6 : 2.", en: "Area = 17 . 6 : 2.", nl: "Oppervlakte = 17 . 6 : 2." }
-  },
-  {
-    id: "G5_s_89", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 15 cm ?", en: "What is the area of a triangle with base 14 cm and height 15 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 15 cm?" },
-    answer: 105, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 14 . 15 : 2.", en: "Area = 14 . 15 : 2.", nl: "Oppervlakte = 14 . 15 : 2." }
-  },
-  {
-    id: "G5_s_90", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 5 cm et 12 cm. Quelle est son aire ?", en: "A right triangle has legs of 5 cm and 12 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 5 cm en 12 cm. Wat is de oppervlakte?" },
-    answer: 30, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 5 . 12 : 2.", en: "Area = 5 . 12 : 2.", nl: "Oppervlakte = 5 . 12 : 2." }
-  },
-  // =========================================================================
-  // Level 3 — Pythagorean theorem (21 questions: s_91 – s_111)
-  // =========================================================================
-  {
-    id: "G5_s_91", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 7 cm et 24 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 7 cm and 24 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 7 cm en 24 cm. Wat is de hypotenusa?" },
-    answer: 25, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 49 + 576 = 625. Donc c = 25.", en: "c² = 49 + 576 = 625. So c = 25.", nl: "c² = 49 + 576 = 625. Dus c = 25." }
-  },
-  {
-    id: "G5_s_92", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 15 cm et une cathète de 9 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 15 cm and a leg of 9 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 15 cm en een zijde van 9 cm. Wat is de andere zijde?" },
-    answer: 12, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 225 - 81 = 144. Donc b = 12.", en: "b² = 225 - 81 = 144. So b = 12.", nl: "b² = 225 - 81 = 144. Dus b = 12." }
-  },
-  {
-    id: "G5_s_93", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 10 cm et 24 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 10 cm and 24 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 10 cm en 24 cm. Wat is de hypotenusa?" },
-    answer: 26, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 100 + 576 = 676. Donc c = 26.", en: "c² = 100 + 576 = 676. So c = 26.", nl: "c² = 100 + 576 = 676. Dus c = 26." }
-  },
-  {
-    id: "G5_s_94", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 20 cm et une cathète de 12 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 20 cm and a leg of 12 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 20 cm en een zijde van 12 cm. Wat is de andere zijde?" },
-    answer: 16, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 400 - 144 = 256. Donc b = 16.", en: "b² = 400 - 144 = 256. So b = 16.", nl: "b² = 400 - 144 = 256. Dus b = 16." }
-  },
-  {
-    id: "G5_s_95", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 6 cm et 8 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 6 cm and 8 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 6 cm en 8 cm. Wat is de hypotenusa?" },
-    answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 36 + 64 = 100. Donc c = 10.", en: "c² = 36 + 64 = 100. So c = 10.", nl: "c² = 36 + 64 = 100. Dus c = 10." }
-  },
-  {
-    id: "G5_s_96", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 25 cm et une cathète de 15 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 25 cm and a leg of 15 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 25 cm en een zijde van 15 cm. Wat is de andere zijde?" },
-    answer: 20, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 625 - 225 = 400. Donc b = 20.", en: "b² = 625 - 225 = 400. So b = 20.", nl: "b² = 625 - 225 = 400. Dus b = 20." }
-  },
-  {
-    id: "G5_s_97", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 15 cm et 36 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 15 cm and 36 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 15 cm en 36 cm. Wat is de hypotenusa?" },
-    answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 225 + 1296 = 1521. Donc c = 39.", en: "c² = 225 + 1296 = 1521. So c = 39.", nl: "c² = 225 + 1296 = 1521. Dus c = 39." }
-  },
-  {
-    id: "G5_s_98", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 26 cm et une cathète de 24 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 26 cm and a leg of 24 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 26 cm en een zijde van 24 cm. Wat is de andere zijde?" },
-    answer: 10, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 676 - 576 = 100. Donc b = 10.", en: "b² = 676 - 576 = 100. So b = 10.", nl: "b² = 676 - 576 = 100. Dus b = 10." }
-  },
-  {
-    id: "G5_s_99", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 16 cm et 30 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 16 cm and 30 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 16 cm en 30 cm. Wat is de hypotenusa?" },
-    answer: 34, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 256 + 900 = 1156. Donc c = 34.", en: "c² = 256 + 900 = 1156. So c = 34.", nl: "c² = 256 + 900 = 1156. Dus c = 34." }
-  },
-  {
-    id: "G5_s_100", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 50 cm et une cathète de 30 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 50 cm and a leg of 30 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 50 cm en een zijde van 30 cm. Wat is de andere zijde?" },
-    answer: 40, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 2500 - 900 = 1600. Donc b = 40.", en: "b² = 2500 - 900 = 1600. So b = 40.", nl: "b² = 2500 - 900 = 1600. Dus b = 40." }
-  },
-  {
-    id: "G5_s_101", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 18 cm et 24 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 18 cm and 24 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 18 cm en 24 cm. Wat is de hypotenusa?" },
-    answer: 30, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 324 + 576 = 900. Donc c = 30.", en: "c² = 324 + 576 = 900. So c = 30.", nl: "c² = 324 + 576 = 900. Dus c = 30." }
-  },
-  {
-    id: "G5_s_102", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 34 cm et une cathète de 16 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 34 cm and a leg of 16 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 34 cm en een zijde van 16 cm. Wat is de andere zijde?" },
-    answer: 30, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 1156 - 256 = 900. Donc b = 30.", en: "b² = 1156 - 256 = 900. So b = 30.", nl: "b² = 1156 - 256 = 900. Dus b = 30." }
-  },
-  {
-    id: "G5_s_103", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 14 cm et 48 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 14 cm and 48 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 14 cm en 48 cm. Wat is de hypotenusa?" },
-    answer: 50, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 196 + 2304 = 2500. Donc c = 50.", en: "c² = 196 + 2304 = 2500. So c = 50.", nl: "c² = 196 + 2304 = 2500. Dus c = 50." }
-  },
-  {
-    id: "G5_s_104", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 30 cm et une cathète de 18 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 30 cm and a leg of 18 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 30 cm en een zijde van 18 cm. Wat is de andere zijde?" },
-    answer: 24, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 900 - 324 = 576. Donc b = 24.", en: "b² = 900 - 324 = 576. So b = 24.", nl: "b² = 900 - 324 = 576. Dus b = 24." }
-  },
-  {
-    id: "G5_s_105", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 24 cm et 32 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 24 cm and 32 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 24 cm en 32 cm. Wat is de hypotenusa?" },
-    answer: 40, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 576 + 1024 = 1600. Donc c = 40.", en: "c² = 576 + 1024 = 1600. So c = 40.", nl: "c² = 576 + 1024 = 1600. Dus c = 40." }
-  },
-  {
-    id: "G5_s_106", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 52 cm et une cathète de 20 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 52 cm and a leg of 20 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 52 cm en een zijde van 20 cm. Wat is de andere zijde?" },
-    answer: 48, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 2704 - 400 = 2304. Donc b = 48.", en: "b² = 2704 - 400 = 2304. So b = 48.", nl: "b² = 2704 - 400 = 2304. Dus b = 48." }
-  },
-  {
-    id: "G5_s_107", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 40 cm et 42 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 40 cm and 42 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 40 cm en 42 cm. Wat is de hypotenusa?" },
-    answer: 58, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 1600 + 1764 = 3364. Donc c = 58.", en: "c² = 1600 + 1764 = 3364. So c = 58.", nl: "c² = 1600 + 1764 = 3364. Dus c = 58." }
-  },
-  {
-    id: "G5_s_108", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 58 cm et une cathète de 42 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 58 cm and a leg of 42 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 58 cm en een zijde van 42 cm. Wat is de andere zijde?" },
-    answer: 40, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 3364 - 1764 = 1600. Donc b = 40.", en: "b² = 3364 - 1764 = 1600. So b = 40.", nl: "b² = 3364 - 1764 = 1600. Dus b = 40." }
-  },
-  {
-    id: "G5_s_109", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 30 cm et 40 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 30 cm and 40 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 30 cm en 40 cm. Wat is de hypotenusa?" },
-    answer: 50, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 900 + 1600 = 2500. Donc c = 50.", en: "c² = 900 + 1600 = 2500. So c = 50.", nl: "c² = 900 + 1600 = 2500. Dus c = 50." }
-  },
-  {
-    id: "G5_s_110", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 39 cm et une cathète de 15 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 39 cm and a leg of 15 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 39 cm en een zijde van 15 cm. Wat is de andere zijde?" },
-    answer: 36, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 1521 - 225 = 1296. Donc b = 36.", en: "b² = 1521 - 225 = 1296. So b = 36.", nl: "b² = 1521 - 225 = 1296. Dus b = 36." }
-  },
-  {
-    id: "G5_s_111", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 20 cm et 48 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 20 cm and 48 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 20 cm en 48 cm. Wat is de hypotenusa?" },
-    answer: 52, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 400 + 2304 = 2704. Donc c = 52.", en: "c² = 400 + 2304 = 2704. So c = 52.", nl: "c² = 400 + 2304 = 2704. Dus c = 52." }
-  },
-  {
-    id: "G5_s_112", category: "G5", level: 1,
-    text: { fr: "Un triangle a des côtés de 14 cm, 18 cm et 20 cm. Quel est son périmètre ?", en: "A triangle has sides 14 cm, 18 cm and 20 cm. What is its perimeter?", nl: "Een driehoek heeft zijden van 14 cm, 18 cm en 20 cm. Wat is de omtrek?" },
-    answer: 52, tolerance: 0, unit: "cm",
-    hint: { fr: "14 + 18 + 20 = 52.", en: "14 + 18 + 20 = 52.", nl: "14 + 18 + 20 = 52." }
-  },
-  {
-    id: "G5_s_113", category: "G5", level: 1,
-    text: { fr: "Un triangle équilatéral a un côté de 13 cm. Quel est son périmètre ?", en: "An equilateral triangle has a side of 13 cm. What is its perimeter?", nl: "Een gelijkzijdige driehoek heeft een zijde van 13 cm. Wat is de omtrek?" },
-    answer: 39, tolerance: 0, unit: "cm",
-    hint: { fr: "3 côtés égaux : 13 . 3.", en: "3 equal sides: 13 . 3.", nl: "3 gelijke zijden: 13 . 3." }
-  },
-  {
-    id: "G5_s_114", category: "G5", level: 2,
-    text: { fr: "Quelle est l'aire d'un triangle de base 18 cm et de hauteur 7 cm ?", en: "What is the area of a triangle with base 18 cm and height 7 cm?", nl: "Wat is de oppervlakte van een driehoek met basis 18 cm en hoogte 7 cm?" },
-    answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 18 . 7 : 2 = 63.", en: "Area = 18 . 7 : 2 = 63.", nl: "Oppervlakte = 18 . 7 : 2 = 63." }
-  },
-  {
-    id: "G5_s_115", category: "G5", level: 2,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 14 cm. Quelle est son aire ?", en: "A right triangle has legs of 9 cm and 14 cm. What is its area?", nl: "Een rechthoekige driehoek heeft rechthoekszijden van 9 cm en 14 cm. Wat is de oppervlakte?" },
-    answer: 63, tolerance: 0, unit: "cm²",
-    hint: { fr: "Aire = 9 . 14 : 2 = 63.", en: "Area = 9 . 14 : 2 = 63.", nl: "Oppervlakte = 9 . 14 : 2 = 63." }
-  },
-  {
-    id: "G5_s_116", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a des cathètes de 9 cm et 40 cm. Quelle est l'hypoténuse ?", en: "A right triangle has legs 9 cm and 40 cm. What is the hypotenuse?", nl: "Een rechthoekige driehoek heeft rechthoekszijden 9 cm en 40 cm. Wat is de hypotenusa?" },
-    answer: 41, tolerance: 0, unit: "cm",
-    hint: { fr: "c² = 81 + 1600 = 1681. Donc c = 41.", en: "c² = 81 + 1600 = 1681. So c = 41.", nl: "c² = 81 + 1600 = 1681. Dus c = 41." }
-  },
-  {
-    id: "G5_s_117", category: "G5", level: 3,
-    text: { fr: "Un triangle rectangle a une hypoténuse de 65 cm et une cathète de 33 cm. Quelle est l'autre cathète ?", en: "A right triangle has hypotenuse 65 cm and a leg of 33 cm. What is the other leg?", nl: "Een rechthoekige driehoek heeft hypotenusa 65 cm en een zijde van 33 cm. Wat is de andere zijde?" },
-    answer: 56, tolerance: 0, unit: "cm",
-    hint: { fr: "b² = 4225 - 1089 = 3136. Donc b = 56.", en: "b² = 4225 - 1089 = 3136. So b = 56.", nl: "b² = 4225 - 1089 = 3136. Dus b = 56." }
-  },
+    "id": "G5_new_1",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Les longueurs de deux côtés sont 9 cm et 4 cm. Détermine la plus petite valeur entière possible du troisième côté. Justifie.",
+      "en": "Les longueurs of ofux côtés sont 9 cm et 4 cm. oftermine la plus petite valeur entière possible du troisième côté. Justifie.",
+      "nl": "Les longueurs van vanux côtés sont 9 cm et 4 cm. Bepaal la plus petite valeur entière possible du troisième côté. Justifie."
+    },
+    "answer": "|9 − 4| < x < 13 → 5 < x < 13 → plus petite valeur entière : 6.",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_2",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Les longueurs de deux côtés sont 12 cm et 5 cm. Détermine la plus petite valeur entière possible du troisième côté. Justifie.",
+      "en": "Les longueurs of ofux côtés sont 12 cm et 5 cm. oftermine la plus petite valeur entière possible du troisième côté. Justifie.",
+      "nl": "Les longueurs van vanux côtés sont 12 cm et 5 cm. Bepaal la plus petite valeur entière possible du troisième côté. Justifie."
+    },
+    "answer": "|12 − 5| < x < 17 → 7 < x < 17 → plus petite valeur entière : 8.",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_3",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Les longueurs de deux côtés sont 15 cm et 7 cm. Détermine la plus grande valeur entière possible du troisième côté. Justifie.",
+      "en": "Les longueurs of ofux côtés sont 15 cm et 7 cm. oftermine la plus granof valeur entière possible du troisième côté. Justifie.",
+      "nl": "Les longueurs van vanux côtés sont 15 cm et 7 cm. Bepaal la plus granvan valeur entière possible du troisième côté. Justifie."
+    },
+    "answer": "|15 − 7| < x < 22 → 8 < x < 22 → plus grande valeur entière : 21.",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_4",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 7 cm et 12 cm ? Justifie.",
+      "en": "Peut-on construire un triangle of côtés 5 cm, 7 cm et 12 cm ? Justifie.",
+      "nl": "Peut-on construire un triangle van côtés 5 cm, 7 cm et 12 cm ? Justifie."
+    },
+    "answer": "Impossible car 5 + 7 = 12 (égalité).",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_5",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 9 cm et 4 cm ? Justifie.",
+      "en": "Peut-on construire un triangle of côtés 6 cm, 9 cm et 4 cm ? Justifie.",
+      "nl": "Peut-on construire un triangle van côtés 6 cm, 9 cm et 4 cm ? Justifie."
+    },
+    "answer": "Possible car 3 < 4 < 15.",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_6",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Les côtés mesurent 6 cm, 7 cm et 8 cm. Ce triangle est-il scalène, isocèle ou impossible ? Justifie.",
+      "en": "Les côtés mesurent 6 cm, 7 cm et 8 cm. Ce triangle est-il scalène, isocèle ou impossible ? Justifie.",
+      "nl": "Les côtés mesurent 6 cm, 7 cm et 8 cm. Ce triangle est-il scalène, isocèle ou impossible ? Justifie."
+    },
+    "answer": "Possible et scalène (trois côtés différents).",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_7",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "5 – 7 – 12 → ______",
+      "en": "5 – 7 – 12 → ______",
+      "nl": "5 – 7 – 12 → ______"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_8",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "6 – 9 – 4 → ______",
+      "en": "6 – 9 – 4 → ______",
+      "nl": "6 – 9 – 4 → ______"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_9",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "8 – 8 – 16 → ______",
+      "en": "8 – 8 – 16 → ______",
+      "nl": "8 – 8 – 16 → ______"
+    },
+    "answer": "0",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_10",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Deux côtés : 9 et 4 → plus petite valeur entière ? ______",
+      "en": "ofux côtés : 9 et 4 → plus petite valeur entière ? ______",
+      "nl": "vanux côtés : 9 et 4 → plus petite valeur entière ? ______"
+    },
+    "answer": "6",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_11",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés : 12 et 5 → plus grande valeur entière ? ______",
+      "en": "ofux côtés : 12 et 5 → plus granof valeur entière ? ______",
+      "nl": "vanux côtés : 12 et 5 → plus granvan valeur entière ? ______"
+    },
+    "answer": "16",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_new_12",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "6 – 7 – 8 → ______",
+      "en": "6 – 7 – 8 → ______",
+      "nl": "6 – 7 – 8 → ______"
+    },
+    "answer": "1",
+    "tolerance": 0.01,
+    "hint": {
+      "fr": "Inégalité triangulaire : la somme de 2 côtés doit être > au 3e côté.",
+      "en": "Triangle inequality: sum of 2 sides must be > the 3rd side.",
+      "nl": "Driehoeksongelijkheid: som van 2 zijden moet > de 3e zijde zijn."
+    }
+  },
+  {
+    "id": "G5_gen_1",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 3 cm, 4 cm et 5 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 3 cm, 4 cm and 5 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 3 cm, 4 cm en 5 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_2",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 12 cm et 13 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 12 cm and 13 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 12 cm en 13 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_3",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 8 cm et 10 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 6 cm, 8 cm and 10 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 6 cm, 8 cm en 10 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_4",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 9 cm et 11 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 9 cm and 11 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 9 cm en 11 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_5",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 4 cm, 5 cm et 7 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 4 cm, 5 cm and 7 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 4 cm, 5 cm en 7 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_6",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 8 cm, 11 cm et 15 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 8 cm, 11 cm and 15 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 8 cm, 11 cm en 15 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_7",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 9 cm, 10 cm et 12 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 9 cm, 10 cm and 12 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 9 cm, 10 cm en 12 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_8",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 7 cm et 11 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 6 cm, 7 cm and 11 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 6 cm, 7 cm en 11 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_9",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 6 cm et 9 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 6 cm and 9 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 6 cm en 9 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_10",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 10 cm et 14 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 10 cm and 14 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 10 cm en 14 cm? (1=ja, 0=nee)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_11",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 3 cm, 4 cm et 7 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 3 cm, 4 cm and 7 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 3 cm, 4 cm en 7 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_12",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 8 cm et 13 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 8 cm and 13 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 8 cm en 13 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_13",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 2 cm, 3 cm et 6 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 2 cm, 3 cm and 6 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 2 cm, 3 cm en 6 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_14",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 4 cm, 7 cm et 11 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 4 cm, 7 cm and 11 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 4 cm, 7 cm en 11 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_15",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 9 cm et 15 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 6 cm, 9 cm and 15 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 6 cm, 9 cm en 15 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_16",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 7 cm et 12 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 7 cm and 12 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 7 cm en 12 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_17",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 8 cm, 10 cm et 18 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 8 cm, 10 cm and 18 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 8 cm, 10 cm en 18 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_18",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 3 cm, 5 cm et 8 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 3 cm, 5 cm and 8 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 3 cm, 5 cm en 8 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_19",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 11 cm et 18 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 11 cm and 18 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 11 cm en 18 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_20",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 4 cm, 6 cm et 10 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 4 cm, 6 cm and 10 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 4 cm, 6 cm en 10 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_21",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 9 cm, 12 cm et 21 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 9 cm, 12 cm and 21 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 9 cm, 12 cm en 21 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_22",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 9 cm et 14 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 9 cm and 14 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 9 cm en 14 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_23",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 10 cm et 16 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 6 cm, 10 cm and 16 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 6 cm, 10 cm en 16 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_24",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 8 cm et 15 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 8 cm and 15 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 8 cm en 15 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_25",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 8 cm, 9 cm et 17 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 8 cm, 9 cm and 17 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 8 cm, 9 cm en 17 cm? (1=ja, 0=nee)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_gen_26",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 5 cm et 8 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 5 cm and 8 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 5 cm en 8 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 4,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_27",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 7 cm et 10 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 7 cm and 10 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 7 cm en 10 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 16,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_28",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 6 cm et 9 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 6 cm and 9 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 6 cm en 9 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 4,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_29",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 12 cm et 5 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 12 cm and 5 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 12 cm en 5 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 8,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_30",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 15 cm et 7 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 15 cm and 7 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 15 cm en 7 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 21,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_31",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 8 cm et 11 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 8 cm and 11 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 8 cm en 11 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 4,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_32",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 9 cm et 13 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 9 cm and 13 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 9 cm en 13 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 21,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_33",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 10 cm et 6 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 10 cm and 6 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 10 cm en 6 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 5,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_34",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 14 cm et 9 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 14 cm and 9 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 14 cm en 9 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 22,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_35",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 11 cm et 7 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 11 cm and 7 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 11 cm en 7 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 5,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_36",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 16 cm et 8 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 16 cm and 8 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 16 cm en 8 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 23,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_37",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 13 cm et 6 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 13 cm and 6 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 13 cm en 6 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 8,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_38",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 18 cm et 10 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 18 cm and 10 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 18 cm en 10 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 27,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_39",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 12 cm et 9 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 12 cm and 9 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 12 cm en 9 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 4,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_gen_40",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 20 cm et 11 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 20 cm and 11 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 20 cm en 11 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": 30,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_1",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 8 cm et 9 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 8 cm and 9 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 8 cm en 9 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_2",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 2 cm, 5 cm et 8 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 2 cm, 5 cm and 8 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 2 cm, 5 cm en 8 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_3",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 10 cm, 12 cm et 15 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 10 cm, 12 cm and 15 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 10 cm, 12 cm en 15 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_4",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 3 cm, 6 cm et 10 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 3 cm, 6 cm and 10 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 3 cm, 6 cm en 10 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_5",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 8 cm, 12 cm et 18 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 8 cm, 12 cm and 18 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 8 cm, 12 cm en 18 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_6",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 4 cm, 8 cm et 12 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 4 cm, 8 cm and 12 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 4 cm, 8 cm en 12 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_7",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 11 cm, 13 cm et 20 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 11 cm, 13 cm and 20 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 11 cm, 13 cm en 20 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_8",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 5 cm, 10 cm et 16 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 5 cm, 10 cm and 16 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 5 cm, 10 cm en 16 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_9",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 9 cm, 11 cm et 17 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 9 cm, 11 cm and 17 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 9 cm, 11 cm en 17 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_10",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 6 cm, 11 cm et 17 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 6 cm, 11 cm and 17 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 6 cm, 11 cm en 17 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_11",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 10 cm, 14 cm et 20 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 10 cm, 14 cm and 20 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 10 cm, 14 cm en 20 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_12",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 7 cm, 9 cm et 16 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 7 cm, 9 cm and 16 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 7 cm, 9 cm en 16 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_13",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 12 cm, 15 cm et 22 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 12 cm, 15 cm and 22 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 12 cm, 15 cm en 22 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_14",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 8 cm, 13 cm et 22 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 8 cm, 13 cm and 22 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 8 cm, 13 cm en 22 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_15",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 14 cm, 16 cm et 25 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 14 cm, 16 cm and 25 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 14 cm, 16 cm en 25 cm? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_16",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle de côtés 9 cm, 14 cm et 24 cm ? (1=oui, 0=non)",
+      "en": "Can we build a triangle with sides 9 cm, 14 cm and 24 cm? (1=yes, 0=no)",
+      "nl": "Kunnen we een driehoek bouwen met zijden 9 cm, 14 cm en 24 cm? (1=ja, 0=nee)"
+    },
+    "answer": "0",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie que la somme de deux côtés est strictement supérieure au troisième.",
+      "en": "Check that the sum of two sides is strictly greater than the third.",
+      "nl": "Controleer dat de som van twee zijden strikt groter is dan de derde."
+    }
+  },
+  {
+    "id": "G5_add_17",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 8 cm et 14 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 8 cm and 14 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 8 cm en 14 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "7",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_18",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 11 cm et 8 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 11 cm and 8 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 11 cm en 8 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "18",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_19",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 17 cm et 9 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 17 cm and 9 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 17 cm en 9 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "9",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_20",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 19 cm et 11 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 19 cm and 11 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 19 cm en 11 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "29",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_21",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 22 cm et 13 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 22 cm and 13 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 22 cm en 13 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "10",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_22",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 25 cm et 14 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 25 cm and 14 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 25 cm en 14 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "38",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_23",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 18 cm et 12 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 18 cm and 12 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 18 cm en 12 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "7",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_24",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 21 cm et 15 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 21 cm and 15 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 21 cm en 15 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "35",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_25",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 24 cm et 16 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 24 cm and 16 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 24 cm en 16 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "9",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_26",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 27 cm et 18 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 27 cm and 18 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 27 cm en 18 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "44",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_27",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 30 cm et 19 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 30 cm and 19 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 30 cm en 19 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "12",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_28",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 28 cm et 17 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 28 cm and 17 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 28 cm en 17 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "44",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_29",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 23 cm et 14 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 23 cm and 14 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 23 cm en 14 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "10",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_30",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 26 cm et 16 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 26 cm and 16 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 26 cm en 16 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "41",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_31",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 20 cm et 15 cm. Quelle est la plus petite valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 20 cm and 15 cm. What is the smallest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 20 cm en 15 cm. Wat is de kleinste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "6",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_32",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés mesurent 31 cm et 20 cm. Quelle est la plus grande valeur entière possible du 3e côté ?",
+      "en": "Two sides measure 31 cm and 20 cm. What is the largest integer value possible for the 3rd side?",
+      "nl": "Twee zijden meten 31 cm en 20 cm. Wat is de grootste gehele waarde mogelijk voor de 3e zijde?"
+    },
+    "answer": "50",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise |a - b| < c < a + b pour trouver l'intervalle.",
+      "en": "Use |a - b| < c < a + b to find the interval.",
+      "nl": "Gebruik |a - b| < c < a + b om het interval te vinden."
+    }
+  },
+  {
+    "id": "G5_add_33",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 8 cm et 15 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 8 cm and 15 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 8 cm en 15 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "15",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_34",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 12 cm et 20 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 12 cm and 20 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 12 cm en 20 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "23",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_35",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a deux côtés égaux de 10 cm. Le troisième côté mesure x cm. Quelle est la valeur maximale entière de x ?",
+      "en": "An isosceles triangle has two equal sides of 10 cm. The third side measures x cm. What is the maximum integer value of x?",
+      "nl": "Een gelijkbenige driehoek heeft twee gelijke zijden van 10 cm. De derde zijde meet x cm. Wat is de maximale gehele waarde van x?"
+    },
+    "answer": "19",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Applique l'inégalité triangulaire: 10 + 10 > x.",
+      "en": "Apply the triangle inequality: 10 + 10 > x.",
+      "nl": "Pas de driehoeksongelijkheid toe: 10 + 10 > x."
+    }
+  },
+  {
+    "id": "G5_add_36",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a deux côtés égaux de 15 cm. Le troisième côté mesure x cm. Quelle est la valeur minimale entière de x ?",
+      "en": "An isosceles triangle has two equal sides of 15 cm. The third side measures x cm. What is the minimum integer value of x?",
+      "nl": "Een gelijkbenige driehoek heeft twee gelijke zijden van 15 cm. De derde zijde meet x cm. Wat is de minimale gehele waarde van x?"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Applique l'inégalité triangulaire: x + 15 > 15, donc x > 0.",
+      "en": "Apply the triangle inequality: x + 15 > 15, so x > 0.",
+      "nl": "Pas de driehoeksongelijkheid toe: x + 15 > 15, dus x > 0."
+    }
+  },
+  {
+    "id": "G5_add_37",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 7 cm et 18 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 7 cm and 18 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 7 cm en 18 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "13",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_38",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a un périmètre de 30 cm et deux côtés mesurent 10 cm et 12 cm. Quelle est la longueur du troisième côté ?",
+      "en": "A triangle has a perimeter of 30 cm and two sides measure 10 cm and 12 cm. What is the length of the third side?",
+      "nl": "Een driehoek heeft een omtrek van 30 cm en twee zijden meten 10 cm en 12 cm. Wat is de lengte van de derde zijde?"
+    },
+    "answer": "8",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Périmètre = somme des trois côtés.",
+      "en": "Perimeter = sum of the three sides.",
+      "nl": "Omtrek = som van de drie zijden."
+    }
+  },
+  {
+    "id": "G5_add_39",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a un périmètre de 45 cm et deux côtés mesurent 15 cm et 18 cm. Le troisième côté forme-t-il un triangle valide ? (1=oui, 0=non)",
+      "en": "A triangle has a perimeter of 45 cm and two sides measure 15 cm and 18 cm. Does the third side form a valid triangle? (1=yes, 0=no)",
+      "nl": "Een driehoek heeft een omtrek van 45 cm en twee zijden meten 15 cm en 18 cm. Vormt de derde zijde een geldige driehoek? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Calcule le troisième côté, puis vérifie l'inégalité triangulaire.",
+      "en": "Calculate the third side, then check the triangle inequality.",
+      "nl": "Bereken de derde zijde, controleer dan de driehoeksongelijkheid."
+    }
+  },
+  {
+    "id": "G5_add_40",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 9 cm et 22 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 9 cm and 22 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 9 cm en 22 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "17",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_41",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a un périmètre de 40 cm. Les deux côtés égaux mesurent 12 cm chacun. Quelle est la longueur de la base ?",
+      "en": "An isosceles triangle has a perimeter of 40 cm. The two equal sides measure 12 cm each. What is the length of the base?",
+      "nl": "Een gelijkbenige driehoek heeft een omtrek van 40 cm. De twee gelijke zijden meten elk 12 cm. Wat is de lengte van de basis?"
+    },
+    "answer": "16",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Périmètre = 2 × côté égal + base.",
+      "en": "Perimeter = 2 × equal side + base.",
+      "nl": "Omtrek = 2 × gelijke zijde + basis."
+    }
+  },
+  {
+    "id": "G5_add_42",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 13 cm et 25 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 13 cm and 25 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 13 cm en 25 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "25",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_43",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle équilatéral a un périmètre de 36 cm. Quelle est la longueur de chaque côté ?",
+      "en": "An equilateral triangle has a perimeter of 36 cm. What is the length of each side?",
+      "nl": "Een gelijkzijdige driehoek heeft een omtrek van 36 cm. Wat is de lengte van elke zijde?"
+    },
+    "answer": "12",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Un triangle équilatéral a trois côtés égaux.",
+      "en": "An equilateral triangle has three equal sides.",
+      "nl": "Een gelijkzijdige driehoek heeft drie gelijke zijden."
+    }
+  },
+  {
+    "id": "G5_add_44",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 14 cm et 28 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 14 cm and 28 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 14 cm en 28 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "27",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_45",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a un périmètre de 50 cm et une base de 18 cm. Quelle est la longueur de chaque côté égal ?",
+      "en": "An isosceles triangle has a perimeter of 50 cm and a base of 18 cm. What is the length of each equal side?",
+      "nl": "Een gelijkbenige driehoek heeft een omtrek van 50 cm en een basis van 18 cm. Wat is de lengte van elke gelijke zijde?"
+    },
+    "answer": "16",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Périmètre = 2 × côté égal + base.",
+      "en": "Perimeter = 2 × equal side + base.",
+      "nl": "Omtrek = 2 × gelijke zijde + basis."
+    }
+  },
+  {
+    "id": "G5_add_46",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 11 cm et 24 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 11 cm and 24 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 11 cm en 24 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "21",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_add_47",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a un périmètre de 60 cm. Deux côtés mesurent 20 cm et 22 cm. Le troisième côté forme-t-il un triangle valide ? (1=oui, 0=non)",
+      "en": "A triangle has a perimeter of 60 cm. Two sides measure 20 cm and 22 cm. Does the third side form a valid triangle? (1=yes, 0=no)",
+      "nl": "Een driehoek heeft een omtrek van 60 cm. Twee zijden meten 20 cm en 22 cm. Vormt de derde zijde een geldige driehoek? (1=ja, 0=nee)"
+    },
+    "answer": "1",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Calcule le troisième côté, puis vérifie l'inégalité triangulaire.",
+      "en": "Calculate the third side, then check the triangle inequality.",
+      "nl": "Bereken de derde zijde, controleer dan de driehoeksongelijkheid."
+    }
+  },
+  {
+    "id": "G5_add_48",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a deux côtés de 16 cm et 30 cm. Le troisième côté est un nombre entier. Combien de valeurs possibles y a-t-il ?",
+      "en": "A triangle has two sides of 16 cm and 30 cm. The third side is an integer. How many possible values are there?",
+      "nl": "Een driehoek heeft twee zijden van 16 cm en 30 cm. De derde zijde is een geheel getal. Hoeveel mogelijke waarden zijn er?"
+    },
+    "answer": "31",
+    "tolerance": 0,
+    "hint": {
+      "fr": "Trouve l'intervalle avec |a - b| < c < a + b, puis compte les entiers.",
+      "en": "Find the interval with |a - b| < c < a + b, then count the integers.",
+      "nl": "Vind het interval met |a - b| < c < a + b, tel dan de gehele getallen."
+    }
+  },
+  {
+    "id": "G5_ineg_1",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 5 cm, 7 cm et 12 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 5 cm, 7 cm and 12 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 5 cm, 7 cm en 12 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 5 + 7 = 12 (égalité, donc impossible)",
+      "en": "Check triangle inequality: a + b > c for all sides. 5 + 7 = 12 (égalité, donc impossible)",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 5 + 7 = 12 (égalité, donc impossible)"
+    }
+  },
+  {
+    "id": "G5_ineg_2",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 6 cm, 9 cm et 4 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 6 cm, 9 cm and 4 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 6 cm, 9 cm en 4 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 3 < 4 < 15",
+      "en": "Check triangle inequality: a + b > c for all sides. 3 < 4 < 15",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 3 < 4 < 15"
+    }
+  },
+  {
+    "id": "G5_ineg_3",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 8 cm, 8 cm et 16 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 8 cm, 8 cm and 16 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 8 cm, 8 cm en 16 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 8 + 8 = 16 (égalité)",
+      "en": "Check triangle inequality: a + b > c for all sides. 8 + 8 = 16 (égalité)",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 8 + 8 = 16 (égalité)"
+    }
+  },
+  {
+    "id": "G5_ineg_4",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 6 cm, 7 cm et 8 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 6 cm, 7 cm and 8 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 6 cm, 7 cm en 8 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. Toutes les inégalités respectées",
+      "en": "Check triangle inequality: a + b > c for all sides. Toutes les inégalités respectées",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. Toutes les inégalités respectées"
+    }
+  },
+  {
+    "id": "G5_ineg_5",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 3 cm, 4 cm et 5 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 3 cm, 4 cm and 5 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 3 cm, 4 cm en 5 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. Triangle rectangle",
+      "en": "Check triangle inequality: a + b > c for all sides. Triangle rectangle",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. Triangle rectangle"
+    }
+  },
+  {
+    "id": "G5_ineg_6",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 2 cm, 3 cm et 6 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 2 cm, 3 cm and 6 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 2 cm, 3 cm en 6 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 2 + 3 < 6",
+      "en": "Check triangle inequality: a + b > c for all sides. 2 + 3 < 6",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 2 + 3 < 6"
+    }
+  },
+  {
+    "id": "G5_ineg_7",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 10 cm, 10 cm et 15 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 10 cm, 10 cm and 15 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 10 cm, 10 cm en 15 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 5 < 15 < 20",
+      "en": "Check triangle inequality: a + b > c for all sides. 5 < 15 < 20",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 5 < 15 < 20"
+    }
+  },
+  {
+    "id": "G5_ineg_8",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 7 cm, 9 cm et 16 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 7 cm, 9 cm and 16 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 7 cm, 9 cm en 16 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 2 < 16 < 16 (limite)",
+      "en": "Check triangle inequality: a + b > c for all sides. 2 < 16 < 16 (limite)",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 2 < 16 < 16 (limite)"
+    }
+  },
+  {
+    "id": "G5_ineg_9",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 4 cm, 5 cm et 10 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 4 cm, 5 cm and 10 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 4 cm, 5 cm en 10 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 0,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 4 + 5 < 10",
+      "en": "Check triangle inequality: a + b > c for all sides. 4 + 5 < 10",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 4 + 5 < 10"
+    }
+  },
+  {
+    "id": "G5_ineg_10",
+    "category": "G5",
+    "level": 1,
+    "text": {
+      "fr": "Peut-on construire un triangle avec les côtés 8 cm, 12 cm et 15 cm ? (Réponds 1 pour OUI, 0 pour NON)",
+      "en": "Can you build a triangle with sides 8 cm, 12 cm and 15 cm? (Answer 1 for YES, 0 for NO)",
+      "nl": "Kan je een driehoek maken met zijden 8 cm, 12 cm en 15 cm? (Antwoord 1 voor JA, 0 voor NEE)"
+    },
+    "answer": 1,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Vérifie l'inégalité triangulaire : a + b > c pour tous les côtés. 4 < 15 < 20",
+      "en": "Check triangle inequality: a + b > c for all sides. 4 < 15 < 20",
+      "nl": "Controleer de driehoeksongelijkheid: a + b > c voor alle zijden. 4 < 15 < 20"
+    }
+  },
+  {
+    "id": "G5_ineg_11",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 9 cm et 4 cm. Quelle est la plus petite valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 9 cm and 4 cm. What is the smallest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 9 cm en 4 cm. Wat is de kleinste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 6,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |9 - 4| < x < 13 → 5 < x < 13, plus petite valeur entière: 6",
+      "en": "Use the formula |a - b| < c < a + b. |9 - 4| < x < 13 → 5 < x < 13, plus petite valeur entière: 6",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |9 - 4| < x < 13 → 5 < x < 13, plus petite valeur entière: 6"
+    }
+  },
+  {
+    "id": "G5_ineg_12",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 12 cm et 5 cm. Quelle est la plus grande valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 12 cm and 5 cm. What is the largest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 12 cm en 5 cm. Wat is de grootste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 16,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |12 - 5| < x < 17 → 7 < x < 17, plus grande valeur entière: 16",
+      "en": "Use the formula |a - b| < c < a + b. |12 - 5| < x < 17 → 7 < x < 17, plus grande valeur entière: 16",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |12 - 5| < x < 17 → 7 < x < 17, plus grande valeur entière: 16"
+    }
+  },
+  {
+    "id": "G5_ineg_13",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 15 cm et 7 cm. Quelle est la plus grande valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 15 cm and 7 cm. What is the largest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 15 cm en 7 cm. Wat is de grootste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 21,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |15 - 7| < x < 22 → 8 < x < 22, plus grande valeur entière: 21",
+      "en": "Use the formula |a - b| < c < a + b. |15 - 7| < x < 22 → 8 < x < 22, plus grande valeur entière: 21",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |15 - 7| < x < 22 → 8 < x < 22, plus grande valeur entière: 21"
+    }
+  },
+  {
+    "id": "G5_ineg_14",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 10 cm et 6 cm. Quelle est la plus petite valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 10 cm and 6 cm. What is the smallest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 10 cm en 6 cm. Wat is de kleinste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 5,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |10 - 6| < x < 16 → 4 < x < 16, plus petite valeur entière: 5",
+      "en": "Use the formula |a - b| < c < a + b. |10 - 6| < x < 16 → 4 < x < 16, plus petite valeur entière: 5",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |10 - 6| < x < 16 → 4 < x < 16, plus petite valeur entière: 5"
+    }
+  },
+  {
+    "id": "G5_ineg_15",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 8 cm et 3 cm. Quelle est la plus grande valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 8 cm and 3 cm. What is the largest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 8 cm en 3 cm. Wat is de grootste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 10,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |8 - 3| < x < 11 → 5 < x < 11, plus grande valeur entière: 10",
+      "en": "Use the formula |a - b| < c < a + b. |8 - 3| < x < 11 → 5 < x < 11, plus grande valeur entière: 10",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |8 - 3| < x < 11 → 5 < x < 11, plus grande valeur entière: 10"
+    }
+  },
+  {
+    "id": "G5_ineg_16",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 14 cm et 9 cm. Quelle est la plus petite valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 14 cm and 9 cm. What is the smallest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 14 cm en 9 cm. Wat is de kleinste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 6,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |14 - 9| < x < 23 → 5 < x < 23, plus petite valeur entière: 6",
+      "en": "Use the formula |a - b| < c < a + b. |14 - 9| < x < 23 → 5 < x < 23, plus petite valeur entière: 6",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |14 - 9| < x < 23 → 5 < x < 23, plus petite valeur entière: 6"
+    }
+  },
+  {
+    "id": "G5_ineg_17",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 20 cm et 12 cm. Quelle est la plus grande valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 20 cm and 12 cm. What is the largest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 20 cm en 12 cm. Wat is de grootste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 31,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |20 - 12| < x < 32 → 8 < x < 32, plus grande valeur entière: 31",
+      "en": "Use the formula |a - b| < c < a + b. |20 - 12| < x < 32 → 8 < x < 32, plus grande valeur entière: 31",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |20 - 12| < x < 32 → 8 < x < 32, plus grande valeur entière: 31"
+    }
+  },
+  {
+    "id": "G5_ineg_18",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 7 cm et 5 cm. Quelle est la plus petite valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 7 cm and 5 cm. What is the smallest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 7 cm en 5 cm. Wat is de kleinste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 3,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |7 - 5| < x < 12 → 2 < x < 12, plus petite valeur entière: 3",
+      "en": "Use the formula |a - b| < c < a + b. |7 - 5| < x < 12 → 2 < x < 12, plus petite valeur entière: 3",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |7 - 5| < x < 12 → 2 < x < 12, plus petite valeur entière: 3"
+    }
+  },
+  {
+    "id": "G5_ineg_19",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 11 cm et 8 cm. Quelle est la plus grande valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 11 cm and 8 cm. What is the largest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 11 cm en 8 cm. Wat is de grootste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 18,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |11 - 8| < x < 19 → 3 < x < 19, plus grande valeur entière: 18",
+      "en": "Use the formula |a - b| < c < a + b. |11 - 8| < x < 19 → 3 < x < 19, plus grande valeur entière: 18",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |11 - 8| < x < 19 → 3 < x < 19, plus grande valeur entière: 18"
+    }
+  },
+  {
+    "id": "G5_ineg_20",
+    "category": "G5",
+    "level": 2,
+    "text": {
+      "fr": "Deux côtés d'un triangle mesurent 13 cm et 6 cm. Quelle est la plus petite valeur ENTIÈRE possible pour le troisième côté ?",
+      "en": "Two sides of a triangle measure 13 cm and 6 cm. What is the smallest INTEGER value possible for the third side?",
+      "nl": "Twee zijden van een driehoek meten 13 cm en 6 cm. Wat is de kleinste GEHELE waarde mogelijk voor de derde zijde?"
+    },
+    "answer": 8,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Utilise la formule |a - b| < c < a + b. |13 - 6| < x < 19 → 7 < x < 19, plus petite valeur entière: 8",
+      "en": "Use the formula |a - b| < c < a + b. |13 - 6| < x < 19 → 7 < x < 19, plus petite valeur entière: 8",
+      "nl": "Gebruik de formule |a - b| < c < a + b. |13 - 6| < x < 19 → 7 < x < 19, plus petite valeur entière: 8"
+    }
+  },
+  {
+    "id": "G5_ineg_21",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a deux côtés égaux de 7 cm. Combien de valeurs ENTIÈRES sont possibles pour le troisième côté ?",
+      "en": "An isosceles triangle has two equal sides of 7 cm. How many INTEGER values are possible for the third side?",
+      "nl": "Een gelijkbenige driehoek heeft twee gelijke zijden van 7 cm. Hoeveel GEHELE waarden zijn mogelijk voor de derde zijde?"
+    },
+    "answer": 13,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|7 - 7| < x < 14 → 0 < x < 14. Valeurs entières: 1, 2, 3, ..., 13 = 13 valeurs",
+      "en": "|7 - 7| < x < 14 → 0 < x < 14. Valeurs entières: 1, 2, 3, ..., 13 = 13 valeurs",
+      "nl": "|7 - 7| < x < 14 → 0 < x < 14. Valeurs entières: 1, 2, 3, ..., 13 = 13 valeurs"
+    }
+  },
+  {
+    "id": "G5_ineg_22",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a un périmètre de 20 cm. Deux côtés mesurent 6 cm et 9 cm. Quelle est la longueur du troisième côté ?",
+      "en": "A triangle has a perimeter of 20 cm. Two sides measure 6 cm and 9 cm. What is the length of the third side?",
+      "nl": "Een driehoek heeft een omtrek van 20 cm. Twee zijden meten 6 cm en 9 cm. Wat is de lengte van de derde zijde?"
+    },
+    "answer": 5,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Périmètre = a + b + c → 20 = 6 + 9 + c → c = 5 cm",
+      "en": "Périmètre = a + b + c → 20 = 6 + 9 + c → c = 5 cm",
+      "nl": "Périmètre = a + b + c → 20 = 6 + 9 + c → c = 5 cm"
+    }
+  },
+  {
+    "id": "G5_ineg_23",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 10 cm et 15 cm. Combien de valeurs ENTIÈRES sont possibles pour le troisième côté ?",
+      "en": "Two sides measure 10 cm and 15 cm. How many INTEGER values are possible for the third side?",
+      "nl": "Twee zijden meten 10 cm en 15 cm. Hoeveel GEHELE waarden zijn mogelijk voor de derde zijde?"
+    },
+    "answer": 19,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|10 - 15| < x < 25 → 5 < x < 25. Valeurs entières: 6, 7, 8, ..., 24 = 19 valeurs",
+      "en": "|10 - 15| < x < 25 → 5 < x < 25. Valeurs entières: 6, 7, 8, ..., 24 = 19 valeurs",
+      "nl": "|10 - 15| < x < 25 → 5 < x < 25. Valeurs entières: 6, 7, 8, ..., 24 = 19 valeurs"
+    }
+  },
+  {
+    "id": "G5_ineg_24",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle équilatéral a un périmètre de 36 cm. Quelle est la longueur d'un côté ?",
+      "en": "An equilateral triangle has a perimeter of 36 cm. What is the length of one side?",
+      "nl": "Een gelijkzijdige driehoek heeft een omtrek van 36 cm. Wat is de lengte van één zijde?"
+    },
+    "answer": 12,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Triangle équilatéral: 3 côtés égaux. 36 ÷ 3 = 12 cm",
+      "en": "Triangle équilatéral: 3 côtés égaux. 36 ÷ 3 = 12 cm",
+      "nl": "Triangle équilatéral: 3 côtés égaux. 36 ÷ 3 = 12 cm"
+    }
+  },
+  {
+    "id": "G5_ineg_25",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 8 cm et 8 cm. La plus grande valeur ENTIÈRE du troisième côté est ?",
+      "en": "Two sides measure 8 cm and 8 cm. The largest INTEGER value of the third side is?",
+      "nl": "Twee zijden meten 8 cm en 8 cm. De grootste GEHELE waarde van de derde zijde is?"
+    },
+    "answer": 15,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|8 - 8| < x < 16 → 0 < x < 16. Plus grande valeur entière: 15",
+      "en": "|8 - 8| < x < 16 → 0 < x < 16. Plus grande valeur entière: 15",
+      "nl": "|8 - 8| < x < 16 → 0 < x < 16. Plus grande valeur entière: 15"
+    }
+  },
+  {
+    "id": "G5_ineg_26",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a un périmètre de 24 cm et deux côtés égaux de 10 cm. Quelle est la longueur du troisième côté ?",
+      "en": "An isosceles triangle has a perimeter of 24 cm and two equal sides of 10 cm. What is the length of the third side?",
+      "nl": "Een gelijkbenige driehoek heeft een omtrek van 24 cm en twee gelijke zijden van 10 cm. Wat is de lengte van de derde zijde?"
+    },
+    "answer": 4,
+    "tolerance": 0,
+    "hint": {
+      "fr": "24 = 10 + 10 + c → c = 4 cm. Vérifie: |10 - 10| < 4 < 20 ✓",
+      "en": "24 = 10 + 10 + c → c = 4 cm. Vérifie: |10 - 10| < 4 < 20 ✓",
+      "nl": "24 = 10 + 10 + c → c = 4 cm. Vérifie: |10 - 10| < 4 < 20 ✓"
+    }
+  },
+  {
+    "id": "G5_ineg_27",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 5 cm et 12 cm. Combien de valeurs ENTIÈRES PAIRES sont possibles pour le troisième côté ?",
+      "en": "Two sides measure 5 cm and 12 cm. How many EVEN INTEGER values are possible for the third side?",
+      "nl": "Twee zijden meten 5 cm en 12 cm. Hoeveel EVEN GEHELE waarden zijn mogelijk voor de derde zijde?"
+    },
+    "answer": 5,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|5 - 12| < x < 17 → 7 < x < 17. Valeurs entières: 8-16. Valeurs paires: 8, 10, 12, 14, 16 = 5 valeurs",
+      "en": "|5 - 12| < x < 17 → 7 < x < 17. Valeurs entières: 8-16. Valeurs paires: 8, 10, 12, 14, 16 = 5 valeurs",
+      "nl": "|5 - 12| < x < 17 → 7 < x < 17. Valeurs entières: 8-16. Valeurs paires: 8, 10, 12, 14, 16 = 5 valeurs"
+    }
+  },
+  {
+    "id": "G5_ineg_28",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle a des côtés de x cm, (x+2) cm et (x+4) cm. Si le plus grand côté mesure 10 cm, quel est le périmètre ?",
+      "en": "A triangle has sides of x cm, (x+2) cm and (x+4) cm. If the largest side is 10 cm, what is the perimeter?",
+      "nl": "Een driehoek heeft zijden van x cm, (x+2) cm en (x+4) cm. Als de grootste zijde 10 cm is, wat is de omtrek?"
+    },
+    "answer": 24,
+    "tolerance": 0,
+    "hint": {
+      "fr": "Plus grand côté: x+4 = 10 → x = 6. Périmètre: 6 + 8 + 10 = 24 cm",
+      "en": "Plus grand côté: x+4 = 10 → x = 6. Périmètre: 6 + 8 + 10 = 24 cm",
+      "nl": "Plus grand côté: x+4 = 10 → x = 6. Périmètre: 6 + 8 + 10 = 24 cm"
+    }
+  },
+  {
+    "id": "G5_ineg_29",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Deux côtés mesurent 11 cm et 7 cm. La somme de toutes les valeurs ENTIÈRES possibles du 3ème côté entre 5 et 17 (exclus) est ?",
+      "en": "Two sides measure 11 cm and 7 cm. The sum of all possible INTEGER values of the 3rd side between 5 and 17 (exclusive) is?",
+      "nl": "Twee zijden meten 11 cm en 7 cm. De som van alle mogelijke GEHELE waarden van de 3e zijde tussen 5 en 17 (exclusief) is?"
+    },
+    "answer": 121,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|11 - 7| < x < 18 → 4 < x < 18. Entre 5 et 17 (exclus): 6, 7, 8, ..., 16 = 11 valeurs. Somme: (6+16)×11÷2 = 121",
+      "en": "|11 - 7| < x < 18 → 4 < x < 18. Entre 5 et 17 (exclus): 6, 7, 8, ..., 16 = 11 valeurs. Somme: (6+16)×11÷2 = 121",
+      "nl": "|11 - 7| < x < 18 → 4 < x < 18. Entre 5 et 17 (exclus): 6, 7, 8, ..., 16 = 11 valeurs. Somme: (6+16)×11÷2 = 121"
+    }
+  },
+  {
+    "id": "G5_ineg_30",
+    "category": "G5",
+    "level": 3,
+    "text": {
+      "fr": "Un triangle isocèle a deux côtés de 9 cm. Le troisième côté mesure x cm. Quelle est la valeur MAXIMALE ENTIÈRE de x ?",
+      "en": "An isosceles triangle has two sides of 9 cm. The third side measures x cm. What is the MAXIMUM INTEGER value of x?",
+      "nl": "Een gelijkbenige driehoek heeft twee zijden van 9 cm. De derde zijde meet x cm. Wat is de MAXIMALE GEHELE waarde van x?"
+    },
+    "answer": 17,
+    "tolerance": 0,
+    "hint": {
+      "fr": "|9 - 9| < x < 18 → 0 < x < 18. Valeur maximale entière: 17 cm",
+      "en": "|9 - 9| < x < 18 → 0 < x < 18. Valeur maximale entière: 17 cm",
+      "nl": "|9 - 9| < x < 18 → 0 < x < 18. Valeur maximale entière: 17 cm"
+    }
+  }
 ];
-
-export function generate(level = 1) {
-  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  const id = `G5_gen_${Date.now()}_${rand(100, 999)}`;
-  if (level === 1) {
-    const a = rand(3, 15); const b = rand(3, 15); const c = rand(Math.abs(a - b) + 1, a + b - 1);
-    return { id, category: 'G5', level, text: { fr: `Un triangle a des côtés de ${a} cm, ${b} cm et ${c} cm. Quel est son périmètre ?`, en: `A triangle has sides ${a} cm, ${b} cm and ${c} cm. What is its perimeter?`, nl: `Een driehoek heeft zijden van ${a} cm, ${b} cm en ${c} cm. Wat is de omtrek?` }, answer: a + b + c, tolerance: 0 };
-  }
-  if (level === 2) {
-    const base = rand(4, 20) * 2; const h = rand(3, 15);
-    return { id, category: 'G5', level, text: { fr: `Quelle est l'aire d'un triangle de base ${base} cm et de hauteur ${h} cm ?`, en: `What is the area of a triangle with base ${base} cm and height ${h} cm?`, nl: `Wat is de oppervlakte van een driehoek met basis ${base} cm en hoogte ${h} cm?` }, answer: base * h / 2, tolerance: 0 };
-  }
-  // Pythagorean triples
-  const triples = [[3,4,5],[5,12,13],[6,8,10],[8,15,17],[7,24,25]];
-  const [a, b, c] = triples[rand(0, triples.length - 1)];
-  const k = rand(1, 3);
-  return { id, category: 'G5', level, text: { fr: `Un triangle rectangle a des cathètes de ${a*k} cm et ${b*k} cm. Quelle est l'hypoténuse ?`, en: `A right triangle has legs ${a*k} cm and ${b*k} cm. What is the hypotenuse?`, nl: `Een rechthoekige driehoek heeft zijden ${a*k} cm en ${b*k} cm. Wat is de hypotenusa?` }, answer: c * k, tolerance: 0 };
-}

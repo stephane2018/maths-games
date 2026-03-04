@@ -5,3 +5,5 @@ dist
 *.local
 /public/pdf
 /public/word
+/extracted
+/extracted-new

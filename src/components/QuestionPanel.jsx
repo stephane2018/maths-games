@@ -21,6 +21,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   const [questionFeedback, setQuestionFeedback] = useState(null); // 'correct' | 'wrong' | null
   const [hintText, setHintText] = useState('');
   const [hintUsed, setHintUsed] = useState(false);
+  const [showHintTooltip, setShowHintTooltip] = useState(false);
   const currentQuestionRef = useRef(null);
   const questionStartRef = useRef(0);
 
@@ -37,6 +38,7 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     setCurrentQuestion(question);
     setHintText('');
     setHintUsed(false);
+    setShowHintTooltip(false);
     // Trigger animation
     setQuestionAnim(false);
     requestAnimationFrame(() => setQuestionAnim(true));
@@ -67,6 +69,11 @@ const QuestionPanel = forwardRef(function QuestionPanel({
   const showHint = useCallback((text) => {
     setHintText(text);
     setHintUsed(true);
+    setShowHintTooltip(true);
+    // Auto-hide après 5 secondes
+    setTimeout(() => {
+      setShowHintTooltip(false);
+    }, 5000);
   }, []);
 
   const clear = useCallback(() => {
@@ -251,8 +258,19 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         {renderMathText(questionText)}
       </div>
 
-      {hintText && (
-        <div className="hint-display">{renderMathText(hintText)}</div>
+      {showHintTooltip && hintText && (
+        <div className="hint-tooltip">
+          <button
+            className="hint-tooltip-close"
+            onClick={() => setShowHintTooltip(false)}
+            aria-label="Close hint"
+          >
+            ✕
+          </button>
+          <div className="hint-tooltip-content">
+            {renderMathText(hintText)}
+          </div>
+        </div>
       )}
 
       <Numpad
