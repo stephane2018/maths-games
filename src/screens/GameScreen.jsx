@@ -384,7 +384,7 @@ export default function GameScreen() {
 
   return (
     <div className="screen">
-      {/* Top bar */}
+   
       <div className="top-bar game-top-bar bg-transparent">
         <div className="top-bar-left">
           <button
