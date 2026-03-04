@@ -14,6 +14,13 @@
     box-sizing: border-box;
   }
 
+  .app-footer {
+    font-size: 0.55rem;
+    bottom: 4px;
+    right: 4px;
+    padding: 2px 4px;
+  }
+
   .wizard-themes-grid {
     grid-template-columns: 1fr;
   }
@@ -169,6 +176,13 @@
 
   .title { font-size: 1.5rem; }
   .subtitle { font-size: 0.95rem; }
+
+  .app-footer {
+    font-size: 0.6rem;
+    bottom: 6px;
+    right: 6px;
+    padding: 3px 6px;
+  }
 
   /* Boutons wizard fixed en bas sur mobile */
   .category-content .wizard-buttons {
@@ -682,6 +696,13 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .title { font-size: 2.2rem; }
 
+  .app-footer {
+    font-size: 0.8rem;
+    bottom: 10px;
+    right: 14px;
+    padding: 5px 10px;
+  }
+
   .screen-content {
     padding: 24px;
     gap: 20px;
@@ -715,6 +736,13 @@
 /* ---- Desktop (>= 1024px) ---- */
 @media (min-width: 1024px) {
   .title { font-size: 2.5rem; }
+
+  .app-footer {
+    font-size: 0.85rem;
+    bottom: 12px;
+    right: 16px;
+    padding: 6px 12px;
+  }
 
   .screen-content {
     padding: 32px;
