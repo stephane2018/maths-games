@@ -170,8 +170,19 @@ export default function CategoryScreen() {
 
               {/* Toggle all + counter */}
               <div className="flex items-center justify-between w-full max-w-[900px] mb-4 px-2">
+                <div className='gap-3 flex'>
+                    <GlassButton
+                  className='!p-1'
+                  variant="glass"
+                  size="sm"
+                  onClick={toggleSelectAll}
+                  icon={<span className="text-lg">{currentStep === 1 ? '←' : '←'}</span>}
+                >
+                  {t('wizard.back')}
+                   
+                </GlassButton>
                 <GlassButton
-                  className='!p-2'
+                  className='!p-1'
                   variant="glass"
                   size="md"
                 
@@ -182,6 +193,8 @@ export default function CategoryScreen() {
                     ? 'Tout désélectionner'
                     : 'Tout sélectionner'}
                 </GlassButton>
+                </div>
+                
                 <GlassButton
                   variant="gradient"
                   size="md"
@@ -189,7 +202,7 @@ export default function CategoryScreen() {
                   onClick={goNext}
                   icon={<span>→</span>}
                 >
-                  Suivant
+                 {t('wizard.next')}
                 </GlassButton>
               </div>
 
