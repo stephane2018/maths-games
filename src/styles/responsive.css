@@ -34,26 +34,42 @@
     font-size: 0.85rem;
   }
 
+  .screen-content {
+    padding: 8px 8px 12px;
+    gap: 8px;
+  }
+
+  .screen-content::before,
+  .screen-content::after {
+    min-height: 0;
+  }
+
   .home-title {
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    margin-top: 0;
   }
 
   .subtitle {
     font-size: 0.85rem;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .home-brand {
     font-size: 0.75rem;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   .home-logo {
     width: 80px;
     height: 80px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+
+  .daily-challenge-card {
+    padding: 10px 12px;
+    margin: 0;
   }
 
   .home-buttons {
@@ -226,9 +242,20 @@
   .title { font-size: 1.5rem; }
   .subtitle { font-size: 0.95rem; }
 
+  .screen-content {
+    padding: 10px 12px 14px;
+    gap: 10px;
+  }
+
+  .screen-content::before,
+  .screen-content::after {
+    min-height: 2px;
+  }
+
   .home-title {
     font-size: 1.9rem;
     line-height: 1.2;
+    margin-top: 0;
   }
 
   .home-brand {
@@ -238,6 +265,12 @@
   .home-logo {
     width: 90px;
     height: 90px;
+    margin-bottom: 6px;
+  }
+
+  .daily-challenge-card {
+    padding: 12px 14px;
+    margin: 0;
   }
 
   .home-buttons {
