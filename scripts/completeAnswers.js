@@ -10,7 +10,6 @@ const dataDir = path.join(__dirname, '../src/data');
 
 console.log('🔧 Complétion des réponses manquantes\n');
 
-// Parser les corrections depuis un fichier texte
 function parseCorrections(filePath) {
   if (!fs.existsSync(filePath)) {
     console.log(`⚠️  ${path.basename(filePath)} non trouvé`);

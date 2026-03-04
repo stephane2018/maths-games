@@ -51,7 +51,7 @@ export default function HomeScreen() {
         background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
         pointerEvents: 'none',
       }} />
-      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1, overflow: 'visible' }}>
+      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <Logo />
         <h1 className="home-title">{t('app.title')}</h1>
         <p className="subtitle">{t('app.subtitle')}</p>

@@ -1127,8 +1127,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  background: var(--bg-card);
-  box-shadow: 0 2px 12px var(--shadow);
+  background: transparent;
   z-index: 10;
   flex-shrink: 0;
 }
