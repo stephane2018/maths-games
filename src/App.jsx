@@ -11,17 +11,14 @@ function AppContent() {
   const sound = useSound();
 
   useEffect(() => {
-    // Play welcome sound on first user interaction
     const playWelcome = () => {
       sound.welcome();
     };
     document.addEventListener('click', playWelcome, { once: true });
     document.addEventListener('touchstart', playWelcome, { once: true });
 
-    // Enable :active pseudo-class on iOS Safari
     document.addEventListener('touchstart', () => {}, { passive: true });
 
-    // Prevent pull-to-refresh on mobile
     const preventPull = (e) => {
       if (e.target.closest('.screen-content') || e.target.closest('.category-content')) return;
       e.preventDefault();
@@ -39,7 +36,7 @@ function AppContent() {
     <>
       <ModalContainer />
       <ConsentBanner />
-      <footer className="app-footer">&copy; 2026 Mathlaclasse by Léopold Minko</footer>
+      <footer className="app-footer !text-white">&copy; 2026 Mathlaclasse by Léopold Minko</footer>
     </>
   );
 }

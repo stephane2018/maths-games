@@ -16,6 +16,7 @@ export default function AboutScreen() {
       backgroundRepeat: 'no-repeat',
       minHeight: '100vh',
       position: 'relative',
+      overflow: 'auto',
     }}>
       {/* Gradient overlay - top and bottom */}
       <div style={{

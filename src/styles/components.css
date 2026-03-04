@@ -498,14 +498,14 @@
   font-weight: 700;
   text-align: center;
   min-height: 60px;
-  max-height: 140px;
+  max-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   transition: all var(--speed) var(--ease);
-  flex-shrink: 0;
-  line-height: 1.5;
+  flex-shrink: 1;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   word-spacing: 0.15em;
   /* Gestion du texte long - SANS césure pour dyslexiques */

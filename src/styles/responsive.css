@@ -71,6 +71,7 @@
     font-size: 0.75rem;
     padding: 4px 3px;
     min-height: 40px;
+    max-height: 65px;
     line-height: 1.25;
     word-break: break-word;
   }
@@ -82,7 +83,7 @@
   }
 
   .numpad-container {
-    flex: 1;
+    flex: 1 0 auto;
     min-height: 0;
     gap: 1px;
     justify-content: flex-end;
@@ -273,7 +274,8 @@
     font-size: 0.85rem;
     padding: 6px 4px;
     min-height: 40px;
-    flex-shrink: 0;
+    max-height: 70px;
+    flex-shrink: 1;
     font-weight: 700;
     line-height: 1.3;
     word-break: break-word;
