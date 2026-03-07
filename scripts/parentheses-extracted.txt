@@ -1,0 +1,98 @@
+Exercices – Suppression des parenthèses (Sans distributivité)
+
+Niveau : 2e secondaire commune – Préparation CE1D (Fédération Wallonie-Bruxelles)
+
+Consigne générale : SUPPRIME les parenthèses puis RÉDUIS l’expression.
+
+NIVEAU 1 – Parenthèses simples
+
+1)
+
+a) 5 + (3x + 2)
+
+b) 7 + (4y − 6)
+
+c) 2a + (8 − a)
+
+d) 9 − (2 + 3)
+
+NIVEAU 2 – Signe − devant la parenthèse
+
+2)
+
+a) 6x − (3x + 4)
+
+b) 10 − (5y − 2)
+
+c) 8a − (2 − a)
+
+d) 12 − (x + 7)
+
+NIVEAU 3 – Deux parenthèses
+
+3)
+
+a) 3x − (7y + 1)
+
+b) 2a + (5a − 3) − (a + 4)
+
+c) 15 − (4x − 3) + (2x − 5)
+
+d) 9b − (2b + 6) − (b − 3)
+
+NIVEAU 4 – Expression plus longue
+
+4)
+
+a) 12x − (5x − 2) − (3x + 4)
+
+b) 20 − (6y + 3) − (2y − 5)
+
+c) 7a + (4a − 8) − (3a + 6)
+
+d) 18 − (4 − x) − (2x + 1)
+
+
+
+Corrigé
+
+Correction Niveau 1
+
+a) 3x + 7
+
+b) 4y + 1
+
+c) a + 8
+
+d) 4
+
+Correction Niveau 2
+
+a) 3x − 4
+
+b) 12 − 5y
+
+c) 9a − 2
+
+d) 5 − x
+
+Correction Niveau 3
+
+a) 3x − 7y − 1
+
+b) 6a − 7
+
+c) 13 − 2x
+
+d) 6b − 3
+
+Correction Niveau 4
+
+a) 4x − 2
+
+b) 22 − 8y
+
+c) 8a − 14
+
+d) 13 − x
+

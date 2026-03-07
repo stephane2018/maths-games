@@ -51,6 +51,32 @@ export default function HomeScreen() {
         background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
         pointerEvents: 'none',
       }} />
+
+      {/* Top bar with back button */}
+      <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="top-bar-left">
+          <GlassButton
+            variant="glass"
+            size="sm"
+            onClick={() => {
+              sound.buttonClick();
+              if (window.history.length > 1) {
+                window.history.back();
+              }
+            }}
+            icon={
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+            }
+          >
+            {t('mode.back')}
+          </GlassButton>
+        </div>
+        <div className="top-bar-right" />
+      </div>
+
       <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <Logo />
         <h1 className="home-title">{t('app.title')}</h1>

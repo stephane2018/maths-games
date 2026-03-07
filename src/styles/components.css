@@ -31,6 +31,8 @@
 /* ---- Home Screen ---- */
 .home-screen {
   background: linear-gradient(135deg, var(--blue-light) 0%, var(--bg) 50%, var(--red-light) 100%);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .home-logo {

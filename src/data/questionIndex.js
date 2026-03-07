@@ -21,6 +21,7 @@ import { questions as questionsA2 } from './questions-A2.js';
 import { questions as questionsA3 } from './questions-A3.js';
 import { questions as questionsA4 } from './questions-A4.js';
 import { questions as questionsA5 } from './questions-A5.js';
+import { questions as questionsA6, generate as generateA6 } from './questions-A6.js';
 import { questions as questionsA8 } from './questions-A8.js';
 import { questions as questionsA9 } from './questions-A9.js';
 
@@ -122,6 +123,12 @@ export const allCategories = [
     code: 'A5',
     label: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' },
     questions: questionsA5,
+  },
+  {
+    code: 'A6',
+    label: { fr: 'Suppression des parenthèses', en: 'Removing Parentheses', nl: 'Haakjes verwijderen' },
+    questions: questionsA6,
+    generate: generateA6,
   },
   {
     code: 'A8',
