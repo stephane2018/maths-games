@@ -44,6 +44,9 @@ const QuestionPanel = forwardRef(function QuestionPanel({
     requestAnimationFrame(() => setQuestionAnim(true));
   }, []);
 
+  // Determine if current question needs fraction input
+  const needsFractionInput = currentQuestion?.category === 'A9';
+
   const showCorrectFeedback = useCallback(() => {
     numpadRef.current?.showCorrect();
     setQuestionFeedback('correct');
@@ -280,7 +283,8 @@ const QuestionPanel = forwardRef(function QuestionPanel({
         disabled={disabled}
         hasDecimal={true}
         hasNegative={false}
-        hasAlphabet={true} 
+        hasAlphabet={true}
+        hasFraction={needsFractionInput}
       />
     </div>
   );

@@ -39,8 +39,11 @@ export default function HomeScreen() {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       minHeight: '100vh',
+      height: '100vh',
       position: 'relative',
-      overflow: 'auto',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
     }}>
       <div style={{
         position: 'absolute',
@@ -77,7 +80,14 @@ export default function HomeScreen() {
         <div className="top-bar-right" />
       </div>
 
-      <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="screen-content stagger-children" style={{ 
+        position: 'relative', 
+        zIndex: 1,
+        flex: 1,
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        WebkitOverflowScrolling: 'touch',
+      }}>
         <Logo />
         <h1 className="home-title">{t('app.title')}</h1>
         <p className="subtitle">{t('app.subtitle')}</p>

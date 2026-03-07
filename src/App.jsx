@@ -20,8 +20,12 @@ function AppContent() {
     document.addEventListener('touchstart', () => {}, { passive: true });
 
     const preventPull = (e) => {
-      if (e.target.closest('.screen-content') || e.target.closest('.category-content')) return;
-      e.preventDefault();
+      const scrollableElement = e.target.closest('.screen-content') || e.target.closest('.category-content');
+      if (scrollableElement) return;
+      
+      if (window.scrollY === 0 && e.touches[0].clientY > e.touches[0].pageY) {
+        e.preventDefault();
+      }
     };
     document.body.addEventListener('touchmove', preventPull, { passive: false });
 

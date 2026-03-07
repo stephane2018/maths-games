@@ -68,11 +68,35 @@ export class QuestionEngine {
   }
 
   checkAnswer(question, userAnswer) {
+    // Handle fraction answers (format: "a/b")
+    if (typeof question.answer === 'string' && question.answer.includes('/')) {
+      // Both expected answer and user answer should be fractions
+      // Normalize both by simplifying to compare
+      const userFraction = this.parseFraction(userAnswer);
+      const expectedFraction = this.parseFraction(question.answer);
+
+      if (!userFraction || !expectedFraction) return false;
+
+      // Compare by cross-multiplication: a/b = c/d if a*d = b*c
+      return userFraction.num * expectedFraction.den === userFraction.den * expectedFraction.num;
+    }
+
+    // Handle numeric answers
     const parsed = parseFloat(userAnswer);
     if (isNaN(parsed)) return false;
 
     const tolerance = question.tolerance || 0;
     return almostEqual(parsed, question.answer, tolerance);
+  }
+
+  parseFraction(str) {
+    if (typeof str !== 'string') return null;
+    const match = str.match(/^(-?\d+)\/(\d+)$/);
+    if (!match) return null;
+    const num = parseInt(match[1], 10);
+    const den = parseInt(match[2], 10);
+    if (den === 0) return null;
+    return { num, den };
   }
 
   submitAnswer(question, userAnswer, timeSpent) {

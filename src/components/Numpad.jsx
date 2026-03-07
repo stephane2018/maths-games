@@ -1,7 +1,7 @@
 import { useState, useRef, useImperativeHandle, forwardRef, useCallback } from 'react';
 import { useSound } from '../contexts/SoundContext.jsx';
 
-const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = false, hasDecimal = false, hasNegative = false, hasAlphabet = false }, ref) {
+const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = false, hasDecimal = false, hasNegative = false, hasAlphabet = false, hasFraction = false }, ref) {
   const sound = useSound();
   const [value, setValue] = useState('');
   const [feedbackClass, setFeedbackClass] = useState('');
@@ -39,6 +39,16 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
         if (prev.includes('.')) return prev;
         sound.buttonClick();
         return prev === '' ? '0.' : prev + '.';
+      });
+      return;
+    }
+
+    if (key === 'fraction') {
+      setValue(prev => {
+        if (prev.includes('/')) return prev;
+        if (prev === '' || prev === '-') return prev;
+        sound.buttonClick();
+        return prev + '/';
       });
       return;
     }
@@ -86,6 +96,7 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     else if (key === 'Delete') handleKey('clear');
     else if (key === 'Enter') handleKey('submit');
     else if (key === '.' || key === ',') handleKey('dot');
+    else if (key === '/') handleKey('fraction');
     else if (key === '-') handleKey('negative');
   }, [disabled, handleKey]);
 
@@ -262,10 +273,13 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
         </div>
       )}
 
-      {!hasAlphabet && (hasDecimal || hasNegative) && (
+      {!hasAlphabet && (hasDecimal || hasNegative || hasFraction) && (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: hasNegative && hasDecimal ? '1fr 1fr' : '1fr',
+          gridTemplateColumns: (() => {
+            const count = [hasNegative, hasDecimal, hasFraction].filter(Boolean).length;
+            return count > 1 ? `repeat(${count}, 1fr)` : '1fr';
+          })(),
           gap: '6px',
           marginTop: '6px',
         }}>
@@ -309,6 +323,27 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
               style={{ touchAction: 'manipulation' }}
             >
               ,
+            </button>
+          )}
+          {hasFraction && (
+            <button
+              className="numpad-btn"
+              onClick={() => handleKey('fraction')}
+              onPointerDown={(e) => {
+                e.currentTarget.style.transform = 'scale(0.95)';
+                e.currentTarget.style.transition = 'transform 0.1s ease';
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              style={{ touchAction: 'manipulation' }}
+            >
+              /
             </button>
           )}
         </div>
