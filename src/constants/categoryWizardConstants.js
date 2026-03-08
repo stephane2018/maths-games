@@ -45,15 +45,12 @@ export const RED_SUBCATS = [
   { code: 'P2', name: 'Traitement des données', icon: '📊', color: '#60A5FA' },
 ];
 
-// Toutes les sous-catégories jouables
 export const ALL_PLAYABLE_CODES = [
   ...BLUE_SUBCATS.map(s => s.code),
   ...RED_SUBCATS.map(s => s.code),
 ];
 
-// Mapping entre les codes d'interface (A1-A11, P1-P2, G1-G2) et les vrais codes de questionIndex.js
 export const CATEGORY_CODE_MAPPING = {
-  // Algèbre - BLUE_SUBCATS
   'A1': 'A1',  // Suppression des parenthèses → Distributivité simple
   'A2': 'N3',  // PEMDAS → Puissances
   'A3': 'N3',  // Puissances → Puissances
@@ -67,7 +64,6 @@ export const CATEGORY_CODE_MAPPING = {
   'A11': 'G5', // Inégalités triangulaires → Inégalité triangulaire
   'P1': 'P1',  // Proportionnalité → Proportionnalité
 
-  // Géométrie - RED_SUBCATS
   'G1': 'G1',  // Périmètre et aire → Distances
   'G2': 'G3',  // Angles → Angles et droites parallèles
   'P2': 'D1',  // Traitement des données → Statistiques et Probabilités
