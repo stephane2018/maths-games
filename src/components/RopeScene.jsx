@@ -15,6 +15,10 @@ const ROPE_START_X = CENTER_X - ROPE_LENGTH / 2;
 const ROPE_END_X = CENTER_X + ROPE_LENGTH / 2;
 const GROUND_Y = ROPE_Y + 20;
 
+// Character colors
+const BLUE = { cap: '#2563EB', capBrim: '#1D4ED8', shirt: '#60A5FA', shirtDark: '#3B82F6', pants: '#1E3A5F', shoe: '#3B82F6', skin: '#E8B878', skinDark: '#D4A06A' };
+const RED = { cap: '#DC2626', capBrim: '#991B1B', shirt: '#FB923C', shirtDark: '#F97316', pants: '#1E3A5F', shoe: '#EF4444', skin: '#E8B878', skinDark: '#D4A06A' };
+
 // Build a sine-wave rope path using quadratic Bezier segments
 function buildRopePath(startX, endX, y, time, tension) {
   const segments = 10;
@@ -67,6 +71,64 @@ function buildFlagPath(baseX, topY, time, lean) {
   return d;
 }
 
+// SVG character drawn facing RIGHT, origin at hip center (0,0)
+// Arms reach toward the rope (to the right)
+function CharacterBody({ c }) {
+  return (
+    <>
+      {/* Torso */}
+      <rect x={-9} y={-24} width={18} height={26} rx={4} fill={c.shirt} />
+      <rect x={-5} y={-24} width={10} height={26} rx={3} fill={c.shirtDark} opacity={0.2} />
+
+      {/* Back arm — pulling pose */}
+      <line x1={-5} y1={-20} x2={8} y2={-10} stroke={c.shirtDark} strokeWidth={5} strokeLinecap="round" />
+      <line x1={8} y1={-10} x2={18} y2={0} stroke={c.skinDark} strokeWidth={4.5} strokeLinecap="round" />
+      <circle cx={18} cy={0} r={3} fill={c.skinDark} />
+
+      {/* Front arm — pulling pose */}
+      <line x1={5} y1={-20} x2={15} y2={-8} stroke={c.shirt} strokeWidth={5} strokeLinecap="round" />
+      <line x1={15} y1={-8} x2={23} y2={2} stroke={c.skin} strokeWidth={4.5} strokeLinecap="round" />
+      <circle cx={23} cy={2} r={3} fill={c.skin} />
+
+      {/* Neck */}
+      <rect x={-3} y={-29} width={6} height={7} rx={2} fill={c.skin} />
+
+      {/* Head */}
+      <circle cx={0} cy={-36} r={9} fill={c.skin} />
+      {/* Ear */}
+      <circle cx={-8} cy={-35} r={3} fill={c.skinDark} />
+      {/* Eye */}
+      <ellipse cx={4} cy={-37} rx={2.5} ry={2.5} fill="white" />
+      <circle cx={4.5} cy={-37} r={1.2} fill="#333" />
+      {/* Eyebrow */}
+      <line x1={2} y1={-40.5} x2={7} y2={-41.5} stroke="#5D4037" strokeWidth={1.2} strokeLinecap="round" />
+      {/* Mouth */}
+      <path d="M 1 -32 Q 3.5 -30 6 -32" stroke="#8D6E63" strokeWidth={1} fill="none" strokeLinecap="round" />
+
+      {/* Cap */}
+      <path d="M -9 -38 Q -10 -47 0 -48 Q 10 -47 9 -38 Z" fill={c.cap} />
+      <rect x={-10} y={-39} width={20} height={3} rx={1.5} fill={c.capBrim} />
+      <path d="M 7 -38 L 15 -36 Q 15 -34.5 14 -35 L 7 -37 Z" fill={c.capBrim} />
+    </>
+  );
+}
+
+function CharacterLegs({ c }) {
+  return (
+    <>
+      {/* Back leg — bracing */}
+      <line x1={-4} y1={2} x2={-12} y2={14} stroke={c.pants} strokeWidth={6} strokeLinecap="round" />
+      <line x1={-12} y1={14} x2={-16} y2={25} stroke={c.pants} strokeWidth={5.5} strokeLinecap="round" />
+      <ellipse cx={-18} cy={26} rx={7} ry={3} fill={c.shoe} />
+
+      {/* Front leg — bracing */}
+      <line x1={4} y1={2} x2={10} y2={14} stroke={c.pants} strokeWidth={6} strokeLinecap="round" />
+      <line x1={10} y1={14} x2={6} y2={25} stroke={c.pants} strokeWidth={5.5} strokeLinecap="round" />
+      <ellipse cx={4} cy={26} rx={7} ry={3} fill={c.shoe} />
+    </>
+  );
+}
+
 const RopeScene = forwardRef(function RopeScene({
   roundTime = 60,
   blueName = 'Blue',
@@ -102,9 +164,15 @@ const RopeScene = forwardRef(function RopeScene({
   const ropeFiberRef = useRef(null);
   const timeAccRef = useRef(0);
 
-  // Team animation refs (GSAP)
+  // Team group refs (for translate animation)
   const blueTeamRef = useRef(null);
   const redTeamRef = useRef(null);
+
+  // Skeletal body refs (for rotation/lean animation)
+  const blueBody1Ref = useRef(null);
+  const blueBody2Ref = useRef(null);
+  const redBody1Ref = useRef(null);
+  const redBody2Ref = useRef(null);
 
   // Score popups
   const [popups, setPopups] = useState([]);
@@ -115,6 +183,9 @@ const RopeScene = forwardRef(function RopeScene({
 
   // Countdown overlay
   const [countdown, setCountdown] = useState(null);
+
+  // Hip Y position (characters stand on ground, hips above ground)
+  const hipY = GROUND_Y - 25;
 
   // Animation loop: rope wave + flag wave + smooth interpolation
   useAnimationFrame((dt) => {
@@ -151,54 +222,42 @@ const RopeScene = forwardRef(function RopeScene({
     }
   });
 
-  // GSAP pulling animation — heave-ho rhythm for each team
+  // GSAP pulling animation — heave-ho rhythm with body lean
   useEffect(() => {
     if (!blueTeamRef.current || !redTeamRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Blue team: pulls to the left (optimisé GPU)
+      // Blue team group: translate pull
       const blueTl = gsap.timeline({ repeat: -1 });
       blueTl
-        .to(blueTeamRef.current, {
-          x: -6, y: -3,
-          duration: 0.5,
-          ease: 'power2.in',
-          force3D: true,
-        })
-        .to(blueTeamRef.current, {
-          x: -1, y: 1,
-          duration: 0.35,
-          ease: 'power2.out',
-          force3D: true,
-        })
-        .to(blueTeamRef.current, {
-          x: 0, y: 0,
-          duration: 0.15,
-          ease: 'power1.out',
-          force3D: true,
-        });
+        .to(blueTeamRef.current, { x: -6, y: -3, duration: 0.5, ease: 'power2.in', force3D: true })
+        .to(blueTeamRef.current, { x: -1, y: 1, duration: 0.35, ease: 'power2.out', force3D: true })
+        .to(blueTeamRef.current, { x: 0, y: 0, duration: 0.15, ease: 'power1.out', force3D: true });
 
-      // Red team: pulls to the right, offset by half a cycle (optimisé GPU)
+      // Red team group: translate pull (offset)
       const redTl = gsap.timeline({ repeat: -1, delay: 0.5 });
       redTl
-        .to(redTeamRef.current, {
-          x: 6, y: -3,
-          duration: 0.5,
-          ease: 'power2.in',
-          force3D: true,
-        })
-        .to(redTeamRef.current, {
-          x: 1, y: 1,
-          duration: 0.35,
-          ease: 'power2.out',
-          force3D: true,
-        })
-        .to(redTeamRef.current, {
-          x: 0, y: 0,
-          duration: 0.15,
-          ease: 'power1.out',
-          force3D: true,
-        });
+        .to(redTeamRef.current, { x: 6, y: -3, duration: 0.5, ease: 'power2.in', force3D: true })
+        .to(redTeamRef.current, { x: 1, y: 1, duration: 0.35, ease: 'power2.out', force3D: true })
+        .to(redTeamRef.current, { x: 0, y: 0, duration: 0.15, ease: 'power1.out', force3D: true });
+
+      // Blue body lean (rotation around hips)
+      [blueBody1Ref, blueBody2Ref].forEach((bodyRef, i) => {
+        if (!bodyRef.current) return;
+        gsap.timeline({ repeat: -1, delay: i * 0.2 })
+          .to(bodyRef.current, { rotation: -12, duration: 0.5, ease: 'power2.in', transformOrigin: '50% 100%' })
+          .to(bodyRef.current, { rotation: 4, duration: 0.35, ease: 'power2.out', transformOrigin: '50% 100%' })
+          .to(bodyRef.current, { rotation: 0, duration: 0.15, ease: 'power1.out', transformOrigin: '50% 100%' });
+      });
+
+      // Red body lean (rotation around hips, opposite direction)
+      [redBody1Ref, redBody2Ref].forEach((bodyRef, i) => {
+        if (!bodyRef.current) return;
+        gsap.timeline({ repeat: -1, delay: 0.5 + i * 0.2 })
+          .to(bodyRef.current, { rotation: 12, duration: 0.5, ease: 'power2.in', transformOrigin: '50% 100%' })
+          .to(bodyRef.current, { rotation: -4, duration: 0.35, ease: 'power2.out', transformOrigin: '50% 100%' })
+          .to(bodyRef.current, { rotation: 0, duration: 0.15, ease: 'power1.out', transformOrigin: '50% 100%' });
+      });
     });
 
     return () => ctx.revert();
@@ -449,44 +508,36 @@ const RopeScene = forwardRef(function RopeScene({
             <stop offset="0%" stopColor="#6B5B45" stopOpacity="0.6" />
             <stop offset="100%" stopColor="#5D4E37" stopOpacity="0.15" />
           </radialGradient>
-          {/* Filtre pour supprimer le fond noir de l'image */}
-          <filter id="remove-black-bg" x="0" y="0" width="100%" height="100%" colorInterpolationFilters="sRGB">
-            <feColorMatrix type="matrix" values="
-              1 0 0 0 0
-              0 1 0 0 0
-              0 0 1 0 0
-              5 5 5 0 -0.5
-            " />
-          </filter>
-          {/* ClipPaths pour découper l'image en deux équipes */}
-          <clipPath id="clip-blue-team">
-            <rect x={CENTER_X - 200} y={30} width="200" height="240" />
-          </clipPath>
-          <clipPath id="clip-red-team">
-            <rect x={CENTER_X} y={30} width="200" height="240" />
-          </clipPath>
+          {/* Sky */}
+          <linearGradient id="sky-gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#E0F2FE" />
+            <stop offset="100%" stopColor="#F8FAFC" />
+          </linearGradient>
         </defs>
-        {/* Background */}
-        <rect width={VB_W} height={VB_H} fill="#F8FAFC" rx="0" />
+
+        <rect width={VB_W} height={VB_H} fill="url(#sky-gradient)" rx="0" />
 
         {/* Ground terrain */}
         <g className="ground">
-          {/* Main ground with gradient */}
           <rect x={0} y={GROUND_Y} width={VB_W} height={VB_H - GROUND_Y} fill="url(#ground-gradient)" />
-          {/* Grass texture lines */}
           {[10, 25, 40, 55, 70].map((offset, i) => (
             <line key={`grass-${i}`}
               x1={0} y1={GROUND_Y + offset}
               x2={VB_W} y2={GROUND_Y + offset}
               stroke="#3D6B28" strokeWidth="0.5" opacity="0.15" />
           ))}
-          {/* Central mud pit */}
+          {[40, 90, 150, 210, 350, 420, 480, 530].map((x, i) => (
+            <g key={`tuft-${i}`} opacity="0.35">
+              <line x1={x} y1={GROUND_Y} x2={x - 3} y2={GROUND_Y - 6} stroke="#4A7C30" strokeWidth="1.5" strokeLinecap="round" />
+              <line x1={x + 4} y1={GROUND_Y} x2={x + 5} y2={GROUND_Y - 8} stroke="#5A8C3A" strokeWidth="1" strokeLinecap="round" />
+              <line x1={x + 8} y1={GROUND_Y} x2={x + 10} y2={GROUND_Y - 5} stroke="#4A7C30" strokeWidth="1.5" strokeLinecap="round" />
+            </g>
+          ))}
           <ellipse cx={CENTER_X} cy={GROUND_Y + 15} rx={70} ry={18} fill="url(#mud-gradient)" />
-          {/* Inner darker mud for depth */}
           <ellipse cx={CENTER_X} cy={GROUND_Y + 17} rx={45} ry={11} fill="#5D4E37" opacity="0.4" />
-          {/* Field edge line */}
+          <ellipse cx={CENTER_X - 20} cy={GROUND_Y + 14} rx={4} ry={2} fill="#4A3C2A" opacity="0.15" />
+          <ellipse cx={CENTER_X + 15} cy={GROUND_Y + 18} rx={4} ry={2} fill="#4A3C2A" opacity="0.12" />
           <line x1={0} y1={GROUND_Y} x2={VB_W} y2={GROUND_Y} stroke="#4A7C30" strokeWidth="2" opacity="0.5" />
-          {/* Dominance overlay on terrain */}
           <rect
             x={CENTER_X - 80} y={GROUND_Y}
             width={160} height={VB_H - GROUND_Y}
@@ -501,11 +552,13 @@ const RopeScene = forwardRef(function RopeScene({
 
         {/* Dashed center line */}
         <line x1={CENTER_X} y1={30} x2={CENTER_X} y2={VB_H - 10}
-          stroke="#CBD5E1" strokeWidth="2" strokeDasharray="8 6" opacity="0.7" />
+          stroke="#94A3B8" strokeWidth="3" strokeDasharray="8 6" opacity="0.15" />
+        <line x1={CENTER_X} y1={30} x2={CENTER_X} y2={VB_H - 10}
+          stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="8 6" opacity="0.5" />
         {/* Win zone indicators */}
-        <rect x={0} y={30} width={60} height={VB_H - 40} fill="#3B82F6" opacity="0.04" rx="0" />
-        <rect x={VB_W - 60} y={30} width={60} height={VB_H - 40} fill="#EF4444" opacity="0.04" rx="0" />
-        {/* Center glow zone (fixed, outside rope group) */}
+        <rect x={0} y={30} width={70} height={VB_H - 40} fill="#3B82F6" opacity="0.05" rx="4" />
+        <rect x={VB_W - 70} y={30} width={70} height={VB_H - 40} fill="#EF4444" opacity="0.05" rx="4" />
+        {/* Center glow zone */}
         <circle ref={glowRef} cx={CENTER_X} cy={ROPE_Y} r={50}
           fill="url(#glow-neutral)" opacity="0.3" />
 
@@ -515,21 +568,20 @@ const RopeScene = forwardRef(function RopeScene({
           <path ref={ropeShadowRef}
             d={`M ${ROPE_START_X} ${ROPE_Y + 3} L ${ROPE_END_X} ${ROPE_Y + 3}`}
             stroke="#000" strokeWidth="6" strokeLinecap="round" opacity="0.08" fill="none" />
-          {/* Main rope with 3D gradient */}
+          {/* Main rope */}
           <path ref={ropePathRef}
             d={`M ${ROPE_START_X} ${ROPE_Y} L ${ROPE_END_X} ${ROPE_Y}`}
             stroke="url(#rope-gradient)" strokeWidth="6" strokeLinecap="round" fill="none" />
-          {/* Twisted fibers overlay */}
+          {/* Twisted fibers */}
           <path ref={ropeFiberRef}
             d={`M ${ROPE_START_X} ${ROPE_Y} L ${ROPE_END_X} ${ROPE_Y}`}
             stroke="#8B7355" strokeWidth="5" strokeLinecap="round" fill="none"
             strokeDasharray="4 12" opacity="0.4" />
+
           {/* Flag/Fanion marker */}
           <g>
-            {/* Mast (extended) */}
             <line x1={CENTER_X} y1={ROPE_Y - 3} x2={CENTER_X} y2={ROPE_Y - 32}
               stroke="#78716C" strokeWidth="2" strokeLinecap="round" />
-            {/* Animated waving flag */}
             <path
               ref={flagRef}
               d={buildFlagPath(CENTER_X, ROPE_Y - 32, 0, 0)}
@@ -539,34 +591,40 @@ const RopeScene = forwardRef(function RopeScene({
             />
             <circle cx={CENTER_X} cy={ROPE_Y} r={3} fill="#A8A29E" stroke="#78716C" strokeWidth="1" />
           </g>
-          {/* Blue team - left side of image */}
-          <g clipPath="url(#clip-blue-team)">
-            <g ref={blueTeamRef}>
-              <image
-                href="/teams.jpeg"
-                x={CENTER_X - 200}
-                y={-140}
-                width="400"
-                height="600"
-                className="team-blue"
-                filter="url(#remove-black-bg)"
-                preserveAspectRatio="xMidYMid meet"
-              />
+
+          {/* ===== BLUE TEAM (left, facing right) ===== */}
+          <g ref={blueTeamRef} className="team-blue">
+            {/* Character 1 — front puller */}
+            <g transform={`translate(${CENTER_X - 75}, ${hipY})`}>
+              <CharacterLegs c={BLUE} />
+              <g ref={blueBody1Ref}>
+                <CharacterBody c={BLUE} />
+              </g>
+            </g>
+            {/* Character 2 — back puller (slightly smaller for depth) */}
+            <g transform={`translate(${CENTER_X - 135}, ${hipY + 3}) scale(0.88)`}>
+              <CharacterLegs c={BLUE} />
+              <g ref={blueBody2Ref}>
+                <CharacterBody c={BLUE} />
+              </g>
             </g>
           </g>
-          {/* Red team - right side of image */}
-          <g clipPath="url(#clip-red-team)">
-            <g ref={redTeamRef}>
-              <image
-                href="/teams.jpeg"
-                x={CENTER_X - 200}
-                y={-140}
-                width="400"
-                height="600"
-                className="team-red"
-                filter="url(#remove-black-bg)"
-                preserveAspectRatio="xMidYMid meet"
-              />
+
+          {/* ===== RED TEAM (right, facing left = mirrored) ===== */}
+          <g ref={redTeamRef} className="team-red">
+            {/* Character 1 — front puller */}
+            <g transform={`translate(${CENTER_X + 75}, ${hipY}) scale(-1, 1)`}>
+              <CharacterLegs c={RED} />
+              <g ref={redBody1Ref}>
+                <CharacterBody c={RED} />
+              </g>
+            </g>
+            {/* Character 2 — back puller (slightly smaller for depth) */}
+            <g transform={`translate(${CENTER_X + 135}, ${hipY + 3}) scale(-0.88, 0.88)`}>
+              <CharacterLegs c={RED} />
+              <g ref={redBody2Ref}>
+                <CharacterBody c={RED} />
+              </g>
             </g>
           </g>
         </g>

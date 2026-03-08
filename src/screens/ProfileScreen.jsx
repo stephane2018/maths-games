@@ -83,20 +83,20 @@ export default function ProfileScreen() {
           <span className="xp-bar-text">{`${levelInfo.currentXP} / ${levelInfo.neededXP} XP`}</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', width: '100%', maxWidth: '400px' }}>
-          <div className="card" style={{ textAlign: 'center', padding: '16px' }}>
-            <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--blue)' }}>{String(profile.xp)}</div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>{t('profile.totalXP')}</div>
+        <div className="profile-stats-grid">
+          <div className="profile-stat-card">
+            <div className="profile-stat-value" style={{ color: 'var(--blue)' }}>{String(profile.xp)}</div>
+            <div className="profile-stat-label">{t('profile.totalXP')}</div>
           </div>
-          <div className="card" style={{ textAlign: 'center', padding: '16px' }}>
-            <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--green)' }}>{String(profile.gamesPlayed)}</div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>{t('profile.gamesPlayed')}</div>
+          <div className="profile-stat-card">
+            <div className="profile-stat-value" style={{ color: 'var(--green)' }}>{String(profile.gamesPlayed)}</div>
+            <div className="profile-stat-label">{t('profile.gamesPlayed')}</div>
           </div>
         </div>
 
         {themeStats.length > 0 && (
           <>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginTop: '8px' }}>{t('profile.themeStats')}</h2>
+            <h2 className="section-heading">{t('profile.themeStats')}</h2>
             <div className="theme-stats-container">
               {themeStats.map(stat => (
                 <div key={stat.id} className="theme-stat-row">
@@ -113,7 +113,7 @@ export default function ProfileScreen() {
           </>
         )}
 
-        <h2 style={{ fontSize: '1.3rem', fontWeight: '900', marginTop: '8px' }}>{t('profile.achievements')}</h2>
+        <h2 className="section-heading">{t('profile.achievements')}</h2>
         <div className="achievements-grid">
           {achievementDefs.map(def => {
             const unlocked = profile.achievements.includes(def.id);

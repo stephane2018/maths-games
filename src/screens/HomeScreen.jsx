@@ -19,6 +19,29 @@ function Logo() {
   );
 }
 
+const MATH_SYMBOLS = ['+', '−', '×', '÷', '=', 'π', '√', '%', '∑', '∞'];
+
+function FloatingSymbols() {
+  return (
+    <div className="floating-symbols" aria-hidden="true">
+      {MATH_SYMBOLS.map((symbol, i) => (
+        <span
+          key={i}
+          className="floating-symbol"
+          style={{
+            left: `${8 + (i * 9) % 85}%`,
+            animationDelay: `${i * 1.7}s`,
+            animationDuration: `${18 + (i % 5) * 4}s`,
+            fontSize: `${1.2 + (i % 3) * 0.6}rem`,
+          }}
+        >
+          {symbol}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function HomeScreen() {
   const { t, lang, setLang } = useI18n();
   const sound = useSound();
@@ -51,33 +74,28 @@ export default function HomeScreen() {
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4) 100%)',
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 100%)',
         pointerEvents: 'none',
       }} />
 
-      {/* Top bar with back button */}
+      <FloatingSymbols />
+
+      {/* Top bar with lang switcher */}
       <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="top-bar-left">
-          <GlassButton
-            variant="glass"
-            size="sm"
-            onClick={() => {
-              sound.buttonClick();
-              if (window.history.length > 1) {
-                window.history.back();
-              }
-            }}
-            icon={
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"/>
-                <polyline points="12 19 5 12 12 5"/>
-              </svg>
-            }
-          >
-            {t('mode.back')}
-          </GlassButton>
+        <div className="top-bar-left" />
+        <div className="top-bar-right">
+          <div className="lang-switcher">
+            {['fr', 'en', 'nl'].map(l => (
+              <button
+                key={l}
+                className={`lang-btn ${lang === l ? 'active' : ''}`}
+                onClick={() => { sound.buttonClick(); setLang(l); }}
+              >
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="top-bar-right" />
       </div>
 
       <div className="screen-content stagger-children" style={{ 
@@ -128,10 +146,10 @@ export default function HomeScreen() {
           <GlassButton
             variant="gradient"
             size="lg"
-            className='!p-3'
+            className="home-play-btn"
             onClick={() => { sound.buttonClick(); push('ModeSelect'); }}
             icon={
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
             }
@@ -139,13 +157,14 @@ export default function HomeScreen() {
             {t('home.play')}
           </GlassButton>
 
+          <div className="home-secondary-buttons">
           <GlassButton
             variant="glass"
-            size="lg"
-            className='!p-3'
+            size="md"
+            className="home-secondary-btn"
             onClick={() => { sound.buttonClick(); push('Profile'); }}
             icon={
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                 <circle cx="12" cy="7" r="4"/>
               </svg>
@@ -156,11 +175,11 @@ export default function HomeScreen() {
 
           <GlassButton
             variant="glass"
-            size="lg"
-            className='!p-3'
+            size="md"
+            className="home-secondary-btn"
             onClick={() => { sound.buttonClick(); push('Leaderboard'); }}
             icon={
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 16v6m-8-6v6m4-10v10M3 3h18v18H3z"/>
               </svg>
             }
@@ -170,11 +189,11 @@ export default function HomeScreen() {
 
           <GlassButton
             variant="glass"
-            size="lg"
-            className='!p-3'
+            size="md"
+            className="home-secondary-btn"
             onClick={() => { sound.buttonClick(); push('Settings'); }}
             icon={
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="3"/>
                 <path d="M12 1v6m0 6v6m4.2-15l-1.2 2.1m-6 10.4L7.8 23M23 12h-6m-6 0H1m15-4.2l-2.1 1.2m-10.4 6L1 7.8M23 16.2l-5.1-3m-10.4-6L1 16.2"/>
               </svg>
@@ -182,25 +201,13 @@ export default function HomeScreen() {
           >
             {t('home.settings')}
           </GlassButton>
-        </div>
 
-        <div className="home-bottom-row">
-          <div className="lang-switcher">
-            {['fr', 'en', 'nl'].map(l => (
-              <button
-                key={l}
-                className={`lang-btn ${lang === l ? 'active' : ''}`}
-                onClick={() => { sound.buttonClick(); setLang(l); }}
-              >
-                {l.toUpperCase()}
-              </button>
-            ))}
-          </div>
           <button
-            className="about-btn"
+            className="about-btn home-secondary-btn"
             onClick={() => { sound.buttonClick(); push('About'); }}
-            dangerouslySetInnerHTML={{ __html: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' }}
+            dangerouslySetInnerHTML={{ __html: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' }}
           />
+          </div>
         </div>
       </div>
     </div>

@@ -382,9 +382,28 @@ export default function GameScreen() {
 
   const zoomPercent = Math.round(ZOOM_STEPS[zoomIndex] * 100);
 
+  const gameSymbols = ['+', '−', '×', '÷', '=', 'π', '√', '%', '∞', '∑', 'Δ', '±'];
+
   return (
-    <div className="screen">
-   
+    <div className="screen game-screen-bg">
+      {/* Floating math symbols background */}
+      <div className="game-floating-symbols" aria-hidden="true">
+        {gameSymbols.map((sym, i) => (
+          <span
+            key={i}
+            className="game-float-symbol"
+            style={{
+              left: `${(i * 8.3) % 100}%`,
+              animationDelay: `${i * 1.5}s`,
+              animationDuration: `${12 + (i % 4) * 3}s`,
+              fontSize: `${0.8 + (i % 3) * 0.4}rem`,
+            }}
+          >
+            {sym}
+          </span>
+        ))}
+      </div>
+
       <div className="top-bar game-top-bar bg-transparent">
         <div className="top-bar-left">
           <button

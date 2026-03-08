@@ -81,7 +81,7 @@ export default function SettingsScreen() {
       <div className="screen-content stagger-children" style={{ position: 'relative', zIndex: 1 }}>
         <h1 className="title">{t('settings.title')}</h1>
 
-        <div className="card" style={{ width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div className="card settings-card">
           <Toggle
             label={t('settings.sound')}
             description={null}
@@ -103,7 +103,7 @@ export default function SettingsScreen() {
           />
 
           <div style={{ width: '100%' }}>
-            <div style={{ fontWeight: '700', marginBottom: '8px' }}>{t('settings.roundTime')}</div>
+            <div className="settings-label">{t('settings.roundTime')}</div>
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               {ROUND_TIME_OPTIONS.map(sec => {
                 const label = sec < 60 ? `${sec}s` : `${sec / 60}min`;
@@ -128,7 +128,7 @@ export default function SettingsScreen() {
           </div>
 
           <div style={{ width: '100%' }}>
-            <div style={{ fontWeight: '700', marginBottom: '8px' }}>{t('settings.language')}</div>
+            <div className="settings-label">{t('settings.language')}</div>
             <div className="lang-switcher">
               {['fr', 'en', 'nl'].map(l => (
                 <button
@@ -143,7 +143,7 @@ export default function SettingsScreen() {
           </div>
 
           <div style={{ width: '100%' }}>
-            <div style={{ fontWeight: '700', marginBottom: '8px' }}>{t('settings.difficulty')}</div>
+            <div className="settings-label">{t('settings.difficulty')}</div>
             <div style={{ display: 'flex', gap: '8px' }}>
               {['easy', 'medium', 'hard'].map(diff => (
                 <GlassButton
@@ -163,7 +163,7 @@ export default function SettingsScreen() {
             </div>
           </div>
 
-          <div style={{ width: '100%', borderTop: '1px solid var(--border)', paddingTop: '20px', marginTop: '4px' }}>
+          <div className="settings-danger-zone">
             <GlassButton
               variant="glass"
               size="md"

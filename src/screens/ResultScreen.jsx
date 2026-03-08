@@ -147,62 +147,52 @@ export default function ResultScreen() {
 
         <div className="card result-card">
           {/* Score */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '12px' }}>
-            <div style={{ textAlign: 'center' }}>
-              <div className="result-score-value" style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--blue)' }}>{String(blueScore)}</div>
-              <div className="result-score-label" style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{t('game.blue')}</div>
+          <div className="result-score-display">
+            <div className="result-score-team">
+              <div className="result-score-value result-score-value--blue">{String(blueScore)}</div>
+              <div className="result-score-label">{t('game.blue')}</div>
             </div>
-            <div className="result-score-separator" style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--text-light)', alignSelf: 'center' }}>-</div>
-            <div style={{ textAlign: 'center' }}>
-              <div className="result-score-value" style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--red)' }}>{String(redScore)}</div>
-              <div className="result-score-label" style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>{mode === 'solo' ? 'AI' : t('game.red')}</div>
+            <div className="result-score-separator">-</div>
+            <div className="result-score-team">
+              <div className="result-score-value result-score-value--red">{String(redScore)}</div>
+              <div className="result-score-label">{mode === 'solo' ? 'AI' : t('game.red')}</div>
             </div>
           </div>
 
           {/* Stats grid */}
           <div className="result-stats">
-            <div className="result-stat" style={{ background: 'var(--green-light)' }}>
-              <div className="result-stat-value" style={{ color: 'var(--green)' }}>{String(playerStats.totalCorrect || 0)}</div>
+            <div className="result-stat result-stat--green">
+              <div className="result-stat-value">{String(playerStats.totalCorrect || 0)}</div>
               <div className="result-stat-label">{t('result.correct')}</div>
             </div>
-            <div className="result-stat" style={{ background: 'var(--blue-light)' }}>
-              <div className="result-stat-value" style={{ color: 'var(--blue)' }}>{`${accuracy}%`}</div>
+            <div className="result-stat result-stat--blue">
+              <div className="result-stat-value">{`${accuracy}%`}</div>
               <div className="result-stat-label">{t('result.accuracy')}</div>
             </div>
-            <div className="result-stat" style={{ background: '#FEF3C7' }}>
-              <div className="result-stat-value" style={{ color: 'var(--yellow-dark)' }}>{String(playerStats.bestStreak || 0)}</div>
+            <div className="result-stat result-stat--yellow">
+              <div className="result-stat-value">{String(playerStats.bestStreak || 0)}</div>
               <div className="result-stat-label">{t('result.bestStreak')}</div>
             </div>
-            <div className="result-stat" style={{ background: '#F3E8FF' }}>
-              <div className="result-stat-value" style={{ color: 'var(--purple)' }}>{`+${xpEarned}`}</div>
+            <div className="result-stat result-stat--purple">
+              <div className="result-stat-value">{`+${xpEarned}`}</div>
               <div className="result-stat-label">{t('result.xpEarned')}{dailyBonusXP > 0 ? ` (+${dailyBonusXP} bonus)` : ''}</div>
             </div>
           </div>
 
           {/* Level up */}
           {levelInfo.leveledUp && (
-            <div className="anim-bounce-in" style={{
-              textAlign: 'center', padding: '12px',
-              background: 'linear-gradient(135deg, #FCD34D, #F59E0B)',
-              borderRadius: 'var(--radius-sm)', color: 'white',
-              fontWeight: '900', fontSize: '1.2rem', marginTop: '12px',
-            }}>
+            <div className="result-level-up anim-bounce-in">
               {`LEVEL UP! ${t('profile.level', { n: levelInfo.newLevel })}`}
             </div>
           )}
 
           {/* New achievements */}
           {newAchievements.length > 0 && (
-            <div style={{ marginTop: '12px', textAlign: 'center' }}>
+            <div className="result-achievements">
               {newAchievements.map(id => (
-                <div key={id} className="anim-bounce-in" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  padding: '8px 16px', background: '#FFFBEB',
-                  borderRadius: 'var(--radius-full)', margin: '4px',
-                  border: '2px solid var(--yellow)',
-                }}>
-                  <span style={{ fontSize: '1.5rem' }}>{icons[id] || ''}</span>
-                  <span style={{ fontWeight: '700', fontSize: '0.9rem' }}>{t(`achievements.${id}`)}</span>
+                <div key={id} className="result-achievement-badge anim-bounce-in">
+                  <span className="result-achievement-icon">{icons[id] || ''}</span>
+                  <span className="result-achievement-name">{t(`achievements.${id}`)}</span>
                 </div>
               ))}
             </div>

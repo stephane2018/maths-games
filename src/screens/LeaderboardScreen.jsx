@@ -126,7 +126,7 @@ export default function LeaderboardScreen() {
 
         {rankings.length > 0 && (
           <>
-            <h2 style={{ fontSize: '1.1rem', fontWeight: '900', marginTop: '4px' }}>{t('leaderboard.teamRankings')}</h2>
+            <h2 className="section-heading">{t('leaderboard.teamRankings')}</h2>
             <div className="leaderboard-table-wrap">
               <table className="leaderboard-table">
                 <thead>
@@ -160,7 +160,7 @@ export default function LeaderboardScreen() {
 
         {recentMatches.length > 0 && (
           <>
-            <h2 style={{ fontSize: '1.1rem', fontWeight: '900', marginTop: '16px' }}>{t('leaderboard.recentMatches')}</h2>
+            <h2 className="section-heading" style={{ marginTop: '16px' }}>{t('leaderboard.recentMatches')}</h2>
             <div className="leaderboard-table-wrap">
               <table className="leaderboard-table">
                 <thead>

@@ -140,7 +140,6 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     ['a²', 'b²', 'c²', 'd²'],
     ['x', 'y', 'x²', 'y²'],
     ['+', '-', '²', 'backspace'],
-    ['clear'],
   ];
 
   const buttons = mode === 'numeric' ? numericButtons : alphabetButtons;
@@ -151,7 +150,16 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
       style={{ opacity: disabled ? '0.5' : '1', pointerEvents: disabled ? 'none' : 'auto' }}
     >
       <div ref={displayRef} className={`answer-display ${feedbackClass}`}>
-        {value || '\u00A0'}
+        {value && value.includes('/') ? (() => {
+          const [num, den] = value.split('/');
+          return (
+            <span className="fraction fraction-input">
+              <span className="fraction-num">{num || '\u00A0'}</span>
+              <span className="fraction-bar" />
+              <span className="fraction-den">{den || '\u00A0'}</span>
+            </span>
+          );
+        })() : (value || '\u00A0')}
       </div>
 
       <div
@@ -207,22 +215,17 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
       </div>
 
       {hasAlphabet && (
-        <div style={{ marginTop: '6px', display: 'flex', gap: '6px' }}>
+        <div style={{ marginTop: '4px', display: 'flex', gap: '4px' }}>
+          <button
+            className="numpad-btn clear"
+            onClick={() => handleKey('clear')}
+            style={{ touchAction: 'manipulation', flex: 0.4 }}
+          >
+            ✕
+          </button>
           <button
             className="numpad-btn submit"
             onClick={() => handleKey('submit')}
-            onPointerDown={(e) => {
-              e.currentTarget.style.transform = 'scale(0.95)';
-              e.currentTarget.style.transition = 'transform 0.1s ease';
-            }}
-            onPointerUp={(e) => {
-              e.currentTarget.style.transform = '';
-              e.currentTarget.style.transition = '';
-            }}
-            onPointerLeave={(e) => {
-              e.currentTarget.style.transform = '';
-              e.currentTarget.style.transition = '';
-            }}
             style={{ touchAction: 'manipulation', flex: 1 }}
           >
             ✓
@@ -230,30 +233,16 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
           <button
             className="numpad-btn numpad-btn-switch"
             onClick={() => handleKey('switch')}
-            onPointerDown={(e) => {
-              e.currentTarget.style.transform = 'scale(0.95)';
-              e.currentTarget.style.transition = 'transform 0.1s ease';
-            }}
-            onPointerUp={(e) => {
-              e.currentTarget.style.transform = '';
-              e.currentTarget.style.transition = '';
-            }}
-            onPointerLeave={(e) => {
-              e.currentTarget.style.transform = '';
-              e.currentTarget.style.transition = '';
-            }}
             style={{
               touchAction: 'manipulation',
               flex: 0.5,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '4px',
-              fontSize: '0.9em'
+              gap: '2px',
+              fontSize: '0.85em'
             }}
           >
-            <span style={{ opacity: 0.7 }}>⇄</span>
-
             <span style={{ fontWeight: 'bold' }}>{mode === 'numeric' ? 'ABC' : '123'}</span>
           </button>
         </div>
