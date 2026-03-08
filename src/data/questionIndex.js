@@ -116,7 +116,7 @@ export const allCategories = [
   },
   {
     code: 'A4',
-    label: { fr: 'PPCM et PGCD', en: 'LCM and GCD', nl: 'KGV en GGD' },
+    label: { fr: 'Diviseurs et multiples', en: 'Divisors and Multiples', nl: 'Delers en veelvouden' },
     questions: questionsA4,
   },
   {

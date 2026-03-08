@@ -53,7 +53,7 @@ export const CE1D_THEMES = [
       { code: 'A1', name: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' } },
       { code: 'A2', name: { fr: 'Double distributivité', en: 'Double Distributivity', nl: 'Dubbele distributiviteit' } },
       { code: 'A3', name: { fr: 'Calcul littéral', en: 'Literal Calculation', nl: 'Letterrekenen' } },
-      { code: 'A4', name: { fr: 'PPCM et PGCD', en: 'LCM and GCD', nl: 'KGV en GGD' } },
+      { code: 'A4', name: { fr: 'Diviseurs et multiples', en: 'Divisors and Multiples', nl: 'Delers en veelvouden' } },
       { code: 'A5', name: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' } },
       { code: 'A8', name: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' } },
       { code: 'A9', name: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' } }

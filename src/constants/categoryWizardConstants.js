@@ -57,7 +57,7 @@ export const CATEGORY_CODE_MAPPING = {
   'A1': 'A1',  // Suppression des parenthèses → Distributivité simple
   'A2': 'N3',  // PEMDAS → Puissances
   'A3': 'N3',  // Puissances → Puissances
-  'A4': 'A4',  // PPCM et PGCD → PPCM et PGCD
+  'A4': 'A4',  // Diviseurs et multiples → Diviseurs et multiples
   'A5': 'A1',  // Simple distributivité → Distributivité simple
   'A6': 'A2',  // Double distributivité → Double distributivité
   'A7': 'A3',  // Calcul littéral → Calcul littéral
