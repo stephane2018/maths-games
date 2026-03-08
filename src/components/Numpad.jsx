@@ -122,7 +122,13 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
     showValue,
   }));
 
-  const numericButtons = [
+  // Layout optimisé pour les fractions : intégrer / dans la grille
+  const numericButtons = hasFraction ? [
+    ['1', '2', '3'],
+    ['4', '5', '6'],
+    ['7', '8', '9'],
+    ['/', '0', 'backspace'],
+  ] : [
     ['1', '2', '3'],
     ['4', '5', '6'],
     ['7', '8', '9'],
@@ -168,13 +174,17 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
             if (key === 'clear') { btnClass += ' clear'; label = '\u2715'; }
             else if (key === 'backspace') { btnClass += ' backspace'; label = '\u232B'; }
             else if (key === 'submit') { btnClass += ' submit'; label = '\u2713'; }
+            else if (key === '/') { btnClass += ' fraction'; label = '/'; }
 
             return (
               <button
                 key={key + idx}
                 className={btnClass}
                 data-key={key}
-                onClick={(e) => { e.preventDefault(); handleKey(key); }}
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  handleKey(key === '/' ? 'fraction' : key); 
+                }}
                 onPointerDown={(e) => {
                   e.currentTarget.style.transform = 'scale(0.95)';
                   e.currentTarget.style.transition = 'transform 0.1s ease';
@@ -251,6 +261,27 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
 
       {!hasAlphabet && (
         <div style={{ marginTop: '6px', display: 'flex', gap: '6px' }}>
+          {hasFraction && (
+            <button
+              className="numpad-btn clear"
+              onClick={() => handleKey('clear')}
+              onPointerDown={(e) => {
+                e.currentTarget.style.transform = 'scale(0.95)';
+                e.currentTarget.style.transition = 'transform 0.1s ease';
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.transition = '';
+              }}
+              style={{ touchAction: 'manipulation', flex: 0.6 }}
+            >
+              ✕
+            </button>
+          )}
           <button
             className="numpad-btn submit"
             onClick={() => handleKey('submit')}
@@ -273,11 +304,11 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
         </div>
       )}
 
-      {!hasAlphabet && (hasDecimal || hasNegative || hasFraction) && (
+      {!hasAlphabet && (hasDecimal || hasNegative) && (
         <div style={{
           display: 'grid',
           gridTemplateColumns: (() => {
-            const count = [hasNegative, hasDecimal, hasFraction].filter(Boolean).length;
+            const count = [hasNegative, hasDecimal].filter(Boolean).length;
             return count > 1 ? `repeat(${count}, 1fr)` : '1fr';
           })(),
           gap: '6px',
@@ -323,27 +354,6 @@ const Numpad = forwardRef(function Numpad({ team = 'blue', onSubmit, disabled = 
               style={{ touchAction: 'manipulation' }}
             >
               ,
-            </button>
-          )}
-          {hasFraction && (
-            <button
-              className="numpad-btn"
-              onClick={() => handleKey('fraction')}
-              onPointerDown={(e) => {
-                e.currentTarget.style.transform = 'scale(0.95)';
-                e.currentTarget.style.transition = 'transform 0.1s ease';
-              }}
-              onPointerUp={(e) => {
-                e.currentTarget.style.transform = '';
-                e.currentTarget.style.transition = '';
-              }}
-              onPointerLeave={(e) => {
-                e.currentTarget.style.transform = '';
-                e.currentTarget.style.transition = '';
-              }}
-              style={{ touchAction: 'manipulation' }}
-            >
-              /
             </button>
           )}
         </div>

@@ -866,6 +866,35 @@
               inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.numpad-btn.fraction {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  color: white;
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3),
+              0 1px 3px rgba(0, 0, 0, 0.1),
+              inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.numpad-btn.fraction::before {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0) 0%, rgba(124, 58, 237, 0.1) 100%);
+}
+
+.numpad-btn.fraction:hover {
+  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4),
+              0 3px 6px rgba(0, 0, 0, 0.15),
+              inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  border-color: rgba(124, 58, 237, 0.7);
+}
+
+.numpad-btn.fraction:active {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3),
+              inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* ---- Rope Section ---- */
 .rope-section {
   display: flex;

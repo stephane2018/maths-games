@@ -407,7 +407,6 @@
   .screen-content {
     padding: 12px;
     gap: 12px;
-    justify-content: center;
   }
 
   .card { padding: 14px; }
