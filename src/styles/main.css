@@ -151,6 +151,9 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* Override inline minHeight/position that break scroll containment */
+  max-height: 100vh;
+  max-height: 100dvh;
 }
 
 .screen-content {
@@ -167,6 +170,9 @@ body {
   width: 100%;
   margin: 0 auto;
   min-height: 0;
+  /* Ensure scroll container works even when parent has minHeight: 100vh */
+  flex-shrink: 1;
+  flex-basis: 0;
 }
 
 .screen-content::before,
