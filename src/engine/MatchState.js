@@ -143,12 +143,8 @@ export class MatchState {
 
     this._emit('ropeMove', { position: this.ropePosition, team });
 
-    // Check for round win by threshold
-    if (this.ropePosition <= -this.winThreshold) {
-      this._endRound('blue');
-    } else if (this.ropePosition >= this.winThreshold) {
-      this._endRound('red');
-    }
+    // REMOVED: Auto-win by threshold - now play until time runs out
+    // The winner is determined by rope position when time expires
   }
 
   // Called when a player answers wrong

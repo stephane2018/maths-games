@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "pencil": {
+      "command": "/private/var/folders/v_/cqlp08n124dbs6kdlt4w5gx40000gn/T/AppTranslocation/A146151F-97ED-4AA5-9720-FC4A39CD9F1A/d/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+      "args": ["--app", "desktop"],
+      "type": "stdio"
+    }
+  }
+}

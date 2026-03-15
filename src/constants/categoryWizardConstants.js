@@ -36,6 +36,7 @@ export const BLUE_SUBCATS = [
   { code: 'A9', name: 'Fractions', icon: '🧮', color: '#F59E0B' },
   { code: 'A10', name: 'Équations', icon: '⚖️', color: '#3B82F6' },
   { code: 'A11', name: 'Inégalités triangulaires', icon: '📐', color: '#60A5FA' },
+  { code: 'A12', name: 'Factorisation', icon: '🔓', color: '#F59E0B' },
   { code: 'P1', name: 'Proportionnalité', icon: '⚖️', color: '#60A5FA' },
 ];
 
@@ -62,6 +63,7 @@ export const CATEGORY_CODE_MAPPING = {
   'A9': 'A9',  // Fractions → Fractions
   'A10': 'A5', // Équations → Équations du 1er degré
   'A11': 'G5', // Inégalités triangulaires → Inégalité triangulaire
+  'A12': 'A10', // Factorisation → Factorisation
   'P1': 'P1',  // Proportionnalité → Proportionnalité
 
   'G1': 'G1',  // Périmètre et aire → Distances

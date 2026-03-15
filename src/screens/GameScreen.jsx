@@ -133,11 +133,11 @@ export default function GameScreen() {
   }, [setLang, sound]);
 
   // Give a new question to a team
-  const giveNewQuestion = useCallback((team) => {
+  const giveNewQuestion = useCallback(async (team) => {
     if (match.state !== STATES.PLAYING) return;
     const engine = team === 'blue' ? blueEngineRef.current : redEngineRef.current;
     const panelRef = team === 'blue' ? bluePanelRef : redPanelRef;
-    const q = engine.getNextQuestion();
+    const q = await engine.getNextQuestion();
     if (!q) return;
 
     const text = engine.getQuestionText(q);
@@ -298,6 +298,10 @@ export default function GameScreen() {
               categories,
               difficulty,
               numRounds,
+              fromTeacher: params.fromTeacher || false,
+              classroomId: params.classroomId || null,
+              blueStudentId: params.blueStudentId || null,
+              redStudentId: params.redStudentId || null,
             }, true);
           },
         });
