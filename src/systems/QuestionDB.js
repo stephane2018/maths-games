@@ -9,7 +9,8 @@ let isTauri = false;
 export async function initQuestionDB() {
   try {
     if (window.__TAURI__) {
-      const { default: Database } = await import('@tauri-apps/plugin-sql');
+      const pkg = '@tauri-apps/' + 'plugin-sql';
+      const { default: Database } = await import(/* @vite-ignore */ pkg);
       db = await Database.load('sqlite:mathgames.db');
       isTauri = true;
     }
