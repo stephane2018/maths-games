@@ -16,7 +16,7 @@ export default function ResultScreen() {
   const containerRef = useRef(null);
   const processedRef = useRef(false);
 
-  const { winner, blueScore, redScore, mode, blueName, redName, blueStats, redStats, categories, difficulty, numRounds } = sharedState || {};
+  const { winner, blueScore, redScore, mode, blueName, redName, blueStats, redStats, categories, difficulty, numRounds, fromTeacher, classroomId, blueStudentId, redStudentId } = sharedState || {};
 
   const isPlayerWin = winner === 'blue';
   const playerStats = blueStats || {};
@@ -87,6 +87,38 @@ export default function ResultScreen() {
         difficulty: difficulty || 'medium',
         categories: categories || [],
       });
+
+      // Save teacher match history
+      if (fromTeacher && classroomId) {
+        storage.addTeacherMatch({
+          id: Date.now(),
+          date: new Date().toISOString(),
+          classroomId,
+          blueStudentId,
+          redStudentId,
+          blueName,
+          redName,
+          winner,
+          blueScore,
+          redScore,
+          blueStats: {
+            correct: blueStats?.totalCorrect || 0,
+            total: blueStats?.totalAnswered || 0,
+            accuracy: blueStats?.accuracy || 0,
+            bestStreak: blueStats?.bestStreak || 0,
+            categoryBreakdown: blueStats?.categoryBreakdown || {},
+          },
+          redStats: {
+            correct: redStats?.totalCorrect || 0,
+            total: redStats?.totalAnswered || 0,
+            accuracy: redStats?.accuracy || 0,
+            bestStreak: redStats?.bestStreak || 0,
+            categoryBreakdown: redStats?.categoryBreakdown || {},
+          },
+          difficulty: difficulty || 'medium',
+          categories: categories || [],
+        });
+      }
     }
   }
 
@@ -207,7 +239,7 @@ export default function ResultScreen() {
             className="w-full"
             onClick={() => {
               sound.buttonClick();
-              push('Game', { mode, categories, difficulty: difficulty || 'medium', numRounds: numRounds || 3, blueName, redName }, true);
+              push('Game', { mode, categories, difficulty: difficulty || 'medium', numRounds: numRounds || 3, blueName, redName, fromTeacher, classroomId, blueStudentId, redStudentId }, true);
             }}
             icon={
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -250,6 +282,24 @@ export default function ResultScreen() {
               {t('result.home')}
             </GlassButton>
           </div>
+          {fromTeacher && (
+            <GlassButton
+              variant="glass"
+              size="lg"
+              className="w-full"
+              onClick={() => { sound.buttonClick(); push('Teacher', {}, true); }}
+              icon={
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              }
+            >
+              {t('result.backToTeacher')}
+            </GlassButton>
+          )}
         </div>
       </div>
     </div>

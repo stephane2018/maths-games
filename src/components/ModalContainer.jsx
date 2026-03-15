@@ -9,6 +9,7 @@ import ProfileScreen from '../screens/ProfileScreen.jsx';
 import SettingsScreen from '../screens/SettingsScreen.jsx';
 import AboutScreen from '../screens/AboutScreen.jsx';
 import LeaderboardScreen from '../screens/LeaderboardScreen.jsx';
+import TeacherScreen from '../screens/TeacherScreen.jsx';
 
 const SCREEN_MAP = {
   Home: HomeScreen,
@@ -20,6 +21,7 @@ const SCREEN_MAP = {
   Settings: SettingsScreen,
   About: AboutScreen,
   Leaderboard: LeaderboardScreen,
+  Teacher: TeacherScreen,
 };
 
 export default function ModalContainer() {

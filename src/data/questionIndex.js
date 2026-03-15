@@ -3,143 +3,39 @@
 // CE1D Belgian exam - Math games
 // =============================================================================
 
-import { questions as questionsN1, generate as generateN1 } from './questions-N1.js';
-import { questions as questionsN2, generate as generateN2 } from './questions-N2.js';
-import { questions as questionsN3, generate as generateN3 } from './questions-N3.js';
-import { questions as questionsN4, generate as generateN4 } from './questions-N4.js';
-import { questions as questionsN6, generate as generateN6 } from './questions-N6.js';
-import { questions as questionsG1, generate as generateG1 } from './questions-G1.js';
-import { questions as questionsG2 } from './questions-G2.js';
-import { questions as questionsG3 } from './questions-G3.js';
-import { questions as questionsG4 } from './questions-G4.js';
-import { questions as questionsG5 } from './questions-G5.js';
-import { questions as questionsG7, generate as generateG7 } from './questions-G7.js';
-import { questions as questionsP1 } from './questions-P1.js';
-import { questions as questionsD1 } from './questions-D1.js';
-import { questions as questionsA1 } from './questions-A1.js';
-import { questions as questionsA2 } from './questions-A2.js';
-import { questions as questionsA3 } from './questions-A3.js';
-import { questions as questionsA4 } from './questions-A4.js';
-import { questions as questionsA5 } from './questions-A5.js';
-import { questions as questionsA6, generate as generateA6 } from './questions-A6.js';
-import { questions as questionsA8 } from './questions-A8.js';
-import { questions as questionsA9 } from './questions-A9.js';
+import { questionModules } from './allQuestions.js';
+import { storage } from '../systems/StorageManager.js';
 
+const q = (code) => questionModules[code]?.questions || [];
+const g = (code) => questionModules[code]?.generate || undefined;
 
 export const allCategories = [
-  {
-    code: 'N1',
-    label: { fr: 'Calcul numérique', en: 'Calcul numérique', nl: 'Calcul numérique' },
-    questions: questionsN1,
-    generate: generateN1,
-  },
-  {
-    code: 'N2',
-    label: { fr: 'Calcul littéral', en: 'Calcul littéral', nl: 'Calcul littéral' },
-    questions: questionsN2,
-    generate: generateN2,
-  },
-  {
-    code: 'N3',
-    label: { fr: 'Puissances', en: 'Puissances', nl: 'Puissances' },
-    questions: questionsN3,
-    generate: generateN3,
-  },
-  {
-    code: 'N4',
-    label: { fr: 'Équations', en: 'Équations', nl: 'Équations' },
-    questions: questionsN4,
-    generate: generateN4,
-  },
-  {
-    code: 'N6',
-    label: { fr: 'Dénombrer', en: 'Counting', nl: 'Tellen' },
-    questions: questionsN6,
-    generate: generateN6,
-  },
-  {
-    code: 'G1',
-    label: { fr: 'Distances', en: 'Distances', nl: 'Afstanden' },
-    questions: questionsG1,
-    generate: generateG1,
-  },
-  {
-    code: 'G2',
-    label: { fr: 'Figures planes et diagonales', en: 'Plane figures and diagonals', nl: 'Vlakke figuren en diagonalen' },
-    questions: questionsG2,
-  },
-  {
-    code: 'G3',
-    label: { fr: 'Angles et droites parallèles', en: 'Angles and parallel lines', nl: 'Hoeken en evenwijdige lijnen' },
-    questions: questionsG3,
-  },
-  {
-    code: 'G4',
-    label: { fr: 'Triangles', en: 'Triangles', nl: 'Driehoeken' },
-    questions: questionsG4,
-  },
-  {
-    code: 'G5',
-    label: { fr: 'Inégalité triangulaire', en: 'Triangle Inequality', nl: 'Driehoeksongelijkheid' },
-    questions: questionsG5,
-  },
-  {
-    code: 'G7',
-    label: { fr: 'Programmes de construction', en: 'Programmes de construction', nl: 'Programmes de construction' },
-    questions: questionsG7,
-    generate: generateG7,
-  },
-  {
-    code: 'P1',
-    label: { fr: 'Proportionnalité', en: 'Proportionality', nl: 'Evenredigheid' },
-    questions: questionsP1,
-  },
-  {
-    code: 'D1',
-    label: { fr: 'Statistiques et Probabilités', en: 'Statistics and Probability', nl: 'Statistiek en Kansrekening' },
-    questions: questionsD1,
-  },
-  {
-    code: 'A1',
-    label: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' },
-    questions: questionsA1,
-  },
-  {
-    code: 'A2',
-    label: { fr: 'Double distributivité', en: 'Double Distributivity', nl: 'Dubbele distributiviteit' },
-    questions: questionsA2,
-  },
-  {
-    code: 'A3',
-    label: { fr: 'Calcul littéral', en: 'Literal Calculation', nl: 'Letterrekenen' },
-    questions: questionsA3,
-  },
-  {
-    code: 'A4',
-    label: { fr: 'Diviseurs et multiples', en: 'Divisors and Multiples', nl: 'Delers en veelvouden' },
-    questions: questionsA4,
-  },
-  {
-    code: 'A5',
-    label: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' },
-    questions: questionsA5,
-  },
-  {
-    code: 'A6',
-    label: { fr: 'Suppression des parenthèses', en: 'Removing Parentheses', nl: 'Haakjes verwijderen' },
-    questions: questionsA6,
-    generate: generateA6,
-  },
-  {
-    code: 'A8',
-    label: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' },
-    questions: questionsA8,
-  },
-  {
-    code: 'A9',
-    label: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' },
-    questions: questionsA9,
-  },
+  { code: 'N1', label: { fr: 'Calcul numérique', en: 'Numerical calculation', nl: 'Numerieke berekening' }, questions: q('N1'), generate: g('N1') },
+  { code: 'N2', label: { fr: 'Calcul littéral', en: 'Literal calculation', nl: 'Letterrekenen' }, questions: q('N2'), generate: g('N2') },
+  { code: 'N3', label: { fr: 'Puissances', en: 'Powers', nl: 'Machten' }, questions: q('N3'), generate: g('N3') },
+  { code: 'N4', label: { fr: 'Équations', en: 'Equations', nl: 'Vergelijkingen' }, questions: q('N4'), generate: g('N4') },
+  { code: 'N5', label: { fr: 'Nombres décimaux', en: 'Decimal numbers', nl: 'Decimale getallen' }, questions: q('N5'), generate: g('N5') },
+  { code: 'N6', label: { fr: 'Dénombrer', en: 'Counting', nl: 'Tellen' }, questions: q('N6'), generate: g('N6') },
+  { code: 'G1', label: { fr: 'Distances', en: 'Distances', nl: 'Afstanden' }, questions: q('G1'), generate: g('G1') },
+  { code: 'G2', label: { fr: 'Figures planes et diagonales', en: 'Plane figures and diagonals', nl: 'Vlakke figuren en diagonalen' }, questions: q('G2') },
+  { code: 'G3', label: { fr: 'Angles et droites parallèles', en: 'Angles and parallel lines', nl: 'Hoeken en evenwijdige lijnen' }, questions: q('G3') },
+  { code: 'G4', label: { fr: 'Triangles', en: 'Triangles', nl: 'Driehoeken' }, questions: q('G4') },
+  { code: 'G5', label: { fr: 'Inégalité triangulaire', en: 'Triangle Inequality', nl: 'Driehoeksongelijkheid' }, questions: q('G5') },
+  { code: 'G6', label: { fr: 'Cercles', en: 'Circles', nl: 'Cirkels' }, questions: q('G6'), generate: g('G6') },
+  { code: 'G7', label: { fr: 'Programmes de construction', en: 'Construction programs', nl: "Constructieprogramma's" }, questions: q('G7'), generate: g('G7') },
+  { code: 'A1', label: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' }, questions: q('A1') },
+  { code: 'A2', label: { fr: 'Double distributivité', en: 'Double Distributivity', nl: 'Dubbele distributiviteit' }, questions: q('A2') },
+  { code: 'A3', label: { fr: 'Calcul littéral', en: 'Literal Calculation', nl: 'Letterrekenen' }, questions: q('A3') },
+  { code: 'A4', label: { fr: 'Diviseurs et multiples', en: 'Divisors and Multiples', nl: 'Delers en veelvouden' }, questions: q('A4') },
+  { code: 'A5', label: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' }, questions: q('A5') },
+  { code: 'A6', label: { fr: 'Suppression des parenthèses', en: 'Removing Parentheses', nl: 'Haakjes verwijderen' }, questions: q('A6'), generate: g('A6') },
+  { code: 'A8', label: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' }, questions: q('A8') },
+  { code: 'A9', label: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' }, questions: q('A9') },
+  { code: 'A10', label: { fr: 'Factorisation', en: 'Factoring', nl: 'Ontbinden in factoren' }, questions: q('A10') },
+  { code: 'P1', label: { fr: 'Proportionnalité', en: 'Proportionality', nl: 'Evenredigheid' }, questions: q('P1') },
+  { code: 'D1', label: { fr: 'Statistiques et Probabilités', en: 'Statistics and Probability', nl: 'Statistiek en Kansrekening' }, questions: q('D1') },
+  { code: 'D2', label: { fr: 'Statistiques', en: 'Statistics', nl: 'Statistiek' }, questions: q('D2'), generate: g('D2') },
+  { code: 'M1', label: { fr: 'Conversions et mesures', en: 'Conversions and measurements', nl: 'Conversies en metingen' }, questions: q('M1'), generate: g('M1') },
 ];
 
 export function getCategoryByCode(code) {
@@ -158,13 +54,19 @@ export function getRandomQuestion(categories, level) {
   }
   if (pool.length === 0) return null;
 
-  const cat = pool[Math.floor(Math.random() * pool.length)];
+  // Merge custom questions into the pool
+  const customQuestions = storage.getCustomQuestions();
+  const catCodes = pool.map(c => c.code);
+  const relevantCustom = customQuestions.filter(q => catCodes.includes(q.category));
 
-  // DÉSACTIVÉ: Génération procédurale
-  // if (cat.generate && Math.random() < 0.5) {
-  //   const lvl = level || (Math.floor(Math.random() * 3) + 1);
-  //   return cat.generate(lvl);
-  // }
+  // 30% chance to pick a custom question if any are available
+  if (relevantCustom.length > 0 && Math.random() < 0.3) {
+    let filtered = level ? relevantCustom.filter(q => q.level === level) : relevantCustom;
+    if (filtered.length === 0) filtered = relevantCustom;
+    return filtered[Math.floor(Math.random() * filtered.length)];
+  }
+
+  const cat = pool[Math.floor(Math.random() * pool.length)];
 
   let available = cat.questions;
   if (level) {

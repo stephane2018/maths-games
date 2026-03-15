@@ -8,14 +8,7 @@ import { GlassButton } from '../components/GlassUI.jsx';
 
 function Logo() {
   return (
-    <svg viewBox="0 0 120 120" className="home-logo">
-      <circle cx="35" cy="60" r="28" fill="#3B82F6" opacity="0.9" />
-      <circle cx="85" cy="60" r="28" fill="#EF4444" opacity="0.9" />
-      <line x1="20" y1="60" x2="100" y2="60" stroke="#92400E" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="60" cy="60" r="6" fill="#FCD34D" />
-      <text x="35" y="67" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" fontFamily="system-ui">+</text>
-      <text x="85" y="67" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" fontFamily="system-ui">{'\u00d7'}</text>
-    </svg>
+    <img src="/favicon.svg" alt="Logo" className="home-logo" />
   );
 }
 
@@ -56,32 +49,13 @@ export default function HomeScreen() {
   const dailyCompleted = profile.dailyChallenge?.lastCompleted === today;
 
   return (
-    <div className="screen home-screen" style={{
-      backgroundImage: 'url(/background.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      minHeight: '100vh',
-      height: '100vh',
-      position: 'relative',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 100%)',
-        pointerEvents: 'none',
-      }} />
+    <div className="screen home-screen home-animated-bg">
+      <div className="splash-bg home-bg-breathe" />
 
       <FloatingSymbols />
 
       {/* Top bar with lang switcher */}
-      <div className="top-bar" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="top-bar" style={{ position: 'relative', zIndex: 2 }}>
         <div className="top-bar-left" />
         <div className="top-bar-right">
           <div className="lang-switcher">
@@ -98,9 +72,9 @@ export default function HomeScreen() {
         </div>
       </div>
 
-      <div className="screen-content stagger-children" style={{ 
-        position: 'relative', 
-        zIndex: 1,
+      <div className="screen-content stagger-children" style={{
+        position: 'relative',
+        zIndex: 2,
         flex: 1,
         overflowY: 'auto',
         overflowX: 'hidden',
@@ -185,6 +159,24 @@ export default function HomeScreen() {
             }
           >
             {t('home.leaderboard')}
+          </GlassButton>
+
+          <GlassButton
+            variant="glass"
+            size="md"
+            className="home-secondary-btn"
+            onClick={() => { sound.buttonClick(); push('Teacher'); }}
+            icon={
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 3h20l-10 9L2 3z"/>
+                <path d="M22 3v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3"/>
+                <path d="M12 12v5"/>
+                <path d="M8 22h8"/>
+                <path d="M12 17h0"/>
+              </svg>
+            }
+          >
+            {t('home.teacher')}
           </GlassButton>
 
           <GlassButton

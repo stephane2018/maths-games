@@ -1,8 +1,10 @@
 /**
  * QuestionEngine - Picks questions, verifies answers, manages difficulty
+ * Supports both SQLite (Tauri) and JS fallback (web).
  */
 
 import { getRandomQuestion, getQuestionsByCategory, generateForOperation } from '../data/questionIndex.js';
+import { isUsingDB, getRandomQuestionFromDB } from '../systems/QuestionDB.js';
 import { getLang } from '../i18n/i18n.js';
 import { almostEqual } from '../utils/math.js';
 
@@ -24,7 +26,7 @@ export class QuestionEngine {
     }
   }
 
-  getNextQuestion() {
+  async getNextQuestion() {
     // If operations are specified, generate operation-specific questions
     if (this.operations && this.operations.length > 0) {
       const op = this.operations[Math.floor(Math.random() * this.operations.length)];
@@ -32,6 +34,18 @@ export class QuestionEngine {
       if (q) {
         this.usedQuestions.add(q.id);
         return q;
+      }
+    }
+
+    // Try SQLite first (Tauri), fall back to JS imports (web)
+    if (isUsingDB()) {
+      for (let i = 0; i < 6; i++) {
+        const q = await getRandomQuestionFromDB(this.categories, this.level);
+        if (!q) break;
+        if (!this.usedQuestions.has(q.id) || i === 5) {
+          this.usedQuestions.add(q.id);
+          return q;
+        }
       }
     }
 
@@ -81,12 +95,175 @@ export class QuestionEngine {
       return userFraction.num * expectedFraction.den === userFraction.den * expectedFraction.num;
     }
 
+    // Handle algebraic expressions (e.g., "3x + 7", "2a - 5b")
+    if (typeof question.answer === 'string' && /[a-z]/i.test(question.answer)) {
+      return this.compareAlgebraicExpressions(userAnswer, question.answer);
+    }
+
     // Handle numeric answers
     const parsed = parseFloat(userAnswer);
     if (isNaN(parsed)) return false;
 
     const tolerance = question.tolerance || 0;
     return almostEqual(parsed, question.answer, tolerance);
+  }
+
+  /**
+   * Compare two algebraic expressions by normalizing them
+   * Examples: "3x + 7" == "7 + 3x", "2a - 5b" == "-5b + 2a"
+   */
+  compareAlgebraicExpressions(userAnswer, expectedAnswer) {
+    if (typeof userAnswer !== 'string') return false;
+
+    // Normalize both expressions
+    const normalized1 = this.normalizeAlgebraicExpression(userAnswer.trim());
+    const normalized2 = this.normalizeAlgebraicExpression(expectedAnswer.trim());
+
+    return normalized1 === normalized2;
+  }
+
+  /**
+   * Normalize an algebraic expression for comparison
+   * Steps:
+   * 1. Remove all spaces
+   * 2. Parse terms (coefficient + variables)
+   * 3. Sort terms alphabetically
+   * 4. Rebuild canonical form
+   */
+  normalizeAlgebraicExpression(expr) {
+    if (!expr) return '';
+
+    // Normalize unicode minus (−) to ASCII minus (-)
+    expr = expr.replace(/−/g, '-');
+
+    // Remove spaces
+    expr = expr.replace(/\s+/g, '');
+
+    // Handle special case: just a number
+    if (/^-?\d+\.?\d*$/.test(expr)) {
+      return String(parseFloat(expr));
+    }
+
+    // Split by + and - while keeping the sign
+    const terms = [];
+    let currentTerm = '';
+    let sign = '+';
+
+    for (let i = 0; i < expr.length; i++) {
+      const char = expr[i];
+
+      if ((char === '+' || char === '-') && i > 0) {
+        if (currentTerm) {
+          terms.push(sign + currentTerm);
+        }
+        sign = char;
+        currentTerm = '';
+      } else if (char === '-' && i === 0) {
+        sign = '-';
+      } else if (char === '+' && i === 0) {
+        // Skip leading +
+      } else {
+        currentTerm += char;
+      }
+    }
+
+    if (currentTerm) {
+      terms.push(sign + currentTerm);
+    }
+
+    // Parse and normalize each term
+    const normalizedTerms = terms.map(term => this.normalizeTerm(term));
+
+    // Sort terms alphabetically for consistent comparison
+    normalizedTerms.sort();
+
+    // Rebuild expression
+    let result = normalizedTerms.join('');
+
+    // Clean up leading +
+    if (result.startsWith('+')) {
+      result = result.substring(1);
+    }
+
+    return result;
+  }
+
+  /**
+   * Normalize a single term like "+3x", "-2ab", "+5"
+   * Returns format: sign + coefficient + sorted variables
+   */
+  normalizeTerm(term) {
+    if (!term) return '+0';
+
+    // Extract sign
+    let sign = '+';
+    if (term.startsWith('-')) {
+      sign = '-';
+      term = term.substring(1);
+    } else if (term.startsWith('+')) {
+      term = term.substring(1);
+    }
+
+    // Separate coefficient and variables
+    const match = term.match(/^(-?\d*\.?\d*)(.*)$/);
+    if (!match) return '+0';
+
+    let coef = match[1];
+    let vars = match[2];
+
+    // Handle implicit coefficient
+    if (coef === '' || coef === '+') {
+      coef = '1';
+    } else if (coef === '-') {
+      coef = '1';
+      sign = sign === '+' ? '-' : '+';
+    }
+
+    // Parse coefficient
+    const coefNum = parseFloat(coef);
+    if (isNaN(coefNum) || coefNum === 0) return ''; // Skip zero terms
+
+    // Adjust sign
+    if (coefNum < 0) {
+      sign = sign === '+' ? '-' : '+';
+      coef = String(Math.abs(coefNum));
+    } else {
+      coef = String(coefNum);
+    }
+
+    // Sort variables alphabetically (e.g., "ba" -> "ab")
+    if (vars) {
+      // Handle exponents: a², x³, etc.
+      const varList = [];
+      let i = 0;
+      while (i < vars.length) {
+        const v = vars[i];
+        let exp = '1';
+
+        // Check for exponent
+        if (i + 1 < vars.length && (vars[i + 1] === '²' || vars[i + 1] === '³' || vars[i + 1] === '⁴')) {
+          const expMap = { '²': '2', '³': '3', '⁴': '4' };
+          exp = expMap[vars[i + 1]];
+          i += 2;
+        } else if (i + 1 < vars.length && vars[i + 1] === '^') {
+          // Handle x^2 format
+          exp = vars[i + 2] || '1';
+          i += 3;
+        } else {
+          i++;
+        }
+
+        varList.push({ var: v, exp });
+      }
+
+      // Sort by variable name
+      varList.sort((a, b) => a.var.localeCompare(b.var));
+
+      // Rebuild vars string
+      vars = varList.map(v => v.exp === '1' ? v.var : v.var + '^' + v.exp).join('');
+    }
+
+    return sign + coef + vars;
   }
 
   parseFraction(str) {

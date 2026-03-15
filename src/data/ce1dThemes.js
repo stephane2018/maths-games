@@ -47,7 +47,7 @@ export const CE1D_THEMES = [
     id: 'algebra',
     icon: '🔤',
     name: { fr: 'Algèbre', en: 'Algebra', nl: 'Algebra' },
-    categories: ['A1', 'A2', 'A3', 'A4', 'A5', 'A8', 'A9'],
+    categories: ['A1', 'A2', 'A3', 'A4', 'A5', 'A8', 'A9', 'A10'],
     color: '#F59E0B',
     subcategories: [
       { code: 'A1', name: { fr: 'Distributivité simple', en: 'Simple Distributivity', nl: 'Eenvoudige distributiviteit' } },
@@ -56,7 +56,8 @@ export const CE1D_THEMES = [
       { code: 'A4', name: { fr: 'Diviseurs et multiples', en: 'Divisors and Multiples', nl: 'Delers en veelvouden' } },
       { code: 'A5', name: { fr: 'Équations du 1er degré', en: 'First Degree Equations', nl: 'Vergelijkingen van de eerste graad' } },
       { code: 'A8', name: { fr: 'Produits remarquables', en: 'Notable Products', nl: 'Merkwaardige producten' } },
-      { code: 'A9', name: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' } }
+      { code: 'A9', name: { fr: 'Fractions', en: 'Fractions', nl: 'Breuken' } },
+      { code: 'A10', name: { fr: 'Factorisation', en: 'Factoring', nl: 'Ontbinden in factoren' } }
     ]
   },
 ];

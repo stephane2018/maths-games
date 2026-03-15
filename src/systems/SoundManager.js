@@ -180,6 +180,83 @@ class SoundManager {
     ]);
   }
 
+  startup() {
+    if (!this.enabled) return;
+    this._ensureContext();
+
+    const now = this.ctx.currentTime;
+    const masterGain = this.ctx.createGain();
+    masterGain.gain.setValueAtTime(0, now);
+    masterGain.gain.linearRampToValueAtTime(this.volume * 0.35, now + 0.3);
+    masterGain.gain.setValueAtTime(this.volume * 0.35, now + 2.0);
+    masterGain.gain.linearRampToValueAtTime(0, now + 3.2);
+    masterGain.connect(this.ctx.destination);
+
+    // Warm pad chord: D major (D4 F#4 A4) with octave shimmer
+    const padNotes = [
+      { freq: 293.66, vol: 0.5 },  // D4
+      { freq: 369.99, vol: 0.4 },  // F#4
+      { freq: 440.00, vol: 0.45 }, // A4
+      { freq: 587.33, vol: 0.3 },  // D5 (octave)
+    ];
+
+    for (const note of padNotes) {
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(note.freq, now);
+      // Gentle vibrato
+      const lfo = this.ctx.createOscillator();
+      const lfoGain = this.ctx.createGain();
+      lfo.frequency.setValueAtTime(4.5, now);
+      lfoGain.gain.setValueAtTime(1.5, now);
+      lfo.connect(lfoGain);
+      lfoGain.connect(osc.frequency);
+      lfo.start(now);
+      lfo.stop(now + 3.2);
+
+      g.gain.setValueAtTime(note.vol, now);
+      osc.connect(g);
+      g.connect(masterGain);
+      osc.start(now);
+      osc.stop(now + 3.2);
+    }
+
+    // Melodic chime on top — ascending bright notes
+    const chimes = [
+      { freq: 1174.66, time: 0.1, dur: 1.2, vol: 0.2 },  // D6
+      { freq: 1479.98, time: 0.5, dur: 1.0, vol: 0.18 }, // F#6
+      { freq: 1760.00, time: 0.9, dur: 0.9, vol: 0.15 }, // A6
+      { freq: 2349.32, time: 1.4, dur: 1.2, vol: 0.12 }, // D7
+    ];
+
+    for (const c of chimes) {
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(c.freq, now + c.time);
+      g.gain.setValueAtTime(0, now + c.time);
+      g.gain.linearRampToValueAtTime(c.vol, now + c.time + 0.08);
+      g.gain.exponentialRampToValueAtTime(0.001, now + c.time + c.dur);
+      osc.connect(g);
+      g.connect(masterGain);
+      osc.start(now + c.time);
+      osc.stop(now + c.time + c.dur);
+    }
+
+    // Soft sub-bass warmth
+    const sub = this.ctx.createOscillator();
+    const subG = this.ctx.createGain();
+    sub.type = 'sine';
+    sub.frequency.setValueAtTime(146.83, now); // D3
+    subG.gain.setValueAtTime(0.25, now);
+    subG.gain.linearRampToValueAtTime(0.001, now + 2.8);
+    sub.connect(subG);
+    subG.connect(masterGain);
+    sub.start(now);
+    sub.stop(now + 3.0);
+  }
+
   gameOver() {
     this._playNotes([
       [220, 0.15, 'triangle', 0.5],  // A3
